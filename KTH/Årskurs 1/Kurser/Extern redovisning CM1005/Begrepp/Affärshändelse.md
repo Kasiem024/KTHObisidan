@@ -1,0 +1,25 @@
+# Affärshändelse
+
+2024-01-16 21:37
+Tags: #year2024 #begrepp #KTH #ekonomi
+
+## Definition
+
+En affärshändelse är en ekonomisk transaktion som dokumenteras genom en så kallad verifikation i företagets bokföring. ==Har det varit ett ekonomiskt utbyte med världen?==
+
+[Affärshändelse, Visma](https://vismaspcs.se/ekonomiska-termer/vad-ar-affarshandelse)
+
+En affärshändelse är en ekonomisk transaktion som har inverkan på ett företags förmögenhet och/eller sammansättning. Affärshändelser kan vara in- och utbetalningar från kassa, bank och andra konton, förändringar av fordringar och skulder, beslut om bokslutsdispositioner eller egna insättningar och uttag.
+
+En affärshändelse ska bokföras snarast, kronologiskt och systematiskt.
+
+## Flashcards
+
+Affärshändelse (Definition):: En ekonomisk transaktion som har en inverkan på företagets ekonomi och som bokförs.
+<!--SR:!2024-01-24,3,250!2024-01-26,4,270-->
+
+Hur affärshändelser ska bokföras (3):: Snarast, kronologiskt och systematiskt.
+<!--SR:!2024-01-25,3,255!2024-01-26,4,270-->
+
+Fråga för att veta om något är en affärshändelse:: Har det varit ett ekonomiskt utbyte med världen?
+<!--SR:!2024-01-26,4,270!2024-01-25,3,250-->

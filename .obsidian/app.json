@@ -1,0 +1,38 @@
+{
+  "promptDelete": false,
+  "spellcheck": true,
+  "showLineNumber": false,
+  "spellcheckDictionary": [
+    "Foldersync",
+    "OMAD",
+    "Introspector",
+    "Tags",
+    "FA-skatt",
+    "FA-Skatt",
+    "Verksamt",
+    "förening",
+    "Ekonomisk",
+    "TO-DO",
+    "Flashcards",
+    "tjänstefiering",
+    "servitization",
+    "VS",
+    "B2C",
+    "Consumer",
+    "to",
+    "to",
+    "4V",
+    "Freemium",
+    "Offshoring",
+    "Reshoring",
+    "Insourcing",
+    "lansidentiet\n\n"
+  ],
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "userIgnoreFilters": [
+    "README",
+    "Obsidian Plugins/Templates/"
+  ],
+  "attachmentFolderPath": "./"
+}
