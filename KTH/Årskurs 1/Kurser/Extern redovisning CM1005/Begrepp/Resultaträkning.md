@@ -31,3 +31,7 @@ Vad brukar inkluderas inom RR?
 
 Resultaträkning (Definition):: En rapport över [[Intäkt]] och [[Kostnad]] under en viss period. Visar om företaget har gått i vinst eller förlust
 <!--SR:!2024-01-25,3,250!2024-01-25,3,250-->
+
+Vad som brukar inkluderas i RR Vänster:: Kostnaden på avskrivningen av en resurs (500-400=100), Ränta på banklån, Kostnad av drift och service, Lön, Hyra
+
+Vad som brukar inkluderas i RR Höger:: Intäkter, Vad man har tjänat från sina kunder, när man faktiskt har levererat en vara/tjänst

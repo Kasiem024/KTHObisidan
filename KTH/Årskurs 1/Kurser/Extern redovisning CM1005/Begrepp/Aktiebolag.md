@@ -19,9 +19,14 @@ Aktiens värde påverkas av vad vi tror kommer hända i framtiden.
 Aktiebolag är en kapital demokrati. 1 aktie, 1 röst.
 Aktiebolaget är ett eget skattesubjekt. Det betalar sin egna skatt.
 
+==Börskurs== är hur mycket varje aktie är värd på börsen just nu.
+
+![[Aktiebolag karta.png]]
+[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=275&selection=6,0,6,30|Aktiebolagets organ enligt ABL]]
+
 ## Flashcards
 
-Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansvariga för företagets skulder.
+Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansvariga för företagets skulder. Ägarna riskerar bara att förlora deras egna satsade kapital. Minst 1 ägare men kan också vara 100,000-tals ägare
 <!--SR:!2024-01-25,2,232!2024-01-26,4,272-->
 
 25 000:: Startkapital/aktiekapital/riskkapital för att starta ett aktiebolag
@@ -32,3 +37,11 @@ Aktiens kvotvärde:: Aktiens värde vid grundandet som grundarna bestämmer sjä
 
 Antal aktier ett företag har:: Riskkapital/Aktiens kvotvärde
 <!--SR:!2024-01-23,1,232!2024-01-24,3,250-->
+
+De två typerna av aktiebolag;; Privat aktiebolag (50,000 aktiekapital), Publikt aktiebolag (500,000 aktiekapital)
+
+Balansvärde (substansvärde):: Totalt eget kapital/antal aktier
+
+Börskurs:: Priset av en aktie, bestäms av tillgång och efterfrågan
+
+Vad som påverkar en akties börskurs (6):: Balansvärdet, Framtida vinstförmåga, Marknadens likviditet, Alternativa placeringsmöjligheter, Skattesystemets utformning, Psykologiska faktorer (flockbeteende)

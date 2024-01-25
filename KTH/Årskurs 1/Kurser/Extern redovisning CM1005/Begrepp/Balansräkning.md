@@ -24,14 +24,14 @@ Vad brukar inkluderas i BR?
 Vad är företagets tillgångar? Vad äger företaget?
 
 - Faktiska värdet av utrustningen efter avskrivning. (500-100=400)
-- Vad man har i banken. Saldot/Resultatet från kassaflöde
+- Vad man har i banken. Saldot/Resultatet från [[kassaflöde]]
 
 #### Kredit (Höger)
 
 Vad är företagets finansiering? Från vart kommer pengarna?
 
 - Ägarinsats/Kapitalinsats. Vad ägarna satte i början av perioden
-- Vinsten från RR går in här.
+- Vinsten från [[Resultaträkning]] går in här.
 - Ägaruttag. Om ägaren har tagit ut pengar från vinsten tas den bort från denna sida.
 - Främmande kapital, skulder, banklån
 - Hur mycket amorteringen av ett banklån är tas bort från lånet här (30 000 - 1000 = 29 000)
@@ -46,3 +46,8 @@ De två delarna/sidorna av en balansräkning:: Ett företags eget kapital och sk
 
 Balansidentitet (Definition):: Tillgångar = Eget kapital + Skulder
 <!--SR:!2024-01-23,1,232!2024-01-23,1,232-->
+
+Vad som brukar inkluderas i BR Vänster:: Faktiska värdet av utrustningen efter avskrivning. (500-100=400). Vad man har i banken, Saldot/Resultatet från kassaflöde
+
+Vad som brukar inkluderas i BR Höger:: Ägarinsats/
+Kapitalinsats, Vinst från RR, Ägaruttag från vinsten, Främmande kapital, skulder, banklån, Amortering på banklån

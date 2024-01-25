@@ -11,11 +11,50 @@
             "id": "0a37d5f218e6608d",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf"
+              }
+            }
+          },
+          {
+            "id": "c4a385fd8ea16227",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "c9ada1f082c98c29",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "b260f55360016fb9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91b417668c2a1db7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf"
               }
             }
           }
@@ -69,7 +108,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.5
+    "width": 447.5,
+    "collapsed": true
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -168,31 +208,40 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-spaced-repetition:Review flashcards": false,
-      "handwritten-notes:Create empty handwritten note": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "handwritten-notes:Create empty handwritten note": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "85154ac5110aa970",
+  "active": "c4a385fd8ea16227",
   "lastOpenFiles": [
-    "README.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Handelsbolag.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Balansräkning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Resultaträkning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intäkt.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Bokslutstablå Exempel 1 KTH 240124 Extern Redovisning.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Begrepp Journal Extern Redovisning.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-22 Journal Extern Redovisning.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS1 Kalkylövning 01-22 Extern Redovisning.excalidraw.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Aktiebolag karta.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Ekonomisk förening.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Enskild näringsverksamhet.md",
+    "README.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Teknologiska kurvan.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/01-23 ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-16 Lektion Extern Redovisning.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Dubbel Bokföring.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Omslutning.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Dubbelbokföring.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/T-Konton.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Begrepp Journal Extern Redovisning.pdf",
     "KTH/Årskurs 1/Kurser/Programmeringsteknik, webbkurs DD100N/Generella Anteckningar Programmeringsteknik DD100N.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-23 Lektion Extern Redovisning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-22 CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Bokslutstablå Exempel 1 KTH 240124.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Ingående Balans.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Löpande Bokföring.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utgående Balans.md",
@@ -200,19 +249,10 @@
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inkomst.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utgift.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kostnad.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intäkt.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utbetalning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inbetalning.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-23 Lektion Industriell Ekonomi Grundkurs.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-18 Lektion Industriell Ekonomi Grundkurs.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Teknologiska kurvan.md",
     "KTH/Årskurs 1/Kurser/Kurser.zip",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-19 Lektion Industriell Ekonomi Grundkurs.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Teknologiska kurvan.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/01-16 Räkningar Extern redovisning.excalidraw.md",
-    "Obsidian Plugins/Excalidraw/Drawing 2024-01-23 12.10.13.excalidraw.md",
     "KTH.zip",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kalkylövning inför KS1 01-22 Extern Redovisning.excalidraw.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Pasted image 20240122191205.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/ME1003&ME1041_Schema_P3-VT2024-SWE.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/01-16 Räkningar Extern Redovisning Excalidraw.png",
@@ -223,7 +263,6 @@
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Intressentmodellen.jpg",
     "General Images/Self awareness chart.png",
     "minusl_malvorlage_kuh_v2.jpg",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Värdekejda.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

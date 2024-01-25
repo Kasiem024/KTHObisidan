@@ -9,7 +9,7 @@ Skillnaden mellan [[Inkomst]] och [[Intäkt]]:: Inkomster är det som löpande t
 Matchningsprincipen (Definition):: En metod för att säkerställa att intäkter och kostnader är samma under en viss period
 <!--SR:!2024-01-23,1,230!2024-01-25,3,250-->
 
-Eget kapital (Definition):: En benämning på en mängd pengar som ägarna av ett företag satt in vid grundandet. Kan också vara pengar som satts in i efter hand samt vinster
+Eget kapital (Definition):: En benämning på en mängd pengar som ägarna av ett företag satt in vid grundandet. Kan också vara pengar som satts in i efter hand samt vinster. Kan också ses som skillnaden mellan ett företags tillgångar och skulder
 <!--SR:!2024-01-25,3,250!2024-01-23,1,230-->
 
 Likvida medel (Definition):: De pengar företaget har tillgängliga. Saldot efter kassaflödet
@@ -17,3 +17,5 @@ Likvida medel (Definition):: De pengar företaget har tillgängliga. Saldot efte
 Råbalans (Definition):: En förteckning över samtliga konton med dessas totalsummor i debet och kredit för perioden. Hopräkning av alla kontons summor vid slutet av en redovisningsperiod. En sammanställning av allt som har debiterats respektive krediterats
 
 Saldobalans (Definition):: En förteckning över skillnaderna mellan debiteringar och krediteringar på respektive [[T-Konton]]
+
+Fåmansföretag (Definition):: Ett skatterättsligt begrepp, när ett AB/HB/KB/EF ägs till majoriteten av en eller ett fåtal fysiska personer

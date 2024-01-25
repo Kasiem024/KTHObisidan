@@ -8,7 +8,7 @@ Tags: #year2024 #KTH #ekonomi #begrepp
 Ett handelsbolag är ett företag som har två eller flera bolagsmän, alltså delägare. Bolagsmännen kan vara privatpersoner eller företag. Handelsbolaget är i sig en juridisk person.
 
 Om företaget har underskott måste delägarna fylla på med pengar.
-Ägarna är solidariskt ansvariga.
+Ägarna är solidariskt ansvariga, alltså en för alla och alla för en
 
 Om företaget tjänar 50 och har 2 delägare skattar varje ägare på 25.
 
@@ -20,8 +20,10 @@ Ett kommanditbolag är en särskild form av handelsbolag där vissa bolagsmäns 
 
 ## Flashcards
 
-Handelsbolag (Definition):: En företagsform med minst två delägare. Ägarna kan vara både privatpersoner och företag. Företaget är i sig en juridisk person.
+Handelsbolag (Definition):: En företagsform med minst två delägare. Ägarna kan vara både privatpersoner och företag. Företaget är i sig en juridisk person. Ägarna är personligt ansvariga för skulder
 <!--SR:!2024-01-24,3,250!2024-01-25,3,250-->
 
 Kommanditbolag (Definition):: En form av handelsbolag där vissa bolagsmäns ansvar är begränsat till vad de har satsat i bolaget. Måste finnas en delägare med obegränsat ansvar, en komplementär.
 <!--SR:!2024-01-25,3,252!2024-01-26,4,270-->
+
+Solidariskt ansvar (Definition):: En för alla, alla för en

@@ -58,7 +58,7 @@ När man gör balansräkning på bokslutstablå börja mitt i med skulder och eg
 
 Sidor 43-51, 58-73
 
-[[Bokslutstablå Exempel 1 KTH 240124.pdf]]
+[[Bokslutstablå Exempel 1 KTH 240124 Extern Redovisning.pdf]]
 
 ## Flashcards
 
