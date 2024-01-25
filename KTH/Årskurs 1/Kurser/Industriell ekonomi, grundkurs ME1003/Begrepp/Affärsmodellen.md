@@ -25,5 +25,5 @@ Ordet "värde" i detta sammanhang är värde för kunden.
 Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera.
 <!--SR:!2024-01-25,3,252!2024-01-26,4,270-->
 
-Delarna av en affärsmodell (3):: Värdeerbjudandet, Värdeskapande, Värdefångsten
+Delarna av en affärsmodell (3);; Värdeerbjudandet, Värdeskapande, Värdefångsten
 <!--SR:!2024-01-25,3,250!2024-01-24,3,250-->

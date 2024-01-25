@@ -18,5 +18,5 @@ När du sedan köper varor eller tjänster till ditt företag betalar du moms p�
 Moms (Definition):: En skatt som betalas vid köpet av varor och tjänster. Inbakad i priset.
 <!--SR:!2024-01-25,3,252!2024-01-26,4,272-->
 
-Andra namn för Moms:: Mervärdesskatt, konsumtionsskatt
+Andra namn för Moms;; Mervärdesskatt, konsumtionsskatt
 <!--SR:!2024-01-25,4,270!2024-01-26,4,272-->
