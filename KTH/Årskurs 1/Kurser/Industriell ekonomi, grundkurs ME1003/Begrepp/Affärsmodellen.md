@@ -26,4 +26,4 @@ Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till föret
 <!--SR:!2024-01-25,3,252!2024-01-26,4,270-->
 
 Delarna av en affärsmodell (3);; Värdeerbjudandet, Värdeskapande, Värdefångsten
-<!--SR:!2024-01-25,3,250!2024-01-24,3,250-->
+<!--SR:!2024-01-25,3,250-->

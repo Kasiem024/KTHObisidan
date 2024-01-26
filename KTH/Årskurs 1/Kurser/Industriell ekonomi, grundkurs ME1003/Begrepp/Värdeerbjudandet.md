@@ -41,4 +41,4 @@ Värdeerbjudandet (Definition):: Ett annat namn för vad varan eller tjänsten �
 <!--SR:!2024-01-23,1,230!2024-01-25,3,250-->
 
 Sätt att kategorisera produkter (Värdeerbjudandet);; Business to Consumer (B2C), Business to Business (B2B)
-<!--SR:!2024-01-25,3,250!2024-01-24,3,250-->
+<!--SR:!2024-01-25,3,250-->

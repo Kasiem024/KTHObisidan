@@ -19,4 +19,4 @@ Värdeskapandet har med produktionen och leveransen av produkten.
 ## Flashcards
 
 Värdeskapandet (Definition):: Ett begrepp som beskriver produktionen och leveransen av en produkt
-<!--SR:!2024-01-23,1,210!2024-01-24,2,246-->
+<!--SR:!2024-01-25,2,210!2024-01-24,2,246-->

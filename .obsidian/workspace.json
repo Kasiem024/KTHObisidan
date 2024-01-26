@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a37d5f218e6608d",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf"
-              }
-            }
-          },
-          {
             "id": "c4a385fd8ea16227",
             "type": "leaf",
             "state": {
@@ -30,31 +20,26 @@
             }
           },
           {
-            "id": "c9ada1f082c98c29",
+            "id": "262945986bdd199f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-26 Lektion Extern Redovisning.md",
                 "mode": "source",
                 "source": false
               }
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "b260f55360016fb9",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "91b417668c2a1db7",
+            "id": "dffa281f7c150cad",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf"
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Hålbarhetsrapport.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -108,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.5,
-    "collapsed": true
+    "width": 447.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -202,10 +186,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
@@ -218,8 +200,11 @@
   },
   "active": "c4a385fd8ea16227",
   "lastOpenFiles": [
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-01-26 14.35.10.excalidraw.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-26 Lektion Extern Redovisning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Hålbarhetsrapport.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Handelsbolag.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Balansräkning.md",
@@ -248,8 +233,6 @@
     "Obsidian Plugins/Templates/Begrepp Template.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inkomst.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utgift.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kostnad.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utbetalning.md",
     "KTH/Årskurs 1/Kurser/Kurser.zip",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Teknologiska kurvan.png",
     "KTH.zip",

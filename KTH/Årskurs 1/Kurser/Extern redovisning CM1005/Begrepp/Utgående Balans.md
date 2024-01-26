@@ -16,5 +16,7 @@ Utgående balans blir [[Ingående Balans]] för nästa räkenskapsår. Alltså h
 ## Flashcards
 
 Utgående Balans (Definition):: Summan av de belopp som finns på tillgångs- och skuldsidan i balansräkningen vid räkenskapsårets slut. Summan av beloppen på tillgångar, eget kapital och skulder konton.
+<!--SR:!2024-01-27,3,250!2024-01-27,3,250-->
 
 Konton som bildar utgående balans (3):: Tillgångar, Eget Kapital och Skulder
+<!--SR:!2024-01-27,3,250!2024-01-25,1,230-->

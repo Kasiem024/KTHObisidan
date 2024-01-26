@@ -63,15 +63,20 @@ Sidor 43-51, 58-73
 ## Flashcards
 
 Saldo (Definition):: Skillnaden mellan debet och kredit på ett konto.
+<!--SR:!2000-01-01,1,250!2024-01-27,1,230-->
 
 Bokslut (Definition):: När man periodiserar och värderar ett företags resurser
+<!--SR:!2000-01-01,1,250!2024-01-27,1,230-->
 
 Kontant Affär (Definition):: När [[utgift]] och [[utbetalning]] sker vid samma tidpunkt
 
 När Faktura/Bokföring händer;; Vid en specifik tidpunkt
 
 När Prestation/Förbrukning händer;; Över en period
+<!--SR:!2024-01-29,3,250-->
 
 Förutbetald [[inkomst]]/[[intäkt]]/[[utgift]]/[[kostnad]] (Definition):: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat
+<!--SR:!2024-01-27,1,230!2024-01-27,1,230-->
 
 Upplupen [[inkomst]]/[[intäkt]]/[[utgift]]/[[kostnad]]:: När bokslutet hamnar innan man har fått Faktura/Bokföring, efter att man har gjort Prestation/Förbrukning. Alltså man har gjort levererat en tjänst/vara innan man har fått betalt för det
+<!--SR:!2024-01-27,1,230!2000-01-01,1,250-->

@@ -31,4 +31,4 @@ Värdefångsten (Definition):: Ett begrepp för att beskriva hur man får betalt
 <!--SR:!2024-01-24,1,210!2024-01-25,2,230-->
 
 Olika intäktsmodeller (Värdefångst) (8);; Enhetsförsäljning/Abonnemang, Tilläggsförsäljning, Hyra/leasa, Licensiering, Franchise, Pris för användning, Freemium, Affiliate Marketing
-<!--SR:!2024-01-24,1,210!2024-01-23,1,230-->
+<!--SR:!2024-01-24,1,210-->

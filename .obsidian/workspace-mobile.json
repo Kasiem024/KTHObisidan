@@ -8,34 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4c626399a0cfa4be",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "General PDFs/What Self-Awareness Really Is (and How to Cultivate It) Article.pdf"
-              }
-            }
-          },
-          {
-            "id": "50e1432c3d075250",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "General Notes/Zettelkasten/Litterature/Sophisticated Procrastination.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "fb8e3b8a14e57f04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General Notes/Philosphy/You have no enemies.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intressentmodellen.md",
                 "mode": "source",
                 "source": false
               }
@@ -47,12 +25,11 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen -- Per Arvidson, Thomas Carrington, Gustav Johed -- 21, 2018 -- Liber -- 9789147127986 -- 0f52af25634932c74ea2bb9204f06846 -- Anna’s Archive.pdf"
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,7 +95,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen -- Per Arvidson, Thomas Carrington, Gustav Johed -- 21, 2018 -- Liber -- 9789147127986 -- 0f52af25634932c74ea2bb9204f06846 -- Anna’s Archive.pdf",
+            "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intressentmodellen.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -135,7 +112,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen -- Per Arvidson, Thomas Carrington, Gustav Johed -- 21, 2018 -- Liber -- 9789147127986 -- 0f52af25634932c74ea2bb9204f06846 -- Anna’s Archive.pdf",
+            "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intressentmodellen.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -147,7 +124,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen -- Per Arvidson, Thomas Carrington, Gustav Johed -- 21, 2018 -- Liber -- 9789147127986 -- 0f52af25634932c74ea2bb9204f06846 -- Anna’s Archive.pdf"
+            "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intressentmodellen.md"
           }
         }
       },
@@ -164,14 +141,13 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "handwritten-notes:Create empty handwritten note": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:Create new drawing": false
@@ -179,14 +155,24 @@
   },
   "active": "142a9f75baa55d87",
   "lastOpenFiles": [
-    "README.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/T-Konton.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Ideell förening.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Balansräkning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Generella Anteckningar Extern Redovisning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Lösningar Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kalkylövning inför KS1 01-22 Extern Redovisning.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
+    "General Notes/Zettelkasten/Litterature/Sophisticated Procrastination.md",
     "General PDFs/What Self-Awareness Really Is (and How to Cultivate It) Article.pdf",
+    "README.md",
     "General Notes/Zettelkasten/Fleeting/True Friendship.md",
     "General Notes/Zettelkasten/Fleeting/Choose to be less happy to show strength.md",
     "General Notes/Philosphy/You have no enemies.md",
     "KTH/KTH Generella Anteckningar.md",
     "General Notes/Zettelkasten/Litterature/Time Blocks for Studying.md",
-    "General Notes/Zettelkasten/Litterature/Sophisticated Procrastination.md",
     "General Notes/Zettelkasten/Permanent",
     "General Notes/Zettelkasten/Litterature",
     "General Notes/Zettelkasten/Fleeting",
@@ -197,11 +183,8 @@
     "GoogleDriveObsidian/Test Lesson.md",
     "Excalidraw/Drawing 2023-12-30 11.17.24.excalidraw.md",
     "Excalidraw/Drawing 2023-12-30 11.17.24.excalidraw.md.tacitpart",
-    "GoogleDriveObsidian/Test Lesson.md.tacitpart",
     "GoogleDriveObsidian/README.md",
     "Excalidraw/Drawing 2023-12-30 11.11.42.excalidraw.md",
-    "JournalPDF/Test Lesson.pdf",
-    "Excalidraw/Drawing 2023-12-31 10.45.04.excalidraw.md",
-    "JournalPDF/Kopia av Modern industriell ekonomi -- Mats Engwall,Anna Jerbrant,Bo Karlson,Per Storm -- 1, 2017 -- Studentlitteratur -- 9789144116914 -- 78a08a5d5329df2be639849653a0e199 -- Anna’s Archive.pdf"
+    "Excalidraw/Drawing 2023-12-31 10.45.04.excalidraw.md"
   ]
 }

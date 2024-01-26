@@ -39,4 +39,4 @@ Motsatsen till Intäkt:: Motsatsen till [[Kostnad]]
 <!--SR:!2024-01-24,3,250!2024-01-26,4,270-->
 
 Annat namn för intäkt:: Annat namn för kredit
-<!--SR:!2024-01-25,3,252!2024-01-25,3,252-->
+<!--SR:!2024-01-25,3,252!2024-02-07,12,272-->

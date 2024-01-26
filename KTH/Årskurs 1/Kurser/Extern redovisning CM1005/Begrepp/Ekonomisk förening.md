@@ -16,8 +16,10 @@ Medlemmarna i en ekonomisk förening har inget personligt ansvar och de riskerar
 ## Flashcards
 
 Ekonomisk förening (Definition):: Företagsform om man är minst tre personer och vill främja sina ekonomiska intressen. Medlemmarna ska få ett ekonomiskt utbyte av deltagandet som exempelvis en anställning, bättre pris eller sänkta kostnader. Medlemmarna har inget personligt ansvar. Endast satsat kapital riskerar att förloras. ==konsumentkooperation==och ==producentkooperation==
+<!--SR:!2024-01-27,1,230!2000-01-01,1,250-->
 
 Ekonomiskt utbyte (Ekonomisk förening):: En anställning, bättre pris eller sänkta kostnader
-<!--SR:!2024-01-25,3,250!2024-01-25,3,250-->
+<!--SR:!2024-02-03,8,250!2024-01-25,3,250-->
 
 Exempel på olika ekonomiska föreningar (5);; Coop, OK, bostadsrättsföreningar, Lantmännen, Södra skogsägarna
+<!--SR:!2024-01-27,1,230-->

@@ -37,6 +37,7 @@ Dubbel bokföring (Definition):: Ett ekonomiskt system som säger att man måste
 <!--SR:!2024-01-25,3,250!2024-01-26,4,270-->
 
 Debet (Definition):: Visar vart det kommer in pengar. Alltså på vilket konto pengarna ska sättas in (T-Konto)
+<!--SR:!2000-01-01,1,250!2024-01-29,3,252-->
 
 Kredit (Definition):: Visar vart pengarna kommer från. Alltså vad pengarnas källa är (T-Konto)
 <!--SR:!2024-01-26,3,252!2000-01-01,1,250-->

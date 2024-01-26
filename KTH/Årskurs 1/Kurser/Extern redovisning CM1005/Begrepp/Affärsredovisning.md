@@ -14,7 +14,7 @@ Affärsredovisning ska ske en gång om året och brukar kallas ==årsredovisning
 ## Flashcards
 
 Affärsredovisning (Definition):: Ett sätt att förse externa intressenter med information om företagets ekonomiska ställning. Minst en gång om året och obligatorisk enligt bokföringslagen.
-<!--SR:!2024-01-23,1,230!2024-01-25,3,250-->
+<!--SR:!2024-01-27,1,210!2024-01-25,3,250-->
 
 Affärsredovisning (Definition):: Registrering och rapportering av värdet av företagets resurser och deras finansiering. Samt händelser som förändrar dessa.
-<!--SR:!2024-01-23,1,228!2024-01-23,1,228-->
+<!--SR:!2024-01-26,2,208!2024-01-27,1,208-->

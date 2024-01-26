@@ -28,13 +28,13 @@ Du som både bedriver enskild näringsverksamhet och dessutom har inkomst av ans
 ## Flashcards
 
 De olika typerna av skattsedlar (3);; A-Skatt, F-Skatt, FA-Skatt
-<!--SR:!2024-01-26,4,279!2024-01-26,4,274-->
+<!--SR:!2024-01-26,4,279-->
 
 A-Skatt (Definition);; Skatt som anställd. Arbetsgivaren tar hand om det
-<!--SR:!2024-01-26,4,279!2024-01-26,4,274-->
+<!--SR:!2024-01-26,4,279-->
 
 F-Skatt (Definition);; Skatt för företag. Som ett körkort för att få driva företag
-<!--SR:!2024-01-25,4,270!2024-01-25,4,270-->
+<!--SR:!2024-02-09,14,290-->
 
 FA-Skatt (Definition);; Skatt om man både bedriver en verksamhet och är anställd
-<!--SR:!2024-01-26,4,274!2024-01-26,4,279-->
+<!--SR:!2024-02-09,14,294-->

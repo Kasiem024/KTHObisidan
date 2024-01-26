@@ -16,10 +16,10 @@ En affärshändelse ska bokföras snarast, kronologiskt och systematiskt.
 ## Flashcards
 
 Affärshändelse (Definition):: En ekonomisk transaktion som har en inverkan på företagets ekonomi och som bokförs.
-<!--SR:!2024-01-24,3,250!2024-01-26,4,270-->
+<!--SR:!2024-01-26,2,230!2024-01-26,4,270-->
 
 Hur affärshändelser ska bokföras (3):: Snarast, kronologiskt och systematiskt.
-<!--SR:!2024-01-25,3,255!2024-01-26,4,270-->
+<!--SR:!2024-01-25,3,255!2024-01-28,2,250-->
 
 Fråga för att veta om något är en affärshändelse:: Har det varit ett ekonomiskt utbyte med världen?
-<!--SR:!2024-01-26,4,270!2024-01-25,3,250-->
+<!--SR:!2024-02-08,13,290!2024-01-25,3,250-->

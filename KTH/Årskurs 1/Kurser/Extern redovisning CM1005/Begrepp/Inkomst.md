@@ -24,7 +24,7 @@ Inkomst kommer eventuellt leda till [[Inbetalning]]
 ## Flashcards
 
 Inkomst (Definition):: Uppstår när företaget har slutfört en prestation. När den fortfarande inte har fått betalt
-<!--SR:!2024-01-25,3,250!2024-01-25,3,250-->
+<!--SR:!2024-01-25,3,250!2024-02-01,6,250-->
 
 Motsatsen till Inkomst:: Motsatsen till [[Utgift]]
-<!--SR:!2024-01-23,1,230!2024-01-25,3,250-->
+<!--SR:!2024-01-25,1,210!2024-01-25,3,250-->

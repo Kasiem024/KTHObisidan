@@ -12,4 +12,4 @@ Tags: #year2024 #begrepp #KTH #ekonomi
 ## Flashcards
 
 Alla företagsformer (5):: Enskild näringsverksamhet, Aktiebolag, Handelsbolag, Ekonomisk förening, Ideell förening
-<!--SR:!2024-01-24,3,250!2024-01-26,4,270-->
+<!--SR:!2024-02-06,13,270!2024-01-26,4,270-->
