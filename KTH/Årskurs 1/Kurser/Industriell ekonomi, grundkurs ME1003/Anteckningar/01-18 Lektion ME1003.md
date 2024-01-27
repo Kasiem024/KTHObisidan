@@ -1,4 +1,4 @@
-# 01-18 Lektion Industriell Ekonomi Grundkurs
+# 01-18 Lektion ME1003
 
 2024-01-18 12:57
 Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
@@ -65,7 +65,7 @@ För att kunna lyckas måste man välja en av dess tre och fokusera på den.
 
 En affärsmodell beskriver hur verksamheten är tänkt att fungera.
 
-![[Affärsmodellen Industriell ekonomi.png]]
+![[Affärsmodellen ME1003.png]]
 
 ### [[Värdeerbjudandet]]
 
@@ -94,7 +94,7 @@ Exempelvis kan en bil vara både B2C och B2B beroende om det är en privat perso
 
 Hur får man betalt, vad är betalningsmodellen? Ibland kan betalningsmodellen vara dold och inte vad man skulle först tro. Ett företag kan erbjuda en gratisplattform och tjäna pengar på reklam (Google, Youtube). Exempelvis så SF tjänar på maten inte biobiljetterna.
 
-![[Resurstransformation utgångspunkt.png]]
+![[Resurstransformation Utgångspunkt ME1003.png]]
 
 Fyra förhållanden som påverkar hur resurstransformationen utformas 4V
 
@@ -109,7 +109,7 @@ Hur får man betalt, vad är betalningsmodellen? Ibland kan betalningsmodellen v
 
 ## [[Värdekedja]]
 
-![[Värdekejda.png]]
+![[Värdekejda ME1003.png]]
 Kan också kallas produktionskedja. Det behandlar hur värdet av en vara ökar ju längre man kommer i produktionskedjan, exempelvis från en bomull planta till ett klädesplagg.
 
 Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är det horisontellt, höger till vänster.

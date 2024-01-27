@@ -24,7 +24,7 @@ Vad brukar inkluderas i BR?
 Vad är företagets tillgångar? Vad äger företaget?
 
 - Faktiska värdet av utrustningen efter avskrivning. (500-100=400)
-- Vad man har i banken. Saldot/Resultatet från [[kassaflöde]]
+- Vad man har i banken. Saldot/Resultatet från [[Kassaflöde]]
 
 #### Kredit (Höger)
 

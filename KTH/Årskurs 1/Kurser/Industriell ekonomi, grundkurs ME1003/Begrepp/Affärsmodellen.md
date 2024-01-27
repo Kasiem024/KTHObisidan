@@ -17,7 +17,7 @@ Man kan dela in affärsmodellen i tre delar
 
 Ordet "värde" i detta sammanhang är värde för kunden.
 
-![[Affärsmodellen Industriell ekonomi.png]]
+![[Affärsmodellen ME1003.png]]
 [Affärsmodell, Visma](https://vismaspcs.se/ditt-foretagande/starta-eget-foretag/formulera-din-affarside)
 
 ## Flashcards

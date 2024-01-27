@@ -1,9 +1,9 @@
-# 01-23 Lektion Extern Redovisning
+# 01-23 Lektion CM1005
 
 2024-01-23 08:23
 Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 
-När man skickar en faktura kan man redovisa det som en [[utgift]].
+När man skickar en faktura kan man redovisa det som en [[Utgift]].
 
 [[Inbetalning]] och [[Utbetalning]] kan ses som likviditet, penningflödet. Sker i banken, plusgiro och kassan.
 
@@ -13,8 +13,8 @@ När man skickar en faktura kan man redovisa det som en [[utgift]].
 
 Saldo kan ses som skillnaden mellan debet och kredit på ett konto.
 
-[[Utgift]] leder till [[utbetalning]]
-[[Inkomst]] leder till [[inbetalning]]
+[[Utgift]] leder till [[Utbetalning]]
+[[Inkomst]] leder till [[Inbetalning]]
 
 Bokslut handlar om att periodisera och värdera resurser. Periodens resultat räknas ut och det resultatet påverkar det egna kapitalet. Alltså vinsten från [[Resultaträkning]] behövs för att kunna räkna rätt på [[Balansräkning]].
 
@@ -31,7 +31,7 @@ Saldo kan man bara ha på en sida. Antingen debet saldo eller kredit saldo
 Utjämningsmetod
 Avläsningsmetod
 
-Om [[utgift]] och [[utbetalning]] sker vid samma tidpunkt kallas det för kontant affär. När man betalar kontant sker det direkt och omedelbart. Alltså har man anskaffat sig resursen samtidigt som man har betalt för den. Kontanta affärer är ovanliga nuförtiden. Faktura är det normala. Utbetalning 30 dagar efter utgiften.
+Om [[Utgift]] och [[Utbetalning]] sker vid samma tidpunkt kallas det för kontant affär. När man betalar kontant sker det direkt och omedelbart. Alltså har man anskaffat sig resursen samtidigt som man har betalt för den. Kontanta affärer är ovanliga nuförtiden. Faktura är det normala. Utbetalning 30 dagar efter utgiften.
 
 Skuld och fordran är motsatser.
 
@@ -42,12 +42,12 @@ Det finns olika sätt ordna dessa fyra händelser och det kan bli problematiskt 
 ==Faktura/Bokföring händer vid en tidpunkt.==
 ==Prestation/Förbrukning händer över en period.==
 
-==Förutbetald== [[inkomst]]/[[intäkt]]/[[utgift]]/[[kostnad]]: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat.
+==Förutbetald== [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]]: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat.
 
 En förbrukad utgift är en kostnad och går till RR
 En presterad inkomst är intäkt och går till RR
 
-==Upplupen== [[inkomst]]/[[intäkt]]/[[utgift]]/[[kostnad]]: När bokslutet hamnar innan man har fått Faktura/Bokföring, efter att man har gjort Prestation/Förbrukning. Alltså man har gjort levererat en tjänst/vara innan man har fått betalt för det.
+==Upplupen== [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]]: När bokslutet hamnar innan man har fått Faktura/Bokföring, efter att man har gjort Prestation/Förbrukning. Alltså man har gjort levererat en tjänst/vara innan man har fått betalt för det.
 
 Förbrukat men inte bokfört blir interimsskuld
 Presterat men inte bokfört blir interimsfordran
@@ -58,7 +58,7 @@ När man gör balansräkning på bokslutstablå börja mitt i med skulder och eg
 
 Sidor 43-51, 58-73
 
-[[Bokslutstablå Exempel 1 KTH 240124 Extern Redovisning.pdf]]
+[[01-23 Bokslutstablå Exempel 1 CM1005.pdf]]
 
 ## Flashcards
 
@@ -68,15 +68,15 @@ Saldo (Definition):: Skillnaden mellan debet och kredit på ett konto.
 Bokslut (Definition):: När man periodiserar och värderar ett företags resurser
 <!--SR:!2000-01-01,1,250!2024-01-27,1,230-->
 
-Kontant Affär (Definition):: När [[utgift]] och [[utbetalning]] sker vid samma tidpunkt
+Kontant Affär (Definition):: När [[Utgift]] och [[Utbetalning]] sker vid samma tidpunkt
 
 När händer Faktura/Bokföring;; Vid en specifik tidpunkt
 
 När händer Prestation/Förbrukning;; Över en period
 <!--SR:!2024-01-29,3,250-->
 
-Förutbetald [[inkomst]]/[[intäkt]]/[[utgift]]/[[kostnad]] (Definition):: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat
+Förutbetald [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]] (Definition):: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat
 <!--SR:!2024-01-27,1,230!2024-01-27,1,230-->
 
-Upplupen [[inkomst]]/[[intäkt]]/[[utgift]]/[[kostnad]]:: När bokslutet hamnar innan man har fått Faktura/Bokföring, efter att man har gjort Prestation/Förbrukning. Alltså man har gjort levererat en tjänst/vara innan man har fått betalt för det
+Upplupen [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]]:: När bokslutet hamnar innan man har fått Faktura/Bokföring, efter att man har gjort Prestation/Förbrukning. Alltså man har gjort levererat en tjänst/vara innan man har fått betalt för det
 <!--SR:!2024-01-27,1,230!2000-01-01,1,250-->

@@ -8,14 +8,14 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 Handlar om hur man transformerar en viss typ av resurs så som råvaror till en vara som kunden vill ha genom att exempelvis använda sig av sin personal och utrustning.
 
 [[Resurstransformation]] som utgångspunkt. Enkel resurstransformation.
-![[Resurstransformation utgångspunkt.png]]
+![[Resurstransformation Utgångspunkt ME1003.png]]
 
 [[Resurstransformation]] som marknadsplattform
 Google leverar en tjänst till kunden och samtidigt ger kunden information om sig sjäklv till Google som de säljer till andra företag. Därför finns input och output åt båda hållen.
-![[Resurstransformation marknadsplattform.png]]
+![[Resurstransformation Marknadsplattform ME1003.png]]
 
 [[Resurstransformation]] som cirkel. Kunder återvinner varor.
-![[Resurstransformation cirkel.png]]
+![[Resurstransformation Cirkel ME1003.png]]
 
 ### [[4V]]
 

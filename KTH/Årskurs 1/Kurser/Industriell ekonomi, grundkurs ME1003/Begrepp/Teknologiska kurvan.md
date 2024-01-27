@@ -11,7 +11,7 @@ Beskriver hur utvecklingen av en viss teknologis prestanda Ã¤ndras med tiden. LÃ
 
 Inkrementell --> Radikal --> Inkrementell
 
-![[Teknologiska kurvan.png]]
+![[Teknologiska Kurvan ME1003.png]]
 
 ## Flashcards
 

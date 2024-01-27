@@ -21,7 +21,7 @@ Aktiebolaget är ett eget skattesubjekt. Det betalar sin egna skatt.
 
 ==Börskurs== är hur mycket varje aktie är värd på börsen just nu.
 
-![[Aktiebolag karta.png]]
+![[Aktiebolag karta CM1005.png]]
 [[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=275&selection=6,0,6,30|Aktiebolagets organ enligt ABL]]
 
 ## Flashcards
@@ -30,7 +30,7 @@ Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansv
 <!--SR:!2024-01-25,2,232!2024-01-26,4,272-->
 
 Startkapital/aktiekapital/riskkapital för att starta ett aktiebolag;; 25 000 kr
-<!--SR:!2024-02-06,11,272!2024-01-25,4,270-->
+<!--SR:!2024-02-06,11,272-->
 
 Aktiens kvotvärde:: Aktiens värde vid grundandet som grundarna bestämmer själva
 <!--SR:!2024-01-25,3,252!2024-01-26,4,272-->

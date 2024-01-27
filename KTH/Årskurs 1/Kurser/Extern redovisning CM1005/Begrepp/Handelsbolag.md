@@ -27,3 +27,4 @@ Kommanditbolag (Definition):: En form av handelsbolag där vissa bolagsmäns ans
 <!--SR:!2024-01-25,3,252!2024-01-26,4,270-->
 
 Solidariskt ansvar (Definition):: En för alla, alla för en
+<!--SR:!2000-01-01,1,250!2024-01-31,4,272-->

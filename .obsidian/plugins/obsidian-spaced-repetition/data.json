@@ -4,7 +4,9 @@
     "flashcardGoodText": "Medium",
     "flashcardHardText": "Hard",
     "flashcardTags": [
-      "#begrepp"
+      "#begrepp",
+      "#CM1005",
+      "#ME1003"
     ],
     "convertFoldersToDecks": true,
     "cardCommentOnSameLine": false,
@@ -27,7 +29,9 @@
     "tagsToReview": [
       "#review"
     ],
-    "noteFoldersToIgnore": [],
+    "noteFoldersToIgnore": [
+      "**/Obsidian Plugins"
+    ],
     "openRandomNote": false,
     "autoNextNote": false,
     "disableFileMenuReviewOptions": false,

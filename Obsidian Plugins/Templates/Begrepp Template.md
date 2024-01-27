@@ -1,7 +1,7 @@
 # {{title}}
 
 {{date}} {{time}}
-Tags: #year2024 #KTH #ekonomi #begrepp
+Tags: #year2024 #KTH #ekonomi # #begrepp
 
 ## Definition
 

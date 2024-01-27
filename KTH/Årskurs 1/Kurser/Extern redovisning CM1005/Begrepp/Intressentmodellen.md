@@ -19,9 +19,9 @@ Ett företag har intressenter. Intressenter är grupper eller personer som påve
 - Myndigheter: Skatt. Sjukvård, lokaltrafik,
 - Ledningen: Har mer av en risk
 
-![[Intressentmodellen.jpg]]
+![[Intressentmodellen CM1005.jpg]]
 
-![[Intressent.png]]
+![[Intressenter CM1005.png]]
 [Sida 14 Den nya affärsredovisningen.](<[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=14&selection=92,0,92,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 14]]>)
 
 ## Flashcards

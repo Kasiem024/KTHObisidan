@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
-![[Värdekejda.png]]
+![[Värdekejda ME1003.png]]
 Kan också kallas produktionskedja. Det behandlar hur värdet av en vara ökar ju längre man kommer i produktionskedjan, exempelvis från en bomull planta till ett klädesplagg.
 
 Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är det horisontellt, höger till vänster.

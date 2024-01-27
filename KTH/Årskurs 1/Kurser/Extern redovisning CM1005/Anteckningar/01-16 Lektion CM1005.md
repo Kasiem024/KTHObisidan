@@ -1,4 +1,4 @@
-# 01-16 Lektion Extern Redovisning
+# 01-16 Lektion CM1005
 
 2024-01-16 10:09
 Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
@@ -91,7 +91,7 @@ Två olika bokslutskonton
 
 Amortering är aldrig en kostnad, alltså aldrig på [[Resultaträkning|RR]]. Ränta är kostnaden.
 
-![[Kontoplan.png]]
+![[Kontoplan CM1005.png]]
 [[Dubbel Bokföring]]: En bokföringsregel. Varje [[Affärshändelse]] ska bokföras på två konton. Ett konto i debet och på ett konto i kredit. Med lika stora belopp.
 
 ==Debet alltid vänster. Kredit alltid höger. Plus och minus varierar.==
@@ -99,7 +99,7 @@ Amortering är aldrig en kostnad, alltså aldrig på [[Resultaträkning|RR]]. R�
 Tillgångar minskar på kredit och ökar på debet.
 Skulder och eget kapital ökar på kredit och minskar på debet.
 
-[[01-16 Räkningar Extern redovisning.excalidraw]]
+[[01-16 Räkningar CM1005.excalidraw]]
 
 ## Flashcards
 

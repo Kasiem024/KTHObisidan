@@ -29,7 +29,7 @@ Exempel på namnet av T-konto
 Tillgångar minskar på kredit och ökar på debet.
 Skulder och eget kapital ökar på kredit och minskar på debet.
 
-![[Kontoplan.png]]
+![[Kontoplan CM1005.png]]
 
 ## Flashcards
 
