@@ -1,7 +1,7 @@
 # 01-16 Lektion Extern Redovisning
 
 2024-01-16 10:09
-Tags: #year2024 #KTH #ekonomi #lektion
+Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 
 ## Näringsverksamhet
 
@@ -109,5 +109,9 @@ Ekonomisk livslängd (Definition):: Hur länge något fungerar "bra". Innan pris
 Teknisk livslängd (Definition):: Hur länge något fungerar överhuvudtaget, oberoende av drift- eller servicekostnader
 <!--SR:!2024-01-25,3,250!2024-01-26,4,270-->
 
-Sätt att finansiera ett företag (3):: Eget kapital (Ägarinsättning), Främmande kapital (Lån), Företagets självfinansiering (Vinster)
+Sätt att finansiera ett företag (3)
+??
+Eget kapital (Ägarinsättning
+Främmande kapital (Lån)
+Företagets självfinansiering (Vinster)
 <!--SR:!2024-01-25,3,250!2024-01-25,3,250-->

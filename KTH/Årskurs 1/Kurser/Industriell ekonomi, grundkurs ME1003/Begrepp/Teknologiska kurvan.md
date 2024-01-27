@@ -1,7 +1,7 @@
 # Teknologiska kurvan
 
 2024-01-23 16:04
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
@@ -13,4 +13,6 @@ Inkrementell --> Radikal --> Inkrementell
 
 ![[Teknologiska kurvan.png]]
 
-## Kopplat till
+## Flashcards
+
+Teknologiska kurvan (Definition):: Beskriver hur utvecklingen av en viss teknologis prestanda ändras med tiden. Långsamt i början och slutet av teknologins livstid men snabbt vid mitten

@@ -1,7 +1,7 @@
 # Löpande Bokföring
 
 2024-01-23 19:40
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -29,5 +29,10 @@ Fyra olika konton för löpande bokföring
 Löpande Bokföring (Definition):: När man bokför ett företags [[Affärshändelse]] kontinuerligt, snarast
 <!--SR:!2000-01-01,1,250!2024-01-28,2,248-->
 
-De olika konton för löpande bokföring (4):: Tillgångar, Eget Kapital/Skulder, Utgifter, Inkomster
+De olika konton för löpande bokföring (4)
+??
+Tillgångar
+Eget Kapital/Skulder
+Utgifter
+Inkomster
 <!--SR:!2024-01-27,1,228!2024-01-27,1,230-->

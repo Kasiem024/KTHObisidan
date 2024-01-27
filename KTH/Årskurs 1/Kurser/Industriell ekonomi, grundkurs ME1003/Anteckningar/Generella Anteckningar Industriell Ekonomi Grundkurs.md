@@ -1,7 +1,7 @@
 # Generella Anteckningar Industriell Ekonomi Grundkurs
 
 2024-01-22 12:48
-Tags: #year2024 #KTH
+Tags: #year2024 #KTH #ME1003
 
 ## Länkar
 

@@ -1,7 +1,7 @@
 # Kassaflöde
 
 2024-01-16 21:57
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -18,5 +18,5 @@ Summan från kassaflöde kallas saldo. Det är dina likvida medel, pengar på ba
 Kassaflöde (Definition):: Ditt saldo, likvida medel. Hur mycket pengar du har på bankkontot i slutet av en period
 <!--SR:!2024-01-27,1,212!2024-02-02,7,250-->
 
-De två delarna av ett kassaflöde:: Kombinationen av [[Inbetalning]] och [[Utbetalning]] under en viss period
+De två delarna av ett kassaflöde:: Redovisningen av [[Inbetalning]] och [[Utbetalning]] under en viss period
 <!--SR:!2024-02-06,11,270!2024-02-09,14,290-->

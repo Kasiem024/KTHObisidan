@@ -1,20 +1,21 @@
 # 01-26 Lektion Extern Redovisning
 
 2024-01-26 13:03
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 
 Årsredovisningslagen: Alla stora företag måste följa denna lag. Den består av:
+
 - Årsbokslut - [[Balansräkning]] och [[Resultaträkning]]
 - Fotnoter till bokslutet - Värderingsprinciper
-- Förvaltningsberättelse - Styrelsens förvaltning, hur styrelsen har skött om företaget under året. 
+- Förvaltningsberättelse - Styrelsens förvaltning, hur styrelsen har skött om företaget under året.
 - Kassaflödesanalys - [[Kassaflöde]]
 
-==Förvaltningsberättelse==: 
+[[Förvaltningsberättelse]]:
 
-- Förhållanden som inte redovisas i BR och RR
-- Händelser av väsentlig betydelse
-- Bolagets framtida utvecklingar
-- ...
+- Förhållanden som inte redovisas i BR, RR och fotnoterna
+- Händelser av väsentlig betydelse under året
+- Bolagets förväntade framtida utvecklingar
+- Förslag till disposition av årets resultat
 
 ==Hållbarhetsredovisning==:
 
@@ -24,8 +25,4 @@ Om två av dessa kriterier är uppfyllda de senaste 2 åren ska företaget följ
 - Företagets balansomslutning ska ha uppgått mer än 175 mnkr
 - Företagets nettoomsättning har varit mer än 350 mnkr
 
-[[Hålbarhetsrapport]]
-
-## Flashcards
-
-(Definition)::
+[[Hållbarhetsrapport]]

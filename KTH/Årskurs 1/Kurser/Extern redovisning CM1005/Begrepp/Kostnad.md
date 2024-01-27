@@ -1,7 +1,7 @@
 # Kostnad
 
 2024-01-16 22:24
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -37,11 +37,14 @@ Vad brukar räknas som kostnad inom RR?
 Kostnad (Definition):: En periodiserad utgift. När företaget förbrukar en resurs
 <!--SR:!2024-01-25,3,250!2024-02-02,7,250-->
 
-Exempel på resurser (Kostnad) (5):: Arbetskraft (lön), Maskiner/Utrustning, Energi/Bränsle, Tid, Kapital
+Exempel på resurser (Kostnad) (5)
+??
+Arbetskraft (lön)
+Maskiner/Utrustning
+Energi/Bränsle
+Tid
+Kapital
 <!--SR:!2024-01-25,3,250!2024-01-25,3,250-->
 
 Motsatsen till kostnad:: Motsatsen till [[Intäkt]]
 <!--SR:!2024-01-25,3,250!2024-02-05,10,270-->
-
-Annat namn för kostnad:: Annat namn för debet
-<!--SR:!2024-02-01,6,250!2024-01-25,3,250-->

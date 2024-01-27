@@ -1,7 +1,7 @@
 # Omslutning
 
 2024-01-23 09:07
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -21,5 +21,5 @@ Omslutning kan läggas både på debet sidan och kredit sidan.
 
 ## Flashcards
 
-Omslutning (Definition):: Summan [[inbetalning]] och summan [[utbetalning]] när det kommer till ett specifikt [[T-Konton]]. Visar ett företags ekonomiska ställning vid en specifik tidpunkt.
+Omslutning (Definition):: Summan [[inbetalning]] och summan [[utbetalning]] när det kommer till ett specifikt [[T-Konton]]. Visar ett företags ekonomiska ställning vid en specifik tidpunkt
 <!--SR:!2024-01-25,1,230!2024-01-27,1,210-->

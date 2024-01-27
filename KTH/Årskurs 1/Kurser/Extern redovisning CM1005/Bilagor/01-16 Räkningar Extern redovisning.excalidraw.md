@@ -130265,8 +130265,8 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 		},
 		{
 			"type": "text",
-			"version": 330,
-			"versionNonce": 1151184727,
+			"version": 331,
+			"versionNonce": 464971175,
 			"isDeleted": false,
 			"id": "bWcI68dP",
 			"fillStyle": "solid",
@@ -130286,7 +130286,7 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1705924831404,
+			"updated": 1706346523259,
 			"link": null,
 			"locked": false,
 			"fontSize": 253.99996948242188,
@@ -130298,12 +130298,12 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"containerId": null,
 			"originalText": "Kapitalinsats 120,000",
 			"lineHeight": 1.25,
-			"baseline": 224
+			"baseline": 223
 		},
 		{
 			"type": "text",
-			"version": 330,
-			"versionNonce": 551081369,
+			"version": 331,
+			"versionNonce": 1271983177,
 			"isDeleted": false,
 			"id": "WfIpCht1",
 			"fillStyle": "solid",
@@ -130323,7 +130323,7 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1705924831406,
+			"updated": 1706346523260,
 			"link": null,
 			"locked": false,
 			"fontSize": 253.99996948242188,
@@ -130335,12 +130335,12 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"containerId": null,
 			"originalText": "Banklån 480,000",
 			"lineHeight": 1.25,
-			"baseline": 224
+			"baseline": 223
 		},
 		{
 			"type": "text",
-			"version": 330,
-			"versionNonce": 368815223,
+			"version": 331,
+			"versionNonce": 1194956999,
 			"isDeleted": false,
 			"id": "M86tmRCr",
 			"fillStyle": "solid",
@@ -130360,7 +130360,7 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1705924831406,
+			"updated": 1706346523260,
 			"link": null,
 			"locked": false,
 			"fontSize": 253.99996948242188,
@@ -130372,12 +130372,12 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"containerId": null,
 			"originalText": "Köper lastbil 500,000 (5 år)",
 			"lineHeight": 1.25,
-			"baseline": 224
+			"baseline": 223
 		},
 		{
 			"type": "text",
-			"version": 330,
-			"versionNonce": 440187513,
+			"version": 331,
+			"versionNonce": 358513449,
 			"isDeleted": false,
 			"id": "pA9FcyED",
 			"fillStyle": "solid",
@@ -130397,7 +130397,7 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1705924831407,
+			"updated": 1706346523261,
 			"link": null,
 			"locked": false,
 			"fontSize": 253.99996948242188,
@@ -130409,12 +130409,12 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"containerId": null,
 			"originalText": "Betalar utgifter för drift och service 270,000",
 			"lineHeight": 1.25,
-			"baseline": 224
+			"baseline": 223
 		},
 		{
 			"type": "text",
-			"version": 330,
-			"versionNonce": 1088226711,
+			"version": 331,
+			"versionNonce": 1379461095,
 			"isDeleted": false,
 			"id": "99bImdRE",
 			"fillStyle": "solid",
@@ -130434,7 +130434,7 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1705924831408,
+			"updated": 1706346523261,
 			"link": null,
 			"locked": false,
 			"fontSize": 253.99996948242188,
@@ -130446,12 +130446,12 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"containerId": null,
 			"originalText": "Betala ränta på banklån 60,000",
 			"lineHeight": 1.25,
-			"baseline": 224
+			"baseline": 223
 		},
 		{
 			"type": "text",
-			"version": 330,
-			"versionNonce": 194052953,
+			"version": 331,
+			"versionNonce": 941043209,
 			"isDeleted": false,
 			"id": "qvp6KMSO",
 			"fillStyle": "solid",
@@ -130471,7 +130471,7 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1705924831409,
+			"updated": 1706346523261,
 			"link": null,
 			"locked": false,
 			"fontSize": 253.99996948242188,
@@ -130483,7 +130483,7 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 			"containerId": null,
 			"originalText": "Få betalt av kunder för utförda transporter 770,000",
 			"lineHeight": 1.25,
-			"baseline": 224
+			"baseline": 223
 		},
 		{
 			"type": "freedraw",
@@ -166332,8 +166332,8 @@ Få betalt av kunder för utförda transporter 770,000 ^qvp6KMSO
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": -12630.12219857589,
-		"scrollY": 2682.0395137056857,
+		"scrollX": -19762.62219857589,
+		"scrollY": 3702.1957637056857,
 		"zoom": {
 			"value": 0.1
 		},

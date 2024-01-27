@@ -1,14 +1,16 @@
 # {{title}}
 
 {{date}} {{time}}
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #begrepp
 
 ## Definition
 
+
+
 ## Kopplat till
 
-## Flashcards
 
-(Definition)::
+
+## Flashcards
 
 (Definition)::

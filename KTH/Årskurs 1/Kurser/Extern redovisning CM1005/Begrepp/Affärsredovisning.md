@@ -1,7 +1,7 @@
 # Affärsredovisning
 
 2024-01-17 09:11
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 

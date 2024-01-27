@@ -1,7 +1,7 @@
 # Balansräkning
 
 2024-01-16 21:54
-Tags: #year2024 #begrepp #ekonomi #KTH
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -47,9 +47,16 @@ De två delarna/sidorna av en balansräkning:: Ett företags eget kapital och sk
 Balansidentitet (Definition):: Tillgångar = Eget kapital + Skulder
 <!--SR:!2024-01-23,1,232!2024-01-23,1,232-->
 
-Vad som brukar inkluderas i BR Vänster:: Faktiska värdet av utrustningen efter avskrivning. (500-100=400). Vad man har i banken, Saldot/Resultatet från kassaflöde
+Vad som brukar inkluderas i BR Vänster
+??
+Faktiska värdet av utrustningen efter avskrivning (500-100=400)
+Vad man har i banken, saldot/resultatet från kassaflöde
 <!--SR:!2000-01-01,1,250!2024-01-27,1,229-->
 
-Vad som brukar inkluderas i BR Höger:: Ägarinsats/
-<!--SR:!2000-01-01,1,250!2024-01-27,1,229-->
-Kapitalinsats, Vinst från RR, Ägaruttag från vinsten, Främmande kapital, skulder, banklån, Amortering på banklån
+Vad som brukar inkluderas i BR Höger
+??
+Ägarinsats/Kapitalinsats
+Vinst från RR
+Ägaruttag från vinsten
+Främmande kapital, skulder, banklån
+Amortering på banklån

@@ -1,7 +1,7 @@
 # 01-23 Lektion Industriell Ekonomi Grundkurs
 
 2024-01-23 15:09
-Tags: #year2024 #KTH #lektion #ekonomi
+Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
 
 Produktion, produktutveckling, marknadsföring. De tre delarna av...
 

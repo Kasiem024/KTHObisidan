@@ -1,7 +1,7 @@
 # Inkomst
 
 2024-01-16 22:00
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -15,7 +15,7 @@ En inkomst uppstår då företaget har slutfört en prestation, t.ex. utfört 
 
 Inkomst kan ses som företagets resurser, när vi faktiskt säljer något och när vi anskaffar en resurs.
 
-Inkomst kommer eventuellt leda till [[Inbetalning]]
+Inkomst kommer eventuellt leda till [[Inbetalning]] och [[Intäkt]]
 
 ## Kopplat till
 

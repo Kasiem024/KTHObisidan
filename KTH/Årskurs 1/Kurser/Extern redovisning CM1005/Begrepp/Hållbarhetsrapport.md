@@ -1,7 +1,7 @@
-# Hålbarhetsrapport
+# Hållbarhetsrapport
 
 2024-01-26 13:29
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -13,8 +13,14 @@ En rapport som måste skrivas när ett företag blir stort. Om den inte skrivs m
 
 ## Kopplat till
 
+- [[Förvaltningsberättelse]]
+
 ## Flashcards
 
 Hållbarhetsrapport (Definition):: Om ett företag är tillräckligt stort enligt vissa kriterier måste den skriva en rapport gällande bland annat miljö och mänskliga rättigheter
 
-Kriterier för att ett företag måste skriva en hållbarhetsrapport (3):: Mer än 250 anställda, Mer än 175 mnkr balansomslutning, Mer än 350 mnkr nettoomsättning
+Kriterier för att ett företag måste skriva en hållbarhetsrapport (3)
+??
+Mer än 250 anställda
+Mer än 175 mnkr balansomslutning
+Mer än 350 mnkr nettoomsättning

@@ -1,7 +1,7 @@
 # Moms
 
 2024-01-16 20:58
-Tags: #year2024 #KTH #ekonomi #begrepp
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -18,5 +18,5 @@ När du sedan köper varor eller tjänster till ditt företag betalar du moms p�
 Moms (Definition):: En skatt som betalas vid köpet av varor och tjänster. Inbakad i priset.
 <!--SR:!2024-02-05,10,272!2024-01-26,4,272-->
 
-Andra namn för Moms;; Mervärdesskatt, konsumtionsskatt
+Andra namn för moms;; Mervärdesskatt, konsumtionsskatt
 <!--SR:!2024-02-12,17,290-->

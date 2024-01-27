@@ -1,7 +1,7 @@
 # 01-23 Lektion Extern Redovisning
 
 2024-01-23 08:23
-Tags: #year2024 #KTH #ekonomi #lektion
+Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 
 När man skickar en faktura kan man redovisa det som en [[utgift]].
 
@@ -70,9 +70,9 @@ Bokslut (Definition):: När man periodiserar och värderar ett företags resurse
 
 Kontant Affär (Definition):: När [[utgift]] och [[utbetalning]] sker vid samma tidpunkt
 
-När Faktura/Bokföring händer;; Vid en specifik tidpunkt
+När händer Faktura/Bokföring;; Vid en specifik tidpunkt
 
-När Prestation/Förbrukning händer;; Över en period
+När händer Prestation/Förbrukning;; Över en period
 <!--SR:!2024-01-29,3,250-->
 
 Förutbetald [[inkomst]]/[[intäkt]]/[[utgift]]/[[kostnad]] (Definition):: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat

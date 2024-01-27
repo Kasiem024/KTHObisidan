@@ -1,7 +1,7 @@
 # Värdekedja
 
 2024-01-21 10:05
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 

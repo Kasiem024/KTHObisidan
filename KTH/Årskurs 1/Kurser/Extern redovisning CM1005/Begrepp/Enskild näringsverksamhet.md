@@ -1,7 +1,7 @@
 # Enskild näringsverksamhet
 
 2024-01-16 10:49
-Tags: #year2024 #KTH #ekonomi #begrepp
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -23,5 +23,10 @@ Enskild näringsverksamhet (Definition):: Företagsform om en privatperson är e
 Annat namn för enskild näringsverksamhet:: Annat namn för enskild firma
 <!--SR:!2024-01-26,4,274!2024-02-10,15,294-->
 
-Egenskaper av en enskild näringsverksamhet:: Enklaste sättet att komma igång med ett företag. Är kopplat till personnummer, företaget är inte en separat juridisk person. Kan ha anställda.
+Egenskaper av en enskild näringsverksamhet
+??
+Enklaste sättet att komma igång med ett företag
+Är kopplat till personnummer
+Företaget är inte en separat juridisk person
+Kan ha anställda
 <!--SR:!2024-02-02,7,258!2024-01-25,4,270-->

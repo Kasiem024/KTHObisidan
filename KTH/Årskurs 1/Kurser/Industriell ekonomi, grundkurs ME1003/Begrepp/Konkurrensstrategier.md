@@ -1,7 +1,7 @@
 # Konkurrensstrategier
 
 2024-01-18 21:01
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
@@ -40,5 +40,9 @@ För att kunna lyckas måste man välja en av dess tre och fokusera på den.
 
 ## Flashcards
 
-Konkurrensstrategier (3);; Operativ överlägsenhet, Produktledarskap, Kundnärhet
+Konkurrensstrategier (3)
+??
+Operativ överlägsenhet
+Produktledarskap
+Kundnärhet
 <!--SR:!2024-01-25,2,230-->

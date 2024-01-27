@@ -1,7 +1,7 @@
 # Värdeskapandet
 
 2024-01-18 21:41
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 

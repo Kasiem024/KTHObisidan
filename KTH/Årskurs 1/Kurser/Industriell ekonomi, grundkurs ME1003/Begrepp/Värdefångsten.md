@@ -1,7 +1,7 @@
 # Värdefångsten
 
 2024-01-18 21:42
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
@@ -30,5 +30,14 @@ Vart kategoriseras Uber och Airbnb?
 Värdefångsten (Definition):: Ett begrepp för att beskriva hur man får betalt, betalningsmodellen.
 <!--SR:!2024-01-24,1,210!2024-01-25,2,230-->
 
-Olika intäktsmodeller (Värdefångst) (8);; Enhetsförsäljning/Abonnemang, Tilläggsförsäljning, Hyra/leasa, Licensiering, Franchise, Pris för användning, Freemium, Affiliate Marketing
+Olika intäktsmodeller (Värdefångst) (8)
+??
+Enhetsförsäljning/Abonnemang
+Tilläggsförsäljning
+Hyra/leasa
+Licensiering
+Franchise
+Pris för användning
+Freemium
+Affiliate Marketing
 <!--SR:!2024-01-24,1,210-->

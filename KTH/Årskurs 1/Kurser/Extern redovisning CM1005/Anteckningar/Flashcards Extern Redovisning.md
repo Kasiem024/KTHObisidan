@@ -1,7 +1,7 @@
 # Flashcards Extern Redovisning
 
 2024-01-22 09:04
-Tags: #year2024 #flashcards #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #flashcards
 
 Skillnaden mellan [[Inkomst]] och [[Intäkt]]:: Inkomster är det som löpande tas emot under året. När inkomsten hänförs till rätt redovisningsperiod, blir det en intäkt. En [[Intäkt]] är alltså en periodiserad [[Inkomst]]
 <!--SR:!2024-01-27,1,210!2024-01-23,1,230-->

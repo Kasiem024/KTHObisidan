@@ -1,7 +1,7 @@
 # Intäkt
 
 2024-01-16 22:00
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -37,6 +37,3 @@ Intäkt (Definition):: En periodiserad [[Inkomst]] som är kopplat till ett för
 
 Motsatsen till Intäkt:: Motsatsen till [[Kostnad]]
 <!--SR:!2024-01-24,3,250!2024-01-26,4,270-->
-
-Annat namn för intäkt:: Annat namn för kredit
-<!--SR:!2024-01-25,3,252!2024-02-07,12,272-->

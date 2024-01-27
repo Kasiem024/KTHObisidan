@@ -1,7 +1,7 @@
 # Aktiebolag
 
 2024-01-16 10:54
-Tags: #year2024 #KTH #ekonomi #begrepp
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -29,10 +29,10 @@ Aktiebolaget är ett eget skattesubjekt. Det betalar sin egna skatt.
 Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansvariga för företagets skulder. Ägarna riskerar bara att förlora deras egna satsade kapital. Minst 1 ägare men kan också vara 100,000-tals ägare
 <!--SR:!2024-01-25,2,232!2024-01-26,4,272-->
 
-25 000:: Startkapital/aktiekapital/riskkapital för att starta ett aktiebolag
+Startkapital/aktiekapital/riskkapital för att starta ett aktiebolag;; 25 000 kr
 <!--SR:!2024-02-06,11,272!2024-01-25,4,270-->
 
-Aktiens kvotvärde:: Aktiens värde vid grundandet som grundarna bestämmer själva.
+Aktiens kvotvärde:: Aktiens värde vid grundandet som grundarna bestämmer själva
 <!--SR:!2024-01-25,3,252!2024-01-26,4,272-->
 
 Antal aktier ett företag har:: Riskkapital/Aktiens kvotvärde
@@ -43,8 +43,15 @@ De två typerna av aktiebolag;; Privat aktiebolag (50,000 aktiekapital), Publikt
 
 Balansvärde (substansvärde):: Totalt eget kapital/antal aktier
 
-Börskurs:: Priset av en aktie, bestäms av tillgång och efterfrågan
+Börskurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
 <!--SR:!2000-01-01,1,250!2024-01-27,1,232-->
 
-Vad som påverkar en akties börskurs (6):: Balansvärdet, Framtida vinstförmåga, Marknadens likviditet, Alternativa placeringsmöjligheter, Skattesystemets utformning, Psykologiska faktorer (flockbeteende)
+Vad som påverkar en akties börskurs (6)
+??
+Balansvärdet
+Framtida vinstförmåga
+Marknadens likviditet
+Alternativa placeringsmöjligheter
+Skattesystemets utformning
+Psykologiska faktorer (flockbeteende)
 <!--SR:!2024-01-27,1,232!2000-01-01,1,250-->

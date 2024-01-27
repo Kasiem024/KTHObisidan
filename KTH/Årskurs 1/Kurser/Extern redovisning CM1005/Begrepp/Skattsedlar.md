@@ -1,7 +1,7 @@
 # Skattsedlar
 
 2024-01-16 21:07
-Tags: #year2024 #KTH #ekonomi #begrepp
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -27,7 +27,11 @@ Du som både bedriver enskild näringsverksamhet och dessutom har inkomst av ans
 
 ## Flashcards
 
-De olika typerna av skattsedlar (3);; A-Skatt, F-Skatt, FA-Skatt
+De olika typerna av skattsedlar (3)
+??
+A-Skatt
+F-Skatt
+FA-Skatt
 <!--SR:!2024-01-26,4,279-->
 
 A-Skatt (Definition);; Skatt som anställd. Arbetsgivaren tar hand om det

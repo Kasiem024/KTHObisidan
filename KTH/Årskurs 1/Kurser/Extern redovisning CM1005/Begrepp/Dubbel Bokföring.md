@@ -1,7 +1,7 @@
 # Dubbel Bokföring
 
 2024-01-23 20:45
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 

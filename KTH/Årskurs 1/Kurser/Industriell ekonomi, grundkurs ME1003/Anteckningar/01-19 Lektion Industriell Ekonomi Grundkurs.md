@@ -1,7 +1,7 @@
 # 01-19 Lektion Industriell Ekonomi Grundkurs
 
 2024-01-19 15:15
-Tags: #year2024 #KTH #lektion
+Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
 
 ## Teknik som konkurrensmedel
 
@@ -13,4 +13,4 @@ Nokia insåg att telefoner inte bara kan sälja för proffs och bestämde sig f�
 
 Teknisk utveckling ledde till den industriella revolutionen.
 
-[[01-19 ME1003 Journal.pdf]]
+[[01-19 Journal ME1003.pdf]]

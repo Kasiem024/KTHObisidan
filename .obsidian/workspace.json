@@ -4,40 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6fc593d9dad8a4bc",
+        "id": "0e924b34c72773a9",
         "type": "tabs",
         "children": [
           {
-            "id": "c4a385fd8ea16227",
+            "id": "d974921b47adc1fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "262945986bdd199f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-26 Lektion Extern Redovisning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dffa281f7c150cad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Hålbarhetsrapport.md",
+                "file": "KTH/Årskurs 1/Kurser/Programmeringsteknik, webbkurs DD100N/Anteckningar/Generella Anteckningar Programmeringsteknik DD100N.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#begrepp",
+                "query": "tag:#physics",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
+                "file": "KTH/Årskurs 1/Kurser/Programmeringsteknik, webbkurs DD100N/Anteckningar/Generella Anteckningar Programmeringsteknik DD100N.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
+                "file": "KTH/Årskurs 1/Kurser/Programmeringsteknik, webbkurs DD100N/Anteckningar/Generella Anteckningar Programmeringsteknik DD100N.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md"
+                "file": "KTH/Årskurs 1/Kurser/Programmeringsteknik, webbkurs DD100N/Anteckningar/Generella Anteckningar Programmeringsteknik DD100N.md"
               }
             }
           },
@@ -177,12 +153,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 396.5,
-    "collapsed": true
+    "width": 396.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,50 +174,50 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c4a385fd8ea16227",
+  "active": "85154ac5110aa970",
   "lastOpenFiles": [
-    "Obsidian Plugins/Excalidraw/Drawing 2024-01-26 14.35.10.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards Extern Redovisning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-26 Lektion Extern Redovisning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Hålbarhetsrapport.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Handelsbolag.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Balansräkning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Resultaträkning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intäkt.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Bokslutstablå Exempel 1 KTH 240124 Extern Redovisning.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Begrepp Journal Extern Redovisning.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-22 Journal Extern Redovisning.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS1 Kalkylövning 01-22 Extern Redovisning.excalidraw.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Aktiebolag karta.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Ekonomisk förening.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Enskild näringsverksamhet.md",
-    "README.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Teknologiska kurvan.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/01-23 ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-16 Lektion Extern Redovisning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Dubbel Bokföring.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Omslutning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Dubbelbokföring.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/T-Konton.md",
-    "KTH/Årskurs 1/Kurser/Programmeringsteknik, webbkurs DD100N/Generella Anteckningar Programmeringsteknik DD100N.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-23 Lektion Extern Redovisning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Ingående Balans.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Löpande Bokföring.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utgående Balans.md",
+    "KTH/Årskurs 1/Kurser/Inledande modern fysik SK180N/Anteckningar/SK180N Generella Anteckningar.md",
+    "KTH/Årskurs 1/Kurser/Programmeringsteknik, webbkurs DD100N/Anteckningar/Generella Anteckningar Programmeringsteknik DD100N.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Affärsmodellen.md",
     "Obsidian Plugins/Templates/Begrepp Template.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inkomst.md",
+    "Obsidian Plugins/Templates/Default Template.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeskapandet.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdefångsten.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeerbjudandet.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Teknologiska kurvan.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Resurstransformation.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Konkurrensstrategier.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4V.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4S.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Generella Anteckningar Industriell Ekonomi Grundkurs.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-23 Lektion Industriell Ekonomi Grundkurs.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-19 Lektion Industriell Ekonomi Grundkurs.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-18 Lektion Industriell Ekonomi Grundkurs.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/01-16 Räkningar Extern Redovisning Excalidraw.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utgående Balans.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utgift.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Utbetalning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/T-Konton.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Skattsedlar.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Resultaträkning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Omslutning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Näringsverksamhet.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/01-19 Journal ME1003.pdf",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/01-23 Journal ME1003.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Aktiebolag karta.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-22 Journal Extern Redovisning.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Begrepp Journal Extern Redovisning.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Bokslutstablå Exempel 1 KTH 240124 Extern Redovisning.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS1 Kalkylövning 01-22 Extern Redovisning.excalidraw.png",
     "KTH/Årskurs 1/Kurser/Kurser.zip",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Teknologiska kurvan.png",
     "KTH.zip",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Pasted image 20240122191205.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/ME1003&ME1041_Schema_P3-VT2024-SWE.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/01-16 Räkningar Extern Redovisning Excalidraw.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Intressent.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Lösningar Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kontoplan.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Intressentmodellen.jpg",
     "General Images/Self awareness chart.png",

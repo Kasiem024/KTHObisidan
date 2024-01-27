@@ -1,7 +1,7 @@
 # 01-18 Lektion Industriell Ekonomi Grundkurs
 
 2024-01-18 12:57
-Tags: #year2024 #KTH #ekonomi #lektion
+Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
 
 ## [[4S]]
 

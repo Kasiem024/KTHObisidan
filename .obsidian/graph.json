@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "löpande",
+  "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.3823946776000822,
+  "scale": 0.9860282031920004,
   "close": false
 }

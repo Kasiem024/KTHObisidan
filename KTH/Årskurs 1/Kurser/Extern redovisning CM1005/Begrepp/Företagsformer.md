@@ -1,7 +1,7 @@
 # Företagsformer
 
 2024-01-16 22:51
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 - [[Enskild näringsverksamhet]]
 - [[Aktiebolag]]
@@ -11,5 +11,11 @@ Tags: #year2024 #begrepp #KTH #ekonomi
 
 ## Flashcards
 
-Alla företagsformer (5):: Enskild näringsverksamhet, Aktiebolag, Handelsbolag, Ekonomisk förening, Ideell förening
+Alla företagsformer (5)
+||
+Enskild näringsverksamhet
+Aktiebolag
+Handelsbolag
+Ekonomisk förening
+Ideell förening
 <!--SR:!2024-02-06,13,270!2024-01-26,4,270-->

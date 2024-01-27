@@ -1,7 +1,7 @@
 # Intressentmodellen
 
 2024-01-17 09:17
-Tags: #year2024 #begrepp #KTH #ekonomi
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
@@ -32,5 +32,11 @@ Intressentmodellen (Definition):: En grafisk beskrivning av vilka som förvänta
 Intressenter (Definition):: Grupper/personer som påverkar eller påverkas av ett företag
 <!--SR:!2024-01-25,3,250!2024-01-26,4,270-->
 
-Intressenter i intressentmodellen (7):: Aktieägare, Anställda, Kunder, Bank/Långivare/Kreditorer, Leverantör, Myndigheter, Ledningen
+Intressenter i intressentmodellen (7)
+??
+Aktieägare
+Anställda, Kunder
+Bank/Långivare/Kreditorer
+Leverantör
+Myndigheter, Ledningen
 <!--SR:!2024-01-28,2,230!2024-02-06,11,270-->
