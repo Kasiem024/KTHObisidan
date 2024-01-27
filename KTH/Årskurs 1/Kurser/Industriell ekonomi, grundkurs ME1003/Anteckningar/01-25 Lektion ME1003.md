@@ -14,7 +14,7 @@ Det finns olika typer av marknadsformer:
 Den marknaden man befinner sig i bestämmer hur man ska marknadsföra till sina kunder. Exempelvis får vissa marknader inte alls marknadsföra.
 
 ==Tillgång/utbud och efterfrågan==:
-Leverantören vill sälja fler antal produkter medan kunden vill köpa för ett så lågt pris som möjligt. Där produktens tillgång och kundens efterfrågan möts kallas equilibrium. 
+Leverantören vill sälja fler antal produkter medan kunden vill köpa för ett så lågt pris som möjligt. Där produktens tillgång och kundens efterfrågan möts kallas equilibrium.
 
 ## Flashcards
 

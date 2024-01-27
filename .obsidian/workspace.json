@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d974921b47adc1fb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-23 Lektion ME1003.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7fc96bb895270547",
             "type": "leaf",
             "state": {
@@ -30,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "8aec17dcf5bf853b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Marknadsföring.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -164,23 +139,23 @@
             }
           },
           {
-            "id": "6fafba0d8b34ea31",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
             "id": "a1bd6b2e8da42582",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "1dfbda23a14a8cba",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -196,12 +171,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "obsidian-spaced-repetition:Review flashcards": false,
       "handwritten-notes:Create empty handwritten note": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7fc96bb895270547",
+  "active": "1dfbda23a14a8cba",
   "lastOpenFiles": [
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Marknadsföring.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-25 Lektion ME1003.md",
