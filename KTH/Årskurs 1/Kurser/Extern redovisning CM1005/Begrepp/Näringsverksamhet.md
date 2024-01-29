@@ -34,7 +34,7 @@ Näringsverksamhet (Definition):: Något som bedrivs av en juridisk person exemp
 
 Villkor för att räknas som en näringsverksamhet (3)
 ??
-Självständighet
-Vinstsyfte
-Varaktighet
+Självständighet.
+Vinstsyfte.
+Varaktighet.
 <!--SR:!2024-01-25,3,250!2024-01-25,3,250-->

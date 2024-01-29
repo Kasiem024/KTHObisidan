@@ -27,7 +27,7 @@ Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till föret
 
 Delarna av en affärsmodell (3)
 ??
-Värdeerbjudandet
-Värdeskapande
-Värdefångsten
+Värdeerbjudandet.
+Värdeskapande.
+Värdefångsten.
 <!--SR:!2024-01-25,3,250-->

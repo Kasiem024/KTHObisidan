@@ -49,14 +49,14 @@ Balansidentitet (Definition):: Tillgångar = Eget kapital + Skulder
 
 Vad som brukar inkluderas i BR Vänster
 ??
-Faktiska värdet av utrustningen efter avskrivning (500-100=400)
-Vad man har i banken, saldot/resultatet från kassaflöde
+Faktiska värdet av utrustningen efter avskrivning (500-100=400).
+Vad man har i banken, saldot/resultatet från kassaflöde.
 <!--SR:!2000-01-01,1,250!2024-01-27,1,229-->
 
 Vad som brukar inkluderas i BR Höger
 ??
-Ägarinsats/Kapitalinsats
-Vinst från RR
-Ägaruttag från vinsten
-Främmande kapital, skulder, banklån
-Amortering på banklån
+Ägarinsats/Kapitalinsats.
+Vinst från RR.
+Ägaruttag från vinsten.
+Främmande kapital, skulder, banklån.
+Amortering på banklån.

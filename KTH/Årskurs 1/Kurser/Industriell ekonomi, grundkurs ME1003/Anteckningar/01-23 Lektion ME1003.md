@@ -73,38 +73,38 @@ Företag kan ha olika innovationsstrategier
 
 Namnet på olika produktionstyper (3)
 ??
-Projekt produktion/Enstycksproduktion
-Massproduktion/Serieproduktion
-Kontinuerlig produktion
+Projekt produktion/Enstycksproduktion.
+Massproduktion/Serieproduktion.
+Kontinuerlig produktion.
 
 Projekt produktion/Enstycksproduktion egenskaper (8)
 ??
 ==Byggnadsprojekt==
-Stor variation
-Konvergerande flöde
-Många leverantörer
-Personalintensivt
-Ofta site-montage
-Ofta producentprodukter
-Utveckling särskilt viktigt
+Stor variation.
+Konvergerande flöde.
+Många leverantörer.
+Personalintensivt.
+Ofta site-montage.
+Ofta producentprodukter.
+Utveckling särskilt viktigt.
 
 Massproduktion/Serieproduktion egenskaper (8)
 ??
 ==Bilproduktion==
-Liten variation
-Konvergerande flöde
-Många leverantörer
-Personalintensivt
-Ofta löpande band
-Ofta konsumentprodukter
+Liten variation.
+Konvergerande flöde.
+Många leverantörer.
+Personalintensivt.
+Ofta löpande band.
+Ofta konsumentprodukter.
 
 Kontinuerlig produktion egenskaper (8)
 ??
 ==Stålindustri==
-Liten variation
-Divergerande flöde
-Råvaruleverantörer
-Kapitalintensivt
-Aldrig site-montage
-Ofta producentprodukter (ofta fasövergång)
-Sälj/marknadsföring särskilt viktigt
+Liten variation.
+Divergerande flöde.
+Råvaruleverantörer.
+Kapitalintensivt.
+Aldrig site-montage.
+Ofta producentprodukter (ofta fasövergång).
+Sälj/marknadsföring särskilt viktigt.

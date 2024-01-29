@@ -34,9 +34,9 @@ Intressenter (Definition):: Grupper/personer som påverkar eller påverkas av et
 
 Intressenter i intressentmodellen (7)
 ??
-Aktieägare
-Anställda, Kunder
-Bank/Långivare/Kreditorer
-Leverantör
-Myndigheter, Ledningen
+Aktieägare.
+Anställda, Kunder.
+Bank/Långivare/Kreditorer.
+Leverantör.
+Myndigheter, Ledningen.
 <!--SR:!2024-01-28,2,230!2024-02-06,11,270-->

@@ -42,6 +42,6 @@ Värdeerbjudandet (Definition):: Ett annat namn för vad varan eller tjänsten �
 
 Sätt att kategorisera produkter (Värdeerbjudandet)
 ??
-Business to Consumer (B2C)
-Business to Business (B2B)
+Business to Consumer (B2C).
+Business to Business (B2B).
 <!--SR:!2024-01-25,3,250-->
