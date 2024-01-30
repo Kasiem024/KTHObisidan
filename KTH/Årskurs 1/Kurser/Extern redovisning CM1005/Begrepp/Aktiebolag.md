@@ -48,10 +48,10 @@ Börskurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrå
 
 Vad som påverkar en akties börskurs (6)
 ??
-Balansvärdet.
-Framtida vinstförmåga.
-Marknadens likviditet.
-Alternativa placeringsmöjligheter.
-Skattesystemets utformning.
-Psykologiska faktorer (flockbeteende).
+- Balansvärdet.
+- Framtida vinstförmåga.
+- Marknadens likviditet.
+- Alternativa placeringsmöjligheter.
+- Skattesystemets utformning.
+- Psykologiska faktorer (flockbeteende).
 <!--SR:!2024-01-27,1,232!2000-01-01,1,250-->

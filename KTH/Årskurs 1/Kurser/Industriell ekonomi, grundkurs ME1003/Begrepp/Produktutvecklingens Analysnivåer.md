@@ -32,21 +32,21 @@ Man kan dela in [[Produktutveckling]] på tre analysnivåer
 
 Namnet på analysnivåerna inom produktutveckling (3)
 ??
-Strategisk nivå (innovationsstrategi).
-Taktisk nivå (produkt- och utvecklingsprocesserna).
-Operativ nivå (ledning och styrning av utvecklingsarbetet).
+- Strategisk nivå (innovationsstrategi).
+- Taktisk nivå (produkt- och utvecklingsprocesserna).
+- Operativ nivå (ledning och styrning av utvecklingsarbetet).
 
 Delarna av produktutvecklingens strategiska nivå (4)
 ??
-Teknologi- och produktstrategier.
-Kärnkompetenser.
-Långsiktig produktplanering och produktportföljer.
-Produktplattformar.
+- Teknologi- och produktstrategier.
+- Kärnkompetenser.
+- Långsiktig produktplanering och produktportföljer.
+- Produktplattformar.
 
 Delarna av produktutvecklingens taktiska nivå (3)
 ??
-Teknikutvecklingsprocessen.
-Produktutvecklingsprocessen.
-Organisering av utvecklingsarbete.
+- Teknikutvecklingsprocessen.
+- Produktutvecklingsprocessen.
+- Organisering av utvecklingsarbete.
 
 Delarna av produktutvecklingens operativa nivå (1):: Metoder och tekniker för effektivt produktutvecklingsarbete

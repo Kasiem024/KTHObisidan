@@ -1,7 +1,7 @@
 # Produktutveckling i Olika Typer av Verksamheter
 
 2024-01-27 15:29
-Tags: #year2024 #KTH #ekonomi #ME1003  #begrepp
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 

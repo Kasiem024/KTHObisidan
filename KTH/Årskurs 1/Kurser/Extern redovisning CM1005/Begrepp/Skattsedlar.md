@@ -29,9 +29,9 @@ Du som både bedriver enskild näringsverksamhet och dessutom har inkomst av ans
 
 De olika typerna av skattsedlar (3)
 ??
-A-Skatt.
-F-Skatt.
-FA-Skatt.
+- A-Skatt.
+- F-Skatt.
+- FA-Skatt.
 <!--SR:!2024-01-26,4,279-->
 
 A-Skatt (Definition);; Skatt som anställd. Arbetsgivaren tar hand om det

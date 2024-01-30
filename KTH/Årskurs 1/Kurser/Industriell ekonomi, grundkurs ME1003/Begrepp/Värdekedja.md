@@ -10,6 +10,13 @@ Kan också kallas produktionskedja. Det behandlar hur värdet av en vara ökar j
 
 Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är det horisontellt, höger till vänster.
 
+- Horisontell och vertikal integration
+- Outsourcing: Lägger ut verksamhet på annat företag
+- Insourcing: Hämtar in verksamhet från annat företag
+- Offshoring: Flyttar verksamhet till annat land men i egen regi
+- Reshoring: Hämtar tillbaka verksamhet som har ”offshorats”
+- Värdenätverk, affärsekosystem
+
 ## Flashcards
 
 Värdekedja (Definition):: Ett begrepp som beskriver hur värdet av en vara ökar genom fortsatt produktion av den
@@ -17,3 +24,10 @@ Värdekedja (Definition):: Ett begrepp som beskriver hur värdet av en vara öka
 
 Ett annat ord för värdekedja:: Ett annat ord för produktionskedja
 <!--SR:!2024-01-26,4,272!2024-01-26,4,270-->
+
+Sätt att ändra på värdekedjan (4)
+??
+- Outsourcing: Lägger ut verksamhet på annat företag
+- Insourcing: Hämtar in verksamhet från annat företag
+- Offshoring: Flyttar verksamhet till annat land men i egen regi
+- Reshoring: Hämtar tillbaka verksamhet som har ”offshorats”

@@ -20,7 +20,7 @@ Ingående Balans (Definition):: De belopp som bokförs i början av ett nytt rä
 
 Konton som bildar ingående balans (3)
 ??
-Tillgångar.
-Eget Kapital.
-Skulder.
+- Tillgångar.
+- Eget Kapital.
+- Skulder.
 <!--SR:!2024-01-29,3,250!2024-01-27,3,250-->

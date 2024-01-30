@@ -3,6 +3,9 @@
 2024-01-18 12:57
 Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
 
+[Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F2+Teknikbaserade+affa%CC%88rsmodeller+P3+V22+SWE+2022-01-19+BK/0_kfxregj1/660304)
+[Länk till PPT på Canvas](https://canvas.kth.se/courses/44986/files/folder/2.%20F%C3%B6rel%C3%A4sningar?preview=7529160)
+
 ## [[4S]]
 
 För att veta om en verksamhet är industriell ska den följa de 4S:
@@ -81,12 +84,16 @@ En affärsmodell beskriver hur verksamheten är tänkt att fungera.
 | Kunden deltar vanligen inte i produktionen | Kunden deltar (vanligen) i produktionen |
 | Äganderätten överlåts | Äganderätten överlåts inte |
 
+---
+
 Produkter kan kategoriseras på olika sätt beroende på vem som säljer och vem som köper produkten.
 
-- Business to Consumer (B2C)
-- Business to Business (B2B)
+- [[Företagsmarknad]], Business to Consumer (B2C)
+- [[Konsumentmarknad]], Business to Business (B2B)
 
 Exempelvis kan en bil vara både B2C och B2B beroende om det är en privat person som köper den eller ett företag men marknads- och kundlogiken är olika fastän produkten är samma.
+
+---
 
 ### [[Värdeskapandet]]
 

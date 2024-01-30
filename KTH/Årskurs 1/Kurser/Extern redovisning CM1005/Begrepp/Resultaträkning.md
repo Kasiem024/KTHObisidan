@@ -34,11 +34,11 @@ Resultaträkning (Definition):: En rapport över [[Intäkt]] och [[Kostnad]] und
 
 Vad som brukar inkluderas i RR Vänster (5)
 ??
-Kostnaden på avskrivningen av en resurs (500-400=100).
-Ränta på banklån.
-Kostnad av drift och service.
-Lön.
-Hyra.
+- Kostnaden på avskrivningen av en resurs (500-400=100).
+- Ränta på banklån.
+- Kostnad av drift och service.
+- Lön.
+- Hyra.
 
 Vad som brukar inkluderas i RR Höger (1):: Intäkter. Alltså vad man har tjänat från sina kunder, när man faktiskt har levererat en vara/tjänst
 <!--SR:!2024-01-29,3,250!2024-01-27,1,230-->

@@ -34,27 +34,27 @@ Man kan dela in [[Produktion]] på tre analysnivåer
 
 Namnet på analysnivåerna inom produktion (3)
 ??
-Strategisk nivå (produktionsstrategi).
-Taktisk nivå (produktionsprocessen).
-Operativ nivå (ledning och styrning av produktion).
+- Strategisk nivå (produktionsstrategi).
+- Taktisk nivå (produktionsprocessen).
+- Operativ nivå (ledning och styrning av produktion).
 
 Delarna av produktionens strategiska nivå (4)
 ??
-Produktionssystemets utformning.
-Position i [[Värdekedja]].
-Lokalisering.
-Försörjningsstrategi.
+- Produktionssystemets utformning.
+- Position i [[Värdekedja]].
+- Lokalisering.
+- Försörjningsstrategi.
 
 Delarna av produktionens taktiska nivå (4)
 ??
-Processdesign – flöden, buffertar, etc.
-Processteknologi.
-Systemets ”robusthet” mot störningar.
+- Processdesign – flöden, buffertar, etc.
+- Processteknologi.
+- Systemets ”robusthet” mot störningar.
 
 Delarna av produktionens operativa nivå (5)
 ??
-Planering, beordring, styrning.
-Hantering av störningar och osäkerheter.
-Produktionsplanering och produktionsstyrning.
-Kapitalbindning.
-Kvalitetsledning.
+- Planering, beordring, styrning.
+- Hantering av störningar och osäkerheter.
+- Produktionsplanering och produktionsstyrning.
+- Kapitalbindning.
+- Kvalitetsledning.

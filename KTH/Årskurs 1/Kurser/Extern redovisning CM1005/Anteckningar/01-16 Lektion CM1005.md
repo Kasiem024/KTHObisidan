@@ -111,7 +111,7 @@ Teknisk livslängd (Definition):: Hur länge något fungerar överhuvudtaget, ob
 
 Sätt att finansiera ett företag (3)
 ??
-Eget kapital (Ägarinsättning).
-Främmande kapital (Lån).
-Företagets självfinansiering (Vinster).
+- Eget kapital (Ägarinsättning).
+- Främmande kapital (Lån).
+- Företagets självfinansiering (Vinster).
 <!--SR:!2024-01-25,3,250!2024-01-25,3,250-->

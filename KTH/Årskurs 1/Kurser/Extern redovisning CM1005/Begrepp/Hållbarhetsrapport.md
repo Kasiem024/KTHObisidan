@@ -21,6 +21,6 @@ Hållbarhetsrapport (Definition):: Om ett företag är tillräckligt stort enlig
 
 Kriterier för att ett företag måste skriva en hållbarhetsrapport (3)
 ??
-Mer än 250 anställda.
-Mer än 175 mnkr balansomslutning.
-Mer än 350 mnkr nettoomsättning.
+- Mer än 250 anställda.
+- Mer än 175 mnkr balansomslutning.
+- Mer än 350 mnkr nettoomsättning.

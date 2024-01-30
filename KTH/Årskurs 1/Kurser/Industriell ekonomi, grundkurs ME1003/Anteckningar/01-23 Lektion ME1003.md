@@ -3,7 +3,13 @@
 2024-01-23 15:09
 Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
 
-[[Teknologiska kurvan]] eller technological trajectory. Prestanda på Y-axeln och tid på x-axeln. Handlar om hur prestandan av en teknologi förbättras med tiden. Långsamt i början och slutet av teknologins livstid men snabbt vid mitten.
+[Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F4+De+va%CC%88rdeskapande+processerna+Produktion+och+Produktutveckling+P3+V22+SWE+2022-01-24+BK/0_k2rwr232/660304)
+[[01-23 Journal ME1003.pdf]]
+[Länk till PPT på Canvas](https://canvas.kth.se/courses/44986/files/folder/2.%20F%C3%B6rel%C3%A4sningar?preview=7547659)
+
+## [[Teknologiska kurvan]]
+
+Kallas också technological trajectory. Prestanda på Y-axeln och tid på x-axeln. Handlar om hur prestandan av en teknologi förbättras med tiden. Långsamt i början och slutet av teknologins livstid men snabbt vid mitten.
 
 Inkrementell --> Radikal --> Inkrementell
 
@@ -50,9 +56,13 @@ Vanliga skillnader mellan tre olika produktionstyper vid varuproduktion
 
 Ett sätt att kombinera standardisering och kundanpassning, alltså timglas format produktionsflöde. Många komponenter sätts ihop men eftersom de är modulariserade kan de kombineras på olika sätt för att möta kundens behov. Tänk Scania. Man kan säga att detta är ett försök på en kombination av standardisering och kundanpassning.
 
-[[Kundorderpunkten]]
+## [[Kundorderpunkten]]
 
-==Produktlivscykeln==: Det finns flera stadier inom en produkts livscykel. I vilken stadie man är beror på hur länge produkten har funnits på marknaden och dess försäljningsvolym. Det är viktigt för företag att ha en ==produktportfölj==. Alltså ett flertal produkter som är i olika delar av sin livscykel.
+Kundorderpunkten är den punkt i produktstrukturen från och med vilken en produkts materialsammansättning och tillverkning är kundorderbestämd. Från och med denna punkt är tillverkningen kundorderstyrd medan tillverkningen av artiklar på underliggande strukturnivåer är lagerinitierad. Förkortas ofta KOP.
+
+## [[Produktlivscykeln]]
+
+Det finns flera stadier inom en produkts livscykel. I vilken stadie man är beror på hur länge produkten har funnits på marknaden och dess försäljningsvolym. Det är viktigt för företag att ha en ==produktportfölj==. Alltså ett flertal produkter som är i olika delar av sin livscykel.
 
 Introduktion --> Tillväxt --> Mognad --> Nedgång
 
@@ -67,44 +77,42 @@ Företag kan ha olika innovationsstrategier
 - Kostnadsminimering (Imitation): Väntar på att se vilka produkter blir populära, är bra på att skapa kopior till ett lägre pris
 - Traditionalist (Konservativ): Vill inte ändra på sig, bryr sig inte om att innovera
 
-[[01-23 Journal ME1003.pdf]]
-
 ## Flashcards
 
 Namnet på olika produktionstyper (3)
 ??
-Projekt produktion/Enstycksproduktion.
-Massproduktion/Serieproduktion.
-Kontinuerlig produktion.
+- Projekt produktion/Enstycksproduktion.
+- Massproduktion/Serieproduktion.
+- Kontinuerlig produktion.
 
 Projekt produktion/Enstycksproduktion egenskaper (8)
 ??
 ==Byggnadsprojekt==
-Stor variation.
-Konvergerande flöde.
-Många leverantörer.
-Personalintensivt.
-Ofta site-montage.
-Ofta producentprodukter.
-Utveckling särskilt viktigt.
+- Stor variation.
+- Konvergerande flöde.
+- Många leverantörer.
+- Personalintensivt.
+- Ofta site-montage.
+- Ofta producentprodukter.
+- Utveckling särskilt viktigt.
 
 Massproduktion/Serieproduktion egenskaper (8)
 ??
 ==Bilproduktion==
-Liten variation.
-Konvergerande flöde.
-Många leverantörer.
-Personalintensivt.
-Ofta löpande band.
-Ofta konsumentprodukter.
+- Liten variation.
+- Konvergerande flöde.
+- Många leverantörer.
+- Personalintensivt.
+- Ofta löpande band.
+- Ofta konsumentprodukter.
 
 Kontinuerlig produktion egenskaper (8)
 ??
 ==Stålindustri==
-Liten variation.
-Divergerande flöde.
-Råvaruleverantörer.
-Kapitalintensivt.
-Aldrig site-montage.
-Ofta producentprodukter (ofta fasövergång).
-Sälj/marknadsföring särskilt viktigt.
+- Liten variation.
+- Divergerande flöde.
+- Råvaruleverantörer.
+- Kapitalintensivt.
+- Aldrig site-montage.
+- Ofta producentprodukter (ofta fasövergång).
+- Sälj/marknadsföring särskilt viktigt.

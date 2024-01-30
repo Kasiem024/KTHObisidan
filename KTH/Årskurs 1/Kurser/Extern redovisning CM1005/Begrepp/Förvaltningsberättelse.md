@@ -24,7 +24,7 @@ Förvaltningsberättelse (Definition):: En obligatorisk del av årsredovisningen
 
 Uppgifter som ska inkluderas i förvaltningsberättelsen (4)
 ??
-Förhållanden som inte redovisas i [[Balansräkning|BR]], [[Resultaträkning|RR]] och fotnoterna.
-Händelser av väsentlig betydelse.
-Förväntade framtida utvecklingar.
-Förslag till disposition av årets resultat.
+- Förhållanden som inte redovisas i [[Balansräkning|BR]], [[Resultaträkning|RR]] och fotnoterna.
+- Händelser av väsentlig betydelse.
+- Förväntade framtida utvecklingar.
+- Förslag till disposition av årets resultat.
