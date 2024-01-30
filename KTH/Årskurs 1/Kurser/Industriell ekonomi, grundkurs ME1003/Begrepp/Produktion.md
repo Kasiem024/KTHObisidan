@@ -21,3 +21,4 @@ Man kan säga att produktion är allt som gör att produkterna realiseras och le
 ## Flashcards
 
 Produktion (Definition):: Omfattar samtliga aktiviteter som bidrar till att framställa och leverera företagets varor och tjänster företagets kunder. Man kan säga att produktion är allt som gör att produkterna realiseras och levereras. Alltså ==produktion är inte bara tillverkning==
+<!--SR:!2024-01-31,1,230!2000-01-01,1,250-->

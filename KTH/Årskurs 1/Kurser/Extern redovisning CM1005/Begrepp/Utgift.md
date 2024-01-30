@@ -28,7 +28,7 @@ Utgifter kommer eventuellt led till en [[Utbetalning]]
 ## Flashcards
 
 Utgift (Definition):: Uppstår när företaget betalar för något, innan man har förbrukat det
-<!--SR:!2024-01-31,5,230!2024-01-28,2,210-->
+<!--SR:!2024-01-31,5,230!2024-02-04,5,230-->
 
 Motsatsen till utgift:: Motsatsen till [[Inkomst]]
-<!--SR:!2024-01-29,5,248!2024-01-29,5,248-->
+<!--SR:!2024-02-16,18,268!2024-02-17,18,268-->

@@ -23,6 +23,7 @@ När ett företag säljer en produkt till ett annat företag. Kallas också Busi
 ## Flashcards
 
 Företagsmarknad (Definition):: När ett företag säljer en produkt till ett annat företag. Kallas också Business to Business, B2B.
+<!--SR:!2024-02-03,4,270!2024-02-03,4,270-->
 
 Egenskaperna av en Företagsmarknad (6)
 ??
@@ -32,3 +33,4 @@ Egenskaperna av en Företagsmarknad (6)
 - ==Grad av formalisering==: Hög, inköpspolicy, miljöhänsyn, hållbarhetskrav.
 - ==Marknadskanal==: Ofta direkt. Ringer kunden direkt och förhandlar.
 - ==Parternas förhandlingsstyrka==: Symmetrisk relation, leverantör och kund är jämbördiga parter.
+<!--SR:!2024-01-31,1,230!2024-01-31,1,232-->

@@ -39,19 +39,19 @@ Vad är företagets finansiering? Från vart kommer pengarna?
 ## Flashcards
 
 Balansräkning (Definition):: Ett företags finansiella ställning vid en given tidpunkt
-<!--SR:!2024-01-25,3,250!2024-01-26,4,270-->
+<!--SR:!2024-02-06,7,250!2024-02-14,15,290-->
 
 De två delarna/sidorna av en balansräkning:: Ett företags eget kapital och skulder på en sida och ett företags tillgångar på andra sidan
 <!--SR:!2024-02-04,9,250!2024-02-02,7,250-->
 
 Balansidentitet (Definition):: Tillgångar = Eget kapital + Skulder
-<!--SR:!2024-01-23,1,232!2024-01-23,1,232-->
+<!--SR:!2024-01-31,1,212!2024-01-31,1,212-->
 
 Vad som brukar inkluderas i BR Vänster
 ??
 - Faktiska värdet av utrustningen efter avskrivning (500-100=400).
 - Vad man har i banken, saldot/resultatet från kassaflöde.
-<!--SR:!2000-01-01,1,250!2024-01-27,1,229-->
+<!--SR:!2024-02-02,3,267!2024-02-02,3,249-->
 
 Vad som brukar inkluderas i BR Höger
 ??
@@ -60,3 +60,4 @@ Vad som brukar inkluderas i BR Höger
 - Ägaruttag från vinsten.
 - Främmande kapital, skulder, banklån.
 - Amortering på banklån.
+<!--SR:!2024-02-02,3,267!2024-02-02,3,267-->

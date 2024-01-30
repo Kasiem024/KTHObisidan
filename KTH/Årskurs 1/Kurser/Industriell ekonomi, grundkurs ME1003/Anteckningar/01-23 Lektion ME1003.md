@@ -95,6 +95,7 @@ Projekt produktion/Enstycksproduktion egenskaper (8)
 - Ofta site-montage.
 - Ofta producentprodukter.
 - Utveckling särskilt viktigt.
+<!--SR:!2024-01-31,1,230!2000-01-01,1,250-->
 
 Massproduktion/Serieproduktion egenskaper (8)
 ??

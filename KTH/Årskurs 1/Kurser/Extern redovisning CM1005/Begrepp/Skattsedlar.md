@@ -32,7 +32,7 @@ De olika typerna av skattsedlar (3)
 - A-Skatt.
 - F-Skatt.
 - FA-Skatt.
-<!--SR:!2024-01-26,4,279-->
+<!--SR:!2024-02-14,15,299!2024-02-03,4,283-->
 
 A-Skatt (Definition);; Skatt som anställd. Arbetsgivaren tar hand om det
 <!--SR:!2024-01-26,4,279-->

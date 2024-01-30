@@ -39,6 +39,7 @@ Vad som brukar inkluderas i RR Vänster (5)
 - Kostnad av drift och service.
 - Lön.
 - Hyra.
+<!--SR:!2024-02-02,3,268!2000-01-01,1,250-->
 
 Vad som brukar inkluderas i RR Höger (1):: Intäkter. Alltså vad man har tjänat från sina kunder, när man faktiskt har levererat en vara/tjänst
-<!--SR:!2024-01-29,3,250!2024-01-27,1,230-->
+<!--SR:!2024-02-09,10,270!2024-02-02,3,250-->

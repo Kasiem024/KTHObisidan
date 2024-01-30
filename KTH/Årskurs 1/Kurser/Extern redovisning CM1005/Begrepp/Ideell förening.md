@@ -12,4 +12,4 @@ En ideell förening har ett ideellt ändamål eller bedriver ideell verksamhet. 
 ## Flashcards
 
 Ideell förening (Definition):: En företagsform där syftet inte är att främja medlemmarnas ekonomiska intressen genom att driva affärsmässig verksamhet
-<!--SR:!2024-01-25,3,250!2024-02-06,11,270-->
+<!--SR:!2024-02-12,13,270!2024-02-06,11,270-->

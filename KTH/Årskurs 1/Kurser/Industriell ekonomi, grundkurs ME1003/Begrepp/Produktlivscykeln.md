@@ -16,6 +16,7 @@ Introduktion --> Tillväxt --> Mognad --> Nedgång
 ## Flashcards
 
 Produktlivscykeln (Definition):: Beskriver stadierna i en produkts livscykel. I vilken stadie man är beror på hur länge produkten har funnits på marknaden och dess försäljningsvolym. Det är viktigt för företag att ha en ==produktportfölj==. Alltså ett flertal produkter som är i olika delar av sin livscykel.
+<!--SR:!2024-02-02,3,250!2000-01-01,1,250-->
 
 Stadier i en produkts livscykel (4)
 ??
@@ -23,3 +24,4 @@ Stadier i en produkts livscykel (4)
 - Tillväxt.
 - Mognad.
 - Nedgång.
+<!--SR:!2024-02-03,4,270!2024-02-02,3,250-->

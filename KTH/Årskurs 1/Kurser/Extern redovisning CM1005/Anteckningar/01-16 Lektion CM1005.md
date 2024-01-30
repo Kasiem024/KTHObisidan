@@ -104,14 +104,14 @@ Skulder och eget kapital ökar på kredit och minskar på debet.
 ## Flashcards
 
 Ekonomisk livslängd (Definition):: Hur länge något fungerar "bra". Innan priset för drift och service blir för mycket
-<!--SR:!2024-01-28,2,230!2024-02-03,8,250-->
+<!--SR:!2024-02-08,9,250!2024-02-03,8,250-->
 
 Teknisk livslängd (Definition):: Hur länge något fungerar överhuvudtaget, oberoende av drift- eller servicekostnader
-<!--SR:!2024-01-25,3,250!2024-01-26,4,270-->
+<!--SR:!2024-02-11,12,270!2024-02-14,15,290-->
 
 Sätt att finansiera ett företag (3)
 ??
 - Eget kapital (Ägarinsättning).
 - Främmande kapital (Lån).
 - Företagets självfinansiering (Vinster).
-<!--SR:!2024-01-25,3,250!2024-01-25,3,250-->
+<!--SR:!2024-02-11,12,270!2024-02-07,8,250-->

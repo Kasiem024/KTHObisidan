@@ -25,3 +25,4 @@ Orden i en SWOT analys (4)
 - Weaknesses
 - Opportunities
 - Threats
+<!--SR:!2024-02-03,4,270!2024-02-03,4,270-->

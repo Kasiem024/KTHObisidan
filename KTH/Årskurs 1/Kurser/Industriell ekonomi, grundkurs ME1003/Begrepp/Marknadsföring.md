@@ -23,6 +23,7 @@ Man kan säga att det finns 3 nyckelkoncept inom Marknadsföring:
 ## Flashcards
 
 Marknadsföring (Definition):: Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor och tjänster
+<!--SR:!2024-02-02,3,250!2024-02-03,4,270-->
 
 Nyckelkoncept inom Marknadsföring (3)
 ??

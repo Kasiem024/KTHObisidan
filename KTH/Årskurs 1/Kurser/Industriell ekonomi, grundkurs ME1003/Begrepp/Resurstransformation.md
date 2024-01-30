@@ -33,4 +33,4 @@ Fyra förhållanden som påverkar hur resurstransformationen utformas
 ## Flashcards
 
 Resurstransformation (Definition):: Hur man omvandlar en råvara till något kunden vill köpa
-<!--SR:!2024-01-25,3,252!2024-01-26,4,270-->
+<!--SR:!2024-02-10,11,272!2024-02-13,14,290-->

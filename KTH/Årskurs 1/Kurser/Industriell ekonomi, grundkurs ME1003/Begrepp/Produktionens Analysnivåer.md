@@ -44,6 +44,7 @@ Delarna av produktionens strategiska nivå (4)
 - Position i [[Värdekedja]].
 - Lokalisering.
 - Försörjningsstrategi.
+<!--SR:!2000-01-01,1,250!2024-01-31,1,230-->
 
 Delarna av produktionens taktiska nivå (4)
 ??

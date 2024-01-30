@@ -35,3 +35,4 @@ Produktion och Marknadsföring Olika Perspektiv (5)
 - Prestationsmätning, kostnadsenhet mot intäktsenhet.
 - Kapacitetsutnyttjande, hög kapacitet mot överbemanning.
 - Lokalisering, nära produkten eller nära kunden.
+<!--SR:!2000-01-01,1,250!2024-01-31,1,230-->

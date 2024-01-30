@@ -23,7 +23,7 @@ Inbetalning kan ses som likviditet, penningflödet. Det sker i banken, plusgiro 
 ## Flashcards
 
 Inbetalning (Definition):: Tidpunkten pengar kommer in till företaget. En del av [[Kassaflöde]]
-<!--SR:!2024-01-26,4,270!2024-01-26,4,270-->
+<!--SR:!2024-01-26,4,270!2024-02-13,14,290-->
 
 Motsatsen till inbetalning:: Motsatsen till [[Utbetalning]]
-<!--SR:!2024-01-26,4,274!2024-01-26,4,274-->
+<!--SR:!2024-02-14,15,294!2024-02-13,14,294-->

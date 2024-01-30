@@ -27,24 +27,25 @@ Aktiebolaget är ett eget skattesubjekt. Det betalar sin egna skatt.
 ## Flashcards
 
 Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansvariga för företagets skulder. Ägarna riskerar bara att förlora deras egna satsade kapital. Minst 1 ägare men kan också vara 100,000-tals ägare
-<!--SR:!2024-01-25,2,232!2024-01-26,4,272-->
+<!--SR:!2024-02-04,5,252!2024-02-14,15,292-->
 
 Startkapital/aktiekapital/riskkapital för att starta ett aktiebolag;; 25 000 kr
 <!--SR:!2024-02-06,11,272-->
 
 Aktiens kvotvärde:: Aktiens värde vid grundandet som grundarna bestämmer själva
-<!--SR:!2024-01-25,3,252!2024-01-26,4,272-->
+<!--SR:!2024-02-08,9,272!2024-02-14,15,292-->
 
 Antal aktier ett företag har:: Riskkapital/Aktiens kvotvärde
-<!--SR:!2024-01-23,1,232!2024-02-01,6,250-->
+<!--SR:!2024-01-31,1,212!2024-02-01,6,250-->
 
 De två typerna av aktiebolag;; Privat aktiebolag (50,000 aktiekapital), Publikt aktiebolag (500,000 aktiekapital)
-<!--SR:!2024-01-29,3,250-->
+<!--SR:!2024-02-10,11,270-->
 
 Balansvärde (substansvärde):: Totalt eget kapital/antal aktier
+<!--SR:!2024-01-31,1,230!2024-01-31,1,233-->
 
 Börskurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
-<!--SR:!2000-01-01,1,250!2024-01-27,1,232-->
+<!--SR:!2024-02-02,3,250!2024-01-27,1,232-->
 
 Vad som påverkar en akties börskurs (6)
 ??
@@ -54,4 +55,4 @@ Vad som påverkar en akties börskurs (6)
 - Alternativa placeringsmöjligheter.
 - Skattesystemets utformning.
 - Psykologiska faktorer (flockbeteende).
-<!--SR:!2024-01-27,1,232!2000-01-01,1,250-->
+<!--SR:!2024-01-27,1,232!2024-02-02,3,250-->

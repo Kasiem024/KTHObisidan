@@ -24,3 +24,4 @@ Om man följer "Engineer to Order" är leveranstiden lång då ingen del av prod
 ## Flashcards
 
 Kundorderpunkt (Definition):: Den punkt i produktstrukturen från och med vilken en produkts materialsammansättning och tillverkning är kundorderbestämd. Från och med denna punkt är tillverkningen kundorderstyrd medan tillverkningen av artiklar på underliggande strukturnivåer är lagerinitierad
+<!--SR:!2024-02-02,3,250!2024-02-02,3,250-->

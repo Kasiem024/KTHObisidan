@@ -22,4 +22,4 @@ Omslutning kan läggas både på debet sidan och kredit sidan.
 ## Flashcards
 
 Omslutning (Definition):: Summan [[Inbetalning]] och summan [[Utbetalning]] när det kommer till ett specifikt [[T-Konton]]. Visar ett företags ekonomiska ställning vid en specifik tidpunkt
-<!--SR:!2024-01-25,1,230!2024-01-27,1,210-->
+<!--SR:!2024-01-31,1,210!2024-01-31,1,190-->
