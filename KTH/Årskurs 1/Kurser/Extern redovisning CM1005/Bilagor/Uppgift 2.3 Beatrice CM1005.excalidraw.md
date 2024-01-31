@@ -8,7 +8,7 @@ tags: [excalidraw]
 
 
 # Text Elements
-[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=32&selection=26,0,26,17|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 32]] ^XzSfMgfG
+[[Den nya affärsredovisningen CM1005.pdf#page=32&selection=26,0,26,17|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 32]] ^XzSfMgfG
 
 %%
 # Drawing

@@ -11,7 +11,7 @@ Med utbetalning menas tidpunkten när företaget betalar utgiften. Utbetalningen
 
 > Utbetalningar är utflödet av pengar och är kopplade till betalningstidpunkten, vilken är en annan än inköpstidpunkten om företaget köper på kredit.
 
-[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=31&selection=51,0,59,7|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=51,0,59,7|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Utbetalning kan ses som likviditet, penningflödet. Det sker i banken, plusgiro och kassan.
 
@@ -23,7 +23,7 @@ Utbetalning kan ses som likviditet, penningflödet. Det sker i banken, plusgiro 
 ## Flashcards
 
 Utbetalning (Definition):: När företaget betalar för något. En del av [[Kassaflöde]]
-<!--SR:!2024-02-08,10,272!2024-01-26,4,270-->
+<!--SR:!2024-02-08,10,272!2024-02-14,14,290-->
 
 Motsatsen till utbetalning:: Motsatsen till [[Inbetalning]]
 <!--SR:!2024-02-12,17,292!2024-02-16,17,292-->

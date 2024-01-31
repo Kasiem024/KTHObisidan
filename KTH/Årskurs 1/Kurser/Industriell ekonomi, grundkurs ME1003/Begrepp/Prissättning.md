@@ -15,3 +15,4 @@ Priset av en produkt är självkostnaden + vinstpålägg (marginalen). Alltså p
 ## Flashcards
 
 Skillnaden mellan kostnaden och priset av en produkt (Prissättning);; Priset av en produkt är självkostnaden + vinstpålägg (marginalen). Alltså priset av en produkt och kostnaden av en produkt är olika och ska därför skiljas.
+<!--SR:!2024-02-03,3,250-->

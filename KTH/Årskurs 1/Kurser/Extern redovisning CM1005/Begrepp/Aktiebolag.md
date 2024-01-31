@@ -22,7 +22,7 @@ Aktiebolaget är ett eget skattesubjekt. Det betalar sin egna skatt.
 ==Börskurs== är hur mycket varje aktie är värd på börsen just nu.
 
 ![[Aktiebolag karta CM1005.png]]
-[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=275&selection=6,0,6,30|Aktiebolagets organ enligt ABL]]
+[[Den nya affärsredovisningen CM1005.pdf#page=275&selection=6,0,6,30|Aktiebolagets organ enligt ABL]]
 
 ## Flashcards
 
@@ -42,10 +42,10 @@ De två typerna av aktiebolag;; Privat aktiebolag (50,000 aktiekapital), Publikt
 <!--SR:!2024-02-10,11,270-->
 
 Balansvärde (substansvärde):: Totalt eget kapital/antal aktier
-<!--SR:!2024-01-31,1,230!2024-01-31,1,233-->
+<!--SR:!2024-01-31,1,230!2024-02-01,1,213-->
 
 Börskurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
-<!--SR:!2024-02-02,3,250!2024-01-27,1,232-->
+<!--SR:!2024-02-02,3,250!2024-02-03,3,252-->
 
 Vad som påverkar en akties börskurs (6)
 ??

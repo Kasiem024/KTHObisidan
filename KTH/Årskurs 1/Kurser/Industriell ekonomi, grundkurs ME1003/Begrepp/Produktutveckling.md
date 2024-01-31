@@ -17,4 +17,4 @@ Omfattar alla aktiviteter som bidrar till att utveckla och förbättra företage
 ## Flashcards
 
 Produktutveckling (Definition):: Omfattar alla aktiviteter som bidrar till att utveckla och förbättra företagets [[Värdeerbjudandet]]. Kan vara konceptutveckling, konstruktion och formgivning av produkten eller tjänsteutveckling. I princip handlar det om framtagningen av nya varor/tjänster (R&D)
-<!--SR:!2024-01-31,1,230!2024-02-02,3,250-->
+<!--SR:!2024-02-01,1,210!2024-02-02,3,250-->

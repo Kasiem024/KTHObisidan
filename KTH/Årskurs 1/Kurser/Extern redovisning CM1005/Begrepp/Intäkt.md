@@ -15,7 +15,7 @@ Inkomster är det som löpande tas emot under året. När inkomsten hänförs ti
 
 > Intäkter är försäljningsvärdet av de prestationer (varor och tjänster) som levereras eller utförs under en viss period, exempelvis ett år.
 
-[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=31&selection=29,0,36,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=29,0,36,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Intäkt visar vad vi har presterat/levererat under en viss period.
 

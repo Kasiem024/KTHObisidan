@@ -15,7 +15,7 @@ Amortering är aldrig en kostnad.
 
 > Kostnader är anskaffningsvärdet för de resurser företaget förbrukar under en viss period, exempelvis ett år.
 
-[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=31&selection=62,0,71,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=62,0,71,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Kostnad visar vad för resurser har förbrukat under en viss period. INTE vad vi har anskaffat.
 

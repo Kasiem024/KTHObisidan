@@ -23,7 +23,7 @@ Ordet "värde" i detta sammanhang är värde för kunden.
 ## Flashcards
 
 Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera.
-<!--SR:!2024-01-25,3,252!2024-02-12,13,290-->
+<!--SR:!2024-02-02,2,232!2024-02-12,13,290-->
 
 Delarna av en affärsmodell (3)
 ??

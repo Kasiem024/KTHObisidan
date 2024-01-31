@@ -8,18 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ee62a1cf8f54d3e2",
+            "id": "8f3d7f67084e7e75",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-30 Lektion ME1003.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-31 Lektion CM1005.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0bf3a58958b794a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards CM1005.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
+    "width": 338.5,
     "collapsed": true
   },
   "right": {
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-30 Lektion ME1003.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards CM1005.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-30 Lektion ME1003.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards CM1005.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-30 Lektion ME1003.md"
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards CM1005.md"
               }
             }
           },
@@ -166,8 +179,8 @@
     "hiddenItems": {
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "templates:Insert template": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
@@ -177,39 +190,45 @@
       "switcher:Open quick switcher": false
     }
   },
-  "active": "ee62a1cf8f54d3e2",
+  "active": "0bf3a58958b794a8",
   "lastOpenFiles": [
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-18 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-30 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4P.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-25 Lektion 2 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-25 Lektion 1 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktlivscykeln.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-19 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-23 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kundorderpunkten.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Generella Anteckningar ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/AIDA.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadssegmentering.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföringens Analysnivåer.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Distributionskanaler.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Prissättning.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsplan.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/SWOT-Analys.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Utbud och Efterfrågan.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsformer.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Konsumentmarknad.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Företagsmarknad.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeskapandet.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföring.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-31 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bruttoredovisningsprincipen.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutvecklingens Analysnivåer.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bokföringslagen.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutveckling i Olika Typer av Verksamheter.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutveckling.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens Konkurrensfaktorer.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens Analysnivåer.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-23 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Årsredovisningslagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Förutbetald Intäkt.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Försiktighetsprincipen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Förutbetald Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Verifikation.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Upplupen Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Upplupen Intäkt.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningsprinciper.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Räkenskapsår.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Principen om individuell värdering.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Periodiseringsprincipen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Näringsidkare.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Matchningsprincipen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kontinuitetsprincipen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Jämförbarhetsprincipen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Interimsskuld.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS1 Komplettering CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS1 Kalkyl 2 Komplettering CM1005 Kasiem Saeed Al-Mshabbak.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Lösningar CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-23 Bokslutstablå Exempel 1 CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-22 Journal CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Distributionskanaler ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Prissättning ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeerbjudandet.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens Analysnivåer.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Värdeskapande Processer Tvärs Organisationen ME1003.png",
     "KTHObsidian.rar",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/01-29 Bokexempel CM1005.excalidraw.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Kundorderpunkten ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Produktlivscykeln ME1003.png",
@@ -218,13 +237,7 @@
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Produktion och Marknadsföring Olika Perspektiv ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Värdekejda ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Teknologiska Kurvan ME1003.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-23 Bokslutstablå Exempel 1 CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Begrepp Journal CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-22 Journal CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/01-19 Journal ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Kurser.zip",
-    "KTH.zip",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

@@ -13,7 +13,7 @@ Innan man har förbrukat det, när man lagt det på lagret.
 
 > Utgifter är vad företaget ger för de resurser det anskaffar, och de upp står vid anskaffningstillfället. I redovisningen registreras utgifter normalt då företaget mottar en faktura, ett kvitto e.d. som bekräftar (verifierar) att anskaffningen har ägt rum.
 
-[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=31&selection=38,1,48,26|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=38,1,48,26|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 När man skickar en faktura kan man redovisa det som en utgift.
 
@@ -28,7 +28,7 @@ Utgifter kommer eventuellt led till en [[Utbetalning]]
 ## Flashcards
 
 Utgift (Definition):: Uppstår när företaget betalar för något, innan man har förbrukat det
-<!--SR:!2024-01-31,5,230!2024-02-04,5,230-->
+<!--SR:!2024-02-17,17,250!2024-02-04,5,230-->
 
 Motsatsen till utgift:: Motsatsen till [[Inkomst]]
 <!--SR:!2024-02-16,18,268!2024-02-17,18,268-->

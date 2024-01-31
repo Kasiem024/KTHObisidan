@@ -7,7 +7,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 Balansräkning är ett företags finansiella ställning vid en given tidpunkt.
 
-Balansräkningen består av ett företags tillgångar samt eget kapital och skulder vid en viss tidpunkt, vilket oftast infaller på den sista dagen av räkenskapsåret. Balansräkningens två delar, tillgångar och eget kapital och skulder, bör vara lika stora på dagen då samtliga konton i bokföringen redovisas och avslutas, även kallad balansdagen. Alltså ska ett företags tillgångar vara balanserade av företagets skulder och ägarnas investeringar.
+Balansräkningen består av ett företags tillgångar samt eget kapital och skulder vid en viss tidpunkt, vilket oftast infaller på den sista dagen av [[Räkenskapsår]]. Balansräkningens två delar, tillgångar och eget kapital och skulder, bör vara lika stora på dagen då samtliga konton i bokföringen redovisas och avslutas, även kallad balansdagen. Alltså ska ett företags tillgångar vara balanserade av företagets skulder och ägarnas investeringar.
 
 [Balansräkning, Visma](https://vismaspcs.se/ekonomiska-termer/vad-ar-balansrakning)
 
@@ -45,7 +45,7 @@ De två delarna/sidorna av en balansräkning:: Ett företags eget kapital och sk
 <!--SR:!2024-02-04,9,250!2024-02-02,7,250-->
 
 Balansidentitet (Definition):: Tillgångar = Eget kapital + Skulder
-<!--SR:!2024-01-31,1,212!2024-01-31,1,212-->
+<!--SR:!2024-01-31,1,212!2024-02-01,1,192-->
 
 Vad som brukar inkluderas i BR Vänster
 ??

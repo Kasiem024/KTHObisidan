@@ -11,7 +11,7 @@ En inbetalning är när det kommer in pengar till företaget. Vid kontantförsä
 
 > Inbetalningar är inflödet av pengar och är kopplade till betalningstidpunkten, vilken är en annan tidpunkt än försäljningstidpunkten om företaget säljer på kredit.
 
-[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf#page=31&selection=17,1,26,23|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=17,1,26,23|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Inbetalning kan ses som likviditet, penningflödet. Det sker i banken, plusgiro och kassan.
 
@@ -23,7 +23,7 @@ Inbetalning kan ses som likviditet, penningflödet. Det sker i banken, plusgiro 
 ## Flashcards
 
 Inbetalning (Definition):: Tidpunkten pengar kommer in till företaget. En del av [[Kassaflöde]]
-<!--SR:!2024-01-26,4,270!2024-02-13,14,290-->
+<!--SR:!2024-02-13,13,290!2024-02-13,14,290-->
 
 Motsatsen till inbetalning:: Motsatsen till [[Utbetalning]]
 <!--SR:!2024-02-14,15,294!2024-02-13,14,294-->

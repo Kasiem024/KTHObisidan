@@ -33,4 +33,4 @@ Egenskaperna av en Företagsmarknad (6)
 - ==Grad av formalisering==: Hög, inköpspolicy, miljöhänsyn, hållbarhetskrav.
 - ==Marknadskanal==: Ofta direkt. Ringer kunden direkt och förhandlar.
 - ==Parternas förhandlingsstyrka==: Symmetrisk relation, leverantör och kund är jämbördiga parter.
-<!--SR:!2024-01-31,1,230!2024-01-31,1,232-->
+<!--SR:!2024-01-31,1,230!2024-02-01,1,212-->

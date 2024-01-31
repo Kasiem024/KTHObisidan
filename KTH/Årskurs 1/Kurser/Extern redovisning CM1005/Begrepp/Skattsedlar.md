@@ -35,7 +35,7 @@ De olika typerna av skattsedlar (3)
 <!--SR:!2024-02-14,15,299!2024-02-03,4,283-->
 
 A-Skatt (Definition);; Skatt som anställd. Arbetsgivaren tar hand om det
-<!--SR:!2024-01-26,4,279-->
+<!--SR:!2024-02-16,16,299-->
 
 F-Skatt (Definition);; Skatt för företag. Som ett körkort för att få driva företag
 <!--SR:!2024-02-09,14,290-->

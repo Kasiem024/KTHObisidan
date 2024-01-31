@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Ingående balans är de belopp som bokförs i början av ett nytt räkenskapsår som ingående saldon på balanskontona. Den visar företagets tillgångar, eget kapital och skulder vid starten av ett nytt räkenskapsår.
+Ingående balans är de belopp som bokförs i början av ett nytt [[Räkenskapsår]] som ingående saldon på balanskontona. Den visar företagets tillgångar, eget kapital och skulder vid starten av ett nytt [[Räkenskapsår]].
 
 Den [[Utgående Balans]] från förra året blir den ingående balans för detta år.
 
@@ -15,7 +15,7 @@ Den [[Utgående Balans]] från förra året blir den ingående balans för detta
 
 ## Flashcards
 
-Ingående Balans (Definition):: De belopp som bokförs i början av ett nytt räkenskapsår som ingående saldon på balanskontona. Den visar företagets tillgångar, eget kapital och skulder vid starten av ett nytt räkenskapsår.
+Ingående Balans (Definition):: De belopp som bokförs i början av ett nytt [[Räkenskapsår]] som ingående saldon på balanskontona. Den visar företagets tillgångar, eget kapital och skulder vid starten av ett nytt [[Räkenskapsår]].
 <!--SR:!2024-02-03,4,276!2024-02-08,9,270-->
 
 Konton som bildar ingående balans (3)

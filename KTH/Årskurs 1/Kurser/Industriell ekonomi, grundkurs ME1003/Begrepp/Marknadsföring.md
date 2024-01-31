@@ -30,3 +30,4 @@ Nyckelkoncept inom Marknadsföring (3)
 - Segmentering: Rätt målgrupp.
 - Positionering: Rätt del i marknaden.
 - Diversifiering: Produktportfölj.
+<!--SR:!2024-02-01,1,232!2024-02-01,1,232-->

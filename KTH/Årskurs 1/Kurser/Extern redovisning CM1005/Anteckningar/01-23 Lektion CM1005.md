@@ -42,15 +42,16 @@ Det finns olika sätt ordna dessa fyra händelser och det kan bli problematiskt 
 ==Faktura/Bokföring händer vid en tidpunkt.==
 ==Prestation/Förbrukning händer över en period.==
 
-==Förutbetald== [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]]: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat.
-
 En förbrukad utgift är en kostnad och går till RR
 En presterad inkomst är intäkt och går till RR
 
-==Upplupen== [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]]: När bokslutet hamnar innan man har fått Faktura/Bokföring, efter att man har gjort Prestation/Förbrukning. Alltså man har gjort levererat en tjänst/vara innan man har fått betalt för det.
+[[Förutbetald Intäkt]]
+[[Förutbetald Kostnad]]
+[[Upplupen Intäkt]]
+[[Upplupen Intäkt]]
 
-Förbrukat men inte bokfört blir interimsskuld
-Presterat men inte bokfört blir interimsfordran
+Förbrukat men inte bokfört blir [[Interimsskuld]]
+Presterat men inte bokfört blir [[Interimsfordring]]
 
 Baskontoplan: Första numret i varje kontonummer bestämmer vad för sorts konto det är.
 
@@ -63,22 +64,16 @@ Sidor 43-51, 58-73
 ## Flashcards
 
 Saldo (Definition):: Skillnaden mellan debet och kredit på ett konto.
-<!--SR:!2000-01-01,1,250!2024-01-31,2,230-->
+<!--SR:!2000-01-01,1,250!2024-02-05,5,230-->
 
 Bokslut (Definition):: När man periodiserar och värderar ett företags resurser
-<!--SR:!2024-01-31,1,223!2024-01-27,1,230-->
+<!--SR:!2024-02-01,1,203!2024-02-01,1,210-->
 
 Kontant Affär (Definition):: När [[Utgift]] och [[Utbetalning]] sker vid samma tidpunkt
-<!--SR:!2024-02-02,3,263!2000-01-01,1,250-->
+<!--SR:!2024-02-02,3,263!2024-02-03,3,265-->
 
 När händer Faktura/Bokföring;; Vid en specifik tidpunkt
-<!--SR:!2024-01-31,2,242-->
+<!--SR:!2024-02-08,8,262-->
 
 När händer Prestation/Förbrukning;; Över en period
 <!--SR:!2024-02-12,13,270-->
-
-Förutbetald [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]] (Definition):: När bokslutet hamnar innan man har förbrukat hela resursen eller presterat hela tjänsten/varan. Alltså man har fått betalt för något man inte gjort/levererat
-<!--SR:!2024-02-01,2,230!2024-02-02,3,250-->
-
-Upplupen [[Inkomst]]/[[Intäkt]]/[[Utgift]]/[[Kostnad]]:: När bokslutet hamnar innan man har fått Faktura/Bokföring, efter att man har gjort Prestation/Förbrukning. Alltså man har gjort levererat en tjänst/vara innan man har fått betalt för det
-<!--SR:!2024-02-01,2,230!2000-01-01,1,250-->

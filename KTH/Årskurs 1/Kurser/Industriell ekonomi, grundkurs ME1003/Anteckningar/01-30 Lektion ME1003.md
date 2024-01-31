@@ -33,7 +33,7 @@ Oskrivna regler finns överallt, de är vanligtvis kopplade till kulturen i ett 
 
 ==Utnyttja/Kontroll==:
 
---- 
+---
 
 En definition av HRM:
 
@@ -41,7 +41,7 @@ En strategisk, sammanhängande och omfattande ansats till ledningen och utveckli
 
 Målen med HRM är huvudsakligen:
 
-- Att möjliggöra för management att upp nå de uppsatta målen 
+- Att möjliggöra för management att upp nå de uppsatta målen
 - Att integrera HR
 - Att använda personalen
 - Att engagera personalen
@@ -56,7 +56,7 @@ Maslow's Hierarchy of Needs
 - Saftey needs
 - Biological and phsiological needs
 
-Även i den lilla arbetsplatsen vill vi inte känna oss ensamma, vi vill tillhöra en grupp. 
+Även i den lilla arbetsplatsen vill vi inte känna oss ensamma, vi vill tillhöra en grupp.
 
 Chefen kan bygga upp en anställds självkänsla genom att ge beröm.
 
@@ -79,7 +79,7 @@ Motivation:
 - Responsibility
 - Nature of the work: Arbetsuppgift, blir man glad av arbetet i sig, är det utmanande nog.
 
-Bara för att hygienfaktorerna är uppfyllda betyder inte att man har motivationen att jobba effektivt eller gilla jobbet i sig. 
+Bara för att hygienfaktorerna är uppfyllda betyder inte att man har motivationen att jobba effektivt eller gilla jobbet i sig.
 
 |  | Hög Hygien | Låg Hygien |
 | :--: | :--: | :--: |
@@ -142,7 +142,5 @@ Projektstruktur: Beror på projektet inte på företaget.
 Nätverksstruktur: Om man startar ett företag och smarbtear med andra företag för att kunna leverera produkten till kunden.
 
 Mitzberg
-
-
 
 ## Flashcards

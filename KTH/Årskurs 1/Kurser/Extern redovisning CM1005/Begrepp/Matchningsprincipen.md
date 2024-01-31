@@ -1,0 +1,17 @@
+# Matchningsprincipen
+
+2024-01-31 18:05
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
+
+## Definition
+
+Matchningsprincipen är en av flera [[Redovisningsprinciper]] som innebär att [[Intäkt]] och [[Kostnad]] ska matcha varandra under samma [[Räkenskapsår]].
+
+## Kopplat till
+
+- [[Redovisningsprinciper]]
+
+## Flashcards
+
+Matchningsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som används för att säkerställa att intäkter och kostnader är samma under en viss period
+<!--SR:!2024-02-01,2,230!2024-02-05,7,250-->

@@ -32,14 +32,8 @@ Man kan dela in [[Produktion]] på tre analysnivåer
 
 ## Flashcards
 
-Namnet på analysnivåerna inom produktion (3)
-??
-- Strategisk nivå (produktionsstrategi).
-- Taktisk nivå (produktionsprocessen).
-- Operativ nivå (ledning och styrning av produktion).
-
 Delarna av produktionens strategiska nivå (4)
-??
+DISABLED
 - Produktionssystemets utformning.
 - Position i [[Värdekedja]].
 - Lokalisering.
@@ -47,13 +41,13 @@ Delarna av produktionens strategiska nivå (4)
 <!--SR:!2000-01-01,1,250!2024-01-31,1,230-->
 
 Delarna av produktionens taktiska nivå (4)
-??
+DISABLED
 - Processdesign – flöden, buffertar, etc.
 - Processteknologi.
 - Systemets ”robusthet” mot störningar.
 
 Delarna av produktionens operativa nivå (5)
-??
+DISABLED
 - Planering, beordring, styrning.
 - Hantering av störningar och osäkerheter.
 - Produktionsplanering och produktionsstyrning.

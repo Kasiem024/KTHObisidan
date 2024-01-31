@@ -17,7 +17,7 @@ AIDA är en modell som beskriver stegen en konsument tar innan den köper en pro
 ## Flashcards
 
 AIDA (Definition):: En modell som beskriver stegen en konsument tar innan den köper en produkt.
-<!--SR:!2000-01-01,1,250!2024-02-03,4,270-->
+<!--SR:!2024-02-04,4,272!2024-02-03,4,270-->
 
 Delarna av AIDA (4)
 ??
