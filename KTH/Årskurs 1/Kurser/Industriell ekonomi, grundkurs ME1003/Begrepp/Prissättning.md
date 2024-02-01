@@ -8,9 +8,18 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 ![[Prissättning ME1003.png]]
 Priset av en produkt är självkostnaden + vinstpålägg (marginalen). Alltså priset av en produkt och kostnaden av en produkt är olika och ska därför skiljas.
 
+Grunden för Prissättning, verksamhetsanalyser och beslut:
+
+- Vilket pris skall vi acceptera vid en försäljning?
+- Vilka produkter är lönsamma?
+- Vilka verksamheter är effektiva?
+- Vilka produktionsmetoder är effektiva?
+- Skall vi köpa från leverantörer eller tillverka själva?
+
 ## Kopplat till
 
 - En del av [[Marknadsföringens Analysnivåer]] på den taktiska nivån.
+- [[Förädlingsvärde]]
 
 ## Flashcards
 

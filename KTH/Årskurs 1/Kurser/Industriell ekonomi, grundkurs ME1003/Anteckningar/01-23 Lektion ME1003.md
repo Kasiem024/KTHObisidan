@@ -21,7 +21,7 @@ Tre funktioner inom ett företag:
 - [[Produktutveckling]]: Allt som bidrar till utveckling av [[Värdeerbjudandet]], utveckling av både varor och tjänster, alltså innovation
 - [[Marknadsföring]]: Allt som gör att kunderna köper produkterna
 
-## Värdeskapande processerna
+## [[Värdeskapande Processerna]]
 
 Produktion och produktutveckling
 
@@ -80,14 +80,14 @@ Företag kan ha olika innovationsstrategier
 ## Flashcards
 
 Namnet på olika produktionstyper (3)
-??
+DISABLED
 - Projekt produktion/Enstycksproduktion.
 - Massproduktion/Serieproduktion.
 - Kontinuerlig produktion.
 
 Projekt produktion/Enstycksproduktion egenskaper (8)
 ??
-==Byggnadsprojekt==
+==DISABLED==
 - Stor variation.
 - Konvergerande flöde.
 - Många leverantörer.
@@ -95,10 +95,9 @@ Projekt produktion/Enstycksproduktion egenskaper (8)
 - Ofta site-montage.
 - Ofta producentprodukter.
 - Utveckling särskilt viktigt.
-<!--SR:!2024-01-31,1,230!2000-01-01,1,250-->
 
 Massproduktion/Serieproduktion egenskaper (8)
-??
+DISABLED
 ==Bilproduktion==
 - Liten variation.
 - Konvergerande flöde.
@@ -108,7 +107,7 @@ Massproduktion/Serieproduktion egenskaper (8)
 - Ofta konsumentprodukter.
 
 Kontinuerlig produktion egenskaper (8)
-??
+DISABLED
 ==Stålindustri==
 - Liten variation.
 - Divergerande flöde.

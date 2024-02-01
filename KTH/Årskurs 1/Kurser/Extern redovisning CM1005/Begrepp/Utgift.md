@@ -19,7 +19,9 @@ När man skickar en faktura kan man redovisa det som en utgift.
 
 Utgift kan ses som företagets resurser, när vi faktiskt säljer något och när vi anskaffar en resurs.
 
-Utgifter kommer eventuellt led till en [[Utbetalning]]
+Utgifter kommer eventuellt leda till en [[Utbetalning]] och [[Kostnad]]
+
+En utgift uppstår i samband med att företaget erhåller en ==faktura== eller motsvarande, alltså vid ==inköpstillfället==.
 
 ## Kopplat till
 
@@ -27,7 +29,7 @@ Utgifter kommer eventuellt led till en [[Utbetalning]]
 
 ## Flashcards
 
-Utgift (Definition):: Uppstår när företaget betalar för något, innan man har förbrukat det
+Utgift (Definition):: Uppstår när företaget betalar för något, innan man har förbrukat det. Med andra ord när företaget får en ==faktura==, vid ==inköpstillfället==
 <!--SR:!2024-02-17,17,250!2024-02-04,5,230-->
 
 Motsatsen till utgift:: Motsatsen till [[Inkomst]]

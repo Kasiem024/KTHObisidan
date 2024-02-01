@@ -17,13 +17,15 @@ Inkomst kan ses som företagets resurser, när vi faktiskt säljer något och n�
 
 Inkomst kommer eventuellt leda till [[Inbetalning]] och [[Intäkt]]
 
+En Inkomst uppstår i samband med att företaget skickar en ==faktura== eller motsvarande, alltså ==försäljningstillfället==.
+
 ## Kopplat till
 
 - Motsatsen till [[Utgift]]
 
 ## Flashcards
 
-Inkomst (Definition):: Uppstår när företaget har slutfört en prestation. När den fortfarande inte har fått betalt
+Inkomst (Definition):: Uppstår när företaget har slutfört en prestation. När den fortfarande inte har fått betalt. Med andra ord när företaget skickar en ==faktura==, vid ==försäljningstillfället==
 <!--SR:!2024-02-06,7,250!2024-02-01,6,250-->
 
 Motsatsen till Inkomst:: Motsatsen till [[Utgift]]

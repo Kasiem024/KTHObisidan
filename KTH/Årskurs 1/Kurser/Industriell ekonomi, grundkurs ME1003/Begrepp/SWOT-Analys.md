@@ -7,22 +7,23 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 Ett sätt att analysera ett företags omgivning och insida. Består av 4 ord.
 
-- Strengths
-- Weaknesses
-- Opportunities
-- Threats
+- ==Strengths==: Internt, vad är vi bra på jämfört med våra konkurrenter, vilka resurser har vi
+- ==Weaknesses==: Internt, vad är vi dåliga jämfört med våra konkurrenter, vilka brister har vi
+- ==Opportunities==: Externt, hur ser marknaden ut, finns det något vi kan ta nytta av
+- ==Threats==: Externt, hur ser marknaden ut, finns det något vi borde akta oss för
 
 ## Kopplat till
 
 - [[Marknadsföring]]
 - En del av nulägesanalysen i en [[Marknadsplan]].
+- [[TOWS-Analys]]
 
 ## Flashcards
 
-Orden i en SWOT analys (4)
+Delarna av en SWOT analys (4)
 ??
-- Strengths
-- Weaknesses
-- Opportunities
-- Threats
+- ==Strengths==: Internt, vad är vi bra på jämfört med våra konkurrenter, vilka resurser har vi
+- ==Weaknesses==: Internt, vad är vi dåliga jämfört med våra konkurrenter, vilka brister har vi
+- ==Opportunities==: Externt, hur ser marknaden ut, finns det något vi kan ta nytta av
+- ==Threats==: Externt, hur ser marknaden ut, finns det något vi borde akta oss för
 <!--SR:!2024-02-03,4,270!2024-02-03,4,270-->

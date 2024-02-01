@@ -19,6 +19,8 @@ Inkomster är det som löpande tas emot under året. När inkomsten hänförs ti
 
 Intäkt visar vad vi har presterat/levererat under en viss period.
 
+En Intäkt är ==värdet== av en ==levererad prestation== under en viss ==period==.
+
 ### Räkningar
 
 Vad brukar räknas som intäkt inom RR?
@@ -32,7 +34,7 @@ Vad brukar räknas som intäkt inom RR?
 
 ## Flashcards
 
-Intäkt (Definition):: En periodiserad [[Inkomst]] som är kopplat till ett företags redovisning och beskattning. När man levererar något, faktiskt får betalt
+Intäkt (Definition):: En periodiserad [[Inkomst]] som är kopplat till ett företags redovisning och beskattning. När man levererar något, faktiskt får betalt. Med andra ord ==värdet== av en ==levererad prestation== under en viss ==period==
 <!--SR:!2024-02-09,10,272!2024-02-12,13,272-->
 
 Motsatsen till Intäkt:: Motsatsen till [[Kostnad]]
