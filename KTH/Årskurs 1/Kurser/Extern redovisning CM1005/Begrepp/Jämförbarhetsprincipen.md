@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Jämförbarhetsprincipen innebär att företag över tiden ska tillämpa samma principer för exempelvis klassificering och värdering av poster i balansräkningen, resultaträkningen och i årsredovisningen.
+Jämförbarhetsprincipen innebär att företag över tiden ska tillämpa samma principer för exempelvis klassificering och värdering av poster i [[Balansräkning]], [[Resultaträkning]] och i [[Årsredovisning]].
 
 Jämförbarhetsprincipen kallas även konsekvensprincipen, eller principen om konsekvent tillämpning och jämförbarhet.
 

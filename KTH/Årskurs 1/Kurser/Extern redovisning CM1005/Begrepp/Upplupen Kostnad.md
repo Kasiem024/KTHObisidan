@@ -1,7 +1,7 @@
 # Upplupen Kostnad
 
 2024-01-31 17:18
-Tags: #year2024 #KTH #ekonomi #CM1005  #begrepp
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 

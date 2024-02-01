@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Förvaltningsberättelsen är en obligatorisk del av årsredovisningen. I den beskriver företaget med ord de viktigaste händelserna under året som gått. Dessutom innehåller den vissa andra lagstadgade uppgifter.
+Förvaltningsberättelsen är en obligatorisk del av [[Årsredovisning]]. I den beskriver företaget med ord de viktigaste händelserna under året som gått. Dessutom innehåller den vissa andra lagstadgade uppgifter.
 
 [Förvaltningsberättelse i årsredovisningen, Bolagsverket](https://bolagsverket.se/foretag/aktiebolag/arsredovisningforaktiebolag/delarochbilagoriarsredovisningen/forvaltningsberattelseiarsredovisningen.765.html)
 
@@ -16,11 +16,11 @@ Uppgifter som ska inkluderas i förvaltningsberättelsen:
 - Bolagets förväntade framtida utvecklingar
 - Förslag till disposition av årets resultat
 
-Alla företag som ska ha en årsredovisning ska också ha en förvaltningsberättelse. Större företag ska också inkludera sitt hållbarhetsarbete i förvaltningsberättelsen eller i en separat [[Hållbarhetsrapport]].
+Alla företag som ska ha en [[Årsredovisning]] ska också ha en förvaltningsberättelse. Större företag ska också inkludera sitt hållbarhetsarbete i förvaltningsberättelsen eller i en separat [[Hållbarhetsrapport]].
 
 ## Flashcards
 
-Förvaltningsberättelse (Definition):: En obligatorisk del av årsredovisningen som beskriver de viktigaste händelserna för företaget under året, plus andra lagstadgade uppgifter
+Förvaltningsberättelse (Definition):: En obligatorisk del av [[Årsredovisning]] som beskriver de viktigaste händelserna för företaget under året, plus andra lagstadgade uppgifter
 <!--SR:!2024-02-02,3,250!2024-02-02,3,250-->
 
 Uppgifter som ska inkluderas i förvaltningsberättelsen (4)

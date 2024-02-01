@@ -13,4 +13,4 @@ Tags: #year2024 #KTH #ekonomi # #begrepp
 
 ## Flashcards
 
-(Definition)::
+ (Definition)::

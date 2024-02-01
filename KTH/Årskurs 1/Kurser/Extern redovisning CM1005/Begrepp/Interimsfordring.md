@@ -5,11 +5,11 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Inom redovisning räknas ==förutbetalda kostnader== och ==upplupna intäkter== som interimsfordringar. Endast de kostnader och intäkter som hör till räkenskapsåret ska påverka resultatet. Övriga utbetalningar och inbetalningar hör till kommande [[Räkenskapsår]] och måste därför periodiseras och bokas upp som tillgångar respektive skulder i bokslutet. Detta gäller bland annat interimsfordringar.
+Inom redovisning räknas ==förutbetalda kostnader== och ==upplupna intäkter== som interimsfordringar. Endast de [[Kostnad]] och [[Intäkt]] som hör till räkenskapsåret ska påverka resultatet. Övriga [[Utbetalning]] och [[Inbetalning]] hör till kommande [[Räkenskapsår]] och måste därför periodiseras och bokas upp som tillgångar respektive skulder i [[Årsbokslut]]. Detta gäller bland annat Interimsfordringar.
 
 [Interimsfordring, Björn Lundén](https://www.bjornlunden.se/bokslut--%C3%A5rsredovisning/interimsfordringar__1294)
 
-Alltså Interimsfordringar är antingen en [[Förutbetald Kostnad]] eller en [[Upplupen Intäkt]]
+Alltså Interimsfordringar är antingen en [[Förutbetald Kostnad]] eller en [[Upplupen Intäkt]].
 
 ## Kopplat till
 

@@ -66,9 +66,6 @@ Sidor 43-51, 58-73
 Saldo (Definition):: Skillnaden mellan debet och kredit på ett konto.
 <!--SR:!2000-01-01,1,250!2024-02-05,5,230-->
 
-Bokslut (Definition):: När man periodiserar och värderar ett företags resurser
-<!--SR:!2024-02-01,1,203!2024-02-01,1,210-->
-
 Kontant Affär (Definition):: När [[Utgift]] och [[Utbetalning]] sker vid samma tidpunkt
 <!--SR:!2024-02-02,3,263!2024-02-03,3,265-->
 

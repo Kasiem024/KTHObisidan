@@ -1,7 +1,7 @@
 # Huvudbok
 
 2024-01-31 16:53
-Tags: #year2024 #KTH #ekonomi # #begrepp
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 

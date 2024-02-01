@@ -3,12 +3,12 @@
 2024-01-26 13:03
 Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 
-Årsredovisningslagen: Alla stora företag måste följa denna lag. Den består av:
+[[Årsredovisningslagen]]: Alla stora företag måste följa denna lag. Den består av:
 
-- Årsbokslut - [[Balansräkning]] och [[Resultaträkning]]
-- Fotnoter till bokslutet - Värderingsprinciper
-- Förvaltningsberättelse - Styrelsens förvaltning, hur styrelsen har skött om företaget under året.
-- Kassaflödesanalys - [[Kassaflöde]]
+- [[Årsbokslut]]: [[Balansräkning]] och [[Resultaträkning]]
+- Fotnoter till bokslutet: Värderingsprinciper
+- Förvaltningsberättelse: Styrelsens förvaltning, hur styrelsen har skött om företaget under året.
+- Kassaflödesanalys: [[Kassaflöde]]
 
 [[Förvaltningsberättelse]]:
 

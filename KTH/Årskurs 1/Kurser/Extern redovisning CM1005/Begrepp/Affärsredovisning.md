@@ -9,7 +9,7 @@ Affärsredovisningens syfte är bl.a. att minst en gång om året förse externa
 
 ==Registrering och rapportering av värdet av företagets resurser och deras finansiering. Samt händelser som förändrar dessa.==
 
-Affärsredovisning ska ske en gång om året och brukar kallas ==årsredovisning== eller ==årsbokslut==. I princip består affärsredovisningen av [[Resultaträkning]] och [[Balansräkning]].
+Affärsredovisning ska ske en gång om året och brukar kallas [[Årsredovisning]] eller [[Årsbokslut]]. I princip består affärsredovisningen av [[Resultaträkning]] och [[Balansräkning]].
 
 ## Flashcards
 

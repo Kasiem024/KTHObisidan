@@ -1,7 +1,7 @@
 # Grundbokföring
 
 2024-01-31 16:43
-Tags: #year2024 #KTH #ekonomi #CM1005  #begrepp
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 

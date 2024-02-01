@@ -13,7 +13,7 @@ Alla [[Aktiebolag]], [[Handelsbolag]] och [[Ekonomisk förening]], samt vissa st
 
 ### Bokföringsskyldighet
 
-En del av BFL är bokföringsskyldighet som innebär att bokföring ska ske av alla [[Affärshändelse]] på ett systematiskt sätt så att de kan registreras i en [[Grundbok]] och en [[Huvudbok]]. Alla dessa affärshändelser ska ha [[Verifikation]]. Skyldigheten innebär även att upprätta ett årsbokslut eller årsredovisning.
+En del av BFL är bokföringsskyldighet som innebär att bokföring ska ske av alla [[Affärshändelse]] på ett systematiskt sätt så att de kan registreras i en [[Grundbok]] och en [[Huvudbok]]. Alla dessa affärshändelser ska ha [[Verifikation]]. Skyldigheten innebär även att upprätta ett [[Årsbokslut]] eller [[Årsredovisning]].
 
 ## Kopplat till
 
@@ -21,4 +21,4 @@ En del av BFL är bokföringsskyldighet som innebär att bokföring ska ske av a
 
 Bokföringslagen (Definition):: En lag som reglerar hur bokföring för en verksamhet ska upprättas och vilka som är bokföringsskyldiga
 
-Bokföringsskyldighet (Definition):: En del av [[Bokföringslagen]] som säger att alla [[Affärshändelse]] ska bokföras systematiskt så att de kan registreras i en [[Grundbok]] och en [[Huvudbok]]. Alla dessa affärshändelser ska ha [[Verifikation]]. Den innebär även att upprätta ett årsbokslut eller årsredovisning
+Bokföringsskyldighet (Definition):: En del av [[Bokföringslagen]] som säger att alla [[Affärshändelse]] ska bokföras systematiskt så att de kan registreras i en [[Grundbok]] och en [[Huvudbok]]. Alla dessa affärshändelser ska ha [[Verifikation]]. Den innebär även att upprätta ett [[Årsbokslut]] och en [[Årsredovisning]]

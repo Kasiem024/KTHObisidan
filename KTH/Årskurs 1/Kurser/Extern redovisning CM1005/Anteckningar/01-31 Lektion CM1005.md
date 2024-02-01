@@ -53,7 +53,7 @@ En verifikation ska innehålla:
 
 ### Vad är [[Årsredovisningslagen]] och vem ska följa den
 
-Årsredovisningslagen är en lag som bestämmer hur företag ska redogöra sin årsredovisning, koncernredovisning och delårsrapport. Den är baserad på direktiv från EU.
+Årsredovisningslagen är en lag som bestämmer hur företag ska redogöra sin [[Årsredovisning]], koncernredovisning och delårsrapport. Den är baserad på direktiv från EU.
 
 Det är inte alla verksamheter som behöver följa denna lag. De verksamheter som ska följa Årsredovisningslagen är:
 
@@ -63,7 +63,7 @@ Det är inte alla verksamheter som behöver följa denna lag. De verksamheter so
 - Bokföringsskyldiga stiftelser.
 - Företag som uppfyller vissa speciella villkor gällande antalet anställda, balansomslutning och nettoomsättning.
 
-### Vilket innehåll har ett årsbokslut
+### Vilket innehåll har ett [[Årsbokslut]]
 
 Syftet med ett årsbokslut är att ge en överblick på hur det har gått för verksamheten under året genom att visa [[Balansräkning]] och [[Resultaträkning]]. Alltså ska den visa företagets Tillgångar, Eget kapital och Skulder.
 

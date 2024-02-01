@@ -5,11 +5,23 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Resultaträkning är en rapport över [[Intäkt]] och [[Kostnad]] under en viss period. Man kan säga att den visar om företaget har genererat en vinst eller förlust.
+Resultaträkning är en rapport över [[Intäkt]] och [[Kostnad]] under en viss period. Man kan säga att den visar om företaget har genererat en vinst eller förlust. Företaget bestämmer själv hur lång perioden är.
 
 [Resultaträkning, Visma](https://vismaspcs.se/ekonomiska-termer/vad-ar-resultatrakning)
 
-Man bestämmer själv hur lång perioden är. Betalning för prestationer till kunder.
+Man kan göra Resultaträkningen på två olika sätt.
+
+### Kostnadsindelad
+
+När man delar upp verksamhetens kostnader efter kostnadsslag, alltså vilken typ av kostnad det är.
+
+### Funktionsindelad
+
+När man delar upp verksamhetens kostnader i 3 huvudfunktioner:
+
+- Tillverkning
+- Försäljning
+- Administration
 
 ### Räkningar
 
@@ -43,3 +55,12 @@ Vad som brukar inkluderas i RR Vänster (5)
 
 Vad som brukar inkluderas i RR Höger (1):: Intäkter. Alltså vad man har tjänat från sina kunder, när man faktiskt har levererat en vara/tjänst
 <!--SR:!2024-02-09,10,270!2024-02-02,3,250-->
+
+Kostnadsindelad Resultaträkning (Definition):: När man delar upp verksamhetens kostnader efter kostnadsslag, alltså vilken typ av kostnad det är.
+
+Funktionsindelad Resultaträkning (Definition) (3)
+??
+När man delar upp verksamhetens kostnader i 3 huvudfunktioner:
+- Tillverkning
+- Försäljning
+- Administration

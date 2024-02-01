@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8f3d7f67084e7e75",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-31 Lektion CM1005.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "0bf3a58958b794a8",
             "type": "leaf",
             "state": {
@@ -30,9 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "85b6c809d1370fbc",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf"
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 338.5,
-    "collapsed": true
+    "width": 338.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -192,33 +188,33 @@
   },
   "active": "0bf3a58958b794a8",
   "lastOpenFiles": [
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-31 Lektion CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bruttoredovisningsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutvecklingens Analysnivåer.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bokföringslagen.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutveckling i Olika Typer av Verksamheter.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutveckling.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens Konkurrensfaktorer.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens Analysnivåer.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-23 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/[[Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Årsredovisningslagen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Förutbetald Intäkt.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Försiktighetsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Förutbetald Kostnad.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Verifikation.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Upplupen Kostnad.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Upplupen Intäkt.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningsprinciper.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Räkenskapsår.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Principen om individuell värdering.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Periodiseringsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Näringsidkare.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Matchningsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kontinuitetsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Jämförbarhetsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Interimsskuld.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Revisionsberättelse.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Revisionsberättelse.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningens Kvalitativa Egenskaper.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Koncernredovisning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/K-Regelverk.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/God Redovisningssed och Praxis.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Fritt Eget Kapital.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Eget Kapital.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bundet Eget Kapital.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/BAS-kontoplan.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Årsredovisning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Årsbokslut.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Redovisningens Kvalitativa Egenskaper.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Koncernredovisning.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/K-Regelverk.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/God Redovisningssed och Praxis.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Eget Kapital.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Fritt Eget Kapital.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Bundet Eget Kapital.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/BAS-kontoplan.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Resultaträkning.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Hållbarhetsrapport.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Årsredovisning.md",
+    "Obsidian Plugins/Templates/Lektion Template.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS1 Komplettering CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS1 Kalkyl 2 Komplettering CM1005 Kasiem Saeed Al-Mshabbak.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Lösningar CM1005.pdf",

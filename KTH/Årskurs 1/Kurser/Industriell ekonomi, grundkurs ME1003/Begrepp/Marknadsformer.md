@@ -1,7 +1,7 @@
 # Marknadsformer
 
 2024-01-30 12:50
-Tags: #year2024 #KTH #ekonomi # #begrepp
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
