@@ -15,5 +15,10 @@ Inkrementell --> Radikal --> Inkrementell
 
 ## Flashcards
 
-Teknologiska kurvan (Definition):: Beskriver hur utvecklingen av en viss teknologis prestanda ändras med tiden. Långsamt i början och slutet av teknologins livstid men snabbt vid mitten
+Teknologiska kurvan (Definition):: Beskriver hur utvecklingen av en viss teknologis prestanda ändras med tiden. Långsamt i början och slutet av teknologins livstid men snabbt vid mitten ![[Teknologiska Kurvan ME1003.png]]
 <!--SR:!2024-02-03,4,270!2024-02-03,4,270-->
+
+Inkrementell innovation (Definition):: När utvecklingen inom en viss teknologi sker i ==små steg==, alltså ==långsamt==, ==standarden==
+
+Radikal innovation (Definition):: När ett ==genombrott== sker i utvecklingen av en teknologi som ==accelerera== takten som ==förbättring== sker
+<!--SR:!2000-01-01,1,250!2024-02-07,4,274-->

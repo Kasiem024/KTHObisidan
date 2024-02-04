@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
-Go where profits and growth are and where the competetion isn't
+Go where profits and growth are and where the competition isn't
 
 Handlar om att skapa marknader utan konkurrens. Ibland vet marknaden inte vad den vill och vi kan bli den som hittar det behovet åt marknaden.
 
@@ -41,3 +41,4 @@ Handlar om att skapa marknader utan konkurrens. Ibland vet marknaden inte vad de
 ## Flashcards
 
 Blue Ocean Strategi (Definition):: Handlar om att skapa marknader utan konkurrens. Ibland vet marknaden inte vad den vill och vi kan bli den som hittar det behovet åt marknaden
+<!--SR:!2024-02-05,3,250!2000-01-01,1,250-->

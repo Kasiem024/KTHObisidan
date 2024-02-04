@@ -1,4 +1,4 @@
-# Ansoff tillväxtmatris
+# Ansoff Tillväxtmatris
 
 2024-02-01 15:31
 Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp

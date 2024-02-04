@@ -46,7 +46,7 @@ Platta paket som exempel: Först behövde idén bakom platta paket utvecklas, se
 
 [[Produktion]]: Omfattar samtliga aktiviteter som bidrar till att framställa och leverera företagets varor och tjänster företagets kunder. Alltså ==produktion är inte bara tillverkning==.
 
-[[Produktion och Marknadsföring Olika Perspektiv ME1003]]
+[[Produktionens och Marknadsföringens Olika Perspektiv]]
 
 Vanliga skillnader mellan tre olika produktionstyper vid varuproduktion
 
@@ -72,10 +72,10 @@ Introduktion --> Tillväxt --> Mognad --> Nedgång
 
 Företag kan ha olika innovationsstrategier
 
-- Teknikpionjär (Offensiv): Satsar mycket resurser på teknisk utveckling, vill lansera nya teknik produkter
-- Snabb efterföljare (Defensiv): Måste hög kompetens inom teknikutveckling, duktiga på att identifiera vilka produkter kommer slå igenom
-- Kostnadsminimering (Imitation): Väntar på att se vilka produkter blir populära, är bra på att skapa kopior till ett lägre pris
-- Traditionalist (Konservativ): Vill inte ändra på sig, bryr sig inte om att innovera
+- ==Teknikpionjär== (Offensiv): Satsar mycket resurser på teknisk utveckling, vill lansera nya teknik produkter
+- ==Snabb efterföljare== (Defensiv): Måste hög kompetens inom teknikutveckling, duktiga på att identifiera vilka produkter kommer slå igenom
+- ==Kostnadsminimering== (Imitation): Väntar på att se vilka produkter blir populära, är bra på att skapa kopior till ett lägre pris
+- ==Traditionalist== (Konservativ): Vill inte ändra på sig, bryr sig inte om att innovera
 
 ## Flashcards
 
@@ -86,8 +86,7 @@ DISABLED
 - Kontinuerlig produktion.
 
 Projekt produktion/Enstycksproduktion egenskaper (8)
-??
-==DISABLED==
+DISABLED
 - Stor variation.
 - Konvergerande flöde.
 - Många leverantörer.
@@ -95,6 +94,7 @@ Projekt produktion/Enstycksproduktion egenskaper (8)
 - Ofta site-montage.
 - Ofta producentprodukter.
 - Utveckling särskilt viktigt.
+<!--SR:!2000-01-01,1,250!2024-02-03,1,230-->
 
 Massproduktion/Serieproduktion egenskaper (8)
 DISABLED

@@ -14,3 +14,4 @@ I [[Aktiebolag]] och [[Ekonomisk förening]] skiljer man mellan [[Bundet Eget Ka
 ## Flashcards
 
 Fritt Eget Kapital (Definition):: Kapital som företagets ägare har kontroll över, kan användas för vinstutdelning
+<!--SR:!2024-02-06,4,270!2024-02-07,4,272-->

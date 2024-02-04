@@ -27,13 +27,19 @@ Skillnad mellan [[Ingående Balans]] och [[Utgående Balans]];; Utgående Balans
 ==FAR== (Definition):: En branschorganisation inom redovisning, revision och rådgivning som bland annat utvecklar tydliga spelregler, rätt kompetens och tillförlitlig information för näringsliv och samhälle. Också ett privat utbildningsföretag inom ekonomiområdet
 
 ==Redovisningsvaluta== (Definition):: Valutan som [[Affärshändelse]] presenteras med, i Sverige är det vanligtvis SEK men för vissa företag kan det vara Euro
+<!--SR:!2024-02-05,2,248!2024-02-05,3,265-->
 
 ==Rättvisande bild== (Definition):: Handlar om att innehållet i en [[Årsredovisning]] ska ge läsaren en så riktig bild som möjligt av företagets ekonomiska situation
+<!--SR:!2024-02-06,3,268!2000-01-01,1,250-->
 
 ==Avläsningsmetod== (Definition):: Handlar om att läsa direkt vad som står på ett konto och sätta in det på [[Resultaträkning]] och [[Balansräkning]]
+<!--SR:!2024-02-04,2,245!2024-02-06,3,268-->
 
 ==Utjämningsmetod== (Definition):: Handlar om att först nolla saldot på ett konto genom att jämna ut det med speciella bokslutskonton, alltså konton för [[Resultaträkning]] och [[Balansräkning]]
+<!--SR:!2000-01-01,1,250!2024-02-04,2,245-->
 
 ==Kortfristiga Skulder== (Definition):: En skuld som ska betalas inom ett år, exempelvis leverantörsskulder, skatteskulder, moms och interimsskulder
+<!--SR:!2024-02-06,3,268!2024-02-05,3,265-->
 
 ==Långfristiga Skulder==(Definition):: En skuld som ska betalas efter ett år, exempelvis lån och checkräkningskredit
+<!--SR:!2000-01-01,1,250!2024-02-05,3,265-->

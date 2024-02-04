@@ -30,6 +30,8 @@ Värdeerbjudandet: Klassisk industri går mot att lika tjänsteföretag "serviti
 
 Många tjänsteföretag är ”lika industriella” som klassiska industriföretag, tänk [[4S]] (Disneyland).
 
+Man kan säga att Värdeerbjudandet av ett företag är det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det ==inte bara== de faktiska ==varorna== och ==tjänster== som ett företag säljer men ==också hela upplevelsen==.
+
 ## Kopplingar
 
 - [[Värdeskapandet]]
@@ -37,11 +39,11 @@ Många tjänsteföretag är ”lika industriella” som klassiska industriföret
 
 ## Flashcards
 
-Värdeerbjudandet (Definition):: Ett annat namn för vad varan eller tjänsten är
+Värdeerbjudandet (Definition):: Det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det ==inte bara== de faktiska ==varorna== och ==tjänster== som ett företag säljer men ==också hela upplevelsen==
 <!--SR:!2024-02-02,3,250!2024-02-07,8,250-->
 
 Sätt att kategorisera produkter (Värdeerbjudandet)
 ??
 - Business to Consumer (B2C).
 - Business to Business (B2B).
-<!--SR:!2024-02-10,11,270!2024-02-02,3,268-->
+<!--SR:!2024-02-10,11,270!2024-02-13,10,288-->

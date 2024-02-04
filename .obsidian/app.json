@@ -57,7 +57,20 @@
     "SWOT",
     "SWOT-Analys",
     "Ansoff",
-    "Samkostnader"
+    "Samkostnader",
+    "Back-office",
+    "Front-office",
+    "värdeskapandeprocessen",
+    "back-office",
+    "offshoring",
+    "tvåhänta",
+    "KOP",
+    "Kraljics",
+    "Kotler",
+    "Mintzberg",
+    "SWOT-analys",
+    "Pestle-Analys",
+    "GE-McKinsey-matrisen"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
@@ -65,5 +78,12 @@
     "README",
     "Obsidian Plugins/Templates/"
   ],
-  "attachmentFolderPath": "./"
+  "attachmentFolderPath": "./",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Legal",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

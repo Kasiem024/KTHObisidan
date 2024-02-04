@@ -29,4 +29,4 @@ Egenskaper av en enskild näringsverksamhet
 - Är kopplat till personnummer.
 - Företaget är inte en separat juridisk person.
 - Kan ha anställda.
-<!--SR:!2024-02-02,7,258!2024-02-13,14,290-->
+<!--SR:!2024-02-27,24,278!2024-02-13,14,290-->

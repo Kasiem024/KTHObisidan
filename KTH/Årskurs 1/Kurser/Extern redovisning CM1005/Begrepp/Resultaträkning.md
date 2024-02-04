@@ -57,6 +57,7 @@ Vad som brukar inkluderas i RR Höger (1):: Intäkter. Alltså vad man har tjän
 <!--SR:!2024-02-09,10,270!2024-02-02,3,250-->
 
 Kostnadsindelad Resultaträkning (Definition):: När man delar upp verksamhetens kostnader efter kostnadsslag, alltså vilken typ av kostnad det är.
+<!--SR:!2000-01-01,1,250!2024-02-03,1,235-->
 
 Funktionsindelad Resultaträkning (Definition) (3)
 ??
@@ -64,3 +65,4 @@ När man delar upp verksamhetens kostnader i 3 huvudfunktioner:
 - Tillverkning
 - Försäljning
 - Administration
+<!--SR:!2024-02-04,1,215!2000-01-01,1,250-->

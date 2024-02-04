@@ -191,7 +191,6 @@
       "key": "S"
     }
   ],
-  "editor:open-link-in-new-split": [],
   "obsidian-languagetool-plugin:ltaccept-suggestion-1": [
     {
       "modifiers": [
@@ -272,6 +271,14 @@
         "Mod"
       ],
       "key": "ArrowRight"
+    }
+  ],
+  "workspace:export-pdf": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "P"
     }
   ]
 }

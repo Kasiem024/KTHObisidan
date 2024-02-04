@@ -23,11 +23,11 @@ Man kan säga att det finns 3 nyckelkoncept inom Marknadsföring:
 ## Flashcards
 
 Marknadsföring (Definition):: Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor och tjänster
-<!--SR:!2024-02-02,3,250!2024-02-03,4,270-->
+<!--SR:!2024-02-02,3,250!2024-02-20,17,290-->
 
 Nyckelkoncept inom Marknadsföring (3)
 ??
 - Segmentering: Rätt målgrupp.
 - Positionering: Rätt del i marknaden.
 - Diversifiering: Produktportfölj.
-<!--SR:!2024-02-01,1,232!2024-02-01,1,232-->
+<!--SR:!2024-02-03,1,212!2024-02-06,3,252-->

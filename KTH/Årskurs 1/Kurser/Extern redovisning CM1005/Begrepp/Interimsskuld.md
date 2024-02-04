@@ -11,6 +11,8 @@ Interimsskulder är inom redovisning av två olika slag, ==upplupna kostnader== 
 
 Alltså alla Interimsskulder är antingen en [[Upplupen Kostnad]] eller en [[Förutbetald Intäkt]].
 
+Man kan se Interimsskulder som positivt för företaget då det är antingen en vara/tjänst som företaget fått men inte betalat för eller något som vi har fått betalt för fast inte levererat ännu.
+
 ## Kopplat till
 
 - [[Interimsfordring]]
@@ -18,3 +20,4 @@ Alltså alla Interimsskulder är antingen en [[Upplupen Kostnad]] eller en [[Fö
 ## Flashcards
 
 Interimsskuld (Definition):: Samlingsnamn för [[Upplupen Kostnad]] och [[Förutbetald Intäkt]]
+<!--SR:!2024-02-03,1,230!2000-01-01,1,250-->

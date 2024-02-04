@@ -23,8 +23,10 @@ En revisors uppgift är att granska och verifiera företags redovisning.
 ## Flashcards
 
 Revisionsberättelse (Definition):: När en revisor redogör sin granskning av ett företags ledningen och om [[Årsredovisning]] är upprättad enligt [[Årsredovisningslagen]]
+<!--SR:!2000-01-01,1,250!2024-02-07,4,270-->
 
 Revisor (Definition):: Någon vars jobb är att granska och verifiera företags redovisning
+<!--SR:!2024-02-05,3,250!2024-02-07,4,270-->
 
 Revisionsberättelsens innehåll (4)
 ??

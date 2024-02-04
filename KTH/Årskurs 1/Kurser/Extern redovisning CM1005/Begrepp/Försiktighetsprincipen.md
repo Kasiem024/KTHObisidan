@@ -16,3 +16,4 @@ Med Försiktighetsprincipen avses att ett företag beaktar god försiktighet vid
 ## Flashcards
 
 Försiktighetsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som säger att man ska värdera företags tillgångar lågt och skulderna högt
+<!--SR:!2024-02-07,4,272!2024-02-06,4,270-->

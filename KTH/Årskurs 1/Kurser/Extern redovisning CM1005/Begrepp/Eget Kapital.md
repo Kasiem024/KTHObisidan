@@ -22,10 +22,11 @@ Eget Kapital kan delas in i två kategorier, [[Bundet Eget Kapital]] och [[Fritt
 ## Flashcards
 
 Eget Kapital (Definition):: En benämning på en mängd pengar som ägarna av ett företag satt in vid grundandet eller vad som satts in i efter hand samt vinster. Kan också ses som skillnaden mellan ett företags tillgångar och skulder
-<!--SR:!2024-02-06,7,250!2024-02-02,3,230-->
+<!--SR:!2024-02-06,7,250!2024-02-11,9,250-->
 
 Exempel på Eget Kapital (3)
 ??
 - Startkapital: Det ägarna satte in vid grundandet.
 - Kapitaltillskott: Det ägarna satte in efter grundandet.
 - Vinster: Vad företag tjänat efter vinstutdelning.
+<!--SR:!2000-01-01,1,250!2024-02-05,3,268-->

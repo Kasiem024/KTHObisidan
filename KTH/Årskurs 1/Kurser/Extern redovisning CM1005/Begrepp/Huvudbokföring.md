@@ -18,3 +18,4 @@ Handlar om att dela upp alla [[Affärshändelse]] på olika konton.
 ## Flashcards
 
 Huvudbokföring (Definition):: När man bokför [[Affärshändelse]] systematiskt för att få en översikt över företagets ställning och resultat. Praktiskt betyder det att man ==delar upp alla [[Affärshändelse]] på olika konton==.
+<!--SR:!2000-01-01,1,250!2024-02-06,4,270-->

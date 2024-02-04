@@ -24,3 +24,4 @@ Alltså en bokföringsperiod som är vanligen 12 månader lång och avslutas med
 Räkenskapsår (Definition):: En bokföringsperiod som är vanligen 12 månader lång, men max 18 månader, och avslutas med ett [[Årsbokslut]] och en [[Årsredovisning]], behöver inte nödvändigtvis följa ett kalenderår
 
 Brutet Räkenskapsår (Definition):: När Räkenskapsåret inte följer kalenderåret
+<!--SR:!2024-02-07,4,270!2024-02-07,4,270-->

@@ -27,4 +27,4 @@ Alla mellanleden i en distributionskanal (5)
 - Grossist
 - Detaljist
 - Kund
-<!--SR:!2000-01-01,1,250!2024-02-02,3,250-->
+<!--SR:!2024-02-06,4,270!2024-02-13,10,270-->

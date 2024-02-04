@@ -34,3 +34,4 @@ Beroende på omsättningen av en [[Enskild näringsverksamhet]] ska den upprätt
 - [[Resultaträkning]]
 - [[Förvaltningsberättelse]]
 - Noter
+<!--SR:!2024-02-07,4,272!2024-02-06,4,270-->

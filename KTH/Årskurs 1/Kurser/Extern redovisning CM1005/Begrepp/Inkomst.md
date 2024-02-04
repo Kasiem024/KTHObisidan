@@ -29,4 +29,4 @@ Inkomst (Definition):: Uppstår när företaget har slutfört en prestation. Nä
 <!--SR:!2024-02-06,7,250!2024-02-01,6,250-->
 
 Motsatsen till Inkomst:: Motsatsen till [[Utgift]]
-<!--SR:!2024-02-02,3,230!2024-02-09,10,270-->
+<!--SR:!2024-02-14,12,250!2024-02-09,10,270-->

@@ -45,7 +45,7 @@ Balansvärde (substansvärde):: Totalt eget kapital/antal aktier
 <!--SR:!2024-01-31,1,230!2024-02-01,1,213-->
 
 Börskurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
-<!--SR:!2024-02-02,3,250!2024-02-03,3,252-->
+<!--SR:!2024-02-15,13,270!2024-02-15,12,272-->
 
 Vad som påverkar en akties börskurs (6)
 ??
@@ -55,4 +55,4 @@ Vad som påverkar en akties börskurs (6)
 - Alternativa placeringsmöjligheter.
 - Skattesystemets utformning.
 - Psykologiska faktorer (flockbeteende).
-<!--SR:!2024-01-27,1,232!2024-02-02,3,250-->
+<!--SR:!2024-01-27,1,232!2024-02-12,9,270-->

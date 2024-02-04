@@ -20,6 +20,7 @@ Exempel på typer av företag inom Processindustrin (5)
 - Pappersbruk
 - Stålverk
 - Metallverk
+<!--SR:!2024-02-06,4,270!2024-02-06,4,272-->
 
 Egenskaperna av ett typiskt företag i Processindustrin (3)
 !!

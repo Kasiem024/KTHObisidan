@@ -17,4 +17,4 @@ Affärsredovisning (Definition):: Ett sätt att förse externa intressenter med 
 <!--SR:!2024-01-27,1,210!2024-02-11,12,270-->
 
 Affärsredovisning (Definition):: Registrering och rapportering av värdet av företagets resurser och deras finansiering. Samt händelser som förändrar dessa.
-<!--SR:!2024-02-01,1,168!2024-01-31,1,188-->
+<!--SR:!2024-02-01,1,168!2024-02-04,2,188-->

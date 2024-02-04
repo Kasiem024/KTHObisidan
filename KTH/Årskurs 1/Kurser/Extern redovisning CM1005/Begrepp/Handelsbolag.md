@@ -21,10 +21,10 @@ Ett kommanditbolag är en särskild form av handelsbolag där vissa bolagsmäns 
 ## Flashcards
 
 Handelsbolag (Definition):: En företagsform med minst två delägare. Ägarna kan vara både privatpersoner och företag. Företaget är i sig en juridisk person. Ägarna är personligt ansvariga för skulder
-<!--SR:!2024-01-24,3,250!2024-02-10,10,270-->
+<!--SR:!2024-02-08,6,250!2024-02-10,10,270-->
 
 Kommanditbolag (Definition):: En form av handelsbolag där vissa bolagsmäns ansvar är begränsat till vad de har satsat i bolaget. Måste finnas en delägare med obegränsat ansvar, en komplementär.
 <!--SR:!2024-02-05,6,252!2024-02-14,15,290-->
 
 Solidariskt ansvar (Definition):: En för alla, alla för en
-<!--SR:!2024-02-03,4,275!2024-02-17,17,292-->
+<!--SR:!2024-02-20,17,295!2024-02-17,17,292-->

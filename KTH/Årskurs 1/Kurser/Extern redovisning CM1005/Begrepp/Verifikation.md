@@ -34,3 +34,4 @@ Innehållet av en Verifikation (6)
 - Hela beloppet och specificering av momsbeloppet.
 - Med vem eller vilket företag som transaktionen avser.
 - Hänvisning till andra underlag som förvaras separat, om sådana finns.
+<!--SR:!2024-02-06,3,250!2000-01-01,1,250-->

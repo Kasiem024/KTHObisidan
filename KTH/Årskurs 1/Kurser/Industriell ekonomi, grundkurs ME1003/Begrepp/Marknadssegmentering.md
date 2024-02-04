@@ -28,7 +28,7 @@ Företag behöver en stor och varierad ==produktportfölj== för att kunna anpas
 
 ## Kopplat till
 
-- En del [[Marknadsföringens Analysnivåer]] på den strategiska nivån
+- En del av [[Marknadsföringens Analysnivåer]] på den strategiska nivån
 
 ## Flashcards
 

@@ -11,7 +11,7 @@ Kundorderpunkten är den punkt i produktstrukturen från och med vilken en produ
 
 Hur långt fram i [[Värdekedja]] har vi färdiga produkter? Handlar om skillnaden mellan genomloppstid och leveranstid.
 
-Leveranstiden är från när kunden har gjort beställningen tills när produkten har levererats. Genomloppstid är från när produktionen av produkten påbörjar tills när den levereras. Alltså handlar kundorderpunkten om hur mycket av leveranstiden är inuti genomloppstiden
+Leveranstiden är från när kunden har gjort beställningen tills när produkten har levererats. Genomloppstid är från när produktionen av produkten påbörjar tills när den levereras. Alltså handlar kundorderpunkten om hur mycket av leveranstiden är inuti genomloppstiden, hur mycket av produktens tillverkning som är redan färdig (genomloppstid) när kunden gör beställningen (leveranstid) och hur ==kundanpassad== produkten är
 
 Om man följer "Make to Stock" har man kort leveranstid då produkten är redan färdig i lagret.
 
@@ -23,5 +23,9 @@ Om man följer "Engineer to Order" är leveranstiden lång då ingen del av prod
 
 ## Flashcards
 
-Kundorderpunkt (Definition):: Den punkt i produktstrukturen från och med vilken en produkts materialsammansättning och tillverkning är kundorderbestämd. Från och med denna punkt är tillverkningen kundorderstyrd medan tillverkningen av artiklar på underliggande strukturnivåer är lagerinitierad
+Kundorderpunkt (Definition):: Ett begrepp som beskriver hur mycket av produktens tillverkning som är redan färdig (genomloppstid) när kunden gör beställningen (leveranstid) och hur ==kundanpassad== produkten är
 <!--SR:!2024-02-02,3,250!2024-02-02,3,250-->
+
+Genomloppstid (Definition):: Tiden som det tar att tillverka produkten från början till slut
+
+Leveranstid (Definition):: Tiden som det tar för kunden att få produkten efter att beställningen har gjorts

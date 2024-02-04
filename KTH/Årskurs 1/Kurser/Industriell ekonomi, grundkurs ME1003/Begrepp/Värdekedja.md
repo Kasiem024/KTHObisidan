@@ -17,6 +17,10 @@ Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är
 - Reshoring: Hämtar tillbaka verksamhet som har ”offshorats”
 - Värdenätverk, affärsekosystem
 
+## Kopplat till
+
+- [[Förädlingsvärde]]
+
 ## Flashcards
 
 Värdekedja (Definition):: Ett begrepp som beskriver hur värdet av en vara ökar genom fortsatt produktion av den
@@ -31,4 +35,4 @@ Sätt att ändra på värdekedjan (4)
 - ==Insourcing==: Hämtar in verksamhet från annat företag
 - ==Offshoring==: Flyttar verksamhet till annat land men i egen regi
 - ==Reshoring==: Hämtar tillbaka verksamhet som har ”offshorats”
-<!--SR:!2024-02-02,2,239!2000-01-01,1,250-->
+<!--SR:!2024-02-07,5,239!2024-02-07,4,277-->

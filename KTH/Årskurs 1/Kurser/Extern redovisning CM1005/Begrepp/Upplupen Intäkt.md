@@ -19,3 +19,4 @@ Alltså man har inte skickat en faktura eller fått betalt för en vara/tjänst 
 ## Flashcards
 
 Upplupen Intäkt (Definition):: När man har inte skickat en faktura eller fått betalt för en vara/tjänst som man presterat detta [[Räkenskapsår]]
+<!--SR:!2024-02-07,4,270!2024-02-05,3,250-->

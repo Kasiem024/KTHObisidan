@@ -45,13 +45,13 @@ De två delarna/sidorna av en balansräkning:: Ett företags eget kapital och sk
 <!--SR:!2024-02-04,9,250!2024-02-02,7,250-->
 
 Balansidentitet (Definition):: Tillgångar = Eget kapital + Skulder
-<!--SR:!2024-01-31,1,212!2024-02-01,1,192-->
+<!--SR:!2024-02-03,1,192!2024-02-01,1,192-->
 
 Vad som brukar inkluderas i BR Vänster
 ??
 - Faktiska värdet av utrustningen efter avskrivning (500-100=400).
 - Vad man har i banken, saldot/resultatet från kassaflöde.
-<!--SR:!2024-02-02,3,267!2024-02-02,3,249-->
+<!--SR:!2024-02-12,10,287!2024-02-02,3,249-->
 
 Vad som brukar inkluderas i BR Höger
 ??
@@ -60,4 +60,4 @@ Vad som brukar inkluderas i BR Höger
 - Ägaruttag från vinsten.
 - Främmande kapital, skulder, banklån.
 - Amortering på banklån.
-<!--SR:!2024-02-02,3,267!2024-02-02,3,267-->
+<!--SR:!2024-02-02,3,267!2024-02-13,11,287-->

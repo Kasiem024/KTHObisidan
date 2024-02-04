@@ -38,7 +38,7 @@ Vad brukar räknas som kostnad inom RR?
 ## Flashcards
 
 Kostnad (Definition):: En periodiserad utgift. När företaget förbrukar en resurs. Med andra ord ==värdet== av en ==förbrukad resurs== under en viss ==period==
-<!--SR:!2024-02-08,9,250!2024-02-02,7,250-->
+<!--SR:!2024-02-08,9,250!2024-02-26,24,270-->
 
 Exempel på resurser (Kostnad) (5)
 ??

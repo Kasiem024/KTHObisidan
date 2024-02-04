@@ -80,7 +80,7 @@ Efter allt annat är gjort ska man skapa en aktivitetsplan. Som en kombination a
 ## Flashcards
 
 Marknadsplan (Definition);; För att [[Marknadsföring]] ska bli optimal måste man planera noga och göra en marknadsplan. Kontrollera att budgeten och marknadsplanen håller genom att regelbundet göra uppföljningar.
-<!--SR:!2024-02-02,3,250-->
+<!--SR:!2024-02-09,7,250-->
 
 Delarna av en Marknadsplan (5)
 ??
@@ -89,4 +89,4 @@ Delarna av en Marknadsplan (5)
 - ==Marknadsföring på lång sikt==: Strategiska mål, mer övergripande hur man ska nå till sin målgrupp.
 - ==Marknadsföring på kort sikt==: Taktiska mål, mer konkret hur reklamen kommer se ut.
 - ==Aktivitetsplaner==: Skapa ett schema/budget för Marknadsplanen.
-<!--SR:!2024-02-02,3,250!2024-02-02,3,250-->
+<!--SR:!2024-02-02,3,250!2024-02-14,12,270-->
