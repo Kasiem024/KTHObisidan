@@ -17,7 +17,7 @@ Man kan dela in [[Marknadsföring]] på tre analysnivåer:
 
 - [[Prissättning]]
 - Plats: [[Distributionskanaler]].
-- Påverkan: Att övertyga potentiella kunder att köpa just vår produkt. Ska man göra det genom reklam eller genom kundrelationer? Skiljer sig beroende på [[Företagsmarknad||B2B]] eller [[Konsumentmarknad||B2C]].
+- Påverkan: Att övertyga potentiella kunder att köpa just vår produkt. Ska man göra det genom reklam eller genom kundrelationer? Skiljer sig beroende på [[Företagsmarknad|B2B]] eller [[Konsumentmarknad|B2C]].
 
 ## Operativt
 

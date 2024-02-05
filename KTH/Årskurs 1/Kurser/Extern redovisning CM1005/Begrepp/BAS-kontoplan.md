@@ -41,6 +41,7 @@ En typ av kontoplan som består av 4 huvudgrupper:
 - Skulder
 - Intäkter
 - Kostnader
+<!--SR:!2024-02-08,3,250!2000-01-01,1,250-->
 
 BAS-Kontoplanens kontoklasser (10)
 ??

@@ -16,7 +16,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 ## Flashcards
 
 Processtyper inom Varuproduktion (5)
- ??
+??
 - Projekt
 - Enstycksproduktion
 - Serieproduktion

@@ -121,7 +121,7 @@ Kan också kallas produktionskedja. Det behandlar hur värdet av en vara ökar j
 
 Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är det horisontellt, höger till vänster.
 
-- Horisontell och vertikal integration  
+- Horisontell och vertikal integration
 - Outsourcing: Lägger ut verksamhet på annat företag
 - Insourcing: Hämtar in verksamhet från annat företag
 - Offshoring: Flyttar verksamhet till annat land men i egen regi
@@ -142,6 +142,7 @@ Egenskaperna av en vara (7)
 - Kärnvärde produceras i fabrik.
 - Kunden deltar vanligen inte i produktionen.
 - Äganderätten överlåts.
+<!--SR:!2024-02-06,1,230!2000-01-01,1,250-->
 
 Egenskaperna av en tjänst (7)
 ??

@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Med utbetalning menas tidpunkten när företaget betalar utgiften. Utbetalningen består av det faktiska belopp som företaget betalar för en viss utgift.
+Med utbetalning menas tidpunkten när företaget betalar utgiften. Utbetalningen består av det faktiska belopp som företaget betalar för en viss [[Utgift]].
 
 [Utgiftsbegrepp, Björn Lundén](https://www.bjornlunden.se/f%C3%B6retagande/utgiftsbegrepp__404)
 

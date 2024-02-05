@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a9fdde2501892607",
+            "id": "2d9a350679e38974",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -134,8 +134,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a9fdde2501892607",
+  "active": "2d9a350679e38974",
   "lastOpenFiles": [
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutvecklingens Analysnivåer.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutveckling i Olika Typer av Verksamheter.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intressentmodellen.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
@@ -165,7 +167,6 @@
     "Test2.md",
     "GoogleDriveObsidian/Test Lesson.md",
     "Excalidraw/Drawing 2023-12-30 11.17.24.excalidraw.md",
-    "Excalidraw/Drawing 2023-12-30 11.17.24.excalidraw.md.tacitpart",
     "GoogleDriveObsidian/README.md",
     "Excalidraw/Drawing 2023-12-30 11.11.42.excalidraw.md",
     "Excalidraw/Drawing 2023-12-31 10.45.04.excalidraw.md"

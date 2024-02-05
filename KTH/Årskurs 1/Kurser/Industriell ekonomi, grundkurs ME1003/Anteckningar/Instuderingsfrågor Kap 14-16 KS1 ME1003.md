@@ -55,6 +55,7 @@ När man har ett resursbaserat synsätt på strategi innebär det att man långs
 Strategiprocessen enligt Philip Kotler börjar med att utveckla ==affärsidén== och en ==analys== av ==företaget== samt ==omvärlden==. Därefter ska ett ==mål== och en ==strategi== för hur man ska uppnå målet formuleras. Denna strategi ska sedan bli en konkret ==handlingsplan== som ==genomförs== och eventuellt ==utvärderas==.
 
 Strategiprocessen enligt Philip Kotler (Definition):: En strategiprocess där man börjar med att utveckla ==affärsidén== och en ==analys== av ==företaget== samt ==omvärlden==. Därefter ska ett ==mål== och en ==strategi== för hur man ska uppnå målet formuleras. Denna strategi ska sedan bli en konkret ==handlingsplan== som ==genomförs== och eventuellt ==utvärderas==
+<!--SR:!2024-02-09,4,270!2000-01-01,1,250-->
 ![[Strategiprocessen enligt Philip Kotler ME1003.png]]
 
 10. Vad menas med funktionella strategier?
@@ -118,6 +119,7 @@ Michael Porters Femkraftsmodell (Definition) (5)
 - ==Nya aktörer==: Potentiella konkurrenter.
 - ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden.
 ![[Michael Porters Femkraftsmodell ME1003.png]]
+<!--SR:!2024-02-08,3,254!2000-01-01,1,250-->
 
 17. Beskriv intressentmodellen och makt/intresse-matrisen baserad på intressentmodellen.
 
@@ -216,6 +218,7 @@ VAGT mål:
 Ett kollektivavtal är ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera.
 
 Kollektivavtal (Definition):: Ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera
+<!--SR:!2024-02-08,3,254!2000-01-01,1,250-->
 
 3. Nämn några krav som ställs på arbetsgivaren vid anställning av en medarbetare.
 
@@ -226,6 +229,7 @@ När en medarbetare anställs ställs det en del krav på arbetsgivaren gälland
 En arbetstagare är som regel tillsvidareanställd såvida inget har tidigare sagts om anställningsförhållanden. Det är endast genom en ==uppsägning==, vilket måste vara ==sakligt grundad==, eller genom ett ==avskedande==, om arbetstagaren har gjort ett ==avtalsbrott==, som en sådan anställning kan upphöra.
 
 Tillsvidareanställning (Definition):: Om inget har sagts tidigare om anställningsförhållanden är detta den normala anställningsformen
+<!--SR:!2000-01-01,1,250!2024-02-09,4,274-->
 
 5. Vad innebär en tidsbegränsad anställning? Ge exempel på olika typer av tidsbegränsade anställningar.
 
@@ -314,18 +318,19 @@ Motivationsfaktorer i Herzbergs Tvåfaktorsteori (Definition):: Faktorer för at
 Krav-kontrollmodellen går ut på att en arbetare kan klara av höga psykiska krav, hantera stress, om det samtidigt finns möjligheter för att själv planera och kontrollera arbetet. Exempelvis om man sätter för höga krav på en arbetare utan att ge de handlingsutrymme kommer de bli slutkörda. Det är optimalt om en arbetare har både hög kontroll över arbete och höga krav från sin arbetsgivare, i sådana situationer utvecklas arbetaren.
 
 Krav-kontrollmodellen (Definition):: En modell som visar att en arbetare kan hantera mer stress om den också har mycket handlingsutrymme i arbetet
+<!--SR:!2024-02-09,4,270!2000-01-01,1,250-->
 
 18. Förklara följande sätt att göra arbetet mer hållbart:
 
-- Arbetsutvidgning
+- ==Arbetsutvidgning==
 	- När arbetarna får mer uppgifter inom samma område, leder till bättre förståelse över hela verksamheten.
-- Arbetsberikning
+- ==Arbetsberikning==
 	- När arbetarna får större ansvar och de fördjupar sig i uppgifterna.
-- Arbetsrotation
+- ==Arbetsrotation==
 	- När arbetarna växlar mellan olika uppgifter.
-- Team/lag-organisering
+- ==Team/lag-organisering==
 	- När arbetarna får uppgifter som ska göras i team.
-- Själv- och målstyrande grupper.
+- ==Själv- och målstyrande grupper==
 	- När arbetarna får själv styra sin uppgifter.
 
 19. Vilken är skillnaden mellan formella och informella arbetsgrupper?
@@ -349,6 +354,7 @@ Faserna av FIRO-modellen (3)
 - ==Tillhörafasen==: Här bestäms vem som är gruppens medlemmar.
 - ==Rollsökningsfasen==: Här finner alla sin roll i gruppen.
 - ==Samhörighetsfasen==: Här kan gruppen börja arbeta effektivt
+<!--SR:!2024-02-06,1,230!2024-02-09,4,270-->
 
 22. Beskriv skillnaden mellan en formell och en informell ledare.
 
@@ -379,67 +385,115 @@ HR-avdelningen är vanligtvis en specialiserad stabsenhet med inriktning på ans
 1. Redogör för följande juridiska företagsformer:
 
 - [[Aktiebolag]]
-- [[Enskild näringsverksamhet]]
-- [[Handelsbolag]]/Kommanditbolag
+	- Delägarna i ett aktiebolag har normalt sett inget personligt ansvar för företagets skulder, man behöver en kapitalinsats för att starta, bolaget är ett eget skattesubjekt och skattas oberoende av dess ägare.
+- [[Enskild näringsverksamhet|Enskild Firma]]
+	- När en enskild näringsidkare driver och äger ett företag själv, företaget är kopplat till ägarens personnummer.
+- [[Handelsbolag]]
+	- Ett företag med minst två delägare, ägarna kallas för bolagsmän och kan vara både fysiska personer och företag, det är de som ansvarar för skulderna, företaget är i sig en juridisk person.
+- Kommanditbolag
+	- En speciell form av handelsbolag där en ägare, som kallas komplementär, har obegränsat ekonomiskt ansvar.
 - [[Ekonomisk förening]]
+	- När minst tre personer vill bedriva verksamhet för att främja varandra ekonomiska intressen.
 - [[Ideell förening]]
-- Konsortium
+	- En ideell förening får inte ha till syfte att främja medlemmarnas ekonomiska intressen genom att driva affärsmässig verksamhet.
+- [[Konsortium]]
+	- Ett tillfälligt företag som skapas när flera företag eller individer går ihop för att utföra ett stort projekt, upplöses när projektet är genomfört.
 
 2. Vad är en organisation?
 
+Alla företag med mer än 1 medarbetare är en organisation. En formell organisation har dock vanligtvis 4 typiska kännetecken:
+
+- Organisationen är en sammanslutning av individer
+- Individerna utför olika arbetsuppgifter
+- Arbetsuppgifterna utförs på ett samordnat sätt
+- Syftet med arbetsuppgifterna är att nå ett eller flera gemensamma mål
 
 3. Hur påverkas en organisations förutsättningar av dess omvärldsmiljö? Använd exempel i ditt resonemang.
 
+Normer och traditioner från omvärlden har en stark inverkan på en organisation. Alltså är det centralt för organisationen att de är legitima i omvärldens ögon, att de arbetar på ett sätt omvärlden ser som korrekt. Exempelvis är det viktigt för ett universitet att ha duktiga studenter och framgångsrika alumni.
 
 4. Hur påverkas en organisations förutsättningar av dess verksamhets natur? Använd exempel i ditt resonemang.
 
+En verksamhets natur är exempelvis dess tekniska innehåll, produktionsvolym och variation i volymen. Alla dessa egenskaper påverkar vad som är en lämplig organisationsform för verksamheten. För stora organisationer krävs mer byråkrati och administrativ ordning. Företag som har hög volym och låg variation för sina produkter kan standardisera och effektivisera arbetsformerna. Motsatsen gäller för företag med låg volym och hög variation, där måste man vara mer flexibel och varje anställd måste ha en breddare kompetens.
 
 5. Vad innebär organisationsstruktur?
 
+Organisationsstruktur är alla de formella medel som en organisation använder för att dela upp och koordinera eller samordna arbetet i syfte att skapa ett stabilt beteendemönster.
 
 6. Redogör för olika medel för att samordna och styra de aktiviteter som utförs i ett större företag.
 
+För att styra och samordna ett företag måste man tänka på begreppen ==specialisering== och ==samordning==. När man fördelar arbetet kommer vissa specialisera sig inom vissa områden av företagets verksamhet vilket utvecklar deras personliga kompetens men också effektiviserar verksamheten. Det är också viktigt att samordna de olika arbetarna så att alla jobbar mot samma mål.
 
 7. Beskriv följande fem koordineringsmekanismer som kan användas vid samordning och styrning av olika aktiviteter i en organisation:
 
 - Ömsesidig anpassning
+	- Informell samordning genom att alla kommunicerar direkt.
 - Direkt övervakning
+	- En individ ansvarar över att de andras arbete utförs, exempelvis en arbetsledare.
 - Standardisering av arbetsprocessen
-- Standardisering av'output
+	- Arbetets innehåll beskrivs utförligt i regler och instruktioner.
+- Standardisering av output
+	- Arbetsresultatet är väldefinierat, exempelvis ett löpande band.
 - Standardisering av kunskaper och färdigheter
+	- Deltagarna i processen har en bestämd utbildning eller träning, alltså behöver man inte starta från grunden varje gång man ska koordinera arbetet.
 
 8. Vad menas med formell och informell organisation och hur påverkas dessa av varandra i ett företag?
 
+Den formella organisationen är det avsiktliga sättet att dela upp och samordna arbetsuppgifterna. Syftet med det formella är att på ett så effektivt sätt som möjligt uppnå företagets mål. Den informella organisationen visar hur företaget faktiskt fungerar då har den sociala aspekten mellan arbetare stor betydelse för hur arbetet är organiserat.
 
 9. Beskriv följande begrepp:
+
 - Befattningar
+	- När en arbetsuppgift avgränsas.
 - Befogenheter
+	- När en befattning definieras, exempelvis vem som får skriva kontakt med vem och vilka som får anställa ny personal.
 - Delegering av ansvar
+	- När en befattningshavare ger en del av sin arbetsuppgift till en underställd.
 
 10. Redogör för följande organisationsformer:
+
 - Funktionsorganisation
+	- När arbetsuppgifterna indelas i några huvudområden, medarbetarna utvecklar då kompetens för just det området.
 - Produktorganisation
+	- När varje produktavdelning sköter sitt egna jobb, leder till mindre samordningsproblem.
 - Kundorganisation
-- Geografisk organisation.
+	- När man grupperar organisationen efter kundkategorier, exempelvis företagskunder, konsumenter, leder till att varje grupp vet väldigt mycket om sina kunder.
+- Geografisk organisation
+	- När organisationen byggs upp beroende på den fysiska lokaliseringen av arbetsplatserna.
 
 11. Vad handlar vertikal specialisering om?
 
+Det är vanligt i en organisation att man har som en rangordning beroende på hur mycket ansvar man har, alltså vem som är överordnad och vem som är underordnad. Vertikal specialisering handlar om hur platt eller spetsig en organisations hierarki är.
 
 12. Vad menas med kontrollspann? Vilka fördelar har brett respektive smalt kontrollspann?
 
+Kontrollspann är hur många direkt underställda medarbetare en viss chef har. Brett kontrollspann är bra när arbetsuppgifterna är standardiserade och när de medarbetarna behöver självständighet. Smalt kontrollspann är bra när medarbetarna behöver chefens hjälp eller att chefen behöver övervaka sina underställda.
 
 13. Beskriv följande organisationsformer:
+
 - Linjeorganisation
+	- Handlar om att alla ska endast ha 1 överordnad chef och cheferna ska inte ge order till de som inte är direkt under sig.
 - Linje-stabsorganisation
+	- En stab är en enhet som står vid sidan av de formella ordervägarna, deras jobb är att ge råd om beslut och förmedla service.
 - Funktionell organisation
+	- Handlar mer om att dela upp och specialisera chefernas arbete, att medarbetarna har flera chefer de kan be om råd. 
 
 
 14. Beskriv följande mekanismer för att skapa horisontella förbindelser:
+
 - Förbindelseroller
+	- När en person blir som en ambassadör mellan två enheter i ett företag, leder till enklare kommunikation mellan de två avdelningarna och att den personen blir en expert.
 - Stående kommittéer
+	- En grupp medlemmar från olika avdelningar som möts för att diskutera frågor av gemensamt intresse. 
 - Tillfälliga arbetsgrupper
+	- När ett ovanligt, särskilt besvärligt eller stort problem uppkommer kan man skapa en grupp för att hantera just det problemet.
 - Projektorganisation
+	- Som en tillfällig arbetsgrupp men för mindre ärenden.
 - Matrisorganisation
+	- I ett matrisorganiserat företag har man frångått linjeorganisationens enhetsbefäl och istället inrättat flera ordervägar till de underordnade enheterna, vanligt i projektintensiva företag.
 - Nätverk
+	- Handlar om relationer och kontakter som medarbetare har med aktörer utanför organisationen.
 
 15. Vad innebär målkonflikter inom en organisation?
+
+Vissa mål en organisation har kan komma i konflikt med varandra. Exempelvis om ett mål handlar om att vara snabb och effektiv kan det komma i konflikt med ett annat mål om hög kvalitet. Ett annat exempel kan vara om marknadsföringen vill ha många varianter av en produkt för att tillfredsställa fler kundbehov men tillverkningen vill ha mindre varianter för att minska på komplexiteten och öka effektiviteten.

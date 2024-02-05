@@ -4,7 +4,7 @@
 Tags: #year2024 #KTH #ekonomi #CM1005 #flashcards
 
 Skillnaden mellan [[Inkomst]] och [[Intäkt]]:: Inkomster är det som löpande tas emot under året. När inkomsten hänförs till rätt redovisningsperiod, blir det en intäkt. En [[Intäkt]] är alltså en periodiserad [[Inkomst]]
-<!--SR:!2024-02-04,4,210!2024-02-02,3,250-->
+<!--SR:!2024-02-17,12,230!2024-02-16,11,270-->
 
 Skillnad mellan [[Ingående Balans]] och [[Utgående Balans]];; Utgående Balans är summan av de belopp som finns på tillgångs- och skuldsidan i [[Balansräkning]] vid räkenskapsårets slut. Ingående Balans är de belopp som bokförs i början av ett nytt [[Räkenskapsår]] som ingående saldon på balanskontona. ==Alltså UB är summan av BR medan IB är vad som finns på [[T-Konton]] i början av räkenskapsåret.== De är samma belopp
 
@@ -21,6 +21,7 @@ Skillnad mellan [[Ingående Balans]] och [[Utgående Balans]];; Utgående Balans
 <!--SR:!2024-02-02,3,258!2024-02-02,3,244-->
 
 ==Bokföringsnämnden== (Definition):: En statlig myndighet som har till uppgift att utveckla god redovisningssed, ger ut regler och informationsmaterial om [[Bokföringslagen]] och [[Årsredovisningslagen]]
+<!--SR:!2000-01-01,1,250!2024-02-09,4,272-->
 
 ==Finansinspektionen== (Definition):: En statlig myndighet som övervakar företagen på finansmarknaden. Deras uppdrag är att skapa ett stabilt finansiellt system som bidrar till en hållbar utveckling och ett gott konsumentskydd. Utvecklar också regler för finansiella företag och kontrollerar att reglerna följs
 
@@ -30,13 +31,13 @@ Skillnad mellan [[Ingående Balans]] och [[Utgående Balans]];; Utgående Balans
 <!--SR:!2024-02-05,2,248!2024-02-05,3,265-->
 
 ==Rättvisande bild== (Definition):: Handlar om att innehållet i en [[Årsredovisning]] ska ge läsaren en så riktig bild som möjligt av företagets ekonomiska situation
-<!--SR:!2024-02-06,3,268!2000-01-01,1,250-->
+<!--SR:!2024-02-06,3,268!2024-02-09,4,270-->
 
 ==Avläsningsmetod== (Definition):: Handlar om att läsa direkt vad som står på ett konto och sätta in det på [[Resultaträkning]] och [[Balansräkning]]
 <!--SR:!2024-02-04,2,245!2024-02-06,3,268-->
 
 ==Utjämningsmetod== (Definition):: Handlar om att först nolla saldot på ett konto genom att jämna ut det med speciella bokslutskonton, alltså konton för [[Resultaträkning]] och [[Balansräkning]]
-<!--SR:!2000-01-01,1,250!2024-02-04,2,245-->
+<!--SR:!2024-02-09,4,270!2024-02-12,7,265-->
 
 ==Kortfristiga Skulder== (Definition):: En skuld som ska betalas inom ett år, exempelvis leverantörsskulder, skatteskulder, moms och interimsskulder
 <!--SR:!2024-02-06,3,268!2024-02-05,3,265-->

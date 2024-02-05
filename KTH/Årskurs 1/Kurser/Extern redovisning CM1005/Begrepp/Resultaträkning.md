@@ -42,7 +42,7 @@ Vad brukar inkluderas inom RR?
 ## Flashcards
 
 Resultaträkning (Definition):: En rapport över [[Intäkt]] och [[Kostnad]] under en viss period. Visar om företaget har gått i vinst eller förlust
-<!--SR:!2024-02-01,6,250!2024-02-03,8,250-->
+<!--SR:!2024-02-01,6,250!2024-03-03,27,270-->
 
 Vad som brukar inkluderas i RR Vänster (5)
 ??

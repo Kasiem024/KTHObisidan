@@ -19,6 +19,7 @@ Teknologiska kurvan (Definition):: Beskriver hur utvecklingen av en viss teknolo
 <!--SR:!2024-02-03,4,270!2024-02-03,4,270-->
 
 Inkrementell innovation (Definition):: När utvecklingen inom en viss teknologi sker i ==små steg==, alltså ==långsamt==, ==standarden==
+<!--SR:!2024-02-09,4,276!2000-01-01,1,250-->
 
 Radikal innovation (Definition):: När ett ==genombrott== sker i utvecklingen av en teknologi som ==accelerera== takten som ==förbättring== sker
 <!--SR:!2000-01-01,1,250!2024-02-07,4,274-->

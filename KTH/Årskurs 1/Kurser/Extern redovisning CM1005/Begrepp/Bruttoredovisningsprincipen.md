@@ -22,4 +22,4 @@ Alltså om två företag betalar varandra kan de inte kvitta kostnader och intä
 ## Flashcards
 
 Bruttoredovisningsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som innebär att man inte får kvitta tillgångar mot skulder i en [[Balansräkning]] och kostnader mot intäkter i en [[Resultaträkning]]
-<!--SR:!2024-02-05,3,250!2024-02-05,3,250-->
+<!--SR:!2024-02-12,7,250!2024-02-15,10,270-->

@@ -19,10 +19,10 @@ Ekonomisk förening (Definition):: Företagsform om man är minst tre personer o
 <!--SR:!2024-02-12,9,250!2024-02-13,11,288-->
 
 Exempel på olika ekonomiska föreningar (5)
-||
-Coop
-OK
-Bostadsrättsföreningar
-Lantmännen
-Södra skogsägarna
-<!--SR:!2024-02-14,12,270-->
+??
+- Coop
+- OK
+- Bostadsrättsföreningar
+- Lantmännen
+- Södra skogsägarna
+<!--SR:!2024-02-14,12,270!2024-02-09,4,276-->

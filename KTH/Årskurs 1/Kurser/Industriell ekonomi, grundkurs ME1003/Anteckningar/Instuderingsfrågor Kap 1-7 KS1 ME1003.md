@@ -133,6 +133,7 @@ Komplementtjänst (Definition):: En tjänst som erbjuds tillsammans med en vara 
 <!--SR:!2024-02-07,4,274!2000-01-01,1,250-->
 
 Ersättningstjänst (Definition):: En tjänst som substituerar varan helt och hållet så att kunden faktiskt inte äger varan
+<!--SR:!2024-02-09,4,284!2000-01-01,1,250-->
 
 6. Namnge och beskriv de tre principiella konkurrensstrategier som kan identifieras oberoende av om ett industriföretags värdeerbjudande består av varor, tjänster eller en kombination av dessa. Ge dessutom exempel på tre företag som du anser är bra exempel på var och en av strategierna.
 
@@ -175,11 +176,13 @@ Dessa fyra förhållanden kallas för [[4V]].
 ==Back-office== dominerad logik innebär att [[Värdeskapandet]] sker utan att kunden är direkt involverad i det, ett exempel på detta är köket i en restaurang. Kunden beställer maten och äter den men är inte involverad i själva tillverkningen.
 ==Front-office== dominerad logik är när värdeskapandet sker i direkt interaktion med kunden och att det handlar om kundens upplevelse.
 
-Varudominerad logik (Definition):: När huvuddelen [[Värdeskapandet]] sker ==utan inblandning av kunden==
+Varudominerad logik (Definition):: När huvuddelen av [[Värdeskapandet]] sker ==utan inblandning av kunden==
+<!--SR:!2024-02-06,1,244!2000-01-01,1,250-->
 
 Back-office dominerad logik (Definition):: När huvuddelen av [[Värdeskapandet]] sker ==utan kunden men kunden behövs==, vanligtvis i ==början== och ==slutet== av processen
 
 Front-office dominerad logik (Definition):: När huvuddelen av [[Värdeskapandet]] sker i ==direkt interaktion== med ==kunden== och det handlar om kundens ==upplevelse==.
+<!--SR:!2024-02-08,3,264!2024-02-09,4,284-->
 
 13. Vad menar vi när vi pratar om ett företags värdefångst?
 
@@ -202,7 +205,7 @@ Affiliated marketing är en intäktsmodell som baseras på att erbjuda kunden en
 
 16. Förklara begreppet värdekedja och ge ett konkret exempel på en värdekedja, t.ex. från konfektionsindustrin.
 
-Man kan säga att en [[Värdekedja]] beskriver hur värdet av en vara ökar genom fortsatt produktion av den. Med andra ord produkten ökar i värde för varje [[Förädlingsvärde||förädlingssteg]]. Exempel:
+Man kan säga att en [[Värdekedja]] beskriver hur värdet av en vara ökar genom fortsatt produktion av den. Med andra ord produkten ökar i värde för varje [[Förädlingsvärde|förädlingssteg]]. Exempel:
 Bomullsplantage --> Spinning av garn --> Vävning --> Färgning --> Sömnad --> Försäljning
 
 17. Förklara begreppen vertikal integration och horisontell integration i en värdekedja.
@@ -248,6 +251,7 @@ Demand Pull (Definition):: När marknaden efterfrågar en viss teknologi som sed
 <!--SR:!2024-02-07,4,274!2024-02-07,4,274-->
 
 Technology Push (Definition):: När en ny teknologi investeras i och utvecklas utan ett behov från marknaden
+<!--SR:!2024-02-09,4,282!2000-01-01,1,250-->
 
 2. Definiera och beskriv begreppet innovation.
 
@@ -279,6 +283,7 @@ Innovationsspridningens livscykel består av 5 användarkategorier, de är: Pion
 ==Processinnovation== är när en ==existerande== ==produkt== kan ==tillverkas== eller ==levereras== med ==mindre== ==resurser==. Detta sker ==efter== att teknologin har ==mognat== då det är nu ==majoriteten== av ==marknaden== har börjat ==använda== ==produkten==.
 
 Produktinnovation (Definition):: När en ==existerande produkt förbättras== eller när en ==ny produkt utvecklas==. Detta sker tidigt i en teknologis utveckling
+<!--SR:!2024-02-08,3,264!2024-02-06,1,244-->
 
 Processinnovation (Definition):: När en ==existerande== ==produkt== kan ==tillverkas== eller ==levereras== med ==mindre== ==resurser==. Detta sker ==efter== att teknologin har ==mognat== då det är nu ==majoriteten== av ==marknaden== har börjat ==använda== ==produkten==
 
@@ -304,6 +309,7 @@ Disruptive Innovation (Definition):: När etablerade företag och affärsmodelle
 När ett företag kan klara av att ==använda== sin ==befintliga== ==kunskaper== och ==samtidigt== ==utveckla== ==nya== nyttiga ==kunskaper== kan man säga att den är ==tvåhänt==.
 
 Ett tvåhänt teknikbaserat företag (Definition):: När ett företag kan ==balansera== att ==effektivisera sin nuvarande verksamhet samtidigt== som den försöker innovera och ==förnya== sin ==verksamhet==.
+<!--SR:!2000-01-01,1,250!2024-02-09,4,284-->
 
 12. Vad säger "Amaras lag"?
 
@@ -388,7 +394,7 @@ För en ==producent== handlar det ==inte== om ==reklamkampanjer utan== om ==rela
 Relationsmarknadsföring är när man försöker bygga långsiktiga relationer med sina kunder. Då är det viktigt att lyssna på kundens behov och vara pålitlig.
 
 Relationsmarknadsföring (Definition):: När man bygger långsiktiga relationer med sina kunder, vanligtvis mellan två företag, B2B och [[Företagsmarknad]]
-<!--SR:!2000-01-01,1,250!2024-02-07,4,274-->
+<!--SR:!2024-02-09,4,284!2024-02-07,4,274-->
 
 11. Vilka är de typiska skillnaderna mellan försäljning av varor och försäljning av tjänster?
 
@@ -417,12 +423,13 @@ När man säljer en fysisk vara är det väldigt enkelt att visa dess nytta, exe
 I en [[Företagsmarknad]] är det vanligt att man har vissa väldigt ==stora kunder==, därför kan det vara smart att ha en viss ==säljare== vars ==enda jobb== är att ==ansvara== för en eller flera av dessa stora kunder, sådana säljare kallas ==key-account manager==.
 
 Key-Account Manager (Definition):: En säljare vars enda jobb är att ansvara för en eller flera av ett företags största kunder
+<!--SR:!2024-02-09,4,282!2000-01-01,1,250-->
 
 15. Vad är en offert?
 
 När kunden blir intresserad av produkten som erbjuds kan den be försäljaren om en offert, alltså att det säljande företaget ska lämna ett erbjudande till köparen. Detta är ovanligt vid en [[Konsumentmarknad]] men praxis vid en [[Företagsmarknad]].
 
-Offert (Definition):: När det säljande företaget ska lämna ett erbjudande till köparen,  ovanligt vid en [[Konsumentmarknad]] men praxis vid en [[Företagsmarknad]]
+Offert (Definition):: När det säljande företaget ska lämna ett erbjudande till köparen, ovanligt vid en [[Konsumentmarknad]] men praxis vid en [[Företagsmarknad]]
 <!--SR:!2024-02-06,3,254!2000-01-01,1,250-->
 
 16. Vad är dröjsmålsränta?
@@ -482,6 +489,7 @@ Ett enkelt exempel på hur [[Produktionens Konkurrensfaktorer]] är motstridiga 
 ==Kvalificerare== är faktorer som ==möjliggör== för företaget att överhuvudtaget vara med i ==konkurrensen== medan ==ordervinnare== är vad som ==avgör kundernas val==.
 
 Kvalificerare (Definition):: Faktorer som möjliggör för företaget att överhuvudtaget vara med i konkurrensen
+<!--SR:!2000-01-01,1,250!2024-02-06,1,244-->
 
 Ordervinnare (Definition):: Faktorer i [[Värdeerbjudandet]] som till slut avgör kundens val av produkt
 
@@ -559,7 +567,7 @@ Med ordet kapacitet menas: Den maximala produktionsnivån över en tidperiod nä
 En trång sektor, eller flaskhals som det också kallas, är det ==produktionsmoment== som har ==lägst kapacitet==. Det är den trånga sektorn av ett produktionsflöde som bestämmer hur stor kapacitet momenten framför den i processen har. Därför är det viktigt att balansera alla momenten i ett produktionsflöde och att bygga ut sin trånga sektor så att dess påverkan på flödet är minimal.
 
 Trång Sektor (Definition):: Det moment i produktionsflödet med lägst kapacitet
-<!--SR:!2000-01-01,1,250!2024-02-07,4,274-->
+<!--SR:!2024-02-06,1,244!2024-02-07,4,274-->
 ![[Trång Sektor ME1003.png]]
 
 15. Beskriv några typiska försörjningskedjor i varu- respektive tjänsteproduktion.
@@ -599,15 +607,16 @@ När man ska ==massproducera== en ==standardprodukt== använder man sig av en ==
 ![[Flödeslayout ME1003.png]]
 
 Funktionell Layout (Definition):: När maskiner med samma funktion placeras fysiskt nära varandra
-<!--SR:!2000-01-01,1,250!2024-02-07,4,274-->
+<!--SR:!2024-02-08,3,264!2024-02-07,4,274-->
 
 Flödeslayout (Definition):: När maskiner placeras i ordningen som produkten behöver för att tillverkas
+<!--SR:!2000-01-01,1,250!2024-02-09,4,282-->
 
 20. Redogör för hur valet av produktionslayout påverkar produktions kostnaderna.
 
 Hur en produktionslayout påverkar produktions kostnaderna har med varje layouts ==fasta och rörliga kostnader== att göra. En flödeslayout har väldigt höga fast kostnader då man är tvungen att investera i dyra specialiserade maskiner. Dock är de rörliga kostnaderna låga eftersom när man väl börjat tillverka produkten är kostnaden för varje ny produkt låg då systemet är väldigt effektivt på att tillverka just den produkten. Alltså ska man använda en flödeslayout för stora volymer.
 
-![[Kostnadsstruktur vid olika  Produktionslayouter ME1003.png]]
+![[Kostnadsstruktur vid olika Produktionslayouter ME1003.png]]
 
 21. Redogör för hur flexibilitet och buffertar kan användas för att hantera variation och osäkerhet i produktionsprocessen.
 
@@ -616,9 +625,10 @@ Om man har hög ==flexibilitet== betyder att man kan ==hantera hög variation i 
 Ett annat sätt att hantera variation i produktionsprocessen är genom att ha en buffert, vanligen pratas det om två olika typer av buffert. ==Inputbuffert== är när man har ett ==förråd== av råmaterial och komponenter för att ==hantera leveransproblem==. ==Outputbuffert== är när man har ett stort ==färdigvarulager== av produkter för att hantera en plötslig ==ökning av efterfrågan==.
 
 Flexibilitet i Produktionsprocessen (Definition):: När man kan enkelt ställa om sin produktionsprocess för att hantera variation i efterfrågan och problem med leverantörer
-<!--SR:!2024-02-04,1,234!2000-01-01,1,250-->
+<!--SR:!2024-02-06,1,214!2024-02-09,4,284-->
 
 Inputbuffert i Produktionsprocessen (Definition):: När man har ett förråd av råmaterial och komponenter för att hantera leveransproblem
+<!--SR:!2024-02-09,4,284!2000-01-01,1,250-->
 
 Outputbuffert i Produktionsprocessen (Definition):: När man har ett stort färdigvarulager av produkter för att hantera en plötslig ökning av efterfrågan.
 <!--SR:!2024-02-07,4,274!2000-01-01,1,250-->
@@ -628,6 +638,7 @@ Outputbuffert i Produktionsprocessen (Definition):: När man har ett stort färd
 Tanken bakom Lean production är att ==identifiera== och ==eliminera== allt sådant i en produktionsprocess som inte skapar värde för slut kunden, alltså minska ==slöseri==. En stor del av Lean production är ==Just in Time==, vilket handlar om att allt ska ske i precis rätt tid, alltså ==inga buffertar eller mellanlager==.
 
 Lean Production (Definition):: Handlar om att ==identifiera== och ==eliminera== allt som inte skapar värde för slut kunden, alltså minska ==slöseri==. ==Just in Time== är centralt, allt ska ske i precis rätt tid, ==inga buffertar==
+<!--SR:!2024-02-08,3,264!2000-01-01,1,250-->
 
 23. Beskriv skillnaden mellan de två beordringsprinciperna "push" och "pull".
 
@@ -636,7 +647,7 @@ Push är när varje produktionsmoment får en signal att påbörja från det fö
 Pull är när ett moment beställer material från ett tidigare produktionssteg. Detta eliminerar mellanlager och leder till kort genomloppstid men innebär också att det kan bli överkapacitet, alltså att maskiner i tidigare produktionssteg står stilla.
 
 Beordringsprincipen Push (Definition):: När varje moment i ett produktions system väntar på det föregående produktionssteget
-<!--SR:!2000-01-01,1,250!2024-02-04,1,234-->
+<!--SR:!2000-01-01,1,250!2024-02-06,1,214-->
 
 Beordringsprincipen Pull (Definition):: När ett moment beställer material från ett tidigare produktionssteg
 
@@ -667,13 +678,14 @@ Ekonomisk Orderkvantitet (Definition):: När man försöker hitta den mest kostn
 Produkter i arbete är sådana produkter som inte är färdiga men är mitt i tillverkningsprocessen.
 
 Produkter i Arbete (Definition):: Produkter som inte är färdiga men är mitt i tillverkningsprocessen
+<!--SR:!2024-02-09,4,284!2000-01-01,1,250-->
 
 28. Rita upp den typiska profilen för kapitalbindningen i ett tillverkande företag.
 
 Kapitalbindning är sådant kapital som inte kan användas för andra ändamål än vad det är just nu, alltså är det bundet i dess nuvarande form. För varuproducerande företag kommer detta vanligtvis i formen av råmaterial och produkter i lager.
 
 Kapitalbindning (Definition):: Resurser som inte kan användas för andra ändamål än vad de är just nu. För ett varuproducerande företag är detta vanligtvis råmaterial och produkter i lager
-<!--SR:!2000-01-01,1,250!2024-02-07,4,274-->
+<!--SR:!2024-02-08,3,262!2024-02-07,4,274-->
 
 29. På vilket sätt är partistorlek och ställtid viktiga för produktionens genomloppstid?
 
@@ -810,6 +822,7 @@ Utvecklingstratten (Definition):: Handlar om hur ett företag ska ha många för
 Genom att införa beslutspunkter vid övergångarna mellan olika stadier av utvecklingsprocessen skapas en stage-gate-modell där varje stadie (stage) inleds och avslutas med ett formellt beslut (gate) av en styrgrupp, chef eller beställare. Vilket betyder att hela produktutvecklingsarbetet inte behöver låsas fast vid starten men ändras beroende på hur arbetet har gått.
 
 Stage-gate-modellen (Definition):: När man inför beslutspunkter vid övergångarna mellan olika stadier av utvecklingsprocessen
+<!--SR:!2024-02-08,3,262!2024-02-09,4,282-->
 
 14. Vad är visuell planering?
 

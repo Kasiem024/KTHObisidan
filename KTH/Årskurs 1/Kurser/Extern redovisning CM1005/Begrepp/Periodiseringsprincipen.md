@@ -18,4 +18,4 @@ Enligt Periodiseringsprincipen gäller även att affärshändelser ska bokföras
 ## Flashcards
 
 Periodiseringsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som innebär att ett företags intäkter och kostnader ska hänföras till rätt period, enligt den ska affärshändelser bokföras samtidigt som de inträffar
-<!--SR:!2024-02-06,3,268!2024-02-03,1,230-->
+<!--SR:!2024-02-06,3,268!2024-02-08,3,250-->

@@ -1,7 +1,7 @@
 # Företags Ekonomiska Kretslopp
 
 2024-02-01 17:01
-Tags: #year2024 #KTH #ekonomi #ME1003  #begrepp
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 

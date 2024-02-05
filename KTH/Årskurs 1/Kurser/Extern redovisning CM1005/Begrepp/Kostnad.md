@@ -19,8 +19,7 @@ Amortering är aldrig en kostnad.
 
 Kostnad visar vad för resurser har förbrukat under en viss period. INTE vad vi har anskaffat.
 
-En Kostnad är ==värdet== av en ==förbrukad resurs== under en viss  
-==period==.
+En Kostnad är ==värdet== av en ==förbrukad resurs== under en viss ==period==.
 
 ### Räkningar
 

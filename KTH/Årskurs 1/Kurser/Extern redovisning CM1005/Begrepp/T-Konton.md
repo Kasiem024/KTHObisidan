@@ -40,4 +40,4 @@ Debet (Definition):: Visar vart det kommer in pengar. Alltså på vilket konto p
 <!--SR:!2024-02-03,4,274!2024-02-06,7,252-->
 
 Kredit (Definition):: Visar vart pengarna kommer från. Alltså vad pengarnas källa är (T-Konto)
-<!--SR:!2024-02-11,11,272!2024-02-04,4,276-->
+<!--SR:!2024-02-11,11,272!2024-02-20,15,296-->

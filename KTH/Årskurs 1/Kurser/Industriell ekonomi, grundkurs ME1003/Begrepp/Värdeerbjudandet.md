@@ -40,7 +40,7 @@ Man kan säga att Värdeerbjudandet av ett företag är det värde som kunderna 
 ## Flashcards
 
 Värdeerbjudandet (Definition):: Det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det ==inte bara== de faktiska ==varorna== och ==tjänster== som ett företag säljer men ==också hela upplevelsen==
-<!--SR:!2024-02-02,3,250!2024-02-07,8,250-->
+<!--SR:!2024-02-12,7,250!2024-02-07,8,250-->
 
 Sätt att kategorisera produkter (Värdeerbjudandet)
 ??

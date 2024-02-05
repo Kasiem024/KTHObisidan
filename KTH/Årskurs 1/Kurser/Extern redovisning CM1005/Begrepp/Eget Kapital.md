@@ -29,4 +29,4 @@ Exempel på Eget Kapital (3)
 - Startkapital: Det ägarna satte in vid grundandet.
 - Kapitaltillskott: Det ägarna satte in efter grundandet.
 - Vinster: Vad företag tjänat efter vinstutdelning.
-<!--SR:!2000-01-01,1,250!2024-02-05,3,268-->
+<!--SR:!2024-02-09,4,272!2024-02-17,12,288-->

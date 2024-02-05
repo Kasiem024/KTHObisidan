@@ -112,9 +112,7 @@ An organization is the rational coordination of the activities of a number of pe
 - Funktionerna behöver koordineras
 - De existerar oberoende av individuella medlemmar
 
-[[Företagsformer]]
-
-Konsortium TODO
+## [[Företagsformer]]
 
 Planeringsavdelningen hade inte kontakt med personalen med de cheferna i verkstaden var med arbetarna.
 

@@ -1,7 +1,7 @@
 # Affärsidé
 
 2024-02-01 14:08
-Tags: #year2024 #KTH #ekonomi #ME1003  #begrepp
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 

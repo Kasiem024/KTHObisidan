@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Enskild näringsverksamhet är en företagsform där du som privatperson och ensam ägare driver och ansvarar för företaget. Det finns inte någon tydlig gräns mellan dig som ägare och företaget. En annan benämning på enskild näringsverksamhet är enskild firma.
+Enskild Näringsverksamhet är en företagsform där du som privatperson och ensam ägare driver och ansvarar för företaget. Det finns inte någon tydlig gräns mellan dig som ägare och företaget. En annan benämning på Enskild Näringsverksamhet är enskild firma.
 
 [Enskild näringsverksamhet, Verksamt](https://www.verksamt.se/starta/valj-foretagsform/enskild-naringsverksamhet)
 

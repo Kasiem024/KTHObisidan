@@ -36,13 +36,13 @@ Aktiens kvotvärde:: Aktiens värde vid grundandet som grundarna bestämmer sjä
 <!--SR:!2024-02-08,9,272!2024-02-14,15,292-->
 
 Antal aktier ett företag har:: Riskkapital/Aktiens kvotvärde
-<!--SR:!2024-01-31,1,212!2024-02-01,6,250-->
+<!--SR:!2024-02-08,3,232!2024-02-25,20,270-->
 
 De två typerna av aktiebolag;; Privat aktiebolag (50,000 aktiekapital), Publikt aktiebolag (500,000 aktiekapital)
 <!--SR:!2024-02-10,11,270-->
 
 Balansvärde (substansvärde):: Totalt eget kapital/antal aktier
-<!--SR:!2024-01-31,1,230!2024-02-01,1,213-->
+<!--SR:!2024-01-31,1,230!2024-02-06,1,193-->
 
 Börskurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
 <!--SR:!2024-02-15,13,270!2024-02-15,12,272-->

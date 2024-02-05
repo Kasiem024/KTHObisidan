@@ -175,7 +175,7 @@ Affiliated marketing är en intäktsmodell som baseras på att erbjuda kunden en
 
 16. Förklara begreppet värdekedja och ge ett konkret exempel på en värdekedja, t.ex. från konfektionsindustrin.
 
-Man kan säga att en [[Värdekedja]] beskriver hur värdet av en vara ökar genom fortsatt produktion av den. Med andra ord produkten ökar i värde för varje [[Förädlingsvärde||förädlingssteg]]. Exempel:
+Man kan säga att en [[Värdekedja]] beskriver hur värdet av en vara ökar genom fortsatt produktion av den. Med andra ord produkten ökar i värde för varje [[Förädlingsvärde|förädlingssteg]]. Exempel:
 Bomullsplantage --> Spinning av garn --> Vävning --> Färgning --> Sömnad --> Försäljning
 
 17. Förklara begreppen vertikal integration och horisontell integration i en värdekedja.
@@ -522,7 +522,7 @@ När man ska ==massproducera== en ==standardprodukt== använder man sig av en ==
 
 Hur en produktionslayout påverkar produktions kostnaderna har med varje layouts ==fasta och rörliga kostnader== att göra. En flödeslayout har väldigt höga fast kostnader då man är tvungen att investera i dyra specialiserade maskiner. Dock är de rörliga kostnaderna låga eftersom när man väl börjat tillverka produkten är kostnaden för varje ny produkt låg då systemet är väldigt effektivt på att tillverka just den produkten. Alltså ska man använda en flödeslayout för stora volymer.
 
-![[Kostnadsstruktur vid olika  Produktionslayouter ME1003.png]]
+![[Kostnadsstruktur vid olika Produktionslayouter ME1003.png]]
 
 21. Redogör för hur flexibilitet och buffertar kan användas för att hantera variation och osäkerhet i produktionsprocessen.
 

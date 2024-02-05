@@ -29,8 +29,9 @@ Grunden för [[Prissättning]], verksamhetsanalyser och beslut:
 - Vilka produktionsmetoder är effektiva?
 - Skall vi köpa från leverantörer eller tillverka själva?
 
-==Förkalkyl==: När man beräknar kostnaden för tillverkningen av en produkt i ==förväg==.
+==Förkalkyl==: När man beräknar kostnaden för tillverkningen av en produkt i förväg.
 ==Efterkalkyl==: När man undersöker det ekonomiska utfallet för en viss produkt eller period.
+==Kalkylobjekt==: Kan vara exempelvis hela företaget, en marknad, en produkt eller ett projekt.
 
 Man kan dela in kostnader på flera olika sätt:
 

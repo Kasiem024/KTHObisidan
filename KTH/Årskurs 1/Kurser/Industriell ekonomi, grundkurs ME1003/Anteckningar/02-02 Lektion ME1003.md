@@ -10,10 +10,9 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
 
 Kalkylobjekt: Det objekt (produkt, avdelning, maskintimme, projekt etc.) för vilket en kalkylen görs.
 
-Kostnadsbärare: Används ofta som synonym till  
-kalkylobjekt vid produktkalkylering
+Kostnadsbärare: Används ofta som synonym till kalkylobjekt vid produktkalkylering
 
-==Självkostnaden==: Den totala kostnaden för en viss produkt tills den är levererad och betald.
+==Självkostnaden==: Summan av samtliga kostnader för produkten tills den är levererad och betald
 
 ==Divisionskalkylering==
 SJK/st = (TK för perioden) / Volym
