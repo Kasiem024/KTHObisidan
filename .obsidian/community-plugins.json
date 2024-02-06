@@ -1,13 +1,15 @@
 [
   "obsidian-excalidraw-plugin",
   "obsidian-icon-folder",
-  "darlal-switcher-plus",
   "obsidian-spaced-repetition",
   "tag-wrangler",
-  "handwritten-notes",
   "table-editor-obsidian",
   "settings-search",
   "url-into-selection",
   "obsidian-languagetool-plugin",
-  "obsidian-linter"
+  "obsidian-linter",
+  "obsidian-annotator",
+  "omnisearch",
+  "text-extractor",
+  "handwritten-notes"
 ]

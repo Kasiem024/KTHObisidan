@@ -410,7 +410,7 @@
   "pdfBorderBox": true,
   "pdfGapSize": 50,
   "pdfGroupPages": true,
-  "pdfLockAfterImport": false,
+  "pdfLockAfterImport": true,
   "pdfNumColumns": 2,
   "pdfNumRows": 1,
   "pdfDirection": "right",
