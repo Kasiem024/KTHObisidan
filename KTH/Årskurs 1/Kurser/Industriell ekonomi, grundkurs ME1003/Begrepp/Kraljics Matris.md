@@ -21,7 +21,7 @@ Alltså visar den hur viktig en viss inköpt artikel är och hur problematiskt d
 ## Flashcards
 
 Kraljics Matris (Definition):: Visar hur viktig en viss inköpt artikel är och hur problematiskt det är ifall den inte levereras i tid
-<!--SR:!2000-01-01,1,250!2024-02-06,1,230-->
+<!--SR:!2000-01-01,1,250!2024-02-08,2,230-->
 
 Kraljics Matris (4)
 ??

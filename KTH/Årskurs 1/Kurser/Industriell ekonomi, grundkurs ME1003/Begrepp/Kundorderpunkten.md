@@ -29,3 +29,4 @@ Kundorderpunkt (Definition):: Ett begrepp som beskriver hur mycket av produktens
 Genomloppstid (Definition):: Tiden som det tar att tillverka produkten från början till slut
 
 Leveranstid (Definition):: Tiden som det tar för kunden att få produkten efter att beställningen har gjorts
+<!--SR:!2000-01-01,1,250!2024-02-10,4,270-->

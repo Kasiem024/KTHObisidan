@@ -18,4 +18,5 @@ Handlar om att bokföra beroende på ordningen av händelser, dag till dag för 
 
 ## Flashcards
 
-Grundbokföring (Definition):: När man bokför beroende på ordningen som [[Affärshändelse]] skedde.
+Grundbokföring (Definition):: När man bokför beroende på ordningen som [[Affärshändelse]] skedde
+<!--SR:!2024-02-10,4,272!2024-02-10,4,270-->

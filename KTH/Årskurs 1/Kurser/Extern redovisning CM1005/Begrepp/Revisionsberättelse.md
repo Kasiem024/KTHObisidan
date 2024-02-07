@@ -34,3 +34,4 @@ Revisionsberättelsens innehåll (4)
 - Om revisorn anser att årsstämman ska fastställa [[Resultaträkning]] och [[Balansräkning]].
 - Om revisorn anser att årsstämman ska besluta förslaget till hur årets resultat ska disponeras.
 - Om revisorn anser att årsstämman ska besluta över styrelsens ansvarsfrihet.
+<!--SR:!2024-02-07,1,238!2000-01-01,1,250-->

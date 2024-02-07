@@ -123,10 +123,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "omnisearch:Omnisearch": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "handwritten-notes:Create empty handwritten note": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false,
       "obsidian-spaced-repetition:Review flashcards": false,
       "graph:Open graph view": false,
       "templates:Insert template": false,

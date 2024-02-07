@@ -25,7 +25,7 @@ Man kan se på det som ett kvitto som visar att en affärshändelse har hänt.
 ## Flashcards
 
 Verifikation (Definition):: Som ett kvitto som visar att en [[Affärshändelse]] har hänt. Kan vara en faktura, kvitto eller annat både fysiskt och elektroniskt dokument
-<!--SR:!2024-02-09,4,270!2000-01-01,1,250-->
+<!--SR:!2024-02-09,4,270!2024-02-10,4,272-->
 
 Innehållet av en Verifikation (6)
 ??
@@ -35,4 +35,4 @@ Innehållet av en Verifikation (6)
 - Hela beloppet och specificering av momsbeloppet.
 - Med vem eller vilket företag som transaktionen avser.
 - Hänvisning till andra underlag som förvaras separat, om sådana finns.
-<!--SR:!2024-02-06,3,250!2000-01-01,1,250-->
+<!--SR:!2024-02-12,6,250!2024-02-10,4,274-->

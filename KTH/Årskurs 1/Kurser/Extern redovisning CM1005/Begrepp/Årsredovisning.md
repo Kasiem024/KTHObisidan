@@ -22,6 +22,8 @@ Beroende på omsättningen av en [[Enskild näringsverksamhet]] ska den upprätt
 - [[Förvaltningsberättelse]]
 - Noter
 
+Alltså är en Årsredovisning ett [[Årsbokslut]] plus en [[Förvaltningsberättelse]] och noter till förvaltningsberättelsen.
+
 ## Kopplat till
 
 - [[Årsredovisningslagen]]
@@ -34,4 +36,4 @@ Beroende på omsättningen av en [[Enskild näringsverksamhet]] ska den upprätt
 - [[Resultaträkning]]
 - [[Förvaltningsberättelse]]
 - Noter
-<!--SR:!2024-02-07,4,272!2024-02-06,4,270-->
+<!--SR:!2024-02-07,4,272!2024-02-20,14,290-->

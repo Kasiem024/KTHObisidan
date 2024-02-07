@@ -14,4 +14,4 @@ I [[Aktiebolag]] och [[Ekonomisk förening]] skiljer man mellan Bundet Eget Kapi
 ## Flashcards
 
 Bundet Eget Kapital (Definition):: Kapital som måste användas inom företaget, inte för vinstutdelning. Är vanligtvis aktiekapital/medlemmarnas insatser, reservfond och uppskrivningsfond
-<!--SR:!2024-02-05,3,250!2000-01-01,1,250-->
+<!--SR:!2024-02-05,3,250!2024-02-10,4,270-->

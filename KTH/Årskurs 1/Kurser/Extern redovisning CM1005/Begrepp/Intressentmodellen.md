@@ -26,7 +26,7 @@ Ett företag har intressenter. Intressenter är grupper eller personer som påve
 ## Flashcards
 
 Intressentmodellen (Definition):: En grafisk beskrivning av vilka som förväntar sig få något från ett projekt och vad de kommer få
-<!--SR:!2024-02-01,6,250!2024-02-12,13,270-->
+<!--SR:!2024-02-26,20,270!2024-02-12,13,270-->
 
 Intressenter (Definition):: Grupper/personer som påverkar eller påverkas av ett företag
 <!--SR:!2024-02-10,11,270!2024-02-15,16,290-->

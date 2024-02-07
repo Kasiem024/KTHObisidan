@@ -20,4 +20,4 @@ Man kan se Interimsfordringar som negativt för företaget då vi har antingen b
 ## Flashcards
 
 Interimsfordring (Definition):: Samlingsnamn för [[Förutbetald Kostnad]] och [[Upplupen Intäkt]]
-<!--SR:!2024-02-03,1,230!2024-02-08,3,250-->
+<!--SR:!2024-02-09,3,250!2024-02-08,3,250-->

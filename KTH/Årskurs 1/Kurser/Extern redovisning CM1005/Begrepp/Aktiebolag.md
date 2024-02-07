@@ -29,9 +29,6 @@ Aktiebolaget är ett eget skattesubjekt. Det betalar sin egna skatt.
 Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansvariga för företagets skulder. Ägarna riskerar bara att förlora deras egna satsade kapital. Minst 1 ägare men kan också vara 100,000-tals ägare
 <!--SR:!2024-02-04,5,252!2024-02-14,15,292-->
 
-Startkapital/aktiekapital/riskkapital för att starta ett aktiebolag;; 25 000 kr
-<!--SR:!2024-02-06,11,272-->
-
 Aktiens kvotvärde:: Aktiens värde vid grundandet som grundarna bestämmer själva
 <!--SR:!2024-02-08,9,272!2024-02-14,15,292-->
 

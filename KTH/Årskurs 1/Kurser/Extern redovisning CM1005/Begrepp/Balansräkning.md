@@ -42,10 +42,7 @@ Balansräkning (Definition):: Ett företags finansiella ställning vid en given 
 <!--SR:!2024-02-06,7,250!2024-02-14,15,290-->
 
 De två delarna/sidorna av en balansräkning:: Ett företags eget kapital och skulder på en sida och ett företags tillgångar på andra sidan
-<!--SR:!2024-02-04,9,250!2024-02-29,24,270-->
-
-Balansidentitet (Definition):: Tillgångar = Eget kapital + Skulder
-<!--SR:!2024-02-03,1,192!2024-02-01,1,192-->
+<!--SR:!2024-03-08,31,270!2024-02-29,24,270-->
 
 Vad som brukar inkluderas i BR Vänster
 ??

@@ -84,7 +84,7 @@ Egenskaperna av Bygg- och anläggningsbranschen:: En bransch som styrs i hög gr
 <!--SR:!2024-02-06,3,254!2024-02-07,4,274-->
 
 Egenskaperna av Fastighetsbranschen:: En bransch som består av företag som ==förvaltar==, ==hyr ut== och utvecklar kommersiella ==lokaler== och ==bostäder==. Intäkterna består primärt av ==hyresintäkter== och fastighetsförsäljning
-<!--SR:!2024-02-05,3,250!2000-01-01,1,250-->
+<!--SR:!2024-02-05,3,250!2024-02-10,4,285-->
 
 11. Många anser att vi idag befinner oss i en period av radikal industriell omvandling. Vilka är de viktigaste drivkrafterna bakom denna omvandling.
 
@@ -177,7 +177,7 @@ Dessa fyra förhållanden kallas för [[4V]].
 ==Front-office== dominerad logik är när värdeskapandet sker i direkt interaktion med kunden och att det handlar om kundens upplevelse.
 
 Varudominerad logik (Definition):: När huvuddelen av [[Värdeskapandet]] sker ==utan inblandning av kunden==
-<!--SR:!2024-02-06,1,244!2000-01-01,1,250-->
+<!--SR:!2024-02-07,1,224!2000-01-01,1,250-->
 
 Back-office dominerad logik (Definition):: När huvuddelen av [[Värdeskapandet]] sker ==utan kunden men kunden behövs==, vanligtvis i ==början== och ==slutet== av processen
 
@@ -283,7 +283,7 @@ Innovationsspridningens livscykel består av 5 användarkategorier, de är: Pion
 ==Processinnovation== är när en ==existerande== ==produkt== kan ==tillverkas== eller ==levereras== med ==mindre== ==resurser==. Detta sker ==efter== att teknologin har ==mognat== då det är nu ==majoriteten== av ==marknaden== har börjat ==använda== ==produkten==.
 
 Produktinnovation (Definition):: När en ==existerande produkt förbättras== eller när en ==ny produkt utvecklas==. Detta sker tidigt i en teknologis utveckling
-<!--SR:!2024-02-08,3,264!2024-02-06,1,244-->
+<!--SR:!2024-02-08,3,264!2024-02-08,2,244-->
 
 Processinnovation (Definition):: När en ==existerande== ==produkt== kan ==tillverkas== eller ==levereras== med ==mindre== ==resurser==. Detta sker ==efter== att teknologin har ==mognat== då det är nu ==majoriteten== av ==marknaden== har börjat ==använda== ==produkten==
 
@@ -303,6 +303,7 @@ Ett exempel på ett teknikskifte som fundamentalt ändrat en bransch är när mi
 Disruptive innovation är ett begrepp som beskriver vad som händer när en ny och billig teknisk lösning konkurrerar ut det gamla helt och hållet.
 
 Disruptive Innovation (Definition):: När etablerade företag och affärsmodeller konkurreras ut av tekniska lösningar som är enklare och billigare än de redan etablerade
+<!--SR:!2000-01-01,1,250!2024-02-09,3,265-->
 
 11. Förklara varför det är viktigt att teknikbaserade företag är "tvåhänta" (Eng: ambidextrous).
 
@@ -430,7 +431,7 @@ Key-Account Manager (Definition):: En säljare vars enda jobb är att ansvara f�
 När kunden blir intresserad av produkten som erbjuds kan den be försäljaren om en offert, alltså att det säljande företaget ska lämna ett erbjudande till köparen. Detta är ovanligt vid en [[Konsumentmarknad]] men praxis vid en [[Företagsmarknad]].
 
 Offert (Definition):: När det säljande företaget ska lämna ett erbjudande till köparen, ovanligt vid en [[Konsumentmarknad]] men praxis vid en [[Företagsmarknad]]
-<!--SR:!2024-02-06,3,254!2000-01-01,1,250-->
+<!--SR:!2024-02-06,3,254!2024-02-10,4,285-->
 
 16. Vad är dröjsmålsränta?
 
@@ -524,7 +525,7 @@ Typer av tjänsteproduktion (3)
 - ==Professionella tjänster==: Låg variation och volym. Är vanligtvis väldigt kundanpassade och kräver därför hög kompetens vilket leder till hög styckkostnad.
 - ==Serviceverkstäder==: Normal mängd variation och volym.
 - ==Standardtjänster==: Låg variation men stor volym, alltså lätt att standardisera.
-<!--SR:!2024-02-04,1,234!2024-02-04,1,234-->
+<!--SR:!2024-02-07,1,214!2024-02-04,1,234-->
 
 10. Redogör för de fyra olika logikerna av produktionsflöden.
 
@@ -610,7 +611,7 @@ Funktionell Layout (Definition):: När maskiner med samma funktion placeras fysi
 <!--SR:!2024-02-08,3,264!2024-02-07,4,274-->
 
 Flödeslayout (Definition):: När maskiner placeras i ordningen som produkten behöver för att tillverkas
-<!--SR:!2000-01-01,1,250!2024-02-09,4,282-->
+<!--SR:!2024-02-09,3,265!2024-02-09,4,282-->
 
 20. Redogör för hur valet av produktionslayout påverkar produktions kostnaderna.
 
@@ -650,6 +651,7 @@ Beordringsprincipen Push (Definition):: När varje moment i ett produktions syst
 <!--SR:!2000-01-01,1,250!2024-02-06,1,214-->
 
 Beordringsprincipen Pull (Definition):: När ett moment beställer material från ett tidigare produktionssteg
+<!--SR:!2000-01-01,1,250!2024-02-07,1,245-->
 
 24. Vilken är relationen mellan lagernivå och påfyllningsvolym?
 
@@ -694,10 +696,10 @@ Partistorlek är det antal som tillverkas av en viss produkt innan omställning 
 Alltså, mindre partistorlek ger kortare genomloppstid för just den produkten men ger högre genomloppstid för alla produkter då ställtiden ökar.
 
 Partistorlek (Definition):: Det antal som tillverkas av en viss produkt innan omställning till nästa produkt sker
-<!--SR:!2024-02-07,4,274!2024-02-06,3,254-->
+<!--SR:!2024-02-07,4,274!2024-02-19,13,274-->
 
 Ställtid (Definition):: Den tid det tar att ställa om maskinerna för att tillverka nästa parti av en annan produkt
-<!--SR:!2024-02-07,4,274!2000-01-01,1,250-->
+<!--SR:!2024-02-07,4,274!2024-02-10,4,285-->
 
 30. Vad är
 
@@ -784,7 +786,7 @@ Modulariserade produkter innebär att en produkt är uppdelad i specificerade de
 Alltså handlar det om att kunna sätta ihop olika komponenter med varandra för att få en högre produktvariation samtidigt som produktionen är standardiserad.
 
 Modularisering (Definition):: Handlar om att kunna sätta ihop olika komponenter med varandra för att få en högre produktvariation samtidigt som produktionen är standardiserad
-<!--SR:!2024-02-06,3,254!2024-02-07,4,274-->
+<!--SR:!2024-02-18,12,274!2024-02-07,4,274-->
 
 9. Förklara hur man kan balansera en projektportfölj genom att kategorisera projekten efter grad av förändring.
 

@@ -64,10 +64,10 @@ Sidor 43-51, 58-73
 ## Flashcards
 
 Saldo (Definition):: Skillnaden mellan debet och kredit på ett konto.
-<!--SR:!2000-01-01,1,250!2024-02-05,5,230-->
+<!--SR:!2024-02-09,3,255!2024-02-21,15,250-->
 
 Kontant Affär (Definition):: När [[Utgift]] och [[Utbetalning]] sker vid samma tidpunkt
-<!--SR:!2024-02-02,3,263!2024-02-18,13,285-->
+<!--SR:!2024-02-13,7,263!2024-02-18,13,285-->
 
 När händer Faktura/Bokföring;; Vid en specifik tidpunkt
 <!--SR:!2024-02-08,8,262-->

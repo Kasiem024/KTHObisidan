@@ -153,3 +153,4 @@ Egenskaperna av en tjänst (7)
 - Kärnvärde produceras i interaktion mellan leverantör och kund.
 - Kunden deltar (vanligen) i produktionen.
 - Äganderätten överlåts inte.
+<!--SR:!2024-02-07,1,228!2000-01-01,1,250-->

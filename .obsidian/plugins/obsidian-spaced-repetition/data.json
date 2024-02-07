@@ -10,12 +10,12 @@
     ],
     "convertFoldersToDecks": true,
     "cardCommentOnSameLine": false,
-    "burySiblingCards": false,
+    "burySiblingCards": true,
     "showContextInCards": false,
     "flashcardHeightPercentage": 100,
     "flashcardWidthPercentage": 100,
     "randomizeCardOrder": null,
-    "flashcardCardOrder": "EveryCardRandomDeckAndCard",
+    "flashcardCardOrder": "NewFirstSequential",
     "flashcardDeckOrder": "PrevDeckComplete_Sequential",
     "convertHighlightsToClozes": false,
     "convertBoldTextToClozes": false,
@@ -25,15 +25,18 @@
     "multilineCardSeparator": "||",
     "multilineReversedCardSeparator": "??",
     "editLaterTag": "#edit-later",
-    "enableNoteReviewPaneOnStartup": true,
+    "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
-      "#review"
+      "#review,",
+      "#begrepp,",
+      "#CM1005,",
+      "#ME1003"
     ],
     "noteFoldersToIgnore": [
-      "**/Obsidian Plugins"
+      "Obsidian Plugins"
     ],
     "openRandomNote": false,
-    "autoNextNote": false,
+    "autoNextNote": true,
     "disableFileMenuReviewOptions": false,
     "maxNDaysNotesReviewQueue": 365,
     "initiallyExpandAllSubdecksInTree": false,
@@ -44,7 +47,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2024-02-06",
+  "buryDate": "2024-02-07",
   "buryList": [],
   "historyDeck": null
 }

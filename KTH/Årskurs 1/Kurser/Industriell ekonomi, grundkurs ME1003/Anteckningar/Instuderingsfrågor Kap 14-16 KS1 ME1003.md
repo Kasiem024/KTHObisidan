@@ -160,6 +160,7 @@ Scenarioteknik utgår på att skapa scenarier för framtida konfliktsituationer 
 ==Sida 369 i MIE boken==
 
 Scenarioteknik (Definition):: En analysmetod som utgår på att skapa scenarier för framtida konfliktsituationer så att man kan träna på hur man ska hantera krissituationer
+<!--SR:!2024-02-10,4,275!2024-02-10,4,275-->
 
 20. Utgå från ett exempel och redogör för affärsmodellkanvasen som en strategimodell.
 
@@ -236,6 +237,7 @@ Tillsvidareanställning (Definition):: Om inget har sagts tidigare om anställni
 Om en arbetsgivare inte meddelar en arbetstagare med en provanställning att hen inte kommer fortsätta jobba innan prövotiden är slut blir anställningen automatiskt en tidsbegränsad anställning. Andra exempel på tidsbegränsade anställningar är: vikariat, praktikarbete, säsongsarbete och mera.
 
 Tidsbegränsad Anställning (Definition):: När en provanställning upphör utan att arbetsgivaren informerar arbetstagaren att den inte kommer få jobbet
+<!--SR:!2024-02-07,1,235!2024-02-07,1,235-->
 
 6. Redogör för några av de rättigheter och skyldigheter som följer med en anställning:
 

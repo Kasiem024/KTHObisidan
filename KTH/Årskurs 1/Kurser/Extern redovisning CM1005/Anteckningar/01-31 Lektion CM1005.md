@@ -74,11 +74,3 @@ Koncernredovisning: Om företaget är ett moderföretag ska den redovisa för si
 Interimsskuld: Upplupna kostnader och förutbetalda intäkter.
 
 ## Flashcards
-
-Egenskaper för att vara ett bra företag (5)::
-
-- Customer satisfaction
-- Employee engagement and development
-- Innovation
-- Social responsibility
-- Financial strength
