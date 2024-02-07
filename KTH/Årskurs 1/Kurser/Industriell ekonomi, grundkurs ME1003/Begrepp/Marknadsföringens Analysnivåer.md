@@ -28,5 +28,3 @@ Man kan dela in [[Marknadsföring]] på tre analysnivåer:
 ## Kopplat till
 
 ## Flashcards
-
-TODO

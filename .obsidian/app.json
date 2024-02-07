@@ -81,13 +81,15 @@
     "Nuvärdekvot",
     "internräntemetoden",
     "Internräntemetodens",
-    "pay-back-metoden"
+    "pay-back-metoden",
+    "Titleistbollar"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "userIgnoreFilters": [
-    "README",
-    "Obsidian Plugins/Templates/"
+    "Obsidian Plugins/Templates/",
+    "/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi/",
+    "/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi/"
   ],
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
@@ -96,5 +98,6 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
-  }
+  },
+  "showUnsupportedFiles": true
 }

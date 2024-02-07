@@ -1,8 +1,11 @@
 ---
-annotation-target: https://arxiv.org/pdf/2104.13478.pdf
+annotation-target: 
 annotation-target-type: pdf
 ---
-# {{title}}
+# <% tp.file.title %>
 
-{{date}} {{time}}
+Skapad: <% tp.file.creation_date() %>
+
+Uppdaterad: <% tp.file.last_modified_date("dddd Do MMMM YYYY HH:mm:ss") %>
+
 Tags: #year2024 #annotation

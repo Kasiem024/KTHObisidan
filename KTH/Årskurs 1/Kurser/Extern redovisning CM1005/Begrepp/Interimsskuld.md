@@ -20,4 +20,4 @@ Man kan se Interimsskulder som positivt för företaget då det är antingen en 
 ## Flashcards
 
 Interimsskuld (Definition):: Samlingsnamn för [[Upplupen Kostnad]] och [[Förutbetald Intäkt]]
-<!--SR:!2024-02-03,1,230!2024-02-09,3,268-->
+<!--SR:!2024-02-10,3,250!2024-02-09,3,268-->

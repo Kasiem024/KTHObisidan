@@ -23,4 +23,4 @@ Alltså man har skickat en faktura eller fått betalt men man har inte levererat
 ## Flashcards
 
 Förutbetald Intäkt (Definition):: När man har skickat en faktura eller fått betalt men man har inte levererat varan eller utfört tjänsten detta [[Räkenskapsår]].
-<!--SR:!2024-02-10,4,272!2024-02-06,4,270-->
+<!--SR:!2024-02-10,4,272!2024-02-23,16,290-->

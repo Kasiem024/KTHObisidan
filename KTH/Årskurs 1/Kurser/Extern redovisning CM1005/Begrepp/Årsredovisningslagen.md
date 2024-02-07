@@ -29,4 +29,4 @@ Vem ska följa Årsredovisningslagen (5)
 - [[Ekonomisk förening]].
 - Bokföringsskyldiga stiftelser.
 - Företag som uppfyller vissa speciella villkor gällande antalet anställda, balansomslutning och nettoomsättning.
-<!--SR:!2024-02-16,10,270!2024-02-06,3,268-->
+<!--SR:!2024-02-16,10,270!2024-02-17,10,288-->

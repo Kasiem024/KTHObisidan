@@ -288,5 +288,14 @@
       ],
       "key": "Q"
     }
+  ],
+  "templater-obsidian:jump-to-next-cursor-location": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
+    }
   ]
 }

@@ -16,4 +16,4 @@ Kontinuitetsprincipen innebär främst att den utgående balansomslutningen för
 ## Flashcards
 
 Kontinuitetsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som innebär att den utgående balansomslutningen för ett [[Räkenskapsår]] ska vara lika med den ingående balansomslutningen följande räkenskapsår
-<!--SR:!2024-02-07,1,230!2000-01-01,1,250-->
+<!--SR:!2024-02-07,1,230!2024-02-10,3,268-->

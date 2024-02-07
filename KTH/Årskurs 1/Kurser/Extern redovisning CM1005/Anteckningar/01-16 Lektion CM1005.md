@@ -114,4 +114,4 @@ Sätt att finansiera ett företag (3)
 - Eget kapital (Ägarinsättning).
 - Främmande kapital (Lån).
 - Företagets självfinansiering (Vinster).
-<!--SR:!2024-02-11,12,270!2024-02-07,8,250-->
+<!--SR:!2024-02-11,12,270!2024-03-05,27,270-->

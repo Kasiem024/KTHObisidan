@@ -33,5 +33,3 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 - [[Produktutveckling]]
 
 ## Flashcards
-
-TODO

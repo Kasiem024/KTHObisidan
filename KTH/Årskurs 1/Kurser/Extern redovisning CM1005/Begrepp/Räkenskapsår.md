@@ -25,4 +25,4 @@ Räkenskapsår (Definition):: En bokföringsperiod som är vanligen 12 månader 
 <!--SR:!2024-02-09,3,256!2024-02-09,4,274-->
 
 Brutet Räkenskapsår (Definition):: När Räkenskapsåret inte följer kalenderåret
-<!--SR:!2024-02-07,4,270!2024-02-07,4,270-->
+<!--SR:!2024-02-21,14,290!2024-02-07,4,270-->

@@ -5,6 +5,7 @@
     "flashcardHardText": "Hard",
     "flashcardTags": [
       "#begrepp",
+      "#lektion",
       "#CM1005",
       "#ME1003"
     ],
@@ -48,6 +49,25 @@
     "showDebugMessages": false
   },
   "buryDate": "2024-02-07",
-  "buryList": [],
+  "buryList": [
+    "1d3278cb5685b3",
+    "5baae72bcf93f",
+    "6e88bde44ce3a",
+    "15e663667c2f4f",
+    "557bc9744b30a",
+    "185433c99566d5",
+    "a3ea5aacc6b06",
+    "8b5e2de554543",
+    "17008af675bbe2",
+    "42335c9cce1a",
+    "1a5fbe8ce58b0c",
+    "17d7688c0b5d53",
+    "13d0ba1854acf4",
+    "a770374de933d",
+    "c05e187d1b604",
+    "1f1390e1e486b6",
+    "1819b991f1a8f7",
+    "1beeb0d502e0a"
+  ],
   "historyDeck": null
 }

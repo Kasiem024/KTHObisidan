@@ -22,4 +22,4 @@ Syftet med ett årsbokslut är att ge en överblick på hur det har gått för v
 ## Flashcards
 
 Årsbokslut (Definition):: En redovisning över verksamhetens tillgångar, eget kapital och skulder, alltså RR och BR
-<!--SR:!2024-02-09,3,248!2024-02-03,1,230-->
+<!--SR:!2024-02-09,3,248!2024-02-10,3,250-->

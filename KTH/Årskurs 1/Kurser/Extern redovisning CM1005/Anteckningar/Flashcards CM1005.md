@@ -13,7 +13,7 @@ Skillnad mellan [[Ingående Balans]] och [[Utgående Balans]];; Utgående Balans
 <!--SR:!2024-02-27,21,280!2024-03-02,25,284-->
 
 ==Råbalans== (Definition):: En förteckning över samtliga konton med dessas totalsummor i debet och kredit för perioden. Hopräkning av alla kontons summor vid slutet av en redovisningsperiod. En sammanställning av allt som har debiterats respektive krediterats, kopplat till saldobalans
-<!--SR:!2024-02-07,1,218!2024-02-14,8,240-->
+<!--SR:!2024-02-10,3,238!2024-02-14,8,240-->
 
 ==Saldobalans== (Definition):: En förteckning över skillnaderna mellan debiteringar och krediteringar på respektive [[T-Konton]], kopplat till råbalans
 <!--SR:!2024-02-10,4,276!2024-02-10,4,220-->
@@ -22,22 +22,22 @@ Skillnad mellan [[Ingående Balans]] och [[Utgående Balans]];; Utgående Balans
 <!--SR:!2024-02-17,11,278!2024-02-17,11,264-->
 
 ==Bokföringsnämnden== (Definition):: En statlig myndighet som har till uppgift att utveckla god redovisningssed, ger ut regler och informationsmaterial om [[Bokföringslagen]] och [[Årsredovisningslagen]]
-<!--SR:!2024-02-07,1,236!2024-02-09,4,272-->
+<!--SR:!2024-02-08,1,216!2024-02-09,4,272-->
 
 ==Finansinspektionen== (Definition):: En statlig myndighet som övervakar företagen på finansmarknaden. Deras uppdrag är att skapa ett stabilt finansiellt system som bidrar till en hållbar utveckling och ett gott konsumentskydd. Utvecklar också regler för finansiella företag och kontrollerar att reglerna följs
-<!--SR:!2024-02-07,1,236!2024-02-09,3,256-->
+<!--SR:!2024-02-08,1,216!2024-02-09,3,256-->
 
 ==FAR== (Definition):: En branschorganisation inom redovisning, revision och rådgivning som bland annat utvecklar tydliga spelregler, rätt kompetens och tillförlitlig information för näringsliv och samhälle. Också ett privat utbildningsföretag inom ekonomiområdet
-<!--SR:!2024-02-07,1,236!2024-02-07,1,236-->
+<!--SR:!2024-02-08,1,216!2024-02-07,1,236-->
 
 ==Redovisningsvaluta== (Definition):: Valutan som [[Affärshändelse]] presenteras med, i Sverige är det vanligtvis SEK men för vissa företag kan det vara Euro
-<!--SR:!2024-02-12,6,268!2024-02-05,3,265-->
+<!--SR:!2024-02-12,6,268!2024-02-17,10,285-->
 
 ==Rättvisande bild== (Definition):: Handlar om att innehållet i en [[Årsredovisning]] ska ge läsaren en så riktig bild som möjligt av företagets ekonomiska situation
 <!--SR:!2024-02-15,9,268!2024-02-09,4,270-->
 
 ==Avläsningsmetod== (Definition):: Handlar om att läsa direkt vad som står på ett konto och sätta in det på [[Resultaträkning]] och [[Balansräkning]]
-<!--SR:!2024-02-12,6,265!2024-02-06,3,268-->
+<!--SR:!2024-02-12,6,265!2024-02-16,9,288-->
 
 ==Utjämningsmetod== (Definition):: Handlar om att först nolla saldot på ett konto genom att jämna ut det med speciella bokslutskonton, alltså konton för [[Resultaträkning]] och [[Balansräkning]]
 <!--SR:!2024-02-09,4,270!2024-02-12,7,265-->

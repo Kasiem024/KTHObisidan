@@ -11,5 +11,7 @@
   "obsidian-annotator",
   "omnisearch",
   "text-extractor",
-  "handwritten-notes"
+  "handwritten-notes",
+  "dataview",
+  "templater-obsidian"
 ]
