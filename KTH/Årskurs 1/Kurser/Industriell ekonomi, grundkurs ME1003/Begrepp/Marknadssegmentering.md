@@ -16,12 +16,6 @@ Sätt att segmentera marknaden:
 
 Ikea är ett internationellt företag. I andra länder anpassar de sig efter den lokala marknaden genom att exempelvis erbjuda inte bara svensk mat men också just det landets maträtter.
 
-## Varumärke och lojalitet
-
-Varumärket är företagets löfte till sina kunder, det är kopplat till produkten men är inte produkten i sig. Det tar lång tid att bygga ett starkt varumärke.
-
-Människor är inte lojala till en produkt utan ett varumärke eftersom andra företag kan erbjuda en liknande produkt men aldrig samma varumärke. Fastän en Android telefon skulle passa vissa bättre köper de en iPhone eftersom de är lojala till varumärket Apple.
-
 ---
 
 Företag behöver en stor och varierad ==produktportfölj== för att kunna anpassa sig efter de olika målgrupperna.
@@ -32,5 +26,5 @@ Företag behöver en stor och varierad ==produktportfölj== för att kunna anpas
 
 ## Flashcards
 
-Marknadssegmentering (Definition):: Ett sätt för att enklare kunna rikta sig mot specifika målgrupper.
-<!--SR:!2024-02-22,17,290!2024-02-03,4,270-->
+Marknadssegmentering (Definition):: Ett sätt för att enklare kunna rikta sig mot specifika målgrupper
+<!--SR:!2024-02-22,17,290!2024-02-22,14,290-->

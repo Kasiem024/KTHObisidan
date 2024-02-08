@@ -25,4 +25,4 @@ Kriterier för att ett företag måste skriva en hållbarhetsrapport (3)
 - Mer än 250 anställda.
 - Mer än 175 mnkr balansomslutning.
 - Mer än 350 mnkr nettoomsättning.
-<!--SR:!2024-02-08,6,250!2024-02-20,14,290-->
+<!--SR:!2024-03-01,22,270!2024-02-20,14,290-->

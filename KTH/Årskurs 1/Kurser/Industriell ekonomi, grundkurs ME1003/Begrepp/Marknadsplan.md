@@ -89,4 +89,4 @@ Delarna av en Marknadsplan (5)
 - ==Marknadsföring på lång sikt==: Strategiska mål, mer övergripande hur man ska nå till sin målgrupp.
 - ==Marknadsföring på kort sikt==: Taktiska mål, mer konkret hur reklamen kommer se ut.
 - ==Aktivitetsplaner==: Skapa ett schema/budget för Marknadsplanen.
-<!--SR:!2024-02-02,3,250!2024-02-14,12,270-->
+<!--SR:!2024-02-10,2,230!2024-02-14,12,270-->

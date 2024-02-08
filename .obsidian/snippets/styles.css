@@ -1,0 +1,42 @@
+.math {
+  background-color: var(--code-background);
+  border-radius: var(--code-radius);
+  color: var(--code-normal) !important;
+  font-family: var(--font-monospace);
+  font-size: calc(var(--code-size) + 0.2em);
+  padding: 0.1em 0.25em;
+}
+
+/* # if you want different styling for inline and block math
+.math.math-block { }
+
+.math.math-inline { } 
+*/
+/* Highlight EDITOR */
+
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+  background-color: transparent;
+  color: yellow;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+/* Highlight PREVIEW */
+
+.markdown-preview-view mark {
+  background-color: transparent;
+  color: yellow;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.markdown-source-view.mod-cm6 .cm-active.cm-line {
+  background-color: rgba(0, 183, 255, 0.1);
+}
+
+.markdown-source-view.mod-cm6 .cm-content {
+  caret-color: red;
+}

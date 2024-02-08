@@ -36,7 +36,7 @@ Hur ofta man ska redovisa sin moms beror på hur mycket omsättning man har. 1 g
 ## Flashcards
 
 Moms (Definition):: En skatt som betalas vid köpet av varor och tjänster. Inbakad i priset
-<!--SR:!2024-02-05,10,272!2024-02-15,16,292-->
+<!--SR:!2024-03-15,37,292!2024-02-15,16,292-->
 
 Andra namn för moms;; Mervärdesskatt, konsumtionsskatt
 <!--SR:!2024-02-12,17,290-->

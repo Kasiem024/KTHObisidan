@@ -19,7 +19,7 @@ För att veta om en verksamhet är industriell ska den följa de 4S:
 
 | HM | Gucci | Skräddare |
 | :--: | :--: | :--: |
-| Skalfördelar (Stor volym) | Varumärke | Individualiserat |
+| Skalfördelar (Stor volym) | [[Varumärke]] | Individualiserat |
 | Standardisering | Nischat ("rik" målgrupp) | Kundanpassning |
 | Bred målgrupp | "Hög" kvalitet men inte kundanpassade  | Hög kvalitet |
 | Generisk design | Design | Personligt |
@@ -142,7 +142,7 @@ Egenskaperna av en vara (7)
 - Kärnvärde produceras i fabrik.
 - Kunden deltar vanligen inte i produktionen.
 - Äganderätten överlåts.
-<!--SR:!2024-02-06,1,230!2000-01-01,1,250-->
+<!--SR:!2024-02-06,1,230!2024-02-11,3,265-->
 
 Egenskaperna av en tjänst (7)
 ??
@@ -153,4 +153,4 @@ Egenskaperna av en tjänst (7)
 - Kärnvärde produceras i interaktion mellan leverantör och kund.
 - Kunden deltar (vanligen) i produktionen.
 - Äganderätten överlåts inte.
-<!--SR:!2024-02-07,1,228!2000-01-01,1,250-->
+<!--SR:!2024-02-07,1,228!2024-02-11,3,265-->

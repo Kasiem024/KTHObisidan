@@ -14,7 +14,7 @@ Resurstransformation som marknadsplattform:
 Google levererar en tjänst till kunden och samtidigt ger kunden information om sig själv till Google som de säljer till andra företag. Därför finns input och output åt båda hållen.
 ![[Resurstransformation Marknadsplattform ME1003.png]]
 
-Cirkulär ekonomi är ett perspektiv som syftar till att ==öka== ==samhällets== ==ekologiska== ==hållbarhet==. Man kan uppnå detta genom att hela tiden försöka se produkten som en råvara som fortfarande kan genom gå värdeskapande processen. Praktiskt betyder det att man ska ==utveckla== ==produkter== som går att ==återanvändas== eller ==återvinnas==.
+Cirkulär ekonomi är ett perspektiv som syftar till att ==öka samhällets ekologiska hållbarhet==. Man kan uppnå detta genom att hela tiden försöka se produkten som en råvara som fortfarande kan genom gå värdeskapande processen. Praktiskt betyder det att man ska ==utveckla produkter== som går att ==återanvändas== eller ==återvinnas==.
 ![[Resurstransformation Cirkel ME1003.png]]
 
 ### [[4V]]
@@ -35,5 +35,5 @@ Fyra förhållanden som påverkar hur resurstransformationen utformas
 Resurstransformation (Definition):: Hur man omvandlar en råvara till något kunden vill köpa
 <!--SR:!2024-02-10,11,272!2024-02-13,14,290-->
 
-Cirkulär Ekonomi (Definition):: Ett perspektiv som syftar till att ==öka== ==samhällets== ==ekologiska== ==hållbarhet==. Praktiskt betyder det att man ska ==utveckla== ==produkter== som går att ==återanvändas== eller ==återvinnas==.
+Cirkulär Ekonomi (Definition):: Ett perspektiv som syftar till att ==öka samhällets ekologiska hållbarhet==. Praktiskt betyder det att man ska ==utveckla produkter== som går att ==återanvändas== eller ==återvinnas==.
 <!--SR:!2024-02-09,4,277!2024-02-09,4,277-->

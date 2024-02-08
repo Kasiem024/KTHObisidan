@@ -22,3 +22,4 @@ Värdeskapande Processerna (3)
 - [[Produktion]].
 - [[Produktutveckling]].
 - [[Marknadsföring]].
+<!--SR:!2024-02-09,1,230!2000-01-01,1,250-->

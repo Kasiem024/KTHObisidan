@@ -1,6 +1,6 @@
 # OBS
 
-#nograph
+Tags: #nograph
 
 **Detta är instuderingsfrågor tagna från övningsboken. Det finns inget facit för frågorna utan svaren är mina egna baserat på vad jag har läst i boken och vad som har sagts på föreläsningarna.**
 
@@ -125,7 +125,7 @@ Det finns tre principiella [[Konkurrensstrategier]] som kan identifieras oberoen
 
 8. Beskriv några skillnader i värdeskapandet hos ett renodlat tillverkningsföretag och ett renodlat tjänsteföretag.
 
-[[Värdeskapandet]] hos ett renodlat ==tillverkningsföretag== brukar vara att använda sina ==anställdas== ==kunskap== om användningen av ==teknisk== ==utrustning== för ==transformationen== av en ==råvara== ==till== en ==vara== kunden vill köpa.
+[[Värdeskapandet]] hos ett renodlat ==tillverkningsföretag== brukar vara att använda sina ==anställdas kunskap== om användningen av ==teknisk utrustning== för ==transformationen== av en ==råvara till== en ==vara== kunden vill köpa.
 
 Värdeskapandet hos ett renodlat tjänsteföretag är annorlunda då kunden är ofta involverad i tjänsteproduktionen.
 
@@ -135,7 +135,7 @@ När [[Resurstransformation]] inte är enkel riktad, alltså från råvara till 
 
 10. Förklara begreppet cirkulär ekonomi. Vad innebär detta synsätt för värdeskapandet?
 
-Cirkulär ekonomi är ett perspektiv som syftar till att ==öka== ==samhällets== ==ekologiska== ==hållbarhet==. Praktiskt betyder det att man ska ==utveckla== ==produkter== som går att ==återanvändas== eller ==återvinnas==.
+Cirkulär ekonomi är ett perspektiv som syftar till att ==öka samhällets ekologiska hållbarhet==. Praktiskt betyder det att man ska ==utveckla produkter== som går att ==återanvändas== eller ==återvinnas==.
 
 11. Förklara hur logiken i ett företags värdeskapande påverkas av dessa fyra förhållanden:
 
@@ -214,7 +214,7 @@ Vinst är [[Intäkt]] minus [[Kostnad]], eller resultatet från [[Resultaträkni
 
 ==Demand pull== är när ==marknaden== eller kunder ==efterfrågar== en viss ==teknologi== och från denna efterfrågan utvecklas en ny produkt.
 
-==Technology push== är när en ny ==teknologi== utvecklas för att någon ==investerade== i ==forskning== om just den teknologi, alltså fanns det ==inget== ==behov== från marknaden för den.
+==Technology push== är när en ny ==teknologi== utvecklas för att någon ==investerade== i ==forskning== om just den teknologi, alltså fanns det ==inget behov== från marknaden för den.
 
 2. Definiera och beskriv begreppet innovation.
 
@@ -244,7 +244,7 @@ Innovationsspridningens livscykel består av 5 användarkategorier, de är: Pion
 
 ==Produktinnovation== är när en ==existerande produkt förbättras== eller när en ==ny produkt utvecklas==. Detta sker tidigt i en teknologis utveckling.
 
-==Processinnovation== är när en ==existerande== ==produkt== kan ==tillverkas== eller ==levereras== med ==mindre== ==resurser==. Detta sker ==efter== att teknologin har ==mognat== då det är nu ==majoriteten== av ==marknaden== har börjat ==använda== ==produkten==.
+==Processinnovation== är när en ==existerande produkt== kan ==tillverkas== eller ==levereras== med ==mindre resurser==. Detta sker ==efter== att teknologin har ==mognat== då det är nu ==majoriteten== av ==marknaden== har börjat ==använda produkten==.
 
 8. Vad menas med begreppet dominant design? Ge tre konkreta exempel.
 
@@ -260,7 +260,7 @@ Disruptive innovation är ett begrepp som beskriver vad som händer när en ny o
 
 11. Förklara varför det är viktigt att teknikbaserade företag är "tvåhänta" (Eng: ambidextrous).
 
-När ett företag kan klara av att ==använda== sin ==befintliga== ==kunskaper== och ==samtidigt== ==utveckla== ==nya== nyttiga ==kunskaper== kan man säga att den är ==tvåhänt==.
+När ett företag kan klara av att ==använda== sin ==befintliga kunskaper== och ==samtidigt utveckla nya== nyttiga ==kunskaper== kan man säga att den är ==tvåhänt==.
 
 12. Vad säger "Amaras lag"?
 
@@ -305,7 +305,7 @@ Egenskaperna för en [[Konsumentmarknad]] är:
 
 4. Vad innebär det att "segmentera marknaden"?
 
-När man segmenterar marknaden delar man upp den i ==mindre== ==delar== så att man kan ==rikta== sig mot mer ==specifika målgrupper== på ett bättre sätt. Detta kallas [[Marknadssegmentering]] och används för att ==skapa bättre reklamkampanjer== och veta vad sina kunders behov är.
+När man segmenterar marknaden delar man upp den i ==mindre delar== så att man kan ==rikta== sig mot mer ==specifika målgrupper== på ett bättre sätt. Detta kallas [[Marknadssegmentering]] och används för att ==skapa bättre reklamkampanjer== och veta vad sina kunders behov är.
 
 5. Beskriv varför varumärken är viktiga för företag.
 
@@ -639,7 +639,7 @@ Man börjar med ==introduktionen== av produkten när den först ==lanseras== och
 Ett [[Företags Kärnkompetenser]] är de unika kompetenser i [[Värdeskapandet]] som gör att företagets produkter får stort kundvärde. Kärnkompetenser brukar karaktäriseras av 3 egenskaper:
 
 - De ger ==avgörande bidrag till kundvärdet== hos företagets produkter
-- De har ==potential== att ==utnyttjas== på många ==olika== ==marknader==
+- De har ==potential== att ==utnyttjas== på många ==olika marknader==
 - De är ==svåra att imitera== för konkurrenterna
 
 7. Vilka är för- respektive nackdelarna med att tillämpa en strategi med tekniska plattformar i produktutvecklingen?

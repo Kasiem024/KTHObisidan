@@ -35,4 +35,4 @@ De olika konton för löpande bokföring (4)
 - Eget Kapital/Skulder.
 - Utgifter.
 - Inkomster.
-<!--SR:!2024-02-08,1,208!2024-02-07,2,190-->
+<!--SR:!2024-02-11,3,228!2024-02-07,2,190-->

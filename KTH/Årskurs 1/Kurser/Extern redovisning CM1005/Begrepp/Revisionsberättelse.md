@@ -18,7 +18,7 @@ Revisionsberättelsens innehåll:
 
 En revisors uppgift är att granska och verifiera företags redovisning.
 
-De som måste ha en revisor är: 
+De som måste ha en revisor är:
 
 - Finansiella bolag
 - Aktiebolag med särskild vinstutdelningsbegränsning
@@ -52,6 +52,4 @@ Revisionsberättelsens innehåll (4)
 - Om revisorn anser att årsstämman ska fastställa [[Resultaträkning]] och [[Balansräkning]].
 - Om revisorn anser att årsstämman ska besluta förslaget till hur årets resultat ska disponeras.
 - Om revisorn anser att årsstämman ska besluta över styrelsens ansvarsfrihet.
-<!--SR:!2024-02-07,1,238!2024-02-11,4,276-->
-
-Aktie
+<!--SR:!2024-02-09,1,218!2024-02-11,4,276-->

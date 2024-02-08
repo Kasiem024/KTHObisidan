@@ -20,8 +20,8 @@ Ett enkelt exempel på hur Produktionens Konkurrensfaktorer är motstridiga är 
 
 ## Flashcards
 
-Produktionens konkurrensfaktorer (Definition);; 4 Faktorer som har med [[Produktion]] att göra och som gör att företaget kan konkurrera med andra företag. De är viktiga både för kunden och för producenten men är ofta motstridiga. Därför måste man välja vilka man vill fokusera på
-<!--SR:!2024-02-03,1,210-->
+Produktionens Konkurrensfaktorer (Definition);; 4 Faktorer som har med [[Produktion]] att göra och som gör att företaget kan konkurrera med andra företag. De är viktiga både för kunden och för producenten men är ofta motstridiga. Därför måste man välja vilka man vill fokusera på
+<!--SR:!2024-02-09,1,190-->
 
 Produktionens konkurrensfaktorer (4)
 ??
@@ -29,4 +29,4 @@ Produktionens konkurrensfaktorer (4)
 - ==Leveransförmåga==: Förmågan att leverera snabbt och billigt, uppnås genom färdigvarulager och korta genomloppstider.
 - ==Kvalitet==: Förmågan att tillfredsställa kundens behov förväntningar, uppnås genom standardisering och om kundens behov.
 - ==Flexibilitet==: Förmåga att anpassa produktionen till förändringar i omvärlden, uppnås genom överkapacitet och utbildning av personal som klarar av snabba omställningar.
-<!--SR:!2024-02-06,1,188!2024-02-04,1,208-->
+<!--SR:!2024-02-09,1,168!2024-02-04,1,208-->

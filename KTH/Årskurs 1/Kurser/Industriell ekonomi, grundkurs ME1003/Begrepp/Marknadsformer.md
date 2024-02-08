@@ -25,9 +25,9 @@ Den marknaden man befinner sig i bestämmer hur man ska marknadsföra till sina 
 
 ## Flashcards
 
-Olika typer av marknadsformer (Definition) (3)
+Olika typer av marknadsformer (3)
 ??
 - ==Perfekt konkurrens==: Många aktörer som säljer samma vara, produkten med bästa värdet för priset vinner.
 - ==Oligopol==: Få aktörer, den största och starkaste sätter reglerna och vinner (Banker i Sverige).
 - ==Monopol==: 1 aktör (Systembolaget).
-<!--SR:!2024-02-03,4,270!2024-02-17,14,290-->
+<!--SR:!2024-02-24,16,290!2024-02-17,14,290-->

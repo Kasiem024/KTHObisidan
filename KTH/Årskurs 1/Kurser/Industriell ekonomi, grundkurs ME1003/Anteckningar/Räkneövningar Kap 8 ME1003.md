@@ -32,12 +32,11 @@ Johanna LargeKitchen AB är ett storkök som tillagar och levererar färdiglagad
 
 ## 8.6 Safety & Security
 
-
 ![[Pasted image 20240206084153.png]]
 
 VI vill hitta TI = TK. TK = FK + RK. FK = 2,400,00 SEK som är givet. RK = pris per styck * volym. Bryt ut volym ur ekvationen, plug and play och få ut volymen
 
-## 8.15 Choices 
+## 8.15 Choices
 
 Choices AB redovisar följande kalkylerade data (i kr) för nio olika kunder.
 

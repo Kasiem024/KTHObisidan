@@ -7,8 +7,11 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 Omfattar alla aktiviteter som bidrar till att utveckla och förbättra företagets [[Värdeerbjudandet]]. Kan vara konceptutveckling, konstruktion och formgivning av produkten eller tjänsteutveckling. I princip handlar det om framtagningen av nya varor/tjänster (R&D).
 
-[[Produktutvecklingens Analysnivåer]]
-[[Produktutveckling i Olika Typer av Verksamheter]]
+### [[Produktutvecklingens Analysnivåer]]
+
+### [[Produktutveckling i Olika Typer av Verksamheter]]
+
+### [[Produktutvecklings Modeller]]
 
 ## Kopplat till
 

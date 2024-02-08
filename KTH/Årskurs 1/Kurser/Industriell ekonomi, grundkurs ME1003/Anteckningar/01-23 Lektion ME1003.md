@@ -68,7 +68,7 @@ Introduktion --> Tillväxt --> Mognad --> Nedgång
 
 ![[Produktlivscykeln ME1003.png]]
 
-## Företags innovationsstrategi
+## [[Företags innovationsstrategi]]
 
 Företag kan ha olika innovationsstrategier
 
@@ -78,41 +78,3 @@ Företag kan ha olika innovationsstrategier
 - ==Traditionalist== (Konservativ): Vill inte ändra på sig, bryr sig inte om att innovera
 
 ## Flashcards
-
-Namnet på olika produktionstyper (3)
-DISABLED
-- Projekt produktion/Enstycksproduktion.
-- Massproduktion/Serieproduktion.
-- Kontinuerlig produktion.
-
-Projekt produktion/Enstycksproduktion egenskaper (8)
-DISABLED
-- Stor variation.
-- Konvergerande flöde.
-- Många leverantörer.
-- Personalintensivt.
-- Ofta site-montage.
-- Ofta producentprodukter.
-- Utveckling särskilt viktigt.
-<!--SR:!2000-01-01,1,250!2024-02-03,1,230-->
-
-Massproduktion/Serieproduktion egenskaper (8)
-DISABLED
-==Bilproduktion==
-- Liten variation.
-- Konvergerande flöde.
-- Många leverantörer.
-- Personalintensivt.
-- Ofta löpande band.
-- Ofta konsumentprodukter.
-
-Kontinuerlig produktion egenskaper (8)
-DISABLED
-==Stålindustri==
-- Liten variation.
-- Divergerande flöde.
-- Råvaruleverantörer.
-- Kapitalintensivt.
-- Aldrig site-montage.
-- Ofta producentprodukter (ofta fasövergång).
-- Sälj/marknadsföring särskilt viktigt.

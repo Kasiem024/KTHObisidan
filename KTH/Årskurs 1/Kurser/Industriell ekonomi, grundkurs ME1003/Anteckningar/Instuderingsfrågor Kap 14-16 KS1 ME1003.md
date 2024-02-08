@@ -18,17 +18,25 @@ Man kan säga att en [[Affärsidé]] är ett övergripande och långsiktigt syft
 ==Yttre effektivitet==: Om man erbjuder något som marknaden vill ha.
 ==Inre effektivitet==: Om man har resurserna för att skapa ett visst erbjudande.
 
-4. Beskriv Ansof-matrisen och dess tillväxtstrategier.
+4. Beskriv Ansoff-matrisen och dess tillväxtstrategier.
+
+[[Ansoff Tillväxtmatris]]
 
 |  | Existing Products | New Products |
 | :--: | :--: | :--: |
 | **Existing Markets** | ==Market penetration==, mer aggresiv markandsföring för att ta en större andel av marknaden | ==Product development==, genom att utveckla en produkt man redan har kan man ta en större andel av marknaden |
 | **New Markets** | ==Market development==, mycket marknadsföring för att få nya kunder | ==Diversification==, försöker anpassa produkten efter marknaden |
 
+Related Diversification: När man har ett flertal olika produkter som har en viss relation till varandra.
+
+Unrelated Diversification: När man har ett flertal olika produkter som inte alls är relaterade till varandra.
+
 5. Beskriv Michael Porters generiska affärsstrategier.
 
 Michael Porters generiska affärsstrategier bygger på idén att det endast finns två sätt att bli bättre än sina konkurrenter, antingen genom att ha låga kostnader eller genom att erbjuda differentierade produkter.
 
+Michael Porters Generiska Affärsstrategier (Definition):: Handlar om att det endast finns två sätt att bli bättre än sina konkurrenter, antingen genom att ha ==låga kostnader== eller genom att erbjuda ==differentierade produkter==
+<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
 ![[Michael Porters Generiska Affärsstrategier ME1003.png]]
 
 6. Beskriv följande konkurrenskrafter baserade på Porters och Ansoffs typstrategier:
@@ -50,12 +58,13 @@ Go where profits and growth are and where the competition isn't.
 
 När man har ett resursbaserat synsätt på strategi innebär det att man långsiktigt bygger upp och utvecklar företagets olika typer av resurser, till exempel personalkompetensen, varumärket och företagets teknologi. Strävan är att göra företagets resurser unika.
 
+Resursbaserat Synsätt på Strategi (Definition):: Handlar om att man långsiktigt bygger upp och utvecklar företagets olika typer av resurser, till exempel personalkompetensen, varumärket och företagets teknologi. Strävan är att göra företagets resurser unika
+<!--SR:!2024-02-09,1,235!2000-01-01,1,250-->
+
 9. Redogör för strategiprocessen enligt Kotler.
 
-Strategiprocessen enligt Philip Kotler börjar med att utveckla ==affärsidén== och en ==analys== av ==företaget== samt ==omvärlden==. Därefter ska ett ==mål== och en ==strategi== för hur man ska uppnå målet formuleras. Denna strategi ska sedan bli en konkret ==handlingsplan== som ==genomförs== och eventuellt ==utvärderas==.
+[[Strategiprocessen enligt Philip Kotler]] börjar med att utveckla ==affärsidén== och en ==analys== av ==företaget== samt ==omvärlden==. Därefter ska ett ==mål== och en ==strategi== för hur man ska uppnå målet formuleras. Denna strategi ska sedan bli en konkret ==handlingsplan== som ==genomförs== och eventuellt ==utvärderas==.
 
-Strategiprocessen enligt Philip Kotler (Definition):: En strategiprocess där man börjar med att utveckla ==affärsidén== och en ==analys== av ==företaget== samt ==omvärlden==. Därefter ska ett ==mål== och en ==strategi== för hur man ska uppnå målet formuleras. Denna strategi ska sedan bli en konkret ==handlingsplan== som ==genomförs== och eventuellt ==utvärderas==
-<!--SR:!2024-02-09,4,270!2000-01-01,1,250-->
 ![[Strategiprocessen enligt Philip Kotler ME1003.png]]
 
 10. Vad menas med funktionella strategier?
@@ -66,13 +75,19 @@ Exempel på funktionella strategier:
 - Produktionsstrategi
 - Innovationsstrategi
 
+Funktionella Strategier (3)
+??
+- Marknadsstrategi
+- Produktionsstrategi
+- Innovationsstrategi
+<!--SR:!2024-02-09,1,235!2000-01-01,1,250-->
+
 11. Beskriv strategiprocessen från planerad strategi till realiserad strategi enligt Mintzberg.
 
-Enligt Mintzberg ska man ha ett flertal olika planerade strategier. Om inget speciellt händer med dessa kommer de eventuellt övergå till att bli avsiktliga och realiserade strategier. Dock kan saker hända under arbetet som gör att de planerade strategier blir icke-genomförda strategier. Under arbetet kan också nya strategier växa fram som också blir en del av den realiserade strategin.
+[[Strategiprocessen enligt Mintzberg]] säger att man ska ha ett flertal olika planerade strategier. Om inget speciellt händer med dessa kommer de eventuellt övergå till att bli avsiktliga och realiserade strategier. Dock kan saker hända under arbetet som gör att de planerade strategier blir icke-genomförda strategier. Under arbetet kan också nya strategier växa fram som också blir en del av den realiserade strategin.
 
 Alltså handlar strategiprocessen enligt Mintzberg om att man ska börja med ett flertal olika strategier men att man inte ska vara rädd att eliminera de eller att ta fram nya så att man kan skapa en bättre realiserad strategi.
 
-Strategiprocessen enligt Mintzberg (Definition):: En strategiprocess där man ska börja med ett flertal olika strategier men att man inte ska vara rädd att eliminera de eller att ta fram nya så att man kan skapa en bättre realiserad strategi
 ![[Strategiprocessen enligt Mintzberg ME1003.png]]
 
 12. Vad är en SWOT-analys?
@@ -86,9 +101,8 @@ En [[SWOT-Analys]] är en metod för att analysera ett företag internt och exte
 
 13. Redogör för Bostonmatrisen som en portföljanalys.
 
-Bostonmatrisen handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa. Om båda är höga för en viss produkt kallar man den för en stjärna, då ska man investera i den. Medan om båda är låga kallas den för byracka, då ska man döda produkten.
+[[Bostonmatrisen]] handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa. Om båda är höga för en viss produkt kallar man den för en stjärna, då ska man investera i den. Medan om båda är låga kallas den för byracka, då ska man döda produkten.
 
-Bostonmatrisen (Definition):: En portföljanalys som handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa. Om båda är höga för en viss produkt ska man investera i produkt medan om båda är låga ska man döda produkten
 ![[Bostonmatrisen ME1003.png]]
 
 14. Redogör för GE-McKinsey-matrisen som en portföljanalys.
@@ -111,22 +125,16 @@ Michael Porters Femkraftsmodell är ett sätt att analysera de konkurrenskrafter
 - ==Nya aktörer==: Potentiella konkurrenter.
 - ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden.
 
-Michael Porters Femkraftsmodell (Definition) (5)
-??
-- ==Företag i branschen==: Sina nuvarande konkurrenter.
-- ==Kunders förhandlingsstyrka==: Om kunden är mäktig kan den pressa priserna.
-- ==Leverantörers förhandlingsstyrka==: Om leverantören är mäktig kan den öka priserna eller prioritera deras andra kunder.
-- ==Nya aktörer==: Potentiella konkurrenter.
-- ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden.
 ![[Michael Porters Femkraftsmodell ME1003.png]]
-<!--SR:!2024-02-08,3,254!2000-01-01,1,250-->
 
 17. Beskriv intressentmodellen och makt/intresse-matrisen baserad på intressentmodellen.
 
 [[Intressentmodellen]] är en grafisk beskrivning av vilka projektets intressenter är och vilka intressen de har i förhållande till projektet – alltså vad de förväntar sig att få ut av det.
+
 ![[Intressentmodellen ME1003.png]]
 
 Beroende på hur mycket makt en viss intressent har över företaget och hur intresserad den är kan man kategorisera den i en makt/intresse-matris.
+
 ![[Makt och Intresse Matrisen ME1003.png]]
 
 18. Redogör för och ge exempel på de olika faktorerna i en PESTLE-analys.
@@ -164,7 +172,7 @@ Scenarioteknik (Definition):: En analysmetod som utgår på att skapa scenarier 
 
 20. Utgå från ett exempel och redogör för affärsmodellkanvasen som en strategimodell.
 
-Affärsmodellkanvasen är en strategimodell som analyserar ett företags verksamhet genom att dela in ett företags affärsmodell i nio element. Tanken är att man ska länka företagets strategi med dess konkreta verksamhet och lättare se kopplingarna mellan de.
+[[Affärsmodellkanvasen]] är en strategimodell som analyserar ett företags verksamhet genom att dela in ett företags affärsmodell i nio element. Tanken är att man ska länka företagets strategi med dess konkreta verksamhet och lättare se kopplingarna mellan de.
 
 Ett exempel på när Nestlé använde sig av denna strategimodell vid skapandet av varumärket Nespresso:
 
@@ -188,11 +196,11 @@ Att formulera en affärsidé som är konkurrenskraftig kan vara problematiskt f�
 
 SMART mål:
 
-- ==Specifikt==: Ska vara lätt att kommunicera och förstå
-- ==Mätbart==: Ska kunna mätas
-- ==Accepterat==: Ska vara baserat på [[Affärsidé]]
-- ==Realistiskt==: Ska inte vara för utmanande
-- ==Tidsbestämt==: Ska ha en deadline
+- ==Specifikt==: Ska vara lätt att kommunicera och förstå.
+- ==Mätbart==: Ska kunna mätas.
+- ==Accepterat==: Ska vara baserat på [[Affärsidé]].
+- ==Realistiskt==: Ska inte vara för utmanande.
+- ==Tidsbestämt==: Ska ha en deadline.
 
 VAGT mål:
 
@@ -201,25 +209,44 @@ VAGT mål:
 - ***G***emensamt
 - ***T***idsbestämt
 
+SMART Mål (5)
+??
+- ==Specifikt==: Ska vara lätt att kommunicera och förstå.
+- ==Mätbart==: Ska kunna mätas.
+- ==Accepterat==: Ska vara baserat på [[Affärsidé]].
+- ==Realistiskt==: Ska inte vara för utmanande.
+- ==Tidsbestämt==: Ska ha en deadline.
+<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+
+VAGT Mål (4)
+??
+- ***V***isionärt
+- ***A***ccepterat
+- ***G***emensamt
+- ***T***idsbestämt
+<!--SR:!2024-02-09,1,235!2000-01-01,1,250-->
+
 ## Kapitel 15 Personalledning och HRM
 
 1. Vad innebär följande arbetsrättsliga lagar som reglerar företagets relationer till sina anställda:
 
-- Lagen om anställningsskydd (LAS)
+[[Arbetsrättsliga Lagar]]
+
+- ==Lagen om anställningsskydd (LAS)==
 	- Skyddar de anställda för det mesta när det kommer till uppsägningar och provanställningar.
-- Arbetsmiljölagen
+- ==Arbetsmiljölagen==
 	- Regler om skyldigheter för arbetsgivare om att förebygga ohälsa och olycksfall i arbetet.
-- Medbestämmandelagen (MBL)
+- ==Medbestämmandelagen (MBL)==
 	- Reglerar rätten för arbetsgivare och arbetstagare att organisera sig och kalla till kollektiva förhandlingar med sin motpart, alltså fackförbund.
-- Diskrimineringslagen
+- ==Diskrimineringslagen==
 	- Syftet är att motverka diskriminering och främja lika rättigheter och möjligheter för alla.
 
 2. Vad är ett kollektivavtal?
 
-Ett kollektivavtal är ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera.
+Ett ==kollektivavtal== är ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera.
 
 Kollektivavtal (Definition):: Ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera
-<!--SR:!2024-02-08,3,254!2000-01-01,1,250-->
+<!--SR:!2024-02-08,3,254!2024-02-12,4,275-->
 
 3. Nämn några krav som ställs på arbetsgivaren vid anställning av en medarbetare.
 
@@ -227,17 +254,17 @@ När en medarbetare anställs ställs det en del krav på arbetsgivaren gälland
 
 4. Vad innebär en tillsvidareanställning? På vilka sätt kan en sådan anställning upphöra?
 
-En arbetstagare är som regel tillsvidareanställd såvida inget har tidigare sagts om anställningsförhållanden. Det är endast genom en ==uppsägning==, vilket måste vara ==sakligt grundad==, eller genom ett ==avskedande==, om arbetstagaren har gjort ett ==avtalsbrott==, som en sådan anställning kan upphöra.
+En arbetstagare är som regel ==tillsvidareanställd== såvida inget har tidigare sagts om anställningsförhållanden. Det är endast genom en ==uppsägning==, vilket måste vara ==sakligt grundad==, eller genom ett ==avskedande==, om arbetstagaren har gjort ett ==avtalsbrott==, som en sådan anställning kan upphöra.
 
 Tillsvidareanställning (Definition):: Om inget har sagts tidigare om anställningsförhållanden är detta den normala anställningsformen
-<!--SR:!2000-01-01,1,250!2024-02-09,4,274-->
+<!--SR:!2024-02-12,4,275!2024-02-09,4,274-->
 
 5. Vad innebär en tidsbegränsad anställning? Ge exempel på olika typer av tidsbegränsade anställningar.
 
 Om en arbetsgivare inte meddelar en arbetstagare med en provanställning att hen inte kommer fortsätta jobba innan prövotiden är slut blir anställningen automatiskt en tidsbegränsad anställning. Andra exempel på tidsbegränsade anställningar är: vikariat, praktikarbete, säsongsarbete och mera.
 
 Tidsbegränsad Anställning (Definition):: När en provanställning upphör utan att arbetsgivaren informerar arbetstagaren att den inte kommer få jobbet
-<!--SR:!2024-02-07,1,235!2024-02-07,1,235-->
+<!--SR:!2024-02-11,3,255!2024-02-07,1,235-->
 
 6. Redogör för några av de rättigheter och skyldigheter som följer med en anställning:
 
@@ -252,15 +279,18 @@ När det kommer till den fysiska arbetsmiljön ligger ansvaret för att företag
 
 8. Vad gör ett skyddsombud i ett företag?
 
-Om en arbetsplats har ==mer än 4 arbetare== ska det också finnas ett ==skyddsombud== som har till uppgift att ==kontrollera== arbetsmiljön och ==rapportera== eventuella brister. Skyddsombudet är ==utsett av arbetstagarna== och har rätten att stoppa verksamheten, ==stoppningsrätt==, om den tycker att arbetsförhållandena är tillräckligt farliga.
+Om en arbetsplats har mer än 4 arbetare ska det också finnas ett ==skyddsombud== som har till uppgift att kontrollera arbetsmiljön och rapportera eventuella brister. Skyddsombudet är utsett av arbetstagarna och har rätten att stoppa verksamheten, ==stoppningsrätt==, om den tycker att arbetsförhållandena är tillräckligt farliga.
 
-Skyddsombud (Definition):: En person vars uppgift är att kontrollera arbetsmiljön på en arbetsplats med mer än 4 arbetare, har stoppningsrätt
+Skyddsombud (Definition):: En person vars uppgift är att kontrollera arbetsmiljön på en arbetsplats med mer än 4 arbetare, har ==stoppningsrätt==
+<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
 
 9. Beskriv några möjliga orsaker till att sjukfrånvaron i Sverige har ökat sedan 1990-talet.
 
 Det finns flera orsaker som bidrar till den ökade sjukfrånvaron i Sverige som exempel: ökade effektivitetskrav, bristfällig arbetsorganisation och administrativt stöd, otydliga arbetsstrukturer och mera.
 
 10. Redogör för vad diskrimineringslagen anger vad gäller:
+
+[[Arbetsrättsliga Lagar#Diskrimineringslagen|Diskrimineringslagen]]:
 
 - Likabehandling i arbetslivet
 	- Innebär att alla ska ha samma möjligheter oavsett kön, ålder, ursprung, religion, sexuell läggning eller funktionsnedsättning.
@@ -273,9 +303,10 @@ Det finns flera orsaker som bidrar till den ökade sjukfrånvaron i Sverige som 
 
 11. Vad menas med avgångsvederlag?
 
-Ett avgångsvederlag är som en ekonomisk ersättning en arbetstagare får när dess anställnings avbryts.
+Ett ==avgångsvederlag== är som en ekonomisk ersättning en arbetstagare får när dess anställnings avbryts.
 
 Avgångsvederlag (Definition):: En ekonomisk ersättning en arbetstagare får när dess anställnings avbryts
+<!--SR:!2024-02-11,3,255!2000-01-01,1,250-->
 
 12. Vad innebär strategisk kompetensförsörjning?
 
@@ -287,15 +318,19 @@ När ett företag börjar överväga om kompetensen borde komma från externa ak
 
 Hawthornestudierna visade att om man visar hänsyn och intresse för arbetarna kommer de jobba fortare.
 
+Hawthornestudiernas Resultat (Definition):: Om man visar hänsyn och intresse för arbetarna kommer de jobba fortare
+<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+
 14. Vad innebär alienation?
 
 När en arbetare får en känsla av utanförskap och meningslöshet i förhållande till arbetet på grund av dåliga arbetsvillkor kallas det för alienation.
 
 Alienation (Definition):: När en arbetare får en känsla av utanförskap och meningslöshet i förhållande till arbetet på grund av dåliga arbetsvillkor
+<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
 
 15. Redogör för Maslows behovspyramid. Ge ett exempel på varje nivå i behovspyramiden.
 
-Maslows behovspyramid bygger på tanken att det finns ett antal motivationsteorier som säger att människors handlingar styrs av motivet att tillfredsställa vissa behov. Enligt Maslow är vissa behov viktigare än andra och att dessa behov bygger på varandra som en pyramid. Att endast när ett behov längre ner i pyramiden är uppnått kan vi börja tänka på nästa.
+[[Maslows Behovspyramid]] bygger på tanken att det finns ett antal motivationsteorier som säger att människors handlingar styrs av motivet att tillfredsställa vissa behov. Enligt Maslow är vissa behov viktigare än andra och att dessa behov bygger på varandra som en pyramid. Att endast när ett behov längre ner i pyramiden är uppnått kan vi börja tänka på nästa.
 
 Maslows Behovspyramid (5)
 ??
@@ -305,22 +340,20 @@ Maslows Behovspyramid (5)
 - Esteem needs
 - Self-actualization
 ![[Maslow's Hierarchy Of Needs ME1003.png]]
+<!--SR:!2024-02-09,1,237!2000-01-01,1,250-->
 
 16. Redogör för Herzbergs tvåfaktorsteori. Ge tre exempel på varje faktor.
 
-Enligt Herzbergs tvåfaktorsteori finns det endast hygienfaktorer och motivationsfaktorer. ==Hygienfaktorer== är sådana som är ==nödvändiga== för att man ska ==överhuvudtaget trivas== vid sin arbetsplats, exempelvis: ==lön==, ==arbetsmiljö== och ==personalpolitik==. Även om alla dessa faktorer är uppfyllda betyder det inte nödvändigtvis att man är motiverad till att jobba. Endast när ==motivationsfaktorerna== är uppfyllda kommer en arbetare göra ett ==bra jobb==, exempel på det är intressant arbetsinnehåll, professionellt erkännande och möjligheter till utveckling.
+Enligt [[Herzbergs Tvåfaktorsteori]] finns det endast hygienfaktorer och motivationsfaktorer. ==Hygienfaktorer== är sådana som är ==nödvändiga== för att man ska ==överhuvudtaget trivas== vid sin arbetsplats, exempelvis: ==lön==, ==arbetsmiljö== och ==personalpolitik==. Även om alla dessa faktorer är uppfyllda betyder det inte nödvändigtvis att man är motiverad till att jobba. Endast när ==motivationsfaktorerna== är uppfyllda kommer en arbetare göra ett ==bra jobb==, exempel på det är intressant arbetsinnehåll, professionellt erkännande och möjligheter till utveckling.
 
-Hygienfaktorer i Herzbergs Tvåfaktorsteori (Definition):: Faktorer som är nödvändiga för att man ska överhuvudtaget trivas vid sin arbetsplats, exempelvis lön, arbetsmiljö, personalpolitik
-
-Motivationsfaktorer i Herzbergs Tvåfaktorsteori (Definition):: Faktorer för att man ska göra ett bra jobb, exempelvis intressant arbetsinnehåll, professionellt erkännande och möjligheter till utveckling
 ![[Herzbergs Tvåfaktorsteori ME1003.png]]
 
 17. Redogör för och exemplifiera krav-kontrollmodellen.
 
-Krav-kontrollmodellen går ut på att en arbetare kan klara av höga psykiska krav, hantera stress, om det samtidigt finns möjligheter för att själv planera och kontrollera arbetet. Exempelvis om man sätter för höga krav på en arbetare utan att ge de handlingsutrymme kommer de bli slutkörda. Det är optimalt om en arbetare har både hög kontroll över arbete och höga krav från sin arbetsgivare, i sådana situationer utvecklas arbetaren.
+==Krav-kontrollmodellen== går ut på att en arbetare kan klara av höga psykiska krav, hantera stress, om det samtidigt finns möjligheter för att själv planera och kontrollera arbetet. Exempelvis om man sätter för höga krav på en arbetare utan att ge de handlingsutrymme kommer de bli slutkörda. Det är optimalt om en arbetare har både hög kontroll över arbete och höga krav från sin arbetsgivare, i sådana situationer utvecklas arbetaren.
 
 Krav-kontrollmodellen (Definition):: En modell som visar att en arbetare kan hantera mer stress om den också har mycket handlingsutrymme i arbetet
-<!--SR:!2024-02-09,4,270!2000-01-01,1,250-->
+<!--SR:!2024-02-09,4,270!2024-02-12,4,277-->
 
 18. Förklara följande sätt att göra arbetet mer hållbart:
 
@@ -343,20 +376,16 @@ En formell grupp skapas av företaget för att uppfylla en specifik funktion. En
 
 Grupptänkande sker när en grupp av människor är så tätt sammanhållen och homogen i sitt tänkande att de inte kan ta åt sig nya idéer från omvärlden vilket kan leda till felaktigt beslutstagande.
 
+Grupptänkande (Definition):: När en grupp av människor är så tätt sammanhållen och homogen i sitt tänkande att de inte kan ta åt sig nya idéer från omvärlden vilket kan leda till felaktigt beslutstagande
+<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
+
 21. Beskriv och exemplifiera FIRO-modellen.
 
-FIRO står för Fundamental Interpersonal Relations Orientation. Det är en gruppdynamiks modell som säger att en grupp går från omogen till mogen först efter att den gått igenom tre faser. Dessa tre faser heter:
+[[FIRO-Modellen]] står för Fundamental Interpersonal Relations Orientation. Det är en gruppdynamiks modell som säger att en grupp går från omogen till mogen först efter att den gått igenom tre faser. Dessa tre faser heter:
 
 - ==Tillhörafasen==: Här bestäms vem som är gruppens medlemmar.
 - ==Rollsökningsfasen==: Här finner alla sin roll i gruppen.
-- ==Samhörighetsfasen==: Här kan gruppen börja arbeta effektivt
-
-Faserna av FIRO-modellen (3)
-??
-- ==Tillhörafasen==: Här bestäms vem som är gruppens medlemmar.
-- ==Rollsökningsfasen==: Här finner alla sin roll i gruppen.
-- ==Samhörighetsfasen==: Här kan gruppen börja arbeta effektivt
-<!--SR:!2024-02-06,1,230!2024-02-09,4,270-->
+- ==Samhörighetsfasen==: Här kan gruppen börja arbeta effektivt.
 
 22. Beskriv skillnaden mellan en formell och en informell ledare.
 
@@ -377,6 +406,12 @@ En formell ledare är någon som har mandat både från sina överordnade och si
 	- När vilken typ av ledare man är beror på hur mycket intresse man har för människor och hur mycket intresse för verksamheten.
 - Den situationsanpassade ledarskapsmodellen
 	- När ledaren anpassar sig efter mognaden av gruppen.
+
+Managerial Grid, Flerdimensionell Ledarstil (Definition):: När vilken typ av ledare man är beror på hur mycket intresse man har för människor och hur mycket intresse för verksamheten
+<!--SR:!2024-02-09,1,237!2000-01-01,1,250-->
+
+Den Situationsanpassade Ledarskapsmodellen, Flerdimensionell Ledarstil (Definition):: När ledaren anpassar sig efter mognaden av gruppen
+<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
 
 25. Redogör för HR-avdelningens roll i en verksamhet.
 
@@ -467,26 +502,33 @@ Den formella organisationen är det avsiktliga sättet att dela upp och samordna
 
 Det är vanligt i en organisation att man har som en rangordning beroende på hur mycket ansvar man har, alltså vem som är överordnad och vem som är underordnad. Vertikal specialisering handlar om hur platt eller spetsig en organisations hierarki är.
 
+Vertikal Specialisering (Definition):: Handlar om hur platt eller spetsig en organisations hierarki är
+<!--SR:!2024-02-09,1,237!2000-01-01,1,250-->
+
 12. Vad menas med kontrollspann? Vilka fördelar har brett respektive smalt kontrollspann?
 
 Kontrollspann är hur många direkt underställda medarbetare en viss chef har. Brett kontrollspann är bra när arbetsuppgifterna är standardiserade och när de medarbetarna behöver självständighet. Smalt kontrollspann är bra när medarbetarna behöver chefens hjälp eller att chefen behöver övervaka sina underställda.
 
+Kontrollspann (Definition):: Handlar om hur många direkt underställda medarbetare en viss chef har, kan vara brett eller spetsigt
+<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
+
 13. Beskriv följande organisationsformer:
 
-- Linjeorganisation
-	- Handlar om att alla ska endast ha 1 överordnad chef och cheferna ska inte ge order till de som inte är direkt under sig.
-- Linje-stabsorganisation
-	- En stab är en enhet som står vid sidan av de formella ordervägarna, deras jobb är att ge råd om beslut och förmedla service.
-- Funktionell organisation
-	- Handlar mer om att dela upp och specialisera chefernas arbete, att medarbetarna har flera chefer de kan be om råd. 
+[[Organisationsformer]]
 
+- ==Linjeorganisation==
+	- Handlar om att alla ska endast ha 1 överordnad chef och cheferna ska inte ge order till de som inte är direkt under sig.
+- ==Linje-stabsorganisation==
+	- En stab är en enhet som står vid sidan av de formella ordervägarna, deras jobb är att ge råd om beslut och förmedla service.
+- ==Funktionell organisation==
+	- Handlar mer om att dela upp och specialisera chefernas arbete, att medarbetarna har flera chefer de kan be om råd.
 
 14. Beskriv följande mekanismer för att skapa horisontella förbindelser:
 
 - Förbindelseroller
 	- När en person blir som en ambassadör mellan två enheter i ett företag, leder till enklare kommunikation mellan de två avdelningarna och att den personen blir en expert.
 - Stående kommittéer
-	- En grupp medlemmar från olika avdelningar som möts för att diskutera frågor av gemensamt intresse. 
+	- En grupp medlemmar från olika avdelningar som möts för att diskutera frågor av gemensamt intresse.
 - Tillfälliga arbetsgrupper
 	- När ett ovanligt, särskilt besvärligt eller stort problem uppkommer kan man skapa en grupp för att hantera just det problemet.
 - Projektorganisation

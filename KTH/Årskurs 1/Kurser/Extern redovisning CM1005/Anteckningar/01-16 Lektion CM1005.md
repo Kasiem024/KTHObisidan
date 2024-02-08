@@ -104,7 +104,7 @@ Skulder och eget kapital ökar på kredit och minskar på debet.
 ## Flashcards
 
 Ekonomisk livslängd (Definition):: Hur länge något fungerar "bra". Innan priset för drift och service blir för mycket
-<!--SR:!2024-02-08,9,250!2024-03-04,27,270-->
+<!--SR:!2024-03-10,31,270!2024-03-04,27,270-->
 
 Teknisk livslängd (Definition):: Hur länge något fungerar överhuvudtaget, oberoende av drift- eller servicekostnader
 <!--SR:!2024-02-11,12,270!2024-02-14,15,290-->

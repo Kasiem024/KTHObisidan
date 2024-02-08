@@ -23,4 +23,4 @@ Bokföringslagen (Definition):: En lag som reglerar hur bokföring för en verks
 <!--SR:!2024-02-09,3,266!2024-02-10,3,250-->
 
 Bokföringsskyldighet (Definition):: En del av [[Bokföringslagen]] som säger att alla [[Affärshändelse]] ska bokföras systematiskt så att de kan registreras i en [[Grundbok]] och en [[Huvudbok]]. Alla dessa affärshändelser ska ha [[Verifikation]]. Den innebär även att upprätta ett [[Årsbokslut]] och en [[Årsredovisning]]
-<!--SR:!2024-02-08,1,206!2024-02-07,1,230-->
+<!--SR:!2024-02-09,1,186!2024-02-07,1,230-->

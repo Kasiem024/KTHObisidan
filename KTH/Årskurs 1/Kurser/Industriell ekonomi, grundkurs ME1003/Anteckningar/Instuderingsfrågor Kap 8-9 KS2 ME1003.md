@@ -177,7 +177,7 @@ En ==inbetalning== uppstår i det ögonblick pengar betalas in, till exempel nä
 
 En ==utbetalning== uppstår i det ögonblick pengar betalas ut, till exempel när företaget betalar en faktura för en vara en leverantör har levererat.
 
-Begreppet ==ininbetalningsöverskott== kan användas för att beskriva en investering. De flesta investeringar börjar med en ==grundinvestering==. Över åren kommer företaget att ha en massa in- och utbetalningar, summan av dessa betalningar under ett år kallas inbetalningsöverskott. Det kan också vara negativt ifall utbetalningarna är större än inbetalningarna ett visst år.
+Begreppet ==inbetalningsöverskott== kan användas för att beskriva en investering. De flesta investeringar börjar med en ==grundinvestering==. Över åren kommer företaget att ha en massa in- och utbetalningar, summan av dessa betalningar under ett år kallas inbetalningsöverskott. Det kan också vara negativt ifall utbetalningarna är större än inbetalningarna ett visst år.
 
 3. Beskriv skillnaden mellan ekonomisk livslängd och teknisk livslängd.
 

@@ -37,9 +37,9 @@ Vad brukar räknas som kostnad inom RR?
 ## Flashcards
 
 Kostnad (Definition):: En periodiserad utgift. När företaget förbrukar en resurs. Med andra ord ==värdet== av en ==förbrukad resurs== under en viss ==period==
-<!--SR:!2024-02-08,9,250!2024-02-26,24,270-->
+<!--SR:!2024-03-10,31,270!2024-02-26,24,270-->
 
-Exempel på resurser (Kostnad) (5)
+Exempel på resurser (5)
 ??
 - Arbetskraft (lön).
 - Maskiner/Utrustning.
@@ -49,4 +49,4 @@ Exempel på resurser (Kostnad) (5)
 <!--SR:!2024-02-12,13,270!2024-02-09,10,270-->
 
 Motsatsen till kostnad:: Motsatsen till [[Intäkt]]
-<!--SR:!2024-02-11,12,270!2024-02-05,10,270-->
+<!--SR:!2024-02-11,12,270!2024-03-15,37,290-->

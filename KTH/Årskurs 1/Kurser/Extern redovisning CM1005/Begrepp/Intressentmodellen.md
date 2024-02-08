@@ -33,11 +33,11 @@ Intressenter (Definition):: Grupper/personer som påverkar eller påverkas av et
 
 Intressenter i intressentmodellen (7)
 ??
-- ==Aktieägare.==
-- ==Anställda.==
-- ==Kunder.==
-- ==Bank/Långivare/Kreditorer.==
-- ==Leverantör.==
-- ==Myndigheter.==
-- ==Ledningen.==
-<!--SR:!2024-02-04,5,230!2024-02-06,11,270-->
+- Aktieägare.
+- Anställda.
+- Kunder.
+- Bank/Långivare/Kreditorer.
+- Leverantör.
+- Myndigheter.
+- Ledningen.
+<!--SR:!2024-02-22,15,250!2024-03-19,40,290-->

@@ -19,4 +19,4 @@ Kassaflöde (Definition):: Ditt saldo, likvida medel. Hur mycket pengar du har p
 <!--SR:!2024-02-15,10,252!2024-02-29,24,270-->
 
 De två delarna av ett kassaflöde:: Redovisningen av [[Inbetalning]] och [[Utbetalning]] under en viss period
-<!--SR:!2024-02-06,11,270!2024-02-09,14,290-->
+<!--SR:!2024-03-18,40,290!2024-02-09,14,290-->

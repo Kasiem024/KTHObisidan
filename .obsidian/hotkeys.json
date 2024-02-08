@@ -111,24 +111,6 @@
     }
   ],
   "markdown:add-metadata-property": [],
-  "markdown:toggle-preview": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "R"
-    }
-  ],
-  "editor:toggle-source": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "P"
-    }
-  ],
   "app:toggle-left-sidebar": [
     {
       "modifiers": [
@@ -180,15 +162,6 @@
         "Mod"
       ],
       "key": "A"
-    }
-  ],
-  "obsidian-languagetool-plugin:ltcheck-text": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "S"
     }
   ],
   "obsidian-languagetool-plugin:ltaccept-suggestion-1": [
@@ -273,14 +246,6 @@
       "key": "ArrowRight"
     }
   ],
-  "workspace:export-pdf": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "P"
-    }
-  ],
   "omnisearch:show-modal": [
     {
       "modifiers": [
@@ -289,13 +254,149 @@
       "key": "Q"
     }
   ],
-  "templater-obsidian:jump-to-next-cursor-location": [
+  "templater-obsidian:insert-templater": [
     {
       "modifiers": [
         "Alt",
         "Mod"
       ],
+      "key": "T"
+    }
+  ],
+  "templater-obsidian:jump-to-next-cursor-location": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
       "key": "C"
+    }
+  ],
+  "markdown:toggle-preview": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "R"
+    }
+  ],
+  "templater-obsidian:replace-in-file-templater": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "R"
+    }
+  ],
+  "templater-obsidian:create-new-note-from-template": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ],
+  "obsidian-spaced-repetition:srs-review-flashcards": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "F"
+    }
+  ],
+  "backlink:open": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "B"
+    }
+  ],
+  "workspace:close-others": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "W"
+    }
+  ],
+  "file-explorer:new-file-in-current-tab": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "N"
+    }
+  ],
+  "obsidian-excalidraw-plugin:insert-link": [],
+  "obsidian-excalidraw-plugin:toggle-lock": [],
+  "workspace:export-pdf": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "P"
+    }
+  ],
+  "graph:open-local": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "G"
+    }
+  ],
+  "editor:insert-link": [],
+  "editor:insert-codeblock": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "C"
+    }
+  ],
+  "editor:insert-table": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "editor:insert-mathblock": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "M"
+    }
+  ],
+  "obsidian-linter:lint-file": [],
+  "obsidian-spaced-repetition:srs-cram-flashcards": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "F"
     }
   ]
 }

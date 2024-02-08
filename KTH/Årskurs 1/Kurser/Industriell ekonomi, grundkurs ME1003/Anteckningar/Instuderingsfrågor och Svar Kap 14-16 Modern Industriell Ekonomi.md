@@ -1,6 +1,6 @@
 # OBS
 
-#nograph
+Tags: #nograph
 
 **Detta är instuderingsfrågor tagna från övningsboken. Det finns inget facit för frågorna utan svaren är mina egna baserat på vad jag har läst i boken och vad som har sagts på föreläsningarna.**
 
@@ -430,14 +430,14 @@ Kontrollspann är hur många direkt underställda medarbetare en viss chef har. 
 - ==Linje-stabsorganisation==
 	- En stab är en enhet som står vid sidan av de formella ordervägarna, deras jobb är att ge råd om beslut och förmedla service.
 - ==Funktionell organisation==
-	- Handlar mer om att dela upp och specialisera chefernas arbete, att medarbetarna har flera chefer de kan be om råd. 
+	- Handlar mer om att dela upp och specialisera chefernas arbete, att medarbetarna har flera chefer de kan be om råd.
 
 14. Beskriv följande mekanismer för att skapa horisontella förbindelser:
 
 - ==Förbindelseroller==
 	- När en person blir som en ambassadör mellan två enheter i ett företag, leder till enklare kommunikation mellan de två avdelningarna och att den personen blir en expert.
 - ==Stående kommittéer==
-	- En grupp medlemmar från olika avdelningar som möts för att diskutera frågor av gemensamt intresse. 
+	- En grupp medlemmar från olika avdelningar som möts för att diskutera frågor av gemensamt intresse.
 - ==Tillfälliga arbetsgrupper==
 	- När ett ovanligt, särskilt besvärligt eller stort problem uppkommer kan man skapa en grupp för att hantera just det problemet.
 - ==Projektorganisation==

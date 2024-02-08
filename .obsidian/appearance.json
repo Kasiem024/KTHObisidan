@@ -1,4 +1,14 @@
 {
   "accentColor": "",
-  "baseFontSize": 30
+  "baseFontSize": 25,
+  "enabledCssSnippets": [
+    "styles"
+  ],
+  "translucency": false,
+  "showViewHeader": true,
+  "cssTheme": "Prism",
+  "theme": "obsidian",
+  "interfaceFontFamily": "Inter",
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "Inter"
 }

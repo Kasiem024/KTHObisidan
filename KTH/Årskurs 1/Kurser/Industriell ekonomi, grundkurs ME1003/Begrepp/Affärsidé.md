@@ -13,11 +13,11 @@ En Affärsidé består av 3 delar:
 
 För att en Affärsidé ska lyckas behöver man alla tre delarna. Exempelvis om vi har en viss kompetens för att erbjuda en viss produkt kan vi lyckas bara om det finns en efterfrågan för den produkten från marknaden.
 
-==Yttre effektivitet==: Om man erbjuder något som marknaden vill ha.
+## Effektivitet
 
-==Inre effektivitet==: Om man har resurserna för att skapa ett visst erbjudande.
-
-==Total effektivitet== = Inre effektivitet + Yttre effektivitet
+- ==Inre effektivitet==: Om man har resurserna för att skapa ett visst erbjudande. Hur väl anpassad verksamheten är för att klara omvandlingen av olika resurser till färdiga produkter, ==att göra saker rätt==.
+- ==Yttre effektivitet==: Om man erbjuder något som marknaden vill ha. Hur väl verksamheten klarar av att uppfylla de krav som omgivningen ställer, ==att göra rätt saker==.
+- ==Total effektivitet== = Inre effektivitet + Yttre effektivitet
 
 ## Kopplat till
 
@@ -28,4 +28,11 @@ Delarna av en Affärsidé (3)
 - ==Marknad==: Vad kunderna/marknaden är i behov av.
 - [[Värdeerbjudandet]]: Vad vi har att erbjuda till kunderna/marknaden.
 - ==Resurser==: Vad våra resurser och kompetenser är.
-<!--SR:!2024-02-04,1,230!2024-02-04,1,230-->
+<!--SR:!2024-02-09,1,210!2024-02-04,1,230-->
+
+Effektivitets Begrepp (3)
+??
+- ==Inre effektivitet==: Om man har resurserna för att skapa ett visst erbjudande, ==att göra saker rätt==.
+- ==Yttre effektivitet==: Om man erbjuder något som marknaden vill ha, ==att göra rätt saker==.
+- ==Total effektivitet== = Inre effektivitet + Yttre effektivitet
+<!--SR:!2024-02-10,2,246!2000-01-01,1,250-->

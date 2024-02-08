@@ -48,11 +48,11 @@ Man kan dela in kostnader på flera olika sätt:
 ## K/I Analys
 
 Totala kostnader:
-Totala Kostnader = Fasta Kostnader + Rörliga Kostnader * Volym
-==TK = FK + RK * Volym==
+$Totala Kostnader = Fasta Kostnader + Rörliga Kostnader * Volym$
+$\color{red}TK = FK + RK * Volym$
 
 Nollpunkten:
-Totala Intäkter = Totala Kostnader
+$Totala Intäkter = Totala Kostnader$
 
 Kritisk Volym:
 Volymen när TI = TK
@@ -60,7 +60,7 @@ Volymen när TI = TK
 Säkerhetsmarginal:
 Verklig Volym - Kritisk Volym
 
-Särintäkter - Särkostnader = Täckningsbidrag
-Täckningsbidrag - Samkostnader = Resultat
+$Täckningsbidrag = Särintäkter - Särkostnader$
+$Resultat = Täckningsbidrag - Samkostnader$
 
 ## Flashcards

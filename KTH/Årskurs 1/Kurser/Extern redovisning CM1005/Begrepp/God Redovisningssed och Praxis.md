@@ -16,4 +16,4 @@ Alltså, man ska följa redovisningslagar och använda allmänt accepterat tillv
 ## Flashcards
 
 God Redovisningssed och Praxis (Definition):: När man följer redovisningslagar och använder allmänt accepterade tillvägagångssätt för sin redovisning
-<!--SR:!2024-02-09,2,232!2024-02-06,4,270-->
+<!--SR:!2024-02-09,2,232!2024-02-22,14,290-->

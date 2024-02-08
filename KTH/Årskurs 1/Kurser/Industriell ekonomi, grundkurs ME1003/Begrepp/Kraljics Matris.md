@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
-[[Kraljics Matris]] kan sägas vara en portföljanalys av företagets inköpta artiklar baserat på hur mycket artikeln påverkar [[Värdeerbjudandet]] och lönsamhet, respektive konsekvenserna av eventuella leveransproblem.
+[[Kraljics Matris]] kan sägas vara en portföljanalys av företagets inköpta artiklar baserat på hur mycket artikeln påverkar [[Värdeerbjudandet]] och [[Lönsamhet]], respektive konsekvenserna av eventuella leveransproblem.
 
 Alltså visar den hur viktig en viss inköpt artikel är och hur problematiskt det är ifall den inte levereras i tid.
 
@@ -21,7 +21,7 @@ Alltså visar den hur viktig en viss inköpt artikel är och hur problematiskt d
 ## Flashcards
 
 Kraljics Matris (Definition):: Visar hur viktig en viss inköpt artikel är och hur problematiskt det är ifall den inte levereras i tid
-<!--SR:!2000-01-01,1,250!2024-02-08,2,230-->
+<!--SR:!2024-02-09,1,228!2024-02-08,2,230-->
 
 Kraljics Matris (4)
 ??
@@ -29,3 +29,5 @@ Kraljics Matris (4)
 - ==Strategisk==: Utveckla ett fåtal nyckelleverantörer
 - ==Icke-kritisk==: Minska transaktionskostnaderna med färre leverantörer
 - ==Flaskhals==: Säkra leveranser hos nyckelleverantörer, sök alternativa leverantörer
+![[Kraljics Inköpsmatris ME1003.png]]
+<!--SR:!2024-02-09,1,228!2000-01-01,1,250-->

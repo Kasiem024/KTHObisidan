@@ -23,7 +23,7 @@ När ett företag säljer en produkt till en konsument. Kallas också Business t
 ## Flashcards
 
 Konsumentmarknad (Definition):: När ett företag säljer en produkt till en konsument. Kallas också Business to Consumer, B2C.
-<!--SR:!2024-02-03,4,270!2024-02-22,17,290-->
+<!--SR:!2024-02-25,17,290!2024-02-22,17,290-->
 
 Egenskaperna av en Konsumentmarknad (6)
 ??
@@ -33,4 +33,4 @@ Egenskaperna av en Konsumentmarknad (6)
 - ==Grad av formalisering==: Låg.
 - ==Marknadskanal==: Lång, ofta flera mellanhänder.
 - ==Parternas förhandlingsstyrka==: Asymmetrisk relation, leverantören starkare än konsumenten.
-<!--SR:!2024-02-05,3,230!2024-02-04,4,270-->
+<!--SR:!2024-02-10,2,210!2024-02-04,4,270-->

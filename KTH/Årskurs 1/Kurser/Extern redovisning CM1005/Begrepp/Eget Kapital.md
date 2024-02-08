@@ -9,9 +9,9 @@ Eget Kapital är det belopp som ägarna satt in i företaget, och som utgör ski
 
 Exempel på Eget Kapital:
 
-- Startkapital: Det ägarna satte in vid grundandet.
-- Kapitaltillskott: Det ägarna satte in efter grundandet.
-- Vinster: Vad företag tjänat efter vinstutdelning.
+- ==Startkapital==: Det ägarna satte in vid grundandet.
+- ==Kapitaltillskott==: Det ägarna satte in efter grundandet.
+- ==Vinster==: Vad företag tjänat efter vinstutdelning.
 
 [Eget Kapital, Visma](https://vismaspcs.se/ekonomiska-termer/vad-ar-eget-kapital)
 

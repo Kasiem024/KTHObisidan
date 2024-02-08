@@ -10,7 +10,7 @@ Man kan dela in [[Marknadsföring]] på tre analysnivåer:
 ## Strategiskt
 
 - Målgrupper: [[Marknadssegmentering]], vilken målgrupp ska man rikta sig mot, att dela upp marknaden.
-- Varumärke: Löftet till kunderna.
+- [[Varumärke]]: Löftet till kunderna.
 - Produkter : [[Värdeerbjudandet]] till kunderna.
 
 ## Taktiskt

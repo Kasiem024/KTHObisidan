@@ -12,7 +12,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Flashcards
 
-Alla företagsformer (5)
+Alla företagsformer (6)
 ??
 - [[Enskild näringsverksamhet]]
 - [[Aktiebolag]]
@@ -20,4 +20,4 @@ Alla företagsformer (5)
 - [[Ekonomisk förening]]
 - [[Ideell förening]]
 - [[Konsortium]]
-<!--SR:!2024-02-06,13,270!2024-02-10,4,272-->
+<!--SR:!2024-03-26,48,290!2024-02-10,4,272-->

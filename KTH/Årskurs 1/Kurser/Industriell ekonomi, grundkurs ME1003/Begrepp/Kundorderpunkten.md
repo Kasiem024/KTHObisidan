@@ -19,14 +19,21 @@ Om man följer "Engineer to Order" är leveranstiden lång då ingen del av prod
 
 ![[Kundorderpunkten ME1003.png]]
 
+### Skillnaden mellan produktion mot lager och produktion mot kundorder
+
+Produkter som produceras mot lager är ofta standardvaror som inte har någon kundanpassning alls, exempelvis tandkräm. Alltså är hela tillverkningsprocessen redan klar och nu behöver produkten bara levereras till kunden, kort leveranstid.
+
+När en produkt produceras mot kundorder betyder det att det redan finns råmaterial och komponenter i lagret men tillverkningen av produkten inte börjat då det inte finns någon kund som villa köpa. Bilverkstäder är en tjänsteverksamhet som använder denna logik, de har allt de behöver för att börja jobbet men kan inte faktiskt påbörja förens de fått en kundorder.
+
 ## Kopplat till
 
 ## Flashcards
 
 Kundorderpunkt (Definition):: Ett begrepp som beskriver hur mycket av produktens tillverkning som är redan färdig (genomloppstid) när kunden gör beställningen (leveranstid) och hur ==kundanpassad== produkten är
-<!--SR:!2024-02-02,3,250!2024-02-02,3,250-->
+<!--SR:!2024-02-10,2,230!2024-02-02,3,250-->
 
 Genomloppstid (Definition):: Tiden som det tar att tillverka produkten från början till slut
+<!--SR:!2024-02-11,3,252!2000-01-01,1,250-->
 
 Leveranstid (Definition):: Tiden som det tar för kunden att få produkten efter att beställningen har gjorts
-<!--SR:!2000-01-01,1,250!2024-02-10,4,270-->
+<!--SR:!2024-02-11,3,252!2024-02-10,4,270-->

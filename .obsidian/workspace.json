@@ -4,18 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "15e70b055a29c60f",
+        "id": "96d8f2e40286e364",
         "type": "tabs",
         "children": [
           {
-            "id": "3abebeec058fd807",
+            "id": "0f8c1be6944902d2",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS2 Kalkyl 1-2 Övning.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "98db927f82cfa603",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -44,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#year2024",
+                "query": "portfölj",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 357.5,
-    "collapsed": true
+    "width": 372.5026054382324
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -80,7 +90,7 @@
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -147,52 +157,53 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "handwritten-notes:Create empty handwritten note": false,
+      "handwritten-notes:Create empty handwritten note": true,
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": true,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3abebeec058fd807",
+  "active": "98db927f82cfa603",
   "lastOpenFiles": [
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/02-07 Lektion Moms Pelles Golfshop CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS2 Kalkyl 1-2 Övning.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4S.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-16 Lektion CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Moms.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Affärshändelse.md",
-    "Obsidian Plugins/Templates/Lektion Template.md",
-    "Obsidian Plugins/Templates/Begrepp Template.md",
-    "Obsidian Plugins/Templates/Default Template.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-23 Lektion ME1003.md",
-    "Obsidian Plugins/Templates/TEST.md",
-    "Obsidian Plugins/Templates/Annotator Template.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS2 Exempel CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-05 KS2 Kalkyl 2 Exempel CM1005.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kontoplan CM1005.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Untitled.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens och Marknadsföringens Olika Perspektiv.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutvecklingens Analysnivåer.md",
+    "Obsidian Plugins/Theme Test.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföring.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Företagsmarknad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Reklam VS Relationsmarknadsföring ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Generella Anteckningar ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsplan.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intäkt.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inkomst.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/02-01 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-18 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeskapandet.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/02-02 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Strategiprocessen enligt Philip Kotler.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kraljics Matris.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Michael Porters Femkraftsmodell.md",
     "Obsidian Plugins/Scripts/parentFolderName.js",
     "Obsidian Plugins/Scripts/parentFolderNAme.js",
-    "Obsidian Plugins/Scripts/Main.js.md",
     "Obsidian Plugins/Scripts/main.js",
     "Obsidian Plugins/Scripts",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-18 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/T-Konton.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-23 Lektion CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/BAS-kontoplan.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Uppgifter Kap 3.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Untitled.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-07 Moms Pelles Golfshop CM1005.excalidraw.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-07 Moms Pelles Golfshop CM1005.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutveckling i Olika Typer av Verksamheter.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföringens Analysnivåer.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Hållbarhetsrapport.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-05 KS2 Kalkyl 2 Exempel CM1005.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS2 Exempel CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS2-Exempel-CM1005-xkx5d_ocr.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS1 Komplettering CM1005.pdf",
     "Obsidian Plugins/Handwritten Notes/New note.pdf",
@@ -203,8 +214,6 @@
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206084426.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Proportionellt Rörliga Kostnader ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Regressivt Rörliga Kostnader ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Resultatdiagram ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Påläggskalkyl ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

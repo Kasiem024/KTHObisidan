@@ -26,4 +26,4 @@ Delarna av en SWOT analys (4)
 - ==Weaknesses==: Internt, vad är vi dåliga jämfört med våra konkurrenter, vilka brister har vi
 - ==Opportunities==: Externt, hur ser marknaden ut, finns det något vi kan ta nytta av
 - ==Threats==: Externt, hur ser marknaden ut, finns det något vi borde akta oss för
-<!--SR:!2024-02-03,4,270!2024-02-18,13,290-->
+<!--SR:!2024-02-22,14,290!2024-02-18,13,290-->

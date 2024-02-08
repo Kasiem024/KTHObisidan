@@ -13,5 +13,6 @@
   "text-extractor",
   "handwritten-notes",
   "dataview",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-style-settings"
 ]

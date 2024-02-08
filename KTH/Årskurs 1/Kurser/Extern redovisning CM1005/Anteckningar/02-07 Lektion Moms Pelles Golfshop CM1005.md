@@ -6,6 +6,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 [[02-07 Moms Pelles Golfshop CM1005.excalidraw]]
 
 ---
+
 ## Pelles Golfshop1
 
 Pelle köper 100 nya Titleistbollar för 37 kr/st
@@ -47,6 +48,7 @@ Han får 30 dagars kredittid
 Totalt 4 affärshändelser
 
 ---
+
 ## Pelles Golfshop 4
 
 1/6 Pelle köper 100 nya Titleistbollar för 30 kr/st exklusive moms

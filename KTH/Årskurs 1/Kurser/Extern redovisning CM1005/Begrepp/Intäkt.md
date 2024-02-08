@@ -11,7 +11,7 @@ Begreppet intäkt är kopplat till företagets redovisning och beskattning. I
 
 Kredit. När man levererar något.
 
-Inkomster är det som löpande tas emot under året. När inkomsten hänförs till rätt redovisningsperiod, blir det en intäkt. ==En intäkt är alltså en periodiserad [[Inkomst]].==
+Inkomster är det som löpande tas emot under året. När inkomsten hänförs till rätt redovisningsperiod, blir det en intäkt. ==En intäkt är alltså en periodiserad== [[Inkomst]].
 
 > Intäkter är försäljningsvärdet av de prestationer (varor och tjänster) som levereras eller utförs under en viss period, exempelvis ett år.
 

@@ -30,9 +30,10 @@ Inom [[Produktion]] vill man vara vart det är billigast att producera produkten
 
 Produktion och Marknadsföring Olika Perspektiv (5)
 ??
-- Produktportfölj: Antalet produkter/varianter.
-- Produktstandardisering: Hög eller låg standardisering.
-- Prestationsmätning: Kostnadsenhet mot intäktsenhet.
-- Kapacitetsutnyttjande: Hög kapacitet mot överbemanning.
-- Lokalisering: Nära produkten eller nära kunden.
-<!--SR:!2024-02-04,1,208!2024-01-31,1,230-->
+- ==Produktportfölj==: Antalet produkter/varianter.
+- ==Produktstandardisering==: Hög eller låg standardisering.
+- ==Prestationsmätning==: Kostnadsenhet mot intäktsenhet.
+- ==Kapacitetsutnyttjande==: Hög kapacitet mot överbemanning.
+- ==Lokalisering==: Nära produkten eller nära kunden.
+![[Produktion och Marknadsföring Olika Perspektiv ME1003.png]]
+<!--SR:!2024-02-09,1,188!2024-01-31,1,230-->

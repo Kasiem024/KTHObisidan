@@ -9,7 +9,7 @@ Förädlingsvärde definieras som differensen mellan företagens intäkter för 
 
 Alltså är Förädlingsvärdet priset av produkten minus kostnaden för tillverkningen av produkten, alltså sin ==vinstmarginal==. Dock inte för den individuella produkten utan för hela företaget.
 
-Man kan också säga att Förädlingsvärdet är ett ekonomiskt mått på hur stort värde företaget tillför genom sin verksamhet. Alltså det värdet som företaget skapar i förhållande till om kunderna själva hade utfört resurstransformationen.
+Man kan också säga att Förädlingsvärdet är ett ekonomiskt mått på hur stort värde företaget tillför genom sin verksamhet. Alltså det värdet som företaget skapar i förhållande till om kunderna själva hade utfört [[Resurstransformation]].
 
 ## Kopplat till
 
@@ -19,4 +19,4 @@ Man kan också säga att Förädlingsvärdet är ett ekonomiskt mått på hur st
 ## Flashcards
 
 Förädlingsvärde (Definition):: Priset av en produkt minus kostnaden för tillverkningen av produkten, alltså vinstmarginal. Dock inte för den individuella produkten utan för hela företaget
-<!--SR:!2024-02-07,2,248!2024-02-07,2,230-->
+<!--SR:!2024-02-09,1,228!2024-02-07,2,230-->

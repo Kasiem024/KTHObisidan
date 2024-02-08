@@ -23,7 +23,7 @@ Några kända metoder inom kvalitetsledning är:
 ## Flashcards
 
 Kvalitetsledning (Definition):: Samlingsnamn för de principer, metoder och verktyg som används för att nå en god kvalitet på företagets produkter och processer
-<!--SR:!2024-02-07,1,228!2000-01-01,1,250-->
+<!--SR:!2024-02-07,1,228!2024-02-09,1,225-->
 
 Metoder inom Kvalitetsledning (4)
 ??
@@ -31,4 +31,4 @@ Metoder inom Kvalitetsledning (4)
 - ==Fiskbensdiagram==: En metodik för att identifiera orsakssamband mellan olika faktorer
 - ==Fem Varför==: Att ställa frågan varför fem gånger för att identifiera grundorsaker till ett identifierat kvalitetsproblem
 - ==PDCA==: Plan, Do, Check, Act. Ett systematiskt arbetsschema vid kvalitetsförbättringar
-<!--SR:!2000-01-01,1,250!2024-02-04,1,230-->
+<!--SR:!2024-02-09,1,225!2024-02-04,1,230-->

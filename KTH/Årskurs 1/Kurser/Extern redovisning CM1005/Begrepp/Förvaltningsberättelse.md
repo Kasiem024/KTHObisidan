@@ -21,7 +21,7 @@ Alla företag som ska ha en [[Årsredovisning]] ska också ha en förvaltningsbe
 ## Flashcards
 
 Förvaltningsberättelse (Definition):: En obligatorisk del av [[Årsredovisning]] som beskriver de viktigaste händelserna för företaget under året, plus andra lagstadgade uppgifter
-<!--SR:!2024-02-08,6,250!2024-02-02,3,250-->
+<!--SR:!2024-02-22,14,250!2024-02-17,10,270-->
 
 Uppgifter som ska inkluderas i förvaltningsberättelsen (4)
 ??
@@ -29,4 +29,4 @@ Uppgifter som ska inkluderas i förvaltningsberättelsen (4)
 - Händelser av väsentlig betydelse.
 - Förväntade framtida utvecklingar.
 - Förslag till disposition av årets resultat.
-<!--SR:!2024-01-31,1,230!2024-02-02,3,250-->
+<!--SR:!2024-02-10,2,210!2024-02-02,3,250-->
