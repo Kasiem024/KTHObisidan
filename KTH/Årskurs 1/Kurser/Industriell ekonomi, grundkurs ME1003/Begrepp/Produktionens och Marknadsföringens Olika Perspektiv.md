@@ -36,4 +36,4 @@ Produktion och Marknadsföring Olika Perspektiv (5)
 - ==Kapacitetsutnyttjande==: Hög kapacitet mot överbemanning.
 - ==Lokalisering==: Nära produkten eller nära kunden.
 ![[Produktion och Marknadsföring Olika Perspektiv ME1003.png]]
-<!--SR:!2024-02-09,1,188!2024-01-31,1,230-->
+<!--SR:!2024-02-10,1,168!2024-01-31,1,230-->

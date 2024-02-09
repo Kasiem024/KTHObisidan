@@ -4,29 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "96d8f2e40286e364",
+        "id": "f9969a8bb4001844",
         "type": "tabs",
         "children": [
           {
-            "id": "0f8c1be6944902d2",
+            "id": "f349e1c8aeb02054",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS2 Kalkyl 1-2 Övning.excalidraw.md"
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+                "mode": "source",
+                "source": false
               }
             }
-          },
-          {
-            "id": "98db927f82cfa603",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -55,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "portfölj",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 372.5026054382324
+    "width": 463.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -84,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md"
+              }
             }
           },
           {
@@ -167,37 +165,38 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "98db927f82cfa603",
+  "active": "f349e1c8aeb02054",
   "lastOpenFiles": [
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS2 Kalkyl 1-2 Övning.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4S.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Processtyper inom Varuproduktion.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
+    "Obsidian Plugins/Theme Test.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföring.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-16 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Maslows Behovspyramid.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Interimsfordring.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS2 Kalkyl 1-2 Övning.excalidraw.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS2 Exempel CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-05 KS2 Kalkyl 2 Exempel CM1005.excalidraw.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kontoplan CM1005.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Strategiprocessen enligt Philip Kotler.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kraljics Matris.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/BAS-kontoplan.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4S.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Untitled.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens och Marknadsföringens Olika Perspektiv.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutvecklingens Analysnivåer.md",
-    "Obsidian Plugins/Theme Test.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföring.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Företagsmarknad.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Reklam VS Relationsmarknadsföring ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Generella Anteckningar ME1003.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsplan.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intäkt.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inkomst.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/02-01 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/01-18 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeskapandet.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/02-02 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Strategiprocessen enligt Philip Kotler.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kraljics Matris.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Michael Porters Femkraftsmodell.md",
     "Obsidian Plugins/Scripts/parentFolderName.js",
     "Obsidian Plugins/Scripts/parentFolderNAme.js",
     "Obsidian Plugins/Scripts/main.js",

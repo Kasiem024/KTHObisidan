@@ -22,4 +22,4 @@ Marknadsföringsmixen 4P (Definition)
 - ==Pris (Price)==: [[Prissättning]] och andra försäljningsvillkor.
 - ==Plats (Place)==: [[Distributionskanaler]].
 - ==Påverkan (Promotion)==: Reklam, relationer, direkta försäljningsinsatser.
-<!--SR:!2024-02-09,1,210!2024-02-02,3,250-->
+<!--SR:!2024-02-09,1,210!2024-02-20,11,270-->

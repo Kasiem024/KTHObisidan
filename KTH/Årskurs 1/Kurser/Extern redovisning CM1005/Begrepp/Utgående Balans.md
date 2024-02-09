@@ -20,7 +20,7 @@ Utgående Balans (Definition):: Summan av de belopp som finns på tillgångs- oc
 
 Konton som bildar utgående balans (3)
 ??
-- Tillgångar.
-- Eget Kapital.
-- Skulder.
-<!--SR:!2024-02-10,11,270!2024-02-09,2,230-->
+- Tillgångar
+- Eget Kapital
+- Skulder
+<!--SR:!2024-02-10,11,270!2024-02-10,1,210-->

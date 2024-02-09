@@ -46,7 +46,7 @@ Exempel på resurser (5)
 - Energi/Bränsle.
 - Tid.
 - Kapital.
-<!--SR:!2024-02-12,13,270!2024-02-09,10,270-->
+<!--SR:!2024-02-12,13,270!2024-03-16,36,290-->
 
 Motsatsen till kostnad:: Motsatsen till [[Intäkt]]
 <!--SR:!2024-02-11,12,270!2024-03-15,37,290-->

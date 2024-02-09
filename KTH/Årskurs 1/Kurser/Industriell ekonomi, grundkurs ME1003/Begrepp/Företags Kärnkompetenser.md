@@ -16,7 +16,7 @@ Ett Företags Kärnkompetenser är de unika kompetenser i [[Värdeskapandet]] so
 ## Flashcards
 
 Ett Företags Kompetenser (Definition):: De unika egenskaperna i [[Värdeskapandet]] som gör att företagets produkter får stort kundvärde
-<!--SR:!2024-02-11,3,250!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,250!2024-02-11,2,248-->
 
 Egenskaperna av ett Företags Kompetenser (3)
 ??

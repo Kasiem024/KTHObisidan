@@ -42,7 +42,7 @@ För att kunna lyckas måste man välja en av dess tre och fokusera på den.
 
 Konkurrensstrategier (3)
 ??
-- Operativ överlägsenhet.
-- Produktledarskap.
-- Kundnärhet.
-<!--SR:!2024-02-04,5,250!2024-02-02,3,268-->
+- Operativ överlägsenhet
+- Produktledarskap
+- Kundnärhet
+<!--SR:!2024-02-28,19,270!2024-02-02,3,268-->

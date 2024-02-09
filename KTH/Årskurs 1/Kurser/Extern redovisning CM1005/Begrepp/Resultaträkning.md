@@ -62,4 +62,4 @@ När man delar upp verksamhetens kostnader i 3 huvudfunktioner:
 - Tillverkning
 - Försäljning
 - Administration
-<!--SR:!2024-02-09,1,175!2024-02-07,1,232-->
+<!--SR:!2024-02-09,1,175!2024-02-10,1,212-->

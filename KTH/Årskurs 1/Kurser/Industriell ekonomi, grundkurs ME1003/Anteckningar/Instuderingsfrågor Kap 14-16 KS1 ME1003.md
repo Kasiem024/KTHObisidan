@@ -59,7 +59,7 @@ Go where profits and growth are and where the competition isn't.
 När man har ett resursbaserat synsätt på strategi innebär det att man långsiktigt bygger upp och utvecklar företagets olika typer av resurser, till exempel personalkompetensen, varumärket och företagets teknologi. Strävan är att göra företagets resurser unika.
 
 Resursbaserat Synsätt på Strategi (Definition):: Handlar om att man långsiktigt bygger upp och utvecklar företagets olika typer av resurser, till exempel personalkompetensen, varumärket och företagets teknologi. Strävan är att göra företagets resurser unika
-<!--SR:!2024-02-09,1,235!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,235!2024-02-13,4,279-->
 
 9. Redogör för strategiprocessen enligt Kotler.
 
@@ -80,7 +80,7 @@ Funktionella Strategier (3)
 - Marknadsstrategi
 - Produktionsstrategi
 - Innovationsstrategi
-<!--SR:!2024-02-09,1,235!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,235!2024-02-12,3,259-->
 
 11. Beskriv strategiprocessen från planerad strategi till realiserad strategi enligt Mintzberg.
 
@@ -216,7 +216,7 @@ SMART Mål (5)
 - ==Accepterat==: Ska vara baserat på [[Affärsidé]].
 - ==Realistiskt==: Ska inte vara för utmanande.
 - ==Tidsbestämt==: Ska ha en deadline.
-<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,275!2024-02-13,4,279-->
 
 VAGT Mål (4)
 ??
@@ -224,7 +224,7 @@ VAGT Mål (4)
 - ***A***ccepterat
 - ***G***emensamt
 - ***T***idsbestämt
-<!--SR:!2024-02-09,1,235!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,235!2024-02-12,3,259-->
 
 ## Kapitel 15 Personalledning och HRM
 
@@ -246,7 +246,7 @@ VAGT Mål (4)
 Ett ==kollektivavtal== är ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera.
 
 Kollektivavtal (Definition):: Ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera
-<!--SR:!2024-02-08,3,254!2024-02-12,4,275-->
+<!--SR:!2024-02-19,10,274!2024-02-12,4,275-->
 
 3. Nämn några krav som ställs på arbetsgivaren vid anställning av en medarbetare.
 
@@ -257,14 +257,14 @@ När en medarbetare anställs ställs det en del krav på arbetsgivaren gälland
 En arbetstagare är som regel ==tillsvidareanställd== såvida inget har tidigare sagts om anställningsförhållanden. Det är endast genom en ==uppsägning==, vilket måste vara ==sakligt grundad==, eller genom ett ==avskedande==, om arbetstagaren har gjort ett ==avtalsbrott==, som en sådan anställning kan upphöra.
 
 Tillsvidareanställning (Definition):: Om inget har sagts tidigare om anställningsförhållanden är detta den normala anställningsformen
-<!--SR:!2024-02-12,4,275!2024-02-09,4,274-->
+<!--SR:!2024-02-12,4,275!2024-02-24,15,294-->
 
 5. Vad innebär en tidsbegränsad anställning? Ge exempel på olika typer av tidsbegränsade anställningar.
 
 Om en arbetsgivare inte meddelar en arbetstagare med en provanställning att hen inte kommer fortsätta jobba innan prövotiden är slut blir anställningen automatiskt en tidsbegränsad anställning. Andra exempel på tidsbegränsade anställningar är: vikariat, praktikarbete, säsongsarbete och mera.
 
 Tidsbegränsad Anställning (Definition):: När en provanställning upphör utan att arbetsgivaren informerar arbetstagaren att den inte kommer få jobbet
-<!--SR:!2024-02-11,3,255!2024-02-07,1,235-->
+<!--SR:!2024-02-11,3,255!2024-02-12,3,255-->
 
 6. Redogör för några av de rättigheter och skyldigheter som följer med en anställning:
 
@@ -282,7 +282,7 @@ När det kommer till den fysiska arbetsmiljön ligger ansvaret för att företag
 Om en arbetsplats har mer än 4 arbetare ska det också finnas ett ==skyddsombud== som har till uppgift att kontrollera arbetsmiljön och rapportera eventuella brister. Skyddsombudet är utsett av arbetstagarna och har rätten att stoppa verksamheten, ==stoppningsrätt==, om den tycker att arbetsförhållandena är tillräckligt farliga.
 
 Skyddsombud (Definition):: En person vars uppgift är att kontrollera arbetsmiljön på en arbetsplats med mer än 4 arbetare, har ==stoppningsrätt==
-<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,275!2024-02-13,4,279-->
 
 9. Beskriv några möjliga orsaker till att sjukfrånvaron i Sverige har ökat sedan 1990-talet.
 
@@ -306,7 +306,7 @@ Det finns flera orsaker som bidrar till den ökade sjukfrånvaron i Sverige som 
 Ett ==avgångsvederlag== är som en ekonomisk ersättning en arbetstagare får när dess anställnings avbryts.
 
 Avgångsvederlag (Definition):: En ekonomisk ersättning en arbetstagare får när dess anställnings avbryts
-<!--SR:!2024-02-11,3,255!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,255!2024-02-13,4,279-->
 
 12. Vad innebär strategisk kompetensförsörjning?
 
@@ -319,14 +319,14 @@ När ett företag börjar överväga om kompetensen borde komma från externa ak
 Hawthornestudierna visade att om man visar hänsyn och intresse för arbetarna kommer de jobba fortare.
 
 Hawthornestudiernas Resultat (Definition):: Om man visar hänsyn och intresse för arbetarna kommer de jobba fortare
-<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,275!2024-02-13,4,279-->
 
 14. Vad innebär alienation?
 
 När en arbetare får en känsla av utanförskap och meningslöshet i förhållande till arbetet på grund av dåliga arbetsvillkor kallas det för alienation.
 
 Alienation (Definition):: När en arbetare får en känsla av utanförskap och meningslöshet i förhållande till arbetet på grund av dåliga arbetsvillkor
-<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,277!2024-02-13,4,279-->
 
 15. Redogör för Maslows behovspyramid. Ge ett exempel på varje nivå i behovspyramiden.
 
@@ -353,7 +353,7 @@ Enligt [[Herzbergs Tvåfaktorsteori]] finns det endast hygienfaktorer och motiva
 ==Krav-kontrollmodellen== går ut på att en arbetare kan klara av höga psykiska krav, hantera stress, om det samtidigt finns möjligheter för att själv planera och kontrollera arbetet. Exempelvis om man sätter för höga krav på en arbetare utan att ge de handlingsutrymme kommer de bli slutkörda. Det är optimalt om en arbetare har både hög kontroll över arbete och höga krav från sin arbetsgivare, i sådana situationer utvecklas arbetaren.
 
 Krav-kontrollmodellen (Definition):: En modell som visar att en arbetare kan hantera mer stress om den också har mycket handlingsutrymme i arbetet
-<!--SR:!2024-02-09,4,270!2024-02-12,4,277-->
+<!--SR:!2024-02-24,15,290!2024-02-12,4,277-->
 
 18. Förklara följande sätt att göra arbetet mer hållbart:
 
@@ -376,8 +376,8 @@ En formell grupp skapas av företaget för att uppfylla en specifik funktion. En
 
 Grupptänkande sker när en grupp av människor är så tätt sammanhållen och homogen i sitt tänkande att de inte kan ta åt sig nya idéer från omvärlden vilket kan leda till felaktigt beslutstagande.
 
-Grupptänkande (Definition):: När en grupp av människor är så tätt sammanhållen och homogen i sitt tänkande att de inte kan ta åt sig nya idéer från omvärlden vilket kan leda till felaktigt beslutstagande
-<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
+Grupptänkande (Definition):: När en grupp av människor är så tätt sammanhållen och homogen i sitt tänkande att den inte kan ta åt sig nya idéer från omvärlden vilket kan leda till felaktigt beslutstagande
+<!--SR:!2024-02-12,4,277!2024-02-13,4,279-->
 
 21. Beskriv och exemplifiera FIRO-modellen.
 
@@ -408,10 +408,10 @@ En formell ledare är någon som har mandat både från sina överordnade och si
 	- När ledaren anpassar sig efter mognaden av gruppen.
 
 Managerial Grid, Flerdimensionell Ledarstil (Definition):: När vilken typ av ledare man är beror på hur mycket intresse man har för människor och hur mycket intresse för verksamheten
-<!--SR:!2024-02-09,1,237!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,237!2024-02-13,4,279-->
 
 Den Situationsanpassade Ledarskapsmodellen, Flerdimensionell Ledarstil (Definition):: När ledaren anpassar sig efter mognaden av gruppen
-<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,277!2024-02-13,4,286-->
 
 25. Redogör för HR-avdelningens roll i en verksamhet.
 
@@ -503,14 +503,14 @@ Den formella organisationen är det avsiktliga sättet att dela upp och samordna
 Det är vanligt i en organisation att man har som en rangordning beroende på hur mycket ansvar man har, alltså vem som är överordnad och vem som är underordnad. Vertikal specialisering handlar om hur platt eller spetsig en organisations hierarki är.
 
 Vertikal Specialisering (Definition):: Handlar om hur platt eller spetsig en organisations hierarki är
-<!--SR:!2024-02-09,1,237!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,237!2024-02-13,4,286-->
 
 12. Vad menas med kontrollspann? Vilka fördelar har brett respektive smalt kontrollspann?
 
 Kontrollspann är hur många direkt underställda medarbetare en viss chef har. Brett kontrollspann är bra när arbetsuppgifterna är standardiserade och när de medarbetarna behöver självständighet. Smalt kontrollspann är bra när medarbetarna behöver chefens hjälp eller att chefen behöver övervaka sina underställda.
 
 Kontrollspann (Definition):: Handlar om hur många direkt underställda medarbetare en viss chef har, kan vara brett eller spetsigt
-<!--SR:!2024-02-12,4,277!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,277!2024-02-13,4,279-->
 
 13. Beskriv följande organisationsformer:
 

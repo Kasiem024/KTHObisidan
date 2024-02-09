@@ -25,4 +25,4 @@ Exempel på olika ekonomiska föreningar (5)
 - Bostadsrättsföreningar
 - Lantmännen
 - Södra skogsägarna
-<!--SR:!2024-02-14,12,270!2024-02-09,4,276-->
+<!--SR:!2024-02-14,12,270!2024-02-25,16,296-->

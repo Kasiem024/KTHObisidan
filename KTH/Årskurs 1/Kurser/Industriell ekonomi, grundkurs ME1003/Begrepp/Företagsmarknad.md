@@ -37,7 +37,7 @@ Egenskaperna av en Företagsmarknad (6)
 - ==Grad av formalisering==: Hög, inköpspolicy, miljöhänsyn, hållbarhetskrav.
 - ==Marknadskanal==: Ofta direkt. Ringer kunden direkt och förhandlar.
 - ==Parternas förhandlingsstyrka==: Symmetrisk relation, leverantör och kund är jämbördiga parter.
-<!--SR:!2024-02-10,2,230!2024-02-01,1,212-->
+<!--SR:!2024-02-10,2,230!2024-02-11,2,212-->
 
 Key-Account Manager (Definition):: En säljare vars enda jobb är att ansvara för en eller flera av ett företags största kunder
-<!--SR:!2024-02-09,4,282!2024-02-12,4,273-->
+<!--SR:!2024-02-26,17,302!2024-02-12,4,273-->

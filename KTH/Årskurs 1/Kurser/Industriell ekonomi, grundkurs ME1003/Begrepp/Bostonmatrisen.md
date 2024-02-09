@@ -30,4 +30,4 @@ Bostonmatrisen (Definition)
 ??
 En portföljanalys som handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa. Om båda är höga för en viss produkt ska man investera i produkt medan om båda är låga ska man döda produkten
 ![[Bostonmatrisen ME1003.png]]
-<!--SR:!2024-02-09,1,230!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,230!2024-02-12,3,268-->

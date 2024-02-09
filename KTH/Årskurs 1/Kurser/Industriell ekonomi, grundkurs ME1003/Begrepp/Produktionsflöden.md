@@ -32,4 +32,4 @@ Typer av Produktionsflöden (4)
 - ==Timglasformade==: När ett företags produkter är modulariserade. Alltså att en liten mängd resurser kan transformeras till en mängd produkter med stor variation.
 - ==T-Formade==: När man skapar variation vid det sista steget i produktionen. Man kan tillverka en stor volym identiska klädesplagg och ge de stor variation i sista steget genom att färga de.
 ![[Produktionsflöden vid Varuproduktion ME1003.png]]
-<!--SR:!2024-02-10,2,254!2024-02-07,4,274-->
+<!--SR:!2024-02-10,2,254!2024-02-24,15,294-->

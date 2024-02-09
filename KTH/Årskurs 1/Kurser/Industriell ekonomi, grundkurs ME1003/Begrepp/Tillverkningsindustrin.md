@@ -19,11 +19,11 @@ Exempel på typer av företag inom Tillverkningsindustrin (4)
 - Maskiner
 - Elektrotekniska produkter
 - Fordon
-<!--SR:!2024-02-09,1,228!2024-02-06,1,230-->
+<!--SR:!2024-02-09,1,228!2024-02-11,2,230-->
 
 Egenskaperna av ett typiskt företag i Tillverkningsindustrin (3)
 ??
 - Personalintensiv
 - Högautomatiserad produktion
 - Konvergerande produktionsflöde
-<!--SR:!2024-02-09,1,228!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,228!2024-02-10,1,224-->

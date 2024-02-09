@@ -22,4 +22,4 @@ Processtyper inom Varuproduktion (5)
 - Serieproduktion
 - Massproduktion
 - Kontinuerlig produktion
-<!--SR:!2024-02-09,1,230!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,230!2024-02-10,1,228-->

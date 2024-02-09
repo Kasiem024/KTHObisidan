@@ -20,11 +20,11 @@ Exempel på typer av företag inom Processindustrin (5)
 - Pappersbruk
 - Stålverk
 - Metallverk
-<!--SR:!2024-02-10,2,250!2024-02-06,4,272-->
+<!--SR:!2024-02-10,2,250!2024-02-11,2,252-->
 
 Egenskaperna av ett typiskt företag i Processindustrin (3)
 ??
 - Kapitalintensiva, kräver stora investeringar.
 - Produkterna är av standardkvalité.
 - Säljer ofta till andra företag.
-<!--SR:!2024-02-09,1,235!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,235!2024-02-10,1,231-->

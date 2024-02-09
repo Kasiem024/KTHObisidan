@@ -19,4 +19,4 @@ Man kan också säga att Förädlingsvärdet är ett ekonomiskt mått på hur st
 ## Flashcards
 
 Förädlingsvärde (Definition):: Priset av en produkt minus kostnaden för tillverkningen av produkten, alltså vinstmarginal. Dock inte för den individuella produkten utan för hela företaget
-<!--SR:!2024-02-09,1,228!2024-02-07,2,230-->
+<!--SR:!2024-02-11,2,228!2024-02-07,2,230-->

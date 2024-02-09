@@ -18,7 +18,7 @@ E-handel har starkt påverkat Distributionskanalerna och därmed priset av produ
 ## Flashcards
 
 Distributionskanaler (Definition):: Handlar om antalet mellanled det finns mellan producenten av en produkt och själva kunden
-<!--SR:!2024-02-18,10,270!2024-02-09,4,274-->
+<!--SR:!2024-02-18,10,270!2024-02-23,14,294-->
 
 Alla mellanleden i en distributionskanal (5)
 ??

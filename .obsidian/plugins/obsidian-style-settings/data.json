@@ -47,5 +47,9 @@
   "shimmering-focus@@active-line-highlight": "active-line-background",
   "obsidian-prism-theme@@text-bold-color-dt": "var(--color-red-text)",
   "obsidian-prism-theme@@text-italic-color-dt": "var(--color-mint-text)",
-  "obsidian-prism-theme@@nav-header-right-sidebar-position": "pt-nav-header-right-sidebar-position-top"
+  "obsidian-prism-theme@@nav-header-right-sidebar-position": "pt-nav-header-right-sidebar-position-top",
+  "TokyoNight@@opacity-translucency-light": 1,
+  "TokyoNight@@opacity-translucency-dark": 1,
+  "TokyoNight@@border-width": 2,
+  "TokyoNight@@scrollbar-width": 0
 }

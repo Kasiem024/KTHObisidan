@@ -106,7 +106,7 @@
   ],
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
-    "includeName": true,
+    "includeName": false,
     "pageSize": "Legal",
     "landscape": false,
     "margin": "0",

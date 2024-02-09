@@ -49,4 +49,4 @@ Vad som påverkar en akties börskurs (6)
 - Alternativa placeringsmöjligheter.
 - Skattesystemets utformning.
 - Psykologiska faktorer (flockbeteende).
-<!--SR:!2024-02-09,1,192!2024-02-12,9,270-->
+<!--SR:!2024-02-10,1,172!2024-02-12,9,270-->

@@ -30,4 +30,4 @@ Delarna av en affärsmodell (3)
 - Värdeerbjudandet
 - Värdeskapande
 - Värdefångsten
-<!--SR:!2024-02-14,6,230!2024-02-03,4,272-->
+<!--SR:!2024-02-14,6,230!2024-02-23,14,292-->

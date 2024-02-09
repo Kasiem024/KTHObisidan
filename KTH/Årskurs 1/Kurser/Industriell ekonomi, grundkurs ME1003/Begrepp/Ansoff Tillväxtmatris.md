@@ -24,4 +24,4 @@ Ansoff tillväxtmatris (4)
 - ==Market Development==: Mycket marknadsföring för att få nya kunder.
 - ==Product Development==: Genom att utveckla en produkt man redan har kan man ta en större andel av marknaden.
 - ==Diversification==: Försöker anpassa produkten efter marknaden.
-<!--SR:!2024-02-09,1,230!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,230!2024-02-11,2,248-->

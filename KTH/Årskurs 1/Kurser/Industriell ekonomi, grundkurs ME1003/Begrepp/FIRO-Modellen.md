@@ -26,5 +26,5 @@ Faserna av FIRO-modellen (3)
 ??
 - ==Tillhörafasen==: Här bestäms vem som är gruppens medlemmar.
 - ==Rollsökningsfasen==: Här finner alla sin roll i gruppen.
-- ==Samhörighetsfasen==: Här kan gruppen börja arbeta effektivt
-<!--SR:!2024-02-09,1,210!2024-02-09,4,270-->
+- ==Samhörighetsfasen==: Här kan gruppen börja arbeta effektivt.
+<!--SR:!2024-02-09,1,210!2024-02-23,14,290-->

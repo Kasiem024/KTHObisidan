@@ -33,4 +33,4 @@ Egenskaperna av en Konsumentmarknad (6)
 - ==Grad av formalisering==: Låg.
 - ==Marknadskanal==: Lång, ofta flera mellanhänder.
 - ==Parternas förhandlingsstyrka==: Asymmetrisk relation, leverantören starkare än konsumenten.
-<!--SR:!2024-02-10,2,210!2024-02-04,4,270-->
+<!--SR:!2024-02-10,2,210!2024-02-25,16,290-->

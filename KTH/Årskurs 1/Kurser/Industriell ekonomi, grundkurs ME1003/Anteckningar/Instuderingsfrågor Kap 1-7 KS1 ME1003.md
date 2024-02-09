@@ -10,7 +10,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003
 Ämnet industriell ekonomi tar sin utgångspunkt i en verksamhet och dess värdeskapande processer. Man fokuserar på [[Produktutveckling]], [[Produktion]] och [[Marknadsföring]]. Dessa tre utgör företagets kärnverksamhet och deras syfte är att skapa värde åt kunden.
 
 Utgångspunkten för ämnet industriell ekonomi (Definition):: När utgångspunkten för en verksamhet är dess värdeskapande processer, [[Produktutveckling]], [[Produktion]], [[Marknadsföring]]
-<!--SR:!2024-02-11,3,264!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,264!2024-02-13,4,289-->
 
 2. Vad menar vi när vi säger att en verksamhet är industrialiserad?
 
@@ -88,7 +88,7 @@ Sådana företag är vanligtvis ==forskningsintensiva==.
 ==Fastighetsbranschen== består av företag som förvaltar, hyr ut och utvecklar kommersiella lokaler och bostäder. Intäkterna består primärt av ==hyresintäkter== och fastighetsförsäljning.
 
 Egenskaperna av Bygg- och anläggningsbranschen:: En bransch som styrs i hög grad av ==politiska beslut== och beställningar till ==stora offentliga projekt==. Drivs i entreprenadform
-<!--SR:!2024-02-15,7,254!2024-02-07,4,274-->
+<!--SR:!2024-02-15,7,254!2024-02-24,15,294-->
 
 Egenskaperna av Fastighetsbranschen:: En bransch som består av företag som ==förvaltar==, ==hyr ut== och utvecklar kommersiella ==lokaler== och ==bostäder==. Intäkterna består primärt av ==hyresintäkter== och fastighetsförsäljning
 <!--SR:!2024-02-20,12,270!2024-02-10,4,285-->
@@ -102,7 +102,7 @@ Drivkrafterna bakom dagens radikala industriella omvandling (3)
 - Digitalisering
 - Internet
 - Mikroprocessorer
-<!--SR:!2024-02-22,14,290!2024-02-06,4,270-->
+<!--SR:!2024-02-22,14,290!2024-02-22,13,290-->
 
 ## Kapitel 3 Verksamheten som utgångspunkt
 
@@ -139,10 +139,10 @@ En ==konsumentprodukt== säljs på en [[Konsumentmarknad]], alltså från ett f�
 ==Ersättningstjänst== är en sådan tjänst som ersätter varan helt och hållet. Exempelvis kan det vara uthyrning och leasing av en vara, alltså äger kunden inte varan.
 
 Komplementtjänst (Definition):: En tjänst som erbjuds tillsammans med en vara och förbättrar den
-<!--SR:!2024-02-07,4,274!2024-02-12,4,284-->
+<!--SR:!2024-02-22,13,294!2024-02-12,4,284-->
 
 Ersättningstjänst (Definition):: En tjänst som substituerar varan helt och hållet så att kunden faktiskt inte äger varan
-<!--SR:!2024-02-09,4,284!2024-02-12,4,284-->
+<!--SR:!2024-02-25,16,304!2024-02-12,4,284-->
 
 6. Namnge och beskriv de tre principiella konkurrensstrategier som kan identifieras oberoende av om ett industriföretags värdeerbjudande består av varor, tjänster eller en kombination av dessa. Ge dessutom exempel på tre företag som du anser är bra exempel på var och en av strategierna.
 
@@ -246,10 +246,10 @@ Vinst är [[Intäkt]] minus [[Kostnad]], eller resultatet från [[Resultaträkni
 ==Technology push== är när en ny teknologi utvecklas för att någon investerade i forskning om just den teknologi, alltså fanns det inget behov från marknaden för den.
 
 Demand Pull (Definition):: När marknaden efterfrågar en viss teknologi som sedan utvecklas och tillverkas
-<!--SR:!2024-02-25,17,294!2024-02-07,4,274-->
+<!--SR:!2024-02-25,17,294!2024-02-23,14,294-->
 
 Technology Push (Definition):: När en ny teknologi investeras i och utvecklas utan ett behov från marknaden
-<!--SR:!2024-02-09,4,282!2024-02-12,4,284-->
+<!--SR:!2024-02-19,10,282!2024-02-12,4,284-->
 
 2. Definiera och beskriv begreppet innovation.
 
@@ -272,7 +272,7 @@ Definitionen av innovation är en ny eller märkbart förbättrad produkt, proce
 ==Reverse salient== är ett begrepp som beskriver en komponent av en teknologi som försämrar teknologi i helhet för att den inte är tillräckligt bra.
 
 Reverse salient (Definition):: En komponent av en teknologi som försämrar teknologi i helhet för att den inte är tillräckligt bra
-<!--SR:!2024-02-11,3,264!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,264!2024-02-13,4,289-->
 
 6. Beskriv, med en figur och i ord, innovationsspridningens livscykel och namnge de fem användarkategorierna i modellen.
 
@@ -293,17 +293,17 @@ Denna livscykel beskriver hur en ny teknologi sprids på en marknad och när den
 ==Processinnovation== är när en existerande produkt kan tillverkas eller levereras med mindre resurser. Detta sker efter att teknologin har mognat då det är nu majoriteten av marknaden har börjat använda produkten.
 
 Produktinnovation (Definition):: När en ==existerande produkt förbättras== eller när en ==ny produkt utvecklas==. Detta sker tidigt i en teknologis utveckling
-<!--SR:!2024-02-10,2,244!2024-02-08,2,244-->
+<!--SR:!2024-02-10,2,244!2024-02-15,6,264-->
 
 Processinnovation (Definition):: När en ==existerande produkt== kan tillverkas eller levereras med ==mindre resurser==. Detta sker efter att teknologin har ==mognat== då det är nu ==majoriteten== av marknaden har börjat använda produkten
-<!--SR:!2024-02-11,3,264!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,264!2024-02-13,4,295-->
 
 8. Vad menas med begreppet dominant design? Ge tre konkreta exempel.
 
 En ==dominant design== eller de facto-standard är begrepp som används för att beskriva tekniska lösningar som blivit dominanta eller standarden för att de är populära, inte nödvändigtvis för att de är bäst.
 
 Dominant Design (Definition):: Ett begrepp som används för att beskriva tekniska lösningar som blivit standarden för att de är populära, inte nödvändigtvis för att de är bäst
-<!--SR:!2024-02-07,4,274!2024-02-12,4,284-->
+<!--SR:!2024-02-25,16,294!2024-02-12,4,284-->
 
 9. Ge två exempel på teknikskiften som på ett fundamentalt sätt har förändrat etablerade branscher.
 
@@ -314,14 +314,14 @@ Ett exempel på ett teknikskifte som fundamentalt ändrat en bransch är när mi
 ==Disruptive innovation== är ett begrepp som beskriver vad som händer när en ny och billig teknisk lösning konkurrerar ut det gamla helt och hållet.
 
 Disruptive Innovation (Definition):: När etablerade företag och affärsmodeller konkurreras ut av tekniska lösningar som är enklare och billigare än de redan etablerade
-<!--SR:!2024-02-11,3,264!2024-02-09,3,265-->
+<!--SR:!2024-02-11,3,264!2024-02-21,12,285-->
 
 11. Förklara varför det är viktigt att teknikbaserade företag är "tvåhänta" (Eng: ambidextrous).
 
 När ett företag kan klara av att använda sina befintliga kunskaper och samtidigt utveckla nya nyttiga kunskaper kan man säga att den är tvåhänt.
 
 Ett tvåhänt teknikbaserat företag (Definition):: När ett företag kan ==balansera== att ==effektivisera== sin nuvarande verksamhet samtidigt som den försöker innovera och ==förnya== sin ==verksamhet==.
-<!--SR:!2024-02-11,3,264!2024-02-09,4,284-->
+<!--SR:!2024-02-11,3,264!2024-02-23,14,304-->
 
 12. Vad säger "Amaras lag"?
 
@@ -445,7 +445,7 @@ Offert (Definition):: När det säljande företaget ska lämna ett erbjudande ti
 ==Dröjsmålsränta== är en straffavgift som leverantören/säljaren betalar till köparen för varje dag en leverans är försenad.
 
 Dröjsmålsränta (Definition):: När en leverans är försenad kan köparen begära en ==straffavgift== av leverantören för varje dag leveransen är försenad
-<!--SR:!2024-02-11,3,264!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,264!2024-02-13,4,295-->
 
 ## Kapitel 6 Produktion
 
@@ -498,10 +498,10 @@ Ett enkelt exempel på hur [[Produktionens Konkurrensfaktorer]] är motstridiga 
 ==Kvalificerare== är faktorer som möjliggör för företaget att överhuvudtaget vara med i konkurrensen medan ==ordervinnare== är vad som avgör kundernas val.
 
 Kvalificerare (Definition):: Faktorer som möjliggör för företaget att överhuvudtaget vara med i konkurrensen
-<!--SR:!2024-02-12,4,284!2024-02-06,1,244-->
+<!--SR:!2024-02-12,4,284!2024-02-12,3,264-->
 
 Ordervinnare (Definition):: Faktorer i [[Värdeerbjudandet]] som till slut avgör kundens val av produkt
-<!--SR:!2024-02-12,4,284!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,284!2024-02-13,4,289-->
 
 7. Redogör för relationen mellan produktvariation och produktionsvolym samt vilka konsekvenser det har för produktionssystemet.
 
@@ -534,7 +534,7 @@ Typer av tjänsteproduktion (3)
 - ==Professionella tjänster==: Låg variation och volym. Är vanligtvis väldigt kundanpassade och kräver därför hög kompetens vilket leder till hög styckkostnad.
 - ==Serviceverkstäder==: Normal mängd variation och volym.
 - ==Standardtjänster==: Låg variation men stor volym, alltså lätt att standardisera.
-<!--SR:!2024-02-09,1,194!2024-02-04,1,234-->
+<!--SR:!2024-02-09,1,194!2024-02-12,3,254-->
 
 10. Redogör för de fyra olika logikerna av produktionsflöden.
 
@@ -570,14 +570,14 @@ När en produkt produceras mot kundorder betyder det att det redan finns råmate
 Med ordet ==kapacitet== menas: Den maximala produktionsnivån över en tidperiod när verksamheten i systemet bedrivits under normala villkor. Om efterfrågan överstiger kapacitet uppkommer olika former av köer. Därför är det viktigt att hitta en balans i produktionen för att skapa ett jämnt produktionsflöde.
 
 Kapacitet inom Produktionsstrategi (Definition):: Den maximala produktionsnivån över en tidperiod när verksamheten i systemet bedrivits under normala villkor. Om efterfrågan överstiger denna punkt uppkommer olika former av köer. Därför är det viktigt att hitta en balans i produktionen för att skapa ett jämnt produktionsflöde
-<!--SR:!2024-02-09,1,244!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,244!2024-02-13,4,289-->
 
 14. Vad är en trång sektor? På vilket sätt påverkar en trång sektor ett produktionsflöde?
 
 En ==trång sektor==, eller flaskhals som det också kallas, är det produktionsmoment som har lägst kapacitet. Det är den trånga sektorn av ett produktionsflöde som bestämmer hur stor kapacitet momenten framför den i processen har. Därför är det viktigt att balansera alla momenten i ett produktionsflöde och att bygga ut sin trånga sektor så att dess påverkan på flödet är minimal.
 
 Trång Sektor (Definition):: Det moment i produktionsflödet med lägst kapacitet
-<!--SR:!2024-02-11,3,264!2024-02-07,4,274-->
+<!--SR:!2024-02-11,3,264!2024-02-24,15,294-->
 ![[Trång Sektor ME1003.png]]
 
 15. Beskriv några typiska försörjningskedjor i varu- respektive tjänsteproduktion.
@@ -593,7 +593,7 @@ Trång Sektor (Definition):: Det moment i produktionsflödet med lägst kapacite
 ==Legotillverkare==, eller kontraktstillverkare, producerar komponenter efter företagets ritningar och specifikationer, man kan säga att detta är en typ av outsourcing.
 
 Legotillverkare (Definition):: En tillverkare som producerar komponenter efter företagets ritningar och specifikationer, man kan säga att detta är en typ av ==outsourcing==
-<!--SR:!2024-02-09,1,244!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,244!2024-02-13,4,289-->
 
 17. Vad innebär sourcing?
 
@@ -618,10 +618,10 @@ När man ska ==massproducera== en ==standardprodukt== använder man sig av en ==
 ![[Flödeslayout ME1003.png]]
 
 Funktionell Layout (Definition):: När maskiner med samma funktion placeras fysiskt nära varandra, leder till ==stor flexibilitet== men lång genomloppstid då produkten behöver transporteras från avdelning till avdelning
-<!--SR:!2024-02-18,10,284!2024-02-07,4,274-->
+<!--SR:!2024-02-18,10,284!2024-02-25,16,294-->
 
 Flödeslayout (Definition):: När maskiner placeras i ordningen som produkten behöver för att tillverkas, leder till ett ==snabbt flöde== och kort genomloppstid men låg flexibilitet
-<!--SR:!2024-02-09,3,265!2024-02-09,4,282-->
+<!--SR:!2024-02-09,3,265!2024-02-23,14,302-->
 
 20. Redogör för hur valet av produktionslayout påverkar produktions kostnaderna.
 
@@ -639,17 +639,17 @@ Flexibilitet i Produktionsprocessen (Definition):: När man kan enkelt ställa o
 <!--SR:!2024-02-09,1,194!2024-02-09,4,284-->
 
 Inputbuffert i Produktionsprocessen (Definition):: När man har ett förråd av råmaterial och komponenter för att hantera leveransproblem
-<!--SR:!2024-02-09,4,284!2024-02-12,4,284-->
+<!--SR:!2024-02-25,16,304!2024-02-12,4,284-->
 
 Outputbuffert i Produktionsprocessen (Definition):: När man har ett stort färdigvarulager av produkter för att hantera en plötslig ökning av efterfrågan.
-<!--SR:!2024-02-07,4,274!2024-02-12,4,284-->
+<!--SR:!2024-02-24,15,294!2024-02-12,4,284-->
 
 22. Beskriv begreppet Lean production.
 
 Tanken bakom ==Lean production== är att identifiera och eliminera allt sådant i en produktionsprocess som inte skapar värde för slut kunden, alltså minska slöseri. En stor del av Lean production är ==Just in Time==, vilket handlar om att allt ska ske i precis rätt tid, alltså inga buffertar eller mellanlager.
 
 Lean Production (Definition):: Handlar om att ==identifiera== och ==eliminera== allt som inte skapar värde för slut kunden, alltså minska ==slöseri==. ==Just in Time== är centralt, allt ska ske i precis rätt tid, ==inga buffertar==
-<!--SR:!2024-02-08,3,264!2024-02-12,4,284-->
+<!--SR:!2024-02-19,10,284!2024-02-12,4,284-->
 
 23. Beskriv skillnaden mellan de två beordringsprinciperna "push" och "pull".
 
@@ -658,10 +658,10 @@ Push är när varje produktionsmoment får en signal att påbörja från det fö
 Pull är när ett moment beställer material från ett tidigare produktionssteg. Detta eliminerar mellanlager och leder till kort genomloppstid men innebär också att det kan bli överkapacitet, alltså att maskiner i tidigare produktionssteg står stilla.
 
 Beordringsprincipen Push (Definition):: När varje moment i ett produktions system väntar på det föregående produktionssteget, leder lätt till mellanlager där komponenter väntar på att det blir deras tur att bearbetas
-<!--SR:!2024-02-09,1,244!2024-02-10,2,214-->
+<!--SR:!2024-02-11,2,244!2024-02-10,2,214-->
 
 Beordringsprincipen Pull (Definition):: När ett moment beställer material från ett tidigare produktionssteg, eliminerar mellanlager och leder till kort genomloppstid men innebär också att det kan bli överkapacitet, alltså att maskiner i tidigare produktionssteg står stilla
-<!--SR:!2024-02-11,3,267!2024-02-07,1,245-->
+<!--SR:!2024-02-11,3,267!2024-02-12,3,265-->
 
 24. Vilken är relationen mellan lagernivå och påfyllningsvolym?
 
@@ -696,14 +696,14 @@ När man försöker hitta den mest kostnadseffektiva metoden för att beställa 
 Produkter i arbete är sådana produkter som inte är färdiga men är mitt i tillverkningsprocessen.
 
 Produkter i Arbete (Definition):: Produkter som inte är färdiga men är mitt i tillverkningsprocessen
-<!--SR:!2024-02-09,4,284!2024-02-12,4,288-->
+<!--SR:!2024-02-25,16,304!2024-02-12,4,288-->
 
 28. Rita upp den typiska profilen för kapitalbindningen i ett tillverkande företag.
 
 Kapitalbindning är sådant kapital som inte kan användas för andra ändamål än vad det är just nu, alltså är det bundet i dess nuvarande form. För varuproducerande företag kommer detta vanligtvis i formen av råmaterial och produkter i lager.
 
 Kapitalbindning (Definition):: Resurser som inte kan användas för andra ändamål än vad de är just nu. För ett varuproducerande företag är detta vanligtvis råmaterial och produkter i lager
-<!--SR:!2024-02-17,9,262!2024-02-07,4,274-->
+<!--SR:!2024-02-17,9,262!2024-02-26,17,294-->
 
 29. På vilket sätt är partistorlek och ställtid viktiga för produktionens genomloppstid?
 
@@ -737,7 +737,7 @@ Ställtid (Definition):: Den tid det tar att ställa om maskinerna för att till
 - ==Städa==, regelbundet
 - ==Standardisera==, dagliga rutinerna
 - ==Se till==, att ordningen hålls
-<!--SR:!2024-02-09,1,248!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,248!2024-02-13,4,289-->
 
 32. Beskriv några viktiga principer och metoder som används inom kvalitetsledning.
 
@@ -772,7 +772,7 @@ Några kända metoder inom kvalitetsledning är:
 Original Equipment Manufacturer, eller OEM, är ett företag vars produkter används som komponenter av andra företag.
 
 OEM (Definition):: Ett företag vars produkter används som komponenter av andra företag
-<!--SR:!2024-02-12,4,288!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,288!2024-02-13,4,289-->
 
 4. Beskriv en typisk produktlivscykel och förklara varför produktlivscykeln är strategiskt viktig för ett företag.
 
@@ -832,7 +832,7 @@ Projektportfölj (Definition):: När man klassificerar olika utvecklingsprojekt 
 [[Utvecklingstratten]] syftar till att ett företag kan ha många små förstudier och forskningsprojekt igång samtidigt som är i den tidiga fasen av sitt liv men att alla dessa idéer inte kommer leda till lanserade produkter. De studier som visar potential kommer investeras i och eventuellt bli ett produktutvecklingsprojekt. Dessa projekt är betydligt mer väldefinerade och brukar använda cirka 90% av ett företags utvecklingsbudget. Nästan alla dessa projekt kommer leda till en lanserad produkt.
 
 Utvecklingstratten (Definition):: Handlar om hur ett företag ska ha många förstudier igång samtidigt som kommer sållas för att hitta de bästa som eventuellt leder till en lanserad produkt
-<!--SR:!2024-02-12,4,288!2024-02-07,4,274-->
+<!--SR:!2024-02-12,4,288!2024-02-23,14,294-->
 ![[Utvecklingstratten ME1003.png]]
 
 11. Beskriv de viktigaste faserna i en typisk produktutvecklingsprocess.
@@ -849,9 +849,9 @@ Faserna i en Typisk Produktutvecklingsprocess (6)
 - ==Planering==: Här specificeras funktionen, prestandan, marknadssegment samt utvecklingsresurser.
 - ==Konceptutveckling==: Här fastställs produktens design och kravspecifikationer.
 - ==Systemdesign==: Här bestäms den grundläggande tekniska konstruktionen.
-- ==Detaljkonstruktion==: Här konstrueras olika komponenter och delsystem
+- ==Detaljkonstruktion==: Här konstrueras olika komponenter och delsystem.
 - ==Testning==: Här testas produkten och justeringar görs när det behövs.
-- ==Produktionsstart==: Här lanseras produkten
+- ==Produktionsstart==: Här lanseras produkten.
 ![[Produktutvecklingsprocessen ME1003.png]]
 <!--SR:!2024-02-09,1,248!2000-01-01,1,250-->
 
@@ -872,7 +872,7 @@ Genom att införa beslutspunkter vid övergångarna mellan olika stadier av utve
 När man koordinerar det operativa arbete genom dagliga eller veckovisa stå-upp-möten framför en projekttavla som ger en bild av vad som ska göras kallar man det för visuell planering. Alltså handlar det om att fysiskt se hur långt man har kommit och vad som finns att göras.
 
 Visuell Planering (Definition):: När man koordinerar det operativa arbete genom dagliga eller veckovisa stå-upp-möten framför en projekttavla som ger en bild av vad som ska göras kallar, **handlar om att fysiskt se hur långt man har kommit och vad som finns att göras**
-<!--SR:!2024-02-11,3,268!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,268!2024-02-13,4,289-->
 
 15. Beskriv begreppen:
 
@@ -892,14 +892,14 @@ Begrepp inom [[Scrum]]:
 ==Set-based design== handlar om att inte låsa sig fast vid något lösningsalternativ för tidigt men att hålla målet vagt och att eliminera vissa alternativ och ta fram andra under arbetets gång. Tanken är att man ska ha ett set av alternativ vid början av arbetet som minskar och minskar eftersom man utvecklar ny kunskap och vet vilka som inte är användbara.
 
 Set-Based Design (Definition):: När man påbörjar ett projekt med många alternativ som succesivt elimineras då man utvecklar sin kunskap om vad projektet behöver
-<!--SR:!2024-02-11,3,268!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,268!2024-02-13,4,289-->
 
 17. Beskriv idén bakom s.k. prototyping.
 
 En ==prototyp== är en förlaga eller ==testmodell== till en produkt, alltså något som visar vad produkten kommer bli när den är färdig. ==Prototyping== är när man snabbt och iterativt tar fram olika grader av ofullständiga versioner av produkten så att man lär sig vad som jobbar bra eller dåligt.
 
 Prototyping (Definition):: När man snabbt och iterativt tar fram olika grader av ofullständiga versioner av produkten så att man lär sig vad som jobbar bra eller dåligt
-<!--SR:!2024-02-12,4,288!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,288!2024-02-13,4,289-->
 
 18. Redogör för metoderna bakom förkortningarna:
 

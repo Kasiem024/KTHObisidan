@@ -34,7 +34,7 @@ Skulder och eget kapital ökar på kredit och minskar på debet.
 ## Flashcards
 
 Dubbel bokföring (Definition):: Ett ekonomiskt system som säger att man måste skriva ner alla affärshändelser på två olika konton med samma belopp
-<!--SR:!2024-02-09,10,270!2024-02-15,15,290-->
+<!--SR:!2024-03-17,37,290!2024-02-15,15,290-->
 
 Debet (Definition):: Visar vart det kommer in pengar. Alltså på vilket konto pengarna ska sättas in (T-Konto)
 <!--SR:!2024-02-22,15,294!2024-03-05,26,272-->

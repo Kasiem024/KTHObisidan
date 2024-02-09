@@ -38,7 +38,7 @@ A-Skatt (Definition);; Skatt som anställd. Arbetsgivaren tar hand om det
 <!--SR:!2024-02-16,16,299-->
 
 F-Skatt (Definition);; Skatt för företag. Som ett körkort för att få driva företag
-<!--SR:!2024-02-09,14,290-->
+<!--SR:!2024-04-03,54,310-->
 
 FA-Skatt (Definition);; Skatt om man både bedriver en verksamhet och är anställd
-<!--SR:!2024-02-09,14,294-->
+<!--SR:!2024-04-05,56,314-->

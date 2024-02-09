@@ -32,13 +32,13 @@ Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är
 ## Flashcards
 
 Värdekedja (Definition):: Ett begrepp som beskriver hur värdet av en vara ökar genom fortsatt produktion av den
-<!--SR:!2024-03-06,27,270!2024-02-09,10,270-->
+<!--SR:!2024-03-06,27,270!2024-03-17,37,290-->
 
-Vertikal Integration inom en Värdekedja (Definition):: När ett företag köper ett annat företag som ligger bakom eller framför en i värdekedjan.
-<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+Vertikal Integration inom en Värdekedja (Definition):: När ett företag köper ett annat företag som ligger bakom eller framför en i värdekedjan
+<!--SR:!2024-02-12,4,275!2024-02-13,4,276-->
 
-Horisontell Integration inom en Värdekedja (Definition):: När man köper en konkurrent, alltså ett annat företag på samma position i värdekedjan.
-<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+Horisontell Integration inom en Värdekedja (Definition):: När man köper en konkurrent, alltså ett annat företag på samma position i värdekedjan
+<!--SR:!2024-02-12,4,275!2024-02-13,4,276-->
 
 Sätt att ändra på värdekedjan (4)
 ??
@@ -46,7 +46,7 @@ Sätt att ändra på värdekedjan (4)
 - ==Insourcing==: När man själv utför tjänster som man tidigare köpt från andra företag eller som kunden vanligen utfört själv, hämtar in verksamhet från annat företag.
 - ==Offshoring==: När man flyttar en verksamhet till ett annat land, men i egen regi.
 - ==Reshoring==: Motsatsen till offshoring, alltså när man hämtar tillbaka en verksamhet som man tidigare flyttat till ett annat land.
-<!--SR:!2024-02-11,3,219!2024-02-07,4,277-->
+<!--SR:!2024-02-11,3,219!2024-02-22,13,297-->
 
 Sourcing (Definition):: En fråga som försöker besvara vilka moment i produktionssystemet som ska utföras i egen regi, respektive vilka som ska köpas in från andra företag
-<!--SR:!2024-02-09,1,235!2024-02-07,4,274-->
+<!--SR:!2024-02-09,1,235!2024-02-23,14,294-->

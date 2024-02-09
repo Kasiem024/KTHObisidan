@@ -35,4 +35,4 @@ Effektivitets Begrepp (3)
 - ==Inre effektivitet==: Om man har resurserna för att skapa ett visst erbjudande, ==att göra saker rätt==.
 - ==Yttre effektivitet==: Om man erbjuder något som marknaden vill ha, ==att göra rätt saker==.
 - ==Total effektivitet== = Inre effektivitet + Yttre effektivitet
-<!--SR:!2024-02-10,2,246!2000-01-01,1,250-->
+<!--SR:!2024-02-10,2,246!2024-02-12,3,264-->

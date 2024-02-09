@@ -29,4 +29,4 @@ Företags innovationsstrategi (4)
 - ==Snabb efterföljare== (Defensiv): Måste hög kompetens inom teknikutveckling, duktiga på att identifiera vilka produkter kommer slå igenom
 - ==Kostnadsminimering== (Imitation): Väntar på att se vilka produkter blir populära, är bra på att skapa kopior till ett lägre pris
 - ==Traditionalist== (Konservativ): Vill inte ändra på sig, bryr sig inte om att innovera
-<!--SR:!2024-02-09,1,230!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,230!2024-02-12,3,268-->
