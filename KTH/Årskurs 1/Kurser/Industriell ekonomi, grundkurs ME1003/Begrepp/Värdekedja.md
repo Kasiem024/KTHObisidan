@@ -25,6 +25,7 @@ Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är
 ### Sourcing
 
 ==Sourcing== är en produktionsstrategisk fråga som försöker svara på vilka moment i produktionssystemet som ska utföras i egen regi, respektive vilka som ska köpas in från andra företag, alltså ==outsourcing== och ==insourcing==. När man gör detta val ska man tänka på sin egna kompetens och hur viktigt just det moment är för [[Värdeerbjudandet]]. Ju viktigare det är ju bättre det är att utföra det själv.
+
 ## Kopplat till
 
 - [[Förädlingsvärde]]
@@ -49,4 +50,4 @@ Sätt att ändra på värdekedjan (4)
 <!--SR:!2024-02-11,3,219!2024-02-22,13,297-->
 
 Sourcing (Definition):: En fråga som försöker besvara vilka moment i produktionssystemet som ska utföras i egen regi, respektive vilka som ska köpas in från andra företag
-<!--SR:!2024-02-09,1,235!2024-02-23,14,294-->
+<!--SR:!2024-02-13,3,255!2024-02-23,14,294-->

@@ -41,7 +41,7 @@ En typ av kontoplan som består av 4 huvudgrupper:
 - Skulder
 - Intäkter
 - Kostnader
-<!--SR:!2024-02-15,7,250!2024-02-10,4,270-->
+<!--SR:!2024-02-15,7,250!2024-02-24,14,290-->
 
 BAS-Kontoplanens kontoklasser (10)
 ??
@@ -55,4 +55,4 @@ BAS-Kontoplanens kontoklasser (10)
 - 8xxx: Finansiella poster.
 - 9xxx: Interna konton.
 - 0xxx: Interna konton.
-<!--SR:!2024-02-10,3,250!2024-02-20,12,270-->
+<!--SR:!2024-02-12,2,230!2024-02-20,12,270-->

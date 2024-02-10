@@ -17,5 +17,5 @@ Handlar om att dela upp alla [[Affärshändelse]] på olika konton.
 
 ## Flashcards
 
-Huvudbokföring (Definition):: När man bokför [[Affärshändelse]] systematiskt för att få en översikt över företagets ställning och resultat. Praktiskt betyder det att man ==delar upp alla [[Affärshändelse]] på olika konton==.
-<!--SR:!2024-02-10,3,252!2024-02-25,17,290-->
+Huvudbokföring (Definition):: När man bokför [[Affärshändelse]] systematiskt för att få en översikt över företagets ställning och resultat. Praktiskt betyder det att man **delar upp alla [[Affärshändelse]] på olika konton**
+<!--SR:!2024-02-21,11,272!2024-02-25,17,290-->

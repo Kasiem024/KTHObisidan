@@ -53,24 +53,24 @@ En verifikation ska innehålla:
 
 ### Vad är [[Årsredovisningslagen]] och vem ska följa den
 
-Årsredovisningslagen är en lag som bestämmer hur företag ska redogöra sin [[Årsredovisning]], koncernredovisning och delårsrapport. Den är baserad på direktiv från EU.
+Årsredovisningslagen är en lag som bestämmer hur företag ska redogöra sin [[Årsredovisning]], [[Koncernredovisning]] och delårsrapport. Den är baserad på direktiv från EU.
 
 Det är inte alla verksamheter som behöver följa denna lag. De verksamheter som ska följa Årsredovisningslagen är:
 
-- Aktiebolag.
-- Handelsbolag.
-- Ekonomiska föreningar.
+- [[Aktiebolag]].
+- [[Handelsbolag]].
+- [[Ekonomisk Förening]]
 - Bokföringsskyldiga stiftelser.
 - Företag som uppfyller vissa speciella villkor gällande antalet anställda, balansomslutning och nettoomsättning.
 
 ### Vilket innehåll har ett [[Årsbokslut]]
 
-Syftet med ett årsbokslut är att ge en överblick på hur det har gått för verksamheten under året genom att visa [[Balansräkning]] och [[Resultaträkning]]. Alltså ska den visa företagets Tillgångar, Eget kapital och Skulder.
+Syftet med ett årsbokslut är att ge en överblick på hur det har gått för verksamheten under året genom att visa [[Balansräkning]] och [[Resultaträkning]]. Alltså ska den visa företagets Tillgångar, [[Eget Kapital]] och Skulder.
 
 ---
 
-Koncernredovisning: Om företaget är ett moderföretag ska den redovisa för sina dotterföretag, den ska beskriva allas finansiella ställning som om de vore en enhet.
+[[Koncernredovisning]]: Om företaget är ett moderföretag ska den redovisa för sina dotterföretag, den ska beskriva allas finansiella ställning som om de vore en enhet.
 
-Interimsskuld: Upplupna kostnader och förutbetalda intäkter.
+[[Interimsskuld]]: Upplupna kostnader och förutbetalda intäkter.
 
 ## Flashcards

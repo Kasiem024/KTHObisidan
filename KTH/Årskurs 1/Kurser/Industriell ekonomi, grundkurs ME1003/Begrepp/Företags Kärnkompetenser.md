@@ -23,4 +23,4 @@ Egenskaperna av ett Företags Kompetenser (3)
 - De ger ==avgörande bidrag till kundvärdet== hos företagets produkter
 - De har ==potential== att ==utnyttjas== på många ==olika marknader==
 - De är ==svåra att imitera== för konkurrenterna
-<!--SR:!2024-02-09,1,230!2024-02-15,9,250-->
+<!--SR:!2024-02-12,2,230!2024-02-15,9,250-->

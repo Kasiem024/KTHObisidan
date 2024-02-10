@@ -5,7 +5,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-I [[Aktiebolag]] och [[Ekonomisk förening]] skiljer man mellan [[Bundet Eget Kapital]] och Fritt Eget Kapital. Fritt kapital kan företagets ägare fritt kontrollera, exempelvis för vinstutdelning.
+I [[Aktiebolag]] och [[Ekonomisk Förening]] skiljer man mellan [[Bundet Eget Kapital]] och Fritt Eget Kapital. Fritt kapital kan företagets ägare fritt kontrollera, exempelvis för vinstutdelning.
 
 ## Kopplat till
 

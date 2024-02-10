@@ -1,7 +1,7 @@
 # Instuderingsfrågor Kap 14-16 KS1 ME1003
 
 2024-02-03 17:49
-Tags: #year2024 #KTH #ekonomi #ME1003
+Tags: #year2024 #KTH #ekonomi #ME1003 #övning #ME1003KS1
 
 ## Kapitel 14 Affärsstrategier och strategimodeller
 
@@ -36,7 +36,7 @@ Unrelated Diversification: När man har ett flertal olika produkter som inte all
 Michael Porters generiska affärsstrategier bygger på idén att det endast finns två sätt att bli bättre än sina konkurrenter, antingen genom att ha låga kostnader eller genom att erbjuda differentierade produkter.
 
 Michael Porters Generiska Affärsstrategier (Definition):: Handlar om att det endast finns två sätt att bli bättre än sina konkurrenter, antingen genom att ha ==låga kostnader== eller genom att erbjuda ==differentierade produkter==
-<!--SR:!2024-02-12,4,275!2000-01-01,1,250-->
+<!--SR:!2024-02-12,4,275!2024-02-11,1,247-->
 ![[Michael Porters Generiska Affärsstrategier ME1003.png]]
 
 6. Beskriv följande konkurrenskrafter baserade på Porters och Ansoffs typstrategier:
@@ -58,8 +58,8 @@ Go where profits and growth are and where the competition isn't.
 
 När man har ett resursbaserat synsätt på strategi innebär det att man långsiktigt bygger upp och utvecklar företagets olika typer av resurser, till exempel personalkompetensen, varumärket och företagets teknologi. Strävan är att göra företagets resurser unika.
 
-Resursbaserat Synsätt på Strategi (Definition):: Handlar om att man långsiktigt bygger upp och utvecklar företagets olika typer av resurser, till exempel personalkompetensen, varumärket och företagets teknologi. Strävan är att göra företagets resurser unika
-<!--SR:!2024-02-09,1,235!2024-02-13,4,279-->
+Resursbaserat Synsätt på Strategi (Definition):: Handlar om att man långsiktigt bygger upp och utvecklar företagets olika typer av resurser, till exempel **personalkompetensen, varumärket och företagets teknologi**. Strävan är att göra företagets resurser unika
+<!--SR:!2024-02-13,3,255!2024-02-13,4,279-->
 
 9. Redogör för strategiprocessen enligt Kotler.
 
@@ -80,7 +80,7 @@ Funktionella Strategier (3)
 - Marknadsstrategi
 - Produktionsstrategi
 - Innovationsstrategi
-<!--SR:!2024-02-09,1,235!2024-02-12,3,259-->
+<!--SR:!2024-02-12,2,235!2024-02-12,3,259-->
 
 11. Beskriv strategiprocessen från planerad strategi till realiserad strategi enligt Mintzberg.
 
@@ -168,7 +168,7 @@ Scenarioteknik utgår på att skapa scenarier för framtida konfliktsituationer 
 ==Sida 369 i MIE boken==
 
 Scenarioteknik (Definition):: En analysmetod som utgår på att skapa scenarier för framtida konfliktsituationer så att man kan träna på hur man ska hantera krissituationer
-<!--SR:!2024-02-10,4,275!2024-02-10,4,275-->
+<!--SR:!2024-02-10,4,275!2024-02-24,14,295-->
 
 20. Utgå från ett exempel och redogör för affärsmodellkanvasen som en strategimodell.
 
@@ -190,7 +190,7 @@ Ett exempel på när Nestlé använde sig av denna strategimodell vid skapandet 
 
 21. Ge exempel på problem som kan uppkomma i strategiarbetet i ett företag.
 
-Att formulera en affärsidé som är konkurrenskraftig kan vara problematiskt för ett nystartat företag. För redan etablerade företag uppkommer det problem om strategin behöver ändras, ju större företaget är ju svårare det är att omorganisera.
+Att formulera en [[Affärsidé]] som är konkurrenskraftig kan vara problematiskt för ett nystartat företag. För redan etablerade företag uppkommer det problem om strategin behöver ändras, ju större företaget är ju svårare det är att omorganisera.
 
 22. Vad menas med ett SMART mål? Jämför med ett VAGT mål.
 
@@ -224,7 +224,7 @@ VAGT Mål (4)
 - ***A***ccepterat
 - ***G***emensamt
 - ***T***idsbestämt
-<!--SR:!2024-02-09,1,235!2024-02-12,3,259-->
+<!--SR:!2024-02-12,2,235!2024-02-12,3,259-->
 
 ## Kapitel 15 Personalledning och HRM
 
@@ -340,7 +340,7 @@ Maslows Behovspyramid (5)
 - Esteem needs
 - Self-actualization
 ![[Maslow's Hierarchy Of Needs ME1003.png]]
-<!--SR:!2024-02-09,1,237!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,237!2024-02-11,1,247-->
 
 16. Redogör för Herzbergs tvåfaktorsteori. Ge tre exempel på varje faktor.
 
@@ -408,7 +408,7 @@ En formell ledare är någon som har mandat både från sina överordnade och si
 	- När ledaren anpassar sig efter mognaden av gruppen.
 
 Managerial Grid, Flerdimensionell Ledarstil (Definition):: När vilken typ av ledare man är beror på hur mycket intresse man har för människor och hur mycket intresse för verksamheten
-<!--SR:!2024-02-09,1,237!2024-02-13,4,279-->
+<!--SR:!2024-02-12,2,237!2024-02-13,4,279-->
 
 Den Situationsanpassade Ledarskapsmodellen, Flerdimensionell Ledarstil (Definition):: När ledaren anpassar sig efter mognaden av gruppen
 <!--SR:!2024-02-12,4,277!2024-02-13,4,286-->
@@ -429,7 +429,7 @@ HR-avdelningen är vanligtvis en specialiserad stabsenhet med inriktning på ans
 	- Ett företag med minst två delägare, ägarna kallas för bolagsmän och kan vara både fysiska personer och företag, det är de som ansvarar för skulderna, företaget är i sig en juridisk person.
 - Kommanditbolag
 	- En speciell form av handelsbolag där en ägare, som kallas komplementär, har obegränsat ekonomiskt ansvar.
-- [[Ekonomisk förening]]
+- [[Ekonomisk Förening]]
 	- När minst tre personer vill bedriva verksamhet för att främja varandra ekonomiska intressen.
 - [[Ideell förening]]
 	- En ideell förening får inte ha till syfte att främja medlemmarnas ekonomiska intressen genom att driva affärsmässig verksamhet.
@@ -503,7 +503,7 @@ Den formella organisationen är det avsiktliga sättet att dela upp och samordna
 Det är vanligt i en organisation att man har som en rangordning beroende på hur mycket ansvar man har, alltså vem som är överordnad och vem som är underordnad. Vertikal specialisering handlar om hur platt eller spetsig en organisations hierarki är.
 
 Vertikal Specialisering (Definition):: Handlar om hur platt eller spetsig en organisations hierarki är
-<!--SR:!2024-02-09,1,237!2024-02-13,4,286-->
+<!--SR:!2024-02-13,3,257!2024-02-13,4,286-->
 
 12. Vad menas med kontrollspann? Vilka fördelar har brett respektive smalt kontrollspann?
 

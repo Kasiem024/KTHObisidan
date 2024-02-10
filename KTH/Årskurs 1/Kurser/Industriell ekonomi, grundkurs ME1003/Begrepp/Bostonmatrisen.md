@@ -26,8 +26,8 @@ GE-McKinsey-matrisen liknar Bostonmatrisen då båda har med en produkts marknad
 
 ## Flashcards
 
-Bostonmatrisen (Definition)
+Bostonmatrisen (Definition) (4)
 ??
 En portföljanalys som handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa. Om båda är höga för en viss produkt ska man investera i produkt medan om båda är låga ska man döda produkten
 ![[Bostonmatrisen ME1003.png]]
-<!--SR:!2024-02-09,1,230!2024-02-12,3,268-->
+<!--SR:!2024-02-12,2,230!2024-02-12,3,268-->

@@ -40,4 +40,4 @@ Olika intäktsmodeller (Värdefångst) (8)
 - ==Pris för användning==: Pay per view.
 - ==Freemium==: (Adobe, Spotify).
 - ==Affiliate Marketing==: (Google, Facebook).
-<!--SR:!2024-02-09,1,150!2024-02-18,9,260-->
+<!--SR:!2024-02-12,2,170!2024-02-18,9,260-->

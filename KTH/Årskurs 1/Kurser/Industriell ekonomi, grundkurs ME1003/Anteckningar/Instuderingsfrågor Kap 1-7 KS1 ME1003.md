@@ -1,7 +1,7 @@
 # Instuderingsfrågor Kap 1-7 KS1 ME1003
 
 2024-02-01 16:16
-Tags: #year2024 #KTH #ekonomi #ME1003
+Tags: #year2024 #KTH #ekonomi #ME1003 #övning #ME1003KS1
 
 ## Kapitel 1 Introduktion
 
@@ -91,7 +91,7 @@ Egenskaperna av Bygg- och anläggningsbranschen:: En bransch som styrs i hög gr
 <!--SR:!2024-02-15,7,254!2024-02-24,15,294-->
 
 Egenskaperna av Fastighetsbranschen:: En bransch som består av företag som ==förvaltar==, ==hyr ut== och utvecklar kommersiella ==lokaler== och ==bostäder==. Intäkterna består primärt av ==hyresintäkter== och fastighetsförsäljning
-<!--SR:!2024-02-20,12,270!2024-02-10,4,285-->
+<!--SR:!2024-02-20,12,270!2024-02-20,10,285-->
 
 11. Många anser att vi idag befinner oss i en period av radikal industriell omvandling. Vilka är de viktigaste drivkrafterna bakom denna omvandling.
 
@@ -293,7 +293,7 @@ Denna livscykel beskriver hur en ny teknologi sprids på en marknad och när den
 ==Processinnovation== är när en existerande produkt kan tillverkas eller levereras med mindre resurser. Detta sker efter att teknologin har mognat då det är nu majoriteten av marknaden har börjat använda produkten.
 
 Produktinnovation (Definition):: När en ==existerande produkt förbättras== eller när en ==ny produkt utvecklas==. Detta sker tidigt i en teknologis utveckling
-<!--SR:!2024-02-10,2,244!2024-02-15,6,264-->
+<!--SR:!2024-02-16,6,244!2024-02-15,6,264-->
 
 Processinnovation (Definition):: När en ==existerande produkt== kan tillverkas eller levereras med ==mindre resurser==. Detta sker efter att teknologin har ==mognat== då det är nu ==majoriteten== av marknaden har börjat använda produkten
 <!--SR:!2024-02-11,3,264!2024-02-13,4,295-->
@@ -438,7 +438,7 @@ I en [[Företagsmarknad]] är det vanligt att man har vissa väldigt stora kunde
 När kunden blir intresserad av produkten som erbjuds kan den be försäljaren om en ==offert==, alltså att det säljande företaget ska lämna ett erbjudande till köparen. Detta är ovanligt vid en [[Konsumentmarknad]] men praxis vid en [[Företagsmarknad]].
 
 Offert (Definition):: När det säljande företaget ska lämna ett erbjudande till köparen, ovanligt vid en [[Konsumentmarknad]] men praxis vid en [[Företagsmarknad]]
-<!--SR:!2024-02-15,7,254!2024-02-10,4,285-->
+<!--SR:!2024-02-15,7,254!2024-02-27,17,305-->
 
 16. Vad är dröjsmålsränta?
 
@@ -534,7 +534,7 @@ Typer av tjänsteproduktion (3)
 - ==Professionella tjänster==: Låg variation och volym. Är vanligtvis väldigt kundanpassade och kräver därför hög kompetens vilket leder till hög styckkostnad.
 - ==Serviceverkstäder==: Normal mängd variation och volym.
 - ==Standardtjänster==: Låg variation men stor volym, alltså lätt att standardisera.
-<!--SR:!2024-02-09,1,194!2024-02-12,3,254-->
+<!--SR:!2024-02-13,3,214!2024-02-12,3,254-->
 
 10. Redogör för de fyra olika logikerna av produktionsflöden.
 
@@ -569,8 +569,8 @@ När en produkt produceras mot kundorder betyder det att det redan finns råmate
 
 Med ordet ==kapacitet== menas: Den maximala produktionsnivån över en tidperiod när verksamheten i systemet bedrivits under normala villkor. Om efterfrågan överstiger kapacitet uppkommer olika former av köer. Därför är det viktigt att hitta en balans i produktionen för att skapa ett jämnt produktionsflöde.
 
-Kapacitet inom Produktionsstrategi (Definition):: Den maximala produktionsnivån över en tidperiod när verksamheten i systemet bedrivits under normala villkor. Om efterfrågan överstiger denna punkt uppkommer olika former av köer. Därför är det viktigt att hitta en balans i produktionen för att skapa ett jämnt produktionsflöde
-<!--SR:!2024-02-09,1,244!2024-02-13,4,289-->
+Kapacitet inom Produktionsstrategi (Definition):: Den maximala produktionsnivån över en tidperiod när verksamheten i systemet bedrivits under normala villkor. **Om efterfrågan överstiger denna punkt uppkommer olika former av köer.** Därför är det viktigt att hitta en balans i produktionen för att skapa ett jämnt produktionsflöde
+<!--SR:!2024-02-12,2,244!2024-02-13,4,289-->
 
 14. Vad är en trång sektor? På vilket sätt påverkar en trång sektor ett produktionsflöde?
 
@@ -593,7 +593,7 @@ Trång Sektor (Definition):: Det moment i produktionsflödet med lägst kapacite
 ==Legotillverkare==, eller kontraktstillverkare, producerar komponenter efter företagets ritningar och specifikationer, man kan säga att detta är en typ av outsourcing.
 
 Legotillverkare (Definition):: En tillverkare som producerar komponenter efter företagets ritningar och specifikationer, man kan säga att detta är en typ av ==outsourcing==
-<!--SR:!2024-02-09,1,244!2024-02-13,4,289-->
+<!--SR:!2024-02-12,2,244!2024-02-13,4,289-->
 
 17. Vad innebär sourcing?
 
@@ -621,7 +621,7 @@ Funktionell Layout (Definition):: När maskiner med samma funktion placeras fysi
 <!--SR:!2024-02-18,10,284!2024-02-25,16,294-->
 
 Flödeslayout (Definition):: När maskiner placeras i ordningen som produkten behöver för att tillverkas, leder till ett ==snabbt flöde== och kort genomloppstid men låg flexibilitet
-<!--SR:!2024-02-09,3,265!2024-02-23,14,302-->
+<!--SR:!2024-02-17,7,265!2024-02-23,14,302-->
 
 20. Redogör för hur valet av produktionslayout påverkar produktions kostnaderna.
 
@@ -636,7 +636,7 @@ Om man har hög ==flexibilitet== betyder att man kan hantera hög variation i ef
 Ett annat sätt att hantera variation i produktionsprocessen är genom att ha en ==buffert==, vanligen pratas det om två olika typer av buffert. ==Inputbuffert== är när man har ett förråd av råmaterial och komponenter för att hantera leveransproblem. ==Outputbuffert== är när man har ett stort färdigvarulager av produkter för att hantera en plötslig ökning av efterfrågan.
 
 Flexibilitet i Produktionsprocessen (Definition):: När man kan enkelt ställa om sin produktionsprocess för att hantera variation i efterfrågan och problem med leverantörer
-<!--SR:!2024-02-09,1,194!2024-02-09,4,284-->
+<!--SR:!2024-02-13,3,214!2024-02-09,4,284-->
 
 Inputbuffert i Produktionsprocessen (Definition):: När man har ett förråd av råmaterial och komponenter för att hantera leveransproblem
 <!--SR:!2024-02-25,16,304!2024-02-12,4,284-->
@@ -658,7 +658,7 @@ Push är när varje produktionsmoment får en signal att påbörja från det fö
 Pull är när ett moment beställer material från ett tidigare produktionssteg. Detta eliminerar mellanlager och leder till kort genomloppstid men innebär också att det kan bli överkapacitet, alltså att maskiner i tidigare produktionssteg står stilla.
 
 Beordringsprincipen Push (Definition):: När varje moment i ett produktions system väntar på det föregående produktionssteget, leder lätt till mellanlager där komponenter väntar på att det blir deras tur att bearbetas
-<!--SR:!2024-02-11,2,244!2024-02-10,2,214-->
+<!--SR:!2024-02-11,2,244!2024-02-14,4,214-->
 
 Beordringsprincipen Pull (Definition):: När ett moment beställer material från ett tidigare produktionssteg, eliminerar mellanlager och leder till kort genomloppstid men innebär också att det kan bli överkapacitet, alltså att maskiner i tidigare produktionssteg står stilla
 <!--SR:!2024-02-11,3,267!2024-02-12,3,265-->
@@ -702,9 +702,6 @@ Produkter i Arbete (Definition):: Produkter som inte är färdiga men är mitt i
 
 Kapitalbindning är sådant kapital som inte kan användas för andra ändamål än vad det är just nu, alltså är det bundet i dess nuvarande form. För varuproducerande företag kommer detta vanligtvis i formen av råmaterial och produkter i lager.
 
-Kapitalbindning (Definition):: Resurser som inte kan användas för andra ändamål än vad de är just nu. För ett varuproducerande företag är detta vanligtvis råmaterial och produkter i lager
-<!--SR:!2024-02-17,9,262!2024-02-26,17,294-->
-
 29. På vilket sätt är partistorlek och ställtid viktiga för produktionens genomloppstid?
 
 ==Partistorlek== är det antal som tillverkas av en viss produkt innan omställning till nästa produkt sker. Mindre partier ger alltså kortare ==genomloppstid== men till priset av ökade ==ställtider==. Med ställtid menas den tid det tar att ställa om maskinerna för att tillverka nästa parti av en annan produkt. Om partistorleken minskar ökar ställtiden och vise versa. Om man vill ha hög flexibilitet måste både partistorleken och ställtiden vara liten.
@@ -715,7 +712,7 @@ Partistorlek (Definition):: Det antal som tillverkas av en viss produkt innan om
 <!--SR:!2024-02-22,14,294!2024-02-19,13,274-->
 
 Ställtid (Definition):: Den tid det tar att ställa om maskinerna för att tillverka nästa parti av en annan produkt
-<!--SR:!2024-02-21,13,294!2024-02-10,4,285-->
+<!--SR:!2024-02-21,13,294!2024-02-25,15,305-->
 
 30. Vad är
 
@@ -737,7 +734,7 @@ Ställtid (Definition):: Den tid det tar att ställa om maskinerna för att till
 - ==Städa==, regelbundet
 - ==Standardisera==, dagliga rutinerna
 - ==Se till==, att ordningen hålls
-<!--SR:!2024-02-09,1,248!2024-02-13,4,289-->
+<!--SR:!2024-02-12,2,248!2024-02-13,4,289-->
 
 32. Beskriv några viktiga principer och metoder som används inom kvalitetsledning.
 
@@ -825,7 +822,7 @@ En ==projektportfölj== är när man klassificerar olika utvecklingsprojekt efte
 Alltså är det viktigt att ha en balanserad portfölj av projekt där projekten har en olika grad av förändring, alltså balanserar man sin risk.
 
 Projektportfölj (Definition):: När man klassificerar olika utvecklingsprojekt efter grad av produktförändring respektive grad av förändring i produktionsprocessen
-<!--SR:!2024-02-09,1,248!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,248!2024-02-13,3,276-->
 
 10. Redogör för principerna bakom den s.k. utvecklingstratten.
 
@@ -853,7 +850,7 @@ Faserna i en Typisk Produktutvecklingsprocess (6)
 - ==Testning==: Här testas produkten och justeringar görs när det behövs.
 - ==Produktionsstart==: Här lanseras produkten.
 ![[Produktutvecklingsprocessen ME1003.png]]
-<!--SR:!2024-02-09,1,248!2000-01-01,1,250-->
+<!--SR:!2024-02-09,1,248!2024-02-11,1,256-->
 
 12. Beskriv skillnaderna mellan sekventiell, parallell och agil produkt utveckling. Vilka är för- respektive nackdelarna med dessa tre modeller?
 
@@ -911,10 +908,10 @@ Prototyping (Definition):: När man snabbt och iterativt tar fram olika grader a
 	- ==Failure Mode and Effect Analysis== är när man väldigt tidigt försöker identifiera tänkbara fel genom att bryta ner produkten i komponenter och bedöma varje komponents möjliga felkällor.
 
 Quality Function Deployment (Definition):: Handlar om att veta vad kundens behov är och utifrån det påbörja utvecklingsarbetet
-<!--SR:!2024-02-11,3,268!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,268!2024-02-13,3,276-->
 
 Design for Manufacturing and Assembly (Definition):: När man väldigt tidigt i utvecklingsarbetet börjar tänka på tillverkningen och monteringen av produkten, syftet är att minimera antalet komponenter och tillverkningskostnader
-<!--SR:!2024-02-11,3,268!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,268!2024-02-11,1,256-->
 
 Failure Mode and Effect Analysis (Definition):: När man väldigt tidigt försöker identifiera tänkbara fel genom att bryta ner produkten i komponenter och bedöma varje komponents möjliga felkällor
-<!--SR:!2024-02-11,3,268!2000-01-01,1,250-->
+<!--SR:!2024-02-11,3,268!2024-02-13,3,276-->

@@ -1,7 +1,7 @@
 # 01-19 Lektion ME1003
 
 2024-01-19 15:15
-Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
+Tags: #year2024 #KTH #ekonomi #ME1003 #lektion #ME1003KS1
 
 [Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F3+Teknikutveckling+som+konkurrensfaktor+P3+V22+SWE+2022-01-20+BK/0_yv1oqpha/660304)
 [[01-19 Journal ME1003.pdf]]

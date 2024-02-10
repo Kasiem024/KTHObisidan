@@ -23,4 +23,4 @@ Alltså man har inte fått en faktura eller betalat men man har fått tjänsten/
 ## Flashcards
 
 Upplupen Kostnad (Definition):: När man har inte fått en faktura eller betalat men man har fått tjänsten/varan detta [[Räkenskapsår]].
-<!--SR:!2024-02-10,4,272!2024-02-22,16,290-->
+<!--SR:!2024-02-24,14,292!2024-02-22,16,290-->

@@ -16,10 +16,10 @@ Kotler byggde på arbetet av McCarthy för att skapa sin Marknadsföringsmix. De
 
 ## Flashcards
 
-Marknadsföringsmixen 4P (Definition)
+Marknadsföringsmixen 4P (Definition) (4)
 ??
 - ==Produkt (Product==): Produktsortiment och -egenskaper.
 - ==Pris (Price)==: [[Prissättning]] och andra försäljningsvillkor.
 - ==Plats (Place)==: [[Distributionskanaler]].
 - ==Påverkan (Promotion)==: Reklam, relationer, direkta försäljningsinsatser.
-<!--SR:!2024-02-09,1,210!2024-02-20,11,270-->
+<!--SR:!2024-02-13,3,230!2024-02-20,11,270-->

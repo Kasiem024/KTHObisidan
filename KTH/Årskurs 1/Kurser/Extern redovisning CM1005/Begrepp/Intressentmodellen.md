@@ -29,7 +29,7 @@ Intressentmodellen (Definition):: En grafisk beskrivning av vilka som förvänta
 <!--SR:!2024-02-26,20,270!2024-02-12,13,270-->
 
 Intressenter (Definition):: Grupper/personer som påverkar eller påverkas av ett företag
-<!--SR:!2024-02-10,11,270!2024-02-15,16,290-->
+<!--SR:!2024-03-21,40,290!2024-02-15,16,290-->
 
 Intressenter i intressentmodellen (7)
 ??

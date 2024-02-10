@@ -26,7 +26,7 @@ Konsumentmarknad (Definition):: När ett företag säljer en produkt till en kon
 <!--SR:!2024-02-25,17,290!2024-02-22,17,290-->
 
 Egenskaperna av en Konsumentmarknad (6)
-??
+==DISABLEDFLASHCARD==
 - ==Kundrelationer==: Många och ytliga. Marknadsföringen vill nå så många som möjligt.
 - ==Kundantal== och -storlek: Många och små.
 - ==Köpprocess==: Enkel (spontanköp) eller längre, beroende av köpsituation.

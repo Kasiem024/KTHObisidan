@@ -1,4 +1,4 @@
-# Ekonomisk förening
+# Ekonomisk Förening
 
 2024-01-16 10:56
 Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp

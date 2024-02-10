@@ -29,7 +29,7 @@ Inom [[Produktion]] vill man vara vart det är billigast att producera produkten
 ## Flashcards
 
 Produktion och Marknadsföring Olika Perspektiv (5)
-??
+==DISABLEDFLASHCARD==
 - ==Produktportfölj==: Antalet produkter/varianter.
 - ==Produktstandardisering==: Hög eller låg standardisering.
 - ==Prestationsmätning==: Kostnadsenhet mot intäktsenhet.

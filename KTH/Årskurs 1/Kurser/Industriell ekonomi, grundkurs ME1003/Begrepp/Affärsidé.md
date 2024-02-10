@@ -28,11 +28,11 @@ Delarna av en Affärsidé (3)
 - ==Marknad==: Vad kunderna/marknaden är i behov av.
 - [[Värdeerbjudandet]]: Vad vi har att erbjuda till kunderna/marknaden.
 - ==Resurser==: Vad våra resurser och kompetenser är.
-<!--SR:!2024-02-09,1,210!2024-02-04,1,230-->
+<!--SR:!2024-02-09,1,210!2024-02-13,3,250-->
 
 Effektivitets Begrepp (3)
 ??
 - ==Inre effektivitet==: Om man har resurserna för att skapa ett visst erbjudande, ==att göra saker rätt==.
 - ==Yttre effektivitet==: Om man erbjuder något som marknaden vill ha, ==att göra rätt saker==.
 - ==Total effektivitet== = Inre effektivitet + Yttre effektivitet
-<!--SR:!2024-02-10,2,246!2024-02-12,3,264-->
+<!--SR:!2024-02-19,9,266!2024-02-12,3,264-->

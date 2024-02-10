@@ -45,4 +45,4 @@ Konkurrensstrategier (3)
 - Operativ överlägsenhet
 - Produktledarskap
 - Kundnärhet
-<!--SR:!2024-02-28,19,270!2024-02-02,3,268-->
+<!--SR:!2024-02-28,19,270!2024-02-19,9,288-->

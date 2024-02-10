@@ -21,6 +21,10 @@ Kostnad visar vad för resurser har förbrukat under en viss period. INTE vad vi
 
 En Kostnad är ==värdet== av en ==förbrukad resurs== under en viss ==period==.
 
+### [[Kostnadsbegrepp]]
+
+TODO
+
 ### Räkningar
 
 Vad brukar räknas som kostnad inom RR?

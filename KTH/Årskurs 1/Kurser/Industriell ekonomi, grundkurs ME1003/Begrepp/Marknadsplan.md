@@ -34,7 +34,7 @@ När man analyserar sina konkurrenter ska man besvara några frågor:
 
 När man analyserar sitt företag ska man tänka på att först göra en [[SWOT-Analys]] och tänka på hur företagets produkt fungerar idag
 
-Efter det ska man dra slutsatser för att kunna välja sin målgrupp och omdefiniera sin affärsidé/målgrupp om det behövs.
+Efter det ska man dra slutsatser för att kunna välja sin målgrupp och omdefiniera sin [[Affärsidé]]/målgrupp om det behövs.
 
 ## Marknadsföringens mål
 
@@ -89,4 +89,4 @@ Delarna av en Marknadsplan (5)
 - ==Marknadsföring på lång sikt==: Strategiska mål, mer övergripande hur man ska nå till sin målgrupp.
 - ==Marknadsföring på kort sikt==: Taktiska mål, mer konkret hur reklamen kommer se ut.
 - ==Aktivitetsplaner==: Skapa ett schema/budget för Marknadsplanen.
-<!--SR:!2024-02-10,2,230!2024-02-14,12,270-->
+<!--SR:!2024-02-14,4,230!2024-02-14,12,270-->

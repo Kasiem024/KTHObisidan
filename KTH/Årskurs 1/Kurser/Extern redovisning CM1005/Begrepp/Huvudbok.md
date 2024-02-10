@@ -17,4 +17,4 @@ En huvudbok är en lista över ett företags [[Affärshändelse]] presenterad i 
 ## Flashcards
 
 Huvudbok (Definition):: En lista över ett företags [[Affärshändelse]] presenterad i systematisk ordning, det vill säga sorterade efter konto.
-<!--SR:!2024-02-10,3,230!2024-02-21,13,288-->
+<!--SR:!2024-02-19,9,250!2024-02-21,13,288-->

@@ -4,16 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "f9969a8bb4001844",
+        "id": "6329e582ca88c0a9",
         "type": "tabs",
         "children": [
           {
-            "id": "f349e1c8aeb02054",
+            "id": "ffbb35353cc8ac79",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Påläggskalkylering.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "add93eb756304c9d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ccaa5caed53ef0a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Påläggskalkylering.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,16 +66,28 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "kalkylobjekt",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical"
+                "sortOrder": "byCreatedTime"
+              }
+            }
+          },
+          {
+            "id": "4ce062bd725a5422",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -73,18 +103,28 @@
         "type": "tabs",
         "children": [
           {
+            "id": "0526fcc4045722ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Påläggskalkylering.md"
+              }
+            }
+          },
+          {
             "id": "45eadd936a949ee2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Påläggskalkylering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -95,39 +135,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Påläggskalkylering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            }
-          },
-          {
-            "id": "4ce062bd725a5422",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "0526fcc4045722ea",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md"
-              }
-            }
-          },
-          {
-            "id": "91c73a55d86f8584",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
             }
           },
           {
@@ -145,12 +156,21 @@
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "91c73a55d86f8584",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 396.5,
+    "width": 371.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -165,38 +185,44 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f349e1c8aeb02054",
+  "active": "ffbb35353cc8ac79",
   "lastOpenFiles": [
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Processtyper inom Varuproduktion.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
-    "Obsidian Plugins/Theme Test.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföring.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/01-16 Lektion CM1005.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Maslows Behovspyramid.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Interimsfordring.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS2 Kalkyl 1-2 Övning.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS2 Exempel CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-05 KS2 Kalkyl 2 Exempel CM1005.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kontoplan CM1005.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Strategiprocessen enligt Philip Kotler.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Påläggskalkylering.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktkalkylering.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/02-02 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Självkostnadskalkylering.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Aktivitetsbaserad Kalkylering.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Stegkalkylering.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Bidragskalkylering.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kraljics Matris.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/BAS-kontoplan.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4S.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Untitled.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktionens och Marknadsföringens Olika Perspektiv.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutvecklingens Analysnivåer.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Företagsmarknad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Lönsamhet.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Täckningsbidrag.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Resultatdiagram.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Total Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Total Intäkt.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Särkostnad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Rörlig Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kostnadsställe.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kostnadsbegrepp.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kostnadsbärare.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Indirekt Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Halvfast Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Fast Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Direkt Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kostnadsställe.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Särkostnad.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Indirekt Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Begrepp",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Självkostnaden av en Produkt ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Självkostnaden av en Produkt ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Självkostnaden av en Produkt ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Påläggskalkyl ME1003.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS2 Exempel CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kontoplan CM1005.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Reklam VS Relationsmarknadsföring ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Generella Anteckningar ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsplan.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intäkt.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inkomst.md",
     "Obsidian Plugins/Scripts/parentFolderName.js",
     "Obsidian Plugins/Scripts/parentFolderNAme.js",
     "Obsidian Plugins/Scripts/main.js",
@@ -204,15 +230,9 @@
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-07 Moms Pelles Golfshop CM1005.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS2-Exempel-CM1005-xkx5d_ocr.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS1 Komplettering CM1005.pdf",
-    "Obsidian Plugins/Handwritten Notes/New note.pdf",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206084404.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206091402.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206091354.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206084153.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206084426.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Proportionellt Rörliga Kostnader ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Regressivt Rörliga Kostnader ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

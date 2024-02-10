@@ -20,9 +20,6 @@ Personligt ansvarig. Företaget är inte en separat juridisk person.
 Enskild näringsverksamhet (Definition):: Företagsform om en privatperson är ensam ägare och driver/ansvarar själv för företaget
 <!--SR:!2024-02-11,12,278!2024-02-15,16,290-->
 
-Annat namn för enskild näringsverksamhet:: Annat namn för enskild firma
-<!--SR:!2024-02-15,16,294!2024-02-10,15,294-->
-
 Egenskaper av en enskild näringsverksamhet
 ??
 - Enklaste sättet att komma igång med ett företag.

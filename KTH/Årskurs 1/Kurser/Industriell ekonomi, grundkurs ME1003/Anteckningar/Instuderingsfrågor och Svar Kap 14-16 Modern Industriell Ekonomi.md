@@ -346,7 +346,7 @@ HR-avdelningen är vanligtvis en specialiserad stabsenhet med inriktning på ans
 	- Ett företag med minst två delägare, ägarna kallas för bolagsmän och kan vara både fysiska personer och företag, det är de som ansvarar för skulderna, företaget är i sig en juridisk person.
 - [[Handelsbolag|Kommanditbolag]]
 	- En speciell form av handelsbolag där en ägare, som kallas komplementär, har obegränsat ekonomiskt ansvar.
-- [[Ekonomisk förening]]
+- [[Ekonomisk Förening]]
 	- När minst tre personer vill bedriva verksamhet för att främja varandras ekonomiska intressen.
 - [[Ideell förening]]
 	- En ideell förening får inte ha till syfte att främja medlemmarnas ekonomiska intressen genom att driva affärsmässig verksamhet.

@@ -1,7 +1,7 @@
 # 01-18 Lektion ME1003
 
 2024-01-18 12:57
-Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
+Tags: #year2024 #KTH #ekonomi #ME1003 #lektion #ME1003KS1
 
 [Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F2+Teknikbaserade+affa%CC%88rsmodeller+P3+V22+SWE+2022-01-19+BK/0_kfxregj1/660304)
 [Länk till PPT på Canvas](https://canvas.kth.se/courses/44986/files/folder/2.%20F%C3%B6rel%C3%A4sningar?preview=7529160)
@@ -132,25 +132,3 @@ Mått för prestationsmätning och uppföljning.
 Spelar ingen roll om man har en effektiv produktion om ingen vill köpa produkterna.
 
 ## Flashcards
-
-Egenskaperna av en vara (7)
-??
-- Materiell.
-- Produktion och distribution separerade från konsumtion.
-- Kan lagras.
-- Ett ting/föremål.
-- Kärnvärde produceras i fabrik.
-- Kunden deltar vanligen inte i produktionen.
-- Äganderätten överlåts.
-<!--SR:!2024-02-06,1,230!2024-02-11,3,265-->
-
-Egenskaperna av en tjänst (7)
-??
-- Icke-materiell.
-- Produktion, distribution och konsumtion sker samtidigt.
-- Kan inte lagras.
-- En aktivitet eller process.
-- Kärnvärde produceras i interaktion mellan leverantör och kund.
-- Kunden deltar (vanligen) i produktionen.
-- Äganderätten överlåts inte.
-<!--SR:!2024-02-07,1,228!2024-02-11,3,265-->

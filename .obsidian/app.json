@@ -95,19 +95,24 @@
     "Inkrement",
     "inkrement",
     "scrum",
-    "Affärsmodellkanvasen"
+    "Affärsmodellkanvasen",
+    "samkostnader",
+    "Stegkalkylering",
+    "Förkalkylering",
+    "Efterkalkylering"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "userIgnoreFilters": [
     "Obsidian Plugins/Templates/",
     "/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi/",
-    "/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi/"
+    "/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi/",
+    "/excalidraw/"
   ],
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
     "includeName": false,
-    "pageSize": "Legal",
+    "pageSize": "A4",
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100

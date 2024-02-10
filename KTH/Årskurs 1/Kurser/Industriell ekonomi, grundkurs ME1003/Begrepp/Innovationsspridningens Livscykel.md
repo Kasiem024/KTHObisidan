@@ -36,4 +36,4 @@ Innovationsspridningens Livscykel Användarkategorier (5)
 - Tidig majoritet
 - Sen majoritet
 - Eftersläntrare
-<!--SR:!2024-02-09,1,230!2024-02-12,3,268-->
+<!--SR:!2024-02-13,3,250!2024-02-12,3,268-->

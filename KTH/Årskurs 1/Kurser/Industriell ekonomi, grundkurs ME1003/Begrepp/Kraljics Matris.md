@@ -21,7 +21,7 @@ Alltså visar den hur viktig en viss inköpt artikel är och hur problematiskt d
 ## Flashcards
 
 Kraljics Matris (Definition):: Visar hur viktig en viss inköpt artikel är och hur problematiskt det är ifall den inte levereras i tid
-<!--SR:!2024-02-12,3,248!2024-02-08,2,230-->
+<!--SR:!2024-02-12,3,248!2024-02-15,5,230-->
 
 Kraljics Matris (4)
 ??
@@ -30,4 +30,4 @@ Kraljics Matris (4)
 - ==Icke-kritisk==: Minska transaktionskostnaderna med färre leverantörer
 - ==Flaskhals==: Säkra leveranser hos nyckelleverantörer, sök alternativa leverantörer
 ![[Kraljics Inköpsmatris ME1003.png]]
-<!--SR:!2024-02-09,1,228!2024-02-11,2,244-->
+<!--SR:!2024-02-12,2,228!2024-02-11,2,244-->

@@ -7,7 +7,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 Alla företag är skyldiga att upprätta ett [[Årsbokslut]] vid räkenskapsårets slut. Bolagsformen och storleken på företaget styr enligt vilket regelverk årsbokslutet ska upprättas samt om en årsredovisning ska göras eller inte.
 
-[[Aktiebolag]] och [[Ekonomisk förening]] ska alltid upprätta en Årsredovisning.
+[[Aktiebolag]] och [[Ekonomisk Förening]] ska alltid upprätta en Årsredovisning.
 
 [[Handelsbolag]] och kommanditbolag ska upprätta antingen ett [[Årsbokslut]] eller en Årsredovisning.
 

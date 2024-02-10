@@ -29,4 +29,4 @@ Produktionens konkurrensfaktorer (4)
 - ==Leveransförmåga==: Förmågan att leverera snabbt och billigt, uppnås genom färdigvarulager och korta genomloppstider.
 - ==Kvalitet==: Förmågan att tillfredsställa kundens behov förväntningar, uppnås genom standardisering och om kundens behov.
 - ==Flexibilitet==: Förmåga att anpassa produktionen till förändringar i omvärlden, uppnås genom överkapacitet och utbildning av personal som klarar av snabba omställningar.
-<!--SR:!2024-02-09,1,168!2024-02-12,3,228-->
+<!--SR:!2024-02-12,2,188!2024-02-12,3,228-->

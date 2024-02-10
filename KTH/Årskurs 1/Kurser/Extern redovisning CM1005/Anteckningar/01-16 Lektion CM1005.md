@@ -26,7 +26,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 - [[Enskild näringsverksamhet]]
 - [[Aktiebolag]]
 - [[Handelsbolag]]
-- [[Ekonomisk förening]]
+- [[Ekonomisk Förening]]
 - [[Ideell förening]]
 
 [[Affärshändelse]]: En affärshändelse är en ekonomisk transaktion som dokumenteras genom en så kallad verifikation i företagets bokföring. ==Har det varit ett ekonomiskt utbyte med världen?==

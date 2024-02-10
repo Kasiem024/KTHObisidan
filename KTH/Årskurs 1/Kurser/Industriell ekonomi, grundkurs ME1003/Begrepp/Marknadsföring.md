@@ -26,7 +26,7 @@ Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor o
 ## Flashcards
 
 Marknadsföring (Definition):: Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor och tjänster
-<!--SR:!2024-02-10,2,230!2024-02-20,17,290-->
+<!--SR:!2024-02-19,9,250!2024-02-20,17,290-->
 
 Nyckelkoncept inom Marknadsföring (3)
 ??

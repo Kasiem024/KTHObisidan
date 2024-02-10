@@ -28,4 +28,4 @@ PESTLE-Analys (6)
 - ==Technological factors==: Automatisering, Forskning och utveckling, Teknikmognad på marknaden, Teknikskiften.
 - ==Legal factors==: Konsumentlagstiftning, Arbetsgivaransvar för säkerhet och hälsa, Arbetsmarknadslagar, Handelshinder.
 - ==Environmental factors==: Klimatförändringar, Utsläppsregler, Lokala miljöeffekter, Miljöavgifter.
-<!--SR:!2024-02-11,2,210!2024-02-03,1,230-->
+<!--SR:!2024-02-11,2,210!2024-02-13,3,250-->

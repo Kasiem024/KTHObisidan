@@ -39,13 +39,13 @@ Syftet är att motverka diskriminering och främja lika rättigheter och möjlig
 ## Flashcards
 
 Lagen om anställningsskydd (LAS) (Definition):: En lag som skyddar de anställda för det mesta när det kommer till uppsägningar och provanställningar
-<!--SR:!2024-02-09,1,230!2024-02-12,3,268-->
+<!--SR:!2024-02-13,3,250!2024-02-12,3,268-->
 
 Arbetsmiljölagen (Definition):: Regler om skyldigheter för arbetsgivare om att förebygga ohälsa och olycksfall i arbetet
-<!--SR:!2024-02-09,1,230!2024-02-12,3,265-->
+<!--SR:!2024-02-12,2,230!2024-02-12,3,265-->
 
 Medbestämmandelagen (MBL) (Definition):: En lag som reglerar rätten för arbetsgivare och arbetstagare att organisera sig och kalla till kollektiva förhandlingar med sin motpart, alltså fackförbund
-<!--SR:!2024-02-09,1,230!2024-02-12,3,269-->
+<!--SR:!2024-02-11,1,210!2024-02-12,3,269-->
 
 Diskrimineringslagen (Definition):: En lag vars syfte är att främja lika rättigheter och möjligheter för alla
 <!--SR:!2024-02-11,3,250!2024-02-12,3,265-->

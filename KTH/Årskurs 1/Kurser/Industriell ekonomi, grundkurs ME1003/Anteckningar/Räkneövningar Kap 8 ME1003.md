@@ -1,7 +1,7 @@
 # Räkneövningar Kap 8 ME1003
 
 2024-02-06 08:28
-Tags: #year2024 #KTH #ekonomi #ME1003
+Tags: #year2024 #KTH #ekonomi #ME1003 #övning #ME1003KS2
 
 ## 8.1 Johanna LargeKitchen
 

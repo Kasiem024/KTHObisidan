@@ -40,10 +40,10 @@ Produktutvecklings Modeller (4)
 - Parallell utveckling
 - Agil utveckling
 - Stag-gate-modellen
-<!--SR:!2024-02-09,1,235!2024-02-13,4,273-->
+<!--SR:!2024-02-13,3,255!2024-02-13,4,273-->
 
 Produktutvecklings Modeller, Sekventiell utveckling (Definition):: **När den efterföljande fasen inte påbörjas förrän samtliga aktiviteter i den föregående fasen är helt färdiga**. Denna utveckling gör det lätt att kontrollera hur långt man har kommit och om man har gjort fel i ett tidigare steg. Dock kan det också leda till kommunikations problem mellan de olika faserna och att personalen inte utvidgar sin kompetens
-<!--SR:!2024-02-09,1,235!2024-02-12,3,253-->
+<!--SR:!2024-02-12,2,235!2024-02-12,3,253-->
 
 Produktutvecklings Modeller, Parallell utveckling (Definition):: **När man skickar vidare information från sin egna fas till nästa fas innan man är helt klar med arbetet**. Detta leder till ökat samarbete mellan de olika faserna men kan också vara ett problem om informationsspridningen inte är effektiv
 <!--SR:!2024-02-11,3,255!2024-02-13,4,273-->

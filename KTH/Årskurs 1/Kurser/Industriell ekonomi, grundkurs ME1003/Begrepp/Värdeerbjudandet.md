@@ -46,4 +46,4 @@ Sätt att kategorisera produkter (Värdeerbjudandet)
 ??
 - Business to Consumer (B2C).
 - Business to Business (B2B).
-<!--SR:!2024-02-10,11,270!2024-02-13,10,288-->
+<!--SR:!2024-03-21,40,290!2024-02-13,10,288-->

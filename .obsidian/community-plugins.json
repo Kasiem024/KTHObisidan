@@ -14,5 +14,9 @@
   "handwritten-notes",
   "dataview",
   "templater-obsidian",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "highlightr-plugin",
+  "obsidian-math-plus",
+  "quick-latex",
+  "obsidian-latex-suite"
 ]

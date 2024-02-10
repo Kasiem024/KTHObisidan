@@ -1,7 +1,7 @@
 # 01-23 Lektion ME1003
 
 2024-01-23 15:09
-Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
+Tags: #year2024 #KTH #ekonomi #ME1003 #lektion #ME1003KS1
 
 [Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F4+De+va%CC%88rdeskapande+processerna+Produktion+och+Produktutveckling+P3+V22+SWE+2022-01-24+BK/0_k2rwr232/660304)
 [[01-23 Journal ME1003.pdf]]

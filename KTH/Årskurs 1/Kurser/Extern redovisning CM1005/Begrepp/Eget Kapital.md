@@ -17,7 +17,14 @@ Exempel på Eget Kapital:
 
 Eget Kapital kan delas in i två kategorier, [[Bundet Eget Kapital]] och [[Fritt Eget Kapital]].
 
+### Kapitalbindning
+
+Sådant kapital som inte kan användas för andra ändamål än vad det är just nu, alltså är det bundet i dess nuvarande form. För varuproducerande företag kommer detta vanligtvis i formen av råmaterial och produkter i lager.
+
 ## Kopplat till
+
+- [[Skuld]]
+- [[Balansräkning]]
 
 ## Flashcards
 
@@ -30,3 +37,6 @@ Exempel på Eget Kapital (3)
 - Kapitaltillskott: Det ägarna satte in efter grundandet.
 - Vinster: Vad företag tjänat efter vinstutdelning.
 <!--SR:!2024-02-24,15,292!2024-02-17,12,288-->
+
+Kapitalbindning (Definition):: Resurser som inte kan användas för andra ändamål än vad de är just nu. För ett varuproducerande företag är detta vanligtvis råmaterial och produkter i lager
+<!--SR:!2024-02-17,9,262!2024-02-26,17,294-->

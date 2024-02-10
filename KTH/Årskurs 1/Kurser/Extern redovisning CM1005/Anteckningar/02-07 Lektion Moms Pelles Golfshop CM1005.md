@@ -1,7 +1,7 @@
 # 02-07 Lektion Moms Pelles Golfshop CM1005
 
 2024-02-07 13:15
-Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
+Tags: #year2024 #KTH #ekonomi #CM1005 #lektion #CM1005KS3
 
 [[02-07 Moms Pelles Golfshop CM1005.excalidraw]]
 

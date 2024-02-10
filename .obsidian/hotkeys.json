@@ -398,5 +398,36 @@
       ],
       "key": "F"
     }
-  ]
+  ],
+  "highlightr-plugin:highlighter-plugin-menu": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "H"
+    }
+  ],
+  "highlightr-plugin:unhighlight": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "H"
+    }
+  ],
+  "highlightr-plugin:Yellow": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Y"
+    }
+  ],
+  "editor:save-file": [],
+  "quick-latex:addInlineMath": [],
+  "quick-latex:addBlockMath": [],
+  "quick-latex:addCasesBlock": [],
+  "quick-latex:addMatrixBlock": [],
+  "quick-latex:addAlignBlock": []
 }

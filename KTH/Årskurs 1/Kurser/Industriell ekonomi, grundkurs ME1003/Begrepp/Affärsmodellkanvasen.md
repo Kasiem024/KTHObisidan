@@ -35,7 +35,7 @@ Ett exempel på när Nestlé använde sig av denna strategimodell vid skapandet 
 ## Flashcards
 
 Affärsmodellkanvasen (Definition):: En strategimodell som analyserar ett företags verksamhet genom att dela in ett företags affärsmodell i 9 element. Tanken är att man ska länka företagets strategi med dess konkreta verksamhet och lättare se kopplingarna mellan de
-<!--SR:!2024-02-09,1,230!2024-02-12,3,265-->
+<!--SR:!2024-02-11,1,210!2024-02-12,3,265-->
 
 Affärsmodellkanvasen (9)
 ??
@@ -49,4 +49,4 @@ Affärsmodellkanvasen (9)
 - ==Intäktsflöden==: Försäljning av kaffekapslar.
 - ==Kundsegment==: Espresso älskare.
 ![[Affärsmodellkanvas ME1003.png]]
-<!--SR:!2024-02-09,1,228!2024-02-12,3,267-->
+<!--SR:!2024-02-13,3,248!2024-02-12,3,267-->

@@ -34,4 +34,4 @@ Michael Porters Femkraftsmodell  (5)
 - ==Nya aktörer==: Potentiella konkurrenter.
 - ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden.
 ![[Michael Porters Femkraftsmodell ME1003.png]]
-<!--SR:!2024-02-10,2,234!2024-02-12,4,270-->
+<!--SR:!2024-02-19,9,254!2024-02-12,4,270-->

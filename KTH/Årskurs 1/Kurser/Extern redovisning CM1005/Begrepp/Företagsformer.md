@@ -6,18 +6,21 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 - [[Enskild näringsverksamhet]]
 - [[Aktiebolag]]
 - [[Handelsbolag]]
-- [[Ekonomisk förening]]
+- [[Ekonomisk Förening]]
 - [[Ideell förening]]
 - [[Konsortium]]
 
 ## Flashcards
 
 Alla företagsformer (6)
-??
+||
 - [[Enskild näringsverksamhet]]
 - [[Aktiebolag]]
 - [[Handelsbolag]]
-- [[Ekonomisk förening]]
+- [[Ekonomisk Förening]]
 - [[Ideell förening]]
 - [[Konsortium]]
-<!--SR:!2024-03-26,48,290!2024-02-10,4,272-->
+<!--SR:!2024-03-26,48,290-->
+
+Fåmansföretag (Definition):: Ett skatterättsligt begrepp, när ett AB/HB/KB/EF ägs till majoriteten av en eller ett fåtal fysiska personer
+<!--SR:!2024-02-17,11,278!2024-02-17,11,264-->
