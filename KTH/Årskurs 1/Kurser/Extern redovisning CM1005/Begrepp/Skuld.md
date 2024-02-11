@@ -6,7 +6,7 @@ Skapad: 2024-02-10 09:03
 
 Uppdaterad: Saturday 10th February 2024 09:03:43
 
-Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp #CM1005KS2
+Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ---
 

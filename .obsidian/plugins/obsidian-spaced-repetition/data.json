@@ -48,25 +48,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2024-02-10",
-  "buryList": [
-    "181c32a07710aa",
-    "c3a108d3c8b74",
-    "68037a00b308f",
-    "59f8179a0df6e",
-    "1138bc37c983ba",
-    "6654eb8c366be",
-    "68b7b13bf543b",
-    "c05e187d1b604",
-    "a3ea5aacc6b06",
-    "e8beebc114974",
-    "1d3278cb5685b3",
-    "1c854bdd4305eb",
-    "10325eb75223ba",
-    "1aa1b3f6a1193d",
-    "143e02c2ddd611",
-    "ebced13946fdd",
-    "b3ee0f68cc1ac"
-  ],
+  "buryDate": "2024-02-11",
+  "buryList": [],
   "historyDeck": null
 }

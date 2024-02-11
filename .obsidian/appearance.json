@@ -1,13 +1,13 @@
 {
   "accentColor": "",
-  "baseFontSize": 25,
+  "baseFontSize": 27,
   "enabledCssSnippets": [
     "styles",
     "stylesPDF"
   ],
   "translucency": false,
   "showViewHeader": true,
-  "cssTheme": "Prism",
+  "cssTheme": "Shimmering Focus",
   "theme": "obsidian",
   "interfaceFontFamily": "Inter",
   "textFontFamily": "Inter",

@@ -63,6 +63,14 @@ Ett [[Resultatdiagram]] visar relationen mellan intäkterna och volymen. Den inn
 
 ==Säkerhetsmarginalen== i ett [[Resultatdiagram]] anger med hur mycket volymen eller försäljningen kan minska innan en förlust uppstår.
 
+$$
+\pu{ Säkerhetsmarginal (volym) = Verklig Volym - Kritisk Volym  }
+$$
+
+$$
+\pu{ Säkerhetsmarginal (\%) = \frac{Verklig \, Volym - Kritisk \, Volym}{Verklig \, Volym}}
+$$
+
 9. Definiera följande begrepp:
 
 - [[Direkt Kostnad]] och [[Indirekt Kostnad]]
@@ -115,16 +123,15 @@ Självkostnaden för en produkt är summan av samtliga kostnader för produkten 
 
 15. Hur beräknas
 <br>
-
 $\pu{Materialomkostnadspålägget=\frac{Materialomkostnader}{Direkt \, Material}}$
-
 <br>
+
 ---
 $\pu{Tillverkningsomkostnadspålägget=\frac{Tillverkningsomkostnader}{Direkt \,  Lön}}$
 <br>
+
 ---
 $\pu{Affärsomkostnadspålägget=\frac{Affärsomkostnader}{Tillverkningskostnad}}$
-
 <br>
 16. Ge ett exempel på en direkt kostnad som många tillverkningsföretag, särskilt sådana som bedriver högt automatiserad tillverkning, använder som påläggsbas i stället för direkt lön i sin modell för självkostnads kalkylering.
 
@@ -155,6 +162,8 @@ TI = Total Intäkt
 TB /st= Täckningsbidrag/st
 
 TTB = Totalt Täckningsbidrag
+
+TG = Täckningsgrad
 
 q = Volym
 
@@ -190,7 +199,7 @@ SjK = Självkostnad
 
 ### Formler för Kap 8
 
-###### Total Kostnad
+#### Total Kostnad
 
 $$
 \pu{TK = FK + (RK\!/\!st \,*\, q)}
@@ -198,66 +207,73 @@ $$
 
 <br>
 
-###### Total intäkt
+#### Total intäkt
 
 $$
 \pu{TI =  Pris\!/\!st \,*\, q}
 $$
 <br>
 
-###### Täckningsbidrag/st
+#### Täckningsbidrag/st
 
 $$
 \pu{ TB\!/\!st = Särintäkt - Särkostnad}
 $$
 <br>
 
-###### Totalt Täckningsbidrag
+#### Totalt Täckningsbidrag
 
 $$
 \pu{ TTB = Total Särintäkt - Total Särkostnad }
 $$
 <br>
 
-###### Kritiska Punkten i ett Resultatdiagram
+#### Täckningsgrad
+
+$$
+\pu{ TG = 
+\frac{TB}{Särinäkt}}
+$$
+
+#### Kritiska Punkten i ett Resultatdiagram
 
 $$
 \pu{ Kritiska Punkten\!: TI = TK  }
 $$
 <br>
 
-###### Säkerhetsmarginalen i ett Resultatdiagram (volym)
+#### Säkerhetsmarginalen i ett Resultatdiagram (volym)
 
 $$
 \pu{ Säkerhetsmarginal (volym) = q_{v} - q_{K}  }
 $$
 <br>
 
-###### Säkerhetsmarginalen i ett Resultatdiagram (%)
+#### Säkerhetsmarginalen i ett Resultatdiagram (%)
 
 $$
 \pu{ Säkerhetsmarginal (\%) = \frac{q_{v} - q_{K}}{q_{v}}  }
 $$
 <br>
 
-###### Materialomkostnadspålägget
+#### Materialomkostnadspålägget
 
 $$
-\pu{  MO\!-\!pålägg=\frac{MO}{dM}}
-$$
-<br>
-
-###### Tillverkningsomkostnadspålägget
-
-$$
-\pu{TO\!-\!pålägg=\frac{TO}{dL}}
+\pu{  MO \!-\! pålägg=\frac{MO}{dM}}
 $$
 <br>
 
-###### Affärsomkostnadspålägget
+#### Tillverkningsomkostnadspålägget
 
 $$
-\pu{AffO\!-\!pålägg=\frac{AffO}{TvK}}
+\pu{TO \!-\! pålägg=\frac{TO}{dL}}
+$$
+<br>
+
+#### Affärsomkostnadspålägget
+
+$$
+\pu{AffO \!-\! pålägg=\frac{AffO}{TvK}}
 $$
 <br>
 
@@ -265,7 +281,7 @@ $$
 
 1. Vad är en investering?
 
-En investering är en kapitalsatsning som ger betalningskonsekvenser under en längre tid, minst mer än ett år.
+En [[Investering]] är en kapitalsatsning som ger betalningskonsekvenser under en längre tid, minst mer än ett år.
 
 Det är mycket som kan klassificeras som en investering. För industriella företag är investeringar ofta införskaffningen av en fysisk resurs, exempelvis en maskin, produktionsanläggning eller ett IT-system. Dock kan det också vara immateriella resurser som exempelvis att genomföra en marknadssatsning, forskning samt utbildning av personal.
 
@@ -275,37 +291,37 @@ Alltså är en investering när man satsar pengar idag i hoppet om att konsekven
 
 2. Vad menas med inbetalningsöverskott?
 
-En ==inbetalning== uppstår i det ögonblick pengar betalas in, till exempel när en kund betalar en faktura för en vara företaget har levererat.
+En [[Inbetalning]] uppstår i det ögonblick pengar betalas in, till exempel när en kund betalar en faktura för en vara företaget har levererat.
 
-En ==utbetalning== uppstår i det ögonblick pengar betalas ut, till exempel när företaget betalar en faktura för en vara en leverantör har levererat.
+En [[Utbetalning]] uppstår i det ögonblick pengar betalas ut, till exempel när företaget betalar en faktura för en vara leverantören har levererat.
 
-Begreppet ==inbetalningsöverskott== kan användas för att beskriva en investering. De flesta investeringar börjar med en ==grundinvestering==. Över åren kommer företaget att ha en massa in- och utbetalningar, summan av dessa betalningar under ett år kallas inbetalningsöverskott. Det kan också vara negativt ifall utbetalningarna är större än inbetalningarna ett visst år.
+Begreppet [[Inbetalningsöverskott]] kan användas för att beskriva en [[Investering]]. De flesta investeringar börjar med en [[Grundinvestering]], den första utbetalningen. Över åren kommer företaget att ha en massa in- och utbetalningar, summan av dessa betalningar under ett år kallas inbetalningsöverskott. Det kan också vara negativt ifall utbetalningarna är större än inbetalningarna ett visst år.
 
 3. Beskriv skillnaden mellan ekonomisk livslängd och teknisk livslängd.
 
-==Ekonomisk livslängd== är tiden fram till dess att investeringen har uppnått maximal ==lönsamhet==. Med det menas när företaget bedömer att det inte längre är värt det att äga investeringen och borde göra en ==nyinvestering==. Exempelvis kan det vara att underhållet för en maskin blir för dyr och det är mer värt det att köpa en ny än att laga den gamla.
+[[Ekonomisk Livslängd]] är tiden fram till dess att investeringen har uppnått maximal [[Lönsamhet]]. Med det menas när företaget bedömer att det inte längre är värt det att äga investeringen och borde göra en ==nyinvestering==. Exempelvis kan det vara att underhållet för en maskin blir för dyr och det är mer värt det att köpa en ny än att laga den gamla.
 
-==Teknisk livslängd== är den tid objektet faktiskt kan användas med hänsyn till fysiska eller tekniska begränsningar oberoende om lönsamhet eller dess värde. Därför är den ekonomiska livslängden vanligen kortare eller lika lång som den tekniska.
+[[Teknisk Livslängd]] är den tid objektet faktiskt kan användas med hänsyn till fysiska eller tekniska begränsningar oberoende om lönsamhet eller dess värde. Därför är den ekonomiska livslängden vanligen kortare eller lika lång som den tekniska.
 
 Alltså, ekonomisk livslängd är hur länge något fungerar bra och teknisk livslängd är hur länge något fungerar överhuvudtaget.
 
 4. Vilket är syftet med en investeringskalkyl?
 
-En investeringskalkyl analyserar de effekter som med rimlig säkerhet kan översättas till kronor och ören. Kalkylen behandlar hur investeringen påverkar ==betalningsströmmarna== över företagets gräns, det vill säga hur mycket pengar som flyter in och ut från företaget.
+En [[Investeringskalkylering]] analyserar de effekter som med rimlig säkerhet kan översättas till kronor och ören. Kalkylen behandlar hur investeringen påverkar ==betalningsströmmarna== över företagets gräns, det vill säga hur mycket pengar som flyter in och ut från företaget, alltså [[Kassaflöde]].
 
-Syftet med en investeringskalkyl är att utgöra ett underlag för att bedöma lönsamheten i en satsning eller ett större projekt. Med den kan man veta lönsamheten av en pågående investering eller om en nyinvestering är värt det.
+Syftet med en investeringskalkyl är att utgöra ett underlag för att bedöma [[Lönsamhet]] i en satsning eller ett större projekt. Med den kan man veta lönsamheten av en pågående investering eller om en nyinvestering är värt det.
 
 Alltså, en investeringskalkyl bedömer lönsamheten eller värdet av en investering och syftet med kalkylen är att veta om en viss investering är bra eller inte.
 
 5. Vad menas med kalkylränta och vad innebär det att kalkylräntan är ett mått på tidspreferensen?
 
-[[Kalkylränta]] uttrycker ==avkastningskravet== som ställs på en investering och används i investeringskalkylen till att räkna om betalningar i tiden. Denna ränta är något som bestäms internt i företaget. Med avkastning menas vinst på satsat kapital.
+[[Kalkylränta]] uttrycker ==avkastningskravet== som ställs på en investering och används i en [[Investeringskalkylering]] till att räkna om betalningar i tiden. Denna ränta är något som bestäms internt i företaget. Med avkastning menas vinst på satsat kapital.
 
-Med hjälp av kalkylräntan kan man räkna om de olika investeringsalternativens betalningar till en och samma tidpunkt, till början av det år då grundinvesteringen görs.
+Med hjälp av kalkylräntan kan man räkna om de olika investeringsalternativens betalningar till en och samma tidpunkt, till början av det år då [[Grundinvestering|grundinvesteringen]] gjordes.
 
 Begreppet ==tidspreferens== syftar till att en betalning vi får idag är mer värd än samma betalning någon gång i framtiden eftersom pengarna kan användas i verksamheten och därigenom ge en avkastning.
 
-Alltså, kalkylräntan visar värdet av en framtida investering idag, alltså värdet av investeringen i relation till grundinvesteringen. Eftersom tidspreferens säger att en betalning idag är mer värd än samma betalning imorgon är kalkylränta och tidspreferens kopplade.
+Alltså, kalkylräntan visar värdet av en framtida investering idag, eller värdet av investeringen i relation till grundinvestering. Eftersom tidspreferens säger att en betalning idag är mer värd än samma betalning imorgon är kalkylränta och tidspreferens kopplade.
 
 6. Redogör för nuvärdemetoden och dess beslutsregler.
 
@@ -315,52 +331,81 @@ Nuvärdemetodens beslutsregler säger att en investering där nuvärdet av de fr
 
 Alltså, med nuvärdesmetoden kan vi exempelvis veta hur mycket avkastningen skulle varit om vi satte in pengarna i banken istället för att göra investeringen.
 
+$$
+\pu{ Nusummefaktor (NUS) = 
+\frac{1 - ( 1 + Kalkylränta )^{-Ekonomisk \, Livslängd (Antal  \, År)}}{Kalkylränta}}
+$$
+
+$$
+\pu{ Nuvärdefaktor (NUV) = 
+\frac{1}{( 1 + Kalkylränta )^{Ekonomisk \, Livslängd (Antal  \, År)}}}
+$$
+
+$$
+\pu{  Nettonuvärde = Grundinvestering + Inbetalningsöverskott * NUS + Restvärde * NUV }
+$$
+
 7. Vad visar nuvärdekvoten?
 
 När man vill veta hur olika investeringsalternativ kommer utnyttja det satsade kapitalet, grundinvesteringen, kan man beräkna ==nuvärdekvoten==. Ju högre kvoten är ju bättre.
 
 $$
-Nuvärdekvot=
+\pu{ Nuvärdekvot=
 \frac
-{Netoonuvärdet}
-{Grundinvesteringen}
+{Netoonuvärde}{Grundinvestering}}
 $$
 
 8. Redogör för annuitetsmetoden och dess beslutsregler.
 
-När man använder annuitetsmetoden räknar man om investeringens betalningar, både grundinvesteringen och framtida betalningar, till belopp som är lika stora varje år. Med andra ord räknar man ut den genomsnittliga årliga betalningen för investeringen, vilket betyder att den och nuvärdemetoden är varianter av samma metod. Denna metod är användbar om man ska jämföra investeringar som har olika livslängd.
+När man använder [[Annuitetsmetoden]] räknar man om investeringens betalningar, både [[Grundinvestering]] och framtida betalningar, till belopp som är lika stora varje år. Med andra ord räknar man ut den genomsnittliga årliga betalningen för investeringen, vilket betyder att den och nuvärdemetoden är varianter av samma metod. Denna metod är användbar om man ska jämföra investeringar som har olika livslängd.
 
 Annuitetsmetodens beslutsregler säger att en investering där annuiteten av de framtida betalningarna är större än noll är lönsam. Investeringen med störst annuitet är mest lönsam.
 
-9. Vad visar annuitetskvoten?
+$$
+\pu{ Annuitetsfaktor = \frac{Kalkylränta}{1-(1+Kalkylränta)^{-Ekonomisk \, Livslängd (Antal \, År)}} }
+$$
 
 $$
-Annutetskvot=
-\frac
-{Annuiteten}
-{Grundinvesteringen}
+\pu{ Annuitet = Nettonuvärde * Annuitetsfaktor  }
+$$
+
+9. Vad visar annuitetskvoten?
+
+När man vill veta hur olika investeringsalternativ kommer utnyttja det satsade kapitalet, grundinvesteringen, kan man beräkna ==annuitetskvoten==. Ju högre kvoten är ju bättre.
+
+$$
+\pu{Annuitetskvot=
+\frac{Annuitet}{Grundinvestering}}
 $$
 
 10. Redogör för internräntemetoden och dess beslutsregler.
 
-I internräntemetoden beräknas den avkastningen som en investering ger, avkastningen kallas då ==internränta==. Man beräknar då den procentuella årliga avkastningen för en investering genom att jämföra internräntan med kalkylräntan.
+I [[Internräntemetoden]] beräknas den avkastningen som en investering ger, avkastningen kallas då ==internränta==. Man beräknar då den procentuella årliga avkastningen för en investering genom att jämföra internräntan med [[Kalkylränta]].
+
+Internräntan beräknas genom att man räknar ut den ränta vid vilken nettonuvärdet är 0 och därefter jämför man internräntan med kalkylräntan.
 
 Internräntemetodens beslutsregler säger att en investering vars internränta är högre än kalkylräntan är lönsam. Investeringen med högst internränta är mest lönsam.
 
+Alltså, internräntemetoden visar när en investering möter avkastningskraven, [[Kalkylränta]].
+
 11. Redogör för pay-back-metoden (återbetalningsmetoden) och dess beslutsregler.
 
-Med återbetalningsmetoden räknar man ==återbetalningstiden==, alltså den tid det tar innan det satsade kapitalet, grundinvesteringen, har betalats tillbaka.
+Med [[Återbetalningsmetoden]] räknar man ==återbetalningstiden==, alltså den tid det tar innan det satsade kapitalet, [[Grundinvestering]], har betalats tillbaka.
 
 Återbetalningsmetodens beslutsregler säger att en investering vars återbetalningstid är kortare än den på förhand specificerade återbetalningstiden är lönsam. Den investering som har kortast återbetalningstid är mest lönsam.
 
+Alltså, återbetalningsmetoden visar den tiden det tar innan grundinvesteringen är återbetald, ju kortare tid ju bättre.
+
 12. Beskriv följande typer av investeringar:
 
-- Inriktningsinvesteringar
-	- Strategiska investeringar som binder företagets handlingsutrymme för lång tid framåt. Exempelvis kan det vara en ny produktfamilj eller en ny produktionsanläggning.
-- Anpassningsinvesteringar
-	- Taktiska investeringar som görs för att säkerställa att företaget framgångsrikt kan driva den existerande verksamheten vidare på relativt långt sikt. Exempelvis en ny tillverkningsprocess eller en ny maskinpark.
-- Rationaliseringsinvesteringar
-	- Operativa investeringar som förbättrar förutsättningarna för den löpande verksamheten. Exempelvis nya arbetsmetoder och eliminering av en trång sektor.
+En [[Investering]] kan komma i olika typer:
+
+- [[Inriktningsinvesteringar]]
+	- Inriktningsinvesteringar är strategiska och binder företagets handlingsutrymme för lång tid framåt. Exempelvis kan det vara en ny produktfamilj eller en ny produktionsanläggning.
+- [[Anpassningsinvesteringar]]
+	- Anpassningsinvesteringar är taktiska och görs för att säkerställa att företaget framgångsrikt kan driva den existerande verksamheten vidare på relativt långt sikt. Exempelvis en ny tillverkningsprocess eller en ny maskinpark.
+- [[Rationaliseringsinvesteringar]]
+	- Rationaliseringsinvesteringar är operativa och förbättrar förutsättningarna för den löpande verksamheten. Exempelvis nya arbetsmetoder och eliminering av en trång sektor.
 
 13. Redogör för minst tre omständigheter som påverkar avkastningskravets storlek.
 
@@ -368,7 +413,7 @@ Risken av en investering bestämmer hur mycket avkastningskravet, alltså [[Kalk
 
 Inflation påverkar också avkastningskravet då inbetalningar i framtiden är mindre värda en samma betalningar nu, tidspreferens. Därför ökar avkastningskravet för långsiktiga investeringar.
 
-Ju större grundinvesteringen storlek är ju större avkastning förväntar man sig.
+Ju större grundinvesteringens storlek är ju större avkastning förväntar man sig.
 
 14. Redogör för några av svårigheterna med att göra en investerings bedömning i praktiken.
 
@@ -377,3 +422,87 @@ Hur ska man hantera konsekvenser som inte kan uttryckas i monetära termer? Det 
 Hur bedömer vi betalningskonsekvenser flera år framåt i tiden? Ju längre framåt i den man försöker förutspå vilka betalningar man kommer göra ju svårare det blir.
 
 På vilket sätt låser investeringen upp oss inför framtiden? För att fullt utnyttja potentialen av en viss investering kan det betyda att man måste göra följdinvesteringar. Detta betyder att man har låst sig och måste fortsätta investera annars blir den första investeringen inte värt det.
+
+### Begrepp för Kap 9
+
+G = Grundinvestering
+
+i = Inbetalning
+
+u = utbetalning
+
+a = i - u = Årligt inbetalningsöverskott
+
+n = Ekonomisk Livslängd
+
+R = Restvärde
+
+r = Kalkylränta
+
+SLV = Slutvärdefaktor
+
+NUV = Nuvärdefaktor
+
+NUS = Nusummefaktor
+
+ANN = Annuitetsfaktor
+
+NNV = Nettonuvärde
+
+### Formler för Kap 9
+
+#### Nuvärdemetoden
+
+##### Slutvärdefaktor
+
+$$
+\pu{ SLV = ( 1 + r )^{n} }
+$$
+
+##### Nuvärdefaktor
+
+$$
+\pu{ NUV = 
+\frac{1}{( 1 + r )^{n}}}
+$$
+
+##### Nusummefaktor
+
+$$
+\pu{ NUS = 
+\frac{1 - ( 1 + r )^{-n}}{r}}
+$$
+
+##### Formel för Nuvärdemetoden (Nettonuvärde)
+
+$$
+\pu{  NNV = G + a * NUS + R * NUV }
+$$
+
+##### Nuvärdekvoten
+
+$$
+\pu{ Nuvärdekvot=
+\frac{NNV}{G}}
+$$
+
+#### Annuitetsmetoden
+
+##### Annuitetsfaktor
+
+$$
+\pu{ ANN = \frac{r}{1-(1+r)^{-n}} }
+$$
+
+##### Formel för Annuitetsmetoden (Annuitet)
+
+$$
+\pu{ Annuitet = NNV * ANN  }
+$$
+
+##### Annuitetskvoten
+
+$$
+\pu{Annuitetskvot=
+\frac{Annuitet}{G}}
+$$

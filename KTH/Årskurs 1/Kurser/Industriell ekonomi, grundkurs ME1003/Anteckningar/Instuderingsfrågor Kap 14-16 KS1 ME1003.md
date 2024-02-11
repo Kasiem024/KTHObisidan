@@ -1,7 +1,7 @@
 # Instuderingsfrågor Kap 14-16 KS1 ME1003
 
 2024-02-03 17:49
-Tags: #year2024 #KTH #ekonomi #ME1003 #övning #ME1003KS1
+Tags: #year2024 #KTH #ekonomi #ME1003 #övning
 
 ## Kapitel 14 Affärsstrategier och strategimodeller
 
@@ -117,7 +117,7 @@ Kunskap om sina konkurrenter är viktig, utan den kunskapen löper man risken at
 
 16. Beskriv Michael Porters Femkraftsmodell.
 
-Michael Porters Femkraftsmodell är ett sätt att analysera de konkurrenskrafter ett företag är utsatt för. Enligt denna modell är ett företag alltid utsatt för fem konkurrenskrafter:
+[[Michael Porters Femkraftsmodell]] är ett sätt att analysera de konkurrenskrafter ett företag är utsatt för. Enligt denna modell är ett företag alltid utsatt för fem konkurrenskrafter:
 
 - ==Företag i branschen==: Sina nuvarande konkurrenter.
 - ==Kunders förhandlingsstyrka==: Om kunden är mäktig kan den pressa priserna.

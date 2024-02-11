@@ -8,16 +8,16 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #lektion #ME1003KS2
 
 ## [[Företags Ekonomiska Kretslopp]]
 
-## Produktkalkylering
+## [[Produktkalkylering]]
 
 Handlar om att ta fram produkters kostnader.
 
 - Lönsamhetsanalyser: Kostnad Intäkts analys
-- Bidragskalkylering: Ofullständig kostnadsfördelning, för kortsiktig beslutsfattning
-- Självkostnadskalkylering: Fullständig kostnadsfördelning
+- [[Bidragskalkylering]]: Ofullständig kostnadsfördelning, för kortsiktig beslutsfattning
+- [[Självkostnadskalkylering]]: Fullständig kostnadsfördelning
 	- Divisionskalkyler
-	- Påläggskalkyler
-	- ABC-Kalkyler
+	- [[Påläggskalkylering]]
+	- [[Aktivitetsbaserad Kalkylering]]
 
 Det är viktigt att vet sina produktions kostnader så att man ska veta hur man ska prissätta sin produkt.
 
@@ -29,11 +29,11 @@ Grunden för [[Prissättning]], verksamhetsanalyser och beslut:
 - Vilka produktionsmetoder är effektiva?
 - Skall vi köpa från leverantörer eller tillverka själva?
 
-==Förkalkyl==: När man beräknar kostnaden för tillverkningen av en produkt i förväg.
-==Efterkalkyl==: När man undersöker det ekonomiska utfallet för en viss produkt eller period.
+[[Förkalkylering]]: När man beräknar kostnaden för tillverkningen av en produkt i förväg.
+[[Efterkalkylering]]: När man undersöker det ekonomiska utfallet för en viss produkt eller period.
 ==Kalkylobjekt==: Kan vara exempelvis hela företaget, en marknad, en produkt eller ett projekt.
 
-Man kan dela in kostnader på flera olika sätt:
+Inom [[Påläggskalkylering]] kan man dela in kostnader på flera olika sätt:
 
 - ==Verksamhetsvolym==
 	- ==Rörliga kostnader==: Kostnader som beror på vår försäljning
@@ -49,7 +49,7 @@ Man kan dela in kostnader på flera olika sätt:
 
 Totala kostnader:
 $Totala Kostnader = Fasta Kostnader + Rörliga Kostnader * Volym$
-$\color{red}TK = FK + RK * Volym$
+$TK = FK + RK * Volym$
 
 Nollpunkten:
 $Totala Intäkter = Totala Kostnader$
@@ -62,5 +62,3 @@ Verklig Volym - Kritisk Volym
 
 $Täckningsbidrag = Särintäkter - Särkostnader$
 $Resultat = Täckningsbidrag - Samkostnader$
-
-## Flashcards

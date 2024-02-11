@@ -3,6 +3,8 @@
 2024-01-16 10:09
 Tags: #year2024 #KTH #ekonomi #CM1005 #lektion
 
+[[01-16 Räkningar CM1005.excalidraw]]
+
 ## Näringsverksamhet
 
 [[Näringsverksamhet]]: Verksamhet som bedrivs av en juridisk person, till exempel aktiebolag eller handelsbolag, beskattas i princip alltid som näringsverksamhet. Tre villkor måste vara uppfyllda för att det ska räknas som näringsverksamhet
@@ -98,20 +100,3 @@ Amortering är aldrig en kostnad, alltså aldrig på [[Resultaträkning|RR]]. R�
 
 Tillgångar minskar på kredit och ökar på debet.
 Skulder och eget kapital ökar på kredit och minskar på debet.
-
-[[01-16 Räkningar CM1005.excalidraw]]
-
-## Flashcards
-
-Ekonomisk livslängd (Definition):: Hur länge något fungerar "bra". Innan priset för drift och service blir för mycket
-<!--SR:!2024-03-10,31,270!2024-03-04,27,270-->
-
-Teknisk livslängd (Definition):: Hur länge något fungerar överhuvudtaget, oberoende av drift- eller servicekostnader
-<!--SR:!2024-02-11,12,270!2024-02-14,15,290-->
-
-Sätt att finansiera ett företag (3)
-??
-- Eget kapital (Ägarinsättning).
-- Främmande kapital (Lån).
-- Företagets självfinansiering (Vinster).
-<!--SR:!2024-02-11,12,270!2024-03-05,27,270-->

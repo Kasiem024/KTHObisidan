@@ -12,7 +12,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003KS2
 
 ## Definition
 
-Indirekta Kostnader kan indirekt hänföras till en kostnadsbärare via den avdelning eller funktion där de uppkommit. Kostnader för exempelvis arbets- och företagsledningen räknas som indirekta. ^b0c8b7
+Indirekta Kostnader kan indirekt hänföras till en kostnadsbärare via den avdelning eller funktion där de uppkommit. Kostnader för exempelvis arbets- och företagsledningen räknas som indirekta.
 
 ## Kopplat till
 

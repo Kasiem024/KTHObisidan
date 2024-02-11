@@ -1,7 +1,7 @@
 # 01-30 Lektion ME1003
 
 2024-01-30 15:15
-Tags: #year2024 #KTH #ekonomi #ME1003 #lektion #ME1003KS1
+Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
 
 [Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F7+HRM%26ampBOrganisation+P4+V22+SWE+2022-04-04+MOH.mp4/0_kcb4vfls/660304)
 [Länk till PPT på Canvas](https://canvas.kth.se/courses/44986/files/folder/2.%20F%C3%B6rel%C3%A4sningar?preview=7568103)
@@ -49,7 +49,7 @@ Målen med HRM är huvudsakligen:
 - Att investera i rätt personal
 - Att skapa en kultur
 
-Maslow's Hierarchy of Needs
+[[Maslows Behovspyramid]]
 
 - Self actualistion
 - Esteem needs
@@ -63,6 +63,7 @@ Chefen kan bygga upp en anställds självkänsla genom att ge beröm.
 
 När alla andra nivåer har uppnåtts kommer man till den sista nivån men man vill ändå alltid ha mer.
 
+[[Herzbergs Tvåfaktorsteori]]:
 Herzberg har motivationsfaktorer och hygienfaktorer. Motivationen kommer inifrån medan hygien kommer från sin omgivningen.
 
 Hygien:
@@ -141,5 +142,3 @@ Projektstruktur: Beror på projektet inte på företaget.
 Nätverksstruktur: Om man startar ett företag och smarbtear med andra företag för att kunna leverera produkten till kunden.
 
 Mitzberg
-
-## Flashcards

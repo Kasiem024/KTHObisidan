@@ -1,21 +1,43 @@
 # Annuitetsmetoden
 
 2024-02-07 10:36
-Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003KS2
 
 ## Definition
 
-När man använder Annuitetsmetoden räknar man om investeringens betalningar, både grundinvesteringen och framtida betalningar, till belopp som är lika stora varje år. Med andra ord räknar man ut den genomsnittliga årliga betalningen för investeringen, vilket betyder att den och [[Nuvärdemetoden]] är varianter av samma metod. Denna metod är användbar om man ska jämföra investeringar som har olika livslängd.
+Annuitetsmetoden är när man räknar om investeringens betalningar, både [[Grundinvestering]] och framtida betalningar, till belopp som är lika stora varje år. Med andra ord räknar man ut den genomsnittliga årliga betalningen för en [[Investering]], vilket betyder att den och [[Nuvärdemetoden]] är varianter av samma metod. Denna metod är användbar om man ska jämföra investeringar som har olika livslängd.
 
-Annuitetsmetodens beslutsregler säger att en investering där annuiteten av de framtida betalningarna är större än noll är lönsam. Investeringen med störst annuitet är mest lönsam.
+Annuitetsmetodens beslutsregler säger att en investering där annuiteten av de framtida betalningarna är större än noll är lönsam. Investeringen med störst annuitet har mest [[Lönsamhet]].
 
-## Annuitetskvoten
 
 $$
-Annutetskvot=
-\frac
-{Annuiteten}
-{Grundinvesteringen}
+\pu{ Annuitetsfaktor = \frac{Kalkylränta}{1-(1+Kalkylränta)^{-Ekonomisk \, Livslängd (Antal \, År)}} }
+$$
+
+$$
+\pu{ ANN = \frac{r}{1-(1+r)^{-n}} }
+$$
+
+### Formel för Annuitetskalkyl (Annuitet)
+
+$$
+\pu{ Annuitet = Nettonuvärde * Annuitetsfaktor  }
+$$
+
+$$
+\pu{ Annuitet = NNV * ANN  }
+$$
+
+### Annuitetskvoten
+
+$$
+\pu{Annuitetskvot=
+\frac{Annuitet}{Grundinvestering}}
+$$
+
+$$
+\pu{Annuitetskvot=
+\frac{Annuitet}{G}}
 $$
 
 ## Kopplat till
@@ -24,4 +46,33 @@ $$
 
 ## Flashcards
 
- (Definition)DISABLEDKS2
+Annuitetsmetoden (Definition):: är man räknar om investeringens betalningar, både [[Grundinvestering]] och framtida betalningar, till belopp som är lika stora varje år, alltså räknar man ut den genomsnittliga årliga betalningen för en [[Investering]]
+
+Annuitetsfaktor (Formel)
+||
+$$
+\pu{ Annuitetsfaktor = \frac{Kalkylränta}{1-(1+Kalkylränta)^{-Ekonomisk \, Livslängd (Antal \, År)}} }
+$$
+$$
+\pu{ ANN = \frac{r}{1-(1+r)^{-n}} }
+$$
+
+Formel för Annuitetskalkyl, Annuitet (Formel)
+||
+$$
+\pu{ Annuitet = Nettonuvärde * Annuitetsfaktor  }
+$$
+$$
+\pu{ Annuitet = NNV * ANN  }
+$$
+
+Annuitetskvoten (Formel)
+||
+$$
+\pu{Annuitetskvot=
+\frac{Annuitet}{Grundinvestering}}
+$$
+$$
+\pu{Annuitetskvot=
+\frac{Annuitet}{G}}
+$$

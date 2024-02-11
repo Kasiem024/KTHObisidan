@@ -20,13 +20,9 @@ $$
 \pu{Total Kostnad = Fast Kostnad + (Rörlig Kostnad\!/\!st \,*\, Volym)}
 $$
 
-^b8e35d
-
 $$
 \pu{TK = FK + (RK\!/\!st \,*\, q)}
 $$
-
-^b547c1
 
 ## Kopplat till
 
@@ -38,5 +34,9 @@ Total Kostnad (Definition):: När man summerar en produkts [[Fast Kostnad]] och 
 
 Total Kostnad (Formel)
 ||
-![[#^b8e35d]]
-![[#^b547c1]]
+$$
+\pu{Total Kostnad = Fast Kostnad + (Rörlig Kostnad\!/\!st \,*\, Volym)}
+$$
+$$
+\pu{TK = FK + (RK\!/\!st \,*\, q)}
+$$

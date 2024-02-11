@@ -23,7 +23,9 @@ En Kostnad är ==värdet== av en ==förbrukad resurs== under en viss ==period==.
 
 ### [[Kostnadsbegrepp]]
 
-TODO
+- [[Fast Kostnad]], [[Halvfast Kostnad]] och [[Rörlig Kostnad]]
+- [[Direkt Kostnad]] och [[Indirekt Kostnad]]
+- [[Särkostnad]] och [[Samkostnad]]
 
 ### Räkningar
 

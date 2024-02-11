@@ -99,7 +99,15 @@
     "samkostnader",
     "Stegkalkylering",
     "Förkalkylering",
-    "Efterkalkylering"
+    "Efterkalkylering",
+    "Nettonuvärde",
+    "slutvärdefaktorn",
+    "Nuvärdefaktor",
+    "Nusummefaktor",
+    "nuvärdefaktorn",
+    "Internräntemetoden",
+    "nettonuvärdet",
+    "samkostnaderna"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
@@ -115,7 +123,7 @@
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 100
+    "downscalePercent": 70
   },
   "showUnsupportedFiles": true
 }

@@ -14,6 +14,8 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003KS2
 
 Produktkalkylering handlar i grunden om att försöka bestämma intäkter och kostnader för sina produkter och utifrån det göra sina beslut.
 
+Inom Produktkalkylering pratar man ofta om ==kalkylobjekt==. Alltså den varan/tjänsten eller tinget som kalkyleringen avser. Exempelvis kan det vara hela företaget, marknaden, produkten, projektet.
+
 ### [[Bidragskalkylering]]
 
 Bidragskalkylering är när enbart [[Särkostnad]] hänförs till [[Kostnadsbärare]]. Därefter beräknas det [[Täckningsbidrag]] som kostnadsbäraren lämnar. Denna typ av kalkylering används ofta för att göra snabba beslut på kort sikt. Exempelvis kan ett hotell göra en Bidragskalkylering för att veta om det är värt det att sänka priset en helg. ==Ett täckningsbidrag är särintäkterna minus särkostnaderna==.

@@ -1,7 +1,7 @@
 # Instuderingsfrågor Kap 1-7 KS1 ME1003
 
 2024-02-01 16:16
-Tags: #year2024 #KTH #ekonomi #ME1003 #övning #ME1003KS1
+Tags: #year2024 #KTH #ekonomi #ME1003 #övning
 
 ## Kapitel 1 Introduktion
 
