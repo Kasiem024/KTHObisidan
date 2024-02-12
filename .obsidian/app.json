@@ -112,14 +112,15 @@
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "userIgnoreFilters": [
-    "Obsidian Plugins/Templates/",
     "/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi/",
     "/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi/",
-    "/excalidraw/"
+    "/excalidraw/",
+    "/Instuderingsfrågor och Svar Kap 8-9 Modern Industriell Ekonomi/",
+    "Obsidian Plugins/"
   ],
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
-    "includeName": false,
+    "includeName": true,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",

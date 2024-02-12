@@ -212,15 +212,6 @@
       "key": "3"
     }
   ],
-  "editor:toggle-highlight": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "H"
-    }
-  ],
   "app:go-back": [
     {
       "modifiers": [
@@ -252,15 +243,6 @@
         "Mod"
       ],
       "key": "Q"
-    }
-  ],
-  "templater-obsidian:insert-templater": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "T"
     }
   ],
   "templater-obsidian:jump-to-next-cursor-location": [
@@ -399,14 +381,6 @@
       "key": "F"
     }
   ],
-  "highlightr-plugin:highlighter-plugin-menu": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "H"
-    }
-  ],
   "highlightr-plugin:unhighlight": [
     {
       "modifiers": [
@@ -429,5 +403,41 @@
   "quick-latex:addBlockMath": [],
   "quick-latex:addCasesBlock": [],
   "quick-latex:addMatrixBlock": [],
-  "quick-latex:addAlignBlock": []
+  "quick-latex:addAlignBlock": [],
+  "highlightr-plugin:highlighter-plugin-menu": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "H"
+    }
+  ],
+  "editor:toggle-highlight": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "H"
+    }
+  ],
+  "editor:toggle-checklist-status": [],
+  "editor:toggle-comments": [],
+  "templater-obsidian:insert-templater": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ],
+  "tag-pane:open": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ]
 }

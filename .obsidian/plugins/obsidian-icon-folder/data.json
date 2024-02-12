@@ -92,20 +92,6 @@
         "useFilePath": true
       },
       {
-        "rule": "Health/*",
-        "icon": "RiHealthBookFill",
-        "for": "everything",
-        "order": 12,
-        "useFilePath": true
-      },
-      {
-        "rule": "Philosophy/*",
-        "icon": "FasBrain",
-        "for": "everything",
-        "order": 13,
-        "useFilePath": true
-      },
-      {
         "rule": "Lektion",
         "icon": "SiGoogleclassroom",
         "for": "everything",
