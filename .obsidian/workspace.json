@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "570f14bdb5908ed9",
+        "id": "8c27623f024905f3",
         "type": "tabs",
         "children": [
           {
-            "id": "932a9fbb6a0d1489",
+            "id": "7f96bf538870be88",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tidsprefer",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -64,11 +68,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 628.5
+    "width": 628.5,
+    "collapsed": true
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -83,7 +89,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md"
+              }
             }
           },
           {
@@ -92,6 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,35 +167,38 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "932a9fbb6a0d1489",
+  "active": "7f96bf538870be88",
   "lastOpenFiles": [
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Lönsamhet.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 8-9 Modern Industriell Ekonomi.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kostnadsställe.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Grundläggande Ord för Ekonomisk Analys.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Investeringskalkylering.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Investeringskalkyleringsmetoder ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Återbetalningsmetoden.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Internräntemetoden.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Nuvärdemetoden.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kalkylränta.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Grundinvestering.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Inbetalningsöverskott.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Tidspreferens.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Resultatdiagram.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Täckningsbidrag.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Påläggskalkylering.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Bidragskalkylering.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kostnadsbärare.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kostnadsbegrepp.md",
-    "Obsidian Plugins/Templates/Default Template.md",
-    "Obsidian Plugins/Templates/Lektion Template.md",
-    "Obsidian Plugins/Templates/Begrepp Template.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Samkostnad.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Särkostnad.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Indirekt Kostnad.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Grundinvestering.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Anpassningsinvesteringar.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/02-13 Lektion Varutransaktion och Moms CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-13 Lektion CM1005.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Varutransaktion.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Incoterms.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Moms.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Anskaffningsutgift.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Avtalslagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Hemtagningsutgift.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Offert.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Köplagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Konsumenttjänstlagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Konsumentköplagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Anskaffningsutgift.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Varutransaktion.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Offert.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Avtalslagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Konsumentköplagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Köplagen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Varutransaktioner Grundmodell CM1005.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Incoterms CM1005.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Investeringskalkyleringsmetoder ME1003.png",
     "package-lock.json",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/01-16 Räkningar Excalidraw CM1005.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp",
@@ -202,9 +215,6 @@
     "Obsidian Plugins/Scripts/parentFolderNAme.js",
     "Obsidian Plugins/Scripts/main.js",
     "Obsidian Plugins/Scripts",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-07 Moms Pelles Golfshop CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206084404.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }
