@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "99fa5043525c4224",
+        "id": "63df13c9284a1d8b",
         "type": "tabs",
         "children": [
           {
-            "id": "366ac24eb14c503e",
+            "id": "d26012121ac61b95",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -113,9 +107,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md"
-          }
+          "state": {}
         }
       },
       {
@@ -141,8 +133,9 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "366ac24eb14c503e",
+  "active": "d26012121ac61b95",
   "lastOpenFiles": [
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellkanvas ME1003.png",
@@ -187,7 +180,6 @@
     "General Notes/Zettelkasten",
     "General Notes/Future Notes.md",
     "KTH",
-    "Test2.md",
-    "GoogleDriveObsidian/Test Lesson.md"
+    "Test2.md"
   ]
 }
