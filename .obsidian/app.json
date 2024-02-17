@@ -108,7 +108,13 @@
     "Internräntemetoden",
     "nettonuvärdet",
     "samkostnaderna",
-    "Incoterms"
+    "Incoterms",
+    "USD",
+    "USD-Kursen",
+    "AUD-Kursen",
+    "AUD",
+    "likvidbeloppet",
+    "Monetärprincipen"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",

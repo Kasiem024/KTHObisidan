@@ -18,90 +18,72 @@
       {
         "rule": ".excalidraw",
         "icon": "LiSword",
-        "for": "everything",
+        "for": "files",
         "order": 0,
+        "useFilePath": true
+      },
+      {
+        "rule": "Journal",
+        "icon": "FasPen",
+        "for": "files",
+        "order": 1,
         "useFilePath": true
       },
       {
         "rule": ".pdf",
         "icon": "FasFilePdf",
-        "for": "everything",
-        "order": 1,
+        "for": "files",
+        "order": 3,
         "useFilePath": true
       },
       {
         "rule": ".jpg",
         "icon": "FasImage",
-        "for": "everything",
-        "order": 2,
+        "for": "files",
+        "order": 3,
         "useFilePath": true
       },
       {
         "rule": ".png",
         "icon": "FasImage",
-        "for": "everything",
-        "order": 3,
-        "useFilePath": true
-      },
-      {
-        "rule": "Bilagor",
-        "icon": "BoBxsPhotoAlbum",
-        "for": "everything",
-        "order": 4,
-        "useFilePath": false
-      },
-      {
-        "rule": "PDFs",
-        "icon": "FasFilePdf",
-        "for": "everything",
+        "for": "files",
         "order": 5,
         "useFilePath": true
       },
       {
-        "rule": "Flashcards",
-        "icon": "TiCardsFilled",
+        "rule": "Litteraturlista/",
+        "icon": "FasBook",
         "for": "everything",
         "order": 6,
         "useFilePath": true
       },
       {
-        "rule": "Anteckningar",
-        "icon": "TiNotes",
-        "for": "everything",
-        "order": 7
+        "rule": "Lektioner/",
+        "icon": "SiGoogleclassroom",
+        "for": "files",
+        "order": 7,
+        "useFilePath": true
+      },
+      {
+        "rule": "PDFs/",
+        "icon": "FasFilePdf",
+        "for": "files",
+        "order": 9,
+        "useFilePath": true
       },
       {
         "rule": "Obsidian Plugins/",
         "icon": "SiObsidian",
         "for": "everything",
-        "order": 9,
-        "useFilePath": true
-      },
-      {
-        "rule": "General Images/",
-        "icon": "FasImage",
-        "for": "files",
-        "order": 10,
-        "useFilePath": true
-      },
-      {
-        "rule": "General PDFs/",
-        "icon": "FasFilePdf",
-        "for": "files",
         "order": 11,
         "useFilePath": true
       },
       {
-        "rule": "Lektion",
-        "icon": "SiGoogleclassroom",
-        "for": "everything",
-        "order": 13
-      },
-      {
-        "rule": "Begrepp",
-        "icon": "TiCardsFilled",
-        "for": "everything",
-        "order": 14
+        "rule": "Anteckningar/",
+        "icon": "TiNotes",
+        "for": "files",
+        "order": 11,
+        "useFilePath": true
       }
     ],
     "extraMargin": {

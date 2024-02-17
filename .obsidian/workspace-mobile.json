@@ -40,7 +40,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "Vinstmarginal ",
+            "query": "",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -68,8 +68,7 @@
           "state": {}
         }
       }
-    ],
-    "currentTab": 1
+    ]
   },
   "right": {
     "id": "ea2a76566d68223f",
@@ -135,6 +134,13 @@
   },
   "active": "d26012121ac61b95",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Untitled 1.md",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 14.01.50.excalidraw.md",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 13.59.18.excalidraw.md",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 07.09.30.excalidraw.md",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 06.59.41.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
@@ -169,17 +175,10 @@
     "General Notes/Zettelkasten/Litterature/Sophisticated Procrastination.md",
     "General PDFs/What Self-Awareness Really Is (and How to Cultivate It) Article.pdf",
     "README.md",
-    "General Notes/Zettelkasten/Fleeting/True Friendship.md",
-    "General Notes/Zettelkasten/Fleeting/Choose to be less happy to show strength.md",
-    "General Notes/Philosphy/You have no enemies.md",
-    "KTH/KTH Generella Anteckningar.md",
-    "General Notes/Zettelkasten/Litterature/Time Blocks for Studying.md",
     "General Notes/Zettelkasten/Permanent",
     "General Notes/Zettelkasten/Litterature",
     "General Notes/Zettelkasten/Fleeting",
     "General Notes/Zettelkasten",
-    "General Notes/Future Notes.md",
-    "KTH",
-    "Test2.md"
+    "KTH"
   ]
 }
