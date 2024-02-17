@@ -29,7 +29,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 628.5
+    "width": 628.5,
+    "collapsed": true
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -98,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 8-9 ME1003.pdf"
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Räkneövningar Kap 8 ME1003.md"
               }
             }
           },
@@ -108,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 8-9 ME1003.pdf",
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Räkneövningar Kap 8 ME1003.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 8-9 ME1003.pdf",
+                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Räkneövningar Kap 8 ME1003.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,29 +177,44 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cf0a02a3e02c4124",
+  "active": "85154ac5110aa970",
   "lastOpenFiles": [
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-14 Lektion Excalidraw CM1005.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Räkneövningar Kap 8 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/02-16 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/02-15 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/02-01 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-30 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-25 Lektion 2 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-25 Lektion 1 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-23 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-18 Lektion ME1003.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Excalidraw/01-16 Räkningar CM1005.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/02-16 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/02-14 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Excalidraw/02-14 Lektion CM1005.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/02-13 Lektion Varutransaktion och Moms CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/02-07 Lektion Moms Pelles Golfshop CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/01-31 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/01-26 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/01-23 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/01-16 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Excalidraw",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 8-9 ME1003.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/01-29 Bokexempel Excalidraw CM1005.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-02 KS2 Kalkyl 1 Exempel Excalidraw CM1005.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-05 KS2 Kalkyl 2 Exempel Excalidraw CM1005.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-07 Moms Pelles Golfshop Excalidraw CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-16 Lektion CM1005.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Excalidraw/02-16 Lektion CM1005.excalidraw.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-16 Lektion Excalidraw CM1005.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Aktiebolag Karta CM1005.png",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS1 Kalkyl 2 Komplettering CM1005 Kasiem Saeed Al-Mshabbak.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 8-9 ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Räkneövningar Kap 8 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/02-01 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-23 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/02-16 Lektion ME1003.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/02-16 Journal Lektion ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/02-16 Lektion Journal ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/02-15 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-30 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-25 Lektion 2 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-25 Lektion 1 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner/01-18 Lektion ME1003.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/01-16 Lektion CM1005.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Lektioner",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/02-14 Journal Lektion Moms CM1005.pdf",
@@ -205,23 +222,8 @@
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-23 Bokslutstablå Exempel 1 CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS1 Komplettering CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Begrepp Journal CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Vanliga Skillnader Mellan Tre Olika Produktionstyper Vid Varuproduktion ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Halvfasta Kostnader ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Pasted image 20240206091402.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningens Kvalitativa Egenskaper.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Affärshändelse.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Handelsbolag.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Förvaltningsberättelse.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/01-23 Lektion CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Affärsredovisning.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kalkylränta.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Nuvärdemetoden.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Rörlig Kostnad.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS2 CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Generella Anteckningar CM1005.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }
