@@ -4,6 +4,8 @@
     "flashcardGoodText": "Medium",
     "flashcardHardText": "Hard",
     "flashcardTags": [
+      "#ME1003KS3",
+      "#CM1005KS4",
       "#ME1003KS2",
       "#CM1005KS3",
       "#CM1005",
@@ -11,7 +13,7 @@
     ],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": false,
-    "burySiblingCards": true,
+    "burySiblingCards": false,
     "showContextInCards": false,
     "flashcardHeightPercentage": 100,
     "flashcardWidthPercentage": 100,
@@ -28,10 +30,12 @@
     "editLaterTag": "#edit-later",
     "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
-      "#CM1005",
-      "#ME1003",
+      "#ME1003KS3",
+      "#CM1005KS4",
+      "#ME1003KS2",
       "#CM1005KS3",
-      "#ME1003KS2"
+      "#CM1005",
+      "#ME1003"
     ],
     "noteFoldersToIgnore": [
       "Obsidian Plugins"
@@ -48,11 +52,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2024-02-19",
-  "buryList": [
-    "b86c02dcf37bd",
-    "13851f4b4c6315",
-    "134de92de2d229"
-  ],
+  "buryDate": "2024-02-26",
+  "buryList": [],
   "historyDeck": null
 }

@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d26012121ac61b95",
+            "id": "1a8d3148bf0dbae4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -40,7 +40,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "",
+            "query": "Kvot",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -132,15 +132,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d26012121ac61b95",
+  "active": "1a8d3148bf0dbae4",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Untitled we.md",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-02-26 14.19.53.excalidraw.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Resultatdiagram.md",
+    "KTH/Generella Anteckningar KTH.md",
     "Untitled 1.md",
     "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 14.01.50.excalidraw.md",
     "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 13.59.18.excalidraw.md",
     "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 07.09.30.excalidraw.md",
     "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 06.59.41.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
@@ -167,14 +172,9 @@
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/T-Konton.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Ideell förening.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Balansräkning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Generella Anteckningar Extern Redovisning.md",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Lösningar Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Kalkylövning inför KS1 01-22 Extern Redovisning.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
-    "General Notes/Zettelkasten/Litterature/Sophisticated Procrastination.md",
     "General PDFs/What Self-Awareness Really Is (and How to Cultivate It) Article.pdf",
-    "README.md",
     "General Notes/Zettelkasten/Permanent",
     "General Notes/Zettelkasten/Litterature",
     "General Notes/Zettelkasten/Fleeting",
