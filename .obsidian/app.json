@@ -115,7 +115,11 @@
     "AUD",
     "likvidbeloppet",
     "Monetärprincipen",
-    "Excalidraw"
+    "Excalidraw",
+    "inventarien",
+    "Nettoförsäljningsvärde",
+    "FIFU-Principen",
+    "FIFU-Principen"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",

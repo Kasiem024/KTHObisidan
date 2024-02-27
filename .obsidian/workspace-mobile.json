@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "a367425aa1fff3e1",
+    "id": "ae6c7f0c5fe7e243",
     "type": "split",
     "children": [
       {
-        "id": "63df13c9284a1d8b",
+        "id": "523d7ba2861a9115",
         "type": "tabs",
         "children": [
           {
-            "id": "1a8d3148bf0dbae4",
+            "id": "8bd1b73f4f6077a1",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -21,11 +21,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b3392602c0dac880",
+    "id": "0a5239ca065265f4",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "142a9f75baa55d87",
+        "id": "77e4cd394b4f448d",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -35,12 +35,12 @@
         }
       },
       {
-        "id": "02da19349b8d165d",
+        "id": "53a60e2665f90fd1",
         "type": "leaf",
         "state": {
           "type": "search",
           "state": {
-            "query": "Kvot",
+            "query": "",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -50,7 +50,7 @@
         }
       },
       {
-        "id": "456463b863a877d7",
+        "id": "8d5fe762435b307a",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -59,23 +59,16 @@
             "useHierarchy": true
           }
         }
-      },
-      {
-        "id": "ae2a36a5ed969a8a",
-        "type": "leaf",
-        "state": {
-          "type": "bookmarks",
-          "state": {}
-        }
       }
-    ]
+    ],
+    "currentTab": 0
   },
   "right": {
-    "id": "ea2a76566d68223f",
+    "id": "5f91bceb1a21a33e",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "690b622192051eaf",
+        "id": "b25ea5b76333571e",
         "type": "leaf",
         "state": {
           "type": "backlink",
@@ -91,7 +84,7 @@
         }
       },
       {
-        "id": "e8be4789dec3880a",
+        "id": "7c8822fd7844495b",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
@@ -102,83 +95,28 @@
         }
       },
       {
-        "id": "56f2b656caa23399",
+        "id": "51ed863ad1ac6dac",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {}
         }
-      },
-      {
-        "id": "d43d6fffbdaf8947",
-        "type": "leaf",
-        "state": {
-          "type": "review-queue-list-view",
-          "state": {}
-        }
       }
     ],
-    "currentTab": 3
+    "currentTab": 0
   },
   "left-ribbon": {
     "hiddenItems": {
-      "templater-obsidian:Templater": false,
-      "omnisearch:Omnisearch": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "handwritten-notes:Create empty handwritten note": false,
-      "obsidian-spaced-repetition:Review flashcards": false,
+      "omnisearch:Omnisearch": false,
+      "templater-obsidian:Templater": false,
       "graph:Open graph view": false,
-      "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "1a8d3148bf0dbae4",
-  "lastOpenFiles": [
-    "Untitled we.md",
-    "Obsidian Plugins/Excalidraw/Drawing 2024-02-26 14.19.53.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Annuitetsmetoden.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Resultatdiagram.md",
-    "KTH/Generella Anteckningar KTH.md",
-    "Untitled 1.md",
-    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 14.01.50.excalidraw.md",
-    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 13.59.18.excalidraw.md",
-    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 07.09.30.excalidraw.md",
-    "Obsidian Plugins/Excalidraw/Drawing 2024-02-16 06.59.41.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Förädlingsvärde.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellkanvas ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Makt och Intresse Matrisen ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Michael Porters Generiska Affärsstrategier ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Michael Porters Femkraftsmodell ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Resultatdiagram ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Reklam VS Relationsmarknadsföring ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Resurstransformation Cirkel ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Strategiprocessen enligt Mintzberg ME1003.png",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Varuproduktion ME1003.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningens Kvalitativa Egenskaper.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Flashcards CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bokföringslagen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Revisionsberättelse.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutvecklingens Analysnivåer.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Produktutveckling i Olika Typer av Verksamheter.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Intressentmodellen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/T-Konton.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Ideell förening.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Balansräkning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Generella Anteckningar Extern Redovisning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Lösningar Per Arvidson, Thomas Carrington, Gustav Johed 2018.pdf",
-    "General PDFs/What Self-Awareness Really Is (and How to Cultivate It) Article.pdf",
-    "General Notes/Zettelkasten/Permanent",
-    "General Notes/Zettelkasten/Litterature",
-    "General Notes/Zettelkasten/Fleeting",
-    "General Notes/Zettelkasten",
-    "KTH"
-  ]
+  "active": "8bd1b73f4f6077a1",
+  "lastOpenFiles": []
 }
