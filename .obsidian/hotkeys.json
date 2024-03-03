@@ -110,7 +110,6 @@
       "key": "T"
     }
   ],
-  "markdown:add-metadata-property": [],
   "app:toggle-left-sidebar": [
     {
       "modifiers": [
@@ -438,6 +437,15 @@
         "Mod"
       ],
       "key": "T"
+    }
+  ],
+  "markdown:add-metadata-property": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": ","
     }
   ]
 }

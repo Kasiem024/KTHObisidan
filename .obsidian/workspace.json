@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "46c90a98f35d43ea",
+        "id": "01a539dda6ff9f3c",
         "type": "tabs",
         "children": [
           {
-            "id": "35a143dba2fd7ddf",
+            "id": "348b2d18e5646ec0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS4 CM1005.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "räntabilitet",
+                "query": "sourcing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,8 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 628.5,
-    "collapsed": true
+    "width": 572.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -88,9 +83,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS4 CM1005.md"
-              }
+              "state": {}
             }
           },
           {
@@ -99,13 +92,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS4 CM1005.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": false
               }
             }
@@ -116,9 +108,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS4 CM1005.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -151,69 +142,68 @@
       }
     ],
     "direction": "horizontal",
-    "width": 371.5,
+    "width": 956.5,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "command-palette:Open command palette": false,
       "handwritten-notes:Create empty handwritten note": true,
       "graph:Open graph view": false,
-      "command-palette:Open command palette": false,
       "obsidian-spaced-repetition:Review flashcards": false,
       "omnisearch:Omnisearch": false,
       "table-editor-obsidian:Advanced Tables Toolbar": true,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "35a143dba2fd7ddf",
+  "active": "348b2d18e5646ec0",
   "lastOpenFiles": [
-    "hello_world.sh",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Excalidraw/02-28 KS4 Kalkyl CM1005.excalidraw.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS4 CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Avsättningar.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Räntabilitet.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Obeskattade Reserver.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Räntabilitet.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Lönsamhet.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Aktiebolag.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Fritt Eget Kapital.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bundet Eget Kapital.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kortfristiga Fordringar.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kundfordringar.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Eget Kapital.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Avskrivning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/02-27 Lektion CM1005.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Obeskattade Reserver.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Anskaffningsutgift.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Avsättningar.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Inbetalning.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Årsbokslut.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/02-28 Lektion CM1005.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 10-12 ME1003.pdf",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 10-12 ME1003.pdf.crdownload",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS4 Exempel CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Omsättningstillgångar.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Kundfordringar.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Upplupen Intäkt.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Tillgångar.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Tillgångars Värde CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/02-26 Journal Lektion CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Factoring CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-23 Bokslutstablå Exempel 1 CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 8-9 Modern Industriell Ekonomi.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor och Svar Kap 10-12 Modern Industriell Ekonomi.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 10-12 KS3 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Kassaflödesanalys.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Kassaflödesanalys enligt FAR ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Sale and Leaseback.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Riskkapital.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Nyemission.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Företags Kapitalstruktur.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Fondemission.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Finansieringens Risker.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Finansiering Utanför Balansräkningen.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/DuPont-Schema.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Företags Kapitalstruktur ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/DuPont-Schema ME1003.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Räntabilitet.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Finansieringens Risker.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/DuPont-Schema.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/DuPont-Schema ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Finansiering Utanför Balansräkningen.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdekedja.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Sale and Leaseback.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Leasing.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Factoring.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Fondemission.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Nyemission.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Överkursfond.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Kap 6 CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Kap 7 CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-16 Lektion Excalidraw CM1005.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Företags Kapitalstruktur ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Tillverkande Företags Kapitalbindning ME1003.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Tillverkande Företags Kapitalbindning.png",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Pasted image 20240302194536.png",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Begrepp",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 8-9 ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/02-16 Journal Lektion ME1003.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS3 Exempel CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Varutransaktioner Grundmodell CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/KS1 Kalkyl 2 Komplettering CM1005 Kasiem Saeed Al-Mshabbak.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Pasted Image 20240219162353_916.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Pasted Image 20240219162354_007.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-19 Lektion Excalidraw CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-19 Excalidraw Lektion CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/02-19 Excalidraw Lektion CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/02-19 Lektion Excalidraw CM1005.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/02-19 Journal Lektion CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/Excalidraw",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/Tillgångars Värde CM1005.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

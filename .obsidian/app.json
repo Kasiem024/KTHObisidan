@@ -119,7 +119,13 @@
     "inventarien",
     "Nettoförsäljningsvärde",
     "FIFU-Principen",
-    "FIFU-Principen"
+    "FIFU-Principen",
+    "Säljaren",
+    "MervärdesOMSättningsskatt",
+    "Civillagstifningen",
+    "aktivsidan",
+    "passivsidan",
+    "DuPont-Schema"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
@@ -127,8 +133,9 @@
     "/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi/",
     "/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi/",
     "/excalidraw/",
-    "/Instuderingsfrågor och Svar Kap 8-9 Modern Industriell Ekonomi/",
-    "Obsidian Plugins/"
+    "Obsidian Plugins/",
+    "/Instuderingsfrågor och Svar Kap 10-12 Modern Industriell Ekonomi/",
+    "/Instuderingsfrågor och Svar Kap 8-9 Modern Industriell Ekonomi/"
   ],
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
