@@ -42,4 +42,4 @@ Resurstransformation (Definition):: Hur man omvandlar en råvara till något kun
 <!--SR:!2024-03-22,41,292-->
 
 Cirkulär Ekonomi (Definition):: Ett perspektiv som syftar till att ==öka samhällets ekologiska hållbarhet==. Praktiskt betyder det att man ska ==utveckla produkter== som går att ==återanvändas== eller ==återvinnas==
-<!--SR:!2024-02-23,14,297-->
+<!--SR:!2024-02-23,14,297!2024-03-09,4,280-->

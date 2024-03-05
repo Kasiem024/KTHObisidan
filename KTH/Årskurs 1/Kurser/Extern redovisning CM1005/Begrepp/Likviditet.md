@@ -16,7 +16,7 @@ Likviditet är ett [[Nyckeltal]] som visar företagets kortsiktiga betalningsfö
 
 Vanliga nyckeltal för att räkna Likviditet:
 
-- **Kassalikviditet**: Sätter de mest likvida delarna av företagets omsättningstillgångar i relation till de kortfristiga skulderna, exempelvis inkluderas inte kundfordringar. Relationen bör minst uppgå till 1, alltså har företaget råd med att betala alla sina kortfristiga skulder.
+- **Kassalikviditet**: Sätter de mest likvida delarna av företagets [[Omsättningstillgångar]] i relation till de kortfristiga skulderna, exempelvis inkluderas inte [[Kundfordringar]]. Relationen bör minst uppgå till 1, alltså har företaget råd med att betala alla sina kortfristiga skulder.
 - **Balanslikviditet**: Sätter alla omsättningstillgångar i relation till de kortfristiga skulderna. Relationen bör minst uppgå till 2.
 - **Likvida medel i procent av omsättningen**: Företagets behov av likvida medel är beroende av dess storlek. Generellt gäller det att ett stort företag behöver mer likvida medel än ett företag med liten omsättning.
 
@@ -34,13 +34,15 @@ $$
 
 ## Flashcards
 
-Likviditet (Definition):: Ett [[Nyckeltal]] som visar företagets kortsiktiga betalningsförmåga. Alltså förmågan att kunna betala sina räkningar på kort sikt, vad man har på bankkontot.
+Likviditet (Definition):: Ett [[Nyckeltal]] som visar företagets kortsiktiga betalningsförmåga. Alltså förmågan att kunna betala sina räkningar på kort sikt, vad man har på bankkontot
+<!--SR:!2024-03-06,3,257!2024-03-09,4,277-->
 
 Likvida medel (Definition):: De pengar företaget har tillgängliga, betalningsförmåga på kort sikt
-<!--SR:!2024-02-27,21,280!2024-03-02,4,281-->
+<!--SR:!2024-05-25,81,300!2024-03-21,16,301-->
 
 Nyckeltal för att räkna Likviditet (3)
 ??
 - **Kassalikviditet**: Sätter de mest likvida delarna av företagets [[Omsättningstillgångar]] i relation till de kortfristiga skulderna, exempelvis inkluderas inte [[Kundfordringar]]. Relationen bör minst uppgå till 1, alltså har företaget råd med att betala alla sina kortfristiga skulder.
 - **Balanslikviditet**: Sätter alla omsättningstillgångar i relation till de kortfristiga skulderna. Relationen bör minst uppgå till 2.
 - **Likvida medel i procent av omsättningen**: Företagets behov av likvida medel är beroende av dess storlek. Generellt gäller det att ett stort företag behöver mer likvida medel än ett företag med liten omsättning.
+<!--SR:!2024-03-06,3,257!2024-03-06,3,257-->

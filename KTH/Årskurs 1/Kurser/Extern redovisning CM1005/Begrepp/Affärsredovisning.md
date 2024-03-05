@@ -28,7 +28,7 @@ I Sverige finns det flera lagar som reglerar Affärsredovisning, för det mesta 
 ## Flashcards
 
 Affärsredovisning (Definition):: **Ett sätt att förse externa intressenter med information om företagets ekonomiska ställning.** Minst en gång om året och obligatorisk enligt [[Bokföringslagen]]. Registrering och rapportering av värdet av företagets resurser och deras finansiering. Samt händelser som förändrar dessa
-<!--SR:!2024-03-02,7,190!2024-03-01,3,264-->
+<!--SR:!2024-03-19,14,190!2024-03-15,10,284-->
 
 Lagar som reglerar Affärsredovningen i Sverige (5)
 ??
@@ -37,4 +37,4 @@ Lagar som reglerar Affärsredovningen i Sverige (5)
 - Kommunalskattelagen
 - Aktiebolagslagen (AL)
 - Lagen om ekonomiska föreningar (EL)
-<!--SR:!2024-03-03,2,245!2000-01-01,1,250-->
+<!--SR:!2024-03-11,6,265!2024-03-06,3,265-->

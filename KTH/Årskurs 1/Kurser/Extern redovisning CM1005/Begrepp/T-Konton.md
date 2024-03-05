@@ -25,25 +25,12 @@ När man använder T-Konton ska man också följa [[Dubbel Bokföring|Dubbel Bok
 
 [[Den nya affärsredovisningen CM1005.pdf#page=37&selection=72,0,72,27|Löpande bokföring på konton]]
 
-Exempel på namnet av T-konto
-
-- Tillgångskonto/Bankkonto
-- Eget kapital- och skuldkonto
-- Utgiftskonto
-- Inkomstkonto
-
 ![[Kontoplan CM1005.png]]
 
 ## Flashcards
 
-Debet (Definition):: Visar vart det kommer in pengar. Alltså på vilket konto pengarna ska sättas in (T-Konto)
-<!--SR:!2024-04-26,62,314!2024-03-02,4,286-->
-
-Kredit (Definition):: Visar vart pengarna kommer från. Alltså vad pengarnas källa är (T-Konto)
-<!--SR:!2024-03-25,41,292!2024-03-02,4,289-->
-
 Råbalans (Definition):: En förteckning över samtliga konton med dessas totalsummor i debet och kredit för perioden. Hopräkning av alla kontons summor vid slutet av en redovisningsperiod. En sammanställning av allt som har debiterats respektive krediterats, kopplat till saldobalans
-<!--SR:!2024-03-26,31,258!2024-03-02,4,286-->
+<!--SR:!2024-03-26,31,258!2024-03-21,16,306-->
 
 Saldobalans (Definition):: En förteckning över skillnaderna mellan debiteringar och krediteringar på respektive [[T-Konton]], kopplat till råbalans
-<!--SR:!2024-03-30,35,296!2024-03-02,4,289-->
+<!--SR:!2024-03-30,35,296!2024-03-20,15,309-->

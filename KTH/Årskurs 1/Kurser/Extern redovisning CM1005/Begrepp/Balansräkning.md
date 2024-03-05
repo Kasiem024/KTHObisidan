@@ -22,4 +22,4 @@ Balansräkningen består av ett företags [[Tillgångar]] samt [[Eget Kapital]] 
 ## Flashcards
 
 Balansräkning (Definition):: Ett företags finansiella ställning vid en given tidpunkt
-<!--SR:!2024-03-02,24,270!2024-03-02,4,289-->
+<!--SR:!2024-06-02,89,290!2024-03-23,18,309-->

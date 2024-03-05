@@ -19,3 +19,4 @@ Fondemission är en form av emission som inte tillför nytt kapital till företa
 ## Flashcards
 
 Fondemission (Definition):: En form av emission som inte tillför nytt kapital till företaget, alltså när [[Fritt Eget Kapital]] omvandlas till [[Bundet Eget Kapital]], ändrar bara strukturen av en [[Balansräkning]] men inte balansomslutningen
+<!--SR:!2024-03-06,3,250!2024-03-06,3,250-->

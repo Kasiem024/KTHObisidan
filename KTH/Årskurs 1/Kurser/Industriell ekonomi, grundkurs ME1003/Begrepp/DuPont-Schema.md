@@ -22,4 +22,5 @@ DuPont-Schema kan användas för att analysera [[Finansieringens Risker#Rörelse
 
 ## Flashcards
 
-DuPont-Schema (Definition):: Kan användas för att analysera [[Finansieringens Risker#Rörelserisk|rörelserisken]] till följd av företagets kostnadsstruktur och kapitalbindning, visar **hur effektivt företagets tillgångar används i sin helhet**, samt att både kostnadsstrukturen och kapitalbindningen påverkar avkastningen på totalt kapital
+DuPont-Schema (Definition):: Kan användas för att analysera [[Finansieringens Risker#Rörelserisk|rörelserisken]] till följd av företagets kostnadsstruktur och kapitalbindning, **visar hur effektivt företagets tillgångar används i sin helhet**, samt att både kostnadsstrukturen och kapitalbindningen påverkar avkastningen på totalt kapital ![[DuPont-Schema ME1003.png]]
+<!--SR:!2024-03-06,1,230!2024-03-07,3,250-->

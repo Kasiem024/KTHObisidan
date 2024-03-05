@@ -19,4 +19,4 @@ Skatterättsliga Värderingsreglerna är minimivärderingsregler, de fastställe
 ## Flashcards
 
 Skatterättsliga Värderingsreglerna (Definition):: Minimivärderingsregler, de fastställer de lägsta belopp vartill tillgångarna får tas upp när det gäller att fastställa den skattemässiga inkomsten, syftet är att företag inte ska betala för lite skatt genom att värdera sin tillgångar för lågt och på det sättet öka sina kostnader
-<!--SR:!2024-03-04,4,270!2024-03-03,3,252-->
+<!--SR:!2024-03-21,16,290!2024-03-17,12,272-->

@@ -174,7 +174,7 @@ Scenarioteknik utgår på att skapa scenarier för framtida konfliktsituationer 
 ==Sida 369 i MIE boken==
 
 Scenarioteknik (Definition):: En analysmetod som utgår på att skapa scenarier för framtida konfliktsituationer så att man kan träna på hur man ska hantera krissituationer
-<!--SR:!2024-02-27,11,275-->
+<!--SR:!2024-02-27,11,275!2024-03-09,4,281-->
 
 20. Utgå från ett exempel och redogör för affärsmodellkanvasen som en strategimodell.
 
@@ -252,7 +252,7 @@ VAGT Mål (4)
 Ett ==kollektivavtal== är ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera.
 
 Kollektivavtal (Definition):: Ett avtal mellan arbetsgivaren och arbetstagarens fackförening. Den brukar innehålla bestämmelser om lön, arbetstid, pension och mera
-<!--SR:!2024-02-19,10,274-->
+<!--SR:!2024-02-19,10,274!2024-03-09,4,281-->
 
 3. Nämn några krav som ställs på arbetsgivaren vid anställning av en medarbetare.
 
@@ -263,7 +263,7 @@ När en medarbetare anställs ställs det en del krav på arbetsgivaren gälland
 En arbetstagare är som regel ==tillsvidareanställd== såvida inget har tidigare sagts om anställningsförhållanden. Det är endast genom en ==uppsägning==, vilket måste vara ==sakligt grundad==, eller genom ett ==avskedande==, om arbetstagaren har gjort ett ==avtalsbrott==, som en sådan anställning kan upphöra.
 
 Tillsvidareanställning (Definition):: Om inget har sagts tidigare om anställningsförhållanden är detta den normala anställningsformen
-<!--SR:!2024-02-12,4,275-->
+<!--SR:!2024-02-12,4,275!2024-03-09,4,281-->
 
 5. Vad innebär en tidsbegränsad anställning? Ge exempel på olika typer av tidsbegränsade anställningar.
 
@@ -383,7 +383,7 @@ En formell grupp skapas av företaget för att uppfylla en specifik funktion. En
 Grupptänkande sker när en grupp av människor är så tätt sammanhållen och homogen i sitt tänkande att de inte kan ta åt sig nya idéer från omvärlden vilket kan leda till felaktigt beslutstagande.
 
 Grupptänkande (Definition):: När en grupp av människor är så tätt sammanhållen och homogen i sitt tänkande att den inte kan ta åt sig nya idéer från omvärlden vilket kan leda till felaktigt beslutstagande
-<!--SR:!2024-02-12,4,277-->
+<!--SR:!2024-02-12,4,277!2024-03-09,4,281-->
 
 21. Beskriv och exemplifiera FIRO-modellen.
 

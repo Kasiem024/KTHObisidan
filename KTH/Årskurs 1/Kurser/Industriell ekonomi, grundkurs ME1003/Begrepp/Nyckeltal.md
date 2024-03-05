@@ -6,7 +6,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003KS3
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003KS3 #CM1005KS4
 
 ---
 
@@ -42,8 +42,122 @@ Exempel på Nyckeltal för Kapitalutnyttjande:
 - Mängden produkter i arbete
 - Kundfordringars omsättningshastighet
 
+### Formler
+
+#### Räntabilitet på Eget Kapital
+
+$$
+R_{E}= \frac {REFIK}{JE}
+$$
+
+#### Räntabilitet på Totalt Kapital
+
+$$
+R_{T} = \frac {REFI}{Totalt \, kapital}
+$$
+
+#### Genomsnittlig Skuldränta
+
+$$
+R_{S} = \frac{Finansiella \, kostnader}{S}
+$$
+
+#### Skuldsättningsgrad
+
+$$
+S/E = \frac{S + obeskattade \, reserver * skattesats}{JE}
+$$
+
+#### Hävstångsformlen
+
+$R_{E} = R_{T} + (R_{T} - R_{S}) * \frac{S}{E}$
+
+#### Vinstmarginal
+
+$$
+Vinstmarginal = \frac {REFI}{Nettoomsättning}
+$$
+
+#### Kassalikviditet
+
+$$
+Kassalikviditet = \frac{Omsättningstillgångar - Förråd \, och \, varulager - Varor \, under \, tillverkning - Förskott \, till \, leverantörer}{Kortfristiga \, Skulder}
+$$
+
+Förkortat:
+
+$$
+Kassalikviditet = \frac{Omsättningstillgångar - Varulager}{Kortfristiga \, Skulder}
+$$
+
+#### Balanslikviditet
+
+$$
+Balanslikviditet = \frac{Omsättningstillgångar}{Kortfristiga \, Skulder}
+$$
+
+#### Soliditet 1
+
+$$
+Soliditet \, 1 = \frac{JE}{Totalt \, kapital}
+$$
+
+#### Soliditet 2
+
+$$
+Soliditet \, 2 = \frac{Riskbärande \, eget \, kapital}{Totalt \, kapital}
+$$
+
+#### Rörelsekapital
+
+$$
+Rörelsekapital = Omsättningstillgångar - Kortfristiga \, skulder
+$$
+
+#### Kapitalomsättningshastighet
+
+$$
+Kapitalomsättningshastighet \, (ggr/år) = \frac{Försäljning \, (per \, år)}{Totalt \, kapital \, (vid \, årets \, slut)}
+$$
+
+#### Lageromsättningshastighet
+
+$$
+Lageromsättningshastighet \, (ggr/år) = \frac{Omsättningsperiod \, (365 \, dagar)}{Genomsnittlig \, lagringstid \, (dagar)}
+$$
+
+#### Genomsnittlig kredittid till kunderna
+
+$$
+Genomsnittlig \, kredittid \, till \, kunderna \, (dagar) = \frac{Genomsnittliga \, kundfordringar \, (kr) * 365 (dagar))}{Försäljning \, (per \, år)}
+$$
+
+#### Genomsnittlig kredittid från leverantörerna
+
+$$
+Genomsnittlig \, kredittid \, från \, leverantörerna \, (dagar) = \frac{Genomsnittliga \, leverantörsskulder \, (kr) * 365 \, (dagar)}{Inköpskostnader \, (per \, år)}
+$$
+
+
 ## Kopplat till
 
 ## Flashcards
 
 Nyckeltal (Definition):: Används för att värdera ett företag och dess verksamhet, kan användas för att jämföra olika företag och för att få en bättre översikt på ett företag
+<!--SR:!2024-03-07,3,250!2024-03-06,3,268-->
+
+Nyckeltal Formel (4)
+||
+$$
+R_{E}= \frac {Resultat}{Eget \, Kapital}
+$$
+$$
+Soliditet \, 1 = \frac{Eget \, Kapital}{Totalt \, kapital}
+$$
+$$
+Rörelsekapital = Omsättningstillgångar - Kortfristiga \, skulder
+$$
+$$
+Kassalikviditet = \frac{Omsättningstillgångar - Varulager}{Kortfristiga \, Skulder}
+$$
+<!--SR:!2024-03-08,3,250-->

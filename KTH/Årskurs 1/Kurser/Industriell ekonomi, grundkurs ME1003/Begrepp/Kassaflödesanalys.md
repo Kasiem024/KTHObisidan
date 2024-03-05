@@ -28,6 +28,7 @@ Summan från kassaflöde kallas saldo. Det är dina likvida medel, pengar på ba
 ## Flashcards
 
 Kassaflödesanalys (Definition):: Visar ett företags likviditetsförändring under en viss period. Alltså [[Inbetalning]] och [[Utbetalning]] för en viss period, visar hur företaget har anskaffat och använt kapital
+<!--SR:!2024-03-07,2,236!2024-03-07,4,274-->
 
 Kassaflöde (Definition):: Ditt saldo, likvida medel. Hur mycket pengar du har på bankkontot i slutet av en period
-<!--SR:!2024-03-20,34,272!2024-03-02,4,281-->
+<!--SR:!2024-03-20,34,272!2024-03-22,17,301-->

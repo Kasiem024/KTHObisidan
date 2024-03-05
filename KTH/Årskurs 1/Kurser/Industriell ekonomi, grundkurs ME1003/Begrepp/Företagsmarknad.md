@@ -32,8 +32,8 @@ I en Företagsmarknad är det vanligt att man har vissa väldigt stora kunder, d
 
 ## Flashcards
 
-Företagsmarknad (Definition):: När ett företag säljer en produkt till ett annat företag. Kallas också Business to Business, B2B.
-<!--SR:!2024-02-22,14,290-->
+Företagsmarknad (Definition):: När ett företag säljer en produkt till ett annat företag. Kallas också Business to Business, B2B
+<!--SR:!2024-02-22,14,290!2024-03-09,4,280-->
 
 Egenskaperna av en Företagsmarknad (6)
 ==DISABLEDFLASHCARD==

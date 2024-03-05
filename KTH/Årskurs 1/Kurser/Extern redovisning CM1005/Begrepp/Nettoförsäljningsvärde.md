@@ -19,4 +19,4 @@ Nettoförsäljningsvärde är det pris som företaget skulle få för [[Tillgån
 ## Flashcards
 
 Nettoförsäljningsvärde (Definition):: Det pris som företaget skulle få för [[Tillgångar]] vid en normal försäljning, minskat med beräknade försäljningsomkostnader
-<!--SR:!2024-03-03,1,230!2024-03-05,3,250-->
+<!--SR:!2024-03-12,7,250!2024-03-16,11,270-->

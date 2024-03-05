@@ -25,9 +25,11 @@ Det finns olika typer av Kapital, 3 vanliga typer är:
 ## Flashcards
 
 Kapital (Definition):: Ett företags resurser, används i verksamheten
+<!--SR:!2024-03-08,3,268!2024-03-08,3,250-->
 
 Typer av Kapital (3)
 ||
 - ==Anläggningskapital==: Används för att investera i [[Anläggningstillgångar]].
 - ==Rörelsekapital==: Används för att finansiera den löpande verksamheten.
 - ==Säkerhetskapital==: Används för att skapa en buffert för att klara störningar och oförutsedda problem.
+<!--SR:!2024-03-08,3,252-->

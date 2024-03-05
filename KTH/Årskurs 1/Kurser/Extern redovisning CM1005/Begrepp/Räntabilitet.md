@@ -58,7 +58,7 @@ $$
 ## Flashcards
 
 Räntabilitet (Definition):: Visar ett företags förmåga att ge avkastning på kapitalet. Det är ett [[Nyckeltal]] och ett [[Lönsamhet|lönsamhetsmått]] som beskriver ett företags vinst i förhållande till investerat kapital, ju högre ju bättre
-<!--SR:!2024-03-04,2,210!2024-03-04,3,250-->
+<!--SR:!2024-03-08,4,210!2024-03-11,7,250-->
 
 Nyckeltal för att räkna Räntabilitet (4)
 ??
@@ -66,4 +66,4 @@ Nyckeltal för att räkna Räntabilitet (4)
 - **Räntabilitet på totalt kapital** ($R_{T}$): Uttrycker avkastningen för företaget som helhet, alltså allt kapital som satsats i verksamheten.
 - **Räntabilitet på sysselsatt kapital** ($R_{SYSS}$): Det finns ingen definition för detta nyckeltal men man bortser från kapital som företaget inte behöver betala ränta på, exempelvis leverantörsskulder.
 - **Vinstmarginal, rörelsemarginal, bruttomarginal**: Man kan ställa ett företags vinst i relation till dess försäljning. Då kan man använda olika mått och skillnaden blir på vilken nivå av [[Resultaträkning]] som vinsten beräknas.
-<!--SR:!2024-03-03,1,224!2024-03-03,1,226-->
+<!--SR:!2024-03-06,2,204!2024-03-06,2,206-->

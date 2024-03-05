@@ -21,4 +21,4 @@ Det är som [[Försiktighetsprincipen]] fast när det kommer till lagervaror.
 ## Flashcards
 
 Lägsta Värdets Princip, LVP (Definition):: Innebär att lagertillgångar ska tas upp till det lägsta av anskaffningsvärdet och det [[Nettoförsäljningsvärde]] på bokslutsdagen, [[Försiktighetsprincipen]]
-<!--SR:!2024-03-03,3,252!2024-03-04,4,270-->
+<!--SR:!2024-03-16,11,272!2024-03-21,16,290-->

@@ -57,7 +57,7 @@ Aktiens Balansvärde (Definition)
 ||
 När man delar upp [[Eget Kapital]] på antalet aktier som finns, detta värde är en faktor som påverkar aktiens pris
 $Aktiens \, Balansvärde = \frac{Eget \, Kapital}{Antal \, Aktier}$
-<!--SR:!2024-03-04,3,265-->
+<!--SR:!2024-03-11,6,265-->
 
 Antal aktier ett företag har ==DISABLEDFLASHCARD== $Antal \, aktier = \frac{Aktiekapital}{Aktiens \, kvotvärde}$
 <!--SR:!2024-04-05,41,272!2024-03-02,4,286-->
@@ -79,4 +79,4 @@ Vad som påverkar en akties börskurs (6)
 <!--SR:!2024-02-10,1,172!2024-02-12,9,270-->
 
 Skillnaden mellan en A-aktie och en B-aktie;; Alla aktier i ett [[Aktiebolag]] har samma kvotvärde dock finns det olika typer av aktier som har olika röstvärde. Aktier med olika röstvärde brukar benämnas A-aktier och B-aktier
-<!--SR:!2024-03-03,1,244-->
+<!--SR:!2024-03-08,3,264-->

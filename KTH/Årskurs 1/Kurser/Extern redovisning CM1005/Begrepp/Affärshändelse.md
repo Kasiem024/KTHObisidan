@@ -22,4 +22,4 @@ En Affärshändelse ska bokföras snarast, kronologiskt och systematiskt.
 ## Flashcards
 
 Affärshändelse (Definition):: En ekonomisk transaktion som har en inverkan på företagets ekonomi och som bokförs
-<!--SR:!2024-02-25,20,270!2024-03-02,4,279-->
+<!--SR:!2024-04-29,55,270!2024-03-23,18,299-->

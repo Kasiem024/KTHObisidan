@@ -19,4 +19,4 @@ Inventering är när värdet av förråd och lager bestäms. Man gör det genom 
 ## Flashcards
 
 Inventering (Definition):: **När värdet av förråd och lager bestäms.** Man gör det genom att gå igenom hur stor volym företaget har av varje material- och produktslag, görs åtminstone ==årligen==.
-<!--SR:!2024-03-03,10,270-->
+<!--SR:!2024-03-31,26,270!2024-03-07,4,272-->

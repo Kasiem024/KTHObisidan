@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "523d7ba2861a9115",
+        "id": "21f61dc31d2b1668",
         "type": "tabs",
         "children": [
           {
-            "id": "8bd1b73f4f6077a1",
+            "id": "3f115703993d038d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -117,6 +117,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8bd1b73f4f6077a1",
-  "lastOpenFiles": []
+  "active": "3f115703993d038d",
+  "lastOpenFiles": [
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Soliditet.md"
+  ]
 }

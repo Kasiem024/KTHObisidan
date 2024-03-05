@@ -26,7 +26,7 @@ Om du är anställd är det din arbetsgivare som gör ett skatteavdrag (avdrag f
 
 Företagare med F-skatt ska lämna in en preliminär [[Självdeklaration]] till Skatteverket. I den preliminära inkomstdeklarationen ska du ta upp alla inkomster och avdrag som du räknar med att ha under året. Med hjälp av dessa uppgifter kan Skatteverket sedan beräkna din debiterade preliminära skatt. Lämnar du inte in någon preliminär inkomstdeklaration beräknar Skatteverket skatten enligt en schablonmetod. Du får ett besked om hur mycket F-skatt du ska betala för hela året och sedan betalar du in lika stora belopp varje månad. Vid behov kan du ändra din debiterade preliminärskatt hos Skatteverket genom att lämna in en ny preliminär inkomstdeklaration.
 
-Alltså F-Skatt är den skatten som företag betalar, den beror på den [[Självdeklaration]] som företaget lämnat till skatteverket
+Alltså F-Skatt är den skatten som företag betalar, den beror på den [[Självdeklaration]] som företaget lämnat till Skatteverket.
 
 ### FA-Skatt
 
@@ -45,13 +45,13 @@ Alltså, Slutgiltig Skatt är den skatt man ska faktiskt betala och den kan anti
 ## Flashcards
 
 Preliminär Skatt (Definition):: Skatt som betalas in i förväg och som avräknas (tillgodoräknas) när den slutliga skatten fastställs, exempelvis avdragen skatt på löner och ersättningar till anställda, avdragen skatt på räntor och utdelningar samt preliminär F-skatt
-<!--SR:!2024-03-03,2,230!2024-03-06,4,245-->
+<!--SR:!2024-03-06,2,210!2024-03-06,4,245-->
 
 A-Skatt (Definition):: Skatt som arbetsgivaren drar av från lönen av den anställda och ger till Skatteverket
-<!--SR:!2024-03-07,5,242!2024-03-03,3,262-->
+<!--SR:!2024-03-07,5,242!2024-03-14,11,282-->
 
 F-Skatt (Definition):: Den skatten som företag betalar, beror på den [[Självdeklaration]] som företaget lämnat till skatteverket
-<!--SR:!2024-03-03,2,225!2024-03-04,2,205-->
+<!--SR:!2024-03-07,4,225!2024-03-09,5,225-->
 
 Slutgiltig Skatt (Definition):: Den skatt man ska faktiskt betala, kan antingen vara **överskjutande skatt eller kvarskatt** beroende på dess relation till [[Självdeklaration#Beräknad Skatt|Beräknad Skatt]]
-<!--SR:!2024-03-04,3,248!2024-03-03,3,262-->
+<!--SR:!2024-03-13,9,268!2024-03-15,12,282-->

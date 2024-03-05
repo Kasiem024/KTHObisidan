@@ -43,10 +43,10 @@ Finansiella Poster är samlingsnamnet för Finansiella Intäkter och Finansiella
 ## Flashcards
 
 Resultaträkning (Definition):: En rapport över [[Intäkt]] och [[Kostnad]] under en viss period. Visar om företaget har gått i vinst eller förlust
-<!--SR:!2024-02-27,20,270!2024-03-02,4,274-->
+<!--SR:!2024-05-18,74,290!2024-03-22,17,294-->
 
 Kostnadsindelad Resultaträkning (Definition):: När man delar upp verksamhetens kostnader efter kostnadsslag, alltså vilken typ av kostnad det är
-<!--SR:!2024-04-20,56,312!2024-03-02,4,274-->
+<!--SR:!2024-04-20,56,312!2024-03-19,14,294-->
 
 Funktionsindelad Resultaträkning (3)
 ??
@@ -54,16 +54,22 @@ När man delar upp verksamhetens kostnader beroende på dess funktion:
 - Tillverkning
 - Försäljning
 - Administration
-<!--SR:!2024-02-27,3,155!2024-02-22,6,232-->
+<!--SR:!2024-03-10,5,155!2024-03-24,19,252-->
 
-EBITDA (Definition):: (Earnings before Interest, Taxes, Depreciations and Amortizations) Rörelseresultat före avskrivningar
+EBITDA (Definition):: (Earnings Before Interest, Taxes, Depreciations and Amortizations) Rörelseresultat före avskrivningar
+<!--SR:!2024-03-06,3,254!2024-03-07,4,274-->
 
-EBITA (Definition):: (Earnings before Interest and Taxes) Rörelseresultat efter avskrivningar
+EBITA (Definition);; (Earnings Before Interest and Taxes) Rörelseresultat efter avskrivningar
+<!--SR:!2024-03-07,4,274-->
 
 Nettoomsättning (Definition):: Försäljningsintäkterna exklusive moms
+<!--SR:!2024-03-06,3,254!2024-03-09,4,281-->
 
 Finansiella Poster (Definition):: Samlingsnamnet för Finansiella Intäkter och Finansiella Kostnader
+<!--SR:!2024-03-06,3,251!2024-03-07,4,271-->
 
 Finansiella Intäkter (Definition):: Exempelvis intäkter som företaget får av att ha placerat likvida medel i banken, alltså har de inget med försäljningen att göra
+<!--SR:!2024-03-08,4,277!2024-03-07,4,274-->
 
-Finansiella Kostnader (Definition):: Exempelvis räntekostnader
+Finansiella Kostnader (Definition):: Kostnader som inte har med försäljning eller tillverkning, exempelvis räntekostnader
+<!--SR:!2024-03-07,4,271!2024-03-07,4,274-->

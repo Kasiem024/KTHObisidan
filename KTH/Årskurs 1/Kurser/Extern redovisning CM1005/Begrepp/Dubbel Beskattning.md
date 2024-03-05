@@ -23,4 +23,4 @@ Dubbel Beskattning kan också vara när någon har en inkomst från två länder
 ## Flashcards
 
 Dubbel Beskattning (Definition):: När vinsten av ett [[Aktiebolag]] beskattas och ägarens utdelning också
-<!--SR:!2024-03-04,4,270!2024-03-04,4,272-->
+<!--SR:!2024-03-20,16,290!2024-03-19,15,292-->

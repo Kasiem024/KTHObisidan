@@ -24,3 +24,4 @@ Det finns två huvudtyper av Bokslutsdispositioner:
 ## Flashcards
 
 Bokslutsdisposition (Definition):: Ger företag möjlighet att inom vissa ramar minska det redovisade resultatet. De är bokföringsmässiga kostnader som redovisas som kostnader i [[Resultaträkning]] och som samtidigt get upphov till [[Obeskattade Reserver]] i [[Balansräkning]]
+<!--SR:!2024-03-06,3,250!2024-03-07,4,270-->

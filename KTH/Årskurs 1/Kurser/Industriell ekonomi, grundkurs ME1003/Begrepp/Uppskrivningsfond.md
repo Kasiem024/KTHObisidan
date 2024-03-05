@@ -21,3 +21,4 @@ Uppskrivningsfond är en post i [[Balansräkning]] och en del av [[Bundet Eget K
 ## Flashcards
 
 Uppskrivningsfond (Definition):: En post i [[Balansräkning]] och en del av [[Bundet Eget Kapital]]. Under vissa omständigheter får [[Anläggningstillgångar]] av ett [[Aktiebolag]] skrivas upp, det vill säga deras bokförda värde får ökas
+<!--SR:!2024-03-07,3,250!2024-03-08,4,270-->

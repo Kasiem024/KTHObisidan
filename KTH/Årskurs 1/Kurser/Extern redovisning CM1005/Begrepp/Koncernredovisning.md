@@ -31,9 +31,10 @@ Innehållet av en Koncernredovisning liknar årsredovisningen:
 ## Flashcards
 
 Koncernredovisning (Definition):: En särskild [[Årsredovisning]] som ett moderföretag upprättar utöver sin vanliga årsredovisning där moderföretaget och alla dess dotterföretag ses som en ekonomisk enhet. Innehållet liknar årsredovisningen och vissa moderföretag har undantag
-<!--SR:!2024-02-25,12,250!2024-03-02,4,270-->
+<!--SR:!2024-04-15,41,270!2024-03-21,16,290-->
 
 Syftet med Koncernredovisning;; Syftet med Koncernredovisningen är att ge intressenterna en rättvisande och sammanfattande bild av hela koncernen
+<!--SR:!2024-03-07,4,272-->
 
 Koncernredovisningens innehåll (4)
 ||
@@ -41,3 +42,4 @@ Koncernredovisningens innehåll (4)
 - Koncernresultaträkning
 - [[Förvaltningsberättelse]]
 - Finansieringsanalys (för stora koncerner)
+<!--SR:!2024-03-06,1,212-->

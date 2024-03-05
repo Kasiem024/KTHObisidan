@@ -29,4 +29,4 @@ Ett företag kommer med en hög fakturor värda 100 tkr till ett factoringbolag.
 ## Flashcards
 
 Factoring (Definition):: Belåning eller försäljning av kundfordringar, när ett företag har låg likviditet går de till ett bolag för att ta ett lån
-<!--SR:!2024-03-03,3,250!2024-03-04,4,270-->
+<!--SR:!2024-03-18,13,270!2024-03-21,16,290-->

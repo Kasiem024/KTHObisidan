@@ -22,4 +22,4 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp #ME1003KS3
 ## Flashcards
 
 Dubbel Bokföring (Definition):: En princip som säger att varje [[Affärshändelse]] ska alltid bokföras på två konton. På det ena kontot på debetsidan, på det andra på kreditsidan och alltid med samma belopp
-<!--SR:!2024-03-27,43,290!2024-03-02,4,274-->
+<!--SR:!2024-03-27,43,290!2024-03-19,14,294-->

@@ -45,7 +45,7 @@ Mäts som [[Räntabilitet]] på totalt kapital och kan delas upp baserat på:
 - Kostnadsstruktur
 - Kapitalbindning
 
-Finansiell Risk (Definition) (3)
+Finansiell Risk (Definition) (4)
 ??
 Fokuserar på hur finansiella förändringar påverkar företagets verksamhet, består av:
 - ==Hävstångsrisk==: Vid analys av denna risk används [[Soliditet]] och Skuldsättningsgrad. Hävstångsformlen är en spegling av denna risk.

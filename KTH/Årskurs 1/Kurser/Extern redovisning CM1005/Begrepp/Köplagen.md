@@ -35,4 +35,4 @@ När Köplagen gäller (3)
 - Mellan två företag.
 - Mellan två privatpersoner.
 - När en privatperson säljer till ett företag.
-<!--SR:!2024-03-09,12,250!2024-02-29,13,270-->
+<!--SR:!2024-03-09,12,250!2024-04-20,48,290-->

@@ -19,4 +19,4 @@ Fastighetsbevis utfärdas av inskrivningsmyndigheten, Lantmäteriet, och lämnar
 ## Flashcards
 
 Fastighetsbevis (Definition):: Utfärdas av Lantmäteriet och lämnar upplysning om vem som har [[Lagfart]] på fastigheten vilka ==inteckningar== som belastar fastigheten
-<!--SR:!2024-03-04,4,270!2024-03-04,4,270-->
+<!--SR:!2024-03-17,13,290!2024-03-18,14,290-->

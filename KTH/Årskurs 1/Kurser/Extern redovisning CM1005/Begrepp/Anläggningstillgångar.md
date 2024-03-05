@@ -54,17 +54,17 @@ Nedskrivning är en [[Avskrivning]] av ==engångskaraktär==, alltså en avskriv
 ## Flashcards
 
 Anläggningstillgångar (Definition):: Tillgångar som ett företag avser att stadigvarande inneha eller använda så som fastigheter och maskiner
-<!--SR:!2024-03-03,3,254!2024-03-05,4,276-->
+<!--SR:!2024-03-14,9,274!2024-03-20,15,296-->
 
 Anläggningstillgångar Exempel (3)
 ??
 - ==Immateriella==: Patent, varumärken, kostnader för forskning och hyresrätter.
 - ==Materiella==: Maskiner, inventarier, byggnader och mark.
 - ==Finansiella==: Värdepapper, aktier.
-<!--SR:!2024-03-03,3,250!2024-03-04,4,270-->
+<!--SR:!2024-03-07,2,230!2024-03-20,15,290-->
 
 Avskrivning av Anläggningstillgångar (Definition):: När man fördelar tillgångens kostnad över dess [[Ekonomisk Livslängd]]
-<!--SR:!2024-03-03,3,250!2024-03-04,4,270-->
+<!--SR:!2024-03-16,11,270!2024-03-21,16,290-->
 
 Sätt att kategorisera Anläggningstillgångar (4)
 ??
@@ -72,3 +72,4 @@ Sätt att kategorisera Anläggningstillgångar (4)
 - ==Goodwill==: Skillnaden mellan det marknadspris ett företag måste betala vid anskaffandet av exempelvis ett dotterbolag och det värde som det köpta bolaget har enligt bokföringen.
 - ==Fastigheter==: Vid avskrivning är det endast byggnaderna som skrivs av, tomtmarkens värde får inte skrivas av årsvis.
 - ==Markanläggningar==: Kan vara parkeringsplatser och trädgårdsanläggningar, får skrivas av med 5% per år.
+<!--SR:!2024-03-06,3,255!2024-03-06,3,255-->

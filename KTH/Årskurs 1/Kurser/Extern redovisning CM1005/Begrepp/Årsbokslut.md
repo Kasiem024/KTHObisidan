@@ -38,7 +38,7 @@ Hur mycket av vinsten efter skatt ska gå till ägarna som vinstutdelning och hu
 ## Flashcards
 
 Årsbokslut (Definition):: En redovisning över verksamhetens tillgångar, eget kapital och skulder, alltså RR och BR
-<!--SR:!2024-04-05,44,288!2024-03-02,4,274-->
+<!--SR:!2024-04-05,44,288!2024-03-18,13,294-->
 
 Resultatberäkning (Definition):: En beräkning av resultatet från detta [[Räkenskapsår]] som görs i samband med ett preliminärt bokslut, processen att skapa [[Resultaträkning]]
-<!--SR:!2024-03-04,3,257!2024-03-04,3,257-->
+<!--SR:!2024-03-12,7,257!2024-03-18,13,277-->

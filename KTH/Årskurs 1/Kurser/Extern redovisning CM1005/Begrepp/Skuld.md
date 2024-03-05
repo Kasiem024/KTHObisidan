@@ -25,7 +25,7 @@ Skulder kan vara antingen ==kortfristiga== eller ==långfristiga==. Kortfristiga
 ## Flashcards
 
 ==Kortfristiga Skulder== (Definition):: En skuld som ska betalas inom ett år, exempelvis leverantörsskulder, skatteskulder, moms och interimsskulder
-<!--SR:!2024-03-18,31,288!2024-03-02,4,281-->
+<!--SR:!2024-03-18,31,288!2024-03-20,15,301-->
 
 ==Långfristiga Skulder== (Definition):: En skuld som ska betalas efter ett år, exempelvis lån och checkräkningskredit
-<!--SR:!2024-04-23,59,316!2024-03-02,4,281-->
+<!--SR:!2024-04-23,59,316!2024-03-23,18,301-->

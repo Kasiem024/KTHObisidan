@@ -34,4 +34,4 @@ En del av [[Bokföringslagen]] som säger:
 - Alla [[Affärshändelse]] ska bokföras systematiskt så att de kan registreras i en [[Grundbok]] och en [[Huvudbok]].
 - Alla dessa affärshändelser ska ha [[Verifikation]].
 - Företag måste upprätta ett [[Årsbokslut]] eller en [[Årsredovisning]].
-<!--SR:!2024-02-26,2,146!2024-03-09,8,258-->
+<!--SR:!2024-03-08,3,146!2024-03-09,8,258-->

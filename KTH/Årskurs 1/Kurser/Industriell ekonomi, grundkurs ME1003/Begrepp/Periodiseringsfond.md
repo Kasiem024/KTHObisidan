@@ -23,3 +23,4 @@ De belopp som avsätts till Periodiseringsfonden får ligga där i max 6 år.
 ## Flashcards
 
 Periodiseringsfond (Definition):: Används när företag vill avsätta en del av sitt resultat före skatt, syftet är att fördela vinsten över flera år, max 6 år
+<!--SR:!2024-03-08,3,250!2024-03-06,3,268-->

@@ -45,7 +45,7 @@ Vertikal Integration inom en Värdekedja (Definition):: När ett företag köper
 <!--SR:!2024-02-12,4,275-->
 
 Horisontell Integration inom en Värdekedja (Definition):: När man köper en konkurrent, alltså ett annat företag på samma position i värdekedjan
-<!--SR:!2024-02-12,4,275-->
+<!--SR:!2024-02-12,4,275!2024-03-09,4,277-->
 
 Sätt att ändra på värdekedjan (4)
 ??

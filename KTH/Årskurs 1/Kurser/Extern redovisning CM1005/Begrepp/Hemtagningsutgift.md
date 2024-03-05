@@ -32,4 +32,4 @@ Exempel på Hemtagningsutgifter (3)
 - Transport
 - Tull
 - Försäkring
-<!--SR:!2024-03-04,9,252!2024-02-25,3,250-->
+<!--SR:!2024-04-04,31,272!2024-03-16,13,270-->

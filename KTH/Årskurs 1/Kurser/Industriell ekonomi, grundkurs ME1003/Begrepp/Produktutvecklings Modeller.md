@@ -48,7 +48,7 @@ Produktutvecklings Modeller, Parallell utveckling (Definition):: **När man skic
 <!--SR:!2024-02-11,3,255-->
 
 Produktutvecklings Modeller, Agil utveckling (Definition):: **Handlar om att ==iterera== på en idé istället för att försöka ta fram en detaljerad plan från början.** Detta betyder att man kan ha en fungerande produkt snabbt som man kan fortsätta att bygga på och utveckla men också att man inte har ett mål att jobba mot
-<!--SR:!2024-02-23,8,255-->
+<!--SR:!2024-02-23,8,255!2024-03-09,4,274-->
 
 Stage-gate-modellen (Definition):: När man inför beslutspunkter vid övergångarna mellan olika stadier av utvecklingsprocessen
-<!--SR:!2024-02-17,9,262-->
+<!--SR:!2024-02-17,9,262!2024-03-09,4,274-->

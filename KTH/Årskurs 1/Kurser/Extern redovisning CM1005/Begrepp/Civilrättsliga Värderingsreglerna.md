@@ -28,10 +28,11 @@ Exempel på Civillagstifningen:
 ## Flashcards
 
 Civilrättsliga Värderingsreglerna (Definition):: Fastställer de högsta belopp vartill [[Tillgångar]] får tas upp i [[Balansräkning]], syftet är att skydda intressenter och ge en korrekt bild av företagets ekonomi
-<!--SR:!2024-03-05,4,272!2024-03-04,4,270-->
+<!--SR:!2024-03-20,15,292!2024-03-19,14,290-->
 
 Exempel på Civillagstifningen (3)
 ??
 - [[Bokföringslagen]] (BFL)
 - Aktiebolagslagen (AL)
 - Lagen om ekonomiska föreningar (EL)
+<!--SR:!2024-03-06,3,255!2024-03-07,3,255-->

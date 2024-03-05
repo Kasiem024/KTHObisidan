@@ -31,13 +31,13 @@ I Sverige finns det organisationer var jobb är att upprätthålla [[God Redovis
 ## Flashcards
 
 God Redovisningssed och Praxis (Definition):: När man följer redovisningslagar och använder allmänt accepterade tillvägagångssätt för sin redovisning
-<!--SR:!2024-04-01,37,272!2024-03-02,4,272-->
+<!--SR:!2024-04-01,37,272!2024-03-18,13,292-->
 
 Bokföringsnämnden (BFN):: En statlig myndighet som har till uppgift att utveckla god redovisningssed, ger ut regler och informationsmaterial om [[Bokföringslagen]] och [[Årsredovisningslagen]]
-<!--SR:!2024-02-17,4,196!2024-02-11,2,252-->
+<!--SR:!2024-03-12,7,196!2024-03-12,7,272-->
 
 Finansinspektionen:: En statlig myndighet som övervakar företagen på finansmarknaden. Deras uppdrag är att skapa ett stabilt finansiellt system som bidrar till en hållbar utveckling och ett gott konsumentskydd. Utvecklar också regler för finansiella företag och kontrollerar att reglerna följs
-<!--SR:!2024-02-15,2,176!2024-02-20,10,276-->
+<!--SR:!2024-03-09,4,176!2024-04-11,37,296-->
 
 Föreningen för Auktoriserade Revisorer (FAR):: En branschorganisation inom redovisning, revision och rådgivning som bland annat utvecklar tydliga spelregler, rätt kompetens och tillförlitlig information för näringsliv och samhälle. Också ett privat utbildningsföretag inom ekonomiområdet
-<!--SR:!2024-02-16,3,196!2024-02-13,3,256-->
+<!--SR:!2024-03-10,5,196!2024-03-17,12,276-->

@@ -83,17 +83,17 @@ Fond för verkligt värde är en del av företagets fria egna kapital. Normalt s
 ## Flashcards
 
 Eget Kapital (Definition):: En benämning på en mängd pengar som ägarna av ett företag satt in vid grundandet eller vad som satts in i efter hand samt vinster, pengar i företaget som tillhör ägarna
-<!--SR:!2024-02-26,19,250!2024-03-02,4,280-->
+<!--SR:!2024-04-21,47,250!2024-03-22,17,300-->
 
 Exempel på Eget Kapital (3)
-??
+==DISABLEDFLASHCARD==
 - ==Startkapital==: Det ägarna satte in vid grundandet.
 - ==Kapitaltillskott==: Det ägarna satte in efter grundandet.
 - ==Vinster==: Vad företag tjänat efter vinstutdelning.
 <!--SR:!2024-02-24,15,292!2024-04-11,47,308-->
 
 Kapitalbindning (Definition):: Resurser som inte kan användas för andra ändamål än vad de är just nu. För ett varuproducerande företag är detta vanligtvis råmaterial och produkter i lager
-<!--SR:!2024-03-18,23,262!2024-03-01,3,260-->
+<!--SR:!2024-03-18,23,262!2024-03-18,13,280-->
 
 Viktigaste delarna av Eget Kapital (4)
 ??
@@ -101,6 +101,7 @@ Viktigaste delarna av Eget Kapital (4)
 - Fonder
 - Balanserat resultat
 - Årets resultat
+<!--SR:!2000-01-01,1,250!2024-03-07,4,281-->
 
 Fonder inom Eget Kapital (6)
 ??
@@ -110,3 +111,4 @@ Fonder inom Eget Kapital (6)
 - Överkursfond
 - Kapitalandelsfond
 - Fond för verkligt värde
+<!--SR:!2024-03-06,3,261!2024-03-06,3,261-->
