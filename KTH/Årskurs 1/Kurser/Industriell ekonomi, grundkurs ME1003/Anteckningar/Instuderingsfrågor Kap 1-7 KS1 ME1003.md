@@ -16,7 +16,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #övning
 Ämnet industriell ekonomi tar sin utgångspunkt i en verksamhet och dess värdeskapande processer. Man fokuserar på [[Produktutveckling]], [[Produktion]] och [[Marknadsföring]]. Dessa tre utgör företagets kärnverksamhet och deras syfte är att skapa värde åt kunden.
 
 Utgångspunkten för ämnet industriell ekonomi (Definition):: När utgångspunkten för en verksamhet är dess värdeskapande processer, [[Produktutveckling]], [[Produktion]], [[Marknadsföring]]
-<!--SR:!2024-02-11,3,264-->
+<!--SR:!2024-02-11,3,264!2024-03-10,4,296-->
 
 2. Vad menar vi när vi säger att en verksamhet är industrialiserad?
 
@@ -97,7 +97,7 @@ Egenskaperna av Bygg- och anläggningsbranschen:: En bransch som styrs i hög gr
 <!--SR:!2024-02-15,7,254-->
 
 Egenskaperna av Fastighetsbranschen:: En bransch som består av företag som ==förvaltar==, ==hyr ut== och utvecklar kommersiella ==lokaler== och ==bostäder==. Intäkterna består primärt av ==hyresintäkter== och fastighetsförsäljning
-<!--SR:!2024-02-20,12,270-->
+<!--SR:!2024-02-20,12,270!2024-03-10,4,296-->
 
 11. Många anser att vi idag befinner oss i en period av radikal industriell omvandling. Vilka är de viktigaste drivkrafterna bakom denna omvandling.
 
@@ -148,7 +148,7 @@ Komplementtjänst (Definition):: En tjänst som erbjuds tillsammans med en vara 
 <!--SR:!2024-02-22,13,294!2024-03-06,4,291-->
 
 Ersättningstjänst (Definition):: En tjänst som substituerar varan helt och hållet så att kunden faktiskt inte äger varan
-<!--SR:!2024-02-25,16,304-->
+<!--SR:!2024-02-25,16,304!2024-03-10,4,296-->
 
 6. Namnge och beskriv de tre principiella konkurrensstrategier som kan identifieras oberoende av om ett industriföretags värdeerbjudande består av varor, tjänster eller en kombination av dessa. Ge dessutom exempel på tre företag som du anser är bra exempel på var och en av strategierna.
 
@@ -309,7 +309,7 @@ Processinnovation (Definition):: När en ==existerande produkt== kan tillverkas 
 En ==dominant design== eller de facto-standard är begrepp som används för att beskriva tekniska lösningar som blivit dominanta eller standarden för att de är populära, inte nödvändigtvis för att de är bäst.
 
 Dominant Design (Definition):: Ett begrepp som används för att beskriva tekniska lösningar som blivit standarden för att de är populära, inte nödvändigtvis för att de är bäst
-<!--SR:!2024-02-25,16,294-->
+<!--SR:!2024-02-25,16,294!2024-03-10,4,296-->
 
 9. Ge två exempel på teknikskiften som på ett fundamentalt sätt har förändrat etablerade branscher.
 
@@ -320,7 +320,7 @@ Ett exempel på ett teknikskifte som fundamentalt ändrat en bransch är när mi
 ==Disruptive innovation== är ett begrepp som beskriver vad som händer när en ny och billig teknisk lösning konkurrerar ut det gamla helt och hållet.
 
 Disruptive Innovation (Definition):: När etablerade företag och affärsmodeller konkurreras ut av tekniska lösningar som är enklare och billigare än de redan etablerade
-<!--SR:!2024-02-11,3,264-->
+<!--SR:!2024-02-11,3,264!2024-03-10,4,296-->
 
 11. Förklara varför det är viktigt att teknikbaserade företag är "tvåhänta" (Eng: ambidextrous).
 
@@ -504,7 +504,7 @@ Kvalificerare (Definition):: Faktorer som möjliggör för företaget att överh
 <!--SR:!2024-02-12,4,284!2024-03-09,4,292-->
 
 Ordervinnare (Definition):: Faktorer i [[Värdeerbjudandet]] som till slut avgör kundens val av produkt
-<!--SR:!2024-02-12,4,284-->
+<!--SR:!2024-02-12,4,284!2024-03-10,4,296-->
 
 7. Redogör för relationen mellan produktvariation och produktionsvolym samt vilka konsekvenser det har för produktionssystemet.
 
@@ -652,7 +652,7 @@ Outputbuffert i Produktionsprocessen (Definition):: När man har ett stort färd
 Tanken bakom ==Lean production== är att identifiera och eliminera allt sådant i en produktionsprocess som inte skapar värde för slut kunden, alltså minska slöseri. En stor del av Lean production är ==Just in Time==, vilket handlar om att allt ska ske i precis rätt tid, alltså inga buffertar eller mellanlager.
 
 Lean Production (Definition):: Handlar om att ==identifiera== och ==eliminera== allt som inte skapar värde för slut kunden, alltså minska ==slöseri==. ==Just in Time== är centralt, allt ska ske i precis rätt tid, ==inga buffertar==
-<!--SR:!2024-02-19,10,284-->
+<!--SR:!2024-02-19,10,284!2024-03-10,4,296-->
 
 23. Beskriv skillnaden mellan de två beordringsprinciperna "push" och "pull".
 
@@ -661,10 +661,10 @@ Push är när varje produktionsmoment får en signal att påbörja från det fö
 Pull är när ett moment beställer material från ett tidigare produktionssteg. Detta eliminerar mellanlager och leder till kort genomloppstid men innebär också att det kan bli överkapacitet, alltså att maskiner i tidigare produktionssteg står stilla.
 
 Beordringsprincipen Push (Definition):: När varje moment i ett produktions system väntar på det föregående produktionssteget, leder lätt till mellanlager där komponenter väntar på att det blir deras tur att bearbetas
-<!--SR:!2024-02-11,2,244-->
+<!--SR:!2024-02-11,2,244!2024-03-10,4,296-->
 
 Beordringsprincipen Pull (Definition):: När ett moment beställer material från ett tidigare produktionssteg, eliminerar mellanlager och leder till kort genomloppstid men innebär också att det kan bli överkapacitet, alltså att maskiner i tidigare produktionssteg står stilla
-<!--SR:!2024-02-11,3,267-->
+<!--SR:!2024-02-11,3,267!2024-03-10,4,296-->
 
 24. Vilken är relationen mellan lagernivå och påfyllningsvolym?
 

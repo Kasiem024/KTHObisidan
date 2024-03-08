@@ -30,4 +30,4 @@ När man finansierar delar av verksamheten utan att det syns i [[Balansräkning]
 - [[Leasing]]: Ett annat ord för att hyra. Utgår på att inte köpa utrustning men hyra den istället.
 - [[Sale and Leaseback]]: När ett företag säljer ett objekt, exempelvis anläggningar och byggnader, till en finansiell institution mot löfte att få hyra objektet under en förutbestämd tid. Risken flyttas då över till institutionen som köper objektet. **Alltså säljer man en tillgång till ett finansbolag och börjar leasa den av det bolaget.**
 - ==Outsourcing==: Innebär att någon del av företagets verksamhet övertas av något annat företag mot betalning.
-<!--SR:!2024-03-06,3,250-->
+<!--SR:!2024-03-16,10,270-->

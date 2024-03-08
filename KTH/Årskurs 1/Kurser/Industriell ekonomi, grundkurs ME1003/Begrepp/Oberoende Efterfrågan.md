@@ -20,4 +20,4 @@ När efterfrågan är ==marknadsstyrd==, ==omedelbar== och i princip ==slumpmäs
 ## Flashcards
 
 Oberoende Efterfrågan (Definition):: När efterfrågan är ==marknadsstyrd==, ==omedelbar== och i princip ==slumpmässig==, alltså det ==går inte att kontrollera== efterfrågan helt även om man kan påverka den genom [[Prissättning]] och [[Marknadsföring]]
-<!--SR:!2024-02-15,7,250-->
+<!--SR:!2024-02-15,7,250!2024-03-10,4,270-->

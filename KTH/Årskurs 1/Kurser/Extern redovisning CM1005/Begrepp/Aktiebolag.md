@@ -79,4 +79,4 @@ Vad som påverkar en akties börskurs (6)
 <!--SR:!2024-02-10,1,172!2024-02-12,9,270-->
 
 Skillnaden mellan en A-aktie och en B-aktie;; Alla aktier i ett [[Aktiebolag]] har samma kvotvärde dock finns det olika typer av aktier som har olika röstvärde. Aktier med olika röstvärde brukar benämnas A-aktier och B-aktier
-<!--SR:!2024-03-08,3,264-->
+<!--SR:!2024-03-16,8,264-->

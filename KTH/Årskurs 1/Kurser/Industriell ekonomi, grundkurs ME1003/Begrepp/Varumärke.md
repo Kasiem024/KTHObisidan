@@ -24,3 +24,5 @@ Man kan säga att ==varumärket== talar till oss ==emotionellt== medan ==produkt
 ## Kopplat till
 
 ## Flashcards
+
+Varumärke (Definition):: Företagets löfte till sina kunder, kopplat till produkten men är inte produkten i sig, tar lång tid att bygga

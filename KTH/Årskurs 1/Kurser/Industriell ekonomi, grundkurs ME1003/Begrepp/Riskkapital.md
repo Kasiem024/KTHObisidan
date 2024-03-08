@@ -30,7 +30,7 @@ Ett samlingsnamn för investeringar i ett företags egna kapital. I ett företag
 - Företagets [[Eget Kapital]]
 - Alla [[Obeskattade Reserver]]
 - Efterställda räntebärande skulder
-<!--SR:!2024-03-05,1,235!2024-03-08,3,253-->
+<!--SR:!2024-03-09,3,255!2024-03-17,9,253-->
 
 Efterställda Räntebärande Skulder (Definition):: Skulder med låg prioritet, ett företag måste betala alla sina andra lån först och till sist dessa skulder, exempelvis konvertibla förlagslån
-<!--SR:!2024-03-07,4,272!2024-03-07,4,270-->
+<!--SR:!2024-03-24,17,292!2024-03-22,15,290-->

@@ -44,6 +44,7 @@ Mäts som [[Räntabilitet]] på totalt kapital och kan delas upp baserat på:
 - Verksamhetens innehåll och karaktär
 - Kostnadsstruktur
 - Kapitalbindning
+<!--SR:!2024-03-11,3,250!2024-03-09,3,250-->
 
 Finansiell Risk (Definition) (4)
 ??
@@ -52,3 +53,4 @@ Fokuserar på hur finansiella förändringar påverkar företagets verksamhet, b
 - ==Likviditetsrisk==: Risken att inte kunna betala sina kortfristiga skulder och fakturor.
 - ==Ränterisk==: Låneräntor varierar över tid och om en stor del av skulderna har rörlig ränta innebär det att storleken på företagets finansiella kostnader kan förändras kraftigt på kort tid.
 - ==Valutarisk==: Valutafluktuationer kan påverka både [[Likviditet]] och resultatet av ett företag.
+<!--SR:!2024-03-11,4,270!2024-03-09,3,250-->

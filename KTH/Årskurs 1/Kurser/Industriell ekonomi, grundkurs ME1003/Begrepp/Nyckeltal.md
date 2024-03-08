@@ -138,15 +138,14 @@ $$
 Genomsnittlig \, kredittid \, från \, leverantörerna \, (dagar) = \frac{Genomsnittliga \, leverantörsskulder \, (kr) * 365 \, (dagar)}{Inköpskostnader \, (per \, år)}
 $$
 
-
 ## Kopplat till
 
 ## Flashcards
 
 Nyckeltal (Definition):: Används för att värdera ett företag och dess verksamhet, kan användas för att jämföra olika företag och för att få en bättre översikt på ett företag
-<!--SR:!2024-03-07,3,250!2024-03-06,3,268-->
+<!--SR:!2024-03-16,9,270!2024-03-19,13,288-->
 
-Nyckeltal Formel (4)
+Nyckeltal för CM1005 (Formel) (4)
 ||
 $$
 R_{E}= \frac {Resultat}{Eget \, Kapital}
@@ -160,4 +159,9 @@ $$
 $$
 Kassalikviditet = \frac{Omsättningstillgångar - Varulager}{Kortfristiga \, Skulder}
 $$
-<!--SR:!2024-03-08,3,250-->
+<!--SR:!2024-03-10,2,230-->
+
+Tidsmetoden/Balansräkningsmetoden (Formel)
+||
+Kapitalbindning = Antal dagar x Kostnad/styck x Produktionsvolym/dag
+<!--SR:!2024-03-09,1,234-->

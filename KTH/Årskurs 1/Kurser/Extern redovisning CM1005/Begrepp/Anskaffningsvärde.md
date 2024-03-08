@@ -21,4 +21,4 @@ Exempelvis om tillgången är en bil som företaget har köpt blir Anskaffningsv
 ## Flashcards
 
 Anskaffningsvärde (Definition):: Ett belopp motsvarande utgifterna för tillgångens förvärv eller tillverkning, inte bara inköpspriset men också alla utgifter som kan direkt hänföras till den
-<!--SR:!2024-03-08,3,256!2024-03-15,10,276-->
+<!--SR:!2024-03-19,11,276!2024-03-15,10,276-->

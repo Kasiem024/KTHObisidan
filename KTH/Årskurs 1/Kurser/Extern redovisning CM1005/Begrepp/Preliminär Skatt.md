@@ -45,13 +45,13 @@ Alltså, Slutgiltig Skatt är den skatt man ska faktiskt betala och den kan anti
 ## Flashcards
 
 Preliminär Skatt (Definition):: Skatt som betalas in i förväg och som avräknas (tillgodoräknas) när den slutliga skatten fastställs, exempelvis avdragen skatt på löner och ersättningar till anställda, avdragen skatt på räntor och utdelningar samt preliminär F-skatt
-<!--SR:!2024-03-06,2,210!2024-03-06,4,245-->
+<!--SR:!2024-03-13,6,230!2024-03-23,16,265-->
 
 A-Skatt (Definition):: Skatt som arbetsgivaren drar av från lönen av den anställda och ger till Skatteverket
-<!--SR:!2024-03-07,5,242!2024-03-14,11,282-->
+<!--SR:!2024-03-25,18,262!2024-03-14,11,282-->
 
 F-Skatt (Definition):: Den skatten som företag betalar, beror på den [[Självdeklaration]] som företaget lämnat till skatteverket
-<!--SR:!2024-03-07,4,225!2024-03-09,5,225-->
+<!--SR:!2024-03-20,13,245!2024-03-09,5,225-->
 
 Slutgiltig Skatt (Definition):: Den skatt man ska faktiskt betala, kan antingen vara **överskjutande skatt eller kvarskatt** beroende på dess relation till [[Självdeklaration#Beräknad Skatt|Beräknad Skatt]]
 <!--SR:!2024-03-13,9,268!2024-03-15,12,282-->

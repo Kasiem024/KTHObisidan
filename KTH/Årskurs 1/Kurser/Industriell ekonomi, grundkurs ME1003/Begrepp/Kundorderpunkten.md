@@ -42,4 +42,4 @@ Genomloppstid (Definition):: Tiden som det tar att tillverka produkten från bö
 <!--SR:!2024-02-11,3,252-->
 
 Leveranstid (Definition):: Tiden som det tar för kunden att få produkten efter att beställningen har gjorts
-<!--SR:!2024-02-25,9,272-->
+<!--SR:!2024-02-25,9,272!2024-03-10,4,272-->

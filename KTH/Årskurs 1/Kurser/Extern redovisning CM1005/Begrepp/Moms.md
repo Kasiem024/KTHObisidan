@@ -79,16 +79,16 @@ In- och Utgående Moms (Definition)
 - ==Ingående Moms==: De varor företaget ==KÖPER IN==
 - ==Utgående Moms==: De varor företaget ==SÄLJER UT==
 Utgående - Ingående = Vad staten får från företaget
-<!--SR:!2024-04-11,37,301!2024-03-06,5,238-->
+<!--SR:!2024-04-11,37,301!2024-03-22,16,258-->
 
 Skattskyldiga näringsidkare för moms:: I stort sett alla ==rörelseidkare== och ==jordbrukare==
-<!--SR:!2024-03-08,13,281!2024-03-16,11,280-->
+<!--SR:!2024-04-07,30,301!2024-03-16,11,280-->
 
 Skattepliktiga varor och tjänster för moms:: Med ett fåtal undantag, alla ==varor== och ==tjänster==
 <!--SR:!2024-04-12,38,301!2024-03-15,10,280-->
 
 Moms Redovisningsperiod (Definition):: Omfattar normalt en månad, alltså lämnas ==momsdeklaration varje månad==
-<!--SR:!2024-03-07,10,261!2024-03-21,16,300-->
+<!--SR:!2024-04-06,30,281!2024-03-21,16,300-->
 
 Hur betalas Moms om företagets redovisningsvaluta är Euro;; Om företagets redovisningsvaluta är Euro, räknas summa ingående och summa utgående moms i deklarationen till Skatteverket om till kronor. Denna omräkning sker enligt en genomsnittskurs som fastställs av Skatteverket för den månad momsen avser. **Alltså om redovisningsvalutan är Euro räknas momsen om till kronor genom att använda en genomsnittskurs som bestäms av Skatteverket för den månaden momsen avser**
 <!--SR:!2024-03-10,9,261-->

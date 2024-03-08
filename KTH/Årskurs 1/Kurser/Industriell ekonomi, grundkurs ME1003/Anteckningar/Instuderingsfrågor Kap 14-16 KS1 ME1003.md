@@ -47,11 +47,11 @@ Michael Porters Generiska Affärsstrategier (Definition):: Handlar om att det en
 
 6. Beskriv följande konkurrenskrafter baserade på Porters och Ansoffs typstrategier:
 
-- Konkurrenskraft genom produktledarskap
+- Konkurrenskraft genom ==produktledarskap==
 	- Innebär att [[Värdeerbjudandet]] är bättre än konkurrenternas. I Ansoff matrisen betyder det att man ska fokusera på ==Product Development==. I Porters matris betyder det att man ska fokusera på ==Differentiering==.
-- Konkurrenskraft genom operativ överlägsenhet
+- Konkurrenskraft genom ==operativ överlägsenhet==
 	- Innebär att man har lägre tillverkningskostnader än sina konkurrenter. I Ansoff matrisen betyder att man ska fokusera på ==Market Penetration==. I Porters matris betyder det att man ska fokusera på ==Generellt kostnadsledarskap==.
-- Konkurrenskraft genom kundnärhet
+- Konkurrenskraft genom ==kundnärhet==
 	- Innebär att man kan skräddarsy efter kundens önskemål. I Ansoff matrisen betyder att man ska fokusera på ==Diversification==. I Porters matris betyder det att man ska fokusera på ==Differentiering==.
 
 7. Redogör för "Blue Ocean Strategies".
@@ -325,7 +325,7 @@ När ett företag börjar överväga om kompetensen borde komma från externa ak
 Hawthornestudierna visade att om man visar hänsyn och intresse för arbetarna kommer de jobba fortare.
 
 Hawthornestudiernas Resultat (Definition):: Om man visar hänsyn och intresse för arbetarna kommer de jobba fortare
-<!--SR:!2024-02-12,4,275-->
+<!--SR:!2024-02-12,4,275!2024-03-10,4,283-->
 
 14. Vad innebär alienation?
 
@@ -417,7 +417,7 @@ Managerial Grid, Flerdimensionell Ledarstil (Definition):: När vilken typ av le
 <!--SR:!2024-02-20,4,237-->
 
 Den Situationsanpassade Ledarskapsmodellen, Flerdimensionell Ledarstil (Definition):: När ledaren anpassar sig efter mognaden av gruppen
-<!--SR:!2024-02-12,4,277-->
+<!--SR:!2024-02-12,4,277!2024-03-10,4,283-->
 
 25. Redogör för HR-avdelningens roll i en verksamhet.
 
@@ -516,7 +516,7 @@ Vertikal Specialisering (Definition):: Handlar om hur platt eller spetsig en org
 Kontrollspann är hur många direkt underställda medarbetare en viss chef har. Brett kontrollspann är bra när arbetsuppgifterna är standardiserade och när de medarbetarna behöver självständighet. Smalt kontrollspann är bra när medarbetarna behöver chefens hjälp eller att chefen behöver övervaka sina underställda.
 
 Kontrollspann (Definition):: Handlar om hur många direkt underställda medarbetare en viss chef har, kan vara brett eller spetsigt
-<!--SR:!2024-02-26,11,277-->
+<!--SR:!2024-02-26,11,277!2024-03-10,4,283-->
 
 13. Beskriv följande organisationsformer:
 

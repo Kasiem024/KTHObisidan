@@ -37,4 +37,4 @@ Lagar som reglerar Affärsredovningen i Sverige (5)
 - Kommunalskattelagen
 - Aktiebolagslagen (AL)
 - Lagen om ekonomiska föreningar (EL)
-<!--SR:!2024-03-11,6,265!2024-03-06,3,265-->
+<!--SR:!2024-03-11,6,265!2024-03-15,9,265-->

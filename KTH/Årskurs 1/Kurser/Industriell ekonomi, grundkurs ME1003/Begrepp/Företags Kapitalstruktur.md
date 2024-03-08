@@ -29,4 +29,4 @@ Företags Kapitalstruktur (3)
 - [[Eget Kapital]] (inklusive [[Obeskattade Reserver]]): Motsvarar ägarnas andel i företaget och är grunden för kapitalstrukturen.
 - ==Räntebärande skulder==: Lån där kostnaden för kapital sätts i form av en ränta, alltså **vanliga banklån**.
 - ==Rörelseskulder==, eller icke räntebärande skulder: Består huvudsakligen av de skulder företager har till sina leverantörer, alltså **leverantörsskulder**.
-<!--SR:!2024-03-06,1,230!2024-03-06,3,250-->
+<!--SR:!2024-03-09,3,250!2024-03-16,10,270-->

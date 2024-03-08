@@ -52,7 +52,7 @@ Det finns 4 typer av Omsättningstillgångar:
 ## Flashcards
 
 Tillgångar (Definition):: Resurser som kan förväntas ge ekonomiska fördelar i framtiden och är summan av ett företags förmögenhet, en del av [[Balansräkning]]
-<!--SR:!2024-03-07,2,230!2024-03-19,14,292-->
+<!--SR:!2024-03-14,7,250!2024-03-19,14,292-->
 
 Sätt att värdera en Tillgång (4)
 ??

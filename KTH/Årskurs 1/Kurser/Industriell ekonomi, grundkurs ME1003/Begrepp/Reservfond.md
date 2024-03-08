@@ -26,12 +26,12 @@ Inom ett Aktiebolag får en Reservfond endast användas på dessa sätt:
 
 ## Flashcards
 
-Reservfond (Definition):: Är en post i [[Balansräkning]] och [[Bundet Eget Kapital]], syftet är att skydda externa aktörer som exempelvis har lånat ut pengar till ett [[Aktiebolag]] genom tt täcka oväntade utgifter eller förluster
-<!--SR:!2024-03-06,1,230!2024-03-08,3,250-->
+Reservfond (Definition):: Är en post i [[Balansräkning]] och [[Bundet Eget Kapital]], syftet är att skydda externa aktörer som exempelvis har lånat ut pengar till ett [[Aktiebolag]] genom att täcka oväntade utgifter eller förluster
+<!--SR:!2024-03-09,3,250!2024-03-15,7,250-->
 
 Sätten Reservfonden används i ett [[Aktiebolag]] (3)
 ??
 - Täcka förlust
 - Öka aktiekapital
 - Återbetalning till aktieägarna
-<!--SR:!2024-03-08,3,232!2024-03-14,9,272-->
+<!--SR:!2024-03-14,6,232!2024-03-14,9,272-->

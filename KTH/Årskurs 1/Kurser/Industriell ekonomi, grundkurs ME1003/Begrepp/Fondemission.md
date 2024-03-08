@@ -12,11 +12,11 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003KS3
 
 ## Definition
 
-Fondemission är en form av emission som inte tillför nytt kapital till företaget, alltså när [[Fritt Eget Kapital]] omvandlas till [[Bundet Eget Kapital]]. En fondemission ändrar bara strukturen av en [[Balansräkning]] men inte balansomslutningen
+Fondemission är en form av emission som inte tillför nytt kapital till företaget, alltså när [[Fritt Eget Kapital]] omvandlas till [[Bundet Eget Kapital]]. En fondemission ändrar bara strukturen av en [[Balansräkning]] men inte balansomslutningen.
 
 ## Kopplat till
 
 ## Flashcards
 
 Fondemission (Definition):: En form av emission som inte tillför nytt kapital till företaget, alltså när [[Fritt Eget Kapital]] omvandlas till [[Bundet Eget Kapital]], ändrar bara strukturen av en [[Balansräkning]] men inte balansomslutningen
-<!--SR:!2024-03-06,3,250!2024-03-06,3,250-->
+<!--SR:!2024-03-14,6,250!2024-03-19,13,270-->

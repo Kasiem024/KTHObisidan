@@ -33,7 +33,7 @@ En kundförlust kan antingen vara befarad eller konstaterad.
 ## Flashcards
 
 Kundfordringar (Definition):: En säljares tillgodohavande hos en köpare, uppstår oftast när säljaren utfärdar en ==faktura==, upphör när köparen betalar fakturan, räknas som [[Omsättningstillgångar]]
-<!--SR:!2024-03-08,4,212!2024-03-21,16,292-->
+<!--SR:!2024-03-19,11,232!2024-03-21,16,292-->
 
 Osäkra Kundfordringar (Definition):: Fordringar där det råder osäkerhet om kunden har förmåga att betala eller inte, kan leda till ==kundförlust==
 <!--SR:!2024-03-11,8,250!2024-03-17,13,292-->

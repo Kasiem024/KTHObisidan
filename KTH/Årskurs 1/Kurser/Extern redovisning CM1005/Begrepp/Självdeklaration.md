@@ -42,13 +42,13 @@ Självdeklaration (Definition):: En årlig handling som ska lämnas till Skattev
 <!--SR:!2024-03-11,7,252!2024-03-13,9,272-->
 
 Preliminär Självdeklaration (Definition):: Ett underlag för att Skatteverket ska kunna bestämma den debiterade preliminära skatten, inkluderar alla inkomster och avdrag som räknas hända under året, måste göras av alla med F-Skatt och SA-Skatt
-<!--SR:!2024-03-06,2,210!2024-03-11,8,268-->
+<!--SR:!2024-03-13,6,230!2024-03-11,8,268-->
 
 Beräknad Skatt (Definition):: Den skatten man beräknar ska betala, detta sker i maj året efter inkomståret
 <!--SR:!2024-03-11,7,252!2024-03-20,15,292-->
 
 Överskjutande Skatt (Definition):: När den Beräknade Skatten är mindre än [[Preliminär Skatt]], när man får tillbaka pengar
-<!--SR:!2024-03-08,6,248!2024-03-14,11,288-->
+<!--SR:!2024-03-28,20,268!2024-03-14,11,288-->
 
 Kvarskatt (Definition):: När den Beräknade Skatten är större än [[Preliminär Skatt]], när man betalar mer i skatt. Man kan då göra en ==fyllnadsinbetalning== för att reducera [[Dröjsmålsränta]]
-<!--SR:!2024-03-06,4,248!2024-03-19,15,291-->
+<!--SR:!2024-03-20,13,268!2024-03-19,15,291-->

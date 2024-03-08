@@ -101,7 +101,7 @@ Viktigaste delarna av Eget Kapital (4)
 - Fonder
 - Balanserat resultat
 - Årets resultat
-<!--SR:!2000-01-01,1,250!2024-03-07,4,281-->
+<!--SR:!2024-03-09,3,260!2024-03-22,15,301-->
 
 Fonder inom Eget Kapital (6)
 ??
@@ -111,4 +111,4 @@ Fonder inom Eget Kapital (6)
 - Överkursfond
 - Kapitalandelsfond
 - Fond för verkligt värde
-<!--SR:!2024-03-06,3,261!2024-03-06,3,261-->
+<!--SR:!2024-03-15,9,261!2024-03-17,11,281-->

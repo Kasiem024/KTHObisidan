@@ -22,4 +22,4 @@ Alltså, Courtage är en avgift som betalas när man köper/säljer aktier.
 ## Flashcards
 
 Courtage (Definition):: En avgift som betalas när man köper/säljer aktier
-<!--SR:!2024-03-08,13,270!2024-03-18,14,292-->
+<!--SR:!2024-04-07,30,290!2024-03-18,14,292-->

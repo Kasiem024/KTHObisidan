@@ -39,7 +39,7 @@ Om försäljningspriset är högre än bokfört restvärde är det ==realisation
 ## Flashcards
 
 Avskrivning (Definition):: När man fördelar kostnaden av [[Tillgångar]] under dess [[Ekonomisk Livslängd]], dock är det enbart [[Anläggningstillgångar]] då de har en förväntad ekonomisk livslängd
-<!--SR:!2024-03-06,2,210!2024-03-17,13,292-->
+<!--SR:!2024-03-12,5,230!2024-03-17,13,292-->
 
 Avskrivningens olika typer (3)
 ??

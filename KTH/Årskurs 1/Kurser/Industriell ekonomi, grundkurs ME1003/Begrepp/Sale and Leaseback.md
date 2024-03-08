@@ -23,4 +23,4 @@ Alltså säljer man en tillgång till ett finansbolag och börjar leasa den av d
 ## Flashcards
 
 Sale and Leaseback (Definition):: När man säljer en tillgång till ett finansbolag och börjar leasa den av det bolaget
-<!--SR:!2024-03-07,4,270!2024-03-08,4,272-->
+<!--SR:!2024-03-21,14,290!2024-03-23,15,292-->

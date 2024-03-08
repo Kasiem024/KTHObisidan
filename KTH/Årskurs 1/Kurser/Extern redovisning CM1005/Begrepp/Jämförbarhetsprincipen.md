@@ -15,9 +15,9 @@ Jämförbarhetsprincipen innebär att företag över tiden ska tillämpa samma p
 
 Jämförbarhetsprincipen kallas även konsekvensprincipen, eller principen om konsekvent tillämpning och jämförbarhet.
 
-I vissa fall kan undantag ifrån jämförbarhetsprincipen göras, exempelvis om en lagändring kräver det, eller då ett företag byter koncerntillhörighet.
+I vissa fall kan undantag ifrån Jämförbarhetsprincipen göras, exempelvis om en lagändring kräver det, eller då ett företag byter koncerntillhörighet.
 
-Syftet med jämförbarhetsprincipen är att jämförelsen från år till år ska underlättas för de intressenter som vill analysera bolaget.
+Syftet med Jämförbarhetsprincipen är att jämförelsen från år till år ska underlättas för de intressenter som vill analysera bolaget.
 
 [Redovisningsprinciper, StartaEgetInfo](https://www.startaegetinfo.se/redovisningsprinciper)
 

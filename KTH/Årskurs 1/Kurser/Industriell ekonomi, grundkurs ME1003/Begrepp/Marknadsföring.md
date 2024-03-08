@@ -21,6 +21,8 @@ Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor o
 
 ## [[Varumärke]]
 
+Varumärket är företagets löfte till sina kunder, det är kopplat till produkten men är inte produkten i sig. Det tar lång tid att bygga ett starkt varumärke.
+
 ---
 ==Relationsmarknadsföring== är när man försöker bygga långsiktiga relationer med sina kunder. Då är det viktigt att lyssna på kundens behov och vara pålitlig.
 

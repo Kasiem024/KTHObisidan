@@ -26,14 +26,16 @@ Ordet "värde" i detta sammanhang är värde för kunden.
 ![[Affärsmodellen ME1003.png]]
 [Affärsmodell, Visma](https://vismaspcs.se/ditt-foretagande/starta-eget-foretag/formulera-din-affarside)
 
+## Kopplat till
+
 ## Flashcards
 
-Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera
+Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera ![[Affärsmodellen ME1003.png]]
 <!--SR:!2024-03-02,15,232!2024-03-09,4,270-->
 
 Delarna av en affärsmodell (3)
 ??
-- Värdeerbjudandet
-- Värdeskapande
-- Värdefångsten
+- [[Värdeerbjudandet]]
+- [[Värdeskapandet]]
+- [[Värdefångsten]]
 <!--SR:!2024-02-14,6,230!2024-02-23,14,292-->

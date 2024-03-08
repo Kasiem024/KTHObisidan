@@ -11,9 +11,7 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 ## Definition
 
-Vad är produkten? (varan eller tjänsten)
-
-Man kan säga att Värdeerbjudandet av ett företag är det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det ==inte bara== de faktiska ==varorna== och ==tjänster== som ett företag säljer men ==också hela upplevelsen==.
+Värdeerbjudandet av ett företag är det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det ==inte bara== de faktiska ==varorna== och ==tjänster== som ett företag säljer men ==också hela upplevelsen==.
 
 ### Skillnader mellan vara och tjänst
 
@@ -27,6 +25,7 @@ Man kan säga att Värdeerbjudandet av ett företag är det värde som kunderna 
 | Kunden deltar vanligen inte i produktionen | Kunden deltar (vanligen) i produktionen |
 | Äganderätten överlåts | Äganderätten överlåts inte |
 
+---
 Produkter kan kategoriseras på olika sätt beroende på vem som säljer och vem som köper produkten.
 
 - Business to Consumer (B2C)
@@ -45,7 +44,7 @@ Många tjänsteföretag är ”lika industriella” som klassiska industriföret
 
 ## Flashcards
 
-Värdeerbjudandet (Definition):: Det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det ==inte bara== de faktiska ==varorna== och ==tjänster== som ett företag säljer men ==också hela upplevelsen==
+Värdeerbjudandet (Definition):: Det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det inte bara de faktiska varorna och tjänster som ett företag säljer men också ==hela upplevelsen==
 <!--SR:!2024-02-12,7,250-->
 
 Sätt att kategorisera produkter (Värdeerbjudandet)

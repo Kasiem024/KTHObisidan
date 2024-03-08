@@ -49,7 +49,7 @@ Hållbarhetsrapport behandlings områden (5)
 - Personal
 - Respekt för mänskliga rättigheter
 - Motverkande av korruption
-<!--SR:!2024-03-06,3,262!2024-03-07,4,282-->
+<!--SR:!2024-03-16,10,282!2024-03-23,16,302-->
 
 Kriterier för att ett företag måste skriva en hållbarhetsrapport (3)
 ??

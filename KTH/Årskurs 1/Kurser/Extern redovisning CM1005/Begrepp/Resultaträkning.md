@@ -57,19 +57,19 @@ När man delar upp verksamhetens kostnader beroende på dess funktion:
 <!--SR:!2024-03-10,5,155!2024-03-24,19,252-->
 
 EBITDA (Definition):: (Earnings Before Interest, Taxes, Depreciations and Amortizations) Rörelseresultat före avskrivningar
-<!--SR:!2024-03-06,3,254!2024-03-07,4,274-->
+<!--SR:!2024-03-18,12,274!2024-03-21,14,294-->
 
 EBITA (Definition);; (Earnings Before Interest and Taxes) Rörelseresultat efter avskrivningar
-<!--SR:!2024-03-07,4,274-->
+<!--SR:!2024-03-23,16,294-->
 
 Nettoomsättning (Definition):: Försäljningsintäkterna exklusive moms
-<!--SR:!2024-03-06,3,254!2024-03-09,4,281-->
+<!--SR:!2024-03-16,10,254!2024-03-09,4,281-->
 
 Finansiella Poster (Definition):: Samlingsnamnet för Finansiella Intäkter och Finansiella Kostnader
-<!--SR:!2024-03-06,3,251!2024-03-07,4,271-->
+<!--SR:!2024-03-19,13,271!2024-03-24,17,291-->
 
 Finansiella Intäkter (Definition):: Exempelvis intäkter som företaget får av att ha placerat likvida medel i banken, alltså har de inget med försäljningen att göra
-<!--SR:!2024-03-08,4,277!2024-03-07,4,274-->
+<!--SR:!2024-03-24,16,297!2024-03-24,17,294-->
 
 Finansiella Kostnader (Definition):: Kostnader som inte har med försäljning eller tillverkning, exempelvis räntekostnader
-<!--SR:!2024-03-07,4,271!2024-03-07,4,274-->
+<!--SR:!2024-03-21,14,291!2024-03-21,14,294-->

@@ -46,11 +46,11 @@ Värdeskapandet hos ett renodlat tillverkningsföretag;; Att använda sina ==ans
 Värdeskapandet hos ett renodlat tjänsteföretag;; Kunden är involverad
 <!--SR:!2024-02-14,4,230-->
 
-Varudominerad logik (Definition):: När huvuddelen av Värdeskapandet sker ==utan inblandning av kunden==
+Varudominerad logik (Definition):: När huvuddelen av Värdeskapandet sker **utan inblandning av kunden**
 <!--SR:!2024-02-12,3,244!2024-03-08,3,266-->
 
-Back-office dominerad logik (Definition):: När huvuddelen av Värdeskapandet sker ==utan kunden men kunden behövs==, vanligtvis i ==början== och ==slutet== av processen
-<!--SR:!2024-02-16,6,268-->
+Back-office dominerad logik (Definition):: När huvuddelen av Värdeskapandet sker **utan kunden men kunden behövs**, vanligtvis i ==början== och ==slutet== av processen
+<!--SR:!2024-02-16,6,268!2024-03-09,3,267-->
 
-Front-office dominerad logik (Definition):: När huvuddelen av Värdeskapandet sker i ==direkt interaktion== med ==kunden== och det handlar om kundens ==upplevelse==
+Front-office dominerad logik (Definition):: När huvuddelen av Värdeskapandet sker i **direkt interaktion med kunden** och det handlar om ==kundens upplevelse==
 <!--SR:!2024-02-17,7,264-->

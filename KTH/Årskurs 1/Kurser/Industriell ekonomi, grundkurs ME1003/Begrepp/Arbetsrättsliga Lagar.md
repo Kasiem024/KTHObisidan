@@ -47,4 +47,4 @@ Medbestämmandelagen (MBL) (Definition):: En lag som reglerar rätten för arbet
 <!--SR:!2024-02-11,1,210-->
 
 Diskrimineringslagen (Definition):: En lag vars syfte är att främja lika rättigheter och möjligheter för alla
-<!--SR:!2024-02-24,8,250-->
+<!--SR:!2024-02-24,8,250!2024-03-09,3,266-->

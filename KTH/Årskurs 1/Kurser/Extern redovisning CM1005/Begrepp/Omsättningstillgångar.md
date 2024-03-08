@@ -34,4 +34,4 @@ Omsättningstillgångar Exempel (4)
 - ==Kortfristiga fordringar:== Kundfordring, Upplupen intäkt.
 - ==Osäkra fordringar==: Kundfordringar och Upplupna intäkter där det råder osäkerhet om kunden har förmåga att betala eller inte.
 - ==Kortfristiga placeringar==: Låst pengar i banken.
-<!--SR:!2024-03-08,4,210!2024-03-12,9,268-->
+<!--SR:!2024-03-20,12,230!2024-03-12,9,268-->

@@ -61,7 +61,7 @@ Anläggningstillgångar Exempel (3)
 - ==Immateriella==: Patent, varumärken, kostnader för forskning och hyresrätter.
 - ==Materiella==: Maskiner, inventarier, byggnader och mark.
 - ==Finansiella==: Värdepapper, aktier.
-<!--SR:!2024-03-07,2,230!2024-03-20,15,290-->
+<!--SR:!2024-03-13,6,250!2024-03-20,15,290-->
 
 Avskrivning av Anläggningstillgångar (Definition):: När man fördelar tillgångens kostnad över dess [[Ekonomisk Livslängd]]
 <!--SR:!2024-03-16,11,270!2024-03-21,16,290-->
@@ -72,4 +72,4 @@ Sätt att kategorisera Anläggningstillgångar (4)
 - ==Goodwill==: Skillnaden mellan det marknadspris ett företag måste betala vid anskaffandet av exempelvis ett dotterbolag och det värde som det köpta bolaget har enligt bokföringen.
 - ==Fastigheter==: Vid avskrivning är det endast byggnaderna som skrivs av, tomtmarkens värde får inte skrivas av årsvis.
 - ==Markanläggningar==: Kan vara parkeringsplatser och trädgårdsanläggningar, får skrivas av med 5% per år.
-<!--SR:!2024-03-06,3,255!2024-03-06,3,255-->
+<!--SR:!2024-03-15,9,275!2024-03-15,9,275-->

@@ -35,4 +35,4 @@ Exempel på Civillagstifningen (3)
 - [[Bokföringslagen]] (BFL)
 - Aktiebolagslagen (AL)
 - Lagen om ekonomiska föreningar (EL)
-<!--SR:!2024-03-06,3,255!2024-03-07,3,255-->
+<!--SR:!2024-03-16,10,275!2024-03-17,10,275-->

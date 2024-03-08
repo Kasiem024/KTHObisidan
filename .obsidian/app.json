@@ -125,7 +125,9 @@
     "Civillagstifningen",
     "aktivsidan",
     "passivsidan",
-    "DuPont-Schema"
+    "DuPont-Schema",
+    "Tidsmetoden",
+    "Balansräkningsmetoden"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",

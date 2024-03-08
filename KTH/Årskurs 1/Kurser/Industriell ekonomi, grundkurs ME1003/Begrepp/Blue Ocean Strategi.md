@@ -47,4 +47,4 @@ Handlar om att skapa marknader utan konkurrens. Ibland vet marknaden inte vad de
 ## Flashcards
 
 Blue Ocean Strategi (Definition):: Handlar om att skapa marknader utan konkurrens. Ibland vet marknaden inte vad den vill och vi kan bli den som hittar det behovet åt marknaden
-<!--SR:!2024-02-15,9,270-->
+<!--SR:!2024-02-15,9,270!2024-03-10,4,272-->
