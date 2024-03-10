@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dfd932d1c593d7a4",
+        "id": "373de5c2eb26bd59",
         "type": "tabs",
         "children": [
           {
-            "id": "e433da17991a2669",
+            "id": "583bd62a6ed17207",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -117,7 +117,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e433da17991a2669",
+  "active": "583bd62a6ed17207",
   "lastOpenFiles": [
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Affärsidé.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Soliditet.md"

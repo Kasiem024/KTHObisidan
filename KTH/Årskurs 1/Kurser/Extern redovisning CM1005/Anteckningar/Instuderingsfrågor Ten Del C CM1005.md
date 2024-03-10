@@ -9,6 +9,9 @@ Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 Tags: #year2024 #KTH #ekonomi #CM1005 #lektion #CM1005TenDelC
 
 ---
+[[Ten Del C Exempel CM1005.pdf]]
+
+---
 
 - Lagar för företags redovisning, hållbarhetsredovisning, rapportering och beskattning.
 	- [[Årsredovisningslagen]]
@@ -37,6 +40,16 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #lektion #CM1005TenDelC
 	- Innovation
 	- [[Michael Porters Femkraftsmodell|Konkurrenskraft]], [[Ansoff Tillväxtmatris|Konkurrenskraft]]
 - Andra begrepp du relaterar till entreprenörskap som du anser är relevanta.
+
+### Svar
+
+Det finns många lagar i Sverige som reglerar företag, speciellt när det kommer till deras [[Affärsredovisning]]. Inom ==civillagstiftningen== finns det 3 stora lagar som reglerar företagens redovisning:
+
+- [[Bokföringslagen]] (BFL)
+- Aktiebolagslagen (AL)
+- Lagen om ekonomiska föreningar (EL)
+
+Dessa 3 lagar är kopplade till de [[Civilrättsliga Värderingsreglerna]]. Det civilrättsliga värderingsreglerna är ==maximivärderingsregler==, alltså bestämmer de vad det högsta värdet ett företag kan värdera sina [[Tillgångar]].
 
 ## Flashcards
 

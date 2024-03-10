@@ -11,51 +11,19 @@
             "id": "77f00159c5bce038",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md",
-                "mode": "source",
-                "source": false
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Ten Del C Exempel CM1005.pdf"
               }
             }
           },
           {
-            "id": "064ab192cde625d6",
+            "id": "bce17fe88309a341",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Michael Porters Femkraftsmodell.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "d17de46483373adc",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "7060b861916070e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ad11ee86302726b0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Matchningsprincipen.md",
                 "mode": "source",
                 "source": false
               }
@@ -91,7 +59,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Konkurrenskraft",
+                "query": "Aktiebolagslagen",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -133,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md"
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Matchningsprincipen.md"
               }
             }
           },
@@ -143,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Matchningsprincipen.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md",
+                "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Matchningsprincipen.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,90 +170,53 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "floating": {
-    "id": "0d16987ab288dc50",
-    "type": "floating",
-    "children": [
-      {
-        "id": "bfb353c2f4ba083d",
-        "type": "window",
-        "children": [
-          {
-            "id": "161a419f1d71530f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "b58c71c0cfe8a0d7",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 3304,
-        "y": -27,
-        "width": 1024,
-        "height": 759,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "b58c71c0cfe8a0d7",
+  "active": "bce17fe88309a341",
   "lastOpenFiles": [
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningsprinciper.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Principen om Individuell Värdering.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bruttoredovisningsprincipen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Internredovisningen.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Civilrättsliga Värderingsreglerna.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Affärsredovisning.md",
+    "KTH/Generella Anteckningar KTH.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Ten Del C Exempel CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Ten Del C Exempel Journal CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Soliditet.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 10-12 KS3 ME1003.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-23 Bokslutstablå Exempel CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/01-22 Journal Lektion CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS2 CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Kap 6 CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Kap 7 CM1005.pdf",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Skuld.md",
+    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföringens Analysnivåer.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS3 CM1005.md",
+    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor KS4 CM1005.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Ansoff Tillväxtmatris.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Michael Porters Femkraftsmodell.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Resurstransformation.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföring.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadsföringens Analysnivåer.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Varumärke.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Marknadssegmentering.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdefångsten.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/4V.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeskapandet.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Värdeerbjudandet.md",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Affärsmodellen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Revisionsberättelse.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningens Kvalitativa Egenskaper.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/God Redovisningssed och Praxis.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Redovisningsprinciper.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Principen om Individuell Värdering.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Bruttoredovisningsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Kontinuitetsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Periodiseringsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Jämförbarhetsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Matchningsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Försiktighetsprincipen.md",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp/Civilrättsliga Värderingsreglerna.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 10-12 ME1003.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/03-05 Journal Lektion Ten Del C Exempel CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Räkneövningar Frågor Kap 10-12 ME1003.pdf.crdownload",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/KS4 Exempel CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Kassaflödesanalys enligt FAR ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Företags Kapitalstruktur ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/DuPont-Schema ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/DuPont-Schema ME1003.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Kap 6 CM1005.pdf",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/PDFs/Litteraturlista/Den nya affärsredovisningen Övningar Kap 7 CM1005.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Bilagor/02-16 Lektion Excalidraw CM1005.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Företags Kapitalstruktur ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Tillverkande Företags Kapitalbindning ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Tillverkande Företags Kapitalbindning.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Anteckningar/Pasted image 20240302194536.png",
-    "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Begrepp",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Begrepp",
-    "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/PDFs/Schema ME1003.pdf",
     "KTH/Årskurs 1/Kurser/Extern redovisning CM1005/Anteckningar/Lektioner/Tillgångars Värde CM1005.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]

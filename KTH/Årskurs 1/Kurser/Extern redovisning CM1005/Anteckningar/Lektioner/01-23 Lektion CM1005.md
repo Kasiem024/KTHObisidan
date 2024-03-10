@@ -64,4 +64,4 @@ När man gör balansräkning på bokslutstablå börja mitt i med skulder och eg
 
 Sidor 43-51, 58-73
 
-[[01-23 Bokslutstablå Exempel 1 CM1005.pdf]]
+[[01-23 Bokslutstablå Exempel CM1005.pdf]]

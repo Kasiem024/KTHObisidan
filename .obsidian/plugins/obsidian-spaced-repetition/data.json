@@ -4,6 +4,7 @@
     "flashcardGoodText": "Medium",
     "flashcardHardText": "Hard",
     "flashcardTags": [
+      "#CM1005TenDelC",
       "#ME1003KS3",
       "#CM1005KS4",
       "#ME1003KS2",
@@ -30,6 +31,7 @@
     "editLaterTag": "#edit-later",
     "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
+      "CM1005TenDelC",
       "#ME1003KS3",
       "#CM1005KS4",
       "#ME1003KS2",
@@ -52,7 +54,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2024-03-08",
+  "buryDate": "2024-03-10",
   "buryList": [],
   "historyDeck": null
 }

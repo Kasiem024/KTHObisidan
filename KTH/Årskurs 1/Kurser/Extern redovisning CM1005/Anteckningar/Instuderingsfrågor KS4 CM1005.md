@@ -9,7 +9,9 @@ Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 Tags: #year2024 #KTH #ekonomi #CM1005 #övning #CM1005KS4
 
 ---
+[[KS4 Exempel CM1005.pdf]]
 
+---
 ## Kapitel 6
 
 [[Sociala Avgifter|Lagstadgade arbetsgivaravgifter]]

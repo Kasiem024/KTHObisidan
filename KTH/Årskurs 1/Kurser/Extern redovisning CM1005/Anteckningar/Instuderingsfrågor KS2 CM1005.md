@@ -8,6 +8,9 @@ Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 Tags: #year2024 #KTH #ekonomi #CM1005 #övning
 
 ---
+[[KS2 Exempel CM1005.pdf]]
+
+---
 Skillnaden mellan [[Inkomst]] och [[Intäkt]];; Inkomster är det som löpande tas emot under året. När inkomsten hänförs till rätt redovisningsperiod, blir det en intäkt. En [[Intäkt]] är alltså en periodiserad [[Inkomst]]
 <!--SR:!2024-04-02,38,250-->
 

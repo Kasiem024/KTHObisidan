@@ -9,7 +9,9 @@ Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 Tags: #year2024 #KTH #ekonomi #CM1005 #övning #CM1005KS3
 
 ---
+[[KS3 Exempel CM1005.pdf]]
 
+---
 1. [[Varutransaktion]]
 2. [[Internredovisningen]]
 3. [[Offert]]
