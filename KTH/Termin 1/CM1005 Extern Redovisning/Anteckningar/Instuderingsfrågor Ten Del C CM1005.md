@@ -41,16 +41,6 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #lektion #CM1005TenDelC
 	- [[Michael Porters Femkraftsmodell|Konkurrenskraft]], [[Ansoff Tillväxtmatris|Konkurrenskraft]]
 - Andra begrepp du relaterar till entreprenörskap som du anser är relevanta.
 
-### Svar
-
-Det finns många lagar i Sverige som reglerar företag, speciellt när det kommer till deras [[Affärsredovisning]]. Inom ==civillagstiftningen== finns det 3 stora lagar som reglerar företagens redovisning:
-
-- [[Bokföringslagen]] (BFL)
-- Aktiebolagslagen (AL)
-- Lagen om ekonomiska föreningar (EL)
-
-Dessa 3 lagar är kopplade till de [[Civilrättsliga Värderingsreglerna]]. Det civilrättsliga värderingsreglerna är ==maximivärderingsregler==, alltså bestämmer de vad det högsta värdet ett företag kan värdera sina [[Tillgångar]].
-
 ## Flashcards
 
 Årsredovisningslagen (Definition):: En lag som bestämmer hur företag ska redogöra sin [[Årsredovisning]], [[Koncernredovisning]] och delårsrapport. Den är baserad på direktiv från EU
@@ -64,6 +54,7 @@ Vem ska följa Årsredovisningslagen (5)
 - Företag som uppfyller vissa speciella villkor gällande antalet anställda, balansomslutning och nettoomsättning.
 
 Bokföringslagen (Definition):: En lag som reglerar hur bokföring för en verksamhet ska upprättas och vilka som är bokföringsskyldiga
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Bokföringsskyldighet (3)
 ??
@@ -88,8 +79,10 @@ Kriterier för att ett företag måste skriva en hållbarhetsrapport (3)
 - Mer än 250 anställda.
 - Mer än 175 mnkr balansomslutning.
 - Mer än 350 mnkr nettoomsättning.
+<!--SR:!2000-01-01,1,250!2024-03-14,3,258-->
 
 Förvaltningsberättelse (Definition):: En obligatorisk del av [[Årsredovisning]] som beskriver de viktigaste händelserna för företaget under året, plus andra lagstadgade uppgifter
+<!--SR:!2024-03-15,4,278!2000-01-01,1,250-->
 
 Uppgifter som ska inkluderas i förvaltningsberättelsen (5)
 ??
@@ -100,6 +93,7 @@ Uppgifter som ska inkluderas i förvaltningsberättelsen (5)
 - Bolagets verksamhet inom forskning och utveckling.
 
 Koncernredovisning (Definition):: En särskild [[Årsredovisning]] som ett moderföretag upprättar utöver sin vanliga årsredovisning där moderföretaget och alla dess dotterföretag ses som en ekonomisk enhet. Innehållet liknar årsredovisningen och vissa moderföretag har undantag
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Syftet med Koncernredovisning;; Syftet med Koncernredovisningen är att ge intressenterna en rättvisande och sammanfattande bild av hela koncernen
 
@@ -109,8 +103,10 @@ Koncernredovisningens innehåll (4)
 - Koncernresultaträkning
 - [[Förvaltningsberättelse]]
 - Finansieringsanalys (för stora koncerner)
+<!--SR:!2024-03-15,4,278-->
 
 Skatterättsliga Värderingsreglerna (Definition):: Minimivärderingsregler, de fastställer de lägsta belopp vartill tillgångarna får tas upp när det gäller att fastställa den skattemässiga inkomsten, syftet är att företag inte ska betala för lite skatt genom att värdera sin tillgångar för lågt och på det sättet öka sina kostnader
+<!--SR:!2024-03-14,3,258!2000-01-01,1,250-->
 
 Civilrättsliga Värderingsreglerna (Definition):: Fastställer de högsta belopp vartill [[Tillgångar]] får tas upp i [[Balansräkning]], syftet är att skydda intressenter och ge en korrekt bild av företagets ekonomi
 
@@ -133,26 +129,33 @@ Olika Redovisningsprinciper (7)
 Försiktighetsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som säger att man ska värdera företags tillgångar lågt och skulderna högt
 
 Matchningsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som används för att säkerställa att intäkter och kostnader är samma under en viss period
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Jämförbarhetsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som säger att ett företag ska tillämpa samma redovisningsprincip från år till år. Inom vissa speciella sammanhang får man byta redovisningsprincip
+<!--SR:!2024-03-15,4,278!2000-01-01,1,250-->
 
 Jämförbarhetsprincipen (Extra);; I vissa fall kan ==undantag== ifrån Jämförbarhetsprincipen göras, exempelvis om en ==lagändring== kräver det, eller då ett företag byter ==koncerntillhörighet==. ==Syftet== med Jämförbarhetsprincipen är att jämförelsen från år till år ska ==underlättas== för de intressenter som vill analysera bolaget
+<!--SR:!2024-03-12,1,238-->
 
 Periodiseringsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som innebär att ett företags intäkter och kostnader ska hänföras till rätt period, enligt den ska affärshändelser bokföras samtidigt som de inträffar
 
 Kontinuitetsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som innebär att den utgående balansomslutningen för ett [[Räkenskapsår]] ska vara lika med den ingående balansomslutningen följande räkenskapsår
 
 Bruttoredovisningsprincipen (Definition):: En av flera [[Redovisningsprinciper]] som innebär att man inte får kvitta tillgångar mot skulder i en [[Balansräkning]] och kostnader mot intäkter i en [[Resultaträkning]]
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Principen om individuell värdering (Definition):: En av flera [[Redovisningsprinciper]] som innebär att värdet av alla sina tillgångar och värdet av alla skulder ska inte summeras eller kvittas mot varann men ==värderas separat==. Dock finns det undantag
 
 God Redovisningssed och Praxis (Definition):: När man följer redovisningslagar och använder allmänt accepterade tillvägagångssätt för sin redovisning
+<!--SR:!2024-03-15,4,278!2000-01-01,1,250-->
 
 Bokföringsnämnden (BFN):: En statlig myndighet som har till uppgift att utveckla god redovisningssed, ger ut regler och informationsmaterial om [[Bokföringslagen]] och [[Årsredovisningslagen]]
 
 Finansinspektionen:: En statlig myndighet som övervakar företagen på finansmarknaden. Deras uppdrag är att skapa ett stabilt finansiellt system som bidrar till en hållbar utveckling och ett gott konsumentskydd. Utvecklar också regler för finansiella företag och kontrollerar att reglerna följs
+<!--SR:!2000-01-01,1,250!2024-03-14,3,258-->
 
 Föreningen för Auktoriserade Revisorer (FAR):: En branschorganisation inom redovisning, revision och rådgivning som bland annat utvecklar tydliga spelregler, rätt kompetens och tillförlitlig information för näringsliv och samhälle. Också ett privat utbildningsföretag inom ekonomiområdet
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Redovisningens Kvalitativa Egenskaper (5)
 ??
@@ -162,6 +165,7 @@ En finansiell rapport ska kännetecknas av vissa egenskaper som gör den använd
 - Relevant
 - Jämförbar
 - Väsentlig
+<!--SR:!2000-01-01,1,250!2024-03-14,3,258-->
 
 Redovisningens Kvalitativa Egenskaper, Begriplig (Definition):: Informationen i en finansiell rapport ska redovisas på ett sådant sätt att någon med rimlig kunskap om ekonomi och redovisning ska förstå den
 
@@ -176,6 +180,7 @@ Redovisningens Kvalitativa Egenskaper, Väsentlig (Definition):: Informationen i
 Revisionsberättelse (Definition):: När en revisor redogör sin granskning av ett företags ledningen och om [[Årsredovisning]] är upprättad enligt [[Årsredovisningslagen]]
 
 Revisor (Definition):: Någon vars jobb är att granska och verifiera företags redovisning
+<!--SR:!2024-03-15,4,278!2024-03-15,4,278-->
 
 Revisionsberättelsens innehåll (4)
 ??
@@ -184,6 +189,7 @@ Revisionsberättelsens innehåll (4)
 - Om revisorn anser att årsstämman ska besluta förslaget till hur årets resultat ska disponeras.
 - Om revisorn anser att årsstämman ska besluta över styrelsens ansvarsfrihet.
 ---
+<!--SR:!2024-03-15,4,278!2000-01-01,1,250-->
 
 Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera ![[Affärsmodellen ME1003.png]]
 
@@ -196,6 +202,7 @@ Delarna av en affärsmodell (3)
 Värdeerbjudandet (Definition):: Det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det inte bara de faktiska varorna och tjänster som ett företag säljer men också ==hela upplevelsen==
 
 Värdeskapandet (Definition):: Handlar om hur en råvara transformeras till något kunden vill köpa och vad värdet av den transformationen är, ==tillverkningen== och ==leveransen== av en produkt
+<!--SR:!2024-03-15,4,278!2024-03-15,4,278-->
 
 Värdeskapandet hos ett renodlat tillverkningsföretag;; Att använda sina ==anställdas kunskap== om användningen av ==teknisk utrustning== för ==transformationen== av en råvara till en vara kunden vill köpa
 
@@ -206,10 +213,12 @@ Varudominerad logik (Definition):: När huvuddelen av Värdeskapandet sker **uta
 Back-office dominerad logik (Definition):: När huvuddelen av Värdeskapandet sker **utan kunden men kunden behövs**, vanligtvis i ==början== och ==slutet== av processen
 
 Front-office dominerad logik (Definition):: När huvuddelen av Värdeskapandet sker i **direkt interaktion med kunden** och det handlar om ==kundens upplevelse==
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Resurstransformation (Definition):: Hur man omvandlar en råvara till något kunden vill köpa
 
 Cirkulär Ekonomi (Definition):: Ett perspektiv som syftar till att ==öka samhällets ekologiska hållbarhet==. Praktiskt betyder det att man ska ==utveckla produkter== som går att ==återanvändas== eller ==återvinnas==
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 4V (Definition) (4)
 ||
@@ -220,6 +229,7 @@ Fyra förhållanden som påverkar hur resurstransformationen utformas:
 - Visibilitet/==Grad av kundinvolvering== (visibilitet): Hur involverad är kunden i vårat värdeskapande/resurstransformation? Om kunden inte är så involverad i produktionen sker den oberoende av kundengagemang vilket ökar möjligheterna till [[4S]]. Exempelvis att köpa mobil är enkelt.
 
 Värdefångsten (Definition):: Ett begrepp för att beskriva ett företags betalningsmodell eller intäktsmodell, hur det är tänkt att man ska få betalt och tjäna pengar på det värdet man erbjuder kunden
+<!--SR:!2024-03-15,4,278!2000-01-01,1,250-->
 
 Olika intäktsmodeller (Värdefångst) (8)
 ??
@@ -233,16 +243,19 @@ Olika intäktsmodeller (Värdefångst) (8)
 - ==Affiliate Marketing==: (Google, Facebook).
 
 Marknadsföring (Definition):: Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor och tjänster
+<!--SR:!2024-03-15,4,278!2000-01-01,1,250-->
 
 Nyckelkoncept inom Marknadsföring (3)
 ??
 - [[Marknadssegmentering|Segmentering]]: Rätt målgrupp.
 - Positionering: Rätt del i marknaden.
 - Diversifiering: Produktportfölj.
+<!--SR:!2000-01-01,1,250!2024-03-14,3,258-->
 
 Relationsmarknadsföring (Definition):: När man bygger långsiktiga relationer med sina kunder, vanligtvis mellan två företag, B2B och [[Företagsmarknad]]
 
 Marknadssegmentering (Definition):: Ett sätt för att enklare kunna rikta sig mot specifika målgrupper
+<!--SR:!2024-03-15,4,278!2000-01-01,1,250-->
 
 Sätt att segmentera marknaden (4)
 ??
@@ -252,6 +265,7 @@ Sätt att segmentera marknaden (4)
 - Geografi (land)
 
 Varumärke (Definition):: Företagets löfte till sina kunder, kopplat till produkten men är inte produkten i sig, tar lång tid att bygga
+<!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Konkurrenskraft, Michael Porters Femkraftsmodell (Definition) (5)
 ||
@@ -271,6 +285,7 @@ Konkurrenskrafter (3)
 	- Innebär att man har lägre tillverkningskostnader än sina konkurrenter. I Ansoff matrisen betyder att man ska fokusera på ==Market Penetration==. I Porters matris betyder det att man ska fokusera på ==Generellt kostnadsledarskap==.
 - Konkurrenskraft genom ==kundnärhet==
 	- Innebär att man kan skräddarsy efter kundens önskemål. I Ansoff matrisen betyder att man ska fokusera på ==Diversification==. I Porters matris betyder det att man ska fokusera på ==Differentiering==.
+<!--SR:!2024-03-15,4,278!2024-03-12,1,238-->
 
 Konkurrenskraft, Ansoff tillväxtmatris (4)
 ??
