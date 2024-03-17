@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b5ae3d254bf49dd1",
+        "id": "806704f0c788237a",
         "type": "tabs",
         "children": [
           {
-            "id": "68c7c80cc9381f95",
+            "id": "2a878c652ce901c4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Aktiebolagslagen",
+                "query": "todo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 572.5
+    "width": 572.5,
+    "collapsed": true
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -149,19 +150,19 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "68c7c80cc9381f95",
+  "active": "85154ac5110aa970",
   "lastOpenFiles": [
-    "KTH/Termin 1/DD100N Programmeringsteknik, Webbkurs/Journal",
-    "KTH/Termin 1/DD100N Programmeringsteknik, Webbkurs/Ny mapp",
-    "KTH/Termin 1/DD100N Programmeringsteknik, Webbkurs/Excalidraw",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Excalidraw",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Ny mapp",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/Journal",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/Ny mapp",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/Excalidraw",
-    "KTH/Termin 1/SK180N Inledande Modern Fysik/Journal",
-    "KTH/Termin 1/SK180N Inledande Modern Fysik/Ny mapp",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Marknadsföringens Analysnivåer.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/PDFs/Litteraturlista/Den Nya Affärsredovisningen Övningar 2018 Edition 21.pdf",
+    "KTH/Termin 1/CM1005 Extern Redovisning/PDFs/Litteraturlista/Den Nya Affärsredovisningen Lösningar 2018 Edition 21.pdf",
+    "KTH/Termin 1/CM1005 Extern Redovisning/PDFs/Litteraturlista/Den Nya Affärsredovisningen 2018 Edition 21.pdf",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Principles of Marketing 2023 Global Edition 19.pdf",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Principles of Marketing 2020 European Edition 8 .pdf",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Principles of Marketing 2017 Scandinavian Edition 2 .pdf",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Marketing Management 2019 European Edition 4.pdf",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Kopia av Principles of Marketing 2017 Scandinavian Edition 2 .pdf",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Kopia av Principles of Marketing 2020 European Edition 8 .pdf",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Kopia av Principles of Marketing 2023 Global Edition 19.pdf",
     "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-20 KS3 Kalkyl CM1005.excalidraw.md",
     "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-16 Lektion CM1005.excalidraw.md",
     "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-19 Lektion CM1005.excalidraw.md",
