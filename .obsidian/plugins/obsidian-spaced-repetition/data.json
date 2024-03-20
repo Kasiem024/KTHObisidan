@@ -4,13 +4,8 @@
     "flashcardGoodText": "Medium",
     "flashcardHardText": "Hard",
     "flashcardTags": [
-      "#CM1005TenDelC",
-      "#ME1003KS3",
-      "#CM1005KS4",
-      "#ME1003KS2",
-      "#CM1005KS3",
-      "#CM1005",
-      "#ME1003"
+      "#HH1802KS1",
+      "#HH1802"
     ],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": false,
@@ -31,13 +26,8 @@
     "editLaterTag": "#edit-later",
     "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
-      "CM1005TenDelC",
-      "#ME1003KS3",
-      "#CM1005KS4",
-      "#ME1003KS2",
-      "#CM1005KS3",
-      "#CM1005",
-      "#ME1003"
+      "#HH1802KS1",
+      "#HH1802"
     ],
     "noteFoldersToIgnore": [
       "Obsidian Plugins"
@@ -54,7 +44,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2024-03-17",
+  "buryDate": "2024-03-20",
   "buryList": [],
   "historyDeck": null
 }

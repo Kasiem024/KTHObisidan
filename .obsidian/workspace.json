@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "806704f0c788237a",
+        "id": "ef1988f8feaa71e9",
         "type": "tabs",
         "children": [
           {
-            "id": "2a878c652ce901c4",
+            "id": "20b3a519313d4504",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-20 Lektion HH1802.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "todo",
+                "query": "tag:#HH1802/HH1802KS1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 572.5,
-    "collapsed": true
+    "width": 572.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -84,7 +87,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-20 Lektion HH1802.md"
+              }
             }
           },
           {
@@ -93,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-20 Lektion HH1802.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-20 Lektion HH1802.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,49 +152,49 @@
       "graph:Open graph view": false,
       "omnisearch:Omnisearch": false,
       "table-editor-obsidian:Advanced Tables Toolbar": true,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "templater-obsidian:Templater": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "85154ac5110aa970",
+  "active": "20b3a519313d4504",
   "lastOpenFiles": [
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Marknadsföringens Analysnivåer.md",
+    "index.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Anteckningar/Instuderingsfrågor Ten Del C CM1005.md",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/Lektioner/03-18 Lektion HU1801.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Bolagsordning.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-20 Lektion HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-19 Lektion HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS1 HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Risk.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-19 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-19 Journal Lektion HH1802.pdf.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Riktad Emission.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Teckningsrättsbevis.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Finansiell Risk.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/PE-Tal.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nuvärdemetoden.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Diskontering.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Internräntemetoden.md",
+    "P",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Rörelsekapital.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Kapital.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Fondemission.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Resultaträkning.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Teckningskurs.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Aktiebolag.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Bundet Eget Kapital.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nyemission.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Fond för Utvecklingsutgifter.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Eget Kapital.md",
+    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Marketing Management 2019 European Edition 4.pdf",
     "KTH/Termin 1/CM1005 Extern Redovisning/PDFs/Litteraturlista/Den Nya Affärsredovisningen Övningar 2018 Edition 21.pdf",
     "KTH/Termin 1/CM1005 Extern Redovisning/PDFs/Litteraturlista/Den Nya Affärsredovisningen Lösningar 2018 Edition 21.pdf",
     "KTH/Termin 1/CM1005 Extern Redovisning/PDFs/Litteraturlista/Den Nya Affärsredovisningen 2018 Edition 21.pdf",
     "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Principles of Marketing 2023 Global Edition 19.pdf",
     "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Principles of Marketing 2020 European Edition 8 .pdf",
     "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Principles of Marketing 2017 Scandinavian Edition 2 .pdf",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Marketing Management 2019 European Edition 4.pdf",
     "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Kopia av Principles of Marketing 2017 Scandinavian Edition 2 .pdf",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Kopia av Principles of Marketing 2020 European Edition 8 .pdf",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Kopia av Principles of Marketing 2023 Global Edition 19.pdf",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-20 KS3 Kalkyl CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-16 Lektion CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-19 Lektion CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-14 Lektion CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-13 Lektion CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-07 Moms Pelles Golfshop CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/Uppgifter Kap 3.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/KS2 Kalkyl 1-2 Övning.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-05 KS2 Kalkyl 2 Exempel CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/02-02 KS2 Kalkyl 1 Exempel CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/01-31 Bokexempel CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/01-29 Bokexempel CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/Uppgift 2.4 Ganymede CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/Uppgift 2.1 Övningsbok CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/Uppgift 2.3 Beatrice CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/01-22 KS1 Kalkylövning CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Excalidraw/01-16 Räkningar CM1005.excalidraw.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Lektioner/02-13 Lektion CM1005.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/02-16 Lektion ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/02-01 Lektion ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/02-15 Lektion ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-30 Lektion ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-25 Lektion 2 ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-25 Lektion 1 ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-23 Lektion ME1003.md",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Kassaflödesanalys enligt FAR ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/DuPont-Schema ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Företags Kapitalstruktur ME1003.png",

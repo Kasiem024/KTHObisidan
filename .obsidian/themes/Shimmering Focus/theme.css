@@ -1,7 +1,7 @@
 /* ───────────────────────────────────────────────────
 SHIMMERING FOCUS
 by @pseudometa
-Version 3.522
+Version 3.524
 MIT License
 https://github.com/chrisgrieser/shimmering-focus
 ──────────────────────────────────────────────────── */
@@ -3870,7 +3870,7 @@ body:not(.show-file-explorer-navigation) .workspace-leaf-content[data-type="file
 }
 
 /* bold top-level folders */
-.nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title {
+.nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
 	font-weight: 600;
 }
 
@@ -4615,61 +4615,14 @@ body:not(.no-pandoc-citation-emphasis) .pandoc-citation.pandoc-citation.is-unres
 }
 
 /* REFERENCE LIST */
-.pwc-no-content {
-	padding: var(--size-4-2) var(--size-4-3);
-}
-
 .pwc-reference-list .csl-entry-wrapper.csl-entry-wrapper {
-	padding: 0 2px;
-	border: none;
-}
-
-.pwc-reference-list {
-	--bibliography-indent: 1.1em;
-}
-
-.pwc-reference-list.pwc-reference-list.pwc-reference-list.pwc-reference-list .pwc-reference-list__title.pwc-reference-list__title>div {
-	padding-left: 2px;
-	margin-bottom: 4px;
-	font-family: var(--font-heading-theme);
-	font-size: var(--h4-size);
-	letter-spacing: calc(var(--heading-letter-spacing) * 0.5);
-}
-
-body .pwc-reference-list .csl-entry.csl-entry.csl-entry {
-	padding-left: calc(var(--bibliography-indent) + 6px);
-	line-height: var(--line-height-tight);
-	text-indent: calc(var(--bibliography-indent) * -1);
-}
-
-.pwc-reference-list.collapsed-links.collapsed-links a::after {
-	background-color: var(--text-accent);
+	padding: var(--size-4-1);
+	border-width: 2px;
+	border-color: var(--basic-border-color)
 }
 
 .pwc-reference-list.collapsed-links.collapsed-links a:hover::after {
 	background-color: var(--icon-color-hover);
-}
-
-.pwc-reference-list:not(:hover) .pwc-copy-list {
-	opacity: 0;
-}
-
-.pwc-copy-list svg {
-	display: none;
-}
-
-.pwc-copy-list::before {
-	padding: 3px 3px 3px 5px;
-	font-family: var(--icon-font);
-	font-size: 0.9rem;
-	content: "content_copy";
-	background-color: var(--bg3);
-	border: var(--thin-border);
-	border-radius: var(--radius-s);
-}
-
-.pwc-copy-list:hover::before {
-	color: var(--icon-color-hover);
 }
 
 /* tooltips */
@@ -5853,9 +5806,9 @@ settings:
     description: Enable this to drag and drop items to the vault root.
     default: false
   - id: show-file-explorer-navigation
-    title: Re-enable Navigation Buttons
+    title: Re-enable buttons
     type: class-toggle
-    description: "The navigation buttons are the buttons for new file, new folder, and sorting. You can do the former two without the buttons via the context menu."
+    description: "The buttons for new file, new folder, and sorting. You can do the former two without the buttons by right-clicking a folder."
     default: false
   - # <<< Status Bar (+)
     id: show-hide-statusbar-elements
