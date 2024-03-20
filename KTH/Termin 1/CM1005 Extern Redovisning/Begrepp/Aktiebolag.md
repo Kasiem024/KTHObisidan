@@ -73,7 +73,7 @@ Frågor som tas upp i Bolagsstämman:
 ## Flashcards
 
 Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansvariga för företagets skulder. Ägarna riskerar bara att förlora deras egna satsade kapital. Minst 1 ägare men kan också vara 100,000-tals ägare
-<!--SR:!2024-04-11,47,272!2024-03-16,14,302-->
+<!--SR:!2024-04-11,47,272!2024-04-19,30,322-->
 
 Aktiens Kvotvärde (Definition) (Formel)
 ||
@@ -89,17 +89,18 @@ När man delar upp [[Eget Kapital]] på antalet aktier som finns, detta värde �
 $$
 Aktiens \, Balansvärde = \frac{Eget \, Kapital}{Antal \, Aktier}
 $$
-<!--SR:!2024-03-11,6,265-->
+<!--SR:!2024-03-23,3,245-->
 
 Antal aktier ett företag har (Formel)
-??
+||
 $$Antal \, aktier = \frac{Aktiekapital}{Aktiens \, kvotvärde}$$
-<!--SR:!2024-04-05,41,272!2024-03-02,4,286-->
+<!--SR:!2024-04-05,41,272!2024-03-22,2,266-->
 
 Publika Aktiebolag (Definition):: Typ av Aktiebolag som har inga restriktioner när det kommer till handel med företagets aktier, alltså får aktierna köpas och säljas på aktiebörsen. Aktiekapitalet måste minst vara 500,000 kr
+<!--SR:!2024-03-24,4,287!2024-03-23,3,267-->
 
-Börskurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
-<!--SR:!2024-03-21,34,270!2024-03-17,15,302-->
+Aktiekurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
+<!--SR:!2024-03-21,34,270!2024-04-19,30,322-->
 
 Vad som påverkar en akties börskurs (6)
 ==DISABLEDFLASHCARD==
@@ -112,12 +113,14 @@ Vad som påverkar en akties börskurs (6)
 <!--SR:!2024-02-10,1,172!2024-02-12,9,270-->
 
 Skillnaden mellan en A-aktie och en B-aktie;; Alla aktier i ett [[Aktiebolag]] har samma kvotvärde dock finns det olika typer av aktier som har olika röstvärde. Aktier med olika röstvärde brukar benämnas A-aktier och B-aktier
-<!--SR:!2024-03-16,8,264-->
+<!--SR:!2024-03-24,4,244-->
 
-Bolagsstämma (Definition):: Ska hållas av ett Aktiebolag minst 1 gång om året. Syftet är att ge ägarna en möjlighet att granska ledningens förvaltning av företaget. Ägarna fattar beslut genom omröstning där normalt varje aktie ger 1 röst, men det kan förekomma aktier med olika röstvärde A-aktier, B-aktier osv. Skillnaden mellan två aktiers röstvärde kan max vara 10 gånger.
+Bolagsstämma (Definition):: Ska hållas av ett Aktiebolag minst 1 gång om året. Syftet är att ge ägarna en möjlighet att granska ledningens förvaltning av företaget. Ägarna fattar beslut genom omröstning där normalt varje aktie ger 1 röst, men det kan förekomma aktier med olika röstvärde A-aktier, B-aktier osv. Skillnaden mellan två aktiers röstvärde kan max vara 10 gånger
+<!--SR:!2024-03-23,3,267!2024-03-24,4,287-->
 
 Bolagsstämma Innehåll (3)
 ??
 - Fastställande av räkenskaperna.
 - Ansvarsfrihet för styrelse och VD.
 - Disposition av företagets vinst eller förlust.
+<!--SR:!2024-03-23,3,267!2024-03-23,3,267-->

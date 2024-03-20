@@ -28,6 +28,7 @@ Bolagsordningens innehåll:
 ## Flashcards
 
 Bolagsordning (Definition):: Ett dokument som beskriver de grundläggande reglerna för ett visst [[Aktiebolag]], obligatoriskt för alla och måste godkännas av Bolagsverket för att få bolaget registrerat
+<!--SR:!2024-03-23,3,250!2024-03-24,4,270-->
 
 Bolagsordningens Innehåll (4)
 ??

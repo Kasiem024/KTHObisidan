@@ -19,3 +19,4 @@ Rörelsekapital är värdet av alla [[Omsättningstillgångar]] minus värdet av
 ## Flashcards
 
 Rörelsekapital (Definition):: Värdet av alla [[Omsättningstillgångar]] minus värdet av kortfristig [[Skuld]], alltså beror storleken på den löpande verksamheten
+<!--SR:!2000-01-01,1,250!2024-03-24,4,270-->

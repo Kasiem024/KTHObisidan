@@ -30,6 +30,7 @@ Stiftelseurkund ska innehålla:
 ## Flashcards
 
 Stiftelseurkund (Definition):: Ett dokument som visar att man har beslutat att starta ett Aktiebolag, måste vara undertecknad av alla stiftare och inte äldre än 6 månader
+<!--SR:!2024-03-21,1,230!2024-03-23,3,268-->
 
 Stiftelseurkund Innehåll (4)
 ??

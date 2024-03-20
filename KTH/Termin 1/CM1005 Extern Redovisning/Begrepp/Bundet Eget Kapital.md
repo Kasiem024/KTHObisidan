@@ -27,4 +27,4 @@ Kapital som måste användas inom företaget, inte för vinstutdelning.
 - Aktiekapital
 - Uppskrivningsfond
 - Reservfond
-<!--SR:!2024-04-06,30,270!2024-03-14,9,270-->
+<!--SR:!2024-04-06,30,270!2024-04-19,30,290-->

@@ -24,3 +24,4 @@ Händer vanligen när ett företag köper ett annat. Det köpande företaget emi
 ## Flashcards
 
 Riktad Emission (Definition):: När aktieägare säljer emitterade aktier till nya ägare, exempelvis ett köpande företag emitterar aktier i det egna företaget som erläggs i utbyte mot aktierna i det köpta företaget
+<!--SR:!2000-01-01,1,250!2024-03-23,3,250-->

@@ -30,3 +30,4 @@ Ett [[Nyckeltal]] som används vid aktievärdering och indikerar om börskursen 
 $$
 P/E = \frac{Aktiekurs}{Vinst}
 $$
+<!--SR:!2024-03-23,3,250!2024-03-24,4,270-->
