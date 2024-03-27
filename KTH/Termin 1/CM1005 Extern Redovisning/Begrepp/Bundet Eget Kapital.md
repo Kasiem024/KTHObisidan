@@ -23,7 +23,7 @@ Bundet eget kapital för en ekonomisk förening består i första hand av ==medl
 
 Bundet Eget Kapital (Definition) (3)
 ??
-Kapital som måste användas inom företaget, inte för vinstutdelning.
+Kapital som måste användas inom företaget, inte för vinstutdelning, exempelvis:
 - Aktiekapital
 - Uppskrivningsfond
 - Reservfond

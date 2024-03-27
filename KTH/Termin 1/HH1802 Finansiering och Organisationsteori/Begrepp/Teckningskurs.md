@@ -21,4 +21,4 @@ Teckningskurs är priset av aktier vid [[Nyemission]]. Den borde vara mindre än
 ## Flashcards
 
 Teckningskurs (Definition):: Priset av de nya aktierna vid [[Nyemission]], mindre än aktiens marknadsvärde, leder till att aktiekursen sjunker
-<!--SR:!2024-03-24,4,270!2024-03-23,3,250-->
+<!--SR:!2024-04-06,13,290!2024-04-05,13,270-->

@@ -130,7 +130,9 @@
     "Balansräkningsmetoden",
     "Stiftelseurkund",
     "sjunkandet",
-    "Nuvärdesumma"
+    "Nuvärdesumma",
+    "Hävstångsformlen",
+    "Tillväxttakt"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",

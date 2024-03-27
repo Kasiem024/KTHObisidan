@@ -4,8 +4,10 @@
     "flashcardGoodText": "Medium",
     "flashcardHardText": "Hard",
     "flashcardTags": [
-      "#HH1802KS1",
-      "#HH1802"
+      "#HH1802",
+      "#HU1801",
+      "#CM1005",
+      "#ME1003"
     ],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": false,
@@ -26,7 +28,6 @@
     "editLaterTag": "#edit-later",
     "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
-      "#HH1802KS1",
       "#HH1802"
     ],
     "noteFoldersToIgnore": [
@@ -44,7 +45,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2024-03-20",
+  "buryDate": "2024-03-27",
   "buryList": [],
   "historyDeck": null
 }
