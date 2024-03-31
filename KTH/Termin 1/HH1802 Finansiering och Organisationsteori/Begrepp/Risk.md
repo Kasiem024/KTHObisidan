@@ -68,7 +68,7 @@ Affärsrisk (Definition) (3)
 - Verksamhetens innehåll och karaktär
 - Kostnadsstruktur
 - Kapitalbindning
-<!--SR:!2024-03-28,8,250!2024-03-30,7,250-->
+<!--SR:!2024-04-26,29,270!2024-03-30,7,250-->
 
 Finansiell Risk (Definition) (4)
 ??

@@ -17,7 +17,7 @@ Kapital är ett företags resurser. Det är alltså det som används i ett före
 Det finns olika typer av Kapital, 3 vanliga typer är:
 
 - ==Anläggningskapital==: Används för att investera i [[Anläggningstillgångar]].
-- ==Rörelsekapital==: Används för att finansiera den löpande verksamheten.
+- ==Rörelsekapital==: Används för att finansiera den löpande verksamheten. Omsättningstillgångar minus kortfristig [[Skuld]]
 - ==Säkerhetskapital==: Används för att skapa en buffert för att klara störningar och oförutsedda problem.
 
 ## Kopplat till

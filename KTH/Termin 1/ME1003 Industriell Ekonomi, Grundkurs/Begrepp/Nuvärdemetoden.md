@@ -154,11 +154,11 @@ Nuvärdekvot (Formel)
 $$
 { Nuvärdekvot=
 \frac
-{Netoonuvärd}{Grundinvestering}}
+{Nettonuvärde}{Grundinvestering}}
 $$
 $$
 { Nuvärdekvot=
 \frac
 {NNV}{G}}
 $$
-<!--SR:!2024-03-28,5,210-->
+<!--SR:!2024-04-14,17,230-->

@@ -37,4 +37,4 @@ Teckningsrättsbevis (Formel)
 $$
 Värdet \, av \, Teckningsrättsbevis = \frac{Marknadsvärde \, efter \, emission - Teckningskurs}{Antal \, teckningsrätter \, som \, krävs \, per \, nyemitterad \, aktie}
 $$
-<!--SR:!2024-03-28,3,230-->
+<!--SR:!2024-04-06,9,250-->

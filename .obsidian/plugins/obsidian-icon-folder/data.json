@@ -16,58 +16,58 @@
     "recentlyUsedIconsSize": 25,
     "rules": [
       {
-        "rule": ".excalidraw",
+        "rule": "Excalidraw",
         "icon": "LiSword",
-        "for": "files",
+        "for": "everything",
         "order": 0,
         "useFilePath": true
       },
       {
         "rule": "Journal",
         "icon": "FasPen",
-        "for": "files",
+        "for": "everything",
         "order": 1,
         "useFilePath": true
       },
       {
-        "rule": ".pdf",
+        "rule": "Bilagor",
+        "icon": "FasImage",
+        "for": "everything",
+        "order": 2,
+        "useFilePath": true
+      },
+      {
+        "rule": ".pdfs",
         "icon": "FasFilePdf",
         "for": "files",
-        "order": 3,
+        "order": 4,
         "useFilePath": true
       },
       {
         "rule": ".jpg",
         "icon": "FasImage",
         "for": "files",
-        "order": 3,
+        "order": 4,
         "useFilePath": true
       },
       {
         "rule": ".png",
         "icon": "FasImage",
         "for": "files",
-        "order": 5,
-        "useFilePath": true
-      },
-      {
-        "rule": "Litteraturlista/",
-        "icon": "FasBook",
-        "for": "everything",
         "order": 6,
         "useFilePath": true
       },
       {
-        "rule": "Lektioner/",
-        "icon": "SiGoogleclassroom",
-        "for": "files",
-        "order": 7,
+        "rule": "Lektioner",
+        "icon": "FasCalendar",
+        "for": "everything",
+        "order": 8,
         "useFilePath": true
       },
       {
-        "rule": "PDFs/",
+        "rule": "PDFs",
         "icon": "FasFilePdf",
-        "for": "files",
+        "for": "everything",
         "order": 9,
         "useFilePath": true
       },
@@ -79,10 +79,10 @@
         "useFilePath": true
       },
       {
-        "rule": "Anteckningar/",
+        "rule": "Anteckningar",
         "icon": "TiNotes",
-        "for": "files",
-        "order": 11,
+        "for": "everything",
+        "order": 12,
         "useFilePath": true
       }
     ],
@@ -97,7 +97,8 @@
     "iconInFrontmatterEnabled": false,
     "iconsBackgroundCheckEnabled": true,
     "iconsInNotesEnabled": true,
-    "iconIdentifier": ":"
+    "iconIdentifier": ":",
+    "iconsInLinksEnabled": true
   },
   "Obsidian Plugins": "SiObsidian",
   "KTH": "FasSchool"

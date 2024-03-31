@@ -54,7 +54,7 @@ När man delar upp verksamhetens kostnader beroende på dess funktion:
 - Tillverkning
 - Försäljning
 - Administration
-<!--SR:!2024-03-27,7,155!2024-04-23,30,272-->
+<!--SR:!2024-04-11,15,175!2024-04-23,30,272-->
 
 EBITDA (Definition):: (Earnings Before Interest, Taxes, Depreciations and Amortizations) Rörelseresultat före avskrivningar
 <!--SR:!2024-04-19,30,294!2024-04-20,30,314-->

@@ -28,7 +28,10 @@
     "editLaterTag": "#edit-later",
     "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
-      "#HH1802"
+      "#HH1802",
+      "#HU1801",
+      "#CM1005",
+      "#ME1003"
     ],
     "noteFoldersToIgnore": [
       "Obsidian Plugins"
@@ -45,7 +48,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2024-03-27",
+  "buryDate": "2024-03-31",
   "buryList": [],
   "historyDeck": null
 }

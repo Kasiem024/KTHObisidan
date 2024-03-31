@@ -132,7 +132,11 @@
     "sjunkandet",
     "Nuvärdesumma",
     "Hävstångsformlen",
-    "Tillväxttakt"
+    "Tillväxttakt",
+    "Diskonteringspapper",
+    "Betavärde",
+    "Leverageformlen",
+    "lösenkursen"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",

@@ -68,7 +68,7 @@ $$
 S/E = \frac{S + obeskattade \, reserver * skattesats}{JE}
 $$
 
-#### Hävstångsformlen
+#### [[Hävstångsformeln]]
 
 $R_{E} = R_{T} + (R_{T} - R_{S}) * \frac{S}{E}$
 

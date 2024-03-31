@@ -89,7 +89,7 @@ När man delar upp [[Eget Kapital]] på antalet aktier som finns, detta värde �
 $$
 Aktiens \, Balansvärde = \frac{Eget \, Kapital}{Antal \, Aktier}
 $$
-<!--SR:!2024-03-27,2,225-->
+<!--SR:!2024-04-01,5,225-->
 
 Antal aktier ett företag har (Formel)
 ||

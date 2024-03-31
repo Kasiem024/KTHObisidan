@@ -18,4 +18,4 @@ Systematisk risk, marknadsrisk: Risk för hela marknaden, konjunktur.
 
 Börsvärde/Marknadsvärde: Värdet av alla aktier i ett företag tillsammans.
 
-Beta: Relationen en aktie/fond har till hela aktiemarknadens utveckling. Om en aktie har exakt samma utveckling som marknaden är Beta=1. Ju högre volatiliteten är, större svängningar, ju högre Beta är. Beta kan vara mindre än 1, då svänger man med marknaden men man svänger inte så mycket.
+[[Betavärde]]: Relationen en aktie/fond har till hela aktiemarknadens utveckling. Om en aktie har exakt samma utveckling som marknaden är Beta=1. Ju högre volatiliteten är, större svängningar, ju högre Beta är. Beta kan vara mindre än 1, då svänger man med marknaden men man svänger inte så mycket.

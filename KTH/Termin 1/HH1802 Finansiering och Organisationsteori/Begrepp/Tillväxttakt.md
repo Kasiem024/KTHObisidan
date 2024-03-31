@@ -36,6 +36,7 @@ $$
 ## Flashcards
 
 Tillväxttakt (g) (Definition):: Ett företag som har pengar över efter utdelning kan använda de pengarna för nyinvesteringar
+<!--SR:!2024-03-31,4,270!2024-03-31,4,270-->
 
 Tillväxttakt (Formel) (2)
 ||
@@ -48,3 +49,4 @@ Ett företags Tillväxttakt påverkar aktiekursen:
 $$
 Aktiekurs = \frac{Utdelning}{r-g}
 $$
+<!--SR:!2024-03-30,3,250-->

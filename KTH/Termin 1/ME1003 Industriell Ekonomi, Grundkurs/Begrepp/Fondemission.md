@@ -23,7 +23,7 @@ Kan också ske genom att värdet av företagets [[Anläggningstillgångar]] skri
 ## Flashcards
 
 Fondemission (Definition):: En form av emission som inte tillför nytt kapital till företaget, alltså när [[Fritt Eget Kapital]] omvandlas till [[Bundet Eget Kapital]], ändrar bara strukturen av en [[Balansräkning]] men inte balansomslutningen, ==aktiekapital ökar==
-<!--SR:!2024-03-28,5,230!2024-03-28,8,250-->
+<!--SR:!2024-04-12,15,250!2024-04-16,19,250-->
 
 Sätt Fondemission kan ske (2)
 ??
