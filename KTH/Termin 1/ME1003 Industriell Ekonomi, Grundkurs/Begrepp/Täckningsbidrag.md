@@ -59,7 +59,7 @@ Täckningsbidrag, TB (Definition):: Skillnaden mellan [[Särintäkt]] och [[S
 <!--SR:!2024-02-26,3,231-->
 
 Totalt Täckningsbidrag, TTB (Definition):: Summan av flera produkters Täckningsbidrag
-<!--SR:!2024-03-05,15,290-->
+<!--SR:!2024-03-05,15,290!2024-04-10,3,269-->
 
 Täckningsbidrag och Totalt Täckningsbidrag (Formel)
 ||

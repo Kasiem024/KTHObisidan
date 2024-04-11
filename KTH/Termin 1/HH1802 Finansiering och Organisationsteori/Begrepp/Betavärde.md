@@ -27,3 +27,4 @@ Alltså, Beta visar relationen en aktie har till hela aktiemarknadens utveckling
 ## Flashcards
 
 Betavärde (Definition):: Visar relationen en aktie har till hela aktiemarknadens utveckling, om aktien har hög eller låg volatilitet
+<!--SR:!2024-04-20,14,290!2024-04-22,16,292-->

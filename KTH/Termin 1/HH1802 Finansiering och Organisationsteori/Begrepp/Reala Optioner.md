@@ -28,6 +28,7 @@ Exempel på Reala Optioner:
 ## Flashcards
 
 Reala Optioner (Definition):: Framtida handlingar som påverkar [[Lönsamhet]] av en [[Investering]]
+<!--SR:!2024-04-14,8,250!2024-04-21,15,290-->
 
 Exempel på Reala Optioner (4)
 ??
@@ -35,3 +36,4 @@ Exempel på Reala Optioner (4)
 - ==Uppskjuta investeringar==: När man väntar och investerar senare för att öka lönsamheten.
 - ==Krypa ur projekt==: När man reducerar förluster genom att avbryta projekt.
 - ==Alternativa teknologier==: När man väljer en teknologi som ger mer valmöjligheter.
+<!--SR:!2024-04-14,8,250!2024-04-18,12,270-->

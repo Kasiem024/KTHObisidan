@@ -18,4 +18,5 @@ Marknadsportfölj är när man tittar på hela aktiemarknaden som en enda stor a
 
 ## Flashcards
 
-Marknadsportfölj (Definition):: När man tittar på hela aktiemarknaden som en enda stor aktieportfölj, [[Räntabilitet]] blir ungefär genomsnittet av alla aktiers räntabilitet.
+Marknadsportfölj (Definition):: När man tittar på hela aktiemarknaden som en enda stor aktieportfölj, [[Räntabilitet]] blir ungefär genomsnittet av alla aktiers räntabilitet
+<!--SR:!2024-04-19,13,270!2024-04-20,14,290-->

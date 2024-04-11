@@ -25,4 +25,4 @@ $Kapitalomsättningshastighet=\frac{Omsättning}{Totalt \, Kapital}$
 ## Flashcards
 
 Kapitalomsättningshastighet (Definition):: Ett [[Nyckeltal]] och ett verksamhetsmått för arbetskrafts- och kapitalintensitet som **visar hur effektivt en verksamhet använder sitt kapital i förhållande till omsättningen**
-<!--SR:!2024-03-09,3,230!2024-03-12,6,268-->
+<!--SR:!2024-04-11,9,250!2024-04-17,15,268-->

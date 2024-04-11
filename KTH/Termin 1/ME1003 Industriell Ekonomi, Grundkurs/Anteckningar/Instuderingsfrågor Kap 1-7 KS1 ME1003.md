@@ -327,7 +327,7 @@ Disruptive Innovation (Definition):: När etablerade företag och affärsmodelle
 När ett företag kan klara av att använda sina befintliga kunskaper och samtidigt utveckla nya nyttiga kunskaper kan man säga att den är tvåhänt.
 
 Ett tvåhänt teknikbaserat företag (Definition):: När ett företag kan ==balansera== att ==effektivisera== sin nuvarande verksamhet samtidigt som den försöker innovera och ==förnya== sin ==verksamhet==
-<!--SR:!2024-02-11,3,264-->
+<!--SR:!2024-02-11,3,264!2024-04-11,4,298-->
 
 12. Vad säger "Amaras lag"?
 
@@ -639,13 +639,13 @@ Om man har hög ==flexibilitet== betyder att man kan hantera hög variation i ef
 Ett annat sätt att hantera variation i produktionsprocessen är genom att ha en ==buffert==, vanligen pratas det om två olika typer av buffert. ==Inputbuffert== är när man har ett förråd av råmaterial och komponenter för att hantera leveransproblem. ==Outputbuffert== är när man har ett stort färdigvarulager av produkter för att hantera en plötslig ökning av efterfrågan.
 
 Flexibilitet i Produktionsprocessen (Definition):: När man kan enkelt ställa om sin produktionsprocess för att hantera variation i efterfrågan och problem med leverantörer
-<!--SR:!2024-02-18,2,194-->
+<!--SR:!2024-02-18,2,194!2024-04-11,4,298-->
 
 Inputbuffert i Produktionsprocessen (Definition):: När man har ett förråd av råmaterial och komponenter för att hantera leveransproblem
-<!--SR:!2024-02-25,16,304-->
+<!--SR:!2024-02-25,16,304!2024-04-11,4,298-->
 
 Outputbuffert i Produktionsprocessen (Definition):: När man har ett stort färdigvarulager av produkter för att hantera en plötslig ökning av efterfrågan
-<!--SR:!2024-02-24,15,294-->
+<!--SR:!2024-02-24,15,294!2024-04-11,4,298-->
 
 22. Beskriv begreppet Lean production.
 

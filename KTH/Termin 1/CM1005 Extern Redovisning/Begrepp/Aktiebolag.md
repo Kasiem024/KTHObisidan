@@ -89,15 +89,15 @@ När man delar upp [[Eget Kapital]] på antalet aktier som finns, detta värde �
 $$
 Aktiens \, Balansvärde = \frac{Eget \, Kapital}{Antal \, Aktier}
 $$
-<!--SR:!2024-04-01,5,225-->
+<!--SR:!2024-04-19,13,225-->
 
 Antal aktier ett företag har (Formel)
 ||
 $$Antal \, aktier = \frac{Aktiekapital}{Aktiens \, kvotvärde}$$
-<!--SR:!2024-04-05,41,272-->
+<!--SR:!2024-05-06,30,292-->
 
 Publika Aktiebolag (Definition):: Typ av Aktiebolag som har inga restriktioner när det kommer till handel med företagets aktier, alltså får aktierna köpas och säljas på aktiebörsen. Aktiekapitalet måste minst vara 500,000 kr
-<!--SR:!2024-04-10,16,307!2024-04-03,11,287-->
+<!--SR:!2024-04-10,16,307!2024-05-06,30,307-->
 
 Aktiekurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
 <!--SR:!2024-04-20,30,290!2024-04-19,30,322-->
@@ -116,11 +116,11 @@ Skillnaden mellan en A-aktie och en B-aktie;; Alla aktier i ett [[Aktiebolag]] h
 <!--SR:!2024-04-09,15,264-->
 
 Bolagsstämma (Definition):: Ska hållas av ett Aktiebolag minst 1 gång om året. Syftet är att ge ägarna en möjlighet att granska ledningens förvaltning av företaget. Ägarna fattar beslut genom omröstning där normalt varje aktie ger 1 röst, men det kan förekomma aktier med olika röstvärde A-aktier, B-aktier
-<!--SR:!2024-04-02,10,287!2024-04-08,15,307-->
+<!--SR:!2024-05-05,29,287!2024-04-08,15,307-->
 
 Bolagsstämma Innehåll (3)
 ??
 - Fastställande av räkenskaperna.
 - Ansvarsfrihet för styrelse och VD.
 - Disposition av företagets vinst eller förlust.
-<!--SR:!2024-03-29,6,267!2024-04-05,12,287-->
+<!--SR:!2024-04-25,19,287!2024-05-06,30,307-->

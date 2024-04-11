@@ -22,5 +22,5 @@ Alltså handlar strategiprocessen enligt Mintzberg om att man ska börja med ett
 ## Flashcards
 
 Strategiprocessen enligt Mintzberg (Definition):: En strategiprocess där man ska börja med ett flertal olika strategier men att man inte ska vara rädd att eliminera de eller att ta fram nya så att man kan skapa en bättre realiserad strategi
-<!--SR:!2024-02-11,3,250-->
+<!--SR:!2024-02-11,3,250!2024-04-08,1,230-->
 ![[Strategiprocessen enligt Mintzberg ME1003.png]]

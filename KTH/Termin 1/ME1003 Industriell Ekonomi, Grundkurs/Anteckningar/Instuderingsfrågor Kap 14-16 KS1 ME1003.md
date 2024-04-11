@@ -359,7 +359,7 @@ Enligt [[Herzbergs Tvåfaktorsteori]] finns det endast hygienfaktorer och motiva
 ==Krav-kontrollmodellen== går ut på att en arbetare kan klara av höga psykiska krav, hantera stress, om det samtidigt finns möjligheter för att själv planera och kontrollera arbetet. Exempelvis om man sätter för höga krav på en arbetare utan att ge de handlingsutrymme kommer de bli slutkörda. Det är optimalt om en arbetare har både hög kontroll över arbete och höga krav från sin arbetsgivare, i sådana situationer utvecklas arbetaren.
 
 Krav-kontrollmodellen (Definition):: En modell som visar att en arbetare kan hantera mer stress om den också har mycket handlingsutrymme i arbetet
-<!--SR:!2024-02-24,15,290-->
+<!--SR:!2024-02-24,15,290!2024-04-11,4,285-->
 
 18. Förklara följande sätt att göra arbetet mer hållbart:
 
@@ -522,11 +522,11 @@ Kontrollspann (Definition):: Handlar om hur många direkt underställda medarbet
 
 [[Organisationsformer]]
 
-- ==Linjeorganisation==
+- Linjeorganisation
 	- Handlar om att alla ska endast ha 1 överordnad chef och cheferna ska inte ge order till de som inte är direkt under sig.
-- ==Linje-stabsorganisation==
+- Linje-stabsorganisation
 	- En stab är en enhet som står vid sidan av de formella ordervägarna, deras jobb är att ge råd om beslut och förmedla service.
-- ==Funktionell organisation==
+- Funktionell organisation
 	- Handlar mer om att dela upp och specialisera chefernas arbete, att medarbetarna har flera chefer de kan be om råd.
 
 14. Beskriv följande mekanismer för att skapa horisontella förbindelser:

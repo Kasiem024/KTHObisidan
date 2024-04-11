@@ -98,7 +98,8 @@
     "iconsBackgroundCheckEnabled": true,
     "iconsInNotesEnabled": true,
     "iconIdentifier": ":",
-    "iconsInLinksEnabled": true
+    "iconsInLinksEnabled": true,
+    "debugMode": false
   },
   "Obsidian Plugins": "SiObsidian",
   "KTH": "FasSchool"

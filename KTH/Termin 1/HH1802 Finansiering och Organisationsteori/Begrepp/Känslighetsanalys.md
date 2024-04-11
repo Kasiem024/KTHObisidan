@@ -28,3 +28,4 @@ Genom att ändra på vissa variabler kan man veta vilka som har en stor påverka
 ## Flashcards
 
 Känslighetsanalys (Definition):: Ger svar på vilka faktorer/variabler som kan vara extra viktiga för en [[Investering]], en ==deterministisk== modell som inte har något beslutskriterium inbyggt i sig. **Genom att ändra på vissa variabler kan man veta vilka som har en stor påverkan på investeringens lönsamhet**
+<!--SR:!2024-04-08,2,230!2024-04-21,15,290-->

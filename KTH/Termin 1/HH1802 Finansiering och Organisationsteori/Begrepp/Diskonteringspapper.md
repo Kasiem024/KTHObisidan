@@ -27,3 +27,4 @@ Alltså, ett Diskonteringspapper är en typ av [[Obligation]] som löper utan r�
 ## Flashcards
 
 Diskonteringspapper (Definition):: En typ av [[Obligation]] som löper utan ränta, **långivaren får hela sin avkastning tillbaka när lånet förfaller**, inte under löptiden
+<!--SR:!2024-04-18,12,270!2024-04-21,15,290-->

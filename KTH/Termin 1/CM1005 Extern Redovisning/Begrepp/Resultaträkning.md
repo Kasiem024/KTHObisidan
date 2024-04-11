@@ -63,7 +63,7 @@ EBITA (Definition);; (Earnings Before Interest and Taxes) Rörelseresultat efter
 <!--SR:!2024-04-22,30,314-->
 
 Nettoomsättning (Definition):: Försäljningsintäkterna exklusive moms
-<!--SR:!2024-04-14,25,254!2024-04-03,14,301-->
+<!--SR:!2024-04-14,25,254!2024-05-06,30,321-->
 
 Finansiella Poster (Definition):: Samlingsnamnet för Finansiella Intäkter och Finansiella Kostnader
 <!--SR:!2024-04-19,30,291!2024-04-23,30,311-->

@@ -38,7 +38,7 @@ Syftet är att motverka diskriminering och främja lika rättigheter och möjlig
 ## Flashcards
 
 Lagen om anställningsskydd (LAS) (Definition):: En lag som skyddar de anställda för det mesta när det kommer till uppsägningar och provanställningar
-<!--SR:!2024-02-25,9,270-->
+<!--SR:!2024-02-25,9,270!2024-04-10,3,268-->
 
 Arbetsmiljölagen (Definition):: Regler om skyldigheter för arbetsgivare om att förebygga ohälsa och olycksfall i arbetet
 <!--SR:!2024-02-12,2,230-->

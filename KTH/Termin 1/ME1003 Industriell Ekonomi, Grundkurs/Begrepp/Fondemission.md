@@ -29,4 +29,4 @@ Sätt Fondemission kan ske (2)
 ??
 - Balanserad vinst, [[Uppskrivningsfond]], [[Reservfond]] eller [[Överkursfond]] omvandlas till aktiekapital.
 - Värdet av företagets [[Anläggningstillgångar]] skrivs upp, aktiekapitalet ökar med lika mycket.
-<!--SR:!2024-04-05,11,272!2024-03-29,6,252-->
+<!--SR:!2024-05-06,30,292!2024-04-26,20,272-->

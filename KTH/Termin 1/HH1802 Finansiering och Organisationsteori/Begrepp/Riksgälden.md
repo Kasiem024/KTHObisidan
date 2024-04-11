@@ -29,11 +29,13 @@ Riksgäldens ansvarsområden är:
 ## Flashcards
 
 Riksgälden (Definition):: En statlig myndighet som förvaltar statsskulden och sköter statens upplåning, ansvarar för insättningsgarantin och hanterar banker i kris, i princip ==statens internbank==
+<!--SR:!2024-04-16,10,270!2024-04-22,16,290-->
 
-Riksgälden Ansvarsområden (4)
+Riksgälden Ansvarsområden (5)
 ??
 - Vara statens internbank.
 - Förvalta statsskulden och ta upp lån.
 - Ge statliga krediter och garantier.
 - Ansvara för investerarskydd och insättningsgaranti.
-- Hantera banker i kris
+- Hantera banker i kris.
+<!--SR:!2024-04-12,6,230!2024-04-17,11,270-->

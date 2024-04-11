@@ -28,8 +28,11 @@ Säljoptioner ger innehavaren rätten att på en viss dag, ==slutdagen==, sälja
 
 ## Flashcards
 
-Finansiella Optioner (Definition):: Samlingsnamnet för ==säljoptioner== och ==köpoptioner== när det kommer till aktier. En option ger innehavaren rätten att framtiden ta en specifik åtgärd
+Finansiella Optioner (Definition):: Samlingsnamnet för ==säljoptioner== och ==köpoptioner== när det kommer till aktier. En option ger innehavaren rätten att i framtiden ta en specifik åtgärd
+<!--SR:!2024-04-19,13,270!2024-04-22,16,297-->
 
 Köpoption (Definition):: Ger innehavaren rätten att på en viss dag, ==slutdagen==, köpa en aktie till ett givet pris, ==lösenpris==, värdet ökar för innehavaren ju högre aktiekursen är vid slutdagen, värdet blir differensen mellan aktiekursen och lösenpriset
+<!--SR:!2024-04-19,13,290!2024-04-21,15,290-->
 
 Säljoption (Definition):: Ger innehavaren rätten att på en viss dag, ==slutdagen==, sälja en aktie till ett givet pris, ==lösenpris==, värdet ökar för innehavaren ju lägre aktiekursen är vid slutdagen, värdet blir differensen mellan lösenpriset och aktiekursen
+<!--SR:!2024-04-20,14,290!2024-04-22,16,290-->

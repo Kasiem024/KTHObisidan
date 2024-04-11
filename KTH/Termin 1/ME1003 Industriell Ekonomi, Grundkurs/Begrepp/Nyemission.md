@@ -21,4 +21,4 @@ Alltså, Nyemission är när ett företag utfärdar nya aktier för att få in m
 ## Flashcards
 
 Nyemission (Definition):: När ett företag utfärdar nya aktier för att få in mer kapital ([[Tillgångar]], [[Eget Kapital]] ökar), priset av de nya aktierna är vanligtvis lägre än de gamla
-<!--SR:!2024-04-01,9,250!2024-04-22,30,310-->
+<!--SR:!2024-05-06,30,270!2024-04-22,30,310-->

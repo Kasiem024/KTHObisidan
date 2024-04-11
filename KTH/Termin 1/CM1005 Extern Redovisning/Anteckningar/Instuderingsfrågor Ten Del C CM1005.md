@@ -96,6 +96,7 @@ Koncernredovisning (Definition):: En särskild [[Årsredovisning]] som ett moder
 <!--SR:!2000-01-01,1,250!2024-03-15,4,278-->
 
 Syftet med Koncernredovisning;; Syftet med Koncernredovisningen är att ge intressenterna en rättvisande och sammanfattande bild av hela koncernen
+<!--SR:!2024-04-10,4,289-->
 
 Koncernredovisningens innehåll (4)
 ||

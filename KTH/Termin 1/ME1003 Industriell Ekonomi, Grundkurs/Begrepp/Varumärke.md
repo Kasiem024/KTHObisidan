@@ -13,9 +13,9 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp
 
 Varumärket är företagets löfte till sina kunder, det är kopplat till produkten men är inte produkten i sig. Det tar lång tid att bygga ett starkt varumärke.
 
-Människor är inte lojala till en produkt utan ett varumärke eftersom andra företag kan erbjuda en liknande produkt men aldrig samma varumärke. Ett företags varumärke kan göra så att värdet av deras produkter ökar hos vissa kunder men minskar hos andra. Fastän en Android telefon skulle passa vissa bättre köper de en iPhone eftersom de är lojala till varumärket Apple.
+Människor är inte lojala till en produkt utan ett varumärke eftersom andra företag kan erbjuda en liknande produkt men aldrig samma varumärke. Ett företags varumärke kan göra så att värdet av deras produkter ökar hos vissa kunder men minskar hos andra.
 
----
+Fastän en Android telefon skulle passa vissa bättre köper de en iPhone eftersom de är lojala till varumärket Apple.
 
 ### Varumärke och produkt
 

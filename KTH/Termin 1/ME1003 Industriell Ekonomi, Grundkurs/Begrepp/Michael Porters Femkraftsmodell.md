@@ -17,7 +17,7 @@ Michael Porters Femkraftsmodell är ett sätt att analysera de konkurrenskrafter
 - ==Kunders förhandlingsstyrka==: Om kunden är mäktig kan den pressa priserna.
 - ==Leverantörers förhandlingsstyrka==: Om leverantören är mäktig kan den öka priserna eller prioritera deras andra kunder.
 - ==Nya aktörer==: Potentiella konkurrenter.
-- ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden.
+- ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden, hot.
 
 ![[Michael Porters Femkraftsmodell ME1003.png]]
 
@@ -31,6 +31,6 @@ Michael Porters Femkraftsmodell (5)
 - ==Kunders förhandlingsstyrka==: Om kunden är mäktig kan den pressa priserna.
 - ==Leverantörers förhandlingsstyrka==: Om leverantören är mäktig kan den öka priserna eller prioritera deras andra kunder.
 - ==Nya aktörer==: Potentiella konkurrenter.
-- ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden.
+- ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden, hot.
 ![[Michael Porters Femkraftsmodell ME1003.png]]
 <!--SR:!2024-02-19,9,254!2024-02-12,4,270-->

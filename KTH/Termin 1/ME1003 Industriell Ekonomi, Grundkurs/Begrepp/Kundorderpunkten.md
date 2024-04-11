@@ -36,7 +36,7 @@ När en produkt produceras mot kundorder betyder det att det redan finns råmate
 ## Flashcards
 
 Kundorderpunkt (Definition):: Ett begrepp som beskriver hur mycket av produktens tillverkning som är redan färdig, ==genomloppstid==, när kunden gör beställningen, ==leveranstid==, och hur ==kundanpassad== produkten är
-<!--SR:!2024-02-16,6,250-->
+<!--SR:!2024-02-16,6,250!2024-04-11,4,274-->
 
 Genomloppstid (Definition):: Tiden som det tar att tillverka produkten från början till slut
 <!--SR:!2024-02-11,3,252-->

@@ -136,7 +136,9 @@
     "Diskonteringspapper",
     "Betavärde",
     "Leverageformlen",
-    "lösenkursen"
+    "lösenkursen",
+    "kostnadslederskap",
+    "förväntninga"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",

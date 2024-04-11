@@ -30,11 +30,11 @@ $$
 ## Flashcards
 
 Teckningsrättsbevis (Definition):: Utfärdas för gamla aktier och ger innehavaren rätt att teckna nya aktier. Om ägaren inte vill delta i [[Nyemission]] kan den säljas för att få kompensation för sjunkandet av aktiens marknadsvärde
-<!--SR:!2024-03-30,7,250!2024-04-08,14,290-->
+<!--SR:!2024-05-03,27,270!2024-04-08,14,290-->
 
 Teckningsrättsbevis (Formel)
 ||
 $$
 Värdet \, av \, Teckningsrättsbevis = \frac{Marknadsvärde \, efter \, emission - Teckningskurs}{Antal \, teckningsrätter \, som \, krävs \, per \, nyemitterad \, aktie}
 $$
-<!--SR:!2024-04-06,9,250-->
+<!--SR:!2024-04-10,4,230-->

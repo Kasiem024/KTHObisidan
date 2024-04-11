@@ -36,7 +36,7 @@ $$
 ## Flashcards
 
 Diskontering (Definition):: När man räknar om framtida betalningar till en och samma tidpunkt, alltså räknar man ut ==nuvärdet==
-<!--SR:!2024-03-29,6,250!2024-04-09,16,292-->
+<!--SR:!2024-04-26,20,270!2024-04-09,16,292-->
 
 Diskonteringsfaktorn (Definition) (Formel)
 ??
@@ -44,4 +44,4 @@ Omräkningsfaktor som används för att räkna ut nuvärde
 $$
 \frac{1}{( 1 + r )^{n}}
 $$
-<!--SR:!2024-04-09,16,290!2024-04-02,10,270-->
+<!--SR:!2024-04-09,16,290!2024-05-06,30,290-->

@@ -23,3 +23,4 @@ Alltså, en Statsobligation är när man lånar ut pengar till staten med en spe
 ## Flashcards
 
 Statsobligation (Definition):: När man lånar ut pengar till staten med en specifik summa och under en bestämd period, staten betalar tillbaka ränta på lånet under löptiden som kan vara mellan 1 år och 30 år eller mer
+<!--SR:!2024-04-13,7,250!2024-04-19,13,290-->
