@@ -11,7 +11,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp #CM1005/CM1005KS3
 
 ## Definition
 
-Köplagen är som [[Konsumentköplagen]] dock när köparen inte är en privatperson. Syftet med den är att skydda köparen dock är den inte lika sträng som konsumentköplagen då parternas förhandlingsstyrka är mer balanserad. Alltså är denna lag mer relevant inom en [[Företagsmarknad]].
+Köplagen är som [[Konsumentköplagen]], skillnaden är att köparen inte måste vara en privatperson. Syftet med den är att skydda köparen dock är den inte lika sträng som konsumentköplagen då parternas förhandlingsstyrka är mer balanserad. Alltså är denna lag mer relevant inom en [[Företagsmarknad]].
 
 Exempel på när Köplagen gäller:
 

@@ -17,6 +17,10 @@ Begreppet [[Tidspreferens]] syftar till att en betalning vi får idag är mer v�
 
 Alltså, Kalkylräntan visar värdet av en framtida investering idag, alltså värdet av investeringen i relation till grundinvesteringen. Eftersom tidspreferens säger att en betalning idag är mer värd än samma betalning imorgon är Kalkylränta och tidspreferens kopplade.
 
+$$
+r = r_{f} + B (r_{m}-r_{f})
+$$
+
 ## Kopplat till
 
 ## Flashcards

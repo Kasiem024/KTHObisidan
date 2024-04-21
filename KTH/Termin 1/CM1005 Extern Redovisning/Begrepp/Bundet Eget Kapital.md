@@ -26,5 +26,5 @@ Bundet Eget Kapital (Definition) (3)
 Kapital som måste användas inom företaget, inte för vinstutdelning, exempelvis:
 - Aktiekapital
 - Uppskrivningsfond
-- Reservfond TODO EXEMPEL
+- Reservfond
 <!--SR:!2024-05-06,30,270!2024-04-19,30,290-->

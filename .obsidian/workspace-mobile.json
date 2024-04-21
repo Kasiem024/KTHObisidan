@@ -11,8 +11,12 @@
             "id": "583bd62a6ed17207",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +77,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -99,7 +105,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md"
+          }
         }
       }
     ],
@@ -119,6 +127,7 @@
   },
   "active": "583bd62a6ed17207",
   "lastOpenFiles": [
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Affärsidé.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Soliditet.md"
   ]

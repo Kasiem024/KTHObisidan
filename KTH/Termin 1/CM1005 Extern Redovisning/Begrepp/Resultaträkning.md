@@ -54,7 +54,7 @@ När man delar upp verksamhetens kostnader beroende på dess funktion:
 - Tillverkning
 - Försäljning
 - Administration
-<!--SR:!2024-04-11,15,175!2024-04-23,30,272-->
+<!--SR:!2024-05-14,30,195!2024-04-23,30,272-->
 
 EBITDA (Definition):: (Earnings Before Interest, Taxes, Depreciations and Amortizations) Rörelseresultat före avskrivningar
 <!--SR:!2024-04-19,30,294!2024-04-20,30,314-->
@@ -63,7 +63,7 @@ EBITA (Definition);; (Earnings Before Interest and Taxes) Rörelseresultat efter
 <!--SR:!2024-04-22,30,314-->
 
 Nettoomsättning (Definition):: Försäljningsintäkterna exklusive moms
-<!--SR:!2024-04-14,25,254!2024-05-06,30,321-->
+<!--SR:!2024-05-14,30,274!2024-05-06,30,321-->
 
 Finansiella Poster (Definition):: Samlingsnamnet för Finansiella Intäkter och Finansiella Kostnader
 <!--SR:!2024-04-19,30,291!2024-04-23,30,311-->

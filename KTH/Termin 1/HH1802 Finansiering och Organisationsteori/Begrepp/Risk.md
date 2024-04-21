@@ -54,13 +54,13 @@ Alltså handlar Affärsrisk om Risk som har med verksamheten att göra.
 ## Flashcards
 
 Risk (Definition):: Handlar om att försöka veta vad som kommer hända i framtiden, dock råder det osäkerhet då oväntade händelser kan ske, osäkerheten på hur långt något är från medelvärdet, osäkerhet gällande konsekvenserna av en handling. I teorin leder det till att man kan tjäna mer pengar
-<!--SR:!2024-05-06,30,272!2024-04-08,15,292-->
+<!--SR:!2024-05-06,30,272!2024-05-14,30,312-->
 
 Systematisk Risk (Definition):: Sådana faktorer som är gemensamma för flera aktier, konjunktursvängningar, Risken för hela indexet och marknaden
-<!--SR:!2024-04-08,15,293!2024-05-06,30,292-->
+<!--SR:!2024-05-14,30,293!2024-05-06,30,292-->
 
 Unik Risk (Definition):: Sådan risk som är specifik till aktien, elimineras genom att diversifiera sin portfölj
-<!--SR:!2024-04-10,17,293!2024-05-06,30,292-->
+<!--SR:!2024-05-10,30,313!2024-05-06,30,292-->
 
 Affärsrisk (Definition) (3)
 ??

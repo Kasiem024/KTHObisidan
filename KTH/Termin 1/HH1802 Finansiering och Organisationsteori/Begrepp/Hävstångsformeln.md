@@ -38,18 +38,18 @@ $$
 ## Flashcards
 
 Hävstångsformeln (Definition):: Används för att räkna ut [[Räntabilitet]] på eget kapital. Den visar att $R_E$ är beroende av 2 faktorer. Den första är $R_T$, alltså verksamhetens avkastning. Den andra är ==skuldsättningsgraden==, verksamhetens finansiella struktur
-<!--SR:!2024-04-17,11,270!2024-04-22,16,290-->
+<!--SR:!2024-05-18,30,290!2024-04-22,16,290-->
 
 Hävstångsformeln (Formel)
 ??
 $$
 R_{E} = R_{T} + (R_{T} - R_{S}) * \frac{S}{E}
 $$
-<!--SR:!2024-04-18,12,270!2024-04-18,12,270-->
+<!--SR:!2024-05-18,30,290!2024-05-18,30,290-->
 
 Skuldsättningsgrad (Formel)
 ??
 $$
 S/E = \frac{S + obeskattade \, reserver * skattesats}{JE}
 $$
-<!--SR:!2024-04-16,10,270!2024-04-21,15,290-->
+<!--SR:!2024-05-18,30,290!2024-04-21,15,290-->

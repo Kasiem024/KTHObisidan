@@ -16,7 +16,9 @@ Kapitalomsättningshastigheten är ett [[Nyckeltal]] och är ett verksamhetsmåt
 
 Kapitalomsättningshastigheten används för att göra jämförelser inom det egna företaget samt för jämförelse av företag inom samma bransch.
 
-$Kapitalomsättningshastighet=\frac{Omsättning}{Totalt \, Kapital}$
+$$
+Kapitalomsättningshastighet=\frac{Omsättning}{Totalt \, Kapital}
+$$
 
 [Kapitalomsättningshastighet, Visma](https://vismaspcs.se/ekonomiska-termer/vad-ar-kapitalomsattningshastighet)
 
@@ -24,5 +26,5 @@ $Kapitalomsättningshastighet=\frac{Omsättning}{Totalt \, Kapital}$
 
 ## Flashcards
 
-Kapitalomsättningshastighet (Definition):: Ett [[Nyckeltal]] och ett verksamhetsmått för arbetskrafts- och kapitalintensitet som **visar hur effektivt en verksamhet använder sitt kapital i förhållande till omsättningen**
-<!--SR:!2024-04-11,9,250!2024-04-17,15,268-->
+Kapitalomsättningshastighet (Definition):: Ett [[Nyckeltal]] och ett verksamhetsmått för arbetskrafts- och kapitalintensitet som **visar hur effektivt en verksamhet använder sitt kapital i förhållande till omsättningen**$Kapitalomsättningshastighet=\frac{Omsättning}{Totalt \, Kapital}$
+<!--SR:!2024-04-19,4,230!2024-05-18,30,288-->

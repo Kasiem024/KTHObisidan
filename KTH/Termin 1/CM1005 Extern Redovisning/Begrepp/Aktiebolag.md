@@ -73,7 +73,7 @@ Frågor som tas upp i Bolagsstämman:
 ## Flashcards
 
 Aktiebolag (Definition):: Företagsform där delägarna inte är personligt ansvariga för företagets skulder. Ägarna riskerar bara att förlora deras egna satsade kapital. Minst 1 ägare men kan också vara 100,000-tals ägare
-<!--SR:!2024-04-11,47,272!2024-04-19,30,322-->
+<!--SR:!2024-05-14,30,292!2024-04-19,30,322-->
 
 Aktiens Kvotvärde (Definition) (Formel)
 ||
@@ -97,7 +97,7 @@ $$Antal \, aktier = \frac{Aktiekapital}{Aktiens \, kvotvärde}$$
 <!--SR:!2024-05-06,30,292-->
 
 Publika Aktiebolag (Definition):: Typ av Aktiebolag som har inga restriktioner när det kommer till handel med företagets aktier, alltså får aktierna köpas och säljas på aktiebörsen. Aktiekapitalet måste minst vara 500,000 kr
-<!--SR:!2024-04-10,16,307!2024-05-06,30,307-->
+<!--SR:!2024-05-14,30,327!2024-05-06,30,307-->
 
 Aktiekurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrågan
 <!--SR:!2024-04-20,30,290!2024-04-19,30,322-->
@@ -113,10 +113,10 @@ Vad som påverkar en akties börskurs (6)
 <!--SR:!2024-02-10,1,172!2024-02-12,9,270-->
 
 Skillnaden mellan en A-aktie och en B-aktie;; Alla aktier i ett [[Aktiebolag]] har samma kvotvärde dock finns det olika typer av aktier som har olika röstvärde. Aktier med olika röstvärde brukar benämnas A-aktier och B-aktier, skillnaden kan max vara 10 gånger
-<!--SR:!2024-04-09,15,264-->
+<!--SR:!2024-05-14,30,284-->
 
-Bolagsstämma (Definition):: Ska hållas av ett Aktiebolag minst 1 gång om året. Syftet är att ge ägarna en möjlighet att granska ledningens förvaltning av företaget. Ägarna fattar beslut genom omröstning där normalt varje aktie ger 1 röst, men det kan förekomma aktier med olika röstvärde A-aktier, B-aktier
-<!--SR:!2024-05-05,29,287!2024-04-08,15,307-->
+Bolagsstämma (Definition):: Ska hållas av ett Aktiebolag minst 1 gång om året. Syftet är att ge ägarna en möjlighet att granska ledningens förvaltning av företaget. Ägarna fattar beslut genom omröstning där normalt varje aktie ger 1 röst, men det kan förekomma aktier med olika röstvärde, A-aktier och B-aktier
+<!--SR:!2024-05-05,29,287!2024-05-14,30,327-->
 
 Bolagsstämma Innehåll (3)
 ??

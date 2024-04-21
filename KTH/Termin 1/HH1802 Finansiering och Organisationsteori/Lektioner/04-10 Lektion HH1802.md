@@ -15,3 +15,9 @@ Tags: #year2024 #KTH #ekonomi #HH1802 #lektion #HH1802/HH1802KS2
 ---
 
 [[Organisationsformer]]
+
+[[Humankapital]]
+
+[[Maslows Behovspyramid]]
+
+[[Herzbergs Tvåfaktorsteori]]

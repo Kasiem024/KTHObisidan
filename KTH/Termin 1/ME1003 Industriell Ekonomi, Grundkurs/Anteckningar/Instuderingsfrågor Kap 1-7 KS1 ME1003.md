@@ -487,10 +487,10 @@ När efterfrågan för en produkt styrs av efterfrågan för en annan produkt s�
 
 [[Produktionens Konkurrensfaktorer]] är som interna mål och prestationsmått för [[Produktion]]. De 4 konkurrensfaktorerna är:
 
-- ==Pris==: Förmågan att producera och leverera till låg kostnad
-- ==Leveransförmåga==: Förmågan att leverera snabbt och billigt, uppnås genom färdigvarulager och korta genomloppstider
-- ==Kvalitet==: Förmågan att tillfredsställa kundens behov och förväntningar, uppnås genom standardisering och kunskap om kundens behov
-- ==Flexibilitet==: Förmåga att anpassa produktionen till förändringar i omvärlden, uppnås genom överkapacitet och utbildning av personal som klarar av snabba omställningar
+- ==Pris==: Förmågan att producera och leverera till låg kostnad.
+- ==Leveransförmåga==: Förmågan att leverera snabbt och billigt, uppnås genom färdigvarulager och korta genomloppstider.
+- ==Kvalitet==: Förmågan att tillfredsställa kundens behov och förväntningar, uppnås genom standardisering och kunskap om kundens behov.
+- ==Flexibilitet==: Förmåga att anpassa produktionen till förändringar i omvärlden, uppnås genom överkapacitet och utbildning av personal som klarar av snabba omställningar.
 
 5. På vilka sätt är de produktionsstrategiska konkurrensfaktorerna motstridiga? Vilka är konsekvenserna av detta?
 

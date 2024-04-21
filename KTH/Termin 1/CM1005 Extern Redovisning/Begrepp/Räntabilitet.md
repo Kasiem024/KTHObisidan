@@ -70,4 +70,4 @@ Nyckeltal för att räkna Räntabilitet (4)
 - **Räntabilitet på totalt kapital** ($R_{T}$): Uttrycker avkastningen för företaget som helhet, alltså allt kapital som satsats i verksamheten.
 - **Räntabilitet på sysselsatt kapital** ($R_{SYSS}$): Som $R_{T}$ fast bortsett från all skuld som inte har en ränta, exempelvis leverantörsskulder.
 - **Vinstmarginal, rörelsemarginal, bruttomarginal**: Man kan ställa ett företags vinst i relation till dess försäljning. Då kan man använda olika mått och skillnaden blir på vilken nivå av [[Resultaträkning]] som vinsten beräknas.
-<!--SR:!2024-04-11,9,204!2024-04-11,9,206-->
+<!--SR:!2024-05-02,18,204!2024-05-03,19,206-->

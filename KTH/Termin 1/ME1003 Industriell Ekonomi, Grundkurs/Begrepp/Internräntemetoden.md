@@ -30,4 +30,4 @@ Internränta är den inbyggda lönsamhet som finns i en investering, vad ger inv
 ## Flashcards
 
 Internräntemetoden (Definition):: Handlar om att veta den högsta [[Kalkylränta]] en viss investering kan ha och ändå räknas som lönsam enligt [[Nuvärdemetoden]], alltså räknar man ut kalkylräntan
-<!--SR:!2024-04-09,20,270!2024-04-08,14,290-->
+<!--SR:!2024-05-14,30,270!2024-05-14,30,310-->

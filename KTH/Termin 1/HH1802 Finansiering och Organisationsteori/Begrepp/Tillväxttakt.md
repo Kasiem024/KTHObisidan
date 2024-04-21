@@ -49,4 +49,4 @@ Ett företags Tillväxttakt påverkar aktiekursen:
 $$
 Aktiekurs = \frac{Utdelning}{r-g}
 $$
-<!--SR:!2024-04-08,2,230-->
+<!--SR:!2024-04-18,3,210-->

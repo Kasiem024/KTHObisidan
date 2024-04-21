@@ -23,7 +23,7 @@ Alltså, en Obligation är ett lån. Den ger avkastning till långivaren genom r
 ## Flashcards
 
 Obligation (Definition):: En typ av lån som ger avkastning till långivaren genom ränta under lånets löptid
-<!--SR:!2024-04-12,4,250!2024-04-21,15,290-->
+<!--SR:!2024-04-23,9,250!2024-04-21,15,290-->
 
 Exempel på emittenter (3)
 ??
@@ -38,4 +38,4 @@ Exempel på långivare till emittenter (4)
 - Pensionsbolag
 - Institutioner
 - Privata investerare
-<!--SR:!2024-04-17,11,270!2024-04-17,11,270-->
+<!--SR:!2024-05-17,29,270!2024-05-18,30,290-->

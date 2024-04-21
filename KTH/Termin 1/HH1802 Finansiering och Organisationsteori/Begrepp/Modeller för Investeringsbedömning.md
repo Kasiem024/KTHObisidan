@@ -44,16 +44,16 @@ De tekniker som används för att hantera [[Risk]] vid enskilda investeringar, e
 - [[Känslighetsanalys]]
 - Beslutsmatris och beslutsträd
 - [[Reala Optioner]]
-<!--SR:!2024-04-09,3,232!2024-04-20,14,292-->
+<!--SR:!2024-04-22,4,212!2024-04-20,14,292-->
 
 Deterministiska Modeller (Definition):: Tar hänsyn för ==risk utanför modellen==, exempelvis [[Känslighetsanalys]]
 <!--SR:!2024-04-23,17,292!2024-04-22,16,292-->
 
 Stokastiska Modeller (Definition):: Tar hänsyn till ==risk i modellen==, exempelvis [[Reala Optioner]]. Det finns en sannolikhetsfördelning som beslutsfattaren anger och modellen används för att beräkna det bästa investeringsalternativet
-<!--SR:!2024-04-08,1,190!2024-04-14,8,250-->
+<!--SR:!2024-04-22,4,210!2024-05-04,19,250-->
 
 Beslutsfattande under Risk (Definition):: När man kan ange sannolikheten för olika utfall
-<!--SR:!2024-04-13,7,252!2024-04-19,13,292-->
+<!--SR:!2024-04-28,10,232!2024-04-19,13,292-->
 
 Beslutsfattande under Osäkerhet (Definition):: När man inte har någon känd sannolikhetsfördelning
-<!--SR:!2024-04-08,2,250!2024-04-23,17,290-->
+<!--SR:!2024-04-21,6,250!2024-04-23,17,290-->

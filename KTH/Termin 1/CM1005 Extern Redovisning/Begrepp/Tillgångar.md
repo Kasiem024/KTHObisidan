@@ -42,7 +42,7 @@ Omsättningstillgångar är Tillgångar som löpande förbrukas, säljs eller om
 
 Det finns 4 typer av Omsättningstillgångar:
 
-- ==Varulager==
+- [[Varulager]]
 - ==Kortfristiga fordringar:== Kundfordring, Upplupen intäkt.
 - ==Osäkra fordringar==: Kundfordringar och Upplupna intäkter där det råder osäkerhet om kunden har förmåga att betala eller inte.
 - ==Kortfristiga placeringar==: Låst pengar i banken.

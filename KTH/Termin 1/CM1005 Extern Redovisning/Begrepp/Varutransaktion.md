@@ -49,7 +49,7 @@ Alltså handlar den materiella aspekten av en Varutransaktion om hur köparens b
 
 ### Betalningen, Finansiellt
 
-Villkor gällande köparens betalning för sin beställning ska avtals om, då kallas de för ==betalningsvillkor==. Vad är beloppet, hur ska betalningen ske, när ska betalningen ske, finns det en rabatt och [[Dröjsmålsränta]].
+Villkor gällande köparens betalning för sin beställning ska avtals om, då kallas de för [[Betalningsvillkor]]. Vad är beloppet, hur ska betalningen ske, när ska betalningen ske, finns det en rabatt och [[Dröjsmålsränta]].
 
 [[Hemtagningsutgift]]: Alla utgifter som gör att varan levereras till mig:
 
@@ -81,5 +81,5 @@ Köpeavtalet, Juridiskt (Definition):: Skapas när köparen och säljaren kommer
 Varutransaktionens Leverans, Materiellt (Definition):: Vid en Varutransaktion måste man bestämma i avtalet vem som ska ansvara för den fysiska transporten av beställningen. **Hur köparens beställning ska levereras**
 <!--SR:!2024-03-09,12,270!2024-03-06,4,278-->
 
-Varutransaktionens Betalning, Finansiellt (Definition):: Villkor gällande köparens betalning för sin beställning ska avtals om, då kallas de för ==betalningsvillkor==. Vad är beloppet, hur ska betalningen ske, när ska betalningen ske, finns det en rabatt och [[Dröjsmålsränta]]. **Hur köparen ska betala för sin beställning**
+Varutransaktionens Betalning, Finansiellt (Definition):: Villkor gällande köparens betalning för sin beställning ska avtals om, då kallas de för [[Betalningsvillkor]]. Vad är beloppet, hur ska betalningen ske, när ska betalningen ske, finns det en rabatt och [[Dröjsmålsränta]]. **Hur köparen ska betala för sin beställning**
 <!--SR:!2024-03-18,23,270!2024-03-06,4,278-->

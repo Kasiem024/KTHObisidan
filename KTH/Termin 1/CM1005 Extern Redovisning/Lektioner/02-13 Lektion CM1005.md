@@ -52,7 +52,7 @@ Alltså handlar den materiella aspekten av en Varutransaktion om hur köparens b
 
 ### [[Varutransaktion#Betalningen, Finansiellt| Betalningen, Finansiellt]]
 
-Villkor gällande köparens betalning för sin beställning ska avtals om, då kallas de för ==betalningsvillkor==. Vad är beloppet, hur ska betalningen ske, när ska betalningen ske, finns det en rabatt och [[Dröjsmålsränta]].
+Villkor gällande köparens betalning för sin beställning ska avtals om, då kallas de för [[Betalningsvillkor]]. Vad är beloppet, hur ska betalningen ske, när ska betalningen ske, finns det en rabatt och [[Dröjsmålsränta]].
 
 Alltså handlar den finansiella aspekten av en Varutransaktion om hur köparen ska betala för sin beställning.
 

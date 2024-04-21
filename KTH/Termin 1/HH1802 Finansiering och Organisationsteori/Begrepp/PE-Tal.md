@@ -32,4 +32,4 @@ Ett [[Nyckeltal]] som används vid aktievärdering och indikerar om börskursen 
 $$
 P/E = \frac{Aktiekurs}{(\frac{Årets \, resultat}{Antal \, Aktier})}
 $$
-<!--SR:!2024-04-11,5,250!2024-05-07,30,290-->
+<!--SR:!2024-04-27,12,250!2024-05-07,30,290-->

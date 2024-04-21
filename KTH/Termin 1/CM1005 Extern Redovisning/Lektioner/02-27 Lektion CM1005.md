@@ -20,7 +20,7 @@ Anläggningstillgångar: Med anläggningstillgång förstås tillgång som är a
 
 Omsättningstillgångar: Saker som omsätts, ändras, hela tiden
 
-- Varulager
+- [[Varulager]]
 - Kortfristiga fordringar: Kundfordringar, Upplupen intäkt
 - Osäkra fordringar: Som ovan men osäkert om man kommer få betalt
 - Kortfristiga placeringar: Låst pengar i banken

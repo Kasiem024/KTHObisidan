@@ -4,16 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "696a81caaf5b381e",
+        "id": "cedb002712ea7781",
         "type": "tabs",
         "children": [
           {
-            "id": "47d2b27ea2c408be",
+            "id": "78a6b20378f25fa7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-10 Lektion HH1802.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "7bccbcc2deb7f844",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e875f7423b36f6ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Organisationsformer.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +157,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -158,43 +176,78 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "47d2b27ea2c408be",
+  "floating": {
+    "id": "709754bbfb5b9ccb",
+    "type": "floating",
+    "children": [
+      {
+        "id": "a2952cac11447ec2",
+        "type": "window",
+        "children": [
+          {
+            "id": "55b92f33816c06f9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "60d7e2d54c61c0df",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-10 Journal Lektion HH1802.pdf"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1829,
+        "y": 52,
+        "width": 838,
+        "height": 1329,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "78a6b20378f25fa7",
   "lastOpenFiles": [
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-10 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Organisationsformer.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-10 Lektion HH1802.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-09 Lektion HH1802.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Organisationsformer.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Affärsidé.md",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/Lektioner/04-09 Lektion HU1801.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Marknadsföring.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Marknadsföringens Analysnivåer.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Finansiella Optioner.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Risk.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Värdekedja.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Michael Porters Femkraftsmodell.md",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/Lektioner/03-26 Lektion HU1801.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Blue Ocean Strategi.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Ansoff Tillväxtmatris.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Strategiprocessen enligt Mintzberg.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Varulager.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Genomloppstid.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Rörelsekapital.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS4 HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Reservfond.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Fondemission.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Överkursfond.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Fritt Eget Kapital.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Bundet Eget Kapital.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-28 Journal Lektion HH1802.pdf",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-28 Lektion HH1802.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/4V.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Arbetsrättsliga Lagar.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Distributionskanaler.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nyckeltal.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 10-12 KS3 ME1003.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Tillgångar.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Omsättningstillgångar.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Lektioner/02-27 Lektion CM1005.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Betalningsvillkor.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Likviditet.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-19 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Lektioner/02-19 Lektion CM1005.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Taxering.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-15 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-17 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-16 Journal Lektion HH1802.pdf",
     "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Marketing Management 2019 European Edition 4.pdf",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Produktlivscykeln.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Innovationsspridningens Livscykel.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Varumärke.md",
-    "KTH/Termin 1/HU1801 Industriell Marknadsföring/Lektioner/03-18 Lektion HU1801.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Marknadssegmentering.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-27 Journal Lektion HH1802.pdf",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-19 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-28 Journal Lektion HH1802.pdf",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/KS1 Exempel Journal HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-26 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-20 Journal Lektion HH1802.pdf",
-    "P",
-    "KTH/Termin 1/CM1005 Extern Redovisning/PDFs/Litteraturlista/Den Nya Affärsredovisningen Övningar 2018 Edition 21.pdf",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Kassaflödesanalys enligt FAR ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/DuPont-Schema ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Företags Kapitalstruktur ME1003.png",

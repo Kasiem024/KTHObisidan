@@ -17,7 +17,7 @@ Faktura är säljarens meddelande till köparen om hur mycket denne ska betala t
 - Ort och datum
 - Levererade varuposter
 - Leveransvillkor
-- Betalningsvillkor
+- [[Betalningsvillkor]]
 - Priser
 - Totalsumma som ska betalas
 - Moms
