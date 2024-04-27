@@ -50,10 +50,10 @@ Alltså, Bristkostnad är de kostnader som företaget får för att de har dåli
 ## Flashcards
 
 Likviditet (Definition):: Ett [[Nyckeltal]] som visar företagets kortsiktiga betalningsförmåga. Alltså förmågan att kunna betala sina räkningar på kort sikt, vad man har på bankkontot
-<!--SR:!2024-03-12,6,257!2024-03-09,4,277-->
+<!--SR:!2024-05-12,20,277!2024-05-08,16,297-->
 
 Likvida medel (Definition):: De pengar företaget har tillgängliga, betalningsförmåga på kort sikt
-<!--SR:!2024-05-25,81,300!2024-03-21,16,301-->
+<!--SR:!2024-05-25,81,300!2024-05-22,30,321-->
 
 Exempel på Likvida Medel (4)
 ??
@@ -61,11 +61,13 @@ Exempel på Likvida Medel (4)
 - Tillgodohavande på banker
 - Kortfristiga placeringar
 - Checkräkningskredit
+<!--SR:!2024-04-25,1,201!2024-04-26,4,281-->
 
 Nyckeltal för att räkna Likviditet (2)
 ??
 - **Kassalikviditet**: Sätter de mest likvida delarna av företagets [[Omsättningstillgångar]] i relation till de kortfristiga skulderna, exempelvis inkluderas inte [[Kundfordringar]]. Relationen bör minst uppgå till 1, alltså har företaget råd med att betala alla sina kortfristiga skulder.
 - **Balanslikviditet**: Sätter alla omsättningstillgångar i relation till de kortfristiga skulderna. Relationen bör minst uppgå till 2.
-<!--SR:!2024-03-15,9,257!2024-03-14,8,257-->
+<!--SR:!2024-05-14,22,257!2024-05-20,28,277-->
 
 Bristkostnad (Definition):: Kostnader företaget får för att de har dålig likviditet och behöver använda nödlösningar för att öka sin likviditet, minskar om ==likviditetsreserven== är hög
+<!--SR:!2024-04-25,3,261!2024-04-25,3,261-->

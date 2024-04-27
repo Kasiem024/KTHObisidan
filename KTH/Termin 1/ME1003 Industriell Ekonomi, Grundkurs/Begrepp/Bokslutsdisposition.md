@@ -6,7 +6,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003/ME1003KS3 #CM1005/CM1005KS4
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003/ME1003KS3 #CM1005/CM1005KS4 #HH1802/HH1802KS4
 
 ---
 
@@ -18,6 +18,14 @@ Det finns två huvudtyper av Bokslutsdispositioner:
 
 - [[Överavskrivning]]
 - [[Periodiseringsfond]]
+
+### Resultatutrymme
+
+Resultatutrymmet är skillnaden mellan företagets resultat före Bokslutsdispositioner och resultatet före skatt.
+
+Positivt Resultatutrymme: Avsättningar till [[Obeskattade Reserver]] krävs.
+
+Negativt Resultatutrymme: Upplösning av [[Obeskattade Reserver]] krävs.
 
 ## Kopplat till
 

@@ -40,5 +40,7 @@ Faktorer som påverkar Rörelsekapitalets storlek (3)
 - ==Utbetalningar per produktenhet==: Stora och tidiga utbetalningar per produktenhet leder till mer kapitalbindning.
 - ==Genomloppstid==: Lång genomloppstid leder till mer kapitalbindning eftersom många enheter är i produktionsprocessen samtidigt.
 - ==Omsättningen==: Antalet enheter som omsätts per tidsperiod påverkar Rörelsekapitalets storlek.
+<!--SR:!2024-04-26,3,257!2024-04-27,4,275-->
 
 Genomsnittlig Kapitalbindning per Enhet (Definition);; Genomsnittlig Kapitalbindning per Enhet är den genomsnittliga tiden som en enhet har kapital bundet i sig, den beror på när utbetalningarna inträffar. Ju tidigare i ledtiden som betalningen inträffar ju större kapitalbindningen blir
+<!--SR:!2024-04-25,3,255-->

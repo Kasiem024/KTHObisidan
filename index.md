@@ -6,4 +6,4 @@ title: Hem
 
 Använd taggarna och sök funktionen för att hitta relevanta anteckningar.
 
-Taggar: #HH1802 #HH1802/HH1802KS1 #HU1801
+Taggar: #HH1802 #HU1801

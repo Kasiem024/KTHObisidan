@@ -57,6 +57,8 @@ $$
 
 Ställkostnad är en kostnad som motsvarar beställningssärkostnaden. Ju större serier som tillverkas desto mindre blir företagets totala Ställkostnad.
 
+Ställkostnad är kostnaden från att byta tillverkningen från en serie av produkter till en annan.
+
 ### Servicegrad
 
 Servicegrad är ett mått på företagets förmåga att leverera en produkt, ==leveransförmåga==.
@@ -93,6 +95,7 @@ $$
 ## Flashcards
 
 Varulager (Definition):: Tillgångar som är avsedda för tillverkning och förbrukning
+<!--SR:!2024-04-27,4,277!2024-04-27,4,277-->
 
 Lagertillgångars kategorisering efter motiv (4)
 ??
@@ -100,6 +103,7 @@ Lagertillgångars kategorisering efter motiv (4)
 - ==Säkerhetslager==: Lagervaror som används som en buffert mot risken av leveransstörningar.
 - ==Utjämningslager==: När man ökar sitt FVL för att bemöta efterfrågan som överstiger produktionskapaciteten, används av företag med säsong baserad efterfrågan.
 - ==Spekulationslager==: När man förväntar sig ökade prisnivåer för varor kan man köpa mer än det vanliga för att spara pengar i framtiden.
+<!--SR:!2024-04-25,3,254!2024-04-26,4,270-->
 
 Lagerhållningssärkostnad (Definition) (3)
 ??
@@ -107,17 +111,25 @@ Kostnader som uppkommer för enheter under den tiden de är i lagret, blir lägr
 - Försäkringskostnader.
 - Hyreskostnader för lagerlokal.
 - Kalkylmässig ränta på bundet kapital.
+<!--SR:!2024-04-26,3,257!2024-04-27,4,278-->
 
 Beställningssärkostnad (Definition):: Kostnader som uppstår vid varje transaktion, är i stort sett oberoende av antalet inköpta produkter vid inköpstillfället, blir lägre ju mer inköp som görs per inköpstillfälle
+<!--SR:!2024-04-25,3,250!2024-04-26,4,270-->
 
 Kvadratrotsformeln (Definition):: Används för att räkna ut den optimala inköpsvolymen med tanke på Lagerhållningssärkostnaderna och Beställningssärkostnaderna
+<!--SR:!2024-04-25,3,250!2024-04-26,4,270-->
 
 Ställkostnad (Definition):: En kostnad som motsvarar beställningssärkostnaden, minskar ju större serier som tillverkas
+<!--SR:!2024-04-25,3,254!2024-04-26,4,274-->
 
 Servicegrad (Definition):: Ett mått på företagets förmåga att leverera en produkt, ==leveransförmåga==
+<!--SR:!2024-04-25,3,250!2024-04-26,4,274-->
 
 Resurssnål Produktion (Definition):: Handlar om att identifiera och eliminera allt slöseri. ==Just in Time== är centralt, allt ska ske i precis rätt tid, ==inga mellanlager==
+<!--SR:!2024-04-25,3,254!2024-04-26,4,274-->
 
 Genomsnittlig Lageromsättningshastighet (Definition);; Ett [[Nyckeltal]] som uttrycker hur många gånger per tidsperiod som lagret omsätts i en verksamhet. Man kan veta om det är högt eller lågt genom att jämföra med andra företag i branschen, positivt om den är högre än konkurrenters då detta tyder på stark försäljning
+<!--SR:!2024-04-25,3,250-->
 
 Genomsnittlig Lagringstid (Definition);; Ett [[Nyckeltal]] som visar hur många dagar en vara ligger i lagret i genomsnitt. Eftersom det kostar att ha varor i lager är det bättre om lagringstiden är låg jämfört med andra företag i branschen
+<!--SR:!2024-04-25,3,250-->

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "373de5c2eb26bd59",
+        "id": "a1d302acc989220b",
         "type": "tabs",
         "children": [
           {
-            "id": "583bd62a6ed17207",
+            "id": "f959b3a3116d6956",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
+                "file": "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Köplagen.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
+            "file": "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Köplagen.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
+            "file": "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Köplagen.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -106,7 +106,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md"
+            "file": "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Köplagen.md"
           }
         }
       }
@@ -125,8 +125,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "583bd62a6ed17207",
+  "active": "f959b3a3116d6956",
   "lastOpenFiles": [
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Affärsidé.md",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Begrepp/Soliditet.md"

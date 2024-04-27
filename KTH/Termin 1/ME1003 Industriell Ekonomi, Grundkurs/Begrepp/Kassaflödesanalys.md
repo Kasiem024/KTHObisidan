@@ -5,7 +5,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003/ME1003KS3
+Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003/ME1003KS3 #HH1802/HH1802KS4
 
 ---
 
@@ -21,6 +21,16 @@ Summan från kassaflöde kallas saldo. Det är dina likvida medel, pengar på ba
 
 ![[Kassaflödesanalys enligt FAR ME1003.png]]
 
+### Årets Kassaflöde
+
+Årets kassaflöde är kombinationen av de 3 olika typerna av kassaflöde som företaget ska analysera. Den visar företagets [[Likviditet]] i slutet av perioden.
+
+När man gör en Kassaflödesanalys kan man dela upp den beroende på vilken av företagets verksamheter det gäller:
+
+- [[Löpande Verksamhet]]
+- [[Investeringsverksamhet]]
+- [[Finansieringsverksamhet]]
+
 ## Kopplat till
 
 - [[Årsredovisning]]
@@ -32,3 +42,9 @@ Kassaflödesanalys (Definition):: Visar ett företags likviditetsförändring un
 
 Kassaflöde (Definition):: Ditt saldo, likvida medel. Hur mycket pengar du har på bankkontot i slutet av en period
 <!--SR:!2024-03-20,34,272!2024-03-22,17,301-->
+
+Delar av verksamheten Kassaflödesanalysen ska analysera (3)
+??
+- [[Löpande Verksamhet]]
+- [[Investeringsverksamhet]]
+- [[Finansieringsverksamhet]]

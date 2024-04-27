@@ -14,56 +14,70 @@ Tags: #year2024 #KTH #ekonomi #HH1802 #övning #HH1802/HH1802KS4
 
 [[Kassaflödesanalys]]
 
-löpande verksamhet
+[[Löpande Verksamhet]]
 
-investeringsverksamheten
+[[Investeringsverksamhet]]
 
-finansieringsverksamheten
+[[Finansieringsverksamhet]]
 
-direkta metoden
+[[Löpande Verksamhet|Direkta metoden]]
 
-indirekta metoden
+[[Löpande Verksamhet|Indirekta metoden]]
 
-årets kassaflöde
+[[Kassaflödesanalys#Årets Kassaflöde|Årets Kassaflöde]]
 
 ## Kapitel 10
 
-finansiell plan
+[[Finansiell Plan]]
 
-kapitalbehov
+[[Finansiell Plan#Kapitalbehov och Finansiering|Kapitalbehov]]
 
-finansiering
+[[Finansiell Plan#Kapitalbehov och Finansiering|Finansiering]]
 
-resultatprognos
+[[Resultatprognos]]
 
-finansiellt överskott / underskott
+[[Finansiell Plan#Finansiellt överskott/underskott|Finansiellt överskott/underskott]]
 
 [[Bokslutsdisposition]]
 
 [[Bokslutspolitik]]
 
-resultatutrymme
+[[Bokslutsdisposition#Resultatutrymme|Resultatutrymme]]
 
-bokföringsmässigt värde
+[[Överavskrivning#Bokföringsmässigt Värde|Bokföringsmässigt Värde]]
 
-räkenskapsenlig avskrivning
+[[överavskrivning|Räkenskapsenlig avskrivning]]
 
-planenlig avskrivning
+[[överavskrivning|Planenlig avskrivning]]
 
-[[Överavskrivning]]
+[[Överavskrivning]] TODO FRÅGA PETER
 
 ## Kapitel 11
 
-penningvärdeförsämring, inflation
+[[Inflation|Penningvärdeförsämring, inflation]]
 
-fasta priser
+[[Inflation#Fasta Priser|Fasta Priser]]
 
-reala priser
+[[Inflation#Reala Priser|Reala Priser]]
 
-nominella priser
+[[Inflation#Nominella Priser|Nominella Priser]]
 
-köpkraft
+[[Inflation#Köpkraft|Köpkraft]]
 
-nominell kalkylränta
+[[Kalkylränta#Nominell Kalkylränta|Nominell Kalkylränta]]
 
-real kalkylränta
+[[Kalkylränta#Real Kalkylränta|Real Kalkylränta]]
+
+## Formler
+
+Nominell Kalkylränta (Formel)
+||
+$$
+r_{nom} = r_{real} + i + r_{real} * i
+$$
+
+Real Kalkylränta (Formel)
+||
+$$
+r_{real} = \frac{r_{nom} - i}{1 + i}
+$$

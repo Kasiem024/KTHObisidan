@@ -35,7 +35,8 @@ $$
 
 ## Flashcards
 
-Betalningsvillkor (Definition):: Villkor som gäller vid betalning av en produkt, information om hur betalningen ska gå till, exempelvis **betalningsmetod och leverans**
+Betalningsvillkor (Definition);; Villkor som gäller vid betalning av en produkt, information om hur betalningen ska gå till, exempelvis **betalningsmetod och leverans**
+<!--SR:!2024-04-25,3,252-->
 
 Betalningsvillkor Exempel (4)
 ??
@@ -43,5 +44,7 @@ Betalningsvillkor Exempel (4)
 - [[Dröjsmålsränta]]
 - Faktureringsavgifter
 - Påminnelseavgifter
+<!--SR:!2024-04-26,3,252!2024-04-27,4,272-->
 
 Genomsnittlig Betalningstid (Definition):: Anger den genomsnittliga tiden det tar för ett företag att få betalt efter att en faktura har skickats
+<!--SR:!2024-04-26,3,252!2024-04-26,4,270-->
