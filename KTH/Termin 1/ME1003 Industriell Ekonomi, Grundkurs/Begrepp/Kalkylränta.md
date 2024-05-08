@@ -37,5 +37,7 @@ Kalkylränta (r) (Definition):: Visar värdet av en framtida investering idag, a
 <!--SR:!2024-02-25,2,210!2024-04-10,3,266-->
 
 Nominell Kalkylränta (Definition):: Den avtalade räntan som anges i procent per år, tar inte hänsyn till [[Inflation]]
+<!--SR:!2000-01-01,1,250!2024-05-10,2,247-->
 
 Real Kalkylränta (Definition):: Den verkliga avkastningen på investeringen efter att man har tagit hänsyn till [[Inflation]]
+<!--SR:!2024-05-10,2,247!2024-05-11,3,267-->

@@ -9,6 +9,8 @@ Tags: #year2024 #KTH #ekonomi #ME1003 #övning #ME1003/ME1003KS2
 
 ---
 
+[[Eget Kapital]]
+
 ## Kapitel 8 Ekonomisk Analys och Produktkalkylering
 
 1. Varför är det viktigt att företag löpande analyserar olika ekonomiska förhållanden i sin verksamhet? Ge minst två anledningar.

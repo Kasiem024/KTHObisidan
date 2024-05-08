@@ -35,10 +35,12 @@ Köpkraft är pengars värde i förhållande till gällande priser i ett samhäl
 ## Flashcards
 
 Inflation (Definition):: Handlar om att pengar förlorar sitt värde med tiden och har försämrad köpkraft
+<!--SR:!2024-05-11,3,250!2000-01-01,1,250-->
 
 Fasta Priser (Definition):: När man enbart bryr sig om ==volymförändringar==, prognosen utgår från de priser som gäller vid prognostillfället och **ignorerar prisförändringar**
 
 Reala Priser (Definition):: När man tar hänsyn till prisförändringar på individuella produkter men bortser från de effekter som en eventuell penningvärdesförsämring skulle ha på prisutvecklingen. Alltså, priserna prognostiseras som om det inte skulle finnas någon inflation, det är **förändringarna i prisrelationer som prognostiseras**
+<!--SR:!2000-01-01,1,250!2024-05-12,4,270-->
 
 Nominella Priser (Definition):: Beräknas genom att ett prognostiserat realt pris räknas upp med en ==inflationsfaktor==. **Förändringar i prisrelationer och prisförändringar prognostiseras**
 

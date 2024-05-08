@@ -34,7 +34,7 @@ Bokföringsmässigt värde är värdet av en tillgång i företagets [[Balansrä
 
 ## Flashcards
 
-Överavskrivning (Definition):: En typ av [[Bokslutsdisposition]] som ger företag rätten att i [[Balansräkning]] ta upp värdet av [[Anläggningstillgångar]] till ett lägre värde än vad tillgångens [[Ekonomisk Livslängd]] skulle motivera
+Överavskrivning (Definition):: En typ av [[Bokslutsdisposition]] som ger företag rätten att i [[Balansräkning]] ta upp värdet av [[Anläggningstillgångar]] till ett lägre värde än vad tillgångens [[Ekonomisk Livslängd]] skulle motivera, **är skillnaden mellan räkenskapsenliga avskrivningar och planenliga avskrivningar**
 
 Planenliga Avskrivningar (Definition):: Den årliga värdeminskningen av [[Anläggningstillgångar]]
 <!--SR:!2024-03-13,7,266!2024-03-21,13,270-->
@@ -43,3 +43,4 @@ Räkenskapsenliga Avskrivningar (Definition):: Skattemässiga avskrivningar, nä
 <!--SR:!2024-03-12,6,266!2024-03-20,12,286-->
 
 Bokföringsmässigt värde (Definition):: Värdet [[Tillgångar]] har i företagets [[Balansräkning]], anskaffningsvärdet minus ackumulerade avskrivningar
+<!--SR:!2024-05-11,3,258!2024-05-12,4,278-->

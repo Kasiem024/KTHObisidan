@@ -41,7 +41,7 @@ $$
 
 Bristkostnaden utgörs av de extra kostnader som drabbar företaget då det på grund av likviditetsbrist tvingas tillgripa nödlösningar av olika slag. Ju större ==likviditetsreserven== är desto lägre bli Bristkostnaden.
 
-Alltså, Bristkostnad är de kostnader som företaget får för att de har dålig likviditet och behöver använda nödlösningar för att öka sin likviditet.
+Alltså, Bristkostnad är de kostnader som företaget får för att de saknar något, exempelvis dålig likviditet, och behöver använda nödlösningar för att lösa problemet.
 
 ## Kopplat till
 
@@ -52,16 +52,14 @@ Alltså, Bristkostnad är de kostnader som företaget får för att de har dåli
 Likviditet (Definition):: Ett [[Nyckeltal]] som visar företagets kortsiktiga betalningsförmåga. Alltså förmågan att kunna betala sina räkningar på kort sikt, vad man har på bankkontot
 <!--SR:!2024-05-12,20,277!2024-05-08,16,297-->
 
-Likvida medel (Definition):: De pengar företaget har tillgängliga, betalningsförmåga på kort sikt
-<!--SR:!2024-05-25,81,300!2024-05-22,30,321-->
-
-Exempel på Likvida Medel (4)
+Likvida medel (Definition) (4)
 ??
+De pengar företaget har tillgängliga, betalningsförmåga på kort sikt
 - Kontanter
 - Tillgodohavande på banker
 - Kortfristiga placeringar
-- Checkräkningskredit
-<!--SR:!2024-04-25,1,201!2024-04-26,4,281-->
+- Checkräkningskredit 
+<!--SR:!2024-05-25,81,300!2024-05-22,30,321-->
 
 Nyckeltal för att räkna Likviditet (2)
 ??
@@ -69,5 +67,5 @@ Nyckeltal för att räkna Likviditet (2)
 - **Balanslikviditet**: Sätter alla omsättningstillgångar i relation till de kortfristiga skulderna. Relationen bör minst uppgå till 2.
 <!--SR:!2024-05-14,22,257!2024-05-20,28,277-->
 
-Bristkostnad (Definition):: Kostnader företaget får för att de har dålig likviditet och behöver använda nödlösningar för att öka sin likviditet, minskar om ==likviditetsreserven== är hög
-<!--SR:!2024-04-25,3,261!2024-04-25,3,261-->
+Bristkostnad (Definition):: Kostnader företaget får för att de saknar något, exempelvis dålig likviditet, och behöver använda nödlösningar för att lösa problemen
+<!--SR:!2024-05-05,7,261!2024-05-09,12,281-->

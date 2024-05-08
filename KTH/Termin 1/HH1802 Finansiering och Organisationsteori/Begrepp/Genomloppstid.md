@@ -40,7 +40,7 @@ Den tid från att produkten först börjar tillverkas tills den levereras till s
 - Kötider
 - Omställningstider
 - Produktionstider
-<!--SR:!2024-04-26,2,212!2024-04-26,4,270-->
+<!--SR:!2024-05-01,4,212!2024-05-14,16,290-->
 
 Genomsnittlig Ledtid (Definition);; Genomsnittlig Ledtid är den genomsnittliga ledtiden för alla produkter. Eftersom ledtiden för enstaka produkter kan variera kraftigt är det den Genomsnittliga Ledtiden som är viktig att veta, ledtid är ej produktiv tid mellan arbetsmoment
-<!--SR:!2024-04-26,3,250-->
+<!--SR:!2024-05-05,7,250-->

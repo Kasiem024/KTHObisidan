@@ -4,35 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "f6266ff89a99f440",
+        "id": "67f31dd53d934897",
         "type": "tabs",
         "children": [
           {
-            "id": "1fd5b7f722a5c42b",
+            "id": "656f7b04cacefaa9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-08 Lektion HH1802.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "68242a8880ef9f63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-26 Lektion HH1802.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4cab2311e5533bf5",
+            "id": "a10345bc5d593b75",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -43,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS4 HH1802.md"
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-08 Lektion HH1802.md"
               }
             }
           },
@@ -124,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS4 HH1802.md",
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-08 Lektion HH1802.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS4 HH1802.md",
+                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-08 Lektion HH1802.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,8 +150,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -183,44 +169,43 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4cab2311e5533bf5",
+  "active": "656f7b04cacefaa9",
   "lastOpenFiles": [
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Resultatprognos.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Löpande Verksamhet.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Inflation.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Finansiell Plan.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Kalkylränta.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/05-08 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-08 Lektion HH1802.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS4 HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Inflation.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Överavskrivning.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Avskrivning.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Tillgångar.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 10-12 KS3 ME1003.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Bokslutsdisposition.md",
-    "index.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Bokslutspolitik.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-26 Lektion HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Finansiell Plan.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Resultatprognos.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Kassaflödesanalys.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Löpande Verksamhet.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Investeringsverksamhet.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Finansieringsverksamhet.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-26 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Skuld.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Rörelsekapital.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-24 Lektion HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-06 Lektion HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-30 Lektion HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-30 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/PDFs/KS3 Kalkyl2 Komplettering HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/05-06 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-29 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-29 Lektion HH1802.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-24 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-24 Lektion HH1802.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Kapital.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-26 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-26 Lektion HH1802.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nyckeltal.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Påläggskalkylering.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Överavskrivning.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/AIDA.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/Kopia av KS3 Exempel Journal HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/KS3 Exempel Journal HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Varulager.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Likviditet.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 8-9 KS2 ME1003.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 10-12 KS3 ME1003.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Betalningsvillkor.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Varutransaktion.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Omsättningstillgångar.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 1-7 KS1 ME1003.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Marknadsföringsmixen 4P.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-18 Lektion ME1003.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-23 Lektion ME1003.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Kundorderpunkten.md",
     "KTH/Termin 1/HU1801 Industriell Marknadsföring/PDFs/Litteraturlista/Marketing Management 2019 European Edition 4.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-10 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-28 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-19 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-15 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-17 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-16 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/03-27 Journal Lektion HH1802.pdf",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Kassaflödesanalys enligt FAR ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/DuPont-Schema ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Företags Kapitalstruktur ME1003.png",

@@ -95,7 +95,7 @@ $$
 ## Flashcards
 
 Varulager (Definition):: Tillgångar som är avsedda för tillverkning och förbrukning
-<!--SR:!2024-04-27,4,277!2024-04-27,4,277-->
+<!--SR:!2024-05-09,11,277!2024-05-08,11,277-->
 
 Lagertillgångars kategorisering efter motiv (4)
 ??
@@ -103,7 +103,7 @@ Lagertillgångars kategorisering efter motiv (4)
 - ==Säkerhetslager==: Lagervaror som används som en buffert mot risken av leveransstörningar.
 - ==Utjämningslager==: När man ökar sitt FVL för att bemöta efterfrågan som överstiger produktionskapaciteten, används av företag med säsong baserad efterfrågan.
 - ==Spekulationslager==: När man förväntar sig ökade prisnivåer för varor kan man köpa mer än det vanliga för att spara pengar i framtiden.
-<!--SR:!2024-04-25,3,254!2024-04-26,4,270-->
+<!--SR:!2024-05-06,9,254!2024-05-12,14,290-->
 
 Lagerhållningssärkostnad (Definition) (3)
 ??
@@ -111,25 +111,25 @@ Kostnader som uppkommer för enheter under den tiden de är i lagret, blir lägr
 - Försäkringskostnader.
 - Hyreskostnader för lagerlokal.
 - Kalkylmässig ränta på bundet kapital.
-<!--SR:!2024-04-26,3,257!2024-04-27,4,278-->
+<!--SR:!2024-05-05,8,257!2024-05-14,17,298-->
 
 Beställningssärkostnad (Definition):: Kostnader som uppstår vid varje transaktion, är i stort sett oberoende av antalet inköpta produkter vid inköpstillfället, blir lägre ju mer inköp som görs per inköpstillfälle
-<!--SR:!2024-04-25,3,250!2024-04-26,4,270-->
+<!--SR:!2024-05-06,8,250!2024-05-09,12,270-->
 
 Kvadratrotsformeln (Definition):: Används för att räkna ut den optimala inköpsvolymen med tanke på Lagerhållningssärkostnaderna och Beställningssärkostnaderna
-<!--SR:!2024-04-25,3,250!2024-04-26,4,270-->
+<!--SR:!2024-05-06,8,250!2024-05-13,15,290-->
 
-Ställkostnad (Definition):: En kostnad som motsvarar beställningssärkostnaden, minskar ju större serier som tillverkas
-<!--SR:!2024-04-25,3,254!2024-04-26,4,274-->
+Ställkostnad (Definition):: En kostnad som motsvarar beställningssärkostnad, minskar ju större serier som tillverkas, **kostnaden att börja tillverka en ny serie av produkter**
+<!--SR:!2024-05-05,8,254!2024-05-15,17,294-->
 
 Servicegrad (Definition):: Ett mått på företagets förmåga att leverera en produkt, ==leveransförmåga==
-<!--SR:!2024-04-25,3,250!2024-04-26,4,274-->
+<!--SR:!2024-05-05,8,250!2024-05-13,15,294-->
 
 Resurssnål Produktion (Definition):: Handlar om att identifiera och eliminera allt slöseri. ==Just in Time== är centralt, allt ska ske i precis rätt tid, ==inga mellanlager==
-<!--SR:!2024-04-25,3,254!2024-04-26,4,274-->
+<!--SR:!2024-05-08,10,254!2024-05-14,16,294-->
 
 Genomsnittlig Lageromsättningshastighet (Definition);; Ett [[Nyckeltal]] som uttrycker hur många gånger per tidsperiod som lagret omsätts i en verksamhet. Man kan veta om det är högt eller lågt genom att jämföra med andra företag i branschen, positivt om den är högre än konkurrenters då detta tyder på stark försäljning
-<!--SR:!2024-04-25,3,250-->
+<!--SR:!2024-05-05,7,250-->
 
 Genomsnittlig Lagringstid (Definition);; Ett [[Nyckeltal]] som visar hur många dagar en vara ligger i lagret i genomsnitt. Eftersom det kostar att ha varor i lager är det bättre om lagringstiden är låg jämfört med andra företag i branschen
-<!--SR:!2024-04-25,3,250-->
+<!--SR:!2024-05-04,6,250-->

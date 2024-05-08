@@ -51,7 +51,7 @@ Alltså handlar den materiella aspekten av en Varutransaktion om hur köparens b
 
 Villkor gällande köparens betalning för sin beställning ska avtals om, då kallas de för [[Betalningsvillkor]]. Vad är beloppet, hur ska betalningen ske, när ska betalningen ske, finns det en rabatt och [[Dröjsmålsränta]].
 
-[[Hemtagningsutgift]]: Alla utgifter som gör att varan levereras till mig:
+[[Hemtagningsutgift]] är alla utgifter som gör att varan levereras till mig, exempelvis:
 
 - Transport
 - Tull
