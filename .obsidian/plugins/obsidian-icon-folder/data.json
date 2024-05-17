@@ -1,9 +1,9 @@
 {
   "settings": {
-    "migrated": 4,
+    "migrated": 5,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 15,
-    "emojiStyle": "none",
+    "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
       "SiGithub",
@@ -101,7 +101,8 @@
     "iconsInLinksEnabled": true,
     "debugMode": false,
     "iconInFrontmatterFieldName": "icon",
-    "iconColorInFrontmatterFieldName": "iconColor"
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconInTitlePosition": "above"
   },
   "Obsidian Plugins": "SiObsidian",
   "KTH": "FasSchool"

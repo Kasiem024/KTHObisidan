@@ -38,9 +38,8 @@ När man gör en Kassaflödesanalys kan man dela upp den beroende på vilken av 
 ## Flashcards
 
 Kassaflödesanalys (Definition):: Visar ett företags likviditetsförändring under en viss period. Alltså [[Inbetalning]] och [[Utbetalning]] för en viss period, visar hur företaget har anskaffat och använt kapital
-<!--SR:!2024-03-11,4,236!2024-03-24,17,294-->
+<!--SR:!2024-05-21,11,236!2024-06-09,30,314-->
 
-Kassaflöde (Definition):: Ditt saldo, likvida medel. Hur mycket pengar du har på bankkontot i slutet av en period
 <!--SR:!2024-03-20,34,272!2024-03-22,17,301-->
 
 Delar av verksamheten Kassaflödesanalysen ska analysera (3)
@@ -48,3 +47,4 @@ Delar av verksamheten Kassaflödesanalysen ska analysera (3)
 - [[Löpande Verksamhet]]
 - [[Investeringsverksamhet]]
 - [[Finansieringsverksamhet]]
+<!--SR:!2024-05-20,7,259!2024-05-30,16,299-->

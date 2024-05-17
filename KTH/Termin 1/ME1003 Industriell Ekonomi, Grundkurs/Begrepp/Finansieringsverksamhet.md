@@ -30,3 +30,4 @@ En del av [[Kassaflödesanalys]], handlar om pengar som strömmar in eller ut fr
 - Utgivning eller återköp av aktier, [[Nyemission]].
 - Utdelning till aktieägare.
 - Upptagning och amortering av lån.
+<!--SR:!2024-05-23,10,250!2024-05-29,15,290-->

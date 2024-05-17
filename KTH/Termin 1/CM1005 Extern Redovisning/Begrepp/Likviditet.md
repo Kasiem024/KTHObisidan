@@ -58,7 +58,7 @@ De pengar företaget har tillgängliga, betalningsförmåga på kort sikt
 - Kontanter
 - Tillgodohavande på banker
 - Kortfristiga placeringar
-- Checkräkningskredit 
+- Checkräkningskredit
 <!--SR:!2024-05-25,81,300!2024-05-22,30,321-->
 
 Nyckeltal för att räkna Likviditet (2)

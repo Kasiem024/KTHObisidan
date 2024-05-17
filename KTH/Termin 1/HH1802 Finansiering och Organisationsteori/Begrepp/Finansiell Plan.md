@@ -39,16 +39,20 @@ Om finansieringen överstiger kapitalbehovet blir det ett Finansiellt överskott
 ## Flashcards
 
 Finansiell Plan (Definition):: Visar ett företags kapitalanvändning och -anskaffning några år i framtiden, baseras på företagets egna mål och strategier men också faktorer som företaget inte har kontroll över
+<!--SR:!2024-05-18,5,236!2024-05-31,17,294-->
 
 Faktorer i den Finansiella planen utanför företagets kontroll (3)
 ??
 - Konjunkturutveckling
 - Räntenivåer
 - Inflationstakt
+<!--SR:!2024-05-19,6,254!2024-05-29,15,294-->
 
 Kapitalbehov (Definition):: Hur mycket kapital företaget behöver för att finansiera sin verksamhet och uppnå sina mål, ska matcha företagets finansiering
-<!--SR:!2000-01-01,1,250!2024-05-12,4,270-->
+<!--SR:!2024-05-21,8,252!2024-05-29,16,290-->
 
 Finansiering (Definition):: Hur ett företag anskaffar det kapital som behövs för att finansiera sin verksamhet, ska matcha kapitalbehovet, summan av [[Eget Kapital]] och [[Skuld]]
+<!--SR:!2024-05-20,7,252!2024-05-27,13,292-->
 
 Finansiellt överskott/underskott (Definition);; Finansiellt överskott/underskott syftar på **om företagets finansiering räcker till att möta kapitalbehovet**. Om finansieringen understiger kapitalbehovet blir det ett Finansiellt underskott. Om finansieringen överstiger kapitalbehovet blir det ett Finansiellt överskott.
+<!--SR:!2024-05-21,8,254-->

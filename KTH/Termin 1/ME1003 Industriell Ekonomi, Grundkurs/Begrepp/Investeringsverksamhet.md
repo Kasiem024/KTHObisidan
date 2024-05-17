@@ -19,3 +19,4 @@ Investeringsverksamhets [[Kassaflödesanalys]] handlar om pengar som rör sig ge
 ## Flashcards
 
 Investeringsverksamhet (Definition):: En del av [[Kassaflödesanalys]], handlar om pengar som rör sig genom företagets investeringsaktiviteter. Exempelvis köp eller sälj av tillgångar eller förvärv av andra företag
+<!--SR:!2024-05-23,10,250!2024-05-28,14,290-->

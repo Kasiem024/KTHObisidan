@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8a2d5bc30af38538",
+        "id": "a95cf87e5fb0c88d",
         "type": "tabs",
         "children": [
           {
-            "id": "7b8b9e8450a0e08e",
+            "id": "c2caaa028061d55d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,7 +73,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -105,9 +99,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md"
-          }
+          "state": {}
         }
       }
     ],
@@ -125,8 +117,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7b8b9e8450a0e08e",
+  "active": "c2caaa028061d55d",
   "lastOpenFiles": [
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/KS4 Exempel Journal HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
     "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Köplagen.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",

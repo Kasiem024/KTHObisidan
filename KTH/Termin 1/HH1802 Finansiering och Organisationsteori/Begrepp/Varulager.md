@@ -67,7 +67,7 @@ Exempel: Om man bestämmer att Servicegraden ska vara 90% betyder det att kunder
 
 ### Resurssnål Produktion
 
-Resurssnål produktion, eller Lean Production,  handlar om att identifiera och eliminera allt sådant i en produktionsprocess som inte skapar värde för slut kunden, alltså minska slöseri. En stor del av Lean Production är ==Just in Time==, vilket handlar om att allt ska ske i precis rätt tid, alltså inga buffertar eller mellanlager.
+Resurssnål produktion, eller Lean Production, handlar om att identifiera och eliminera allt sådant i en produktionsprocess som inte skapar värde för slut kunden, alltså minska slöseri. En stor del av Lean Production är ==Just in Time==, vilket handlar om att allt ska ske i precis rätt tid, alltså inga buffertar eller mellanlager.
 
 ### Genomsnittlig Lageromsättningshastighet
 

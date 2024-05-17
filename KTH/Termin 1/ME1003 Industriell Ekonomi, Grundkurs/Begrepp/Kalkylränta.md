@@ -23,21 +23,21 @@ $$
 
 ### Nominell Kalkylränta
 
-Nominell Kalkylränta är den avtalade räntan som anges i procent per år. Den tar inte hänsyn till [[Inflation]].
+Nominell Kalkylränta är den verkliga avkastningen på investeringen efter att man har tagit hänsyn till [[Inflation]].
 
 ### Real Kalkylränta
 
-Real Kalkylränta är den verkliga avkastningen på investeringen efter att man har tagit hänsyn till [[Inflation]].
+Real Kalkylränta är den avtalade räntan som anges i procent per år. Den tar inte hänsyn till [[Inflation]].
 
 ## Kopplat till
 
 ## Flashcards
 
-Kalkylränta (r) (Definition):: Visar värdet av en framtida investering idag, alltså värdet av investeringen i relation till [[Grundinvestering]], det är avkastningskravet som ett företag ställer på en investering, ju högre det är ju svårare det är för en investering att ha hög [[Lönsamhet]]
-<!--SR:!2024-02-25,2,210!2024-04-10,3,266-->
+Kalkylränta (r) (Definition):: Avkastningskravet som ett företag ställer på en investering, ju högre det är ju svårare det är för en investering att ha hög [[Lönsamhet]]
+<!--SR:!2024-05-21,7,210!2024-05-20,10,286-->
 
-Nominell Kalkylränta (Definition):: Den avtalade räntan som anges i procent per år, tar inte hänsyn till [[Inflation]]
-<!--SR:!2000-01-01,1,250!2024-05-10,2,247-->
+Nominell Kalkylränta (Definition):: Kalkylränta med inflation inkluderat
+<!--SR:!2024-05-18,2,169!2024-05-19,9,267-->
 
-Real Kalkylränta (Definition):: Den verkliga avkastningen på investeringen efter att man har tagit hänsyn till [[Inflation]]
-<!--SR:!2024-05-10,2,247!2024-05-11,3,267-->
+Real Kalkylränta (Definition):: Kalkylränta utan inflation
+<!--SR:!2024-05-29,13,247!2024-05-25,12,287-->

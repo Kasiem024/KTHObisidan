@@ -32,4 +32,4 @@ Negativt Resultatutrymme: Upplösning av [[Obeskattade Reserver]] krävs.
 ## Flashcards
 
 Bokslutsdisposition (Definition):: Ger företag möjlighet att inom vissa ramar minska det redovisade resultatet. De är bokföringsmässiga kostnader som redovisas som kostnader i [[Resultaträkning]] och som samtidigt ger upphov till [[Obeskattade Reserver]] i [[Balansräkning]]
-<!--SR:!2024-03-14,6,250!2024-03-20,13,290-->
+<!--SR:!2024-05-24,14,250!2024-06-09,30,290-->

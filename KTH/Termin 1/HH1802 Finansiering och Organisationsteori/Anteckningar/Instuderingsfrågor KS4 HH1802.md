@@ -50,7 +50,7 @@ Tags: #year2024 #KTH #ekonomi #HH1802 #övning #HH1802/HH1802KS4
 
 [[överavskrivning|Planenlig avskrivning]]
 
-[[Överavskrivning]] TODO FRÅGA PETER
+[[Överavskrivning]]
 
 ## Kapitel 11
 
@@ -75,9 +75,11 @@ Nominell Kalkylränta (Formel)
 $$
 r_{nom} = r_{real} + i + r_{real} * i
 $$
+<!--SR:!2024-05-23,7,250-->
 
 Real Kalkylränta (Formel)
 ||
 $$
 r_{real} = \frac{r_{nom} - i}{1 + i}
 $$
+<!--SR:!2024-05-20,4,230-->
