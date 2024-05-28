@@ -37,12 +37,24 @@ Exempel på expansion genom eget kapital kapital (4)
 - Ägarinsättning
 - Vinster behålls i företaget
 
+Nyemission (Definition):: När ett företag utfärdar nya aktier för att få in mer kapital ([[Tillgångar]], [[Eget Kapital]] ökar), priset av de nya aktierna är vanligtvis lägre än de gamla
+
+Riktad Emission (Definition):: När aktieägare säljer emitterade aktier till nya ägare, exempelvis ett köpande företag emitterar aktier i det egna företaget som erläggs i utbyte mot aktierna i det köpta företaget
+
 Exempel på expansion genom främmande kapital (4)
 ??
 - Banklån
 - [[Factoring]]
 - Leverantörsskulder, längre betalningstid
 - [[Leasing]] av utrustning
+
+Factoring (Definition):: Belåning eller försäljning av kundfordringar, när ett företag har låg likviditet går de till ett bolag för att ta ett lån
+
+Leasing (Definition);; Ett annat ord för hyra, utgår på att inte köpa en maskin men hyra den vilket leder till ett **flertal små utbetalningar över en längre period.** Detta gör man för att undvika en stor utbetalning vid anskaffningstillfället, vilket **förbättrar företagets likviditet**
+
+Operationell Leasing (Definition):: Ett vanligt hyresavtal, maskinen hyrs ut istället för att säljas av maskintillverkaren, det är också tillverkaren som ansvarar för drift och service
+
+Finansiell Leasing (Definition):: När den som hyr in maskinen ansvarar för maskinens service. Detta sker vanligtvis genom speciella ==leasingföretag==
 
 Exempel på kännetecken för en effektiv organisation (3)
 ??
@@ -84,13 +96,43 @@ Aspekter som är relevanta inom hållbar utveckling (3)
 - Samhället/Anställda: [[Arbetsrättsliga Lagar]] (LAS, AML, MBL, Diskrimineringslagen)
 - Miljö
 
-Lagen om anställningsskydd (LAS) (Definition):: En lag som skyddar de anställda för det mesta när det kommer till uppsägningar och provanställningar
+Exempel på [[Arbetsrättsliga Lagar]] (4)
+??
+- ==Lagen om anställningsskydd (LAS)==: Skyddar de anställda för det mesta när det kommer till uppsägningar och provanställningar.
+- ==Arbetsmiljölagen (AML)==: Regler om skyldigheter för arbetsgivare om att förebygga ohälsa och olycksfall i arbetet.
+- ==Medbestämmandelagen (MBL)==: Reglerar rätten för arbetsgivare och arbetstagare att organisera sig och kalla till kollektiva förhandlingar med sin motpart, alltså fackförbund.
+- ==Diskrimineringslagen==: Syftet är att motverka diskriminering och främja lika rättigheter och möjligheter för alla.
 
-Arbetsmiljölagen (Definition):: Regler om skyldigheter för arbetsgivare om att förebygga ohälsa och olycksfall i arbetet
+Rörelsekapitalbehov på kort sikt (5)
+??
+- ==Tidsmetoden==
+- ==Balansmetoden==
+- ==Säkerhetskapital==: Används för att skapa en buffert för att klara störningar och oförutsedda problem.
+- [[Resultatprognos]]: Används för att uppskatta [[Intäkt]] och [[Kostnad]] för ett [[Räkenskapsår]], viktig när företag ska göra en [[Finansiell Plan]] då en uppskattning av årets resultat kan utläsas.
+- [[Finansiell Plan]]: Visar ett företags kapitalanvändning och -anskaffning några år i framtiden, baseras på företagets egna mål och strategier men också faktorer som företaget inte har kontroll över.
 
-Medbestämmandelagen (MBL) (Definition):: En lag som reglerar rätten för arbetsgivare och arbetstagare att organisera sig och kalla till kollektiva förhandlingar med sin motpart, alltså fackförbund
+Anläggningskapitalbehov på lång sikt (7)
+??
+- [[Anläggningstillgångar]]/[[Investeringskalkylering]]
+	- [[Nuvärdemetoden]]: En ränteräkningsmetod som med hjälp av [[Kalkylränta]] räknar om de olika investeringsalternativens betalningar till en och samma tidpunkt, till början av det år då ==grundinvesteringen== görs, hur mycket skulle avkastningen varit om vi satte in pengarna i banken istället för att göra investeringen.
+	- [[Annuitetsmetoden]]: När man räknar om investeringens betalningar, både [[Grundinvestering]] och framtida betalningar, till belopp som är lika stora varje år, alltså räknar man ut den genomsnittliga årliga betalningen för en [[Investering]].
+	- [[Internräntemetoden]]: Handlar om att veta den högsta [[Kalkylränta]] en viss investering kan ha och ändå räknas som lönsam enligt [[Nuvärdemetoden]], alltså räknar man ut kalkylräntan.
+	- [[Återbetalningsmetoden]]: Visar den tiden det tar innan [[Grundinvestering]] är återbetald, ju kortare tid ju bättre.
+- [[Resultatprognos]]: Används för att uppskatta [[Intäkt]] och [[Kostnad]] för ett [[Räkenskapsår]], viktig när företag ska göra en [[Finansiell Plan]] då en uppskattning av årets resultat kan utläsas.
+- [[Finansiell Plan]]: Visar ett företags kapitalanvändning och -anskaffning några år i framtiden, baseras på företagets egna mål och strategier men också faktorer som företaget inte har kontroll över.
 
-Diskrimineringslagen (Definition):: En lag vars syfte är att främja lika rättigheter och möjligheter för alla
+Olika ledarstilar (5)
+??
+- ==Auktoritär ledarstil==
+	- När ledaren bestämmer allt själv och ger order.
+- ==Demokratisk ledarstil==
+	- När ledaren låter sina underställda delta i beslutsfattandet.
+- ==Laissez-faire-ledarstil==
+	- När ledaren är passiv och inte beter sig som en ledare.
+- ==Managerial grid==
+	- När vilken typ av ledare man är beror på hur mycket intresse man har för människor och hur mycket intresse för verksamheten.
+- ==Situationsanpassade ledarskapsmodellen==
+	- När ledaren anpassar sig efter mognaden av gruppen.
 
 ### Nyckeltal
 
