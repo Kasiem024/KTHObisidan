@@ -152,10 +152,3 @@ $$
 
 Nyckeltal (Definition):: Används för att värdera ett företag och dess verksamhet, kan användas för att jämföra olika företag och för att få en bättre översikt på ett företag
 <!--SR:!2024-03-16,9,270!2024-03-19,13,288-->
-
-Tidsmetoden/Balansräkningsmetoden (Formel)
-||
-$$
-Kapitalbindning = Antal \, dagar * Kostnad/styck * Produktionsvolym/dag
-$$
-<!--SR:!2024-03-09,1,234-->
