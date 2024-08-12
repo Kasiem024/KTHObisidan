@@ -11,7 +11,7 @@ Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp
 
 ## Definition
 
-Verksamhet som bedrivs av en juridisk person, till exempel aktiebolag eller handelsbolag, beskattas i princip alltid som näringsverksamhet.
+Verksamhet som bedrivs av en juridisk person, till exempel [[Aktiebolag]] eller [[Handelsbolag]], beskattas i princip alltid som näringsverksamhet.
 
 När det gäller verksamhet som bedrivs av en fysisk person ska tre villkor vara uppfyllda för att det ska vara näringsverksamhet. Villkoren är:
 

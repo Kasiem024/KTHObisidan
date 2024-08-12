@@ -1,6 +1,6 @@
 {
   "settings": {
-    "migrated": 5,
+    "migrated": 6,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 15,
     "emojiStyle": "native",
@@ -102,7 +102,8 @@
     "debugMode": false,
     "iconInFrontmatterFieldName": "icon",
     "iconColorInFrontmatterFieldName": "iconColor",
-    "iconInTitlePosition": "above"
+    "iconInTitlePosition": "above",
+    "lucideIconPackType": "native"
   },
   "Obsidian Plugins": "SiObsidian",
   "KTH": "FasSchool"

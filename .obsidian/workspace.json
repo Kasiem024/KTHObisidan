@@ -4,50 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2e3bdc1a04b97daf",
+        "id": "cfd37865cc0a70a1",
         "type": "tabs",
         "children": [
           {
-            "id": "76315e9fbd920d46",
+            "id": "c4e1881b264e2577",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "562bb6b76940535f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "ebde708fe56b5c87",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4f1e29b54b0ca46c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor Ten Del C HH1802.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -103,8 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 572.5,
-    "collapsed": true
+    "width": 572.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -119,9 +83,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor Ten Del C HH1802.md"
-              }
+              "state": {}
             }
           },
           {
@@ -130,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor Ten Del C HH1802.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,9 +108,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor Ten Del C HH1802.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -169,7 +129,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -179,53 +140,53 @@
   "left-ribbon": {
     "hiddenItems": {
       "command-palette:Open command palette": false,
-      "handwritten-notes:Create empty handwritten note": true,
       "graph:Open graph view": false,
-      "omnisearch:Omnisearch": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": true,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "handwritten-notes:Create empty handwritten note": false,
+      "omnisearch:Omnisearch": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "4f1e29b54b0ca46c",
+  "active": "c4e1881b264e2577",
   "lastOpenFiles": [
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-18 Lektion HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-26 Lektion HH1802.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Risk.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Enskild Näringsverksamhet.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Näringsverksamhet.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-24 Lektion HH1802.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Aktiebolag.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-28 Lektion HH1802.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor Ten Del C HH1802.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 10-12 KS3 ME1003.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Lektioner/01-16 Lektion CM1005.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Inflation.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Obligation.md",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-24 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-20 Lektion HH1802.md",
+    "KTH/Termin 1/CM1005 Extern Redovisning/Lektioner/02-13 Lektion CM1005.md",
+    "KTH/Termin 1/SI151V Inledande Relativitetsteori/Anteckningar/Samlade Definitioner SI151V.md",
+    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Environmental Physics - 2011 - Boeker Annotation.md",
+    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Environmental Physics - 2011 - Boeker.pdf",
+    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Untitled.md",
+    "Obsidian Plugins/Templates/Annotator Template.md",
+    "KTH/Generella Anteckningar KTH.md",
+    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista",
+    "KTH/Termin 1/SK184N Miljöfysik/PDFs",
+    "KTH/Termin 1/SK184N Miljöfysik/Lektioner",
+    "KTH/Termin 1/SK184N Miljöfysik/Journal",
+    "KTH/Termin 1/SK184N Miljöfysik/Bilagor",
+    "KTH/Termin 1/SK184N Miljöfysik/Excalidraw",
+    "KTH/Termin 1/SK184N Miljöfysik/Begrepp",
+    "KTH/Termin 1/SK184N Miljöfysik/Anteckningar",
+    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
+    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Riktad Emission.md",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nyemission.md",
     "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Factoring.md",
     "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Leasing.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Arbetsrättsliga Lagar.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Kapital.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Resultatprognos.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-20 Lektion HH1802.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Återbetalningsmetoden.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Internräntemetoden.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Annuitetsmetoden.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nuvärdemetoden.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Finansiell Plan.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Investeringskalkylering.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Anläggningstillgångar.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS1 HH1802.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nyckeltal.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS4 HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS3 HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-21 Lektion HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Statsobligation.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Statsskuldväxel.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Strategiprocessen enligt Mintzberg.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/05-15 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/PDFs/KS3 Kalkyl2 Komplettering HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/KS4 Exempel Journal HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/05-13 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/05-08 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-30 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/05-06 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-29 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-24 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-26 Journal Lektion HH1802.pdf",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Kassaflödesanalys enligt FAR ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/DuPont-Schema ME1003.png",
     "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Företags Kapitalstruktur ME1003.png",
