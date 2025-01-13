@@ -7,7 +7,8 @@
       "#HH1802",
       "#HU1801",
       "#CM1005",
-      "#ME1003"
+      "#ME1003",
+      "#HI1024"
     ],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": false,
@@ -25,6 +26,7 @@
     "singleLineReversedCardSeparator": "::",
     "multilineCardSeparator": "||",
     "multilineReversedCardSeparator": "??",
+    "multilineCardEndMarker": "",
     "editLaterTag": "#edit-later",
     "enableNoteReviewPaneOnStartup": false,
     "tagsToReview": [
@@ -40,15 +42,18 @@
     "autoNextNote": true,
     "disableFileMenuReviewOptions": false,
     "maxNDaysNotesReviewQueue": 30,
+    "showRibbonIcon": true,
+    "showStatusBar": true,
     "initiallyExpandAllSubdecksInTree": true,
     "baseEase": 250,
     "lapsesIntervalChange": 0.5,
     "easyBonus": 1.3,
     "maximumInterval": 30,
     "maxLinkFactor": 1,
-    "showDebugMessages": false
+    "showDebugMessages": false,
+    "showPaserDebugMessages": false
   },
-  "buryDate": "2024-08-12",
+  "buryDate": "2024-09-18",
   "buryList": [],
   "historyDeck": null
 }

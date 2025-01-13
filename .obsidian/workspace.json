@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cfd37865cc0a70a1",
+        "id": "bac58c0b4a3dfb65",
         "type": "tabs",
         "children": [
           {
-            "id": "c4e1881b264e2577",
+            "id": "7d66057f2533643a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -35,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -49,8 +53,10 @@
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "byCreatedTime"
-              }
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -61,14 +67,16 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 572.5
+    "width": 388.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -83,7 +91,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           },
           {
@@ -92,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "KTH/2024 Höst/HE1026/Lektioner/11-14 Lektion HE1026.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +110,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": true,
                 "unlinkedCollapsed": false
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 11-14 Lektion HE1026"
             }
           },
           {
@@ -108,9 +121,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "KTH/2024 Höst/HE1026/Lektioner/11-14 Lektion HE1026.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 11-14 Lektion HE1026"
             }
           },
           {
@@ -118,7 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -126,7 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
@@ -139,40 +159,57 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "command-palette:Open command palette": false,
       "graph:Open graph view": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "command-palette:Open command palette": false,
       "obsidian-spaced-repetition:Review flashcards": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "handwritten-notes:Create empty handwritten note": false,
       "omnisearch:Omnisearch": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c4e1881b264e2577",
+  "active": "7d66057f2533643a",
   "lastOpenFiles": [
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-18 Lektion HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-26 Lektion HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Risk.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Enskild Näringsverksamhet.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Näringsverksamhet.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/04-24 Lektion HH1802.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Aktiebolag.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/03-28 Lektion HH1802.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor Ten Del C HH1802.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 10-12 KS3 ME1003.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Lektioner/01-16 Lektion CM1005.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Inflation.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Obligation.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/04-24 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Lektioner/05-20 Lektion HH1802.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Lektioner/02-13 Lektion CM1005.md",
-    "KTH/Termin 1/SI151V Inledande Relativitetsteori/Anteckningar/Samlade Definitioner SI151V.md",
-    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Environmental Physics - 2011 - Boeker Annotation.md",
-    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Environmental Physics - 2011 - Boeker.pdf",
-    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Untitled.md",
+    "Obsidian Plugins/Templates/Lektion Template.md",
+    "Obsidian Plugins/Templates/Default Template.md",
+    "Obsidian Plugins/Templates/Begrepp Template.md",
     "Obsidian Plugins/Templates/Annotator Template.md",
-    "KTH/Generella Anteckningar KTH.md",
+    "Obsidian Plugins/Theme Test.md",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-12-21 19.17.16.excalidraw.md",
+    "KTH/2024 Höst/HE1026/Lektioner/12-03 Föreläsning 15 HE1026.md",
+    "Obsidian Plugins/Excalidraw/Drawing 2024-12-03 15.12.49.excalidraw.md",
+    "KTH/2024 Höst/HE1026/Lektioner/12-02 Föreläsning 14 HE1026.md",
+    "KTH/2024 Höst/HE1026/Lektioner/Pasted image 20241202140128.png",
+    "KTH/2024 Höst/HE1026/Lektioner/Minnes Buss HE1026.png",
+    "KTH/2024 Höst/HI1024/Lektioner/08-27 Föreläsning 1 HI1024.md",
+    "KTH/2024 Höst/HF1005/Lektioner/09-02 Lektion HF1005.md",
+    "KTH/2024 Höst/HE1026/Lektioner/10-28  Föreläsning HE1026.md",
+    "KTH/2024 Höst/HE1026/Lektioner/10-29  Föreläsning HE1026.md",
+    "KTH/2024 Höst/HE1026/Lektioner/10-30 Föreläsning HE1026.md",
+    "KTH/2024 Höst/HE1026/Lektioner/11-25 Föreläsning HE1026.md",
+    "KTH/2024 Höst/HE1026/Lektioner/11-14 Föreläsning HE1026.md",
+    "KTH/2024 Höst/HE1026/Lektioner/11-04 Föreläsning HE1026.md",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Inkurans.md",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Produktionens och Marknadsföringens Olika Perspektiv.md",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
+    "KTH/2024 Höst/HE1026/Bilagor/CPLD Konstruktion HE1026.png",
+    "KTH/2024 Höst/HE1026/Bilagor/3 Signaler HE1026.png",
+    "KTH/2024 Höst/HE1026/Bilagor/Moore- och Mealy-maskiner HE1026.png",
+    "KTH/2024 Höst/HE1026/Bilagor/Sanningstabell Notation HE1026.png",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/FIRO-Modellen.md",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Affärsidé.md",
+    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor Ten Del C HH1802.md",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Arbetsrättsliga Lagar.md",
+    "KTH/2024 Höst/HE1026/Bilagor/7408 Kretslayout HE1026.png",
+    "KTH/2024 Höst/HF1005/Lektioner/11-04 Lektion HE1026.md",
+    "KTH/2024 Höst/HF1005/Lektioner/10-29 Lektion HF1005.md",
+    "KTH/2024 Höst/HE1026/Bilagor/IC Krets HE1026.png",
+    "KTH/2024 Höst/HE1026/Bilagor/Ett Digitalt System HE1026.png",
+    "KTH/2024 Höst/HE1026/Bilagor/Sanningstabell 3 In och 2 Ut HE1026.png",
+    "KTH/2024 Höst/HI1024/PDFs/Litteraturlista/C Programming 2008 Editiion 2 K N King.pdf",
+    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Journal/04-24 Journal Lektion HH1802.pdf",
+    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Environmental Physics - 2011 - Boeker.pdf",
     "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista",
     "KTH/Termin 1/SK184N Miljöfysik/PDFs",
     "KTH/Termin 1/SK184N Miljöfysik/Lektioner",
@@ -180,23 +217,6 @@
     "KTH/Termin 1/SK184N Miljöfysik/Bilagor",
     "KTH/Termin 1/SK184N Miljöfysik/Excalidraw",
     "KTH/Termin 1/SK184N Miljöfysik/Begrepp",
-    "KTH/Termin 1/SK184N Miljöfysik/Anteckningar",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Anteckningar/Instuderingsfrågor Kap 14-16 KS1 ME1003.md",
-    "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Begrepp/Riktad Emission.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Nyemission.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Factoring.md",
-    "KTH/Termin 1/CM1005 Extern Redovisning/Begrepp/Leasing.md",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Kassaflödesanalys enligt FAR ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/DuPont-Schema ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Företags Kapitalstruktur ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Tillverkande Företags Kapitalbindning ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Investeringskalkyleringsmetoder ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Självkostnaden av en Produkt ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Resultatdiagram ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Regressivt Rörliga Kostnader ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Progressivt Rörliga Kostnader ME1003.png",
-    "KTH/Termin 1/ME1003 Industriell Ekonomi, Grundkurs/Bilagor/Halvfasta Kostnader ME1003.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

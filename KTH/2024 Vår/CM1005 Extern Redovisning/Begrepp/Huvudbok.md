@@ -19,7 +19,7 @@ En huvudbok är en lista över ett företags [[Affärshändelse]] presenterad i 
 
 - [[Huvudbokföring]]
 - [[Grundbok]]
-- [[BAS-Kontoplan]]
+- [[BAS-kontoplan]]
 
 ## Flashcards
 

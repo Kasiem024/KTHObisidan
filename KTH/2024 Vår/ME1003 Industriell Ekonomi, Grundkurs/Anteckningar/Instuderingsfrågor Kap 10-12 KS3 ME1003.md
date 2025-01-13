@@ -1,8 +1,12 @@
-# OBS
+# Instuderingsfrågor Kap 10-12 KS3 ME1003
 
-Tags: #nograph
+---
 
-**Detta är instuderingsfrågor tagna från övningsboken. Det finns inget facit för frågorna utan svaren är mina egna baserat på vad jag har läst i boken och vad som har sagts på föreläsningarna.**
+Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+
+Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
+
+Tags: #year2024 #KTH #ekonomi #ME1003 #övning #ME1003/ME1003KS3
 
 ---
 
@@ -90,7 +94,7 @@ När man ordnar sina affärshändelser ==systematiskt== gör man det i en [[Huvu
 ---
 10. Beskriv huvuddragen hos Baskontoplanen och förklara varför många svenska företag har valt att använda sig av denna i sin redovisning.
 
-[[BAS-Kontoplan]] är en typ av kontoplan, alltså en lista över konton som ett företag använder i sin [[Bokföring]]. Den ligger till grund för företagets redovisning, bokslut och deklaration. En kontoplan underlättar bokföringen för ett företag och är därför nödvändig. Det finns olika sorters kontoplaner men i Sverige är BAS standarden. Den är populär för att den erbjuder systematisk kontonumrering och standardiserade kontobeteckningar, dessutom finns det mycket hjälpmedel om den till följd av dess popularitet. Den består av 10 kontoklasser:
+[[BAS-kontoplan]] är en typ av kontoplan, alltså en lista över konton som ett företag använder i sin [[Bokföring]]. Den ligger till grund för företagets redovisning, bokslut och deklaration. En kontoplan underlättar bokföringen för ett företag och är därför nödvändig. Det finns olika sorters kontoplaner men i Sverige är BAS standarden. Den är populär för att den erbjuder systematisk kontonumrering och standardiserade kontobeteckningar, dessutom finns det mycket hjälpmedel om den till följd av dess popularitet. Den består av 10 kontoklasser:
 
 - 1xxx: ==Tillgångar== som kassa, bank och kundfordringar.
 - 2xxx: ==Skulder== och eget kapital.

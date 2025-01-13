@@ -46,9 +46,9 @@ Tags: #year2024 #KTH #ekonomi #HH1802 #övning #HH1802/HH1802KS4
 
 [[Överavskrivning#Bokföringsmässigt Värde|Bokföringsmässigt Värde]]
 
-[[överavskrivning|Räkenskapsenlig avskrivning]]
+[[Överavskrivning|Räkenskapsenlig avskrivning]]
 
-[[överavskrivning|Planenlig avskrivning]]
+[[Överavskrivning|Planenlig avskrivning]]
 
 [[Överavskrivning]]
 
