@@ -6,7 +6,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #HE1026 #lektion
+Tags: #year2024 #KTH #HE1026 #föreläsning
 
 ---
 
@@ -55,4 +55,3 @@ Adderare och Subtraherare - Adderar och subtraherar tal på binär form.
 Aktivt hög och låg avkodare.
 
 Enable och Tristate.
-

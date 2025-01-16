@@ -6,7 +6,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #HH1802 #lektion #HH1802/HH1802TenDelC
+Tags: #year2024 #KTH #ekonomi #HH1802 #föreläsning #HH1802/HH1802TenDelC
 
 ---
 
@@ -21,7 +21,7 @@ Hållbar utveckling:
 
 ## Kreditgivning
 
-Grunden för all kreditgivning grundar sig i lagar som i sig kommer från Riksdagen. Det finns myndigheter som håller koll på att lagarna följs, Finansinspektionen. 
+Grunden för all kreditgivning grundar sig i lagar som i sig kommer från Riksdagen. Det finns myndigheter som håller koll på att lagarna följs, Finansinspektionen.
 
 Bond = [[Obligation]]
 
@@ -57,7 +57,7 @@ Likviditetsöverskottet ska inte vara på transaktionskonto eftersom räntan på
 
 Sparkonto ska ha ett mindre antal transaktioner och därför högre ränta. Ju mindre transaktioner ett konto har ju mindre det kostar för banken att underhålla det kontot.
 
-Fast räntekonto är som sparkonto men där man inte får ta ut pengar. 
+Fast räntekonto är som sparkonto men där man inte får ta ut pengar.
 
 Låna pengar till staten på lång sikt ([[Statsobligation]]) eller på kort sikt ([[Statsskuldväxel]])
 

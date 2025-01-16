@@ -5,7 +5,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #lektion
+Tags: #year2024 #KTH #ekonomi #ME1003 #föreläsning
 
 ---
 [Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F7+HRM%26ampBOrganisation+P4+V22+SWE+2022-04-04+MOH.mp4/0_kcb4vfls/660304)

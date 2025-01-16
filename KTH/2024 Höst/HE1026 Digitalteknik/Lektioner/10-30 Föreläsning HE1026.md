@@ -6,13 +6,13 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #HE1026 #lektion
+Tags: #year2024 #KTH #HE1026 #föreläsning
 
 ---
 
 ## Digitalt System
 
-Ett digitalt system kan ses som en svart låda. 
+Ett digitalt system kan ses som en svart låda.
 
 Systemet styrs av flera insignaler, vars värden 1 eller 0, sätts av användaren.
 
@@ -40,11 +40,10 @@ När man skapar en sanningstabell ska man börja med insignalerna en kolumn åt 
 
 ## Karnaugh Diagram
 
-----
+---
 
 Verkliga kretsar, IC Kretsar. Har 14 ben.
 
 Inuti varje krets finns det 14 ben. 2 av de är elektroniska kretsar. I detta fall nr 7 och 14. De benen sitter alltid diagonalt mot varandra.
 
 ![[IC Krets HE1026.png]]
-

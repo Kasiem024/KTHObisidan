@@ -123,9 +123,7 @@ Skillnaden mellan initialisering och tilldelning
 
 17. Vad gör operationen n +=2 ?
 
-
 18. Vad är skillnaden på n++ och ++n?
-
 
 19. Förutsatt att a och b är korrekt deklarerade och initierade vad är problematiskt med följande sats: if (a == 0 && b++>10) {...}.
 
@@ -133,20 +131,15 @@ Skillnaden mellan initialisering och tilldelning
 
 21. I en switch-sats har vi flera cases. I slutet på varje case bör man avsluta med ... . Vad ska man avsluta med? Vad händer om man glömmer detta?
 
-
 22. Varför ska man inte använda goto?
 
 23. När vi har flera nästlade loopar skulle goto kunna vara ett enkelt sätt att hoppa ur alla loopar medan break bara hoppar ur den innersta loopen. Man kan naturligtvis sätta alla loopvillkor så att de testas falskt för att hoppa ur men ibland känns det omständigt. Hur kan du enkelt hoppa ur flera nästlade loopar utan att använda goto eller break?
 
 24. Heltalsvariabler kan vara ”unsigned”, vad innebär det? Vad är skillnaden mellan en unsigned int och en int? Antag att variabeln a är deklarerad som en unsigned int. Ange vad som händer (principiellt) om man gör tilldelningen a = –1;
 
-
 25. I C lagrar vi bokstäver i typen char men char är en heltalstyp. Hur hänger detta ihop?
 
-
-
 26. Nämn ett exempel då man kan behöva göra en explicit konvertering i C?
-
 
 27. Hur gör man för att kopiera en array? Förklara och visa med ett exempel.
 

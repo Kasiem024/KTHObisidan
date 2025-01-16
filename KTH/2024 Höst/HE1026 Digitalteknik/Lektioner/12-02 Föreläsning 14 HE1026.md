@@ -6,7 +6,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #HE1026 #lektion
+Tags: #year2024 #KTH #HE1026 #föreläsning
 
 ---
 
@@ -50,4 +50,3 @@ För att göra ritningar med minneskretsar mer överskådliga brukar man grupper
 Figuren till höger och till vänster visar samma sak, med ett fel (n-1).
 
 Man kan bygga upp större minnen genom att koppla ihop flera mindre minneskretsar.
-

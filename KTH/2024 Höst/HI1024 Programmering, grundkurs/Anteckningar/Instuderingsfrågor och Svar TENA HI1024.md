@@ -1,6 +1,6 @@
 # Instuderingsfrågor och Svar TENA HI1024
 
-# OBS
+## OBS
 
 Tags: #nograph
 
@@ -104,15 +104,14 @@ Tilldelningsoperatorn (=) är en speciell operator i C som både utför en opera
 ---
 17. Vad gör operationen *n +=2* ?
 
-
 Operationen *n += 2* är en förkortning för *n = n + 2*
 
 ---
 18. Vad är skillnaden på *n++* och *++n*?
 
-*n++*: Värdet används först, sedan ökas: När du skriver *n++*, används det _nuvarande_ värdet på `n` i uttrycket först, och _sedan_ ökas värdet på `n` med 1.
+*n++*: Värdet används först, sedan ökas: När du skriver *n++*, används det *nuvarande* värdet på `n` i uttrycket först, och *sedan* ökas värdet på `n` med 1.
 
-*++n*: Värdet ökas först, sedan används: När du skriver *++n*, ökas det _nuvarande_ värdet på `n` i uttrycket med 1 först, och _sedan_ används värdet på `n`.
+*++n*: Värdet ökas först, sedan används: När du skriver *++n*, ökas det *nuvarande* värdet på `n` i uttrycket med 1 först, och *sedan* används värdet på `n`.
 
 ---
 20. Hur bör olikheten 3 < x ≤ 7 skrivas som villkor i C?
