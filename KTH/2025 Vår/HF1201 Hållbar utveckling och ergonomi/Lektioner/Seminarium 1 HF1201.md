@@ -16,7 +16,7 @@ Tags: #year2025 #KTH #HF1201 #seminarium
 
 [[Miljöteknik för en hållbar utveckling - Kap 1 - Inledning, s. 15-29 HF1201.pdf]]
 
-#### Inledning
+#### Inledning Hållbar Utveckling
 
 ##### Varför en bok om miljöteknik?
 
@@ -121,7 +121,7 @@ Tags: #year2025 #KTH #HF1201 #seminarium
 
 Kapitel 1 introducerar begreppet **hållbar utveckling** och dess tre dimensioner: miljömässig, social och ekonomisk. Fokus ligger på den miljömässiga dimensionen och miljöteknikens roll i att skapa en hållbar utveckling. Olika globala initiativ och koncept för hållbar utveckling presenteras, inklusive _Agenda 2030_ och _cirkulär ekonomi_. Slutligen definieras _miljöteknik_ och olika perspektiv inom miljöområdet beskrivs.
 
-#### Ordlista
+#### Ordlista Hållbar Utveckling
 
 - **Antropocentriskt perspektiv:** Människan sätts i centrum.
 - **Agenda 2030:** FN:s handlingsplan för hållbar utveckling med 17 globala mål.
@@ -137,7 +137,7 @@ Kapitel 1 introducerar begreppet **hållbar utveckling** och dess tre dimensione
 
 ### Att utforma arbete och teknik på människans villkor
 
-#### Inledning
+#### Inledning Ergonomi
 
 - Arbete är centralt i de flesta människors liv. _Social status_, _hälsostatus_, _ekonomiska förhållanden_, _utveckling_ och _självförverkligande_ har ofta direkt koppling till människans arbete och arbetssituation.
 - **Goda arbetsförhållanden** är grunden för ett produktivt och friskt arbetsliv.
@@ -251,7 +251,7 @@ Kapitel 1 introducerar begreppet **hållbar utveckling** och dess tre dimensione
 
 Texten introducerar ämnet ergonomi och dess betydelse i arbetslivet. Den beskriver hur ergonomi integrerar kunskap från olika vetenskapsområden för att optimera samspelet mellan människa, teknik och organisation. Texten betonar vikten av att utforma arbete och teknik på människans villkor för att främja hälsa, produktivitet och välbefinnande.
 
-#### Ordlista
+#### Ordlista Ergonomi
 
 - **Arbetsanalys**: En systematisk undersökning av ett arbete för att identifiera risker, förbättra effektivitet och optimera arbetsmiljön.
 - **Arbetsmiljö**: Den omgivning och de förhållanden under vilka en person utför sitt arbete.

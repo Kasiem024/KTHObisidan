@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "495d5ede8bce0688",
+        "id": "059ff00e5b50f804",
         "type": "tabs",
         "children": [
           {
-            "id": "7ea07bdb394ff9ad",
+            "id": "bbe7c145e9fd45f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-16 Föreläsning 2 HE1028.md",
+                "file": "KTH/2025 Vår/HE1028 Mikrodatorteknik/Anteckningar/Instruktioner HE1028.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Instruktioner HE1028"
+            }
+          },
+          {
+            "id": "be39cb631091d6b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Lektioner/Seminarium 1 HF1201.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-16 Föreläsning 2 HE1028"
+              "title": "Seminarium 1 HF1201"
             }
           }
         ]
@@ -80,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.5
+    "width": 245.5,
+    "collapsed": true
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -95,9 +110,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "KTH/2025 Vår/HE1028 Mikrodatorteknik/Anteckningar/Instruktioner HE1028.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Instruktioner HE1028"
             }
           },
           {
@@ -125,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-16 Föreläsning 2 HE1028.md",
+                "file": "KTH/2025 Vår/HE1028 Mikrodatorteknik/Anteckningar/Instruktioner HE1028.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 01-16 Föreläsning 2 HE1028"
+              "title": "Outgoing links from Instruktioner HE1028"
             }
           },
           {
@@ -153,12 +170,12 @@
               "title": "Plugin no longer active"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 385.5
+    "width": 385.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,26 +189,33 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7ea07bdb394ff9ad",
+  "active": "bbe7c145e9fd45f2",
   "lastOpenFiles": [
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Lektioner/Seminarium 1 HF1201.md",
+    "KTH/2025 Vår/HE1028 Mikrodatorteknik/Anteckningar/Instruktioner HE1028.md",
+    "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-20 Föreläsning 4 HE1028.md",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Arbete och Teknik på Människans Villkor Sem1 HF1201.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Litteraturlista/Miljöteknik För en Hållbar Utveckling 2a Upplagan.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Kap 5 Organisatorisk och social arbetsmiljö_utdrag ur boken Organisationshälsa_s 116-124, 132-135,137.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Nylen 2021 Syn-och-belysning_i arbetlivet_Prevent.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Hållbart och hälsofrämjande ledarskap - arbetsmaterial med uppdateringar.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Arbetsmiljövkerket_Belasta-ratt-vid-bildskarmen-och-i-den-digitala-miljon-broschyr-adi524.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Gulliksson & Holmgren 2021_ kap. 6.6 Informationsteknik_ i boken_Hållbar utveckling_Livskvalitet, beteende och teknik.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Arbetsmiljöverket_arbetsmiljoarbete-lattlast_adi_681_broschyr.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Hedenus et al. 2018_kap 4 Etiska perspektiv på hållbar utveckling_från boken_ Hållbar utveckling - nyanser och tolkningar.pdf",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Allmanforklaringomdemanskligarattigheterna.pdf",
+    "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-17 Föreläsning 3 HE1028.md",
+    "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-16 Föreläsning 2 HE1028.md",
     "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-15 Föreläsning 1 HE1028.md",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/11-25 Föreläsning HE1026.md",
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Litteraturlista/Miljöteknik För en Hållbar Utveckling 2 a Upplagan.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Litteraturlista/Arbete och Teknik på Människans Villkor HF1201.pdf",
     "KTH/2025 Vår/HE1028 Mikrodatorteknik/HE1028 Generella Anteckningar.md",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/12-02 Föreläsning 14 HE1026.md",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",
     "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/HE1028 Generella Anteckningar.md",
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Lektioner/Seminarium 1 HF1201.md",
-    "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-16 Föreläsning 2 HE1028.md",
     "README.md",
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Arbete och Teknik på Människans Villkor HF1201.pdf",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Lektioner/01-14 Föreläsning HF1201.md",
     "Obsidian Plugins/Templates/Föreläsning Template.md",
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Arebte och Teknik på Människans Villkor HF1201.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Arebte och Teknik på Människans Villkor Sem1 HF1201.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/PDFs/Miljöteknik för en hållbar utveckling - Kap 1 - Inledning, s. 15-29 HF1201.pdf",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Lektioner/HF1201.md",
     "KTH/2024 Vår/CM1005 Extern Redovisning/Lektioner/02-29 Lektion CM1005.md",
     "KTH/2024 Vår/CM1005 Extern Redovisning/Lektioner/01-16 Lektion CM1005.md",
@@ -207,19 +231,12 @@
     "KTH/2024 Höst/HE1026/Lektioner/Pasted image 20241202140128.png",
     "KTH/2024 Höst/HE1026/Lektioner/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HI1024/Lektioner/08-27 Föreläsning 1 HI1024.md",
-    "KTH/2024 Höst/HF1005/Lektioner/09-02 Lektion HF1005.md",
-    "KTH/2024 Höst/HE1026/Lektioner/10-28  Föreläsning HE1026.md",
-    "KTH/2024 Höst/HE1026/Lektioner/10-29  Föreläsning HE1026.md",
     "KTH/2024 Höst/HE1026/Bilagor/CPLD Konstruktion HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/3 Signaler HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/Moore- och Mealy-maskiner HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/Sanningstabell Notation HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/7408 Kretslayout HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/IC Krets HE1026.png",
-    "KTH/2024 Höst/HI1024/PDFs/Litteraturlista/C Programming 2008 Editiion 2 K N King.pdf",
-    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Journal/04-24 Journal Lektion HH1802.pdf",
-    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista/Environmental Physics - 2011 - Boeker.pdf",
-    "KTH/Termin 1/SK184N Miljöfysik/PDFs/Litteraturlista",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }
