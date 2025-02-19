@@ -447,5 +447,14 @@
       ],
       "key": ","
     }
+  ],
+  "obsidian-spaced-repetition:srs-cram-flashcards-in-note": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
   ]
 }

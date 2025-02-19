@@ -171,6 +171,5 @@
     "margin": "0",
     "downscalePercent": 70
   },
-  "showUnsupportedFiles": true,
-  "readableLineLength": true
+  "showUnsupportedFiles": true
 }

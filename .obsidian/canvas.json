@@ -2,5 +2,6 @@
   "snapToObjects": true,
   "snapToGrid": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "Obsidian Plugins/Canvas"
+  "newFileFolderPath": "Obsidian Plugins/Canvas",
+  "defaultWheelBehavior": "zoom"
 }
