@@ -33,6 +33,7 @@ Selektiv uppmärksamhet (Definition):: **Förmågan** att **fokusera** på **rel
 Resurslikhet (Definition):: Koncept som beskriver hur **likartade resurser** **konkurrerar** om **uppmärksamhet** och **bearbetning**
 
 Korttidsminne (KTM) (Definition):: Ett **minne för nuet** som används för att **temporärt lagra information** under en **begränsad tid**, cirka **30 sekunder** om den inte repeteras
+<!--SR:!2025-02-21,1,230!2025-02-24,4,270-->
 
 Långtidsminne (LTM) (Definition):: Ett **minne** med praktiskt taget **obegränsad kapacitet** för att **lagra data** och **erfarenheter**
 
@@ -79,6 +80,7 @@ Mental modell (Definition):: En **intern representation** av ett **system** elle
 Illustrerad realism (Definition):: En **designstrategi** där **gränssnitt** **efterliknar verkliga objekt** och **miljöer** för att **underlätta användningen**
 
 Användaracceptans (Definition):: **Graden** i vilken **användare** är **villiga** att **använda** och **acceptera** en **viss teknik** eller ett **system**
+<!--SR:!2025-02-21,1,230!2000-01-01,1,250-->
 
 Användarkompetens (Definition):: **Användarens förmåga** att **effektivt** och **säkert** **använda** en **teknik** eller ett **system**
 
@@ -91,17 +93,21 @@ Funktionella data (Definition):: **Data** om **kroppens rörelseomfång** och **
 Arbetsanpassning (Definition):: **Åtgärder** för att **anpassa arbetsplatsen** och **arbetsuppgifterna** efter **individens behov** och **förutsättningar**
 
 Rehabilitering (Definition):: **Åtgärder** för att **återställa** eller **förbättra** en **persons funktion** efter en **skada** eller **sjukdom**
+<!--SR:!2025-02-21,1,230!2025-02-24,4,270-->
 
 Synergonomi (Definition):: **Anpassning** av **arbetsplatsen** och **arbetsmiljön** till **synens** och **belysningens krav** för att **optimera komfort** och **effektivitet**
 
 Synavstånd (Definition):: **Avståndet** mellan **ögat** och **objektet** som **betraktas**
+<!--SR:!2025-02-23,3,250!2000-01-01,1,250-->
 
 Belastningsbesvär (Definition):: **Besvär** i **rörelseorganen** som kan ha **samband** med **förhållanden i arbetet**
 
 Kemiska riskkällor (Definition):: **Ämnen** som kan orsaka **ohälsa** eller **olycksfall** vid **hantering**
+<!--SR:!2025-02-21,1,230!2000-01-01,1,250-->
 
 Arbete med smittämnen (Definition):: **Hantering** av **smittämnen** i **laboratorier**, **djurrum** eller **industriella processer**
 
 Artificiell optisk strålning (Definition):: **Optisk strålning** som **inte kommer från solen**
+<!--SR:!2025-02-24,4,270!2025-02-21,1,230-->
 
 Elektromagnetiska fält (Definition):: **Fält** som **genereras** av **elektriska laddningar i rörelse**
