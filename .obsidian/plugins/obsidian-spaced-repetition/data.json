@@ -1,11 +1,6 @@
 {
   "settings": {
     "flashcardTags": [
-      "#HH1802",
-      "#HU1801",
-      "#CM1005",
-      "#ME1003",
-      "#HI1024",
       "#HF1201"
     ],
     "convertFoldersToDecks": false,

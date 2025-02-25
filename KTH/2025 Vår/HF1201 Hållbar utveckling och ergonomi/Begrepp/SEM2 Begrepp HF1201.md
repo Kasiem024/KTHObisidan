@@ -130,7 +130,8 @@ Försiktighetsprincipen (Definition):: Handlingsprincip vid osäkerhet om miljö
 
 Nanomaterial (Definition):: Material med partiklar <100 nm, potentiella hälsoeffekter.  
 
-Förnybar energi (Definition):: Energikällor som förnyas naturligt (t.ex. sol, vind).  
+Förnybar energi (Definition):: Energikällor som förnyas naturligt (t.ex. sol, vind).
+<!--SR:!2000-01-01,1,250!2025-02-26,4,270-->
 
 Substitution (Definition):: Ersättning av skadliga ämnen/processer med säkrare alternativ.  
 
@@ -184,10 +185,6 @@ Importör (Definition):: Företag som inför produkter till EU-marknaden.
 
 Distributör (Definition):: Företag som säljer produkter på EU-marknaden.  
 
-Agenda 2030 (Definition):: FN:s globala handlingsplan med 17 hållbarhetsmål.  
-
-Hållbarhetsmål (Definition):: Agenda 2030:s specifika mål för social, ekonomisk och ekologisk hållbarhet.  
-
 Global Framework on Chemicals, GFC (Definition):: Internationellt ramverk för säker kemikaliehantering.  
 
 SAICM (Definition):: Strategiskt tillvägagångssätt för internationell kemikaliehantering.  
@@ -207,8 +204,6 @@ Stockholmskonventionen (Definition):: Internationell överenskommelse om att fö
 POPs (Definition):: Långlivade organiska föroreningar som ackumuleras i näringskedjor.  
 
 RoHS-direktivet (Definition):: EU-direktiv som begränsar farliga ämnen i elektronik.  
-
-Elektronik (Definition):: Produkter med elektroniska komponenter (omfattas av RoHS).  
 
 Ämnesbegränsningar (Definition):: Maximala halter av farliga ämnen i produkter.  
 
@@ -239,8 +234,6 @@ Globala utvecklingstrender (3)
 - Resursbrist  
 
 Material- och energiflöden (Definition):: Flöden av resurser genom samhällets system.  
-
-Värderingar och prioriteringar (Definition):: Etiska och ekonomiska överväganden i hållbarhetsarbete.  
 
 Klimatförändring (Definition):: Långsiktiga förändringar i jordens klimat p.g.a. växthusgaser.  
 
