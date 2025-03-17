@@ -151,7 +151,8 @@
     "Ställkostnad",
     "beställningssärkostnaden",
     "FVL",
-    "datan"
+    "datan",
+    "Kernel"
   ],
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",

@@ -47,7 +47,7 @@ Iterativt arbete, LCA (Definition):: Process där LCA förfinas genom flera geno
 
 Livscykelinventeringsanalys, LCI (Definition):: Fas där alla ingående material- och energiflöden dokumenteras.  
 
-Enhetsprocesser (Definition):: Grundläggande aktiviteter i ett produktsystem (t.ex. råvaruextraktion).  
+Enhetsprocesser (Definition):: Grundläggande aktiviteter i ett produktsystem (t.ex. råvaruextraktion).
 
 Materialflödesanalys (Definition):: Kartläggning av materialflöden genom systemet.  
 
