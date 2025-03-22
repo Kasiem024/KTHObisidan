@@ -3,7 +3,6 @@
   "obsidian-icon-folder",
   "obsidian-spaced-repetition",
   "tag-wrangler",
-  "table-editor-obsidian",
   "settings-search",
   "url-into-selection",
   "obsidian-languagetool-plugin",
@@ -13,5 +12,6 @@
   "handwritten-notes",
   "dataview",
   "templater-obsidian",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "obsidian-git"
 ]

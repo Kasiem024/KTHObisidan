@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d20e988d3324c8e5",
+        "id": "3e193f957318e97c",
         "type": "tabs",
         "children": [
           {
-            "id": "51bebb9bbacbb2a3",
+            "id": "d7fdf2c94fb6b041",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM5 Begrepp HF1201.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "SEM5 Begrepp HF1201"
+              "title": "New tab"
             }
           }
         ]
@@ -160,7 +156,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
-      "canvas:Create new canvas": false,
       "markdown-importer:Open format converter": false,
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
@@ -172,10 +167,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "51bebb9bbacbb2a3",
+  "active": "d7fdf2c94fb6b041",
   "lastOpenFiles": [
-    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM1 Begrepp HF1201 (conflict 2025-03-06-00-38-53).md",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM5 Begrepp HF1201.md",
+    "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM1 Begrepp HF1201 (conflict 2025-03-06-00-38-53).md",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM5 Begrepp HF1201 (conflict 2025-03-06-00-38-53).md",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM2 Begrepp HF1201.md",
     "KTH/Termin 1/HH1802 Finansiering och Organisationsteori/Journal/KS4 Exempel Journal HH1802.pdf",

@@ -51,5 +51,6 @@
   "TokyoNight@@opacity-translucency-light": 1,
   "TokyoNight@@opacity-translucency-dark": 1,
   "TokyoNight@@border-width": 2,
-  "TokyoNight@@scrollbar-width": 0
+  "TokyoNight@@scrollbar-width": 0,
+  "obsidian-prism-theme@@pt-colored-folders": true
 }

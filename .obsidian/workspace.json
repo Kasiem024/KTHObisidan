@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "eb91fa3246ed1e48",
+        "id": "2a751636d185a7fa",
         "type": "tabs",
         "children": [
           {
-            "id": "ab6cc1f5efbbea84",
+            "id": "b210ab6dfbadb835",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-17 HI1025 Föreläsning 1.md",
+                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "03-17 HI1025 Föreläsning 1"
+              "title": "03-19 CM1008 Föreläsning 2"
             }
           }
         ]
@@ -100,13 +100,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM4 Begrepp HF1201.md",
+                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SEM4 Begrepp HF1201"
+              "title": "Outline of 03-19 CM1008 Föreläsning 2"
             }
           },
           {
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/01-16 Föreläsning 2 HE1028.md",
+                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 01-16 Föreläsning 2 HE1028"
+              "title": "Backlinks for 03-19 CM1008 Föreläsning 2"
             }
           },
           {
@@ -134,22 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM4 Begrepp HF1201.md",
+                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from SEM4 Begrepp HF1201"
-            }
-          },
-          {
-            "id": "a1bd6b2e8da42582",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "title": "Outgoing links from 03-19 CM1008 Föreläsning 2"
             }
           },
           {
@@ -165,9 +155,31 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "4c40bfd05ce8b7ab",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "d0e3fa6b0c954fe3",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for 03-19 CM1008 Föreläsning 2"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -185,26 +197,35 @@
       "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
       "markdown-importer:Open format converter": false,
-      "switcher:Open quick switcher": false
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ab6cc1f5efbbea84",
+  "active": "b210ab6dfbadb835",
   "lastOpenFiles": [
+    "index.md",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 2 från styrelsemöte.md",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 1 från styrelsemöte.md",
+    "Obsidian Plugins/Templates/CM1008 Meeting Template.md",
+    "Pasted image 20250321104620.png",
+    "Untitled.canvas",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-17 HI1025 Föreläsning 1.md",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/Begrepp/SEM1 Begrepp HF1201.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/Litteraturlista/Operating Systems Three Easy Pieces HI1025.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM5/Nylen 2021 Syn-och-belysning_i arbetlivet_Prevent.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM5/Arbetsmiljövkerket_Belasta-ratt-vid-bildskarmen-och-i-den-digitala-miljon-broschyr-adi524.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM5/Arbete och Teknik på Människans Villkor HF1201 SEM5 Extract[173-252].pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM4/Hållbart ledarskap arbetsmaterial med uppdateringar.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM4/digital_arbetsmiljo-rap-2015-17.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM5/Arbete och Teknik på Människans Villkor HF1201 SEM5 Extract[70-126].pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM4/Arbetsmiljöverket_arbetsmiljoarbete-lattlast_adi_681_broschyr.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM4/Arbete och Teknik på Människans Villkor HF1201 SEM4 Extract[256-260].pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/PDFs/SEM1/Hedenus et al. 2018_kap 4 Etiska perspektiv på hållbar utveckling_från boken_ Hållbar utveckling - nyanser och tolkningar.pdf",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/Begrepp/SEM5 Begrepp HF1201.md",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/Begrepp/SEM4 Begrepp HF1201.md",
-    "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi/Begrepp/SEM2 Begrepp HF1201.md",
+    "Obsidian Plugins/Templates/Begrepp Template.md",
+    "Obsidian Plugins/Templates/Default Template.md",
+    "Untitled.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-17 HI1025 Begrepp Föreläsning 1.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-20 HI1025 Begrepp Övning 1.md",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/PDFs/Litteraturlista",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/PDFs",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Excalidraw",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Bilagor",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Begrepp",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Journal",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling",
     "03-17 HI1025 Föreläsning 1.md",
     "03-17 CM1008 Föreläsning 1.md",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM2 Begrepp HF1201.md",
@@ -213,20 +234,13 @@
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM5 Begrepp HF1201.md",
     "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/02-21 Föreläsning 9 HE1028.md",
     "KTH/2025 Vår/HE1028 Mikrodatorteknik/Lektioner/02-06 Föreläsning 7 HE1028.md",
+    "KTHObsidian",
     "Obsidian Plugins/Excalidraw/Drawing 2025-02-19 21.15.41.excalidraw.md",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Anteckningar/Seminarium 1 HF1201.md",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Anteckningar/Seminarium 2 HF1201.md",
-    "Obsidian Plugins/Templates/Default Template.md",
-    "Obsidian Plugins/Templates/Begrepp Template.md",
     "Obsidian Plugins/Templates/Seminarium Template.md",
     "Obsidian Plugins/Templates/Föreläsning Template.md",
     "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/TOWS-Analys.md",
-    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Täckningsbidrag.md",
-    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/4V.md",
-    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Affärsmodellen.md",
-    "Untitled.canvas",
-    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/Hävstångsformeln.md",
-    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Investeringskalkylering.md",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",
     "KTH/2024 Höst/HE1026/Lektioner/Pasted image 20241202140128.png",
@@ -236,7 +250,6 @@
     "KTH/2024 Höst/HE1026/Bilagor/Moore- och Mealy-maskiner HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/Sanningstabell Notation HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/7408 Kretslayout HE1026.png",
-    "KTH/2024 Höst/HE1026/Bilagor/IC Krets HE1026.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }
