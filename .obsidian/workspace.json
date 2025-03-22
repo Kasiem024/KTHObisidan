@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2a751636d185a7fa",
+        "id": "da00f9c1c362937c",
         "type": "tabs",
         "children": [
           {
-            "id": "b210ab6dfbadb835",
+            "id": "8995de38739af000",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
+                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-24 HI1025 Begrepp Föreläsning 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-19 CM1008 Föreläsning 2"
+              "title": "03-24 HI1025 Begrepp Föreläsning 2"
             }
           }
         ]
@@ -100,13 +100,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
+                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-24 HI1025 Begrepp Föreläsning 2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 03-19 CM1008 Föreläsning 2"
+              "title": "Outline of 03-24 HI1025 Begrepp Föreläsning 2"
             }
           },
           {
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
+                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-24 HI1025 Begrepp Föreläsning 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 03-19 CM1008 Föreläsning 2"
+              "title": "Backlinks for 03-24 HI1025 Begrepp Föreläsning 2"
             }
           },
           {
@@ -134,12 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
+                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-24 HI1025 Begrepp Föreläsning 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 03-19 CM1008 Föreläsning 2"
+              "title": "Outgoing links from 03-24 HI1025 Begrepp Föreläsning 2"
             }
           },
           {
@@ -172,14 +172,14 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md"
+                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-24 HI1025 Begrepp Föreläsning 2.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for 03-19 CM1008 Föreläsning 2"
+              "title": "File properties for 03-24 HI1025 Begrepp Föreläsning 2"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -202,8 +202,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b210ab6dfbadb835",
+  "active": "8995de38739af000",
   "lastOpenFiles": [
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/Untitled.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-24 HI1025 Begrepp Föreläsning 2.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-17 HI1025 Begrepp Föreläsning 1.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-20 HI1025 Begrepp Övning 1.md",
+    "KTH/2025 Vår/HE1028 Mikrodatorteknik/Anteckningar/Instruktioner HE1028.md",
     "index.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 2 från styrelsemöte.md",
@@ -215,8 +220,6 @@
     "Obsidian Plugins/Templates/Begrepp Template.md",
     "Obsidian Plugins/Templates/Default Template.md",
     "Untitled.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-17 HI1025 Begrepp Föreläsning 1.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-20 HI1025 Begrepp Övning 1.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/PDFs/Litteraturlista",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/PDFs",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Excalidraw",
@@ -239,8 +242,6 @@
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Anteckningar/Seminarium 1 HF1201.md",
     "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Anteckningar/Seminarium 2 HF1201.md",
     "Obsidian Plugins/Templates/Seminarium Template.md",
-    "Obsidian Plugins/Templates/Föreläsning Template.md",
-    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/TOWS-Analys.md",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",
     "KTH/2024 Höst/HE1026/Lektioner/Pasted image 20241202140128.png",
