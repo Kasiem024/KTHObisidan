@@ -11,14 +11,10 @@
             "id": "8995de38739af000",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-24 HI1025 Begrepp Föreläsning 2.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "03-24 HI1025 Begrepp Föreläsning 2"
+              "title": "New tab"
             }
           }
         ]
@@ -192,7 +188,6 @@
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "handwritten-notes:Create empty handwritten note": false,
       "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
