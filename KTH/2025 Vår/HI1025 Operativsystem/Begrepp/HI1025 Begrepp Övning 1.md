@@ -16,13 +16,18 @@ Tags: #year2025 #KTH #HI1025 #begrepp
 <!--SR:!2000-01-01,1,250!2025-03-25,3,250-->
 
 .c (Source file) (Definition):: En fil som innehåller den faktiska *implementationen* (koden) av funktioner och variabler. (Tänk: Själva boken).
+<!--SR:!2000-01-01,1,250!2025-03-27,3,268-->
 
 `#include` (Definition):: Ett direktiv som infogar innehållet från en headerfil i den aktuella filen, vilket möjliggör användning av deklarerade funktioner och variabler från andra filer. (Tänk: Kopiera och klistra in)
 <!--SR:!2000-01-01,1,250!2025-03-25,3,250-->
 
 Abstraction (Definition):: Att *dölja komplexa detaljer* och endast visa den *nödvändiga informationen*. Gör kod lättare att förstå och använda. Operativsystemet använder detta för att skapa enklare gränssnitt.
 
-Huvudidén med **abstraktion** inom operativsystem:: Att *dölja komplexiteten* i hårdvara och mjukvara. Skapa *enklare, mer användarvänliga gränssnitt*. Programmerare ska inte behöva bry sig om *hur* saker fungerar på låg nivå, bara *att* de fungerar.
+Huvudidéerna med **abstraktion** inom operativsystem (3)
+||
+- Att *dölja komplexiteten* i hårdvara och mjukvara
+- Skapa *enklare, mer användarvänliga gränssnitt*
+- Programmerare ska inte behöva bry sig om *hur* saker fungerar på låg nivå, bara *att* de fungerar
 
 Processen som **abstraktion** inom ett OS:: OS skapar en *illusion* av att varje program har sin *egen CPU* (virtuell CPU). Detta kallas *virtualisering*. Gör det möjligt att köra *flera program samtidigt*, även om det bara finns en (eller få) fysiska CPU:er.
 
@@ -45,6 +50,7 @@ När man *inte refererar direkt* till något, utan via en *mellanhand*. Exempel:
 - *Fördel*: Gör det möjligt att *flytta runt* underliggande data (minnessidor, diskblock) utan att ändra alla referenser.
 
 Reusability (Återanvändbarhet) (Definition):: Att skriva kod som kan användas i flera olika sammanhang utan (eller med minimala) ändringar. Sparar utvecklingstid, minskar risken för fel, förbättrar konsistensen och underlättar underhåll av kodbasen. (Tänk: Legobitar).
+<!--SR:!2025-03-25,1,228!2000-01-01,1,250-->
 
 Maintainability (Underhållbarhet) (Definition):: Att skriva kod som är lätt att förstå, ändra och felsöka. Viktigt för långsiktig programvaruutveckling. Enkel och koncis kod (*Lauer's Law*) och ren, förståelig kod är att föredra framför extremt optimerad kod.
 <!--SR:!2000-01-01,1,250!2025-03-25,3,250-->
@@ -71,6 +77,7 @@ C incomplete types (Definition) (3)
 - Används ofta med pekare för att skapa *abstrakta datatyper* och främja informationsdöljande.
 
 malloc (Definition):: En C-funktion som allokerar ett minnesblock på *heapen* (dynamisk minnesallokering). Returnerar en `void *`. Kan leda till *minnesläckor*.
+<!--SR:!2000-01-01,1,250!2025-03-26,2,248-->
 
 free (Definition):: En C-funktion som frigör ett minnesblock på heapen som tidigare allokerats med `malloc`.
 <!--SR:!2000-01-01,1,250!2025-03-25,3,250-->

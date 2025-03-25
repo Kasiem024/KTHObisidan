@@ -21,7 +21,7 @@ Batch Job (Definition):: En sekvens av programkommandon som exekveras *utan* anv
 Command Line Interface (CLI) (Definition):: Ett textbaserat gränssnitt för att interagera med ett operativsystem eller ett program, genom att skriva kommandon. (Tänk: *kommando tolk*)
 
 Kernel (Definition):: Operativsystemets *centrala del*, som hanterar grundläggande systemresurser (CPU, minne, I/O). (Tänk: *Hjärtat i systemet*).
-<!--SR:!2000-01-01,1,250!2025-03-25,2,248-->
+<!--SR:!2025-03-25,1,227!2025-03-25,2,248-->
 
 Limited Direct Execution (Definition):: En teknik där processer får köra *direkt på CPU:n* under större delen av tiden, men med *begränsningar* för att förhindra att de stör operativsystemet eller andra processer.
 
@@ -33,24 +33,27 @@ Två distinkta *driftlägen* för CPU:n
 <!--SR:!2025-03-23,1,228!2000-01-01,1,250-->
 
 System Call (Systemanrop) (Definition):: En *mekanism* för en användarprocess att *begära tjänster* från operativsystemets kärna (t.ex. läsa en fil, allokera minne). (Tänk: *Ett samtal till chefen (kärnan)*).
+<!--SR:!2000-01-01,1,250!2025-03-25,1,227-->
 
 Trap (Avbrottsfälla) (Definition):: En *speciell typ av systemanrop*, ofta utlöst av ett fel (t.ex. division med noll) eller en specifik instruktion. (Tänk: *En larmklocka*).
 
 Virtualization (Definition):: En teknik för att skapa en *virtuell version* av något, t.ex. hårdvara, operativsystem, lagring. (Tänk: *En illusion av hårdvara*).
-<!--SR:!2000-01-01,1,250!2025-03-25,3,268-->
+<!--SR:!2025-03-25,1,228!2025-03-25,3,268-->
 
 Mechanisms & Policies (Definition) (2)
 ??
 - De *lågnivåfunktioner* som tillhandahåller en viss förmåga. (Tänk: "Hur" något görs).
 - De *regler* som bestämmer *när och på vilket sätt* lågnivåfunktionera ska användas. (Tänk: "När" och "varför" något görs).
+<!--SR:!2000-01-01,1,250!2025-03-25,1,227-->
 
 Concurrency (Samtidighet) (Definition):: Förmågan hos ett system att hantera *flera uppgifter "samtidigt"*, antingen genom verklig parallell exekvering (på flerkärniga system) eller genom snabb växling mellan uppgifter. (Tänk: *Jonglera med flera bollar*).
+<!--SR:!2025-03-25,1,227!2000-01-01,1,250-->
 
 Persistency (Beständighet) (Definition):: Förmågan hos data att *överleva* efter att processen som skapade den har avslutats (t.ex. genom att spara data på disk). (Tänk: *Data som inte försvinner*).
 
 Time Sharing/Multiprogramming (Definition):: Tekniker för att låta *flera processer dela på CPU-tiden*, vilket ger illusionen av att de körs samtidigt. (Tänk: *Dela upp tiden i skivor*).
 
-Text, Data, Stack & Heap (Definition) (3)
+Text, Data, Stack, Heap (Definition) (4)
 ||
 Minnessegment i en process:
 - Text: Innehåller programmets *körbara kod*.
@@ -71,6 +74,7 @@ Program, Process & Machine State (Definition) (3)
 Process Control Block (PCB) (Definition):: En *datstruktur* som operativsystemet använder för att *hålla reda på all information om en process* (t.ex. process-ID, tillstånd, registerinnehåll, minnesmappningar). (Tänk: *Processens ID-kort*).
 
 Context Switch (Kontextbyte) (Definition):: Processen att *spara tillståndet* för en körande process och *återställa tillståndet* för en annan process, så att den andra processen kan fortsätta köra. (Tänk: *Byta förare i en bil*).
+<!--SR:!2000-01-01,1,250!2025-03-26,2,247-->
 
 Scheduler (Schemaläggare) (Definition):: Den del av operativsystemet som *bestämmer vilken process* som ska köras härnäst och *när*. (Tänk: *Trafikpolisen för processer*).
 <!--SR:!2025-03-25,2,248!2000-01-01,1,250-->
@@ -93,6 +97,7 @@ Ett program (eller hårdvarufunktion) som *skapar och hanterar virtuella maskine
 - Type 2 (Hosted): Körs *ovanpå ett befintligt operativsystem*.
 
 Boot (Uppstart) (Definition):: Processen att *starta en dator*. Involverar att ladda operativsystemets kärna från disk till minnet och initiera systemet. (Tänk: *Väcka datorn till liv*).
+<!--SR:!2000-01-01,1,250!2025-03-26,2,248-->
 
 Context Switch (Definition):: En *lågnivåprocess* där OS *stoppar* en process och *startar* en annan. Oftast *schemaläggaren* som gör detta. Möjliggör *virtualisering av CPU:n*. Händer vid systemanrop och timeravbrott.
 
@@ -191,6 +196,7 @@ Vanliga övergångarna *till* Ready, och *från* Ready till Running (2)
 	- *Schemaläggaren* väljer processen att köra.
 
 Initial State (Definition):: Ett tillstånd som en process kan befinna sig i *precis när den skapas*, innan den placeras i "Ready"-kön.
+<!--SR:!2000-01-01,1,250!2025-03-26,2,247-->
 
 Final State (Definition):: Ett tillstånd som en process kan befinna sig i *efter att den har avslutats*, men innan dess resurser (minne, PCB, etc.) har *rensats upp* helt av operativsystemet. (Tänk: "Zombie"-process)
 
