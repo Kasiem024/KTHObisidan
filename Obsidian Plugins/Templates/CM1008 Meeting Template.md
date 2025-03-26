@@ -48,7 +48,7 @@ Till justeringsmän väljs <% tp.file.cursor(6) %> och Å.
 
 ## 4 Fastställande av dagordning
 
-Dagordningen fastställs i dess utfärdade utformning / med tilläggen
+Dagordningen fastställs i dess utfärdade utformning / med tilläggen.
 
 ## 5 Sedan sist
 
@@ -78,4 +78,4 @@ Gruppen beslutar att nästa gruppmöte hålls på söndagen DD MM kl. HH:MM.
 
 ## 10 Mötets avslut
 
-Mötet avslutas kl. HH:MM
+Mötet avslutas kl. HH:MM.
