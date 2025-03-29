@@ -52,7 +52,7 @@ Dagordningen fastställs i dess utfärdade utformning / med tilläggen.
 
 ## 5 Sedan sist
 
-Under action-points från tidigare gruppmöte upprättades följande ärenden som var påkallade att utföras inom närmast förestående tid
+Under action-points från tidigare gruppmöte upprättades följande ärenden som var påkallade att utföras inom närmast förestående tid:
 
 Av ovanstående har följande utförts:
 

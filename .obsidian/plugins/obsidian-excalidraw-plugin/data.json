@@ -100,7 +100,7 @@
   "library2": {
     "type": "excalidrawlib",
     "version": 2,
-    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.9.2",
+    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.8.3",
     "libraryItems": []
   },
   "imageElementNotice": true,
@@ -438,11 +438,11 @@
   "pdfFrame": false,
   "pdfGapSize": 10,
   "pdfGroupPages": true,
-  "pdfLockAfterImport": true,
+  "pdfLockAfterImport": false,
   "pdfNumColumns": 2,
   "pdfNumRows": 1,
   "pdfDirection": "right",
-  "pdfImportScale": 1.5,
+  "pdfImportScale": 0.8,
   "gridSettings": {
     "DYNAMIC_COLOR": true,
     "COLOR": "#000000",
