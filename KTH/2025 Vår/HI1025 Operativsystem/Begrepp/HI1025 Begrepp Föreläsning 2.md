@@ -38,7 +38,7 @@ Multi-level Feedback Queue (MLFQ) (Definition):: En avancerad schemaläggningsal
 <!--SR:!2025-03-29,1,226!2000-01-01,1,250-->
 
 Proportional Share (Definition):: En schemaläggningsprincip där varje process tilldelas en viss andel av CPU-tiden. Till exempel kan en process få 20% av CPU-tiden, medan en annan får 80%. Syftar till att ge förutsägbar prestanda för varje process.
-<!--SR:!2025-03-28,1,230!2000-01-01,1,250-->
+<!--SR:!2025-03-28,1,230!2025-04-02,2,245-->
 
 Stride Scheduling (Definition);; En deterministisk algoritm för proportional share-schemaläggning. Varje process har en stride, hur stor stride beror på hur stor andel av CPU-tiden den har. Ju större andel ju mindre stride. Processer med kort stride körs oftare än processer med stor stride.
 <!--SR:!2025-03-29,1,227-->

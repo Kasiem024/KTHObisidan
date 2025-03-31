@@ -55,6 +55,7 @@ Persistency (Beständighet) (Definition):: Förmågan hos data att *överleva* e
 <!--SR:!2025-03-28,1,224!2000-01-01,1,250-->
 
 Time Sharing/Multiprogramming (Definition):: Tekniker för att låta *flera processer dela på CPU-tiden*, vilket ger illusionen av att de körs samtidigt. (Tänk: *Dela upp tiden i skivor*).
+<!--SR:!2000-01-01,1,250!2025-04-01,1,218-->
 
 Text, Data, Stack, Heap (Definition) (4)
 ||
@@ -73,6 +74,7 @@ Program, Process & Machine State (Definition) (3)
 - Program: En *statisk* uppsättning instruktioner. (Tänk: *Receptet*).
 - Process: En *instans* av ett program som körs. (Tänk: *Att baka kakan*).
 - Machine State: Det *aktuella tillståndet* för CPU:n och minnet (register, programräknare, etc.). (Tänk: *Ögonblicksbild av datorns hjärna*).
+<!--SR:!2025-04-01,1,218-->
 
 Process Control Block (PCB) (Definition):: En *datstruktur* som operativsystemet använder för att *hålla reda på all information om en process* (t.ex. process-ID, tillstånd, registerinnehåll, minnesmappningar). (Tänk: *Processens ID-kort*).
 <!--SR:!2000-01-01,1,250!2025-03-30,2,240-->
@@ -141,7 +143,7 @@ Stegen vid en Context Switch (3)
 1. Spara
 2. Återställ
 3. *switch()* & *return-from-trap*
-<!--SR:!2000-01-01,1,250!2025-03-29,2,244-->
+<!--SR:!2025-04-01,1,218!2025-03-29,2,244-->
 
 Första steget i en kontextväxling (3)
 ??
@@ -159,7 +161,7 @@ Andra steget i en kontextväxling (3)
 Viktiga funktioner som utförs *efter* att kontexten har bytts i en kontextväxling (4)
 ??
 - En speciell rutin, ofta kallad *switch()*, utför det noggranna sparandet och återställandet av register.
-- En *return-from-trap*-instruktion utförs. 
+- En *return-from-trap*-instruktion utförs.
 - Exekveringen återupptas i den *nya* processen (inte den gamla).
 - Processorn växlar till *användarläge* (om den nya processen ska köra i det läget).
 <!--SR:!2025-03-28,1,224!2000-01-01,1,250-->
@@ -177,7 +179,7 @@ De *tre grundläggande* processtillstånden (3)
 1. **Running:** Processen *exekverar instruktioner* på CPU:n.
 2. **Ready:** Processen är *redo att köra* men väntar på CPU:n (schemaläggaren).
 3. **Blocked:** Processen *väntar på en händelse* (t.ex. I/O).
-<!--SR:!2000-01-01,1,250!2025-03-31,3,260-->
+<!--SR:!2025-04-03,3,258!2025-03-31,3,260-->
 
 Processtillståndet *Running* i detalj (3)
 ??
