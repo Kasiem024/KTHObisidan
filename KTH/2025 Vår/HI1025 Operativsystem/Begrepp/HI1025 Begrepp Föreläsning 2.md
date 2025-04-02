@@ -17,19 +17,19 @@ Throughput (Definition):: Mäter hur mycket arbete ett system utför under en vi
 Fairness (Definition):: Hur rättvist systemets resurser, framförallt CPU-tid, fördelas mellan de olika processerna som vill köra.
 <!--SR:!2025-03-30,3,250!2025-03-25,3,250-->
 
-Turnaround Time (Definition):: Den totala tiden det tar för en process att slutföras, från det att den anländer till systemet tills dess att den är helt klar. Inkluderar både väntetid i köer och exekveringstid på CPU:n. En kort turnaround time är önskvärd.
+Turnaround Time (Definition):: Den totala tiden det tar för en process att slutföras, från det att den anländer till systemet tills dess att den är helt klar. Inkluderar både väntetid i köer och exekveringstid på CPU:n.
 
 First Come, First Served (FCFS) (Definition):: En schemaläggningsalgoritm där processer exekveras i den ordning de anländer till systemet. Enkel att implementera, men kan leda till att korta processer får vänta länge om långa processer anländer först (konvojeffekten).
 <!--SR:!2025-03-26,2,248!2025-03-30,2,246-->
 
 Shortest Job First (SJF) (Definition):: En schemaläggningsalgoritm som alltid väljer den process som har kortast beräknad total exekveringstid kvar. Detta minimerar den genomsnittliga väntetiden, men kräver att man vet exekveringstiden i förväg, vilket sällan är möjligt i praktiken.
-<!--SR:!2025-03-30,2,246!2000-01-01,1,250-->
+<!--SR:!2025-03-30,2,246!2025-04-03,2,245-->
 
 Shortest time to completion first (STCF) (Definition):: En preemptiv version av SJF. Om en ny process anländer med kortare återstående exekveringstid än den process som för närvarande körs, så avbryts den körande processen och den nya processen börjar köra.
-<!--SR:!2000-01-01,1,250!2025-03-27,3,268-->
+<!--SR:!2025-04-03,2,245!2025-03-27,3,268-->
 
 Response time (Definition):: Den tid det tar från det att en begäran skickas in tills det första svaret produceras. Det är avgörande för interaktiva system eftersom det påverkar användarupplevelsen
-<!--SR:!2000-01-01,1,250!2025-03-30,2,246-->
+<!--SR:!2025-04-02,1,225!2025-03-30,2,246-->
 
 Round Robin (RR) (Definition):: En preemptiv schemaläggningsalgoritm där varje process får en fast tidsperiod (kvantum) att köra. Om processen inte slutförs inom kvantumet avbryts den och flyttas till slutet av den redo-kön.
 <!--SR:!2000-01-01,1,250!2025-03-30,2,246-->
@@ -49,7 +49,7 @@ Hard Real-Time System (Definition):: Ett system där det är absolut kritiskt at
 Soft Real-Time System (Definition):: Ett system där det är önskvärt att hålla tidsgränser, men där ett missat deadline inte leder till katastrof. Exempelvis videouppspelning – ett litet hack är irriterande, men inte farligt.
 <!--SR:!2025-03-30,3,250!2025-03-28,1,230-->
 
-Rate Monotonic Scheduling (RMS) (Definition):: En statisk schemaläggningsalgoritm för periodiska processer (processer som körs regelbundet med en viss frekvens). Processer prioriteras baserat på deras period (eller frekvens): kortare period (högre frekvens) = högre prioritet.
+Rate Monotonic Scheduling (RMS) (Definition):: En statisk schemaläggningsalgoritm för periodiska processer (processer som körs regelbundet med en viss frekvens). Processer prioriteras baserat på deras period (eller frekvens): kortare period = högre prioritet.
 <!--SR:!2000-01-01,1,250!2025-03-26,2,248-->
 
 Earliest Deadline First (EDF) (Definition):: En dynamisk schemaläggningsalgoritm som alltid väljer den process som har närmast deadline. Kan hantera både periodiska och aperiodiska processer. Optimal i den meningen att om ett schema finns som kan möta alla deadlines, så kommer den att hitta det.

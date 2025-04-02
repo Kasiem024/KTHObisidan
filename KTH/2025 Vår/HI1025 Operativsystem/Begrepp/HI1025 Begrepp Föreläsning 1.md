@@ -13,19 +13,19 @@ Tags: #year2025 #KTH #HI1025 #begrepp
 ## Begrepp
 
 Bare metal (Definition):: Ett system där ett operativsystem körs direkt på hårdvaran, *utan* ett underliggande operativsystem eller hypervisor. (Tänk: *Ren metall, direkt kontakt*).
-<!--SR:!2000-01-01,1,250!2025-03-21,3,250-->
+<!--SR:!2025-04-02,1,217!2025-03-21,3,250-->
 
 Batch Job (Definition):: En sekvens av programkommandon som exekveras *utan* användarinteraktion. (Tänk: *En bunt uppgifter i kö*).
 <!--SR:!2025-03-30,2,240!2025-03-25,2,248-->
 
-Command Line Interface (CLI) (Definition):: Ett textbaserat gränssnitt för att interagera med ett operativsystem eller ett program, genom att skriva kommandon. (Tänk: *kommando tolk*)
+Command Line Interface (CLI) (Definition):: Ett textbaserat gränssnitt för att interagera med ett operativsystem eller ett program, genom att skriva kommandon.
 <!--SR:!2025-03-28,1,224!2000-01-01,1,250-->
 
 Kernel (Definition):: Operativsystemets *centrala del*, som hanterar grundläggande systemresurser (CPU, minne, I/O). (Tänk: *Hjärtat i systemet*).
 <!--SR:!2025-03-25,1,227!2025-03-25,2,248-->
 
 Limited Direct Execution (Definition):: En teknik där processer får köra *direkt på CPU:n* under större delen av tiden, men med *begränsningar* för att förhindra att de stör operativsystemet eller andra processer.
-<!--SR:!2025-03-28,1,224!2000-01-01,1,250-->
+<!--SR:!2025-03-28,1,224!2025-04-04,3,257-->
 
 Supervisor/User mode (Definition) (2)
 ??
@@ -46,7 +46,7 @@ Mechanisms & Policies (Definition) (2)
 ??
 - De *lågnivåfunktioner* som tillhandahåller en viss förmåga. (Tänk: "Hur" något görs).
 - De *regler* som bestämmer *när och på vilket sätt* lågnivåfunktionera ska användas. (Tänk: "När" och "varför" något görs).
-<!--SR:!2000-01-01,1,250!2025-03-25,1,227-->
+<!--SR:!2025-04-02,1,217!2025-03-25,1,227-->
 
 Concurrency (Samtidighet) (Definition):: Förmågan hos ett system att hantera *flera uppgifter "samtidigt"*, antingen genom verklig parallell exekvering (på flerkärniga system) eller genom snabb växling mellan uppgifter. (Tänk: *Jonglera med flera bollar*).
 <!--SR:!2025-03-25,1,227!2000-01-01,1,250-->
@@ -55,7 +55,7 @@ Persistency (Beständighet) (Definition):: Förmågan hos data att *överleva* e
 <!--SR:!2025-03-28,1,224!2000-01-01,1,250-->
 
 Time Sharing/Multiprogramming (Definition):: Tekniker för att låta *flera processer dela på CPU-tiden*, vilket ger illusionen av att de körs samtidigt. (Tänk: *Dela upp tiden i skivor*).
-<!--SR:!2000-01-01,1,250!2025-04-01,1,218-->
+<!--SR:!2025-04-03,2,237!2025-04-01,1,218-->
 
 Text, Data, Stack, Heap (Definition) (4)
 ||
@@ -93,7 +93,7 @@ Två olika strategier för schemaläggning:
 <!--SR:!2025-03-19,1,230!2000-01-01,1,250-->
 
 Virtual Machine (Virtuell Maskin) (Definition):: En *mjukvaruimplementation* av en dator, som kan köra ett eget operativsystem och applikationer. (Tänk: *En dator i en dator*).
-<!--SR:!2025-03-29,1,220!2000-01-01,1,250-->
+<!--SR:!2025-03-29,1,220!2025-04-04,3,257-->
 
 Interpreting (Tolkning) (Definition):: En metod för att köra programkod genom att *läsa och exekvera instruktionerna en i taget*, utan att först kompilera dem till maskinkod. (Tänk: *Översätta och utföra direkt*).
 
@@ -193,7 +193,7 @@ Processtillståndet *Ready* i detalj (3)
 - Processen är *körbar* men väntar på sin tur.
 - Finns i en *kö* (eller annan struktur) som hanteras av schemaläggaren.
 - Kan finnas *många* processer i detta tillstånd.
-<!--SR:!2000-01-01,1,250!2025-03-21,3,250-->
+<!--SR:!2025-04-03,2,237!2025-03-21,3,250-->
 
 Processtillståndet *Blocked* i detalj (3)
 ??
@@ -203,7 +203,7 @@ Processtillståndet *Blocked* i detalj (3)
 	- Väntar på en *signal* från en annan process.
 	- Väntar på en *timer*.
 - Processen *förbrukar ingen CPU-tid* medan den är i detta tillstånd.
-<!--SR:!2000-01-01,1,250!2025-03-30,2,240-->
+<!--SR:!2025-04-02,1,217!2025-03-30,2,240-->
 
 Vanliga övergångarna *till* Ready, och *från* Ready till Running (2)
 ||
@@ -225,4 +225,4 @@ Suspended State (Definition) (3)
 - Implementering:
 	- Kan vara ett *eget tillstånd*.
 	- Kan simuleras genom att placera processen i "Blocked" eller "Ready" under en *lång tid*.
-<!--SR:!2025-03-29,1,220!2000-01-01,1,250-->
+<!--SR:!2025-03-29,1,220!2025-04-03,2,237-->

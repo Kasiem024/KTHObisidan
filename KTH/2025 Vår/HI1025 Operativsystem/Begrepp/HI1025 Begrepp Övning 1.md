@@ -16,10 +16,10 @@ Tags: #year2025 #KTH #HI1025 #begrepp
 <!--SR:!2000-01-01,1,250!2025-03-25,3,250-->
 
 .c (Source file) (Definition):: En fil som innehåller den faktiska *implementationen* (koden) av funktioner och variabler. (Tänk: Själva boken).
-<!--SR:!2000-01-01,1,250!2025-03-27,3,268-->
+<!--SR:!2025-04-03,2,243!2025-03-27,3,268-->
 
 `#include` (Definition):: Ett direktiv som infogar innehållet från en headerfil i den aktuella filen, vilket möjliggör användning av deklarerade funktioner och variabler från andra filer. (Tänk: Kopiera och klistra in)
-<!--SR:!2000-01-01,1,250!2025-03-25,3,250-->
+<!--SR:!2025-04-02,1,223!2025-03-25,3,250-->
 
 Abstraction (Definition):: Att *dölja komplexa detaljer* och endast visa den *nödvändiga informationen*. Gör kod lättare att förstå och använda. Operativsystemet använder detta för att skapa enklare gränssnitt.
 <!--SR:!2025-03-29,1,226!2025-03-30,2,248-->
@@ -34,6 +34,7 @@ Huvudidéerna med **abstraktion** inom operativsystem (3)
 Processen som **abstraktion** inom ett OS:: OS skapar en *illusion* av att varje program har sin *egen CPU* (virtuell CPU). Detta kallas *virtualisering*. Gör det möjligt att köra *flera program samtidigt*, även om det bara finns en (eller få) fysiska CPU:er.
 
 Adressrymden som abstraktion inom ett OS:: En *illusion* av att varje process har ett *stort, sammanhängande, privat minne* (virtuella adresser). Programmeraren behöver *inte* veta hur det fysiska minnet är organiserat.
+<!--SR:!2025-04-02,1,223!2000-01-01,1,250-->
 
 Hur adressrymden fungerar i praktiken (Definition) (3)
 ||
@@ -58,7 +59,7 @@ Maintainability (Underhållbarhet) (Definition):: Att skriva kod som är lätt a
 <!--SR:!2025-03-29,1,226!2025-03-25,3,250-->
 
 Cohesion (Definition):: Ett mått på hur väl *relaterade funktionerna* inom en modul eller klass är. Innebär att en modul har ett *väldefinierat ansvar* och gör en sak väl. Leder till mer läsbar, förståelig och underhållbar kod, samt underlättar återanvändning och testning
-<!--SR:!2000-01-01,1,250!2025-03-29,2,248-->
+<!--SR:!2025-04-03,2,243!2025-03-29,2,248-->
 
 Coupling (Koppling) (Definition):: Ett mått på hur *oberoende olika moduler eller klasser* är. Innebär att ändringar i en modul har minimal påverkan på andra moduler, vilket underlättar underhåll och minskar risken för buggar.
 <!--SR:!2025-03-23,1,230!2025-03-25,2,248-->
