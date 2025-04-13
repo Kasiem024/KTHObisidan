@@ -13,29 +13,29 @@ Tags: #year2025 #KTH #HI1025 #begrepp
 ## Begrepp
 
 Bare metal (Definition):: Ett system där ett operativsystem körs direkt på hårdvaran, *utan* ett underliggande operativsystem eller hypervisor. (Tänk: *Ren metall, direkt kontakt*).
-<!--SR:!2025-04-05,2,237!2025-04-09,7,270-->
+<!--SR:!2025-04-05,2,237!2025-04-16,7,290-->
 
 Batch Job (Definition):: En sekvens av programkommandon som exekveras *utan* användarinteraktion. (Tänk: *En bunt uppgifter i kö*).
 <!--SR:!2025-04-07,5,240!2025-04-07,5,268-->
 
 Command Line Interface (CLI) (Definition):: Ett textbaserat gränssnitt för att interagera med ett operativsystem eller ett program, genom att skriva kommandon.
-<!--SR:!2025-04-04,2,244!2025-04-05,3,257-->
+<!--SR:!2025-04-04,2,244!2025-04-16,7,277-->
 
 Kernel (Definition):: Operativsystemets *centrala del*, som hanterar grundläggande systemresurser (CPU, minne, I/O). (Tänk: *Hjärtat i systemet*).
 <!--SR:!2025-04-04,2,247!2025-04-07,5,268-->
 
 Limited Direct Execution (Definition):: En teknik där processer får köra *direkt på CPU:n* under större delen av tiden, men med *begränsningar* för att förhindra att de stör operativsystemet eller andra processer.
-<!--SR:!2025-04-03,1,204!2025-04-04,3,257-->
+<!--SR:!2025-04-11,2,224!2025-04-04,3,257-->
 
 Supervisor/User mode (Definition) (2)
 ??
 Två distinkta *driftlägen* för CPU:n
 - Fullständig åtkomst till *alla* hårdvaruresurser och instruktioner. Används av kärnan.
 - *Begränsad* åtkomst, förhindrar direkt åtkomst till känsliga resurser. Används av applikationer.
-<!--SR:!2025-04-04,2,228!2025-04-09,7,280-->
+<!--SR:!2025-04-14,5,228!2025-04-09,7,280-->
 
 System Call (Systemanrop) (Definition):: En *mekanism* för en användarprocess att *begära tjänster* från operativsystemets kärna (t.ex. läsa en fil, allokera minne). (Tänk: *Ett samtal till chefen (kärnan)*).
-<!--SR:!2025-04-04,1,221!2025-03-25,1,227-->
+<!--SR:!2025-04-11,2,221!2025-03-25,1,227-->
 
 Trap (Avbrottsfälla) (Definition):: En *speciell typ av systemanrop*, ofta utlöst av ett fel (t.ex. division med noll) eller en specifik instruktion. (Tänk: *En larmklocka*).
 <!--SR:!2025-04-04,2,237!2025-04-04,2,237-->
@@ -47,16 +47,16 @@ Mechanisms & Policies (Definition) (2)
 ??
 - De *lågnivåfunktioner* som tillhandahåller en viss förmåga. (Tänk: "Hur" något görs).
 - De *regler* som bestämmer *när och på vilket sätt* lågnivåfunktionera ska användas. (Tänk: "När" och "varför" något görs).
-<!--SR:!2025-04-04,2,217!2025-04-04,2,247-->
+<!--SR:!2025-04-13,4,217!2025-04-04,2,247-->
 
 Concurrency (Samtidighet) (Definition):: Förmågan hos ett system att hantera *flera uppgifter "samtidigt"*, antingen genom verklig parallell exekvering (på flerkärniga system) eller genom snabb växling mellan uppgifter. (Tänk: *Jonglera med flera bollar*).
 <!--SR:!2025-03-25,1,227!2025-04-04,1,221-->
 
 Persistency (Beständighet) (Definition):: Förmågan hos data att *överleva* efter att processen som skapade den har avslutats (t.ex. genom att spara data på disk). (Tänk: *Data som inte försvinner*).
-<!--SR:!2025-04-04,2,224!2025-04-04,2,237-->
+<!--SR:!2025-04-04,2,224!2025-04-14,5,257-->
 
 Time Sharing/Multiprogramming (Definition):: Tekniker för att låta *flera processer dela på CPU-tiden*, vilket ger illusionen av att de körs samtidigt. (Tänk: *Dela upp tiden i skivor*).
-<!--SR:!2025-04-03,2,237!2025-04-04,2,238-->
+<!--SR:!2025-04-14,5,257!2025-04-04,2,238-->
 
 Text, Data, Stack, Heap (Definition) (4)
 ||
@@ -67,7 +67,7 @@ Minnessegment i en process:
 - Heap: Används för *dynamisk minnesallokering* (t.ex. med `malloc` i C). Växer och krymper dynamiskt.
 
 Stack Frame (Definition):: Ett minnesområde på stacken som skapas vid varje *funktionsanrop*. Innehåller *lokala variabler*, *argument*, och *återhoppsadressen*. (Tänk: *En anteckningsbok för varje funktion*).
-<!--SR:!2000-01-01,1,250!2025-04-04,2,237-->
+<!--SR:!2025-04-08,1,220!2025-04-14,5,257-->
 
 Reentrant (Återinträdande) (Definition):: Kod som kan *köras säkert av flera processer samtidigt*, utan att de stör varandras data. (Tänk: *Kod som tål att delas*). Viktigt för delade bibliotek.
 <!--SR:!2025-04-03,1,217!2025-04-04,1,221-->
@@ -80,13 +80,13 @@ Program, Process & Machine State (Definition) (3)
 <!--SR:!2025-04-04,2,218-->
 
 Process Control Block (PCB) (Definition):: En *datstruktur* som operativsystemet använder för att *hålla reda på all information om en process* (t.ex. process-ID, tillstånd, registerinnehåll, minnesmappningar). (Tänk: *Processens ID-kort*).
-<!--SR:!2025-04-04,1,221!2025-03-30,2,240-->
+<!--SR:!2025-04-11,2,221!2025-03-30,2,240-->
 
 Context Switch (Kontextbyte) (Definition):: Processen att *spara tillståndet* för en körande process och *återställa tillståndet* för en annan process, så att den andra processen kan fortsätta köra. (Tänk: *Byta förare i en bil*).
-<!--SR:!2025-04-04,2,220!2025-04-09,7,287-->
+<!--SR:!2025-04-04,2,220!2025-04-16,7,307-->
 
 Scheduler (Schemaläggare) (Definition):: Den del av operativsystemet som *bestämmer vilken process* som ska köras härnäst och *när*. (Tänk: *Trafikpolisen för processer*).
-<!--SR:!2025-04-07,5,248!2025-04-04,2,237-->
+<!--SR:!2025-04-07,5,248!2025-04-14,5,257-->
 
 Cooperative vs. Preemptive (Multitasking) (Definition) (2)
 ??
@@ -106,20 +106,23 @@ Hypervisor (Definition) (2)
 Ett program (eller hårdvarufunktion) som *skapar och hanterar virtuella maskiner*:
 - Type 1 (Bare-metal): Körs *direkt på hårdvaran*.
 - Type 2 (Hosted): Körs *ovanpå ett befintligt operativsystem*.
+<!--SR:!2000-01-01,1,250!2025-04-10,3,260-->
 
 Boot (Uppstart) (Definition):: Processen att *starta en dator*. Involverar att ladda operativsystemets kärna från disk till minnet och initiera systemet. (Tänk: *Väcka datorn till liv*).
-<!--SR:!2025-03-28,1,224!2025-03-26,2,248-->
+<!--SR:!2025-04-11,2,224!2025-04-14,5,268-->
 
 Context Switch (Definition):: En *lågnivåprocess* där OS *stoppar* en process och *startar* en annan. Oftast *schemaläggaren* som gör detta. Möjliggör *virtualisering av CPU:n*. Händer vid systemanrop och timeravbrott.
-<!--SR:!2025-04-04,2,244!2025-04-07,5,260-->
+<!--SR:!2025-04-04,2,244!2025-04-16,7,280-->
 
 Trap-tabell (Definition):: Talar om för hårdvaran *vilken kod* som ska köras vid *exceptionella händelser* (avbrott, systemanrop).
+<!--SR:!2025-04-09,1,220!2025-04-11,2,239-->
 
 Stegen vid en Boot-process (3)
 ??
 1. Privilegier & Trap-tabell
 2. Förbereda för programstart
 3. Starta processen
+<!--SR:!2000-01-01,1,250!2025-04-11,2,239-->
 
 Vad som händer *först* i boot-processen (4)
 ??
@@ -147,7 +150,7 @@ Stegen vid en Context Switch (3)
 1. Spara
 2. Återställ
 3. *switch()* & *return-from-trap*
-<!--SR:!2025-04-04,2,238!2025-04-07,5,264-->
+<!--SR:!2025-04-04,2,238!2025-04-16,7,264-->
 
 Första steget i en kontextväxling (3)
 ??
@@ -177,7 +180,7 @@ Det *aktuella läget* för en process. Vanliga tillstånd är:
 - Ready: Processen är *redo att köra* men väntar på att få CPU-tid.
 - Running: Processen *körs för närvarande* på CPU:n.
 - Blocked (Väntande): Processen *väntar på en händelse* (t.ex. I/O-operation, signal).
-<!--SR:!2025-04-09,7,280-->
+<!--SR:!2025-04-16,7,300-->
 
 De *tre grundläggande* processtillstånden (3)
 ??
@@ -191,7 +194,7 @@ Processtillståndet *Running* i detalj (3)
 - Processen har *kontroll över CPU:n*.
 - Dess instruktioner *utförs aktivt*.
 - Endast *en* process kan vara i detta tillstånd per CPU-kärna.
-<!--SR:!2025-03-29,1,220!2025-04-09,7,280-->
+<!--SR:!2025-04-11,2,240!2025-04-09,7,280-->
 
 Processtillståndet *Ready* i detalj (3)
 ??
@@ -219,7 +222,7 @@ Vanliga övergångarna *till* Ready, och *från* Ready till Running (2)
 <!--SR:!2025-04-07,5,240-->
 
 Initial State (Definition):: Ett tillstånd som en process kan befinna sig i *precis när den skapas*, innan den placeras i "Ready"-kön.
-<!--SR:!2025-04-04,2,240!2025-04-07,5,267-->
+<!--SR:!2025-04-04,2,240!2025-04-16,7,287-->
 
 Final State (Definition):: Ett tillstånd som en process kan befinna sig i *efter att den har avslutats*, men innan dess resurser (minne, PCB, etc.) har *rensats upp* helt av operativsystemet. (Tänk: "Zombie"-process)
 <!--SR:!2025-04-03,1,217!2025-04-04,2,237-->
@@ -231,4 +234,4 @@ Suspended State (Definition) (3)
 - Implementering:
 	- Kan vara ett *eget tillstånd*.
 	- Kan simuleras genom att placera processen i "Blocked" eller "Ready" under en *lång tid*.
-<!--SR:!2025-04-03,1,200!2025-04-03,2,237-->
+<!--SR:!2025-04-03,1,200!2025-04-14,5,257-->

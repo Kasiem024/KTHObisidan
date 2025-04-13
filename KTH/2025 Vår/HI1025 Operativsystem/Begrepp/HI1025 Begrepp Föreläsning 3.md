@@ -40,6 +40,7 @@ Memory Management Unit (MMU) (Definition):: Den del av processorn som hjälper t
 <!--SR:!2025-04-05,2,246!2025-04-04,2,246-->
 
 Base Register (Definition):: Ett hårdvaruregister som används vid dynamisk relokalisering, anger den fysiska startadressen för processens adressrymd
+<!--SR:!2025-04-10,1,225!2025-04-11,2,245-->
 
 Bound (Limit) Register (Definition):: Ett hårdvaruregister som används vid dynamisk relokalisering för att säkerställa att en virtuell adress ligger inom gränserna för processens adressrymd, anger storleken på adressrymden och används för skydd
 
@@ -49,16 +50,16 @@ Internal Fragmentation (Definition):: Utrymmesförlust som uppstår _inuti_ en a
 <!--SR:!2025-04-04,2,230!2025-04-04,3,250-->
 
 External Fragmentation (Definition):: Utrymmesförlust som uppstår när det totala lediga minnet är tillräckligt stort för att tillfredsställa en förfrågan, men det är uppdelat i små, icke-sammanhängande bitar.
-<!--SR:!2025-04-05,2,246!2025-04-04,3,250-->
+<!--SR:!2025-04-05,2,246!2025-04-16,7,270-->
 
 Free List (Definition):: En datastruktur som innehåller referenser till alla lediga minnesblock i en hanterad minnesregion (t.ex. heapen).
-<!--SR:!2025-04-04,3,250!2025-04-05,3,250-->
+<!--SR:!2025-04-04,3,250!2025-04-16,7,270-->
 
 Splitting (Definition):: En mekanism som används av minnesallokerare där ett ledigt minnesblock delas upp i mindre block för att tillfredsställa en minnesallokeringsförfrågan.
-<!--SR:!2025-04-04,2,246!2025-04-04,3,250-->
+<!--SR:!2025-04-04,2,246!2025-04-16,7,270-->
 
 Coalescing (Definition):: En mekanism som används av minnesallokerare där intilliggande lediga minnesblock slås ihop till ett större ledigt minnesblock för att minska fragmentering.
-<!--SR:!2025-04-05,3,250!2025-04-04,3,250-->
+<!--SR:!2025-04-05,3,250!2025-04-16,7,270-->
 
 Best-Fit Algorithm (Definition):: En strategi för att välja ett ledigt minnesblock från den fria listan som är _närmast_ i storlek till den begärda allokeringen.
 <!--SR:!2025-04-05,3,250!2025-04-04,3,250-->
@@ -67,7 +68,7 @@ Worst-Fit Algorithm (Definition):: En strategi för att välja det _största_ le
 <!--SR:!2025-04-04,2,246!2025-04-04,2,246-->
 
 First-Fit Algorithm (Definition):: En strategi för att välja det _första_ lediga minnesblocket i den fria listan som är tillräckligt stort för att tillfredsställa allokeringsförfrågan.
-<!--SR:!2025-04-04,3,250!2025-04-04,3,250-->
+<!--SR:!2025-04-04,3,250!2025-04-16,7,270-->
 
 Next-Fit Algorithm (Definition):: Liknar First-Fit, men den börjar sökningen efter ett lämpligt ledigt block från där den tidigare sökningen slutade, istället för att alltid börja från början av listan.
 <!--SR:!2025-04-04,2,230!2025-04-04,3,250-->
@@ -76,4 +77,4 @@ Garbage Collection (Definition):: En automatisk minneshanteringsteknik som åter
 <!--SR:!2025-04-04,3,250!2025-04-04,3,270-->
 
 Buddy Allocation (Definition):: Delar minnet i tvåpotensblock som kan splittras och slås ihop för effektiv hantering.
-<!--SR:!2025-04-03,1,226!2025-04-04,2,246-->
+<!--SR:!2025-04-11,2,226!2025-04-04,2,246-->

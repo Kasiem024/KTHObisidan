@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e480874c61f86252",
+        "id": "b91c1d12447356ff",
         "type": "tabs",
         "children": [
           {
-            "id": "9470de65e7539720",
+            "id": "1064ab4bc2059dbc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 4.md",
+                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 5.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "HI1025 Begrepp Föreläsning 4"
+              "title": "HI1025 Begrepp Föreläsning 5"
             }
           }
         ]
@@ -201,24 +201,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9470de65e7539720",
+  "active": "1064ab4bc2059dbc",
   "lastOpenFiles": [
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 3.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/L2PagingA.pdf",
+    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/L2PagingA.pdf.crdownload",
+    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F5ConcurrencyLockA1.pdf",
+    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F5ConcurrencyLockA1.pdf.crdownload",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 4.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 5.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/04-07 HI1025 Föreläsning 4.md",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/CM1008 Rapport Anteckingar.md",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/PDFs/Thylefors 2019 - Psykosocial arbetsmiljö. I M. Bohgard et al. (Red), Arbete och teknik på människans villkor [Kapitel 2].pdf",
+    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/PDFs/Hammar Chiriac et al. 2020_ Utdrag_Handbok för grupparbete s. 219-224, 249-257-2.pdf",
+    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-17 HI1025 Föreläsning 1.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 3.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 1.md",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F4MemVirtPaginAwa.pdf",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F4MemVirtPaginAwa.pdf.crdownload",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F3MemVirtSegmAwa.pdf",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F3MemVirtSegmAwa.pdf.crdownload",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F2ProcVirtPoliciesAwa.pdf",
-    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F2ProcVirtPoliciesAwa.pdf.crdownload",
-    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/S1PointersA-1.pdf",
-    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/S1PointersA-1.pdf.crdownload",
-    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F1ProcVirtMechA.pdf",
-    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F1ProcVirtMechA.pdf.crdownload",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-31 HI1025 Föreläsning 3 (conflict 2025-03-31-11-51-15).md",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-31 HI1025 Föreläsning 3.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-17 HI1025 Föreläsning 1.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 2.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 4 från Gruppmöte.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 1.md",
@@ -235,12 +239,8 @@
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-17 HI1025 Begrepp Föreläsning 1.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/03-20 HI1025 Begrepp Övning 1.md",
     "KTH/2025 Vår/HE1028 Mikrodatorteknik/Anteckningar/Instruktioner HE1028.md",
-    "index.md",
-    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 2 från styrelsemöte.md",
-    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 1 från styrelsemöte.md",
     "Pasted image 20250321104620.png",
     "Untitled.canvas",
-    "Obsidian Plugins/Templates/Begrepp Template.md",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",
     "KTH/2024 Höst/HE1026/Lektioner/Pasted image 20241202140128.png",

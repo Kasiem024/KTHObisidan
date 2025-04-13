@@ -37,27 +37,79 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
 };
 
-class PDFCreatorModal extends obsidian.Modal {
-    constructor(app, manifest, favoriteTemplate, templatesFolder, onSubmit) {
+class ChooseDestModals extends obsidian.SuggestModal {
+    constructor(app, onSubmit) {
         super(app);
+        this.onSubmit = onSubmit;
+    }
+    getSuggestions(query) {
+        return this.app.vault
+            .getAllFolders()
+            .filter((folder) => folder.path.toLowerCase().includes(query));
+    }
+    renderSuggestion(value, el) {
+        el.createEl("div", { text: value.name });
+        el.createEl("small", { text: value.path });
+    }
+    onChooseSuggestion(item, _evt) {
+        this.onSubmit(item);
+        this.close();
+    }
+}
+class ChooseDestinationSearch extends obsidian.AbstractInputSuggest {
+    constructor(inputEl, app, onSubmit) {
+        super(app, inputEl);
+        this.inputEl = inputEl;
+        this.onSubmit = onSubmit;
+    }
+    renderSuggestion(value, el) {
+        el.setText(value);
+    }
+    getSuggestions(query) {
+        const sugg = this.app.vault
+            .getAllFolders()
+            .filter((folder) => {
+            return folder.path.toLowerCase().contains(query.toLowerCase());
+        })
+            .map((folder) => folder.path);
+        if (sugg.length === 0)
+            return [query];
+        return sugg;
+    }
+    selectSuggestion(value, _evt) {
+        this.inputEl.value = value;
+        this.onSubmit(value);
+        this.inputEl.focus();
+        this.inputEl.trigger("input");
+        this.close();
+    }
+}
+
+class PDFCreatorModal extends obsidian.Modal {
+    constructor(plugin, templatesFolder, onSubmit, chooseDest, inEditor) {
+        super(plugin.app);
         this.result = {
             name: "New note",
             template: "blank.pdf",
         };
+        this.chooseDest = false;
+        this.inEditor = false;
         this.onSubmitCallback = onSubmit;
-        this.manifest = manifest;
-        this.favoriteTemplate = favoriteTemplate;
+        this.manifest = plugin.manifest;
+        this.favoriteTemplate = plugin.settings.favoriteTemplate;
         this.templatesFolder = templatesFolder;
+        this.chooseDest = chooseDest;
+        this.plugin = plugin;
+        this.inEditor = inEditor;
     }
     onOpen() {
         return __awaiter(this, void 0, void 0, function* () {
-            let { contentEl } = this;
-            contentEl.createEl("h1", { text: "Create new note from template" });
-            // NAME
+            const { contentEl } = this;
+            this.setTitle("Create new note from template");
             new obsidian.Setting(contentEl).setName("Name").addText((text) => {
-                text.setValue(this.result["name"]);
+                text.setValue(this.result.name);
                 text.onChange((value) => {
-                    this.result["name"] = value;
+                    this.result.name = value;
                 });
                 // on enter, submit the modal
                 text.inputEl.addEventListener("keydown", (e) => {
@@ -84,420 +136,56 @@ class PDFCreatorModal extends obsidian.Modal {
                 }
                 // default value is the favorite template
                 dropDown.setValue(this.favoriteTemplate);
-                this.result["template"] = this.favoriteTemplate;
+                this.result.template = this.favoriteTemplate;
                 dropDown.onChange((value) => {
-                    this.result["template"] = value;
+                    this.result.template = value;
                 });
             }));
+            // ONLY IF CHOOSEDEST IS TRUE
+            if (this.chooseDest) {
+                this.result.path = this.inEditor
+                    ? yield this.plugin.getDestFolder()
+                    : this.plugin.settings.defaultPath;
+                let search;
+                new obsidian.Setting(contentEl)
+                    .setName("Destination")
+                    .addSearch((cb) => {
+                    cb.setPlaceholder("Choose a folder");
+                    cb.setValue(this.result.path);
+                    new ChooseDestinationSearch(cb.inputEl, this.app, (value) => {
+                        this.result.path = value;
+                    });
+                    cb.clearButtonEl.onclick = (_e) => {
+                        this.result.path = undefined;
+                    };
+                    cb.onChange((value) => {
+                        this.result.path = value;
+                    });
+                })
+                    .addExtraButton((btn) => btn
+                    .setIcon("refresh-ccw")
+                    .setTooltip("Set to default")
+                    .onClick(() => __awaiter(this, void 0, void 0, function* () {
+                    this.result.path = this.plugin.settings.defaultPath;
+                    search.setValue(this.result.path);
+                })));
+            }
             // CLOSE BUTTON
             new obsidian.Setting(contentEl).addButton((btn) => btn
                 .setButtonText("Submit")
                 .setCta()
                 .onClick(() => {
                 this.close();
+                this.result.path = !this.result.path || this.result.path.trim().length === 0
+                    ? undefined
+                    : this.result.path;
                 this.onSubmitCallback(this.result);
             }));
         });
     }
     onClose() {
-        let { contentEl } = this;
+        const { contentEl } = this;
         contentEl.empty();
-    }
-}
-
-const DEFAULT_TEMPLATE_DIR = "/templates/";
-const DEFAULT_TEMPLATE = "blank.pdf";
-const DEFAULT_ASSET_PATH = "/handwritten-notes/";
-const DEFAULT_SETTINGS = {
-    defaultPath: DEFAULT_ASSET_PATH,
-    assetUrl: "",
-    useRelativePaths: false,
-    showWelcomeModal: true,
-    collapseEmbeds: false,
-    favoriteTemplate: DEFAULT_TEMPLATE,
-    templatesAtCustom: false,
-    templatesPath: DEFAULT_TEMPLATE_DIR,
-};
-
-/**
- * Loads the PDF template from the specified path.
- *
- * @param {App} app - The obsidian app instance.
- * @param {string} path - The template file to be loaded.
- * @return {Promise<any>} The loaded template in binary format.
- */
-function loadPdfTemplate(app, path) {
-    return __awaiter(this, void 0, void 0, function* () {
-        return app.vault.adapter.readBinary(obsidian.normalizePath(path));
-    });
-}
-/**
- * Creates a binary file in the specified path.
- *
- * @param {App} app - The obsidian app instance.
- * @param {any} template - The template to be written to the file.
- * @param {string} path - The path where the file will be created.
- * @throws Will throw an error if the file already exists or on creation failure.
- */
-function createBinaryFile(app, template, path) {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield app.vault.createBinary(path, template);
-        }
-        catch (e) {
-            new obsidian.Notice(e.message.includes("already exists")
-                ? "File already exists!"
-                : "Error creating file! Note: " + e.message);
-            console.log(e);
-        }
-    });
-}
-/**
- * Opens a file in the obsidian app.
- *
- * @param {App} app - The obsidian app instance.
- * @param {string} path - The path of the file to be opened.
- */
-function openCreatedFile(app, path) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const leaf = app.workspace.getLeaf(false);
-        const file = app.vault.getAbstractFileByPath(path);
-        if (file instanceof obsidian.TFile) {
-            yield leaf.openFile(file);
-        }
-    });
-}
-/**
- * Appends an 'Annotate' button to the specified toolbar.
- *
- * @param {HTMLElement} toolbar - The toolbar where the button will be appended.
- * @param {App} app - The obsidian app instance.
- * @param {() => Promise<void>} onClick - The async function to be executed when the button is clicked.
- */
-function appendAnnotateButton(toolbar, onClick) {
-    // Check if the button already exists before appending
-    let matchingChild = toolbar.querySelector(".pdf-annotate-button");
-    if (matchingChild)
-        return;
-    // Check if the button already exists before appending
-    const button = new obsidian.ButtonComponent(toolbar).setIcon("pen-tool");
-    // give it a unique id so we can find it later
-    button.setTooltip("Annotate");
-    // button.buttonEl.classList.add("pdf-annotate-button");
-    button.setClass("pdf-annotate-button");
-    button.setClass("clickable-icon");
-    // Handle the async onClick function
-    button.onClick(() => __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield onClick();
-        }
-        catch (error) {
-            console.error("Error handling async onClick:", error);
-        }
-    }));
-}
-/**
- * Initializes the templates folder if it doesn't exist.
- *
- * @param {Plugin} plugin - The obsidian plugin instance.
- * @throws Will throw an error if there's an issue in creating the folder.
- */
-function initTemplatesFolder(plugin) {
-    return __awaiter(this, void 0, void 0, function* () {
-        // @ts-ignore
-        const templatesFolder = yield getTemplatesFolder(plugin);
-        try {
-            yield plugin.app.vault.createFolder(templatesFolder);
-        }
-        catch (e) {
-            // Ignore error if folder already exists
-        }
-        const defaultTemplatePath = obsidian.normalizePath(templatesFolder + "/blank.pdf");
-        if (yield fileExists(plugin.app, defaultTemplatePath))
-            return;
-        // Download default template if it doesn't exist
-        const TEMPLATE_URL = "https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
-        yield downloadFile(plugin.app, TEMPLATE_URL, defaultTemplatePath);
-        // console.log("Downloaded template to " + defaultTemplatePath);
-    });
-}
-/**
- * Downloads a file from a URL and saves it to the specified path.
- *
- * @param {App} app - The obsidian app instance.
- * @param {string} url - The URL of the file to be downloaded.
- * @param {string} path - The path where the file will be saved.
- * @throws Will throw an error if there's an issue in fetching the file.
- */
-function downloadFile(app, url, path) {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const response = yield obsidian.requestUrl({
-                url: url,
-                method: "GET",
-                contentType: "arraybuffer",
-            });
-            const body = yield response.arrayBuffer;
-            yield app.vault.createBinary(path, body);
-        }
-        catch (err) {
-            console.error(err);
-            new obsidian.Notice("Error fetching file!");
-        }
-    });
-}
-/** Checks if a file exists in the vault.
- * @param {App} app - The obsidian app instance.
- * @param {string} path - The path of the file to be checked.
- * @return {boolean} True if the file exists, false otherwise.
- *
- * @throws It will throw an error if the file exists
- * @brief Use vault.adapter.exists to determine if the file exists. This works for all files, whether in or out of the vault.
- */
-function fileExists(app, path) {
-    return __awaiter(this, void 0, void 0, function* () {
-        console.log("Checking if file exists: " + path);
-        try {
-            const exists = yield app.vault.adapter.exists(path);
-            console.log("File exists: " + exists);
-            return exists;
-        }
-        catch (err) {
-            console.error("Error checking file existance");
-            return false;
-        }
-    });
-}
-/** Gets the path of the template folder based on the current settings.
- * @param plugin The obsidian plugin instance.
- * @return {string} The path of the template folder.
- * @brief If the templates are stored in the custom folder, return the custom folder path. Otherwise, return the default folder path.
- */
-function getTemplatesFolder(plugin) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const settings = plugin.settings;
-        return settings.templatesAtCustom
-            ? obsidian.normalizePath(settings.templatesPath)
-            : obsidian.normalizePath(plugin.manifest.dir + DEFAULT_TEMPLATE_DIR);
-    });
-}
-
-class NotePDFSettingsTab extends obsidian.PluginSettingTab {
-    constructor(app, plugin) {
-        super(app, plugin);
-        this.plugin = plugin;
-    }
-    display() {
-        const { containerEl: modal } = this;
-        modal.empty();
-        // GENERAL SETTINGS
-        modal.createEl("h2", {
-            text: "General Settings",
-        });
-        this.CollapseEmbedsToggle();
-        // Generate new note
-        modal.createEl("h2", {
-            text: "Create new note",
-        });
-        this.createRelativePathToggle();
-        this.createDefaultPathTextInput();
-        // Settings heading
-        // TEMPLATES
-        this.createTemplatesSection();
-        this.createTemplateFolderPath();
-        this.createSettingWithOptions();
-    }
-    CollapseEmbedsToggle() {
-        new obsidian.Setting(this.containerEl)
-            .setName("Collapse embeds")
-            .setDesc("Collapse embeds by default to save vertical space.")
-            .addToggle((toggle) => toggle
-            .setValue(this.plugin.settings.collapseEmbeds)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            this.plugin.settings.collapseEmbeds = value;
-            yield this.plugin.saveSettings();
-        })));
-    }
-    createRelativePathToggle() {
-        new obsidian.Setting(this.containerEl)
-            .setName("Use relative path")
-            .setDesc("Use relative path for the template path.")
-            .addToggle((toggle) => toggle
-            .setValue(this.plugin.settings.useRelativePaths)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            this.plugin.settings.useRelativePaths = value;
-            yield this.plugin.saveSettings();
-        })));
-    }
-    createDefaultPathTextInput() {
-        new obsidian.Setting(this.containerEl)
-            .setName("Default Path for new notes")
-            .setDesc("Path to be used if relative path is disabled.")
-            .addText((text) => text
-            .setPlaceholder(DEFAULT_ASSET_PATH)
-            .setValue(this.plugin.settings.defaultPath)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            this.plugin.settings.defaultPath = value;
-            yield this.plugin.saveSettings();
-        })));
-    }
-    createTemplatesSection() {
-        return __awaiter(this, void 0, void 0, function* () {
-            // add a div
-            const titleEl = this.containerEl.createDiv();
-            titleEl.innerText = "Templates";
-            titleEl.addClass("setting-item-heading");
-            titleEl.addClass("setting-item");
-            if (obsidian.Platform.isDesktop) {
-                this.createFolderButton(titleEl);
-            }
-            const pluginFolder = yield getTemplatesFolder(this.plugin);
-            obsidian.MarkdownRenderer.render(this.app, `You can use **any** PDF as a template for the notes. Just add it to the templates folder and it will appear here. 
-      \`${pluginFolder}\``, this.containerEl, "", this.plugin);
-        });
-    }
-    createTemplateFolderPath() {
-        // Whether the templates should be stored in a custom folder
-        new obsidian.Setting(this.containerEl)
-            .setName("Store templates in a custom folder")
-            .setDesc("Store the templates in a custom folder outside the plugin path. (May resolve issues with syncing)")
-            .addToggle((toggle) => toggle
-            .setValue(this.plugin.settings.templatesAtCustom)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            !value // If the value is false, set the path to the default path
-                ? (this.plugin.settings.templatesPath = DEFAULT_TEMPLATE_DIR)
-                : null;
-            this.plugin.settings.templatesAtCustom = value;
-            yield this.plugin.saveSettings();
-            yield initTemplatesFolder(this.plugin);
-            yield this.display();
-        })));
-        if (!this.plugin.settings.templatesAtCustom)
-            return;
-        // Folder relative to the plugin
-        new obsidian.Setting(this.containerEl)
-            .setName("Templates folder")
-            .setDesc("Path to the templates folder.")
-            .addText((text) => text
-            .setPlaceholder(DEFAULT_TEMPLATE_DIR)
-            .setValue(this.plugin.settings.templatesPath)
-            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-            this.plugin.settings.templatesPath = value;
-            yield this.plugin.saveSettings();
-        })));
-        // Dividing line
-    }
-    createFolderButton(parentEl) {
-        // div for the buttons
-        const buttonContainer = parentEl.createDiv();
-        buttonContainer.addClass("setting-item-control");
-        // Reload button
-        const reloadButton = new obsidian.ButtonComponent(buttonContainer)
-            .setIcon("sync")
-            .setClass("clickable-icon")
-            .setClass("setting-editor-extra-setting-button")
-            .setTooltip("Reload templates");
-        reloadButton.onClick(() => {
-            initTemplatesFolder(this.plugin); // Reload default template just in case
-            this.display();
-        });
-        const folderButton = new obsidian.ButtonComponent(buttonContainer)
-            .setIcon("folder")
-            .setClass("clickable-icon")
-            // .setClass("settings-folder-button")
-            .setClass("setting-editor-extra-setting-button")
-            .setTooltip("Open templates folder in the explorer");
-        folderButton.onClick(() => __awaiter(this, void 0, void 0, function* () {
-            this.app.showInFolder(obsidian.normalizePath((yield getTemplatesFolder(this.plugin)) + "/" + DEFAULT_TEMPLATE));
-        }));
-    }
-    createSettingWithOptions() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const { containerEl } = this;
-            obsidian.MarkdownRenderer.render(this.app, `### Available Templates`, containerEl, "", this.plugin);
-            const scrollContainer = containerEl.createDiv();
-            scrollContainer.addClass("settings-scroll-container");
-            // Show also templates in the templates folder
-            const templatePath = yield getTemplatesFolder(this.plugin);
-            const templates = yield this.app.vault.adapter.list(templatePath);
-            // iterate over the templates and show them
-            for (const filePath of templates.files) {
-                const fileName = filePath.split("/").pop();
-                // fileName without extension and capitalized
-                const title = fileName === null || fileName === void 0 ? void 0 : fileName.split(".")[0].replace(/-/g, " ").replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
-                const setting = new obsidian.Setting(scrollContainer)
-                    .setName(title)
-                    .setDesc(fileName);
-                this.favoriteButton(setting, fileName);
-                // Delete button and lock for default template
-                this.deleteButton(setting, filePath, fileName);
-            }
-        });
-    }
-    deleteButton(setting, filePath, fileName) {
-        // Default file cant be deleted
-        if (fileName === DEFAULT_TEMPLATE) {
-            // Add a lock icon
-            setting.addButton((button) => button
-                .setIcon("lock")
-                .setTooltip("Default template")
-                .setClass("settings-button")
-                .setClass("settings-folder-button"));
-        }
-        else {
-            setting.addButton((button) => button
-                .setIcon("trash")
-                .setTooltip("Delete template")
-                .setClass("settings-button")
-                .onClick(() => __awaiter(this, void 0, void 0, function* () {
-                // Check if the template is the favorite template
-                if (this.isDefaultTemplate(fileName))
-                    this.plugin.settings.favoriteTemplate = DEFAULT_TEMPLATE;
-                try {
-                    yield this.app.vault.adapter.remove(filePath);
-                    console.log(`Deleted asset: ${filePath}`);
-                    this.display();
-                }
-                catch (err) {
-                    console.error(`Error deleting asset ${filePath}:`, err);
-                }
-            })));
-        }
-    }
-    isDefaultTemplate(fileName) {
-        return fileName === this.plugin.settings.favoriteTemplate;
-    }
-    favoriteButton(setting, fileName) {
-        setting.addButton((button) => button
-            .setIcon(this.plugin.settings.favoriteTemplate === fileName
-            ? "star"
-            : "crossed-star")
-            .setTooltip("Favorite template")
-            .setClass("settings-button")
-            .onClick(() => {
-            // if the template is not favorite, make it favorite else do nothing
-            if (this.isDefaultTemplate(fileName))
-                return;
-            this.plugin.settings.favoriteTemplate = fileName;
-            this.plugin.saveSettings();
-            // refresh the settings tab
-            this.display();
-        }));
-    }
-}
-
-class FileExistsError extends Error {
-    constructor(message) {
-        super(message);
-        this.name = "FileExistsError";
-        new obsidian.Notice(message);
-    }
-}
-class TemplateNotFoundError extends Error {
-    constructor(message) {
-        super(message);
-        this.name = "TemplateNotFoundError";
-        new obsidian.Notice(message);
     }
 }
 
@@ -621,82 +309,522 @@ class WelcomeModal extends obsidian.Modal {
 		`, this.instructionsContainer, "", this.plugin);
     }
     renderMacInstructions() {
-        obsidian.MarkdownRenderer.render(this.app, `Instructions not yet finished for your platform, please PR if you own the device`, this.instructionsContainer, "", this.plugin);
+        return __awaiter(this, void 0, void 0, function* () {
+            yield obsidian.MarkdownRenderer.render(this.app, "Instructions not yet finished for your platform, please PR if you own the device", this.instructionsContainer, "", this.plugin);
+        });
     }
     renderLinuxInstructions() {
-        obsidian.MarkdownRenderer.render(this.app, `Instructions not yet finished for your platform, please PR if you own the device`, this.instructionsContainer, "", this.plugin);
+        return __awaiter(this, void 0, void 0, function* () {
+            yield obsidian.MarkdownRenderer.render(this.app, "Instructions not yet finished for your platform, please PR if you own the device", this.instructionsContainer, "", this.plugin);
+        });
     }
     renderIOSInstructions() {
-        obsidian.MarkdownRenderer.render(this.app, `Instructions not yet finished for your platform, please PR if you own the device`, this.instructionsContainer, "", this.plugin);
+        return __awaiter(this, void 0, void 0, function* () {
+            yield obsidian.MarkdownRenderer.render(this.app, "Instructions not yet finished for your platform, please PR if you own the device", this.instructionsContainer, "", this.plugin);
+        });
+    }
+}
+
+const DEFAULT_TEMPLATE_DIR = "/templates/";
+const DEFAULT_TEMPLATE = "blank.pdf";
+const DEFAULT_ASSET_PATH = "/handwritten-notes/";
+const DEFAULT_SETTINGS = {
+    defaultPath: DEFAULT_ASSET_PATH,
+    assetUrl: "",
+    useRelativePaths: false,
+    showWelcomeModal: true,
+    collapseEmbeds: false,
+    favoriteTemplate: DEFAULT_TEMPLATE,
+    templatesAtCustom: false,
+    templatesPath: DEFAULT_TEMPLATE_DIR,
+    openInNewTab: false,
+    createFolderIfNotExists: true,
+};
+
+/**
+ * Loads the PDF template from the specified path.
+ *
+ * @param {App} app - The obsidian app instance.
+ * @param {string} path - The template file to be loaded.
+ * @return {Promise<any>} The loaded template in binary format.
+ */
+function loadPdfTemplate(app, path) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return app.vault.adapter.readBinary(obsidian.normalizePath(path));
+    });
+}
+/**
+ * Creates a binary file in the specified path.
+ *
+ * @param {App} app - The obsidian app instance.
+ * @param {any} template - The template to be written to the file.
+ * @param {string} path - The path where the file will be created.
+ * @throws Will throw an error if the file already exists or on creation failure.
+ */
+function createBinaryFile(app, template, path) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            yield app.vault.createBinary(path, template);
+        }
+        catch (e) {
+            new obsidian.Notice(e.message.includes("already exists")
+                ? "File already exists!"
+                : `Error creating file! Note: ${e.message}`);
+            console.error(e);
+        }
+    });
+}
+/**
+ * Opens a file in the obsidian app.
+ *
+ * @param {App} app - The obsidian app instance.
+ * @param {string} path - The path of the file to be opened.
+ * @param newTab
+ */
+function openCreatedFile(app, path, newTab) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const leaf = app.workspace.getLeaf(newTab);
+        const file = app.vault.getAbstractFileByPath(path);
+        if (file instanceof obsidian.TFile) {
+            yield leaf.openFile(file, { active: newTab });
+        }
+    });
+}
+/**
+ * Appends an 'Annotate' button to the specified toolbar.
+ *
+ * @param {HTMLElement} toolbar - The toolbar where the button will be appended.
+ * @param {() => Promise<void>} onClick - The async function to be executed when the button is clicked.
+ */
+function appendAnnotateButton(toolbar, onClick) {
+    // Check if the button already exists before appending
+    const matchingChild = toolbar.querySelector(".pdf-annotate-button");
+    if (matchingChild)
+        return;
+    // Check if the button already exists before appending
+    const button = new obsidian.ButtonComponent(toolbar).setIcon("pen-tool");
+    // give it a unique id so we can find it later
+    button.setTooltip("Annotate");
+    // button.buttonEl.classList.add("pdf-annotate-button");
+    button.setClass("pdf-annotate-button");
+    button.setClass("clickable-icon");
+    // Handle the async onClick function
+    button.onClick(() => __awaiter(this, void 0, void 0, function* () {
+        try {
+            yield onClick();
+        }
+        catch (error) {
+            console.error("Error handling async onClick:", error);
+        }
+    }));
+}
+/**
+ * Initializes the templates folder if it doesn't exist.
+ *
+ * @param {Plugin} plugin - The obsidian plugin instance.
+ * @throws Will throw an error if there's an issue in creating the folder.
+ */
+function initTemplatesFolder(plugin) {
+    return __awaiter(this, void 0, void 0, function* () {
+        // @ts-ignore
+        const templatesFolder = yield getTemplatesFolder(plugin);
+        try {
+            yield plugin.app.vault.createFolder(templatesFolder);
+        }
+        catch (e) {
+            // Ignore error if folder already exists
+        }
+        const defaultTemplatePath = obsidian.normalizePath(`${templatesFolder}/blank.pdf`);
+        if (yield fileExists(plugin.app, defaultTemplatePath))
+            return;
+        // Download default template if it doesn't exist
+        const TEMPLATE_URL = "https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
+        yield downloadFile(plugin.app, TEMPLATE_URL, defaultTemplatePath);
+        // console.log("Downloaded template to " + defaultTemplatePath);
+    });
+}
+/**
+ * Downloads a file from a URL and saves it to the specified path.
+ *
+ * @param {App} app - The obsidian app instance.
+ * @param {string} url - The URL of the file to be downloaded.
+ * @param {string} path - The path where the file will be saved.
+ * @throws Will throw an error if there's an issue in fetching the file.
+ */
+function downloadFile(app, url, path) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const response = yield obsidian.requestUrl({
+                url: url,
+                method: "GET",
+                contentType: "arraybuffer",
+            });
+            const body = response.arrayBuffer;
+            yield app.vault.createBinary(path, body);
+        }
+        catch (err) {
+            console.error(err);
+            new obsidian.Notice("Error fetching file!");
+        }
+    });
+}
+/** Checks if a file exists in the vault.
+ * @param {App} app - The obsidian app instance.
+ * @param {string} path - The path of the file to be checked.
+ * @return {boolean} True if the file exists, false otherwise.
+ *
+ * @throws It will throw an error if the file exists
+ * @brief Use vault.adapter.exists to determine if the file exists. This works for all files, whether in or out of the vault.
+ */
+function fileExists(app, path) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            return yield app.vault.adapter.exists(path);
+        }
+        catch (err) {
+            console.error("Error checking file existence");
+            return false;
+        }
+    });
+}
+/** Gets the path of the template folder based on the current settings.
+ * @param plugin The obsidian plugin instance.
+ * @return {string} The path of the template folder.
+ * @brief If the templates are stored in the custom folder, return the custom folder path. Otherwise, return the default folder path.
+ */
+function getTemplatesFolder(plugin) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const settings = plugin.settings;
+        return settings.templatesAtCustom
+            ? obsidian.normalizePath(settings.templatesPath)
+            : obsidian.normalizePath(plugin.manifest.dir + DEFAULT_TEMPLATE_DIR);
+    });
+}
+
+class NotePDFSettingsTab extends obsidian.PluginSettingTab {
+    constructor(app, plugin) {
+        super(app, plugin);
+        this.plugin = plugin;
+    }
+    display() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { containerEl: modal } = this;
+            modal.empty();
+            // GENERAL SETTINGS
+            new obsidian.Setting(modal).setName("General").setHeading();
+            this.CollapseEmbedsToggle();
+            this.openInNewTabButton();
+            // Generate new note
+            new obsidian.Setting(modal).setName("Creation").setHeading();
+            this.createRelativePathToggle();
+            this.createDefaultPathTextInput();
+            this.createFolderIfNotExists();
+            // Settings heading
+            // TEMPLATES
+            yield this.createTemplatesSection();
+            this.createTemplateFolderPath();
+            yield this.createSettingWithOptions();
+        });
+    }
+    createFolderIfNotExists() {
+        new obsidian.Setting(this.containerEl)
+            .setName("Create folder if not exists")
+            .setDesc("Create the folder if it does not exist when choosing destination outside of default path/relative path.")
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.createFolderIfNotExists)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.createFolderIfNotExists = value;
+            yield this.plugin.saveSettings();
+        })));
+    }
+    CollapseEmbedsToggle() {
+        new obsidian.Setting(this.containerEl)
+            .setName("Collapse embeds")
+            .setDesc("Collapse embeds by default to save vertical space.")
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.collapseEmbeds)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.collapseEmbeds = value;
+            yield this.plugin.saveSettings();
+        })));
+    }
+    createRelativePathToggle() {
+        new obsidian.Setting(this.containerEl)
+            .setName("Use relative path")
+            .setDesc("Use relative path when creating the file.")
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.useRelativePaths)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.useRelativePaths = value;
+            yield this.plugin.saveSettings();
+            yield this.display();
+        })));
+    }
+    createDefaultPathTextInput() {
+        new obsidian.Setting(this.containerEl)
+            .setName("Default Path for new notes")
+            .setDesc("Path to be used if relative path is disabled or can't be used (no active file while creating).")
+            .addText((text) => text
+            .setPlaceholder(DEFAULT_ASSET_PATH)
+            .setValue(this.plugin.settings.defaultPath)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.defaultPath = value;
+            yield this.plugin.saveSettings();
+        })));
+    }
+    createTemplatesSection() {
+        return __awaiter(this, void 0, void 0, function* () {
+            // add a div
+            const titleEl = new obsidian.Setting(this.containerEl)
+                .setName("Templates")
+                .setHeading();
+            this.createFolderButton(titleEl);
+            const pluginFolder = yield getTemplatesFolder(this.plugin);
+            yield obsidian.MarkdownRenderer.render(this.app, `You can use **any** PDF as a template for the notes. Just add it to the templates folder and it will appear here. 
+      \`${pluginFolder}\``, this.containerEl, "", this.plugin);
+        });
+    }
+    createTemplateFolderPath() {
+        // Whether the templates should be stored in a custom folder
+        new obsidian.Setting(this.containerEl)
+            .setName("Store templates in a custom folder")
+            .setDesc("Store the templates in a custom folder outside the plugin path. (May resolve issues with syncing)")
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.templatesAtCustom)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            !value // If the value is false, set the path to the default path
+                ? // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+                    (this.plugin.settings.templatesPath = DEFAULT_TEMPLATE_DIR)
+                : null;
+            this.plugin.settings.templatesAtCustom = value;
+            yield this.plugin.saveSettings();
+            yield initTemplatesFolder(this.plugin);
+            yield this.display();
+        })));
+        if (!this.plugin.settings.templatesAtCustom)
+            return;
+        // Folder relative to the plugin
+        new obsidian.Setting(this.containerEl)
+            .setName("Templates folder")
+            .setDesc("Path to the templates folder.")
+            .addText((text) => text
+            .setPlaceholder(DEFAULT_TEMPLATE_DIR)
+            .setValue(this.plugin.settings.templatesPath)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.templatesPath = value;
+            yield this.plugin.saveSettings();
+        })));
+        // Dividing line
+    }
+    createFolderButton(title) {
+        // div for the buttons
+        title.addExtraButton((button) => {
+            button
+                .setIcon("sync")
+                .setTooltip("Reload templates")
+                .onClick(() => __awaiter(this, void 0, void 0, function* () {
+                yield initTemplatesFolder(this.plugin); // Reload default template just in case
+                yield this.display();
+            }));
+        });
+        title.addExtraButton((button) => {
+            button
+                .setIcon("folder")
+                .setTooltip("Open templates folder in the explorer")
+                .onClick(() => __awaiter(this, void 0, void 0, function* () {
+                yield this.app.showInFolder(obsidian.normalizePath(`${yield getTemplatesFolder(this.plugin)}/${DEFAULT_TEMPLATE}`));
+            }));
+        });
+    }
+    createSettingWithOptions() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { containerEl } = this;
+            yield obsidian.MarkdownRenderer.render(this.app, "### Available Templates", containerEl, "", this.plugin);
+            const scrollContainer = containerEl.createDiv();
+            scrollContainer.addClass("settings-scroll-container");
+            // Show also templates in the templates folder
+            const templatePath = yield getTemplatesFolder(this.plugin);
+            const templates = yield this.app.vault.adapter.list(templatePath);
+            // iterate over the templates and show them
+            for (const filePath of templates.files) {
+                const fileName = filePath.split("/").pop();
+                // fileName without extension and capitalized
+                const title = fileName === null || fileName === void 0 ? void 0 : fileName.split(".")[0].replace(/-/g, " ").replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
+                const setting = new obsidian.Setting(scrollContainer)
+                    .setName(title)
+                    .setDesc(fileName);
+                this.favoriteButton(setting, fileName);
+                // Delete button and lock for default template
+                this.deleteButton(setting, filePath, fileName);
+            }
+        });
+    }
+    deleteButton(setting, filePath, fileName) {
+        // Default file cant be deleted
+        if (fileName === DEFAULT_TEMPLATE) {
+            // Add a lock icon
+            setting.addButton((button) => button
+                .setIcon("lock")
+                .setTooltip("Default template")
+                .setClass("settings-button")
+                .setClass("settings-folder-button"));
+        }
+        else {
+            setting.addButton((button) => button
+                .setIcon("trash")
+                .setTooltip("Delete template")
+                .setClass("settings-button")
+                .onClick(() => __awaiter(this, void 0, void 0, function* () {
+                // Check if the template is the favorite template
+                if (this.isDefaultTemplate(fileName))
+                    this.plugin.settings.favoriteTemplate = DEFAULT_TEMPLATE;
+                try {
+                    yield this.app.vault.adapter.remove(filePath);
+                    //console.log(`Deleted asset: ${filePath}`);
+                    yield this.display();
+                }
+                catch (err) {
+                    console.error(`Error deleting asset ${filePath}:`, err);
+                }
+            })));
+        }
+    }
+    isDefaultTemplate(fileName) {
+        return fileName === this.plugin.settings.favoriteTemplate;
+    }
+    openInNewTabButton() {
+        new obsidian.Setting(this.containerEl)
+            .setName("Open in new tab")
+            .setDesc("Open the generated file in a new tab instead of the active tab.")
+            .addToggle((toggle) => toggle
+            .setValue(this.plugin.settings.openInNewTab)
+            .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.openInNewTab = value;
+            yield this.plugin.saveSettings();
+            yield this.display();
+        })));
+    }
+    favoriteButton(setting, fileName) {
+        setting.addButton((button) => button
+            .setIcon(this.plugin.settings.favoriteTemplate === fileName
+            ? "star"
+            : "crossed-star")
+            .setTooltip("Favorite template")
+            .setClass("settings-button")
+            .onClick(() => __awaiter(this, void 0, void 0, function* () {
+            // if the template is not favorite, make it favorite else do nothing
+            if (this.isDefaultTemplate(fileName))
+                return;
+            this.plugin.settings.favoriteTemplate = fileName;
+            yield this.plugin.saveSettings();
+            // refresh the settings tab
+            yield this.display();
+        })));
+    }
+}
+
+class FileExistsError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "FileExistsError";
+        new obsidian.Notice(message);
+    }
+}
+class TemplateNotFoundError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "TemplateNotFoundError";
+        new obsidian.Notice(message);
     }
 }
 
 class NotePDF extends obsidian.Plugin {
+    quickCreate(dest) {
+        var _a;
+        return __awaiter(this, void 0, void 0, function* () {
+            const destFolder = dest !== null && dest !== void 0 ? dest : (yield this.getDestFolder());
+            // Parent file + note + timestamp in date format with time
+            const fileName = `${(_a = this.app.workspace.getActiveFile()) === null || _a === void 0 ? void 0 : _a.basename}-note-${new Date().toISOString().split("T")[0]}-${new Date().getHours()}-${new Date().getMinutes()}-${new Date().getSeconds()}`;
+            return yield this.createPDF(fileName, destFolder, this.settings.favoriteTemplate);
+        });
+    }
     // Lifecycle methods
     onload() {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.loadSettings();
             this.addSettingTab(new NotePDFSettingsTab(this.app, this));
+            /** CREATE FROM MODAL */
             this.addRibbonIcon("pencil", "Create empty handwritten note", () => __awaiter(this, void 0, void 0, function* () {
-                const path = yield this.createPDFwithModal();
-                openCreatedFile(this.app, path);
+                const path = yield this.createPDFwithModal({ chooseDest: true });
+                yield openCreatedFile(this.app, path, this.settings.openInNewTab);
             }));
             this.addCommand({
                 id: "modal-create-open",
                 name: "Modal: Create and open an empty handwritten note",
-                editorCallback: () => __awaiter(this, void 0, void 0, function* () {
-                    const filePath = yield this.createPDFwithModal();
-                    openCreatedFile(this.app, filePath);
+                callback: () => __awaiter(this, void 0, void 0, function* () {
+                    var _a;
+                    const editor = (_a = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView)) === null || _a === void 0 ? void 0 : _a.editor;
+                    const filePath = yield this.createPDFwithModal({
+                        chooseDest: true,
+                        inEditor: !!editor,
+                    });
+                    yield openCreatedFile(this.app, filePath, this.settings.openInNewTab);
                 }),
             });
             this.addCommand({
                 id: "modal-create-embed",
                 name: "Modal: Create and embed an empty handwritten note",
-                editorCallback: () => __awaiter(this, void 0, void 0, function* () {
-                    var _a;
-                    const filePath = yield this.createPDFwithModal();
-                    const editor = (_a = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView)) === null || _a === void 0 ? void 0 : _a.editor;
-                    if (editor) {
-                        editor.replaceSelection(`![[${filePath}]]`);
-                    }
+                editorCallback: (editor) => __awaiter(this, void 0, void 0, function* () {
+                    const filePath = yield this.createPDFwithModal({
+                        chooseDest: true,
+                        inEditor: true,
+                    });
+                    editor.replaceSelection(`![[${filePath}]]`);
+                }),
+            });
+            /** QUICK CREATE FROM FAVORITE **/
+            this.addCommand({
+                id: "create-favorite",
+                name: "Create from favorite template",
+                callback: () => __awaiter(this, void 0, void 0, function* () {
+                    yield this.quickCreate();
                 }),
             });
             this.addCommand({
                 id: "quick-create-embed",
                 name: "Create and embed from favorite template",
-                editorCallback: () => __awaiter(this, void 0, void 0, function* () {
-                    var _b, _c;
-                    const destFolder = yield this.getDestFolder();
-                    // Parent file + note + timestamp in date format with time
-                    const fileName = `${(_b = this.app.workspace.getActiveFile()) === null || _b === void 0 ? void 0 : _b.basename}-note-${new Date().toISOString().split("T")[0]}-${new Date().getHours()}-${new Date().getMinutes()}-${new Date().getSeconds()}`;
-                    const filePath = yield this.createPDF(fileName, destFolder, this.settings.favoriteTemplate);
-                    // insert the path at the cursor
-                    const editor = (_c = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView)) === null || _c === void 0 ? void 0 : _c.editor;
-                    if (editor) {
-                        editor.replaceSelection(`![[${filePath}]]`);
-                    }
+                editorCallback: (editor) => __awaiter(this, void 0, void 0, function* () {
+                    const filePath = yield this.quickCreate();
+                    editor.replaceSelection(`![[${filePath}]]`);
                 }),
             });
             this.addCommand({
                 id: "quick-create-embed-open",
                 name: "Create and embed and open from favorite template",
-                editorCallback: () => __awaiter(this, void 0, void 0, function* () {
-                    var _d, _e;
-                    const destFolder = yield this.getDestFolder();
-                    // Parent file + note + timestamp in date format with time
-                    const fileName = `${(_d = this.app.workspace.getActiveFile()) === null || _d === void 0 ? void 0 : _d.basename}-note-${new Date().toISOString().split("T")[0]}-${new Date().getHours()}-${new Date().getMinutes()}-${new Date().getSeconds()}`;
-                    const filePath = yield this.createPDF(fileName, destFolder, this.settings.favoriteTemplate);
+                editorCallback: (editor) => __awaiter(this, void 0, void 0, function* () {
+                    const filePath = yield this.quickCreate();
                     // insert the path at the cursor
-                    const editor = (_e = this.app.workspace.getActiveViewOfType(obsidian.MarkdownView)) === null || _e === void 0 ? void 0 : _e.editor;
-                    if (editor) {
-                        editor.replaceSelection(`![[${filePath}]]`);
-                    }
+                    editor.replaceSelection(`![[${filePath}]]`);
                     // openCreatedFile(this.app, filePath);
                     // get TFile from path
-                    const pdfFile = yield this.app.vault.getAbstractFileByPath(filePath);
+                    const pdfFile = this.app.vault.getAbstractFileByPath(filePath);
                     if (!pdfFile)
                         return;
                     yield this.openEmbeddedExternal(pdfFile);
+                }),
+            });
+            this.addCommand({
+                id: "quick-create-choose-dest",
+                name: "Quick create and choose destination from modal",
+                callback: () => __awaiter(this, void 0, void 0, function* () {
+                    yield this.quickCreateWithDest();
+                }),
+            });
+            this.addCommand({
+                id: "quick-create-choose-dest-embed",
+                name: "Quick create and choose destination from modal and embed",
+                editorCallback: (editor) => __awaiter(this, void 0, void 0, function* () {
+                    yield this.quickCreateWithDest(editor);
                 }),
             });
             this.app.workspace.onLayoutReady(() => {
@@ -723,31 +851,50 @@ class NotePDF extends obsidian.Plugin {
             yield this.saveData(this.settings);
         });
     }
-    // PDF creation methods
-    createPDFwithModal() {
+    quickCreateWithDest(editor) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { app } = this;
+            new ChooseDestModals(this.app, (result) => __awaiter(this, void 0, void 0, function* () {
+                const dest = result.path;
+                const filePath = yield this.quickCreate(dest);
+                if (editor)
+                    editor.replaceSelection(`![[${filePath}]]`);
+                yield openCreatedFile(this.app, filePath, this.settings.openInNewTab);
+            })).open();
+        });
+    }
+    // PDF creation methods
+    createPDFwithModal(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { chooseDest = false, inEditor = false } = options;
             const templatesFolder = yield getTemplatesFolder(this);
             return new Promise((resolve, reject) => {
-                new PDFCreatorModal(app, this.manifest, this.settings.favoriteTemplate, templatesFolder, (result) => __awaiter(this, void 0, void 0, function* () {
-                    try {
-                        let destFolder = yield this.getDestFolder();
-                        if (destFolder) {
-                            const { template, name } = result;
-                            const path = yield this.createPDF(name, destFolder, template);
-                            // Resolve the promise with the path when done
-                            resolve(path);
-                        }
+                new PDFCreatorModal(this, templatesFolder, (result) => __awaiter(this, void 0, void 0, function* () {
+                    var _a;
+                    console.debug("Creating:", result);
+                    const destFolder = (_a = result.path) !== null && _a !== void 0 ? _a : (yield this.getDestFolder());
+                    const destTFolder = this.app.vault.getAbstractFileByPath(obsidian.normalizePath(destFolder));
+                    console.debug("Destination folder:", destTFolder);
+                    if (!destTFolder || destTFolder instanceof obsidian.TFile) {
+                        if (this.settings.createFolderIfNotExists)
+                            yield this.app.vault.createFolder(destFolder);
                         else {
-                            // No destination folder found
-                            reject(new Error("No destination folder found."));
+                            new obsidian.Notice(obsidian.sanitizeHTMLToDom(`<span class="error">Destination "<code>${destFolder}</code>" does not exist</span>`));
+                            throw new Error("Destination folder does not exist");
                         }
+                    }
+                    console.info("Creating PDF", result);
+                    try {
+                        const { template, name } = result;
+                        const path = yield this.createPDF(name, destFolder, template);
+                        // Resolve the promise with the path when done
+                        resolve(path);
                     }
                     catch (error) {
                         // Reject the promise if any errors occur
                         reject(error);
+                        console.error(error);
                     }
-                })).open();
+                }), chooseDest, inEditor).open();
             });
         });
     }
@@ -784,27 +931,28 @@ class NotePDF extends obsidian.Plugin {
      */
     getDestFolder() {
         var _a, _b;
-        const { app } = this;
-        if (this.settings.useRelativePaths) {
-            const parentPath = (_b = (_a = app.workspace.getActiveFile()) === null || _a === void 0 ? void 0 : _a.parent) === null || _b === void 0 ? void 0 : _b.path;
-            // maybe no file is open, for now just return the root
-            if (!parentPath)
-                return app.vault.getRoot().path;
-            return parentPath;
-            // Using a template folder
-        }
-        else {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { app } = this;
+            if (this.settings.useRelativePaths) {
+                const parentPath = (_b = (_a = app.workspace.getActiveFile()) === null || _a === void 0 ? void 0 : _a.parent) === null || _b === void 0 ? void 0 : _b.path;
+                // maybe no file is open, for now just return the root
+                if (!parentPath) {
+                    if (this.settings.defaultPath.trim() === "" ||
+                        this.settings.defaultPath.trim() === "/")
+                        return app.vault.getRoot().path;
+                    return this.settings.defaultPath;
+                }
+                return parentPath;
+            }
             const defaultFolderPath = obsidian.normalizePath(this.settings.defaultPath); // Check if the template folder exists
             if (app.vault.getAbstractFileByPath(defaultFolderPath)) {
                 return defaultFolderPath;
             }
-            else {
-                // Create the template folder if it doesn't exist
-                app.vault.createFolder(defaultFolderPath);
-                new obsidian.Notice("Template folder not found. Creating folder.");
-                return defaultFolderPath;
-            }
-        }
+            // Create the template folder if it doesn't exist
+            yield app.vault.createFolder(defaultFolderPath);
+            new obsidian.Notice("Template folder not found. Creating folder.");
+            return defaultFolderPath;
+        });
     }
     // Annotation button methods
     addAnnotateButton() {
@@ -840,11 +988,10 @@ class NotePDF extends obsidian.Plugin {
             const pdfEmbeds = markdownContainer.querySelectorAll(".pdf-embed");
             // Convert the NodeList to an array
             for (const embed of Array.from(pdfEmbeds)) {
-                let pdfFile;
                 const pdfLink = embed.getAttribute("src");
                 const currentNotePath = this.app.workspace.getActiveFile().path;
-                pdfFile = this.app.metadataCache.getFirstLinkpathDest(pdfLink, currentNotePath);
-                let rightToolbar = embed.querySelector(".pdf-toolbar-right");
+                const pdfFile = this.app.metadataCache.getFirstLinkpathDest(pdfLink, currentNotePath);
+                const rightToolbar = embed.querySelector(".pdf-toolbar-right");
                 if (!rightToolbar)
                     continue;
                 appendAnnotateButton(rightToolbar, () => __awaiter(this, void 0, void 0, function* () {
@@ -899,7 +1046,7 @@ class NotePDF extends obsidian.Plugin {
                 pdfNameButton.setTooltip("Open link");
                 toolbar.insertBefore(pdfNameButton.buttonEl, rightToolbar);
                 pdfNameButton.onClick(() => __awaiter(this, void 0, void 0, function* () {
-                    openCreatedFile(this.app, pdfLink);
+                    yield openCreatedFile(this.app, pdfLink, this.settings.openInNewTab);
                 }));
             }
         });
@@ -932,4 +1079,6 @@ class NotePDF extends obsidian.Plugin {
 }
 
 module.exports = NotePDF;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXMiOlsibm9kZV9tb2R1bGVzL3RzbGliL3RzbGliLmVzNi5qcyIsInNyYy9kaWFsb2dzL0NyZWF0b3JNb2RhbC50cyIsInNyYy91dGlscy9jb25zdGFudHMudHMiLCJzcmMvdXRpbHMvdXRpbHMudHMiLCJzcmMvc2V0dGluZ3MudHMiLCJzcmMvdXRpbHMvdHlwZXMudHMiLCJzcmMvZGlhbG9ncy9TaGFyZU1lbnVBbmRyb2lkLnBuZyIsInNyYy9kaWFsb2dzL1dlbGNvbWVNb2RhbC50cyIsInNyYy9tYWluLnRzIl0sInNvdXJjZXNDb250ZW50IjpudWxsLCJuYW1lcyI6WyJNb2RhbCIsIlNldHRpbmciLCJub3JtYWxpemVQYXRoIiwiTm90aWNlIiwiVEZpbGUiLCJCdXR0b25Db21wb25lbnQiLCJyZXF1ZXN0VXJsIiwiUGx1Z2luU2V0dGluZ1RhYiIsIlBsYXRmb3JtIiwiTWFya2Rvd25SZW5kZXJlciIsIkRyb3Bkb3duQ29tcG9uZW50IiwiQW5kcm9pZFNoYXJlSW1hZ2UiLCJQbHVnaW4iLCJNYXJrZG93blZpZXciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFvR0E7QUFDTyxTQUFTLFNBQVMsQ0FBQyxPQUFPLEVBQUUsVUFBVSxFQUFFLENBQUMsRUFBRSxTQUFTLEVBQUU7QUFDN0QsSUFBSSxTQUFTLEtBQUssQ0FBQyxLQUFLLEVBQUUsRUFBRSxPQUFPLEtBQUssWUFBWSxDQUFDLEdBQUcsS0FBSyxHQUFHLElBQUksQ0FBQyxDQUFDLFVBQVUsT0FBTyxFQUFFLEVBQUUsT0FBTyxDQUFDLEtBQUssQ0FBQyxDQUFDLEVBQUUsQ0FBQyxDQUFDLEVBQUU7QUFDaEgsSUFBSSxPQUFPLEtBQUssQ0FBQyxLQUFLLENBQUMsR0FBRyxPQUFPLENBQUMsRUFBRSxVQUFVLE9BQU8sRUFBRSxNQUFNLEVBQUU7QUFDL0QsUUFB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
+
+
+/* nosourcemap */

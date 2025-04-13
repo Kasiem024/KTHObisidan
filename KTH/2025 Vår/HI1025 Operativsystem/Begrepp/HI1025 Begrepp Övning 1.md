@@ -16,26 +16,26 @@ Tags: #year2025 #KTH #HI1025 #begrepp
 <!--SR:!2025-04-04,1,223!2025-03-25,3,250-->
 
 .c (Source file) (Definition):: En fil som innehåller den faktiska *implementationen* (koden) av funktioner och variabler. (Tänk: Själva boken).
-<!--SR:!2025-04-03,2,243!2025-04-09,7,288-->
+<!--SR:!2025-04-14,5,263!2025-04-09,7,288-->
 
 `#include` (Definition):: Ett direktiv som infogar innehållet från en headerfil i den aktuella filen, vilket möjliggör användning av deklarerade funktioner och variabler från andra filer. (Tänk: Kopiera och klistra in)
-<!--SR:!2025-04-04,2,243!2025-04-09,7,270-->
+<!--SR:!2025-04-14,5,243!2025-04-09,7,270-->
 
 Abstraction (Definition):: Att *dölja komplexa detaljer* och endast visa den *nödvändiga informationen*. Gör kod lättare att förstå och använda. Operativsystemet använder detta för att skapa enklare gränssnitt.
-<!--SR:!2025-04-03,1,206!2025-04-07,5,248-->
+<!--SR:!2025-04-11,2,226!2025-04-07,5,248-->
 
 Huvudidéerna med **abstraktion** inom operativsystem (3)
 ||
 - Att *dölja komplexiteten* i hårdvara och mjukvara
 - Skapa *enklare, mer användarvänliga gränssnitt*
 - Programmerare ska inte behöva bry sig om *hur* saker fungerar på låg nivå, bara *att* de fungerar
-<!--SR:!2025-04-03,1,208-->
+<!--SR:!2025-04-10,1,188-->
 
 Processen som **abstraktion** inom ett OS:: OS skapar en *illusion* av att varje program har sin *egen CPU* (virtuell CPU). Detta kallas *virtualisering*. Gör det möjligt att köra *flera program samtidigt*, även om det bara finns en (eller få) fysiska CPU:er.
-<!--SR:!2000-01-01,1,250!2025-04-04,1,223-->
+<!--SR:!2025-04-10,1,222!2025-04-04,1,223-->
 
 Adressrymden som abstraktion inom ett OS:: En *illusion* av att varje process har ett *stort, sammanhängande, privat minne* (virtuella adresser). Programmeraren behöver *inte* veta hur det fysiska minnet är organiserat.
-<!--SR:!2025-04-02,1,223!2025-04-05,2,243-->
+<!--SR:!2025-04-11,2,223!2025-04-14,5,263-->
 
 Relationen mellan **virtualisering** och **abstraktion**:: En *teknik* för att skapa abstraktioner. En *fysisk resurs* (t.ex. CPU, minne) får det att se ut som *många virtuella instanser*. Detta är grunden för process- och adressrymdsabstraktionerna
 <!--SR:!2000-01-01,1,250!2025-04-03,1,222-->
@@ -46,6 +46,7 @@ När man *inte refererar direkt* till något, utan via en *mellanhand*. Exempel:
 - *Virtuellt minne*: Virtuella adresser pekar *indirekt* på fysiska adresser via en sidtabell.
 - *Inode map* (i LFS): Inoder pekar *indirekt* på data på disken.
 - *Fördel*: Gör det möjligt att *flytta runt* underliggande data (minnessidor, diskblock) utan att ändra alla referenser.
+<!--SR:!2025-04-10,1,222!2025-04-11,3,262-->
 
 Reusability (Återanvändbarhet) (Definition):: Att skriva kod som kan användas i flera olika sammanhang utan (eller med minimala) ändringar. Sparar utvecklingstid, minskar risken för fel, förbättrar konsistensen och underlättar underhåll av kodbasen. (Tänk: Legobitar).
 <!--SR:!2025-03-25,1,228!2025-04-05,2,243-->
@@ -69,7 +70,7 @@ Fördelar med Information Hiding (5)
 - *Underhåll*: Lättare att *ändra och uppdatera* implementationen utan att påverka andra delar.
 - *Flexibilitet*: Implementationen kan *ändras* utan att påverka andra moduler.
 - *Säkerhet*: Förhindrar *obehörig åtkomst* och *manipulation* av intern data.
-<!--SR:!2025-03-29,1,226!2025-03-30,2,246-->
+<!--SR:!2025-03-29,1,226!2025-04-14,5,246-->
 
 C incomplete types (Definition) (3)
 ??

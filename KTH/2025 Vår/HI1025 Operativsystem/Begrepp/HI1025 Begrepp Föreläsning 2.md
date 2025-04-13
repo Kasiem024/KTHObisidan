@@ -13,16 +13,16 @@ Tags: #year2025 #KTH #HI1025 #begrepp
 ## Begrepp
 
 Throughput (Definition):: Mäter hur mycket arbete ett system utför under en viss tid. Antalet processer som slutförs per tidsenhet
-<!--SR:!2025-04-06,3,253!2025-04-06,3,253-->
+<!--SR:!2025-04-16,7,273!2025-04-06,3,253-->
 
 Fairness (Definition):: Hur rättvist systemets resurser, framförallt CPU-tid, fördelas mellan de olika processerna som vill köra.
-<!--SR:!2025-04-09,7,270!2025-04-09,7,250-->
+<!--SR:!2025-04-16,7,290!2025-04-09,7,250-->
 
 Turnaround Time (Definition):: Den totala tiden det tar för en process att slutföras, från det att den anländer till systemet tills dess att den är helt klar. Inkluderar både väntetid i köer och exekveringstid på CPU:n.
-<!--SR:!2025-04-03,1,225!2000-01-01,1,250-->
+<!--SR:!2025-04-03,1,225!2025-04-12,3,253-->
 
 First Come, First Served (FCFS) (Definition):: En schemaläggningsalgoritm där processer exekveras i den ordning de anländer till systemet. Enkel att implementera, men kan leda till att korta processer får vänta länge om långa processer anländer först (konvojeffekten).
-<!--SR:!2025-04-07,5,268!2025-04-07,5,266-->
+<!--SR:!2025-04-16,7,288!2025-04-07,5,266-->
 
 Shortest Job First (SJF) (Definition):: En schemaläggningsalgoritm som alltid väljer den process som har kortast beräknad total exekveringstid kvar. Detta minimerar den genomsnittliga väntetiden, men kräver att man vet exekveringstiden i förväg, vilket sällan är möjligt i praktiken.
 <!--SR:!2025-04-07,5,266!2025-04-03,2,245-->
@@ -37,16 +37,16 @@ Round Robin (RR) (Definition):: En preemptiv schemaläggningsalgoritm där varje
 <!--SR:!2025-04-04,2,245!2025-04-07,5,266-->
 
 Multi-level Feedback Queue (MLFQ) (Definition):: En avancerad schemaläggningsalgoritm som använder flera köer med olika prioriteter. Processer kan flyttas mellan köerna baserat på deras beteende. Till exempel, en process som använder mycket I/O kan flyttas till en kö med högre prioritet för att förbättra responstiden.
-<!--SR:!2025-04-03,1,206!2025-04-04,2,245-->
+<!--SR:!2025-04-11,2,226!2025-04-04,2,245-->
 
 Proportional Share (Definition):: En schemaläggningsprincip där varje process tilldelas en viss andel av CPU-tiden. Till exempel kan en process få 20% av CPU-tiden, medan en annan får 80%. Syftar till att ge förutsägbar prestanda för varje process.
-<!--SR:!2025-04-05,3,250!2025-04-07,5,265-->
+<!--SR:!2025-04-16,7,270!2025-04-16,7,265-->
 
 Stride Scheduling (Definition);; En deterministisk algoritm för proportional share-schemaläggning. Varje process har en stride, hur stor stride beror på hur stor andel av CPU-tiden den har. Ju större andel ju mindre stride. Processer med kort stride körs oftare än processer med stor stride.
 <!--SR:!2025-04-04,2,227-->
 
 Hard Real-Time System (Definition):: Ett system där det är absolut kritiskt att alla tidsgränser (deadlines) hålls. Misslyckande med att möta en deadline kan leda till katastrofala konsekvenser, till exempel i ett flygplans styrsystem.
-<!--SR:!2025-04-09,7,270!2025-04-04,2,227-->
+<!--SR:!2025-04-16,7,290!2025-04-04,2,227-->
 
 Soft Real-Time System (Definition):: Ett system där det är önskvärt att hålla tidsgränser, men där ett missat deadline inte leder till katastrof. Exempelvis videouppspelning – ett litet hack är irriterande, men inte farligt.
 <!--SR:!2025-04-09,7,270!2025-04-05,3,250-->
@@ -58,13 +58,13 @@ Earliest Deadline First (EDF) (Definition):: En dynamisk schemaläggningsalgorit
 <!--SR:!2025-04-09,7,270!2025-04-04,2,246-->
 
 Idle Task (Definition):: En mycket lågprioriterad process som körs när det inte finns några andra processer redo att köra. Säkerställer att CPU:n alltid har något att göra, även om det bara är att vänta.
-<!--SR:!2025-04-07,5,267!2025-04-09,7,270-->
+<!--SR:!2025-04-16,7,287!2025-04-16,7,290-->
 
 register (C/C++) (Definition);; Ett nyckelord som ger ett förslag till kompilatorn att lagra en variabel i ett av CPU:ns register istället för i RAM-minnet. Registeråtkomst är mycket snabbare, men antalet register är begränsat. Modern kompilator optimerar bra, så register används sällan explicit.
 <!--SR:!2025-04-06,3,253-->
 
 volatile (C/C++) (Definition):: Ett nyckelord som talar om för kompilatorn att en variabel kan ändras av externa faktorer, till exempel av hårdvara eller en annan tråd. Förhindrar att kompilatorn gör vissa optimeringar som skulle kunna leda till felaktigt beteende.
-<!--SR:!2025-04-09,7,270!2025-04-09,7,270-->
+<!--SR:!2025-04-16,7,290!2025-04-09,7,270-->
 
 Bit-wise Operators (C/C++) (3)
 ||
@@ -74,10 +74,10 @@ Bit-wise Operators (C/C++) (3)
 <!--SR:!2025-03-28,1,230-->
 
 Shift Operators (C/C++) (Definition):: Operatörer som flyttar bitarna i ett tal åt vänster (<<) eller höger (>>). Vänsterskift multiplicerar med 2, högerskift dividerar med 2 (för heltal).
-<!--SR:!2025-04-09,7,286!2025-04-07,5,268-->
+<!--SR:!2025-04-16,7,306!2025-04-07,5,268-->
 
 struct (C/C++) (Definition):: En sammansatt datatyp som grupperar ihop flera variabler av olika datatyper under ett gemensamt namn.
-<!--SR:!2025-04-03,1,225!2025-04-09,7,270-->
+<!--SR:!2025-04-11,2,245!2025-04-16,7,290-->
 
 union (C/C++) (Definition):: En sammansatt datatyp där alla medlemmar delar på samma minnesutrymme. Endast en medlem kan vara aktiv åt gången. Används för att spara minne när man vet att endast en av flera variabler kommer att användas vid en given tidpunkt.
-<!--SR:!2025-04-05,3,250!2025-04-07,5,266-->
+<!--SR:!2025-04-05,3,250!2025-04-16,7,286-->
