@@ -3,5 +3,6 @@
     "eng",
     "swe"
   ],
-  "rightClickMenu": true
+  "rightClickMenu": true,
+  "useSystemOCR": false
 }
