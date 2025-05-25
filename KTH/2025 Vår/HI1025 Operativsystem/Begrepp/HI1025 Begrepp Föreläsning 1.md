@@ -62,7 +62,7 @@ Text, Data, Stack, Heap (Definition) (4)
 ||
 Minnessegment i en process:
 - Text: Innehåller programmets *körbara kod*.
-- Data: Innehåller *globala och statiska variabler*.
+- Data: Innehåller *zglobala och statiska variabler*.
 - Stack: Används för *lokala variabler* och *funktionsanrop*. Växer och krymper dynamiskt.
 - Heap: Används för *dynamisk minnesallokering* (t.ex. med `malloc` i C). Växer och krymper dynamiskt.
 <!--SR:!2025-04-17,1,223-->

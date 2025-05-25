@@ -24,13 +24,13 @@ Två vanliga transportprotokoll som används med IP-nätverk och socklar:
 Portnummer (Nätverkskommunikation):: Ett 16-bitars heltal som används för att identifiera en specifik process eller tjänst som en nätverksanslutning eller ett datagram ska adresseras till på en värddator. Används tillsammans med en IP-adress. (Tänk: *Lägenhetsnumret på en specifik gatuadress (IP-adress)*).
 IP-adress (Nätverkskommunikation):: En unik numerisk etikett som tilldelas varje enhet (t.ex. dator, server) som är ansluten till ett datornätverk som använder Internet Protocol (IP) för kommunikation. (Tänk: *Gatuadressen för en dator i nätverket*).
 URL (Uniform Resource Locator):: En standardiserad sträng som specificerar var en resurs (t.ex. en webbsida, en fil) finns tillgänglig och mekanismen för att hämta den (t.ex. HTTP, FTP). (Tänk: *Den fullständiga webbadressen till en specifik resurs*).
-DNS (Domain Name System):: Ett hierarkiskt och distribuerat namngivningssystem som översätter människovänliga domännamn (t.ex. www.kth.se) till numeriska IP-adresser som datorer använder för att identifiera varandra i nätverk. (Tänk: *Internets telefonkatalog som kopplar namn till nummer*).
+DNS (Domain Name System):: Ett hierarkiskt och distribuerat namngivningssystem som översätter människovänliga domännamn (t.ex. <www.kth.se>) till numeriska IP-adresser som datorer använder för att identifiera varandra i nätverk. (Tänk: *Internets telefonkatalog som kopplar namn till nummer*).
 Socket API: Grundläggande serveranrop (Funktioner) (3)
 ??
 Tre centrala funktionsanrop för att sätta upp en lyssnande server-socket:
-1.  **`socket()`:** Skapar en ny kommunikationsändpunkt (socket) och returnerar en fildeskriptor för den.
-2.  **`bind()`:** Associerar en nyskapad socket med en specifik lokal IP-adress och portnummer.
-3.  **`listen()`:** Förbereder en bunden socket att acceptera inkommande anslutningsförfrågningar från klienter, och anger en kögräns för väntande anslutningar.
+1. **`socket()`:** Skapar en ny kommunikationsändpunkt (socket) och returnerar en fildeskriptor för den.
+2. **`bind()`:** Associerar en nyskapad socket med en specifik lokal IP-adress och portnummer.
+3. **`listen()`:** Förbereder en bunden socket att acceptera inkommande anslutningsförfrågningar från klienter, och anger en kögräns för väntande anslutningar.
 (Tänk: *Skapa telefonlinje, koppla till nummer, slå på ringsignalen*).
 Socket API: Anslutningshantering (Server/Klient) (Funktioner) (2)
 ??
@@ -41,9 +41,9 @@ Två centrala funktionsanrop för att etablera en anslutning:
 Socket API: Dataöverföring & Stängning (Funktioner) (3)
 ??
 Vanliga funktionsanrop för att skicka/ta emot data och stänga en socket-anslutning:
-1.  **`read()` / `recv()`:** Läser data från en ansluten socket.
-2.  **`write()` / `send()`:** Skriver data till en ansluten socket.
-3.  **`close()`:** Stänger en socket-anslutning och frigör den associerade fildeskriptorn.
+1. **`read()` / `recv()`:** Läser data från en ansluten socket.
+2. **`write()` / `send()`:** Skriver data till en ansluten socket.
+3. **`close()`:** Stänger en socket-anslutning och frigör den associerade fildeskriptorn.
 (Tänk: *Prata i telefon (`read`/`write`) och lägga på (`close`)*).
 Naming (Namngivning i distribuerade system):: Processen att tilldela unika och åtkomliga namn till resurser (t.ex. filer, tjänster, servrar, processer) i ett distribuerat system så att de kan lokaliseras och användas av andra komponenter. (Tänk: *Att ge allt ett unikt och sökbart namn i ett stort system*).
 Serialization (Serialisering):: Processen att omvandla en datastruktur eller ett objekt till ett format (t.ex. en byteström, JSON, XML) som kan lagras (t.ex. i en fil eller databas) eller överföras över ett nätverk, för att sedan kunna återskapas (deserialiseras) i sin ursprungliga form. (Tänk: *Packa ner ett objekt i en låda för transport eller lagring*).

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "557e497853bd940a",
+        "id": "a7e34aac99696bd3",
         "type": "tabs",
         "children": [
           {
-            "id": "a3072e6c471da8a9",
+            "id": "75d47e500f9a8bc0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/05-12 HI1025 Övning 4.md",
-                "mode": "source",
-                "source": false
+                "file": "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Kärnbegrepp för Tentamen.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "05-12 HI1025 Övning 4"
+              "title": "HI1025 Kärnbegrepp för Tentamen"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "obs!!!",
+                "query": "inode",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,19 +201,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a3072e6c471da8a9",
+  "active": "75d47e500f9a8bc0",
   "lastOpenFiles": [
-    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/05-12 HI1025 Föreläsning 8.md",
-    "index.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 4.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/HI1025_TEN1_240527.pdf",
+    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/05-12 HI1025 Övning 4.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 7.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 3.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-17 HI1025 Föreläsning 1.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 8.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 1.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 4.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Kärnbegrepp för Tentamen.md",
+    "index.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 2.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/05-12 HI1025 Föreläsning 8.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/PDFs/HI1025_TEN1_240527.pdf",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 3.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 5.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 6.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/04-14 HI1025 Föreläsning 5.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/05-12 HI1025 Övning 4.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 1.md",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F6ConcurrencySemPA7wa.pdf",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/S4DMA.pdf",
@@ -222,23 +227,18 @@
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/L3FarmacyBna.pdf",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/S3LinuxPA9wa.pdf",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/F8CommunicationPA9wa.pdf",
-    "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-17 HI1025 Föreläsning 1.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/04-16 HI1025 Övning 3.md",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/L2PagingA.pdf",
     "KTH/2025 Vår/HI1025 Operativsystem/PDFs/L2PagingA.pdf.crdownload",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 4.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/04-07 HI1025 Föreläsning 4.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/CM1008 Rapport Anteckingar.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 3.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-31 HI1025 Föreläsning 3 (conflict 2025-03-31-11-51-15).md",
     "KTH/2025 Vår/HI1025 Operativsystem/Föreläsningar/03-31 HI1025 Föreläsning 3.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 2.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 4 från Gruppmöte.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 1.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 1 från Gruppmöte.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 2 från Gruppmöte.md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 3 från Gruppmöte.md",
-    "Obsidian Plugins/Templates/CM1008 Meeting Template.md",
     "Pasted image 20250321104620.png",
     "Untitled.canvas",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",

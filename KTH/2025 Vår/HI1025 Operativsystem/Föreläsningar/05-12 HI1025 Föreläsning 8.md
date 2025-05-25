@@ -6,7 +6,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HI1025 #föreläsning 
+Tags: #year2025 #KTH #HI1025 #föreläsning
 
 ---
 
@@ -25,7 +25,7 @@ Shared memory handlar om att processerna har tillgånga till samma adressrymd oc
 
 Mapped memory liknar shared memory men handlar mer om specifikt om filer.
 
-Pipes permit sequential communication from one process to a related process. Det är en seriell buffert för enkelriktad kommunikation. 
+Pipes permit sequential communication from one process to a related process. Det är en seriell buffert för enkelriktad kommunikation.
 
 FIFOs liknar pipes
 

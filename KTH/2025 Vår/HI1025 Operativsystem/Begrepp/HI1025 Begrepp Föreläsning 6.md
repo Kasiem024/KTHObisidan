@@ -32,18 +32,18 @@ Deadlock (Systemlåsning) (Definition):: En situation där två eller flera proc
 Deadlock: Fyra Nödvändiga Villkor (Definition) (4)
 ??
 För att ett deadlock ska kunna inträffa måste samtliga fyra följande villkor vara uppfyllda samtidigt:
-1.  **Mutual Exclusion (Ömsesidig Uteslutning):** Resurser kan endast användas av en process/tråd åt gången (d.v.s. de är inte delbara på ett sätt som undviker konflikt).
-2.  **Hold and Wait (Hålla och Vänta):** En process/tråd håller minst en resurs och väntar på att förvärva ytterligare resurser som hålls av andra processer/trådar.
-3.  **No Preemption (Ingen Förtursrätt/Avbrytbarhet):** En resurs kan inte med våld tas ifrån en process/tråd som håller den; den måste släppas frivilligt.
-4.  **Circular Wait (Cirkulär Väntan):** Det finns en uppsättning väntande processer/trådar ${P_0, P_1, ..., P_n}$ där $P_0$ väntar på en resurs som hålls av $P_1$, $P_1$ väntar på en resurs som hålls av $P_2$, ..., $P_n$ väntar på en resurs som hålls av $P_0$.
+1. **Mutual Exclusion (Ömsesidig Uteslutning):** Resurser kan endast användas av en process/tråd åt gången (d.v.s. de är inte delbara på ett sätt som undviker konflikt).
+2. **Hold and Wait (Hålla och Vänta):** En process/tråd håller minst en resurs och väntar på att förvärva ytterligare resurser som hålls av andra processer/trådar.
+3. **No Preemption (Ingen Förtursrätt/Avbrytbarhet):** En resurs kan inte med våld tas ifrån en process/tråd som håller den; den måste släppas frivilligt.
+4. **Circular Wait (Cirkulär Väntan):** Det finns en uppsättning väntande processer/trådar ${P_0, P_1, ..., P_n}$ där $P_0$ väntar på en resurs som hålls av $P_1$, $P_1$ väntar på en resurs som hålls av $P_2$, ..., $P_n$ väntar på en resurs som hålls av $P_0$.
 
 (Tänk: *Receptet för en garanterad systemlåsning*).
 Deadlock: Hanteringsstrategier (Definition) (4)
 ??
 Fyra huvudsakliga strategier för att hantera deadlocks:
 
-1.  **Prevention (Förebyggande):** Designa systemet så att minst ett av de fyra nödvändiga villkoren för deadlock aldrig kan uppfyllas. Kan leda till sämre resursutnyttjande.
-2.  **Avoidance (Undvikande):** Använda information om framtida resursbehov för att dynamiskt fatta beslut som säkerställer att systemet aldrig hamnar i ett deadlock-tillstånd. Kräver förkunskap (t.ex. Banker's algorithm).
-3.  **Detection and Recovery (Upptäckt och Återhämtning):** Tillåta att deadlocks inträffar, upptäcka dem (t.ex. genom att analysera resursallokeringsgrafen) och sedan vidta åtgärder för att lösa upp dem (t.ex. avsluta processer, ta tillbaka resurser).
-4.  **Ignorance (Ignorans / "Ostrich Algorithm"):** Anta att deadlocks är så sällsynta att kostnaden för att hantera dem är högre än kostnaden för att de ibland inträffar. Systemet startas då oftast om manuellt. Vanligt i många generella operativsystem.
+1. **Prevention (Förebyggande):** Designa systemet så att minst ett av de fyra nödvändiga villkoren för deadlock aldrig kan uppfyllas. Kan leda till sämre resursutnyttjande.
+2. **Avoidance (Undvikande):** Använda information om framtida resursbehov för att dynamiskt fatta beslut som säkerställer att systemet aldrig hamnar i ett deadlock-tillstånd. Kräver förkunskap (t.ex. Banker's algorithm).
+3. **Detection and Recovery (Upptäckt och Återhämtning):** Tillåta att deadlocks inträffar, upptäcka dem (t.ex. genom att analysera resursallokeringsgrafen) och sedan vidta åtgärder för att lösa upp dem (t.ex. avsluta processer, ta tillbaka resurser).
+4. **Ignorance (Ignorans / "Ostrich Algorithm"):** Anta att deadlocks är så sällsynta att kostnaden för att hantera dem är högre än kostnaden för att de ibland inträffar. Systemet startas då oftast om manuellt. Vanligt i många generella operativsystem.
 (Tänk: *Planera bort, navigera runt, lösa upp efteråt, eller stoppa huvudet i sanden*).
