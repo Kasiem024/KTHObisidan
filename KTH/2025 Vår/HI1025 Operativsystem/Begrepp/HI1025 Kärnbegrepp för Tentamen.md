@@ -24,9 +24,10 @@ ContextSwitch(Definition)::Operativsystemets mekanism för att byta den process 
 <!--SR:!2025-05-27,3,270!2000-01-01,1,250-->
 
 ProcessControlBlock(PCB)(Definition)::En datastruktur i OS-kärnan som lagrar all information om en specifik process, t.ex. process-ID, tillstånd (ready, running, blocked), CPU-register, programräknare, minnespekare, och schemaläggningsinformation.
+<!--SR:!2025-05-29,3,278!2000-01-01,1,250-->
 
 Scheduler(Definition)::Den del av operativsystemet som väljer vilken process från `ready`-kön som ska tilldelas CPU:n härnäst, baserat på en schemaläggningspolicy.
-<!--SR:!2000-01-01,1,250!2025-05-27,3,270-->
+<!--SR:!2025-06-03,7,299!2025-05-27,3,270-->
 
 Timer-avbrott(Definition)::Ett periodiskt hårdvaruavbrott som tvingar CPU:n att avbryta den körande processen och ge kontrollen tillbaka till operativsystemet. Kritiskt för preemptiv schemaläggning.
 <!--SR:!2025-05-27,3,270!2000-01-01,1,250-->
@@ -44,6 +45,7 @@ Schemaläggningspolicyer(Definition)(4)
 TurnaroundTime(Definition)::Total tid en process tillbringar i systemet, från ankomst till slutförande. Beräknas som $T_{completion} - T_{arrival}$.
 
 ResponseTime(Definition)::Tiden från att en process anländer (eller begäran görs) tills den *första gången* får CPU-tid och börjar exekvera. Beräknas som $T_{first\_run} - T_{arrival}$.
+<!--SR:!2000-01-01,1,250!2025-05-30,3,279-->
 
 ## Del 2: Virtualisering – Minnet
 
@@ -135,6 +137,7 @@ Superblock(Definition)::Ett block i början av ett filsystem som innehåller kri
 <!--SR:!2000-01-01,1,250!2025-05-31,7,250-->
 
 DataBlock(Definition)::Den minsta enheten av diskutrymme som allokeras till filers innehåll (t.ex. 4KB).
+<!--SR:!2025-05-29,3,258!2000-01-01,1,250-->
 
 Allokeringsbitmap(Definition)::En datastruktur (ofta en bitvektor) som filsystemet använder för att hålla reda på vilka datablock och/eller iNoder som är lediga respektive upptagna.
 <!--SR:!2025-05-27,3,250!2000-01-01,1,250-->
@@ -161,3 +164,4 @@ IP-adress Och Portnummer (Definition)(2)
 För nätverkskommunikation:
 1. **IP-adress:** Identifierar en unik värddator på nätverket.
 2. **Portnummer:** Identifierar en specifik applikation eller tjänst på värddatorn.
+<!--SR:!2000-01-01,1,250!2025-05-29,3,278-->

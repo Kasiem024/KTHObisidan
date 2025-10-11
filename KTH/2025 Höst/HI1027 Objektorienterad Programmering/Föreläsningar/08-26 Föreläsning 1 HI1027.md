@@ -1,0 +1,51 @@
+# 08-26 Föreläsning 1 HI1027
+
+---
+
+Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+
+Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
+
+Tags: #year2025 #KTH #HI1027 #föreläsning
+
+---
+
+Objektorienterad programmering handlar om att abstrahera objekt från verkligheten till objekt i programmet.
+
+Det finns olika programmeringsparadigmer. Objektorienterad är imperativ. Imperativ betyder att ge datorn en serie kommandon om hur man ska uppnå ett resultat.
+
+**Objekt**: En abstraktion av något i problemområdet (riktiga världen). Liknar struct i C. Operationer kan utföras på objekt.
+
+**Klass**: En mall för objekt av samma typ. Man kan skapa många objekt utifrån en klass. Ett objekt kan också kallas "instance of a class".
+
+---
+
+## Bankkonto klass Exempel
+
+**Metoder**:
+- Deposit
+- Withdraw
+- Print
+
+**Datamedlemmar**:
+- Namn
+- Saldo
+
+**Kontrakt**:
+Syftar på villkor objekten måste uppfylla, ex. att saldo inte kan vara negativt.
+
+```java
+public class Account1{
+	double balance;
+	String name;
+	
+	void deposit(double amount){
+		if (amount >= 0){
+			balance += amount;
+		}
+	}
+	...
+	...
+	...
+}
+```

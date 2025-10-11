@@ -1,7 +1,6 @@
 [
   "obsidian-excalidraw-plugin",
   "obsidian-icon-folder",
-  "obsidian-spaced-repetition",
   "tag-wrangler",
   "settings-search",
   "url-into-selection",
@@ -10,8 +9,9 @@
   "omnisearch",
   "text-extractor",
   "handwritten-notes",
-  "dataview",
   "templater-obsidian",
   "obsidian-style-settings",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-spaced-repetition",
+  "dataview"
 ]
