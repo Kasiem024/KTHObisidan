@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "9e2803a85983f7cd",
+        "id": "dfe116762f4d736c",
         "type": "tabs",
         "children": [
           {
-            "id": "f49744770ead0920",
+            "id": "68521b69b70a67f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/Lab1 Begrepp HI1027.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lab1 Begrepp HI1027"
-            }
-          },
-          {
-            "id": "badd70a39e050ffd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/HI1027 Begrepp inför TEN1.md",
+                "file": "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Begrepp Föreläsning 1-4.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "HI1027 Begrepp inför TEN1"
+              "title": "HI1029 Begrepp Föreläsning 1-4"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,13 +79,11 @@
               "title": "Tags"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 336.5,
-    "collapsed": true
+    "width": 336.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -195,7 +178,7 @@
             }
           },
           {
-            "id": "1a67052023002134",
+            "id": "5b5b3438e474f570",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -228,12 +211,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "badd70a39e050ffd",
+  "active": "68521b69b70a67f2",
   "lastOpenFiles": [
+    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Begrepp Föreläsning 1-4.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/Pasted image 20260115153312.png",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/01-15 Föreläsning 2 HE1033.md",
+    "KTH/2025 Höst/HI1030 Databasteknik/Föreläsningar/12-01 HI1030.md",
+    "KTH/2025 Höst/HI1030 Databasteknik/Föreläsningar/10-27 HI1030 Föreläsning 1.md",
+    "KTH/2025 Höst/HI1030 Databasteknik/Föreläsningar/11-03 CM1000 Föreläsning 3.md",
+    "Untitled.canvas",
+    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/08-26 Föreläsning 1 HI1027.md",
     "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/Lab1 Begrepp HI1027.md",
     "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/HI1027 Begrepp inför TEN1.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Kärnbegrepp för Tentamen.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/08-26 Föreläsning 1 HI1027.md",
     "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/Untitled.md",
     "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/kasiemsaeed@gmail.com.md",
     "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/Viktiga begrepp.pdf",
@@ -261,13 +251,7 @@
     "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 4.md",
     "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 3.md",
     "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 2.md",
-    "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Övning 1.md",
-    "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 1.md",
-    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-26 CM1008 Föreläsning 4.md",
-    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-19 CM1008 Föreläsning 2.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 2.md",
     "Pasted image 20250321104620.png",
-    "Untitled.canvas",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",
     "KTH/2024 Höst/HE1026/Lektioner/Pasted image 20241202140128.png",
@@ -276,7 +260,6 @@
     "KTH/2024 Höst/HE1026/Bilagor/3 Signaler HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/Moore- och Mealy-maskiner HE1026.png",
     "KTH/2024 Höst/HE1026/Bilagor/Sanningstabell Notation HE1026.png",
-    "KTH/2024 Höst/HE1026/Bilagor/7408 Kretslayout HE1026.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

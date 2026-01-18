@@ -1,0 +1,83 @@
+# 10-27 HI1030 Föreläsning 1
+
+---
+
+Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+
+Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
+
+Tags: #year2025 #KTH #HI1030 #föreläsning
+
+---
+
+Databaser handlar om att lagra data **persistent/beständigt**.
+
+Databashanterare, DBMS.
+Dess syfte är:
+* Lagra stora mängder av data på ett beständigt och persistent sätt.
+* Backup och återhämtning av data
+* Söka i data
+
+Det finns relationsdatabaser, RDBMS
+Bra för data som måste vara konsistent, logiskt sammanhängande, med bestämda regler och relationer mellan olika delar av data.
+
+Objektdatabaser, Objekt-Realtionsdatabaser
+
+NoSQL databaser
+
+---
+
+ER-Modellen, Entity Relationship
+
+Handlar om hur data hänger ihop. Vad sambanden mellan data är.
+
+ER-Modellen används föra att beskriva verkligheten, inte hur data lagras och inte heller logiken för lagrat data.
+
+---
+
+Nyckel/Nyckelattribut
+
+Identifierar entitetsinstanser unikt
+* Kan bestå av flera attribut
+* Kan finnas flera
+
+Minsta möjliga nycklar kallas kandidatnycklar
+
+En kandidatnyckel väljs som primärnyckel
+
+---
+
+Multipla attribut betyder att det kan finnas flera värden för ett attribut. Ex. en anställd med flera telefonnummer. Detta visas med dubbel cirkel.
+
+Vissa attribut är härledda, ex. ålder om man har födelsedatum, man kan räkna ut det. Detta visas med en streckad cirkel
+
+I diagram för ER:
+
+*Empolyee N -> worksFor -> 1 Department*
+
+Empolyee och Department är entiteter. worksFor är samband. Samband kan ha sina egna attribut.
+
+N betyder att det finns många anställda. 1 betyder att varje Employee endast worksFor ett Department.
+
+*Empolyee N => worksFor -> 1 Department*
+
+Att det nu står "=" betyder att en Employee **måste** worksFor en Department
+
+Ibland kan det stå "M" istället för "N" i ett diagram. Det betyder i princip samma sak men handlar om att det blir uppenbart att N och M inte har samma värde.
+
+---
+
+Svag entitet är en entitet som knappt kan existera själv. Exempelvis kan ett rum inte existera utan att vara kopplad till en lägenhet. Dess kandidatnyckel är också skapade av att kombinera sin egna attribut med en starkare entitets attribut.
+
+---
+
+Extended-ER, EER
+
+Lägger till möjligheter för att beskriva mer komplexa samband som arv.
+
+---
+
+Relationsmodellen
+Beskriver hur motsvarande data, i ER-modellen, representeras i en relationsdatabas i tabeller, här även kallas relationer
+
+I relationsmodellen står faktiskt data i en vanlig tabell, rader och kolumner.

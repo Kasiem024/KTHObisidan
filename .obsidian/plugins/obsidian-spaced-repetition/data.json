@@ -1,7 +1,8 @@
 {
   "settings": {
     "flashcardTags": [
-      "#HI1027"
+      "#HI1029",
+      "#HE1033"
     ],
     "convertFoldersToDecks": false,
     "burySiblingCards": false,
