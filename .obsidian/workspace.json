@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "dfe116762f4d736c",
+        "id": "cd73f36aea567a57",
         "type": "tabs",
         "children": [
           {
-            "id": "68521b69b70a67f2",
+            "id": "ba6a7e577c98fce8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Begrepp Föreläsning 1-4.md",
+                "file": "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/LABA Uppgift 1 Kasiem Al-Mshabbak.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "HI1029 Begrepp Föreläsning 1-4"
-            }
-          },
-          {
-            "id": "5ffd05551f92f87f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 1-3.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "HE1033 Begrepp Föreläsning 1-3"
+              "title": "LABA Uppgift 1 Kasiem Al-Mshabbak"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5,
-    "collapsed": true
+    "width": 336.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -227,10 +211,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5ffd05551f92f87f",
+  "active": "ba6a7e577c98fce8",
   "lastOpenFiles": [
-    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Begrepp Föreläsning 1-4.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 4-5.md",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 1-3.md",
+    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Begrepp Föreläsning 1-4.md",
+    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/LABA Uppgift 1 Kasiem Al-Mshabbak.md",
+    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/LABA Uppgift 1 HI1029 Bader Al-Naasan.md",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/Pasted image 20260115153312.png",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/01-15 Föreläsning 2 HE1033.md",
     "KTH/2025 Höst/HI1030 Databasteknik/Föreläsningar/12-01 HI1030.md",
@@ -264,9 +251,6 @@
     "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 7.md",
     "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 6.md",
     "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Övning 3.md",
-    "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 5.md",
-    "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 4.md",
-    "KTH/Kurs Mapp Mall/Begrepp/HI1025 Begrepp Föreläsning 3.md",
     "Pasted image 20250321104620.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",
