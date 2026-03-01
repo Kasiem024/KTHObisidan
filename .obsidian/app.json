@@ -168,11 +168,11 @@
   ],
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
-    "includeName": true,
+    "includeName": false,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 70
+    "downscalePercent": 50
   },
   "showUnsupportedFiles": true
 }
