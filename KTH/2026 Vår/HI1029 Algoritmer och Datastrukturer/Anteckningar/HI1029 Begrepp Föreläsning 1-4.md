@@ -10,10 +10,12 @@ Tags: #year2025 #KTH #HI1029 #begrepp
 
 ---
 Algoritm(Definition);; Ett begränsat antal **instruktioner** för att lösa en uppgift som, från givna indata, med säkerhet leder till **korrekta utdata**.
+<!--SR:!2026-03-11,1,166!2026-03-11,1,200-->
 
 Datastruktur(Definition);; En struktur som **organiserar** och **lagrar** data i minnet för effektiv åtkomst och bearbetning.
 
 Abstrakt Datatyp(ADT)(Definition);; En specifikation av **vad** man kan göra med data (operationer) men inte **hur** det görs (implementation).
+<!--SR:!2026-03-11,1,186!2026-03-11,1,186-->
 
 Skillnaden mellan ADT och Datastruktur(Definition)
 ||
@@ -23,6 +25,7 @@ Skillnaden mellan ADT och Datastruktur(Definition)
 ADT Lista(Definition);; En samling element där varje element har en specifik **position** eller **index**.
 
 Komplexitetsfunktion(T(n))(Definition);; En matematisk funktion som beskriver hur **antalet instruktioner** i en algoritm växer när problemets storlek ($n$) ökar.
+<!--SR:!2000-01-01,1,250!2026-03-11,1,166-->
 
 Ordo-notation(Big-O)(Definition);; En teoretisk **övre gräns** som beskriver en algoritms effektivitet i värsta fall när $n$ går mot oändligheten.
 
@@ -34,6 +37,7 @@ Array-lista Fördelar(2)
 ??
 - Direktåtkomst via index ($O(1)$)
 - Minneseffektiv om arrayen är välfylld
+<!--SR:!2026-03-11,1,200!2026-03-14,3,230-->
 
 Array-lista Nackdelar(2)
 ??
@@ -43,6 +47,7 @@ Array-lista Nackdelar(2)
 Tidskomplexitet: get(index) & set(index) i ArrayList(Definition):: $O(1)$
 
 Tidskomplexitet: add(index, element) i ArrayList(Definition):: $O(n)$ (p.g.a. **elementförflyttning**)
+<!--SR:!2026-03-14,3,220-->
 
 Nod (i länkad lista)(Definition);; En behållare som innehåller **data** och en **referens** (pekare) till nästa element.
 
@@ -55,34 +60,43 @@ Länkad lista Nackdelar(2)
 ??
 - Ingen direktåtkomst ($O(n)$ för att hitta index $i$)
 - Kräver extra minne för **referenser** (pekare)
+<!--SR:!2000-01-01,1,250!2026-03-11,1,170-->
 
 Dubbellänkad lista(Definition);; En lista där varje nod har referenser till både **nästa** och **föregående** nod.
+<!--SR:!2026-03-11,1,166!2026-03-11,2,206-->
 
 Iterator(Definition);; Ett objekt som används för att **traversera** en samling element sekventiellt utan att exponera den interna strukturen.
+<!--SR:!2026-03-11,1,200!2000-01-01,1,250-->
 
 Varför Iterator i länkad lista?(Definition):: För att uppnå $O(n)$ vid genomgång av hela listan, utan iterator (via index) blir det $O(n^2)$.
 
 hasNext()(Iterator)(Definition):: Returnerar **true** om det finns fler element kvar att hämta i genomgången.
+<!--SR:!2026-03-14,3,206-->
 
 next()(Iterator)(Definition):: Returnerar **nästa element** i sekvensen och flyttar iteratorns position framåt.
 
 Tidskomplexitet: get(index) i Länkad lista(Definition):: $O(n)$
+<!--SR:!2026-03-11,1,200-->
 
 Tidskomplexitet: add(0, element) i Länkad lista(Definition):: $O(1)$
 
 Stack(ADT)(Definition);; En linjär datastruktur som följer principen **LIFO** (Last-In, First-Out).
+<!--SR:!2000-01-01,1,250!2026-03-13,2,186-->
 
 push(element)(Stack)(Definition):: Lägger till ett nytt element **längst upp** på stacken.
 
 pop()(Stack)(Definition):: Tar bort och returnerar det **översta** elementet.
+<!--SR:!2026-03-13,2,186-->
 
 peek()(Stack)(Definition):: Returnerar det **översta** elementet utan att ta bort det från stacken.
 
 Stack-operationer(Komplexitet)(Definition):: Alla standardoperationer (`push`, `pop`, `peek`, `empty`) utförs på **$O(1)$**.
 
 Postfix-notation(RPN)(Definition);; Ett sätt att skriva matematiska uttryck där **operatorn kommer efter** sina operander (t.ex. `3 4 +`).
+<!--SR:!2000-01-01,1,250!2026-03-14,3,220-->
 
 Stack vid metodanrop(Definition):: Processorn använder en stack för att lagra **returadresser** och lokala variabler vid funktionsanrop.
+<!--SR:!2026-03-11,1,200-->
 
 Minnesjämförelse: Länkad Stack vs Array Stack(2)
 ||
@@ -94,8 +108,10 @@ Varför är Länkad Lista lämplig för Stack?(Definition):: Den har alltid exak
 Kö(ADT)(Definition);; En linjär datastruktur som följer principen **FIFO** (First-In, First-Out).
 
 First-In, First-Out (FIFO)(Definition);; Det element som sattes in först är också det som tas ut först.
+<!--SR:!2000-01-01,1,250!2026-03-11,1,206-->
 
 enqueue(element)(Definition);; Operationen att lägga till ett element **längst bak** i kön.
+<!--SR:!2000-01-01,1,250!2026-03-14,3,220-->
 
 dequeue()(Definition);; Operationen att ta bort och returnerar elementet **längst fram** i kön.
 
