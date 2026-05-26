@@ -1,13 +1,20 @@
-# <% tp.file.title %>
-
 ---
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2025 #KTH #<% tp.file.cursor(1) %> #seminarium
-
+tags:
+  - KTH
+  - year<% tp.date.now("YYYY") %>
+  - <% tp.file.folder(true).split('/')[2] || "Kurskod" %>
+  - seminarium
+  - BroadTopic
 ---
+# Seminarium: <% tp.file.title %>
 
-<% tp.file.cursor(2) %>
+**Datum:** <% tp.date.now("YYYY-MM-DD") %>
+
+## Förberedelser
+- 
+
+## Diskussion
+- 
+
+## Slutsatser
+- 

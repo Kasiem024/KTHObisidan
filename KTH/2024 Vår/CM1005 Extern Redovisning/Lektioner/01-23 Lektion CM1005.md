@@ -1,13 +1,9 @@
+---
+tags: [CM1005, year2024]
+---
+
 # 01-23 Lektion CM1005
 
----
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2024 #KTH #ekonomi #CM1005 #föreläsning
-
----
 När man skickar en faktura kan man redovisa det som en [[Utgift]].
 
 [[Inbetalning]] och [[Utbetalning]] kan ses som [[Likviditet]], penningflödet. Sker i banken, plusgiro och kassan.

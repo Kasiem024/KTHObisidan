@@ -1,3 +1,6 @@
+---
+tags: [HI1029, KTH, labb, programmering, year2026]
+---
 # LABA Uppgift 1 HI1029 - Kasiem Al-Mshabbak
 
 ## Inledning

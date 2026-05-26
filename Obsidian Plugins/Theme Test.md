@@ -1,11 +1,9 @@
+---
+tags: []
+---
+
 # Theme Test
 
----
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
----
 
 ## Header 2
 
@@ -37,6 +35,3 @@ Excepteur sint *occaecat* cupidatat non ***proident***, sunt in culpa qui offici
 ==Highlight==
 
 [[Theme Test]]
-
----
-$Totala Kostnader = Fasta Kostnader + Rörliga Kostnader * Volym$

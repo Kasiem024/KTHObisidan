@@ -1,10 +1,12 @@
+---
+tags: [begrepp, HI1025, KTH, programmering, tenta, year2025]
+---
 # HI1025 Kärnbegrepp för Tentamen
 
 ---
 
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-Tags: #year2025 #KTH #HI1025/Tenta #begrepp #kärna #tentafokus
 
 ---
 

@@ -1,3 +1,6 @@
+---
+tags: [begrepp, HE1033, KTH, nätverk, tenta, year2026]
+---
 # HE1033 Begrepp Tenta
 
 ---
@@ -6,7 +9,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HE1033 #begrepp
+
 
 ---
 

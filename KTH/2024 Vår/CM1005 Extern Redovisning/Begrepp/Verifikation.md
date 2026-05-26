@@ -1,13 +1,9 @@
+---
+tags: [begrepp, CM1005, ekonomi, kth, me1003, year2024]
+---
+
 # Verifikation
 
----
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp #ME1003/ME1003KS3
-
----
 
 ## Definition
 
@@ -26,17 +22,6 @@ En verifikation ska innehålla:
 
 Man kan se på det som ett kvitto som visar att en affärshändelse har skett.
 
----
-
-Enligt [[Bokföringslagen]] ska en [[Verifikation]] innehålla:
-
-- När den sammanställts (datum).
-- Till vem fakturan är ställd (kund).
-- När [[Affärshändelse]] har inträffat.
-- Vad fakturan avser (specifikation).
-- Belopp.
-
----
 
 Enligt [[Mervärdesskattelagen]] ska en verifikation innehålla:
 

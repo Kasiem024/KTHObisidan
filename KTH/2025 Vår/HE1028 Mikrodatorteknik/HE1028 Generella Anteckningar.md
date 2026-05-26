@@ -1,3 +1,6 @@
+---
+tags: [HE1028, hårdvara, KTH, year2025, övrigt]
+---
 # `=this.file.name`
 
 ---
@@ -6,7 +9,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025
+
 
 ---
 

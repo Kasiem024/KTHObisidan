@@ -1,11 +1,10 @@
-# Instuderingsfrågor Kap 1-7 KS1 ME1003
-
+---
+tags: [ekonomi, KTH, ME1003, year2024, övning]
 ---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #övning
 
 ---
 

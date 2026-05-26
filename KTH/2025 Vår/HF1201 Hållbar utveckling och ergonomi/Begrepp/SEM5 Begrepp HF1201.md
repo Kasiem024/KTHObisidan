@@ -1,3 +1,6 @@
+---
+tags: [begrepp, HF1201, KTH, samhälle, year2025]
+---
 # `=this.file.name`
 
 ---
@@ -6,7 +9,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HF1201/SEM5
+
 
 ---
 

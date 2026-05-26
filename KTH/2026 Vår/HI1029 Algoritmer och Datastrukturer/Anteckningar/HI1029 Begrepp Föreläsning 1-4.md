@@ -1,3 +1,6 @@
+---
+tags: [begrepp, föreläsning, HI1029, KTH, programmering, year2026]
+---
 # HI1029 Begrepp Föreläsning 1-4
 
 ---
@@ -6,7 +9,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HI1029 #begrepp
+
 
 ---
 Algoritm(Definition);; Ett begränsat antal **instruktioner** för att lösa en uppgift som, från givna indata, med säkerhet leder till **korrekta utdata**.

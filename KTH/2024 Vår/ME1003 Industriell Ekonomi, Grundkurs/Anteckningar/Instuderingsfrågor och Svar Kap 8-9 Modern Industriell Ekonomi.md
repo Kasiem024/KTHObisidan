@@ -1,11 +1,6 @@
-# OBS
-
-Tags: #nograph
-
-**Detta är instuderingsfrågor tagna från övningsboken. Det finns inget facit för frågorna utan svaren är mina egna baserat på vad jag har läst i boken och vad som har sagts på föreläsningarna.**
-
 ---
-
+tags: [nograph]
+---
 ## Kapitel 8 Ekonomisk Analys och Produktkalkylering
 
 1. Varför är det viktigt att företag löpande analyserar olika ekonomiska förhållanden i sin verksamhet? Ge minst två anledningar.

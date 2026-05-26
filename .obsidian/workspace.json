@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3b3ff59a05958b99",
+        "id": "baa6f8ecdc29f8bd",
         "type": "tabs",
         "children": [
           {
-            "id": "db276f4f93cdc1ee",
+            "id": "983cde6754ff51a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Tenta.md",
+                "file": "KTH/Generella Anteckningar KTH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HE1033 Begrepp Tenta"
+              "title": "Generella Anteckningar KTH"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#HI10291",
+                "query": "tag:#cm1005",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,13 +178,13 @@
             }
           },
           {
-            "id": "e8495c7868697376",
+            "id": "348aa535b893b019",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
               "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Notes Review Queue"
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
             }
           }
         ],
@@ -204,53 +204,52 @@
       "markdown-importer:Open format converter": false,
       "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-spaced-repetition:Review flashcards": false,
       "handwritten-notes:Create empty handwritten note": false,
       "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "db276f4f93cdc1ee",
+  "active": "85154ac5110aa970",
   "lastOpenFiles": [
-    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Begrepp Tenta.md",
-    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Begrepp Föreläsning 1-4.md",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Tenta.md",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 9.md",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 1-3.md",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 1-3.md",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 4-5.md",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 6-7.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Kärnbegrepp för Tentamen.md",
-    "HI1025 Kärnbegrepp för Tentamen.md",
-    "KTH/Generella Anteckningar KTH.md",
-    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS2 HH1802.md",
-    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Anteckningar/Instuderingsfrågor KS1 HH1802.md",
-    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/Bader Al-Naasan LABA Uppgift 1 HI1029.md",
-    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/LABA Uppgift 1 HI1029 - Kasiem Al-Mshabbak.md",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/Pasted image 20260115153312.png",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/01-15 Föreläsning 2 HE1033.md",
+    "Atlas/Dashboard.md",
+    "Atlas/Ekonomi MOC.md",
+    "Atlas/Programmering MOC.md",
+    "Atlas/Matematik MOC.md",
+    "Atlas/Samhälle MOC.md",
+    "Atlas/Databaser MOC.md",
+    "Atlas/Nätverk MOC.md",
+    "Atlas/Hårdvara MOC.md",
+    "Atlas",
+    "index.md",
     "KTH/2025 Höst/HI1030 Databasteknik/Föreläsningar/12-01 HI1030.md",
     "KTH/2025 Höst/HI1030 Databasteknik/Föreläsningar/10-27 HI1030 Föreläsning 1.md",
-    "KTH/2025 Höst/HI1030 Databasteknik/Föreläsningar/11-03 CM1000 Föreläsning 3.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 8.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 4.md",
+    "KTH/2024 Höst/HI1024 Programmering, grundkurs/Anteckningar/Instuderingsfrågor och Svar TENA HI1024.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 9.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 6-7.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 4-5.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 1-3.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 3.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 7.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 6.md",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-30 Lektion ME1003.md",
+    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-25 Lektion 1 ME1003.md",
+    "KTH/2024 Vår/CM1005 Extern Redovisning/Lektioner/01-23 Lektion CM1005.md",
+    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Kärnbegrepp för Tentamen.md",
+    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/PE-Tal.md",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/Anteckningar/Untitled",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/PDFs/Litteraturlista",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/Bilagor/Excalidraw",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/Begrepp",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/Föreläsningar",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/PDFs",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/Anteckningar",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik/Bilagor",
+    "KTH/2026 Vår/HF1012 Matematisk Statistik",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/Pasted image 20260115153312.png",
     "Untitled.canvas",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/08-26 Föreläsning 1 HI1027.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/Lab1 Begrepp HI1027.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/HI1027 Begrepp inför TEN1.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/Untitled.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/kasiemsaeed@gmail.com.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/Viktiga begrepp.pdf",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/Obekräftade 890502.crdownload",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/TEN1 2025-03-12.pdf",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/Obekräftade 198884.crdownload",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/TEN1 2024-10-21.pdf",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/Obekräftade 228872.crdownload",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/TEN1 2024-03-11.pdf",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/Obekräftade 95380.crdownload",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/TEN1 2023-10-26.pdf",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/PDFs/Tentor/Obekräftade 525248.crdownload",
-    "KTH/2025 Vår/HE1028 Mikrodatorteknik/Föreläsningar/01-15 Föreläsning 1 HE1028.md",
-    "KTH/Kurs Mapp Mall/Föreläsningar/05-12 HI1025 Övning 4.md",
     "Pasted image 20250321104620.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
     "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",

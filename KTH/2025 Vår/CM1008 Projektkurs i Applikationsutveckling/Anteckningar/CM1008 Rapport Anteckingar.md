@@ -1,3 +1,6 @@
+---
+tags: [CM1008, KTH, programmering, year2025, övrigt]
+---
 # `=this.file.name`
 
 ---
@@ -6,7 +9,6 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #CM1008
 
 ---
 

@@ -1,13 +1,9 @@
+---
+tags: [CM1005, year2024]
+---
+
 # Generella Anteckningar CM1005
 
----
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2024 #KTH #CM1005
-
----
 
 ## Länkar
 

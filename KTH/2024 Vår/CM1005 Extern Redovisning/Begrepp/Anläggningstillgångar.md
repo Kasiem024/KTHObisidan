@@ -1,14 +1,9 @@
+---
+tags: [begrepp, CM1005, ekonomi, kth, me1003, year2024]
+---
+
 # Anläggningstillgångar
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2024 #KTH #ekonomi #CM1005 #begrepp #CM1005/CM1005KS4 #ME1003/ME1003KS3
-
----
 
 ## Definition
 
@@ -16,14 +11,6 @@ Anläggningstillgångar är [[Tillgångar]] som ett företag avser att stadigvar
 
 Eftersom Anläggningstillgångar har en [[Ekonomisk Livslängd]] gör man [[Avskrivning]] på de.
 
----
-Det finns 3 typer av Anläggningstillgångar:
-
-- ==Immateriella==: Patent, varumärken, kostnader för forskning och hyresrätter.
-- ==Materiella==: Maskiner, inventarier, byggnader och mark.
-- ==Finansiella==: Värdepapper, aktier.
-
----
 Man kan kategorisera Anläggningstillgångar på 4 olika sätt:
 
 - ==Maskiner och inventarier==: Får högst värderas som anskaffningsvärdet, kan vara [[Förbrukningsinventarier]] då avskrivs de inte och räknas som en kostnad istället för en tillgång.

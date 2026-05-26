@@ -1,12 +1,10 @@
-# DuPont-Schema
-
 ---
-
+tags: [begrepp, ekonomi, HH1802/HH1802KS2, KTH, ME1003, ME1003/ME1003KS3, year2024]
+---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #begrepp #ME1003/ME1003KS3 #HH1802/HH1802KS2
 
 ---
 

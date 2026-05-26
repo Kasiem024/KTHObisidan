@@ -1,3 +1,6 @@
+---
+tags: [föreläsning, HE1026, hårdvara, KTH, year2024]
+---
 # 11-14 Föreläsning HE1026
 
 ---
@@ -6,7 +9,6 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #HE1026 #föreläsning
 
 ---
 

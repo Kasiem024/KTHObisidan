@@ -1,11 +1,5 @@
-# Instuderingsfrågor och Svar TENA HI1024
-
-## OBS
-
-Tags: #nograph
-
-**Detta är instuderingsfrågor tagna från Canvas. Det finns inget facit för frågorna utan svaren är mina egna. Vissa frågor är inte med.**
-
+---
+tags: [nograph]
 ---
 1. Beskriv vad datalogi handlar om.
 

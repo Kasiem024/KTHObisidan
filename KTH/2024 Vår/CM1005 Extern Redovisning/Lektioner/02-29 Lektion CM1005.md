@@ -1,28 +1,13 @@
+---
+tags: [CM1005, year2024]
+---
+
 # 02-29 Lektion CM1005
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2024 #KTH #ekonomi #CM1005 #föreläsning #CM1005/CM1005KS4
-
----
 [[02-29 Powerpoint CM1005.pdf]]
 
 [[02-29 Journal Lektion CM1005.pdf]]
 
----
-+Rörelsens intäkter
--Rörelsens Kostnader
-= Rörelseresultat
-
-Resultat efter finansiella poster beror på hur verksamheten har finansierats. Ibland är det resultatet samma som resultat före skatt
-
-Redovisat resultat är samma som resultat efter skatt.
-
----
 Samband redovisning och beskattning
 
 Olika företagsformer betalar skatt på olika sätt.
@@ -51,29 +36,6 @@ BFL och ÅRL ger högsta tillåtna värden, alltså [[Civilrättsliga Värdering
 
 Inkomstskattelagarna ger lägsta tillåtna värde, [[Skatterättsliga Värderingsreglerna]].
 
----
-
-Bokslutsdispositioner är skattemässig möjlighet som måste bokföras i räkenskaperna för att bli skattemässigt giltig.
-
-Det skapar finansiellt utrymme. Leder till att företag kan ungefär bestämma hur mycket skatt som ska betalas, [[Bokslutspolitik]].
-
-Avskrivning utöver plan
-
-Periodiseringsfond är efter resultat efter finansiella poster och innan resultat före skatt. Kopplat till [[Obeskattade Reserver]]. 25% av beskattningsbar inkomst kan gå till periodiseringsfond.
-
-Båda två används för att betala mindre skatt.
-
-Nedskrivning när tillgången är värd mindre än vad den borde vara, kan hända vid olycka
-
-Uppskrivning: köper en bit mark för 50 år sen för 50. Grannen köper idag för 500. Jag kana skriva upp värdet till 500.
-
-Avskrivning utöver är när man avskriver mer inte enligt
-
-Nedskrivning är som en avskrivning utöver plan fast den är civilrättslig eftersom man måste göra den.
-
-Överavskrivningar är inte ett måste.
-
----
 
 Avskrivning utöver plan (vid räkenskapsenlig avskrivning)
 

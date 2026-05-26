@@ -1,3 +1,12 @@
+---
+tags:
+  - begrepp
+  - föreläsning
+  - HE1033
+  - KTH
+  - nätverk
+  - year2026
+---
 # HE1033 Begrepp Föreläsning 4-5
 
 ---
@@ -6,7 +15,6 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HE1033 #begrepp
 
 ---
 
@@ -114,7 +122,7 @@ ICMP:s två huvudtyper av meddelanden (2)
 <!--SR:!2026-03-17,5,186-->
 
 Varför skickar inte ICMP felmeddelanden om felmeddelanden?:: För att undvika **oändliga loopar** av felrapportering och nätverksbelastning.
-<!--SR:!2026-03-13,4,186-->
+<!--SR:!2026-03-20,7,186-->
 
 IPv6-adress (storlek) (Definition);; **128 bitar** (16 byte). Skrivs hexadecimalt med kolon (ex: 2001:db8:1).
 <!--SR:!2026-03-13,7,226!2026-04-02,21,246-->
@@ -149,7 +157,7 @@ Var sker hopsättning (reassembly) av fragmenterade paket?:: Endast hos **slutde
 <!--SR:!2026-03-22,10,230-->
 
 Om HLEN har värdet 10, hur stort är IP-huvudet?:: $10 \times 4 = \mathbf{40}$ **bytes**.
-<!--SR:!2026-03-13,4,186-->
+<!--SR:!2026-03-25,12,206-->
 
 Om Fragment Offset är 100, vilken byte-position börjar datan på?:: $100 \times 8 = \mathbf{800}$ **bytes**.
 <!--SR:!2026-03-15,4,177-->
@@ -167,7 +175,7 @@ DHCP DORA-processen (Steg) (4)
 - **Offer** (Server -> Klient)
 - **Request** (Klient -> Server)
 - **Acknowledge (ACK)** (Server -> Klient)
-<!--SR:!2026-03-13,7,226!2026-03-28,16,232-->
+<!--SR:!2026-04-04,22,246!2026-03-28,16,232-->
 
 DHCP Relay Agent (Definition);; En funktion i en router som vidarebefordrar **DHCP-broadcasts** till en server i ett annat subnät.
 <!--SR:!2026-03-13,4,186!2026-03-13,7,226-->
@@ -219,10 +227,10 @@ Vilka tre fält i IPv4-huvudet ändras om en router måste fragmentera ett paket
 <!--SR:!2026-03-13,4,186!2026-03-13,7,232-->
 
 När ändras fältet HLEN (Header Length) i en router?(Definition);;Endast i de ovanliga fall där IP Options läggs till eller tas bort. Normalt är detta värde oförändrat.
-<!--SR:!2026-03-13,7,226!2026-03-18,6,212-->
+<!--SR:!2026-04-05,23,246!2026-03-18,6,212-->
 
 Hur beräknas det totala antalet IP-adresser i ett CIDR-block?(Definition)::Genom formeln $2^{32-n}$, där $n$ är prefixet (t.ex. ger /26 exakt $2^{32-26} = 64$ adresser).
-<!--SR:!2026-03-13,7,226-->
+<!--SR:!2026-04-04,22,246-->
 
 Hur identifierar du Nätverksadressen i ett subnät?(Definition);;Det är alltid den första adressen i blocket, där alla host-bitar är 0. Den används i routingtabeller för att identifiera hela nätet.
 <!--SR:!2026-03-13,4,186!2026-03-13,9,250-->
@@ -245,7 +253,7 @@ Vilka fyra steg utgör DORA-processen i DHCP?(4)
 - **Offer:** Server erbjuder.
 - **Request:** Klient begär.
 - **Acknowledge:** Server bekräftar.
-<!--SR:!2026-03-13,7,226!2026-03-27,15,250-->
+<!--SR:!2026-04-03,21,246!2026-03-27,15,250-->
 
 Skillnaden mellan NAT och PAT(Definition)::NAT översätter privata IP-adresser till publika. PAT (NAT Overload) tillåter flera privata adresser att dela på en enda publik IP genom att använda unika TCP/UDP-portnummer.
 <!--SR:!2026-03-17,5,186-->
@@ -272,7 +280,7 @@ Vad händer om en router tar emot ett paket som är större än länkens MTU och
 <!--SR:!2026-03-13,4,186-->
 
 Reassembly Timer(Hopsättningstimer)(Definition);;En mekanism hos mottagaren som startar när första fragmentet anländer; om inte alla fragment kommit innan tiden går ut slängs alla inkomna fragment.
-<!--SR:!2026-03-17,5,206!2026-03-13,4,186-->
+<!--SR:!2026-03-17,5,206!2026-03-25,12,206-->
 
 NAT: Outside Global Address(Definition);;Den publika IP-adressen som tillhör en extern värd (t.ex. en webbserver på internet).
 <!--SR:!2026-03-24,12,210!2026-03-18,6,221-->
@@ -290,7 +298,7 @@ Var bör en Extended ACL placeras för bäst effektivitet?(Definition)::Så när
 <!--SR:!2026-03-18,6,210-->
 
 Var bör en Standard ACL placeras?(Definition)::Så nära destinationen som möjligt (eftersom den bara kan filtrera på käll-IP och annars riskerar att blockera giltig trafik till andra nät).
-<!--SR:!2026-03-13,7,226-->
+<!--SR:!2026-04-03,21,246-->
 
 Inbound vs. Outbound ACL(2)
 ??
@@ -349,7 +357,7 @@ Vilken princip använder en router när en destinationsadress matchar flera rade
 <!--SR:!2026-03-17,5,206-->
 
 Vad kallas tekniken där man delar upp ett nätverk i flera mindre subnät med olika stora nätmasker för att spara IP adresser?(Definition)::Det kallas VLSM vilket står för Variable Length Subnet Masking.
-<!--SR:!2026-03-13,4,192-->
+<!--SR:!2026-03-24,11,212-->
 
 Vad är skillnaden mellan traditionell NAT och PAT?(Definition)::Traditionell NAT översätter endast IP adresser medan PAT översätter både IP adresser och portnummer.
 <!--SR:!2026-03-20,8,221-->

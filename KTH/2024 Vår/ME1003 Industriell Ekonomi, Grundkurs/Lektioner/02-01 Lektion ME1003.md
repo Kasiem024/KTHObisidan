@@ -1,11 +1,10 @@
-# 02-01 Lektion ME1003
-
+---
+tags: [ekonomi, föreläsning, KTH, ME1003, ME1003/ME1003KS2, year2024]
 ---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #föreläsning #ME1003/ME1003KS2
 
 ---
 [Länk till föreläsning på Canvas](https://canvas.kth.se/courses/44986/external_tools/2427)

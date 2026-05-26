@@ -1,3 +1,6 @@
+---
+tags: [begrepp, HI1027, KTH, programmering, tenta, year2025]
+---
 # HI1027 Begrepp inför TEN1
 
 ---
@@ -6,7 +9,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HI1027 #begrepp
+
 
 ---
 

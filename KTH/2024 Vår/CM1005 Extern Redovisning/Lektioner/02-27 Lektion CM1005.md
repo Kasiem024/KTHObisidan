@@ -1,14 +1,9 @@
+---
+tags: [CM1005, year2024]
+---
+
 # 02-27 Lektion CM1005
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2024 #KTH #ekonomi #CM1005 #föreläsning #CM1005/CM1005KS4
-
----
 
 Två huvudtyper av [[Tillgångar]]
 
@@ -47,33 +42,3 @@ LVP: [[Lägsta Värdets Princip]].
 En tillgång har 4 olika värden beroende på tid och om man ska köpa eller sälja den.
 
 ![[Tillgångars Värde CM1005.png]]
-
----
-
-Upphovsrätt måste kopplas till en fysisk person. Men den kan licensieras till någon annan.
-
-Upphovsrätt skyddar konstnärligt skapande.
-
-Varumärke är det som får dig att känna igen varan eller tjänsten.
-
-Med en designregistrering skyddar du utseendet på hela eller delar av skon.
-
-Patent skyddar en teknisk lösning.
-
-## [[Avskrivning]]
-
-Avskrivning är när man fördelar kostnaden av [[Tillgångar]] under dess [[Ekonomisk Livslängd]]. Dock är det enbart anläggningstillgångar som avskrivs då de har en förväntad ekonomisk livslängd.
-
-Avskrivning beror på slitage, tid och teknisk utveckling.
-
-+[[Anskaffningsvärde]]
--Ackumulerande Avskrivningar
-= Bokfört Restvärde
-
-Om försäljningspriset är högre än bokfört restvärde är det ==realisationsvinst==, tvärtom blir ==realisationsförlust==.
-
-Finns 3 olika sätt att avskriva en tillgång:
-
-- ==Proportionell==: När avskrivningen är samma under hela den ekonomiska livslängden.
-- ==Degressiv==: När avskrivningen är hög i början men minskar med åren.
-- ==Progressiv==: När avskrivningen är låg i början men ökar med åren.

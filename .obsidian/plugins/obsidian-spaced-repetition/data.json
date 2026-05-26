@@ -1,14 +1,14 @@
 {
   "settings": {
     "flashcardTags": [
-      "#HI1029",
-      "#HE1033"
+      "#HF1012"
     ],
+    "flashcardTagsToIgnore": [],
     "convertFoldersToDecks": false,
     "burySiblingCards": false,
-    "randomizeCardOrder": null,
     "flashcardCardOrder": "DueFirstRandom",
     "flashcardDeckOrder": "PrevDeckComplete_Sequential",
+    "convertClozePatternsToInputs": false,
     "convertHighlightsToClozes": false,
     "convertBoldTextToClozes": false,
     "convertCurlyBracketsToClozes": false,
@@ -19,29 +19,42 @@
     "multilineReversedCardSeparator": "??",
     "multilineCardEndMarker": "",
     "editLaterTag": "#edit-later",
+    "randomizeCardOrder": null,
     "enableNoteReviewPaneOnStartup": true,
     "tagsToReview": [
       "#review"
     ],
+    "noteTagsToIgnore": [],
     "noteFoldersToIgnore": [
       "**/*.excalidraw.md"
     ],
     "openRandomNote": false,
     "autoNextNote": false,
-    "disableFileMenuReviewOptions": false,
+    "showFileMenuReviewOptions": true,
+    "deleteTagsOnSchedulingDataDeletion": false,
     "maxNDaysNotesReviewQueue": 365,
     "showRibbonIcon": true,
     "showStatusBar": true,
+    "showCardStatusBarItem": true,
+    "showNoteStatusBarItem": true,
+    "showUpdateAvailableStatusBarItem": true,
     "initiallyExpandAllSubdecksInTree": false,
     "showContextInCards": true,
     "showIntervalInReviewButtons": true,
     "flashcardHeightPercentage": 100,
     "flashcardWidthPercentage": 100,
+    "flashcardHeightPercentageMobile": 100,
+    "flashcardWidthPercentageMobile": 100,
+    "flashcardAgainText": "Again",
     "flashcardEasyText": "Easy",
     "flashcardGoodText": "Good",
     "flashcardHardText": "Hard",
     "reviewButtonDelay": 0,
+    "showDeleteButtonInCardView": false,
+    "showDeleteButtonInFileMenu": false,
     "openViewInNewTab": false,
+    "openViewInNewTabMobile": false,
+    "useCustomHotkeys": false,
     "algorithm": "SM-2-OSR",
     "baseEase": 250,
     "lapsesIntervalChange": 0.5,
@@ -49,12 +62,15 @@
     "loadBalance": true,
     "maximumInterval": 36525,
     "maxLinkFactor": 1,
+    "fsrsDesiredRetention": 0.9,
+    "startOfDay": "00:00:00",
     "dataStore": "NOTES",
     "cardCommentOnSameLine": false,
     "showSchedulingDebugMessages": false,
-    "showParserDebugMessages": false
+    "showParserDebugMessages": false,
+    "preferredDateFormatForNoteReviewQueue": "MMM DD YYYY"
   },
-  "buryDate": "",
+  "buryDate": "2026-05-26",
   "buryList": [],
   "historyDeck": null
 }

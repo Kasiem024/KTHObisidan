@@ -1,5 +1,6 @@
 ---
-title: Hem
+tags:
+  - "#nograph"
 ---
 
 ## Navigation

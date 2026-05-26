@@ -1,12 +1,10 @@
-# Protokoll 3 från Gruppmöte
-
 ---
-
+tags: [CM1008, KTH, year2025]
+---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #CM1008
 
 ---
 Flying Tigers - Grupp 10

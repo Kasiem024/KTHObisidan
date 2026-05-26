@@ -1,12 +1,10 @@
-# Instuderingsfrågor TENA HI1024
-
 ---
-
+tags: [ekonomi, HI1024, HI1024/TenA, KTH, year2024, övning]
+---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #HI1024 #övning #HI1024/TenA
 
 ---
 

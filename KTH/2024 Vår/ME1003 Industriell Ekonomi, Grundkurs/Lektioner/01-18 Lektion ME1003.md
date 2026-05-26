@@ -1,11 +1,10 @@
-# 01-18 Lektion ME1003
-
+---
+tags: [ekonomi, föreläsning, KTH, ME1003, year2024]
 ---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #ME1003 #föreläsning
 
 ---
 [Länk till föreläsning på Canvas](https://kaf.canvas.kth.se/media/F2+Teknikbaserade+affa%CC%88rsmodeller+P3+V22+SWE+2022-01-19+BK/0_kfxregj1/660304)

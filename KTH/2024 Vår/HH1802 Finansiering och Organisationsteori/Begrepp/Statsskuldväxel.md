@@ -1,12 +1,10 @@
-# Statsskuldväxel
-
 ---
-
+tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024]
+---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ekonomi #HH1802 #begrepp #HH1802/HH1802KS2
 
 ---
 

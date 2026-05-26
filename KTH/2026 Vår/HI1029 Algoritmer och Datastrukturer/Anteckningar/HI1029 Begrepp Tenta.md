@@ -1,3 +1,6 @@
+---
+tags: [begrepp, HI1029, KTH, programmering, tenta, year2026]
+---
 # HI1029 Begrepp Tenta
 
 ---
@@ -6,7 +9,7 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HI1029 #begrepp
+
 
 ---
 

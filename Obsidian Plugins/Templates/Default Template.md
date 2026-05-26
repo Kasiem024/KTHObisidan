@@ -1,13 +1,9 @@
-# `=this.file.name`
-
 ---
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2025
-
+tags:
+  - KTH
+  - year<% tp.date.now("YYYY") %>
+  - <% tp.file.folder(true).split('/')[2] || "Kurskod" %>
+  - övrigt
+  - BroadTopic
 ---
-
-<% tp.file.cursor(1) %>
+# <% tp.file.title %>

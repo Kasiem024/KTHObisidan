@@ -1,3 +1,12 @@
+---
+tags:
+  - begrepp
+  - föreläsning
+  - HE1033
+  - KTH
+  - nätverk
+  - year2026
+---
 # HE1033 Begrepp Föreläsning 1-3
 
 ---
@@ -6,7 +15,6 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HE1033 #begrepp
 
 ---
 
@@ -48,7 +56,7 @@ Selective-Repeat ARQ(Definition)(3)
 - En metod där sändaren skickar upp till N ramar.
 - Vid fel sänds **endast den specifika ram** som saknas eller är skadad om.
 - Kräver mer **buffring** hos mottagaren.
-<!--SR:!2026-03-19,13,230!2026-03-13,4,210-->
+<!--SR:!2026-03-19,13,230!2026-03-26,13,230-->
 
 Fönsterstorlek i Go-Back-N(Definition);; Om sekvensnumret har $m$ bitar är den maximala fönsterstorleken: $$W_S = 2^m - 1$$
 <!--SR:!2026-03-13,4,210!2026-04-13,32,270-->
@@ -63,10 +71,10 @@ Binary Exponential Backoff(Definition);; En algoritm för att välja en slumpmä
 <!--SR:!2026-03-19,7,181!2026-03-13,4,190-->
 
 MAC-adress(Fysisk adress)(Definition);; En unik **48-bitars** identifierare för ett nätverkskort, ofta skriven hexadecimalt (t.ex. 00:60:2F:3A:07:BC).
-<!--SR:!2026-03-23,11,221!2026-03-13,4,201-->
+<!--SR:!2026-03-23,11,221!2026-03-24,11,221-->
 
 Broadcast MAC-adress(Definition);; En adress bestående av enbart ettor: **FF:FF:FF:FF:FF:FF**.
-<!--SR:!2026-03-13,4,230!2026-03-13,4,210-->
+<!--SR:!2026-03-13,4,230!2026-03-26,13,230-->
 
 ARP(Address Resolution Protocol)(Definition);; Ett protokoll som används för att mappa en känd **IP-adress** till en okänd **MAC-adress** inom ett lokalt nätverk.
 <!--SR:!2026-03-22,10,230!2026-04-09,28,270-->
@@ -97,7 +105,7 @@ Fråga: Hur skiljer sig Full Duplex Ethernet från Half Duplex?:: I **Full Duple
 <!--SR:!2026-03-19,7,191-->
 
 Fråga: Varför finns en minsta ramlängd (64 bytes) i Ethernet?;; För att garantera att sändaren fortfarande håller på att sända när en **kollisionssignal** hinner komma tillbaka från nätets mest avlägsna punkt.
-<!--SR:!2026-03-13,4,210!2026-03-21,9,230-->
+<!--SR:!2026-03-26,13,230!2026-03-21,9,230-->
 
 Fråga: Vilken formel beräknar länkutnyttjande (U) för Stop-and-Wait?(Definition);; $$U = \frac{t_{frame}}{t_{frame} + 2t_{prop}}$$ (där $t_{frame}$ är sändningstid och $t_{prop}$ är utbredningstid).
 <!--SR:!2026-03-14,8,191!2026-03-18,6,221-->
@@ -141,7 +149,7 @@ Fråga: Varför är CSMA/CD mindre viktigt i moderna switchade nätverk?(Definit
 <!--SR:!2026-03-15,4,190-->
 
 Fråga: Vad händer med sändarfönstret i Go-Back-N när en ACK tas emot?(Definition):: Fönstret **glider framåt** (sliding window) så att nya ramar får skickas.
-<!--SR:!2026-03-13,4,211-->
+<!--SR:!2026-03-26,13,231-->
 
 Fråga: Vilken nätverksenhet delar upp ett nätverk i olika kollisionsdomäner?(Definition):: En **Switch** (varje port är en egen kollisionsdomän).
 <!--SR:!2026-03-14,3,170-->
@@ -186,7 +194,7 @@ Vad står begreppet $t_{frame}$ för?(Definition)::Det är sändningstiden. Tide
 <!--SR:!2026-03-17,5,181-->
 
 Vilken matematisk formel används för att beräkna $t_{frame}$?(Definition)::$t_{frame} = \frac{\text{Ramens storlek i bitar}}{\text{Länkens överföringshastighet i bitar per sekund}}$
-<!--SR:!2026-03-13,1,131-->
+<!--SR:!2026-03-15,2,151-->
 
 Vad står begreppet $t_{prop}$ för?(Definition)::Det är utbredningstiden. Tiden det tar för en enda bit att färdas genom det fysiska mediet från sändaren till mottagaren.
 <!--SR:!2026-03-17,5,181-->

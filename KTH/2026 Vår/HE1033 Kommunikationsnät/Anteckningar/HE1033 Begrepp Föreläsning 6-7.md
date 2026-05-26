@@ -1,3 +1,12 @@
+---
+tags:
+  - begrepp
+  - föreläsning
+  - HE1033
+  - KTH
+  - nätverk
+  - year2026
+---
 # HE1033 Begrepp Föreläsning 6-7
 
 ---
@@ -6,7 +15,6 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HE1033 #begrepp
 
 ---
 

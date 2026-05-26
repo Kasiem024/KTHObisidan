@@ -1,14 +1,9 @@
+---
+tags: [CM1005, year2024]
+---
+
 # 02-19 Lektion CM1005
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2024 #KTH #ekonomi #CM1005 #föreläsning #CM1005/CM1005KS4
-
----
 
 [[02-19 Journal Lektion CM1005.pdf]]
 
@@ -50,30 +45,6 @@ När man tar över ett lån är det som att man betalar den andra personen värd
 
 Premie är avgift för exempelvis försäkring.
 
----
-
-Man gör inte avskrivning på mark men man gör det på byggnader.
-
-Vad är vår bokförda restvärde. Man måste minst sälja för detta värde.
-
-Köpesumma = 6 mkr
-Byggnad värde = 4 mkr
-Mark värde = 2 mkr
-
-50 år livslängd. 2% avskrivning varje år
-
-Efter 10 år är avskrivningen 0.8 mkr
-
-+[[Anskaffningsvärde]]
--Ackumulerade avskrivningar
-= Bokfört restvärde
-
-+4 mkr
-+2 mkr
--0.8 mkr
-= 5.2 mkr
-
----
 
 Sida 177
 

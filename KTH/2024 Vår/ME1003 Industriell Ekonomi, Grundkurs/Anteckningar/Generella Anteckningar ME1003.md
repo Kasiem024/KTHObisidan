@@ -1,11 +1,10 @@
-# Generella Anteckningar ME1003
-
+---
+tags: [KTH, ME1003, year2024]
 ---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2024 #KTH #ME1003
 
 ---
 

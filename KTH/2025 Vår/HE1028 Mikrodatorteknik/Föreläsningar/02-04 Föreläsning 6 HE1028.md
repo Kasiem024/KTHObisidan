@@ -1,12 +1,10 @@
-# 02-04 Föreläsning 6 HE1028
-
 ---
-
+tags: [föreläsning, HE1028, KTH, year2025]
+---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HE1028 #föreläsning
 
 ---
 

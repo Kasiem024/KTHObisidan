@@ -1,3 +1,12 @@
+---
+tags:
+  - begrepp
+  - föreläsning
+  - HE1033
+  - KTH
+  - nätverk
+  - year2026
+---
 # HE1033 Begrepp Föreläsning 9
 
 ---
@@ -6,7 +15,6 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
-Tags: #year2025 #KTH #HE1033 #begrepp
 
 ---
 Vad är skillnaden mellan en statisk och dynamisk rutt gällande nätverkets anpassningsförmåga?(Definition)::En statisk rutt har ingen anpassningsförmåga vid förändringar i nätverket (och belastar routern mindre), medan en dynamisk rutt är anpassningsbar och hittar automatiskt nya vägar.
@@ -67,7 +75,7 @@ Vilket IP-adressintervall (klass) används för IPv4 Multicast?(Definition)::Kla
 <!--SR:!2026-03-13,4,210-->
 
 Vilka regler gäller för en router som hanterar Multicast-trafik?(Definition)::Den ska se till att varje medlem endast får ett exemplar av meddelandet, att inga routingloopar uppstår, och att icke-medlemmar inte får trafiken.
-<!--SR:!2026-03-13,4,222-->
+<!--SR:!2026-03-26,13,242-->
 
 Vad är IGMP (Internet Group Management Protocol) och vilken roll spelar det?(Definition)::Det är protokollet som används mellan datorer och deras lokala router på ett LAN. Det tillåter datorer (mottagare) att meddela routern att de vill gå med i eller lämna en multicast-grupp.
 <!--SR:!2026-03-18,6,225-->
@@ -87,7 +95,7 @@ Vilket mätvärde används av OSPF för att avgöra vilken väg som är bäst?(D
 <!--SR:!2026-03-21,9,250-->
 
 Hur beräknas standardkostnaden för ett gränssnitt i ett OSPF nätverk?(Definition)::Man tar 100 miljoner och dividerar det med länkens bandbredd i bitar per sekund.
-<!--SR:!2026-03-13,4,222-->
+<!--SR:!2026-03-26,13,242-->
 
 Vilket routingprotokoll använder antal hopp som sitt enda mätvärde för att hitta den bästa vägen?(Definition)::Protokollet RIP.
 <!--SR:!2026-03-14,5,230-->
@@ -120,7 +128,7 @@ Vilket protokoll används för att koppla samman helt olika autonoma system på 
 <!--SR:!2026-03-15,3,230-->
 
 Vilket transportprotokoll och portnummer förlitar sig BGP på för att skicka sina meddelanden?(Definition)::BGP använder TCP på port 179.
-<!--SR:!2026-03-12,3,229-->
+<!--SR:!2026-03-23,10,249-->
 
 Vad är Area 0 i ett OSPF nätverk?(Definition)::Det är den centrala ryggraden som alla andra OSPF areor måste vara direkt anslutna till.
 <!--SR:!2026-03-15,3,230-->

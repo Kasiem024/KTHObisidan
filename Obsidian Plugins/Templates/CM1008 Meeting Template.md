@@ -1,81 +1,22 @@
-# <% tp.file.title %>
-
 ---
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-Tags: #year2025 #KTH #CM1008
-
+tags:
+  - KTH
+  - year2025
+  - CM1008
+  - övrigt
+  - programmering
 ---
-Flying Tigers - Grupp 10
-Kurs: CM1008
-Tid: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-Adress: Hälsovägen 11C, 141 57 Huddinge
+# Mötesprotokoll: <% tp.file.title %>
 
----
-
-## Närvarande
-
-- Bader Al-Naasan <% tp.file.cursor(1) %>
-- Kasiem Al-Mshabbak
-- Saeed Kassab
-- Simon Ulin
-- Van Matti
-
-## Frånvarande
-
-## Adjungerad
-
-<% tp.file.cursor(2) %>
-
-## 1 Mötets öppnande
-
-Mötet öppnas och inleds av <% tp.file.cursor(3) %> kl HH:MM.
-
-## 2 Beslutsförhet
-
-Gruppen finner att det vid förevarande sammanträde är/inte är <% tp.file.cursor(4) %> beslutsför.
-
-## 3 Val av presidium
-
-Till mötesordförande och mötessekreterare väljs <% tp.file.cursor(5) %> respektive Y.
-
-### 3.1 Val av justeringsman
-
-Till justeringsmän väljs <% tp.file.cursor(6) %> och Å.
-
-## 4 Fastställande av dagordning
-
-Dagordningen fastställs i dess utfärdade utformning / med tilläggen.
-
-## 5 Sedan sist
-
-Under action-points från tidigare gruppmöte upprättades följande ärenden som var påkallade att utföras inom närmast förestående tid:
-
-Av ovanstående har följande utförts:
-
-## 6 Övriga frågor
-
-Inga övriga frågor.
-
-## 7 Beslut som fattats
-
-Gruppen har fattat följande beslut:
-
+**Datum:** <% tp.date.now("YYYY-MM-DD") %>
+**Närvarande:**
 - 
 
-## 8 Action-points
+## Agenda
+1. 
 
-Följande ska göras inom närmaste tiden:
+## Beslut
+- [ ] 
 
-- 
-
-## 9 Nästa möte
-
-Gruppen beslutar att nästa gruppmöte hålls på söndagen DD MM kl. HH:MM.
-
-## 10 Mötets avslut
-
-Mötet avslutas kl. HH:MM.
+## Nästa Steg
+- [ ] 

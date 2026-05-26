@@ -1,10 +1,12 @@
-# HI1025 Begrepp Föreläsning 6
-
 ---
-
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+---
 Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-Tags: #year2025 #KTH #HI1025 #begrepp #concurrency
 
 ---
 

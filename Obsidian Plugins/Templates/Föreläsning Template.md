@@ -1,13 +1,21 @@
+---
+tags:
+  - KTH
+  - year<% tp.date.now("YYYY") %>
+  - <% tp.file.folder(true).split('/')[2] || "Kurskod" %>
+  - föreläsning
+  - <% tp.system.prompt("Broad Topic (e.g., programmering, nätverk)") %>
+---
 # <% tp.file.title %>
 
----
+**Datum:** <% tp.date.now("YYYY-MM-DD") %>
+**Kurs:** [[<% tp.file.folder(true).split('/')[2] || "Kurskod" %>]]
 
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+## Sammanfattning
+- 
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
+## Anteckningar
+- 
 
-Tags: #year2025 #KTH #<% tp.file.cursor(1) %> #föreläsning #<% tp.file.cursor(2) %>
-
----
-
-<% tp.file.cursor(3) %>
+## Relaterade Begrepp
+- 

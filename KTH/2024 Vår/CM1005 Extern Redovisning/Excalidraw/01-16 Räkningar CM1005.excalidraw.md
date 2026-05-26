@@ -1,12 +1,5 @@
 ---
-excalidraw-export-transparent: false
-excalidraw-export-dark: false
-excalidraw-export-pngscale: 0.5
-excalidraw-export-padding: 10
-
-excalidraw-plugin: parsed
 tags: [excalidraw]
-
 ---
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
