@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, tenta, year2026]
 ---
-# HE1033 Begrepp Tenta
+# HE1033 Begrepp Tenta (Index)
 
 ---
 
@@ -9,9 +9,43 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
+---
 
+## 🌐 Individuella Begrepp (Länkat nätverk)
+
+Detta nav innehåller fördjupad information om kommunikationsnät, kategoriserat efter OSI-lager och funktion.
+
+### Modeller & Grundpelare
+- [[OSI-modellen]] - De sju lagren.
+- [[LLC och MAC]] - Datalänklagret (L2) uppdelning.
+- [[ARQ-protokoll]] - Felhantering (Stop-and-Wait, GBN, SR).
+- [[CSMA-CD och CSMA-CA]] - Åtkomstmetoder för trådburet/trådlöst.
+
+### Adressering & Subnät
+- [[MAC-adress]] - Fysisk adressering (L2).
+- [[IPv4 och IPv6]] - Logisk adressering (L3) och skillnader.
+- [[Subnätning och CIDR]] - Beräkningar, prefix och nätmasker.
+
+### Protokoll
+- [[ARP]] - Kopplingen mellan IP och MAC.
+- [[ICMP]] - Felmeddelanden, Ping och Traceroute.
+- [[DHCP]] - Automatisk tilldelning (DORA).
+- [[DNS]] - Namnuppslagning (L7).
+- [[TCP]] - Pålitlig och anslutningsorienterad transport.
+- [[UDP]] - Snabb och anslutningslös transport.
+
+### Routing & Algoritmer
+- [[Routing-principer]] - Longest Prefix Match och Default Route.
+- [[OSPF]] - Internt routingprotokoll (Link State).
+- [[BGP]] - Internetets huvudprotokoll (Path Vector).
+- [[Dijkstras algoritm]] - Beräkning av kortaste vägen.
+
+### Format
+- [[Ethernet-ramen]] - Header-fält och minimistorlek.
 
 ---
+
+## 📝 Ursprungliga Flashcards (Snabbkoll)
 
 Vilka två underlager ingår i datalänklagret och vad gör de?(2)
 ??

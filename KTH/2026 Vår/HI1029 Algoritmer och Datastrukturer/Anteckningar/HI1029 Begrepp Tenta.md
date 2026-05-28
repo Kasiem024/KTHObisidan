@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, tenta, year2026]
 ---
-# HI1029 Begrepp Tenta
+# HI1029 Begrepp Tenta (Index)
 
 ---
 
@@ -9,9 +9,46 @@ Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
 
 Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
 
+---
 
+## 📚 Individuella Begrepp (Länkat nätverk)
+
+Detta är navet för alla centrala begrepp i kursen. Varje länk leder till en fördjupad fil med "Tenta-fokus" och flashcards.
+
+### Grundläggande Teorier
+- [[Tidskomplexitet (Big O)]] - Analysera effektivitet.
+- [[Abstrakt Datatyp (ADT)]] - Specifikation vs Implementation.
+- [[Rekursion]] - Basfall och anropsstack.
+- [[Stabilitet (Sortering)]] - Varför ordningen spelar roll.
+- [[Binär sökning]] - Effektiv sökning i sorterad data.
+
+### Datastrukturer (Linjära)
+- [[Array-lista]] - Dynamiska arrayer.
+- [[Länkad lista]] - Noder och pekare.
+- [[Iterator]] - Effektiv genomgång.
+- [[Stack]] - LIFO-principen.
+- [[Kö (Queue)]] - FIFO-principen.
+- [[Hashtabell]] - $O(1)$ sökning.
+
+### Träd & Grafer
+- [[Binärt sökträd (BST)]] - Sorterade träd.
+- [[Heap]] - Prioritetsköer.
+- [[Graf-representationer]] - Matriser och listor.
+- [[Minsta uppspännande träd (MST)]] - Prims och Kruskals.
+
+### Sortering
+- [[Urvalssortering (Selection sort)]] - Få byten.
+- [[Instickssortering (Insertion sort)]] - Bäst för nästan sorterat.
+- [[Quicksort]] - Praktiskt snabbast.
+- [[Mergesort]] - Alltid stabil.
+
+### Avancerade Strategier
+- [[Backtracking]] - Systematisk sökning.
+- [[Dynamisk Programmering]] - Memoization.
 
 ---
+
+## 📝 Ursprungliga Flashcards (Snabbkoll)
 
 Varför analyserar man algoritmers effektivitet teoretiskt?(Definition)::För att kunna jämföra algoritmer oberoende av hårdvara, operativsystem, programmeringsspråk och specifika indatastorlekar.
 <!--SR:!2026-03-13,2,188-->
