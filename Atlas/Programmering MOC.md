@@ -31,3 +31,12 @@ En samling anteckningar relaterade till programmering, mjukvaruarkitektur och al
 	- [[KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-26 CM1008 Föreläsning 4|03-26 CM1008 Föreläsning 4]]
 - **#övrigt**
 	- [[KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/CM1008 Rapport Anteckingar|CM1008 Rapport Anteckingar]]
+
+
+## KTH-relaterat
+
+#### #HI1029 Algoritmer och Datastrukturer
+- **#studieguide**
+	- [[KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Studieguide Tenta|HI1029 Studieguide Tenta]]
+- **#begrepp**
+	- [[KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/Tidskomplexitet Begrepp|Tidskomplexitet Begrepp]]

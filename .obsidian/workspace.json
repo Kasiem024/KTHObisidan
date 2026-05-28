@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d49caa50f5543c3f",
+        "id": "b5bb51d813d9d103",
         "type": "tabs",
         "children": [
           {
-            "id": "4dbfe8cad5037ef2",
+            "id": "c80618db48bc54d6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/Tidskomplexitet Begrepp.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Tidskomplexitet Begrepp"
             }
           }
         ]
@@ -207,8 +211,13 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "348aa535b893b019",
+  "active": "c80618db48bc54d6",
   "lastOpenFiles": [
+    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/HI1029 Studieguide Tenta.md",
+    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Anteckningar/Tidskomplexitet Begrepp.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Studieguide Tenta.md",
+    "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/Subnätning Begrepp.md",
+    "Meta/Obsidian Plugins/Templates/Begrepp Template.md",
     "Atlas/Dashboard.md",
     "Atlas/Ekonomi MOC.md",
     "Atlas/Programmering MOC.md",
@@ -231,11 +240,6 @@
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Övning 3.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 7.md",
     "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Begrepp Föreläsning 6.md",
-    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-30 Lektion ME1003.md",
-    "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-25 Lektion 1 ME1003.md",
-    "KTH/2024 Vår/CM1005 Extern Redovisning/Lektioner/01-23 Lektion CM1005.md",
-    "KTH/2025 Vår/HI1025 Operativsystem/Begrepp/HI1025 Kärnbegrepp för Tentamen.md",
-    "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/PE-Tal.md",
     "KTH/2026 Vår/HF1012 Matematisk Statistik/Anteckningar/Untitled",
     "KTH/2026 Vår/HF1012 Matematisk Statistik/PDFs/Litteraturlista",
     "KTH/2026 Vår/HF1012 Matematisk Statistik/Bilagor/Excalidraw",
