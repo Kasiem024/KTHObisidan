@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Alla företag är skyldiga att upprätta ett Årsbokslut vid räkenskapsårets slut."
 created: 2024-02-01
 updated: 2026-08-17
 ---

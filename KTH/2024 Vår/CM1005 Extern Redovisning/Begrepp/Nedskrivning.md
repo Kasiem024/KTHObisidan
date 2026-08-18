@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Nedskrivning inom redovisning innebär att man minskar en Anläggningstillgångs bokförda värde ned till ett belopp som motsvarar tillgångens värde."
 created: 2024-03-02
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Affärsmodellkanvasen är en strategimodell som analyserar ett företags verksamhet genom att dela in ett företags affärsmodell i nio element."
 created: 2024-02-08
 updated: 2026-05-26
 ---

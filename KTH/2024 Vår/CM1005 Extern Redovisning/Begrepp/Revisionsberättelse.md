@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "I en Revisionsberättelse redogör en revisor sin granskning av en styrelses förvaltning av en verksamhet eller rörelse och om Årsredovisning är upprättad enligt Årsredovisningslagen."
 created: 2024-02-01
 updated: 2026-08-17
 ---

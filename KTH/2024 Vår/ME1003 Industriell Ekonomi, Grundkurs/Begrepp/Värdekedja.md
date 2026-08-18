@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Kan också kallas produktionskedja. Det behandlar hur värdet av en vara ökar ju längre man kommer i produktionskedjan, exempelvis från en bomull planta till ett klädesplagg."
 created: 2024-01-21
 updated: 2026-05-26
 ---

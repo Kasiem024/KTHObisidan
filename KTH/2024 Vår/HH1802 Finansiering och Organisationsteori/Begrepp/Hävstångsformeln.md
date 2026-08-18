@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024]
+description: "Hävstångsformeln används för att räkna ut Räntabilitet på eget kapital."
 created: 2024-03-30
 updated: 2026-05-26
 ---
@@ -25,7 +26,7 @@ $$
 Skuldsättningsgrad:
 
 $$
-S/E = \frac{S + obeskattade \, reserver * skattesats}{JE}
+S/E = \frac{S + \text{obeskattade} \, \text{reserver} * \text{skattesats}}{\text{JE}}
 $$
 
 ## Kopplat till
@@ -45,6 +46,6 @@ $$
 Skuldsättningsgrad (Formel)
 ??
 $$
-S/E = \frac{S + obeskattade \, reserver * skattesats}{JE}
+S/E = \frac{S + \text{obeskattade} \, \text{reserver} * \text{skattesats}}{\text{JE}}
 $$
 <!--SR:!2024-05-18,30,290!2024-04-21,15,290-->

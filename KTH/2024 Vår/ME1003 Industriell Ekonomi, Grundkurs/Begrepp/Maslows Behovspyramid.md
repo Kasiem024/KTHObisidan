@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Maslows Behovspyramid bygger på tanken att det finns ett antal motivationsteorier som säger att människors handlingar styrs av motivet att tillfredsställa vissa behov."
 created: 2024-02-08
 updated: 2026-05-26
 ---

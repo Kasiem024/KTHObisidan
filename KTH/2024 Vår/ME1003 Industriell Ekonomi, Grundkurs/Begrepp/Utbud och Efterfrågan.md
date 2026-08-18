@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Leverantören vill sälja så många produkter som möjligt till ett så högt pris som möjligt medan kunden vill köpa för ett så lågt pris som möjligt."
 created: 2024-01-30
 updated: 2026-05-26
 ---

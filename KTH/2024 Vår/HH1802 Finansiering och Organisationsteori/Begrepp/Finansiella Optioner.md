@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Finansiella Optioner är samlingsnamnet för säljoptioner och köpoptioner när det kommer till aktier."
 created: 2024-03-30
 updated: 2026-05-26
 ---

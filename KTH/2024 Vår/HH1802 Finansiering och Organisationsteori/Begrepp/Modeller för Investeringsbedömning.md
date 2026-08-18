@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Modeller för Investeringsbedömning är de tekniker som används för att hantera Risk vid enskilda investeringar."
 created: 2024-03-30
 updated: 2026-05-26
 ---

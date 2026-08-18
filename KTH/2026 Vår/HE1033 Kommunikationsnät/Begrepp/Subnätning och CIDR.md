@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "### Beräkningsregler 1. Totala adresser: . 2."
 created: 2026-05-28
 updated: 2026-05-28
 ---

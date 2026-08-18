@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Fasta Kostnader (FK) är oberoende av verksamhetsvolym, alltså beror den inte på volymen produkter som verksamheten producerar."
 created: 2024-02-10
 updated: 2026-05-26
 ---

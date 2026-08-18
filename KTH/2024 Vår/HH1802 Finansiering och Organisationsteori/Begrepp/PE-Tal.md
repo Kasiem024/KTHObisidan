@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024]
+description: "P/E-Tal (Price Earnings Ratio) är ett Nyckeltal som används vid aktievärdering och indikerar om börskursen är hög eller låg i förhållande till företagets vinstnivå."
 created: 2024-03-20
 updated: 2026-05-26
 ---

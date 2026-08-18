@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Känslighetsanalys ger svar på vilka faktorer/variabler som kan vara extra viktiga för en Investering."
 created: 2024-03-30
 updated: 2026-05-26
 ---

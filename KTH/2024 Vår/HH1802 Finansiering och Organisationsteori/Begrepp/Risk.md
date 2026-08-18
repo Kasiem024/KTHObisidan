@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Risk handlar om att försöka veta vad som kommer hända i framtiden, dock råder det osäkerhet då oväntade händelser kan ske."
 created: 2024-03-20
 updated: 2026-05-26
 ---

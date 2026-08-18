@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Produktionen och marknadsförings delen av företag har olika perspektiv på olika delar av företag som är ofta motstridiga fastän målet för båda delarna är samma."
 created: 2024-01-27
 updated: 2026-05-26
 ---

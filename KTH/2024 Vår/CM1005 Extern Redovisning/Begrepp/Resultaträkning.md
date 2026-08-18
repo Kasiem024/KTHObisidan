@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+description: "Resultaträkning är en rapport över Intäkt och Kostnad under en viss period."
 created: 2024-01-16
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "När efterfrågan för en produkt styrs av efterfrågan för en annan produkt säger man att det är en Beroende Efterfrågan."
 created: 2024-02-02
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Kundfordringar är en säljares tillgodohavande hos en köpare, som oftast uppstår när säljaren utfärdar en faktura."
 created: 2024-02-28
 updated: 2026-08-17
 ---

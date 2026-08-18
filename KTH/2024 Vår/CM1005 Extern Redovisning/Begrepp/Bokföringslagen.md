@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Bokföringslagen (BFL) är den lag som reglerar hur Bokföring för en verksamhet ska upprättas."
 created: 2024-01-31
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Obeskattade Reserver består av vinster som ännu inte beskattats."
 created: 2024-02-28
 updated: 2026-08-17
 ---

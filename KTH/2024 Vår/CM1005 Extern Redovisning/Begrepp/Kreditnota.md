@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Kreditnota är en \"minusfaktura\" som skrivs ut av säljaren och innebär att denne godtar köparens anspråk på prisreduktion."
 created: 2024-02-19
 updated: 2026-08-17
 ---

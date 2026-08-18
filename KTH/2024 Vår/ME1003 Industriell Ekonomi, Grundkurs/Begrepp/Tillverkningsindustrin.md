@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Tillverkningsindustrin omfattar bland annat produktion av metallvaror, maskiner elektrotekniska produkter samt fordon."
 created: 2024-02-01
 updated: 2026-05-26
 ---

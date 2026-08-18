@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005/CM1005KS4, ekonomi, HH1802/HH1802KS4, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Överavskrivning, eller avskrivningar utöver plan, är skillnaden mellan räkenskapsenliga avskrivningar och planenliga avskrivningar."
 created: 2024-03-02
 updated: 2026-08-17
 ---

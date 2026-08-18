@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+description: "Bokslutspolitik handlar om att komma överens om hur mycket vinstutdelningen ska vara och hur mycket ska sparas i företaget."
 created: 2024-02-27
 updated: 2026-08-17
 ---

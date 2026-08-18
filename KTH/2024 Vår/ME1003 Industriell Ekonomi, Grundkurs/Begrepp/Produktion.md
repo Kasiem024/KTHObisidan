@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Omfattar samtliga aktiviteter som bidrar till att framställa och leverera företagets varor och tjänster företagets kunder."
 created: 2024-01-27
 updated: 2026-05-26
 ---

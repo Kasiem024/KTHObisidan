@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Redovisningsprinciper är olika principer som är vägledande för hur redovisning ska upprättas för företag."
 created: 2024-01-31
 updated: 2026-08-17
 ---

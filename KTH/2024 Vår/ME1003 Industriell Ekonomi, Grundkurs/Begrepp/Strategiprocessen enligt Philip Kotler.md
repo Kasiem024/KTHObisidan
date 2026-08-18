@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Strategiprocessen enligt Philip Kotler börjar med att utveckla affärsidén och en analys av företaget samt omvärlden."
 created: 2024-02-08
 updated: 2026-05-26
 ---

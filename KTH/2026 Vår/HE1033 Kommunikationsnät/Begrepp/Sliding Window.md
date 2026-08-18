@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "### Fönsterstorlek vid sekvensnummer-bitar - Go-Back-N: - Selective Repeat:"
 created: 2026-08-18
 updated: 2026-08-18
 ---

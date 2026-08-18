@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Factoring är belåning eller försäljning av kundfordringar."
 created: 2024-02-26
 updated: 2026-08-17
 ---

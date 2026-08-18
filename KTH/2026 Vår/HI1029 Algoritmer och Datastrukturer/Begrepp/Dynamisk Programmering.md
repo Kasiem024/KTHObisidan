@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En metod för att lösa problem genom att bryta ner dem i mindre delproblem."
 created: 2026-05-28
 updated: 2026-05-28
 ---

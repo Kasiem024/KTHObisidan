@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Aktivitetsbaserad Kalkylering (ABC-Kalkylering) grundar sig i att inte betrakta kostnader med hjälp av begreppen fast/rörlig eller direkt/indirekt."
 created: 2024-02-10
 updated: 2026-05-26
 ---

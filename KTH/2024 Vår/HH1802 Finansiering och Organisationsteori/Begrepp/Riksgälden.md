@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024]
+description: "Riksgälden, eller Riksgäldskontoret, är en statlig myndighet som förvaltar statsskulden och sköter statens upplåning."
 created: 2024-03-29
 updated: 2026-05-26
 ---

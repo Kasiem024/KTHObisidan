@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Intäkter som direkt orsakats av den handling eller det beslut kalkylen avser."
 created: 2024-02-10
 updated: 2026-05-26
 ---

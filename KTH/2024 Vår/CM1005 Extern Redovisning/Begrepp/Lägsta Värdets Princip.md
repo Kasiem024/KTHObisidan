@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Lägsta Värdets Princip (LVP) är huvudregel vid lagervärdering."
 created: 2024-02-27
 updated: 2026-08-17
 ---

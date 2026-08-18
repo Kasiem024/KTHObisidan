@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Michael Porters Femkraftsmodell är ett sätt att analysera de konkurrenskrafter ett företag är utsatt för."
 created: 2024-02-08
 updated: 2026-05-26
 ---

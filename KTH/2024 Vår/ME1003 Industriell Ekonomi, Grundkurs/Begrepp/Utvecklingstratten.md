@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Utvecklingstratten syftar till att ett företag kan ha många små förstudier och forskningsprojekt igång samtidigt som är i den tidiga fasen av sitt liv men att alla dessa idéer inte kommer leda till…"
 created: 2024-02-08
 updated: 2026-05-26
 ---

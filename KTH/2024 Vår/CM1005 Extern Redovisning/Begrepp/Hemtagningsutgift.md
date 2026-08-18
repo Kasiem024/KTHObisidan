@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Hemtagningsutgifter, eller hemtagningskostnader, är köparens utgifter för att få hem varan från säljarens ort till eget lager."
 created: 2024-02-13
 updated: 2026-08-17
 ---

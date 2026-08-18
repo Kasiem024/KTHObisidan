@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Ett Resultatdiagram visar relationen mellan intäkterna och volymen."
 created: 2024-02-10
 updated: 2026-05-26
 ---
@@ -20,11 +21,11 @@ $$
 $$
 
 $$
-{ Kritiska Punkten\!: TI = TK }
+{ \text{Kritiska} \text{Punkten}\!: \text{TI} = \text{TK} }
 $$
 
 $$
-{ Kritiska \, Punkten \, (q_{k}) = \frac{FK}{Pris/st-RK/st} }
+{ \text{Kritiska} \, \text{Punkten} \, (q_{k}) = \frac{\text{FK}}{\text{Pris}/\text{st}-\text{RK}/\text{st}} }
 $$
 
 ### Säkerhetsmarginal
@@ -61,7 +62,7 @@ Kritiska Punkten i ett Resultatdiagram (Definition):: Punkten där de totala int
 Kritiska Punkten i volym (Formel)
 ||
 $$
-{ Kritiska \, Punkten \, (volym) = \frac{FK}{Pris/st-RK/st} }
+{ \text{Kritiska} \, \text{Punkten} \, (\text{volym}) = \frac{\text{FK}}{\text{Pris}/\text{st}-\text{RK}/\text{st}} }
 $$
 <!--SR:!2024-02-26,3,238-->
 

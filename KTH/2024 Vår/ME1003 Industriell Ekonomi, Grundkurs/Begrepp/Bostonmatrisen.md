@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Bostonmatrisen handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa."
 created: 2024-02-08
 updated: 2026-05-26
 ---

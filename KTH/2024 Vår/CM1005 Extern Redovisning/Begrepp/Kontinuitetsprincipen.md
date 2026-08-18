@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Kontinuitetsprincipen innebär främst att den utgående balansomslutningen för ett Räkenskapsår ska vara lika med den ingående balansomslutningen följande räkenskapsår."
 created: 2024-01-31
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "### Struktur - Hierarkisk: Rot-servrar (.) Toppdomäner (.se, .com) Auktoritativa servrar. - Resolver: Den lokala mjukvaran (ofta i routern/OS) som ställer frågan."
 created: 2026-05-28
 updated: 2026-05-28
 ---

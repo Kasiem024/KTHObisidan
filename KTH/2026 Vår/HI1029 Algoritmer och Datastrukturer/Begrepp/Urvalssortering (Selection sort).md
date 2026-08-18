@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Algoritmen letar upp det minsta elementet i den osorterade delen och byter plats på det med det första elementet i den osorterade delen."
 created: 2026-05-28
 updated: 2026-05-28
 ---

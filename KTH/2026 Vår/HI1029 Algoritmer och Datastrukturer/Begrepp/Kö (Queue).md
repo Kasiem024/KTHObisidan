@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En Kö fungerar som en vanlig mänsklig kö: den som kommer först får hjälp först."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En Iterator är ett objekt som används för att stega igenom elementen i en samling (t.ex. en lista) ett efter ett utan att exponera samlingens inre struktur."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Värdeerbjudandet av ett företag är det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder."
 created: 2024-01-18
 updated: 2026-05-26
 ---

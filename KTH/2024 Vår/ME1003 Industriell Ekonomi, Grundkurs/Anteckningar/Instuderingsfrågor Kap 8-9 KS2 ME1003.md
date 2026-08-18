@@ -189,7 +189,7 @@ RK = Total Rörlig Kostnad
 
 RK/st = Total Rörlig Kostnad/styck
 
-${RK_{tot}}$ = Total Rörlig Kostnad
+${\text{RK}_{\text{tot}}}$ = Total Rörlig Kostnad
 
 TI = Total Intäkt
 
@@ -240,7 +240,7 @@ SjK = Självkostnad
 #### Total Kostnad
 
 $$
-{TK = FK + (RK\!/\!st \,*\, q)}
+{\text{TK} = \text{FK} + (\text{RK}\!/\!\text{st} \,*\, q)}
 $$
 
 <br>
@@ -248,7 +248,7 @@ $$
 #### Total intäkt
 
 $$
-{TI = Pris\!/\!st \,*\, q}
+{\text{TI} = \text{Pris}\!/\!\text{st} \,*\, q}
 $$
 <br>
 
@@ -270,13 +270,13 @@ $$
 
 $$
 { \text{TG} =
-\frac{\text{TB}}{\text{Särinäkt}}}
+\frac{\text{TB}}{\text{Särintäkt}}}
 $$
 
 #### Kritiska Punkten i ett Resultatdiagram
 
 $$
-{ Kritiska Punkten\!: TI = TK }
+{ \text{Kritiska} \text{Punkten}\!: \text{TI} = \text{TK} }
 $$
 <br>
 
@@ -400,7 +400,7 @@ När man vill veta hur olika investeringsalternativ kommer utnyttja det satsade 
 $$
 { \text{Nuvärdekvot}=
 \frac
-{\text{Netoonuvärde}}{\text{Grundinvestering}}}
+{\text{Nettonuvärde}}{\text{Grundinvestering}}}
 $$
 
 ---
@@ -424,8 +424,8 @@ $$
 När man vill veta hur olika investeringsalternativ kommer utnyttja det satsade kapitalet, grundinvesteringen, kan man beräkna ==annuitetskvoten==. Ju högre kvoten är ju bättre.
 
 $$
-{Annuitetskvot=
-\frac{Annuitet}{Grundinvestering}}
+{\text{Annuitetskvot}=
+\frac{\text{Annuitet}}{\text{Grundinvestering}}}
 $$
 
 ---
@@ -517,27 +517,27 @@ NNV = Nettonuvärde
 ##### Slutvärdefaktor
 
 $$
-{ SLV = ( 1 + r )^{n}}
+{ \text{SLV} = ( 1 + r )^{n}}
 $$
 
 ##### Nuvärdefaktor
 
 $$
-{ NUV =
+{ \text{NUV} =
 \frac{1}{( 1 + r )^{n}}}
 $$
 
 ##### Nusummefaktor
 
 $$
-{ NUS =
+{ \text{NUS} =
 \frac{1 - ( 1 + r )^{-n}}{r}}
 $$
 
 ##### Formel för Nuvärdemetoden (Nettonuvärde)
 
 $$
-{ NNV = G + a * NUS + R * NUV }
+{ \text{NNV} = G + a * \text{NUS} + R * \text{NUV} }
 $$
 
 ##### Nuvärdekvoten
@@ -552,18 +552,18 @@ $$
 ##### Annuitetsfaktor
 
 $$
-{ ANN = \frac{r}{1-(1+r)^{-n}}}
+{ \text{ANN} = \frac{r}{1-(1+r)^{-n}}}
 $$
 
 ##### Formel för Annuitetsmetoden (Annuitet)
 
 $$
-{ Annuitet = NNV * ANN }
+{ \text{Annuitet} = \text{NNV} * \text{ANN} }
 $$
 
 ##### Annuitetskvoten
 
 $$
-{Annuitetskvot=
-\frac{Annuitet}{G}}
+{\text{Annuitetskvot}=
+\frac{\text{Annuitet}}{G}}
 $$

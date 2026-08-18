@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "Hur en router väljer vilken port ett paket ska skickas ut på baserat på destinations-IP."
 created: 2026-05-28
 updated: 2026-05-28
 ---

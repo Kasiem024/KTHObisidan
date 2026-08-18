@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Skatterättsliga Värderingsreglerna är minimivärderingsregler, de fastställer de lägsta belopp vartill tillgångarna får tas upp när det gäller att fastställa den skattemässiga inkomsten."
 created: 2024-02-27
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+description: "Räntabilitet visar ett företags förmåga att ge avkastning på kapitalet."
 created: 2024-02-28
 updated: 2026-08-17
 ---
@@ -14,7 +15,7 @@ Vanliga nyckeltal för att räkna Räntabilitet:
 
 - Räntabilitet på eget kapital ($R_{E}$)
 - Räntabilitet på totalt kapital ($R_{T}$)
-- Räntabilitet på sysselsatt kapital ($R_{SYSS}$)
+- Räntabilitet på sysselsatt kapital ($R_{\text{SYSS}}$)
 - Vinstmarginal, rörelsemarginal, bruttomarginal
 
 ### Räntabilitet på Totalt Kapital
@@ -39,7 +40,7 @@ $$
 
 ### Räntabilitet på Sysselsatt Kapital
 
-Räntabilitet på Sysselsatt Kapital ($R_{SYSS}$) är som $R_{T}$ fast bortsett från all skuld som inte har en ränta, exempelvis leverantörsskulder.
+Räntabilitet på Sysselsatt Kapital ($R_{\text{SYSS}}$) är som $R_{T}$ fast bortsett från all skuld som inte har en ränta, exempelvis leverantörsskulder.
 
 $$
 \text{Räntabilitet} \, \text{på} \, \text{Sysselsatt} \, \text{kapital} = \frac {\text{Rörelseresultat} \, \text{efter} \, \text{avskrivningar} + \, \text{finansiella} \, \text{intäkter}}{\text{Totalt} \, \text{kapital} - \text{icke} \, \text{räntebärande} \, \text{skulder}}
@@ -64,6 +65,6 @@ Nyckeltal för att räkna Räntabilitet (4)
 ??
 - **Räntabilitet på eget kapital** ($R_{E}$): Uttrycker den avkastningen företaget givit på det kapital som tillhör ägarna.
 - **Räntabilitet på totalt kapital** ($R_{T}$): Uttrycker avkastningen för företaget som helhet, alltså allt kapital som satsats i verksamheten.
-- **Räntabilitet på sysselsatt kapital** ($R_{SYSS}$): Som $R_{T}$ fast bortsett från all skuld som inte har en ränta, exempelvis leverantörsskulder.
+- **Räntabilitet på sysselsatt kapital** ($R_{\text{SYSS}}$): Som $R_{T}$ fast bortsett från all skuld som inte har en ränta, exempelvis leverantörsskulder.
 - **Vinstmarginal, rörelsemarginal, bruttomarginal**: Man kan ställa ett företags vinst i relation till dess försäljning. Då kan man använda olika mått och skillnaden blir på vilken nivå av [[Resultaträkning]] som vinsten beräknas.
 <!--SR:!2024-05-02,18,204!2024-05-03,19,206-->

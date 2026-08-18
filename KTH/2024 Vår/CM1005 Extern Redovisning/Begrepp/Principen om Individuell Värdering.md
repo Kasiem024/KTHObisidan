@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Principen säger att de olika tillgångar som utgör de sammanlagda tillgångarna, och de olika skulder som utgör de sammanlagda skulderna, ska värderas separat."
 created: 2024-01-31
 updated: 2026-08-17
 ---

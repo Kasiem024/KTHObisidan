@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "FIFU-Principen (Först In Först Ut) innebär att man utgår från att de först köpta varorna sålts först, att lagret innehåller de sist inköpta varorna."
 created: 2024-02-27
 updated: 2026-08-17
 ---

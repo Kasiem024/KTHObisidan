@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Två krav för en fungerande rekursion: 1. Basfall: Ett villkor som avslutar rekursionen. 2."
 created: 2026-05-28
 updated: 2026-05-28
 ---

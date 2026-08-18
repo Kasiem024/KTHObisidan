@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS2, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "DuPont-Schema kan användas för att analysera rörelserisken till följd av företagets kostnadsstruktur och kapitalbindning."
 created: 2024-03-03
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Inriktningsinvesteringar är strategiska och binder företagets handlingsutrymme för lång tid framåt."
 created: 2024-02-11
 updated: 2026-05-26
 ---

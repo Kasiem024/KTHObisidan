@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Att bilda en ekonomisk förening är ett alternativ om ni är minst tre personer som vill driva verksamhet tillsammans."
 created: 2024-02-11
 updated: 2026-08-17
 ---

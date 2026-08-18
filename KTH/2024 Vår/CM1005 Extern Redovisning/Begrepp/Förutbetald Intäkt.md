@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Förutbetald Intäkt är en Inkomst som redan är betald eller där en faktura har skickats och ska helt eller delvis intäktsredovisas kommande Räkenskapsår."
 created: 2024-01-31
 updated: 2026-08-17
 ---

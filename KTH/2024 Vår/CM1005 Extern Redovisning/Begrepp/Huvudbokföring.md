@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Huvudbokföring innebär att man lägger upp redovisningen systematiskt, så att man får en översikt över företagets ställning och resultat."
 created: 2024-01-31
 updated: 2026-08-17
 ---

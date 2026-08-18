@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Courtage, även kallat kommission, är den avgift som du betalar när du handlar med aktier."
 created: 2024-02-17
 updated: 2026-08-17
 ---

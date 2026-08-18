@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Ett företags ekonomiska kretslopp börjar när grundarna sätter in ett startkapital antingen från sina egna fickor (Eget Kapital) eller genom lån från banken (Skulder)."
 created: 2024-02-01
 updated: 2026-05-26
 ---

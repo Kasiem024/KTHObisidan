@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Reala Optioner är samlingsnamnet för de optioner som kan påverka en investerings framtida kassaflöde/värde."
 created: 2024-03-30
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Genomloppstid är den tid som går åt för att tillverka en artikel från uttag av material och start av första operation till inleverans av färdig produkt."
 created: 2024-04-21
 updated: 2026-05-26
 ---

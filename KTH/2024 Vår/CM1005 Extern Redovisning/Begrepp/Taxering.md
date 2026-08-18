@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Taxering är det skattemässiga värdet på Tillgångar."
 created: 2024-02-27
 updated: 2026-08-17
 ---

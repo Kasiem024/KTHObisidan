@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Inflation är en generell prisstegring i en ekonomi, vilket innebär att pengarna gradvis förlorar sitt värde."
 created: 2024-04-27
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Fritt Eget Kapital kan företagets ägare fritt kontrollera, exempelvis för vinstutdelning."
 created: 2024-02-01
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Halvfasta Kostnader är opåverkade av verksamhetsvolymen upp till en viss nivå."
 created: 2024-02-10
 updated: 2026-05-26
 ---

@@ -68,13 +68,13 @@ updated: 2026-05-26
 Nominell Kalkylränta (Formel)
 ||
 $$
-r_{nom} = r_{real} + i + r_{real} * i
+r_{\text{nom}} = r_{\text{real}} + i + r_{\text{real}} * i
 $$
 <!--SR:!2024-05-23,7,250-->
 
 Real Kalkylränta (Formel)
 ||
 $$
-r_{real} = \frac{r_{nom} - i}{1 + i}
+r_{\text{real}} = \frac{r_{\text{nom}} - i}{1 + i}
 $$
 <!--SR:!2024-05-20,4,230-->

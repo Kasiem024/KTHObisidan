@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Innovationsspridningens Livscykel består av 5 användarkategorier, de är:"
 created: 2024-02-07
 updated: 2026-05-26
 ---

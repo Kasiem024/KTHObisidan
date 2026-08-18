@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Riskkapital är ett samlingsnamn för investeringar i ett företags egna kapital."
 created: 2024-03-03
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Preliminär skatt är en skatt som betalas in i förväg och som avräknas (tillgodoräknas) när den slutliga skatten fastställs."
 created: 2024-02-26
 updated: 2026-08-17
 ---

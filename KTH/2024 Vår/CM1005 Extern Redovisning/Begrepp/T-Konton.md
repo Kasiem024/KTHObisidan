@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "T-Konton är ett sätt att bokföra Affärshändelse där man har en vänster sida som kallas debet och en höger sida som kallas kredit."
 created: 2024-01-22
 updated: 2026-08-17
 ---

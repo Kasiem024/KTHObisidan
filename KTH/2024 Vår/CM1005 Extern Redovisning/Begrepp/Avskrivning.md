@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Avskrivning är när man fördelar kostnaden av Tillgångar under dess Ekonomisk Livslängd."
 created: 2024-02-27
 updated: 2026-08-17
 ---

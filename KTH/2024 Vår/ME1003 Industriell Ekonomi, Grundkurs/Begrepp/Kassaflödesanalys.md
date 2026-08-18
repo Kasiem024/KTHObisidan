@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS4, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Kassaflödesanalys, eller finansieringsanalys, visar ett företags likviditetsförändring under en viss period."
 created: 2024-01-16
 updated: 2026-05-26
 ---

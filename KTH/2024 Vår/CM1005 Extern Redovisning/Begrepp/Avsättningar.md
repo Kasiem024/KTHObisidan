@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Avsättningar är betalningsförpliktelser som är säkra eller sannolika till sin existens, men där det finns osäkerhet beträffande beloppets storlek eller tidpunkten för betalning."
 created: 2024-02-28
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Det finns flera stadier inom en produkts livscykel."
 created: 2024-01-30
 updated: 2026-05-26
 ---

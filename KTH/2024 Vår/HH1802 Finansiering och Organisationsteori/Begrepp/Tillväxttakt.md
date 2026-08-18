@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024]
+description: "Tillväxttakt (g) är takten som ett företag använder sin avkastning för nyinvesteringar."
 created: 2024-03-27
 updated: 2026-05-26
 ---
@@ -23,7 +24,7 @@ $$
 Ett företags Tillväxttakt påverkar aktiekursen:
 
 $$
-Aktiekurs = \frac{Utdelning}{r-g}
+\text{Aktiekurs} = \frac{\text{Utdelning}}{r-g}
 $$
 
 ## Kopplat till
@@ -42,6 +43,6 @@ $$
 ---
 Ett företags Tillväxttakt påverkar aktiekursen:
 $$
-Aktiekurs = \frac{Utdelning}{r-g}
+\text{Aktiekurs} = \frac{\text{Utdelning}}{r-g}
 $$
 <!--SR:!2024-04-18,3,210-->

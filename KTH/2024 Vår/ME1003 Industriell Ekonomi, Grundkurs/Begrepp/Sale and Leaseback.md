@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Sale and Leaseback är när ett företag säljer ett objekt, exempelvis anläggningar och byggnader, till en finansiell institution mot löfte att få hyra objektet under en förutbestämd tid."
 created: 2024-03-03
 updated: 2026-05-26
 ---

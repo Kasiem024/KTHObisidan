@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En Stack är en linjär datastruktur där man bara kommer åt det element som senast lades till."
 created: 2026-05-28
 updated: 2026-06-02
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Betalningsvillkor är de villkor som gäller vid betalning av en produkt, innehåller information om hur betalningen ska gå till."
 created: 2024-04-19
 updated: 2026-05-26
 ---

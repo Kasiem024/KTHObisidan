@@ -630,6 +630,72 @@ Also fixed while here: one genuine KaTeX parse error in
 `Totalt \, Kapital`) still render italic. They produce no warnings, so they were left
 alone; extending the sweep to them is a cosmetic follow-up.
 
+### F37. ✅ DONE (2026-08-18) — site polish: PDFs, drawings, descriptions, auto-publish
+
+Quartz-side and vault-side improvements, all verified by a real build:
+
+- **Stopped publishing 83 course PDFs (262 MB).** `Filer/` and `Filer/SEM2/` held
+  scanned textbook chapters (`Miljöteknik … Kap 2-5`, `Gulliksson & Holmgren … kap 6.6`,
+  `Räkneövningar Frågor Kap 10-12`) and lecturer slide decks. The `Litteraturlista`
+  exclusion never covered these. Site went **327.7 MB → 104.9 MB**. The files stay in
+  the vault, so Obsidian links still work. Note: 30 of the 83 were referenced by notes,
+  so those 30 links are now dead **on the website only**.
+- **Excalidraw drawings render instead of 404ing.** Installed and enabled
+  `@quartz-community/obsidian-plugin-excalidraw` and stopped excluding
+  `*.excalidraw.md`; **18 drawing pages** now build. 7 were already referenced by
+  notes and had been broken. The 9 unreferenced PNG auto-exports are excluded as
+  redundant (one was 8.1 MB).
+- **`description:` frontmatter on 315 `begrepp` notes**, derived from the first
+  sentence of each note's `## Definition`. Feeds Quartz search and the
+  `og:description` / `meta description` tags, which previously scraped body text.
+  37 notes were skipped because they are multi-concept collections with no single
+  definition (e.g. `HI1025 Begrepp Föreläsning 4`); 123 non-`begrepp` notes untouched.
+- **Publishing is now one push.** `deploy.yml` runs
+  `git submodule update --remote --recursive content` and has an hourly `schedule:`
+  plus `workflow_dispatch`, so a plain `git push` in the vault publishes on its own —
+  no submodule pointer bump, no secrets.
+- **Theme:** `hackthebox` (dark-only), so the light/dark toggle is disabled.
+- **Three real typos fixed** in ME1003 exam formulas: `Särinäkt`→`Särintäkt` (6),
+  `Täckninsgrad`→`Täckningsgrad` (2), `Netoonuvärde`→`Nettonuvärde` (2).
+- **Math pass 2:** 89 more spans across 21 files wrapped in `\text{}`, covering the
+  ASCII-only formulas F36 left behind (e.g. WACC's `Totalt \, Kapital`). Scoped to
+  CM1005 / HH1802 / ME1003 / HU1801 only — a blanket sweep would wrap real
+  two-letter variables like `dx` in the maths courses.
+
+**Unverified:** the explorer term sort (`quartz.ts`). The explorer renders
+client-side from `contentIndex.json`, so a server-side `sortFn` may have no effect.
+Needs eyeballing in a browser; if `2024 Höst` still precedes `2024 Vår`, it did nothing.
+
+### F38. 🟡 IN PROGRESS — flashcards as collapsible callouts
+
+Goal: stop hiding flashcards and render them as collapsed Obsidian callouts, so they
+become a study feature on the site instead of noise.
+
+**Built and working:** a local Quartz transformer at
+`C:\dev\KTHObsidianQuartz\plugins\flashcards\` (plain ESM, no build step). It uses the
+`textTransform` hook to rewrite card syntax into `> [!question]- Q` / `> A` *before*
+markdown parsing, so answers keep their LaTeX, wikilinks and bold. Callouts are used
+rather than raw `<details>` because `enableInHtmlEmbed` is `false`, which would leave
+raw HTML bodies unparsed. Only content under `## Flashcards` is touched, since Dataview
+inline fields elsewhere also use `::`.
+
+**Status: 282 of 326 pages convert correctly** (verified: `data-callout="question"`,
+collapsed by default, `::` gone from rendered text).
+
+**Blocker — 114 pages still show raw card syntax.** Card forms in the vault:
+`::` 474 · `;;` 25 · `??` 129 · `||` 43. The un-converted ones are concentrated in
+CM1005 `Begrepp`. Likely causes to investigate: cards inside list items (leading `-`
+or indentation, which the line matcher does not strip), cards spanning multiple lines,
+and `??`/`||` answers separated by a blank line.
+
+**Because of this the work is parked on branch `wip/flashcards`, not on `v5`.** The CSS
+that hid flashcards was removed in that branch, so shipping it as-is would make those
+114 pages worse than before. `v5` keeps the CSS hiding and is safe to publish.
+
+**To resume:** check out `wip/flashcards`, extend the matcher in
+`plugins/flashcards/index.js` to handle list-item and multi-line cards, rebuild, and
+confirm `pages_with_LEFTOVER_raw_card_syntax=0` before merging to `v5`.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

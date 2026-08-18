@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Varumärket är företagets löfte till sina kunder, det är kopplat till produkten men är inte produkten i sig."
 created: 2024-02-08
 updated: 2026-05-26
 ---

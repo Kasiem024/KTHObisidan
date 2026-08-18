@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Ett Räkenskapsår är den period som en verksamhets bokföring omfattar och som avslutas med ett Årsbokslut och en Årsredovisning."
 created: 2024-01-31
 updated: 2026-08-17
 ---

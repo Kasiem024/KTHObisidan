@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Det finns 3 Värdeskapande Processer:"
 created: 2024-02-01
 updated: 2026-05-26
 ---

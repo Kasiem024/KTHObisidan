@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Kvalitetsledning är en samlingsbeteckning för de principer, metoder och verktyg som används för att nå en god kvalitet på företagets produkter och processer."
 created: 2024-02-03
 updated: 2026-05-26
 ---

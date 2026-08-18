@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En Heap är ett *komplett binärt träd* (alla nivåer fyllda utom sista, fylls från vänster) som uppfyller: - Max-heap: Föräldern barnen. - Min-heap: Föräldern barnen."
 created: 2026-05-28
 updated: 2026-05-28
 ---

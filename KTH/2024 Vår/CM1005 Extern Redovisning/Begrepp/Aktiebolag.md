@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+description: "Ett aktiebolag är ett företag där delägarna, alltså aktieägarna, normalt sett inte har ett personligt ansvar för företagets skulder."
 created: 2024-01-16
 updated: 2026-08-17
 ---

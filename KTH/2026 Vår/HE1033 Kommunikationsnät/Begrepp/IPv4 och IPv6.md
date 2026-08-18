@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "Huvudprotokollen för adressering på internet."
 created: 2026-05-28
 updated: 2026-05-28
 ---

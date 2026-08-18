@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Kostnadsställe är den avdelningen eller funktionen där kostnaden uppstår."
 created: 2024-02-12
 updated: 2026-05-26
 ---

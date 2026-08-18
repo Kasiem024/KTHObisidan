@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Finansiering Utanför Balansräkningen är när man finansierar delar av verksamheten utan att det syns i Balansräkning."
 created: 2024-03-03
 updated: 2026-05-26
 ---

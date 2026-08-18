@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Påläggskalkylering är när man systematiskt fördelar kostnaderna på en Kostnadsbärare genom att utgå från Direkt Kostnad."
 created: 2024-02-10
 updated: 2026-05-26
 ---

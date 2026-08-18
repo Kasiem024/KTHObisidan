@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005/CM1005KS4, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Nyckeltal (KPI, Key Performance Indicator) används för att värdera ett företag och dess verksamhet."
 created: 2024-03-02
 updated: 2026-08-17
 ---
@@ -15,7 +16,7 @@ Exempel på Nyckeltal för [[Räntabilitet]]:
 
 - **Räntabilitet på eget kapital** ($R_{E}$): Uttrycker den avkastningen företaget givit på det kapital som tillhör ägarna.
 - **Räntabilitet på totalt kapital** ($R_{T}$): Uttrycker avkastningen för företaget som helhet, alltså allt kapital som satsats i verksamheten.
-- **Räntabilitet på sysselsatt kapital** ($R_{SYSS}$): Det finns ingen definition för detta nyckeltal men man bortser från kapital som företaget inte behöver betala ränta på, exempelvis leverantörsskulder.
+- **Räntabilitet på sysselsatt kapital** ($R_{\text{SYSS}}$): Det finns ingen definition för detta nyckeltal men man bortser från kapital som företaget inte behöver betala ränta på, exempelvis leverantörsskulder.
 - **Vinstmarginal, rörelsemarginal, bruttomarginal**: Man kan ställa ett företags vinst i relation till dess försäljning. Då kan man använda olika mått och skillnaden blir på vilken nivå av [[Resultaträkning]] som vinsten beräknas.
 
 ### Likviditet
@@ -50,25 +51,25 @@ Exempel på Nyckeltal för Kapitalutnyttjande:
 #### Räntabilitet på Eget Kapital
 
 $$
-R_{E}= \frac {REFIK}{JE}
+R_{E}= \frac {\text{REFIK}}{\text{JE}}
 $$
 
 #### Räntabilitet på Totalt Kapital
 
 $$
-R_{T} = \frac {REFI}{Totalt \, kapital}
+R_{T} = \frac {\text{REFI}}{\text{Totalt} \, \text{kapital}}
 $$
 
 #### Genomsnittlig Skuldränta
 
 $$
-R_{S} = \frac{Finansiella \, kostnader}{S}
+R_{S} = \frac{\text{Finansiella} \, \text{kostnader}}{S}
 $$
 
 #### Skuldsättningsgrad
 
 $$
-S/E = \frac{S + obeskattade \, reserver * skattesats}{JE}
+S/E = \frac{S + \text{obeskattade} \, \text{reserver} * \text{skattesats}}{\text{JE}}
 $$
 
 #### [[Hävstångsformeln]]
@@ -102,7 +103,7 @@ $$
 #### Soliditet 1
 
 $$
-Soliditet \, 1 = \frac{JE}{Totalt \, kapital}
+\text{Soliditet} \, 1 = \frac{\text{JE}}{\text{Totalt} \, \text{kapital}}
 $$
 
 #### Soliditet 2

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Varulager är tillgångar som är avsedda för tillverkning och förbrukning."
 created: 2024-04-21
 updated: 2026-05-26
 ---

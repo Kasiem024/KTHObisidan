@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Produktkalkylering handlar i grunden om att försöka bestämma intäkter och kostnader för sina produkter och utifrån det göra sina beslut."
 created: 2024-02-10
 updated: 2026-05-26
 ---

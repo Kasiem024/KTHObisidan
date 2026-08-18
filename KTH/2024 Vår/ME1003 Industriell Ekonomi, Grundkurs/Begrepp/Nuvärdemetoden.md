@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS1, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Nuvärdemetoden är en ränteräkningsmetod som med hjälp av Kalkylränta räknar om de olika investeringsalternativens betalningar till en och samma tidpunkt, till början av det år då grundinvesteringen…"
 created: 2024-02-07
 updated: 2026-05-26
 ---
@@ -22,12 +23,12 @@ $$
 $$
 
 $$
-{ SLV = ( 1 + r )^{n}}
+{ \text{SLV} = ( 1 + r )^{n}}
 $$
 
 Om man vill få veta värdet av ett nutida belopp i framtiden ska man multiplicera det beloppet med ==slutvärdefaktorn==.
 
-Exempel: $1000 * SLV = 1000 * (1+0.2)^{1}=1200$
+Exempel: $1000 * \text{SLV} = 1000 * (1+0.2)^{1}=1200$
 
 Alltså om kalkylräntan är 20% är 1000 kr idag värda 1200 kr om 1 år.
 
@@ -41,13 +42,13 @@ $$
 $$
 
 $$
-{ NUV =
+{ \text{NUV} =
 \frac{1}{( 1 + r )^{n}}}
 $$
 
 Om man vill få ett framtida belopp i nutidens värde ska man dela det beloppet med ==nuvärdefaktorn==.
 
-Exempel: $1200*NUV=1200*\frac{1}{(1+0.2)^{1}}=1000$
+Exempel: $1200*\text{NUV}=1200*\frac{1}{(1+0.2)^{1}}=1000$
 
 Alltså om kalkylräntan är 20% är 1200 kr idag värda 1000 kr 1 år sen.
 
@@ -61,7 +62,7 @@ $$
 $$
 
 $$
-{ NUS =
+{ \text{NUS} =
 \frac{1 - ( 1 + r )^{-n}}{r}}
 $$
 
@@ -76,7 +77,7 @@ $$
 $$
 
 $$
-{ NNV = G + a * NUS + R * NUV }
+{ \text{NNV} = G + a * \text{NUS} + R * \text{NUV} }
 $$
 
 ### Nuvärdekvoten
@@ -115,7 +116,7 @@ $$
 { \text{Slutvärdefaktor} = ( 1 + \text{Kalkylränta} )^{\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}
 $$
 $$
-{ SLV = ( 1 + r )^{n}}
+{ \text{SLV} = ( 1 + r )^{n}}
 $$
 ---
 $$
@@ -123,8 +124,8 @@ $$
 \frac{1}{( 1 + \text{Kalkylränta} )^{\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}}
 $$
 $$
-{ NUV =
-\frac{1}{SLV}}
+{ \text{NUV} =
+\frac{1}{\text{SLV}}}
 $$
 ---
 $$
@@ -132,7 +133,7 @@ $$
 \frac{1 - ( 1 + \text{Kalkylränta} )^{-\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}{\text{Kalkylränta}}}
 $$
 $$
-{ NUS =
+{ \text{NUS} =
 \frac{1 - ( 1 + r )^{-n}}{r}}
 $$
 <!--SR:!2024-05-06,30,250-->
@@ -143,7 +144,7 @@ $$
 { \text{Nettonuvärde} = \text{Grundinvestering} + \text{Inbetalningsöverskott} * \text{Nusummefaktor} + \text{Restvärde} * \text{Nuvärdefaktor} }
 $$
 $$
-{ NNV = G + a * NUS + R * NUV }
+{ \text{NNV} = G + a * \text{NUS} + R * \text{NUV} }
 $$
 <!--SR:!2024-05-06,30,270-->
 

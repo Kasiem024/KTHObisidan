@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Med Återbetalningsmetoden räknar man återbetalningstiden, alltså den tid det tar innan det satsade kapitalet, Grundinvestering, har betalats tillbaka."
 created: 2024-02-07
 updated: 2026-05-26
 ---

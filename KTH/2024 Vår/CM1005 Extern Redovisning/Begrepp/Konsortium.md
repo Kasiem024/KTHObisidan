@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Ett tillfälligt företag som skapas när flera företag eller individer går ihop för att utföra ett stort projekt, upplöses när projektet är genomfört."
 created: 2024-02-05
 updated: 2026-08-17
 ---

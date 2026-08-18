@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "En Näringsidkare är en fysisk eller juridisk person som driver en näringsverksamhet som exempelvis en Enskild Näringsverksamhet, Aktiebolag eller Handelsbolag."
 created: 2024-01-31
 updated: 2026-08-17
 ---

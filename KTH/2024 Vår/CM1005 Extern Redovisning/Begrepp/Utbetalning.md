@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Med utbetalning menas tidpunkten när företaget betalar utgiften."
 created: 2024-01-16
 updated: 2026-08-17
 ---

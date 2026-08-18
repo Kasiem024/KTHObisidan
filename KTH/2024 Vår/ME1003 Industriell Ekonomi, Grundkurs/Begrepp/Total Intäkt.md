@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Totala Intäkter (TI) beräknas genom att pris per styck multipliceras med antalet sålda enheter."
 created: 2024-02-10
 updated: 2026-05-26
 ---
@@ -16,7 +17,7 @@ $$
 $$
 
 $$
-{TI = Pris\!/\!st \,*\, q}
+{\text{TI} = \text{Pris}\!/\!\text{st} \,*\, q}
 $$
 
 ## Kopplat till
@@ -35,6 +36,6 @@ $$
 {\text{Total} \, \text{Intäkt} = \text{Pris}\!/\!\text{st} \,*\, \text{Volym}}
 $$
 $$
-{TI = Pris\!/\!st \,*\, q}
+{\text{TI} = \text{Pris}\!/\!\text{st} \,*\, q}
 $$
 <!--SR:!2024-03-18,24,270-->

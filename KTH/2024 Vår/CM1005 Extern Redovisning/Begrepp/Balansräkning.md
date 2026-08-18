@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Balansräkning är ett företags finansiella ställning vid en given tidpunkt."
 created: 2024-01-16
 updated: 2026-08-17
 ---

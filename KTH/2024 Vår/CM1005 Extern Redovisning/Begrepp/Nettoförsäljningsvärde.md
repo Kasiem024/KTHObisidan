@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Nettoförsäljningsvärde är det pris som företaget skulle få för Tillgångar vid en normal försäljning, minskat med beräknade försäljningsomkostnader."
 created: 2024-02-27
 updated: 2026-08-17
 ---

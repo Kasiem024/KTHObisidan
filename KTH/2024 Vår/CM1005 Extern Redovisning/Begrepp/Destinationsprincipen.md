@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Destinationsprincipen säger att Moms är en beskattning av konsumtion, alltså momsen tillfaller staten i det land där varan konsumeras, vart konsumenten är."
 created: 2024-02-14
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Produktutveckling ser olika ut beroende på vilken typ av verksamhet man jobbar med"
 created: 2024-01-27
 updated: 2026-05-26
 ---

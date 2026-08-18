@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Begreppet intäkt är kopplat till företagets redovisning och beskattning."
 created: 2024-01-16
 updated: 2026-08-17
 ---

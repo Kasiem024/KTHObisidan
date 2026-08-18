@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS2, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Kapitalomsättningshastigheten är ett Nyckeltal och är ett verksamhetsmått för arbetskrafts- och kapitalintensitet som visar hur effektivt en verksamhet använder sitt kapital i förhållande till…"
 created: 2024-02-24
 updated: 2026-05-26
 ---

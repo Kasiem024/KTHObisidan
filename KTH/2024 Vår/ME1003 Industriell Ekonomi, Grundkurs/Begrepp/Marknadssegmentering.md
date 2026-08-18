@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Handlar om att dela upp marknaden i olika segment så att man kan lättare rikta sig mot specifika målgrupper."
 created: 2024-01-30
 updated: 2026-05-26
 ---

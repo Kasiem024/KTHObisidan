@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Löpande Verksamheten av en Kassaflödesanalys är både den egentliga rörelseverksamheten och den finansiella verksamheten."
 created: 2024-04-27
 updated: 2026-05-26
 ---

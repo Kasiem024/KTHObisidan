@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Dubbel Beskattning när det kommer till Aktiebolag är när bolagets vinst beskattas och sedan också den delen av vinsten som utdelas till aktieägarna."
 created: 2024-02-27
 updated: 2026-08-17
 ---

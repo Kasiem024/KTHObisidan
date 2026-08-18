@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Anskaffningsutgiften, eller anskaffningskostnad, är summan av varuutgiften enligt leverantörens faktura och Hemtagningsutgift."
 created: 2024-02-13
 updated: 2026-08-17
 ---

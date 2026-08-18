@@ -65,7 +65,7 @@ $$
 WACC (Formel)
 ||
 $$
-R_{T} = R_{S} * \frac{S}{Totalt \, Kapital}+R_{E} * \frac{E}{Totalt \, Kapital}
+R_{T} = R_{S} * \frac{S}{\text{Totalt} \, \text{Kapital}}+R_{E} * \frac{E}{\text{Totalt} \, \text{Kapital}}
 $$
 <!--SR:!2024-04-22,4,270-->
 

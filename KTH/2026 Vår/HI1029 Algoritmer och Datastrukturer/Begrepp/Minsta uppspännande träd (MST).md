@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Ett Minsta uppspännande träd (MST) är en delmängd av bågarna i en graf som kopplar samman alla noder utan att bilda cykler, där den totala vikten av bågarna är så liten som möjligt."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Affärsredovisningens syfte är bl.a. att minst en gång om året förse externa intressenter med information om resultat och ekonomisk ställning."
 created: 2024-01-17
 updated: 2026-08-17
 ---

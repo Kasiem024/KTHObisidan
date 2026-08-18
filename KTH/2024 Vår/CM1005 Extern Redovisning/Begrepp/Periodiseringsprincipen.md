@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Periodiseringsprincipen innebär att företagets intäkter och kostnader ska hänföras till rätt period."
 created: 2024-01-31
 updated: 2026-08-17
 ---

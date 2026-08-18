@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Grundbokföring innebär att alla Affärshändelse ska bokföras på ett sådant sätt att de kan presenteras i den ordning som de har registrerats, det kallas också registreringsordning."
 created: 2024-01-31
 updated: 2026-08-17
 ---

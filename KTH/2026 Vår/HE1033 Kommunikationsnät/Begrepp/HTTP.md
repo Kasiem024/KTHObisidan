@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "### Vanliga metoder - GET: Hämta en resurs (ska inte ändra något). - POST: Skicka data till servern, t.ex. ett formulär. - PUT: Skapa eller ersätt en resurs. - DELETE: Ta bort en resurs. - HEAD: Som…"
 created: 2026-08-18
 updated: 2026-08-18
 ---

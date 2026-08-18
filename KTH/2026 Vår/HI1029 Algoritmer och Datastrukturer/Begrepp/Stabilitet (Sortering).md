@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En sorteringsalgoritm är stabil om element med samma sorteringsnyckel behåller sin ursprungliga inbördes ordning efter sorteringen."
 created: 2026-05-28
 updated: 2026-05-28
 ---

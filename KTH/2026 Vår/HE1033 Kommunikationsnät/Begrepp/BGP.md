@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "### Funktioner - Path Vector: Istället för bara en kostnad ser BGP hela listan av AS-nummer som ett paket måste passera."
 created: 2026-05-28
 updated: 2026-05-28
 ---

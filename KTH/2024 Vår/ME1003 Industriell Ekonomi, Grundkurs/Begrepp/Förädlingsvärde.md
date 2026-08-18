@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Förädlingsvärde definieras som differensen mellan företagens intäkter för de färdiga produkterna och kostnaderna för inköp av nödvändiga resurser för framställning av produkterna."
 created: 2024-02-01
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS1, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "I Internräntemetoden beräknas den avkastningen som en Investering ger, avkastningen kallas då internränta."
 created: 2024-02-07
 updated: 2026-05-26
 ---

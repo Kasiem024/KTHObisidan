@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Inkurans innebär att delar av lagret är oanvändbart som en följd av att materialet, komponenterna eller produkterna blivit gammalt, omodern eller skadat."
 created: 2024-03-02
 updated: 2026-05-26
 ---

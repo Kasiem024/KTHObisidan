@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En Abstrakt Datatyp (ADT) är en specifikation av en mängd data och de operationer som kan utföras på denna data."
 created: 2026-05-28
 updated: 2026-05-28
 ---

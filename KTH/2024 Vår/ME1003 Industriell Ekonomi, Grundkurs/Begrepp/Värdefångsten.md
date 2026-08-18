@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Hur får man betalt, vad är betalningsmodellen?"
 created: 2024-01-18
 updated: 2026-05-26
 ---

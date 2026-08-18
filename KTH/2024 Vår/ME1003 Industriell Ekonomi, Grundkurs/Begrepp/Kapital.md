@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Kapital är ett företags resurser. Det är alltså det som används i ett företags verksamhet, så som maskiner och annan utrustning."
 created: 2024-03-02
 updated: 2026-05-26
 ---

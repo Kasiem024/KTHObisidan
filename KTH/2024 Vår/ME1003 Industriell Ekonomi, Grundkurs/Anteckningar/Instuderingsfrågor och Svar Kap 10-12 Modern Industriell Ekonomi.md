@@ -416,7 +416,7 @@ Vanliga nyckeltal för att räkna Räntabilitet:
 
 - **Räntabilitet på eget kapital** ($R_{E}$): Uttrycker den avkastningen företaget givit på det kapital som tillhör ägarna.
 - **Räntabilitet på totalt kapital** ($R_{T}$): Uttrycker avkastningen för företaget som helhet, alltså allt kapital som satsats i verksamheten.
-- **Räntabilitet på sysselsatt kapital** ($R_{SYSS}$): Det finns ingen definition för detta nyckeltal men man bortser från kapital som företaget inte behöver betala ränta på, exempelvis leverantörsskulder.
+- **Räntabilitet på sysselsatt kapital** ($R_{\text{SYSS}}$): Det finns ingen definition för detta nyckeltal men man bortser från kapital som företaget inte behöver betala ränta på, exempelvis leverantörsskulder.
 - **Vinstmarginal, rörelsemarginal, bruttomarginal**: Man kan ställa ett företags vinst i relation till dess försäljning. Då kan man använda olika mått och skillnaden blir på vilken nivå av [[Resultaträkning]] som vinsten beräknas.
 
 ---
@@ -460,7 +460,7 @@ Vanliga nyckeltal för att räkna Soliditet:
 - ==Skuldsättningsgrad==: Sätter skulderna adderat med en del av de obeskattade reserverna i relation till det justerade egna kapitalet. Oklart om den bör vara låg eller hög.
 
 ---
-$Soliditet \, 1 = \frac{Justerat \, eget \, kapital}{Totalt \, kapital}$
+$\text{Soliditet} \, 1 = \frac{\text{Justerat} \, \text{eget} \, \text{kapital}}{\text{Totalt} \, \text{kapital}}$
 
 ---
 $\text{Soliditet} \, 2 = \frac{\text{Riskbärande} \, \text{eget} \, \text{kapital}}{\text{Totalt} \, \text{kapital}}$
@@ -703,7 +703,7 @@ Räntabilitet på eget kapital = $R_{E}$
 
 Räntabilitet på totalt kapital = $R_{T}$
 
-Räntabilitet på sysselsatt kapital = $R_{SYSS}$
+Räntabilitet på sysselsatt kapital = $R_{\text{SYSS}}$
 
 Genomsnittlig skuldränta = $R_{S}$
 
@@ -714,25 +714,25 @@ Skuldsättningsgrad = Skulder / Eget kapital = S/E
 ### Räntabilitet på Eget Kapital
 
 $$
-R_{E}= \frac {REFIK}{JE}
+R_{E}= \frac {\text{REFIK}}{\text{JE}}
 $$
 
 ### Räntabilitet på Totalt Kapital
 
 $$
-R_{T} = \frac {REFI}{Totalt \, kapital}
+R_{T} = \frac {\text{REFI}}{\text{Totalt} \, \text{kapital}}
 $$
 
 ### Genomsnittlig Skuldränta
 
 $$
-R_{S} = \frac{Finansiella \, kostnader}{S}
+R_{S} = \frac{\text{Finansiella} \, \text{kostnader}}{S}
 $$
 
 ### Skuldsättningsgrad
 
 $$
-S/E = \frac{S + obeskattade \, reserver * skattesats}{JE}
+S/E = \frac{S + \text{obeskattade} \, \text{reserver} * \text{skattesats}}{\text{JE}}
 $$
 
 ### Hävstångsformlen
@@ -766,7 +766,7 @@ $$
 ### Soliditet 1
 
 $$
-Soliditet \, 1 = \frac{JE}{Totalt \, kapital}
+\text{Soliditet} \, 1 = \frac{\text{JE}}{\text{Totalt} \, \text{kapital}}
 $$
 
 ### Soliditet 2

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Jämförbarhetsprincipen innebär att företag över tiden ska tillämpa samma principer för exempelvis klassificering och värdering av poster i Balansräkning, Resultaträkning och i Årsredovisning."
 created: 2024-01-31
 updated: 2026-08-17
 ---

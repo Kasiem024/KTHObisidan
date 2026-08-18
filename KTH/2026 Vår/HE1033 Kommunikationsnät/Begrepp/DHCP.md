@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "### DORA-processen (Viktigt!) 1. Discover: Klienten skriker: \"Finns det någon server här?\" (Broadcast). 2."
 created: 2026-05-28
 updated: 2026-05-28
 ---

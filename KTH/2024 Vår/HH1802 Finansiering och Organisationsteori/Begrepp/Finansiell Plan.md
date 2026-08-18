@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Finansiell Planen för ett företag är en detaljerad skriftlig plan som beskriver hur företaget ska hantera sina pengar för att nå sina mål."
 created: 2024-04-27
 updated: 2026-05-26
 ---

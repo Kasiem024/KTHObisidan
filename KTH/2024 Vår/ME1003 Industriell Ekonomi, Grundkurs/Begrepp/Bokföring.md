@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Bokföring är ett system för att registrera, klassificera, värdera och rapportera olika Affärshändelse för ett företag eller organisation."
 created: 2024-03-01
 updated: 2026-05-26
 ---

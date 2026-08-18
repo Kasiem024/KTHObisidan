@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "En Investeringskalkyl analyserar de effekter som med rimlig säkerhet kan översättas till kronor och ören."
 created: 2024-02-11
 updated: 2026-05-26
 ---

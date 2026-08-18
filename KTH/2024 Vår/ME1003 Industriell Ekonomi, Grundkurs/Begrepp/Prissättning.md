@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Priset av en produkt är självkostnaden + vinstpålägg (marginalen)."
 created: 2024-01-30
 updated: 2026-05-26
 ---

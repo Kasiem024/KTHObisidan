@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Begreppet Tekniska Plattformar används när man skapar en standardiserad uppsättning av delar för grundteknologier vilka sedan kan användas till flera olika produkter och modeller."
 created: 2024-02-03
 updated: 2026-05-26
 ---

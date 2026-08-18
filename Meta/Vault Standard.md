@@ -53,11 +53,16 @@ Every content note starts with YAML frontmatter. Use the **inline array** style 
 ```yaml
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, year2024]
+description: "Kort mening som sammanfattar begreppet."
 created: 2024-03-30
 updated: 2024-04-20
 ---
 ```
 
+- `description` is a one-sentence summary, used by the published site for search
+  results and social previews. Concept (`begrepp`) notes should have one; it is
+  normally the first sentence of the note's `## Definition` section. Optional on
+  other note types.
 - `created` / `updated` are the source of truth for dates and live **only in
   frontmatter** — there is no in-body date line. The Obsidian Linter plugin
   auto-updates `updated` on save, Obsidian's Properties panel shows both, and the

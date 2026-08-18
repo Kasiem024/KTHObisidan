@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Bruttoredovisningsprincipen, eller kvittningsförbudet som den även kallas, innebär att poster i Balansräkning och Resultaträkning inte får kvittas mot varandra."
 created: 2024-01-31
 updated: 2026-08-17
 ---

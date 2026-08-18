@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "BAS-Kontoplan är en typ av kontoplan, alltså en lista över konton som ett företag använder i sin Bokföring."
 created: 2024-03-01
 updated: 2026-08-17
 ---

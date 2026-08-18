@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Förutbetalda Kostnad är en Kostnad som företaget betalat eller fått faktura på under räkenskapsåret, men som helt eller delvis hör till kommande Räkenskapsår."
 created: 2024-01-31
 updated: 2026-08-17
 ---

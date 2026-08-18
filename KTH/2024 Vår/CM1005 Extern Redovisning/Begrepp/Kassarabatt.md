@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Kassarabatt har med tidpunkten för betalningen av fakturan att göra och reducerar fakturabeloppets slutsumma, om betalningen sker viss tid före kredittidens utgång."
 created: 2024-02-19
 updated: 2026-08-17
 ---

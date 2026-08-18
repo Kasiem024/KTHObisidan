@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "En ideell förening har ett ideellt ändamål eller bedriver ideell verksamhet."
 created: 2024-01-16
 updated: 2026-08-17
 ---

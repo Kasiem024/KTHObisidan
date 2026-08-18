@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "En grundbok är en lista över ett företags Affärshändelse presenterad i registreringsordning, dvs. ordnade i kronologisk följd."
 created: 2024-01-31
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Faktura är säljarens meddelande till köparen om hur mycket denne ska betala till säljaren som ersättning för levererade varor eller tjänster."
 created: 2024-02-19
 updated: 2026-08-17
 ---

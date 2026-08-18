@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Annuitetsmetoden är när man räknar om investeringens betalningar, både Grundinvestering och framtida betalningar, till belopp som är lika stora varje år."
 created: 2024-02-07
 updated: 2026-05-26
 ---
@@ -18,7 +19,7 @@ $$
 $$
 
 $$
-{ ANN = \frac{r}{1-(1+r)^{-n}}}
+{ \text{ANN} = \frac{r}{1-(1+r)^{-n}}}
 $$
 
 ### Formel för Annuitetskalkyl (Annuitet)
@@ -28,19 +29,19 @@ $$
 $$
 
 $$
-{ Annuitet = NNV * ANN }
+{ \text{Annuitet} = \text{NNV} * \text{ANN} }
 $$
 
 ### Annuitetskvoten
 
 $$
-{Annuitetskvot=
-\frac{Annuitet}{Grundinvestering}}
+{\text{Annuitetskvot}=
+\frac{\text{Annuitet}}{\text{Grundinvestering}}}
 $$
 
 $$
-{Annuitetskvot=
-\frac{Annuitet}{G}}
+{\text{Annuitetskvot}=
+\frac{\text{Annuitet}}{G}}
 $$
 
 ## Kopplat till
@@ -59,7 +60,7 @@ $$
 { \text{Annuitetsfaktor} = \frac{\text{Kalkylränta}}{1-(1+\text{Kalkylränta})^{-\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}}
 $$
 $$
-{ ANN = \frac{r}{1-(1+r)^{-n}}}
+{ \text{ANN} = \frac{r}{1-(1+r)^{-n}}}
 $$
 <!--SR:!2024-03-12,17,270-->
 
@@ -69,18 +70,18 @@ $$
 { \text{Annuitet} = \text{Nettonuvärde} * \text{Annuitetsfaktor} }
 $$
 $$
-{ Annuitet = NNV * ANN }
+{ \text{Annuitet} = \text{NNV} * \text{ANN} }
 $$
 <!--SR:!2024-03-05,10,248-->
 
 Annuitetskvoten (Formel)
 ||
 $$
-{Annuitetskvot=
-\frac{Annuitet}{Grundinvestering}}
+{\text{Annuitetskvot}=
+\frac{\text{Annuitet}}{\text{Grundinvestering}}}
 $$
 $$
-{Annuitetskvot=
-\frac{Annuitet}{G}}
+{\text{Annuitetskvot}=
+\frac{\text{Annuitet}}{G}}
 $$
 <!--SR:!2024-03-29,34,288-->

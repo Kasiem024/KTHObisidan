@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS1, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Fondemission är en form av emission som inte tillför nytt kapital till företaget, alltså när Fritt Eget Kapital omvandlas till Bundet Eget Kapital."
 created: 2024-03-03
 updated: 2026-05-26
 ---

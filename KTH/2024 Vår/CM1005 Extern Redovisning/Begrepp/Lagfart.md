@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Lagfart får man genom registrering av fastighetsköp hos inskrivningsmyndigheten, Lantmäteriet."
 created: 2024-02-27
 updated: 2026-08-17
 ---

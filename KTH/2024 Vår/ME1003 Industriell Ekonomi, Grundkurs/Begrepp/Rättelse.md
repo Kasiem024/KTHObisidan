@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Rättelse ska göras är något går fel i Bokföring, den ska inte utplåna den tidigare konteringen samt ska man kunna spåra vem som gjort den och varför."
 created: 2024-03-01
 updated: 2026-05-26
 ---

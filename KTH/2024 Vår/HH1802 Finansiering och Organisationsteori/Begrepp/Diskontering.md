@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024]
+description: "Diskontering är när värdet av exempelvis en aktie bedöms utifrån en förväntad utveckling i framtiden."
 created: 2024-03-20
 updated: 2026-05-26
 ---
@@ -18,7 +19,7 @@ När man räknar med diskontering är det avdraget man räknar (Discount).
 Diskonteringsfaktorn, eller nuvärdefaktorn, är en omräkningsfaktor som används för att räkna ut nuvärdet.
 
 $$
-{ NUV =
+{ \text{NUV} =
 \frac{1}{( 1 + r )^{n}}}
 $$
 

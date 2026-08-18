@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Inventering är när värdet av förråd och lager bestäms."
 created: 2024-02-19
 updated: 2026-08-17
 ---

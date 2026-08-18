@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Löpande Periodisering är när man ser till att Affärshändelse hamnar i rätt period ifall just den affärshändelsen sprider sig över olika perioder."
 created: 2024-02-19
 updated: 2026-08-17
 ---

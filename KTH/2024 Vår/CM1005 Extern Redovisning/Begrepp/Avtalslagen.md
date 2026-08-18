@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Avtalslagen innefattar generella regler och riktlinjer som gäller när man ingår ett avtal, och utgör stommen i den allmänna avtalslagstiftningen."
 created: 2024-02-13
 updated: 2026-08-17
 ---

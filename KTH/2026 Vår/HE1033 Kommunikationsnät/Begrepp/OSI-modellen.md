@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "En teoretisk modell i sju lager som beskriver hur data skickas från en applikation på en dator till en applikation på en annan."
 created: 2026-05-28
 updated: 2026-05-28
 ---

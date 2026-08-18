@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Internredovisning är viktig för olika typer av företag, men särskilt för industri företag."
 created: 2024-02-19
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Koncernredovisningen är en särskild Årsredovisning som ett moderföretag upprättar utöver sin vanliga årsredovisning."
 created: 2024-02-01
 updated: 2026-08-17
 ---

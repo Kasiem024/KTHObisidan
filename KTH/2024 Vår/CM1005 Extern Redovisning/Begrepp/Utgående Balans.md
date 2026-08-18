@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Utgående balans är summan av de belopp som finns på tillgångs- och skuldsidan i Balansräkning vid räkenskapsårets slut."
 created: 2024-01-23
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Det finns 4 olika typer av Produktionsflöden:"
 created: 2024-02-08
 updated: 2026-05-26
 ---

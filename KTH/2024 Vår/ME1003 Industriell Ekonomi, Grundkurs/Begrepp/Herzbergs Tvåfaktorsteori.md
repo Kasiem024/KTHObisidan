@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Enligt Herzbergs Tvåfaktorsteori finns det endast hygienfaktorer och motivationsfaktorer."
 created: 2024-02-08
 updated: 2026-05-26
 ---

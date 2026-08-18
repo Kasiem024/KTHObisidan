@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Tidskomplexitet är ett teoretiskt mått som används för att analysera en algoritms effektivitet när indatans storlek växer."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En Array-lista är en dynamisk ADT som använder en underliggande array för att lagra element."
 created: 2026-05-28
 updated: 2026-05-28
 ---

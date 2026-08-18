@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Verksamhet som bedrivs av en juridisk person, till exempel Aktiebolag eller Handelsbolag, beskattas i princip alltid som näringsverksamhet."
 created: 2024-01-16
 updated: 2026-08-17
 ---

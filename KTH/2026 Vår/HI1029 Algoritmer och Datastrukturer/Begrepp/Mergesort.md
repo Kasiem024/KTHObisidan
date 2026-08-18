@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Delar upp listan i två halvor rekursivt tills man har listor med bara ett element."
 created: 2026-05-28
 updated: 2026-05-28
 ---

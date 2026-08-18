@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+description: "Likviditet är ett Nyckeltal som visar företagets kortsiktiga betalningsförmåga."
 created: 2024-02-27
 updated: 2026-08-17
 ---

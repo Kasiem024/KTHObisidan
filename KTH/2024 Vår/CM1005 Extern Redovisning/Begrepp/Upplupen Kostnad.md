@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Upplupen Kostnad är en Utgift som hör till räkenskapsåret men som företaget inte har betalat eller fått faktura på under räkenskapsåret."
 created: 2024-01-31
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Teknisk Livslängd är den tid objektet faktiskt kan användas med hänsyn till fysiska eller tekniska begränsningar oberoende om Lönsamhet eller dess värde."
 created: 2024-02-11
 updated: 2026-05-26
 ---

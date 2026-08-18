@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Kraljics Matris kan sägas vara en portföljanalys av företagets inköpta artiklar baserat på hur mycket artikeln påverkar Värdeerbjudandet och Lönsamhet, respektive konsekvenserna av eventuella…"
 created: 2024-02-03
 updated: 2026-05-26
 ---

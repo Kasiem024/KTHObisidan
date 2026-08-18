@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Anskaffningsvärdet för Anläggningstillgångar definieras som ett belopp motsvarande utgifterna för tillgångens förvärv eller tillverkning."
 created: 2024-03-02
 updated: 2026-08-17
 ---

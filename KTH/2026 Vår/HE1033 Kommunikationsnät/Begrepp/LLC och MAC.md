@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "Datalänklagret är uppdelat i två underlager för att separera mjukvaru- och hårdvaruansvar."
 created: 2026-05-28
 updated: 2026-05-28
 ---

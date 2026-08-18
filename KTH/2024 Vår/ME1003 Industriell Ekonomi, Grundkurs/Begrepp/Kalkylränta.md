@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS4, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Kalkylränta (r) uttrycker avkastningskravet som ställs på en Investering och används i en Investeringskalkylering till att räkna om betalningar i tiden."
 created: 2024-02-07
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "MervärdesOMSättningsskatt är en statlig konsumtionsskatt som betalas av konsumenter."
 created: 2024-01-16
 updated: 2026-08-17
 ---

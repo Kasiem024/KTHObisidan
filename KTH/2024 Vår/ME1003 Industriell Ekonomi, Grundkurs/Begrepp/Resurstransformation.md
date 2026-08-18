@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Handlar om hur man transformerar en viss typ av resurs så som råvaror till en vara som kunden vill ha genom att exempelvis använda sig av sin personal och utrustning."
 created: 2024-01-18
 updated: 2026-05-26
 ---

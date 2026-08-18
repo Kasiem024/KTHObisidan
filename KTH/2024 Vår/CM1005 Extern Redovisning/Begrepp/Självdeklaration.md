@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Självdeklaration är ett annat ord för inkomstdeklaration, alltså en årlig handling som ska lämnas till Skatteverket där föregående års inkomster redovisas."
 created: 2024-02-27
 updated: 2026-08-17
 ---

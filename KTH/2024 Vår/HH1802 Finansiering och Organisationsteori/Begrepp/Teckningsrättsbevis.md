@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024]
+description: "Teckningsrättsbevis utfärdas för gamla aktier och ger innehavaren rätt att teckna nya aktier."
 created: 2024-03-20
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024]
+description: "Bolagsordning är ett dokument som beskriver de grundläggande reglerna för ett visst Aktiebolag."
 created: 2024-03-18
 updated: 2026-05-26
 ---

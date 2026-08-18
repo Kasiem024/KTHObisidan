@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor och tjänster."
 created: 2024-01-27
 updated: 2026-05-26
 ---

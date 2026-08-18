@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Man tar ett element i taget och \"sticker in\" det på rätt plats i den redan sorterade delen av listan (tänk hur man sorterar en korthand)."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "En PESTLE-Analys är en analys som fokuserar på omvärlden runt ett företag."
 created: 2024-02-01
 updated: 2026-05-26
 ---

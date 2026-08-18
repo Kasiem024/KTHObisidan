@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Omslutning, eller balansomslutning som det även kallas, är summan av alla skulder eller summan av alla tillgångar i balansräkningen."
 created: 2024-01-23
 updated: 2026-08-17
 ---

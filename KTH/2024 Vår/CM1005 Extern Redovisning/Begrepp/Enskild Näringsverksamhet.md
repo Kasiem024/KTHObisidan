@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Enskild Näringsverksamhet är en företagsform där du som privatperson och ensam ägare driver och ansvarar för företaget."
 created: 2024-01-16
 updated: 2026-08-17
 ---

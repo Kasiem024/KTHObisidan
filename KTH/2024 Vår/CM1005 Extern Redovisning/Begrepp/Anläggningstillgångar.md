@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Anläggningstillgångar är Tillgångar som ett företag avser att stadigvarande inneha eller använda så som fastigheter och maskiner."
 created: 2024-02-27
 updated: 2026-08-17
 ---

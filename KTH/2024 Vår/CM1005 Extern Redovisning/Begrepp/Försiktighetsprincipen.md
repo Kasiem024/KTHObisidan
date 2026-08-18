@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Med Försiktighetsprincipen avses att ett företag beaktar god försiktighet vid redovisning av företagets tillgångar och skulder; med detta menas att tillgångar ska värderas lågt och skulder ska…"
 created: 2024-01-31
 updated: 2026-08-17
 ---

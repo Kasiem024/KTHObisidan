@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, HH1802/HH1802KS3, KTH, year2024]
+description: "Rörelsekapital är värdet av alla Omsättningstillgångar minus värdet av kortfristig Skuld."
 created: 2024-03-20
 updated: 2026-05-26
 ---

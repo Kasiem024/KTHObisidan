@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "När efterfrågan är marknadsstyrd, omedelbar och i princip slumpmässig säger man att det är en Oberoende Efterfrågan."
 created: 2024-02-02
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Förvaltningsberättelsen är en obligatorisk del av Årsredovisning."
 created: 2024-01-27
 updated: 2026-08-17
 ---

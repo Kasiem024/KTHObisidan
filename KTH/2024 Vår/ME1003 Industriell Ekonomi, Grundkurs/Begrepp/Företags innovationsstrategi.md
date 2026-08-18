@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Företag kan ha olika innovationsstrategier"
 created: 2024-02-08
 updated: 2026-05-26
 ---

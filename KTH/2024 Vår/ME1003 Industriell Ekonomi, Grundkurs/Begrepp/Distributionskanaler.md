@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Distributionskanaler har med hur många mellanled det finns mellan producenten av en produkt och själva kunden."
 created: 2024-01-30
 updated: 2026-05-26
 ---

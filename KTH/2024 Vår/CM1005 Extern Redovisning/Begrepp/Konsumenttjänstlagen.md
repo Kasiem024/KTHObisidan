@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Konsumentköplagen gäller när en privatperson köper en tjänst från ett företag, Konsumentmarknad."
 created: 2024-02-13
 updated: 2026-08-17
 ---

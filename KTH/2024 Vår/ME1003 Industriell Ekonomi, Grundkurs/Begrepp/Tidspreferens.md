@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Tidspreferens syftar till att en betalning vi får idag är mer värd än samma betalning någon gång i framtiden eftersom pengarna kan användas i verksamheten och därigenom ge en avkastning."
 created: 2024-02-12
 updated: 2026-05-26
 ---

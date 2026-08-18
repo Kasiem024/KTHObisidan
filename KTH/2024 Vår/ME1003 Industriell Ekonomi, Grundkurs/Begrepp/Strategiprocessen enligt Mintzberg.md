@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Enligt Mintzbergs strategiprocess ska man ha ett flertal olika planerade strategier."
 created: 2024-02-07
 updated: 2026-05-26
 ---

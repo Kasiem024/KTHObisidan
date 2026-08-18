@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Stegkalkylering är när man gör sina beräkningar i olika steg."
 created: 2024-02-10
 updated: 2026-05-26
 ---

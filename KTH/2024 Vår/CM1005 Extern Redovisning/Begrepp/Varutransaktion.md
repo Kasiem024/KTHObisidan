@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Varutransaktioner förekommer i alla typer av företag, men är särskilt viktiga i handelsföretag."
 created: 2024-02-13
 updated: 2026-08-17
 ---

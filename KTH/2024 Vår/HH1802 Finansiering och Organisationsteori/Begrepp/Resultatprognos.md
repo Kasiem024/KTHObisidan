@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+description: "Resultatprognosen används för att uppskatta Intäkt och Kostnad för ett Räkenskapsår."
 created: 2024-04-27
 updated: 2026-05-26
 ---

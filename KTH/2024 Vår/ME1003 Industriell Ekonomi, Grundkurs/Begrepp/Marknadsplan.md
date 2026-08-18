@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "För att Marknadsföring ska bli optimal måste man planera noga och göra en marknadsplan."
 created: 2024-01-30
 updated: 2026-05-26
 ---

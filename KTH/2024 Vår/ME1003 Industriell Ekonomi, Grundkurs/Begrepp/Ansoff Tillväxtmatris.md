@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Related Diversification: När man har ett flertal olika produkter som har en viss relation till varandra."
 created: 2024-02-01
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 38"
 created: 2024-01-23
 updated: 2026-08-17
 ---

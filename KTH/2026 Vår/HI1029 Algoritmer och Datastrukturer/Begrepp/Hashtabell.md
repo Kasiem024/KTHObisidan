@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En Hashtabell är en datastruktur som mappar nycklar till värden med hjälp av en *hashfunktion*."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Mervärdesskattelagen innehåller bestämmelserna för vem som ska betalas Moms och när det ska betalas."
 created: 2024-03-01
 updated: 2026-05-26
 ---

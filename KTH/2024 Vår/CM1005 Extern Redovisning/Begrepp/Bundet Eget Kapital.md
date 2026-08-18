@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+description: "I Aktiebolag och Ekonomisk Förening skiljer man mellan Bundet Eget Kapital och Fritt Eget Kapital."
 created: 2024-02-01
 updated: 2026-08-17
 ---

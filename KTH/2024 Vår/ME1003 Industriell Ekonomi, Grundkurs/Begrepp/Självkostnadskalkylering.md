@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Självkostnadskalkylering är när man kalkylerar samtliga kostnader som företaget har för en produkt tills den är levererad och betald."
 created: 2024-02-10
 updated: 2026-05-26
 ---

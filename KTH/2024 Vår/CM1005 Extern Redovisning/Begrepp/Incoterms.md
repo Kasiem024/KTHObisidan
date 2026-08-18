@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Incoterms (International Commercial Terms), eller leveransklausuler preciserar leveransvillkoren vid en Varutransaktion."
 created: 2024-02-13
 updated: 2026-08-17
 ---

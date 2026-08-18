@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+description: "Omsättningstillgångar är Tillgångar som löpande förbrukas, säljs eller omvandlas till likvida medel."
 created: 2024-02-28
 updated: 2026-08-17
 ---

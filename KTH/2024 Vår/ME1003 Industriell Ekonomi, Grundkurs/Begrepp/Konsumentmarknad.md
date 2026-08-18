@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "När ett företag säljer en produkt till en konsument."
 created: 2024-01-30
 updated: 2026-05-26
 ---

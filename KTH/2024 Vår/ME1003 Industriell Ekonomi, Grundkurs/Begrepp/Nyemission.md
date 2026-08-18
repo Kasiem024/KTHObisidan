@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS1, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Nyemission innebär att ett företag get ut ett antal nya aktier som kan köpas av dem som anmält sitt intresse genom att teckna sig för emission."
 created: 2024-03-03
 updated: 2026-05-26
 ---

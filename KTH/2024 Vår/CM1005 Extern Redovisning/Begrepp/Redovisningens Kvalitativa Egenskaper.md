@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "En finansiell rapport ska kännetecknas av vissa kvalitativa egenskaper som gör den användbar."
 created: 2024-02-01
 updated: 2026-08-17
 ---

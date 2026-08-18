@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Lönsamhet är vinsten delat på kapitalet. Alltså genom att veta vår Lönsamhet kan vi veta om verksamhetens vinst är rimlig i relation till det investerade kapitalet"
 created: 2024-02-07
 updated: 2026-05-26
 ---

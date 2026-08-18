@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024]
+description: "Statsskuldväxel är ett Diskonteringspapper som ges ut av Riksgälden."
 created: 2024-03-29
 updated: 2026-05-26
 ---

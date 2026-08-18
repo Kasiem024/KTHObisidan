@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+description: "Förkalkylering är när ett företag försöker beräkna sina kostnader för en viss produkt i förväg."
 created: 2024-02-10
 updated: 2026-05-26
 ---

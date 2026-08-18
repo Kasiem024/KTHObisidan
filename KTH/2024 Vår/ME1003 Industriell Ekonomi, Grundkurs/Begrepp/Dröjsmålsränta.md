@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, CM1005/CM1005KS3, ekonomi, KTH, year2024, ME1003]
+description: "Dröjsmålsränta är en straffavgift som köparen betalar till säljaren för varje dag en betalning är försenad."
 created: 2024-02-13
 updated: 2026-08-17
 ---

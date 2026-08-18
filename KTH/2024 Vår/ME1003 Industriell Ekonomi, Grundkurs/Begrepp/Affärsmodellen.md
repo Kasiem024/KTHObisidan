@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "En affärsmodell (eller företagsmodell som det också kallas) är receptet för hur intäkter kommer in till företaget, hur varor och tjänster produceras samt hur kunden slutligen får tillgång till och…"
 created: 2024-01-18
 updated: 2026-05-26
 ---

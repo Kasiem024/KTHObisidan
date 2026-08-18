@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS4, KTH, year2024, ME1003]
+description: "Investeringsverksamhets Kassaflödesanalys handlar om pengar som rör sig genom företagets investeringsaktiviteter."
 created: 2024-04-27
 updated: 2026-08-17
 ---

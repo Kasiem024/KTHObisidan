@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Värdeskapandet är hur en råvara transformeras till något kunden vill köpa och vad värdet av den transformationen är."
 created: 2024-01-18
 updated: 2026-05-26
 ---

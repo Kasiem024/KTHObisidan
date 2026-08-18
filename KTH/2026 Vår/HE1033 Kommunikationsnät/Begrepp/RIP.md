@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+description: "### Versioner - RIPv1: Classful, skickar med broadcast, stöder inte VLSM. - RIPv2: Classless, stöder VLSM och nätmask i uppdateringarna, skickar med multicast till 224.0.0.9. - RIPng: Varianten för…"
 created: 2026-08-18
 updated: 2026-08-18
 ---

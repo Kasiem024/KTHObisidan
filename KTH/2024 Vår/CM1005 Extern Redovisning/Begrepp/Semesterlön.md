@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Den nya affärsredovisningen CM1005, page 161"
 created: 2024-02-26
 updated: 2026-08-17
 ---

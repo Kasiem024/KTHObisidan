@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Ett Företags Kärnkompetenser är de unika kompetenser i Värdeskapandet som gör att företagets produkter får stort kundvärde."
 created: 2024-02-03
 updated: 2026-05-26
 ---

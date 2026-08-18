@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Årsredovisningslagen är en lag som bestämmer hur företag ska redogöra sin Årsredovisning, Koncernredovisning och delårsrapport."
 created: 2024-01-31
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Grafer består av noder (vertices) och bågar (edges)."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Interimsskulder är inom redovisning av två olika slag, upplupna kostnader och förutbetalda intäkter."
 created: 2024-01-31
 updated: 2026-08-17
 ---

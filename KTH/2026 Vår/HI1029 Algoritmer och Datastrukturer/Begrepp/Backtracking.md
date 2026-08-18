@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En algoritmisk strategi för att hitta lösningar (ofta i spel eller pussel) genom att prova en väg framåt."
 created: 2026-05-28
 updated: 2026-05-28
 ---

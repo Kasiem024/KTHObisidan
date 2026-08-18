@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Civilrättsliga Värderingsreglerna är maximivärderingsregler, de fastställer de högsta belopp vartill Tillgångar får tas upp i Balansräkning."
 created: 2024-02-27
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "En intressentmodell är en grafisk beskrivning av vilka projektets intressenter är och vilka intressen de har i förhållande till projektet – alltså vad de förväntar sig att få ut av det."
 created: 2024-01-17
 updated: 2026-08-17
 ---

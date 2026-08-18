@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "Ett Binärt sökträd (BST) är en trädstruktur där varje nod har max två barn."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+description: "Hållbarhetsrapport måste en del större företag upprätta."
 created: 2024-01-26
 updated: 2026-08-17
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Ett K-regelverk innehåller regler om hur en Årsredovisning eller ett Årsbokslut ska utformas och hur tillgångar, skulder, Intäkt och Kostnad ska värderas."
 created: 2024-02-01
 updated: 2026-08-17
 ---

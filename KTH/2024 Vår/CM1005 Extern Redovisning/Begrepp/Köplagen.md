@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Köplagen är som Konsumentköplagen, skillnaden är att köparen inte måste vara en privatperson."
 created: 2024-02-13
 updated: 2026-08-17
 ---

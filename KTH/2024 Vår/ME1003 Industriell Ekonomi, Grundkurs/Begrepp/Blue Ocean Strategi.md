@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+description: "Go where profits and growth are and where the competition isn't"
 created: 2024-02-01
 updated: 2026-05-26
 ---

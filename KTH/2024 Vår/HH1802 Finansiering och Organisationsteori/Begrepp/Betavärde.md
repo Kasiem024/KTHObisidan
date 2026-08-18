@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024]
+description: "Betavärde är ett nyckeltal som används som riskmått när det kommer till aktier."
 created: 2024-03-30
 updated: 2026-05-26
 ---

@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+description: "Företags Kapitalstruktur är av stor betydelse för de interna överväganden ett företag gör avseende finansiering."
 created: 2024-03-03
 updated: 2026-05-26
 ---

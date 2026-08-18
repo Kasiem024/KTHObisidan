@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+description: "Matchningsprincipen är en av flera Redovisningsprinciper som innebär att Intäkt och Kostnad ska matcha varandra under samma Räkenskapsår."
 created: 2024-01-31
 updated: 2026-08-17
 ---

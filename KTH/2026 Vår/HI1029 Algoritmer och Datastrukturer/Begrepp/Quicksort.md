@@ -1,5 +1,6 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+description: "En rekursiv algoritm som väljer ett *pivot-element* och delar upp listan i två delar: de som är mindre än pivot och de som är större."
 created: 2026-05-28
 updated: 2026-05-28
 ---
