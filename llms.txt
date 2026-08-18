@@ -17,7 +17,8 @@ interpret the Obsidian-specific syntax inside the notes.
   `KTH/<Year Season>/<CourseCode CourseName>/<Category>/<note>.md`
   - `<Year Season>` uses Swedish seasons: `Vår` (spring) and `Höst` (autumn),
     e.g. `2025 Höst`, `2026 Vår`.
-  - `<Category>` folders inside a course vary but are typically:
+  - `<Category>` is exactly one of these four, and **all four exist in every course**
+    (empty ones included, for uniformity):
     - `Begrepp` — concept/definition notes (one concept per note, often with flashcards)
     - `Föreläsningar` — all dated session notes: lectures, lessons and exercises.
       The `föreläsning` / `lektion` / `övning` tag distinguishes them, not the folder.
@@ -28,13 +29,15 @@ interpret the Obsidian-specific syntax inside the notes.
       holds course literature plus any generated `.opt.md` / `.ai.md` book
       conversions and conversion tooling docs. **Not authored study notes — skip
       these when reading for meaning.**
-  - A course only contains the folders it actually uses (created on demand).
+  - Every course folder also contains `_index.md` at its root: a generated,
+    Dataview-driven overview of that course's notes. Best per-course entry point.
 - `Atlas/` — "Maps of Content" (MOCs): curated hub notes that link out to
   related notes by subject, plus a `Dashboard.md`. Good starting points for
   understanding a topic area.
 - `Meta/` — Obsidian tooling: note `Templates`, plugin notes, Excalidraw drawings.
   Not study content.
-- `Ericsson/` — Work/internship notes (Ericsson). Separate from studies.
+- `Ericsson/` — Work/internship notes, separate from studies (currently empty;
+  out of scope for study content).
 - `KTH/Generella Anteckningar KTH.md` — General cross-course links/resources.
 - `KTH/Kurs Mapp Mall/` — An empty template folder for new courses. Ignore for content.
 - `index.md`, `README.md` — Vault landing/navigation notes.
@@ -47,11 +50,15 @@ Most notes begin with a frontmatter block like `tags: [begrepp, HI1027, programm
 plus ISO `created:` / `updated:` dates. Tags fall into four groups:
 
 - Note type: `begrepp` (concept), `föreläsning`/`lektion` (lecture/lesson),
-  `studieguide` (study guide), `tenta` (exam prep), `övrigt` (misc), `index`/`MOC` (hub notes).
+  `övning` (exercise), `labb` (lab), `seminarium` (seminar), `studieguide` (study
+  guide), `tenta` (exam prep), `övrigt` (misc), `index`/`MOC` (hub notes).
 - Subject: `programmering`, `nätverk`, `matematik`, `ekonomi`, `hårdvara`,
-  `databaser`, `samhälle`.
+  `databaser`, `samhälle`, `säkerhet`.
 - Course code: e.g. `HI1027`, `CM1005`, `HH1802`, `HE1026` (see catalog below).
-- Year: `year2024`, `year2025`, `year2026`. Plus the umbrella tag `kth`.
+- Year: `year2024`, `year2025`, `year2026`. Plus the umbrella tag `KTH`.
+
+Course codes and well-known acronyms (`KTH`, `MOC`) are always UPPERCASE; every
+descriptive tag is lowercase. See `Meta/Vault Standard.md` for the full rules.
 
 ## How to read Obsidian-specific syntax (important for AI)
 
