@@ -2,28 +2,40 @@
 title: "KTH Anteckningar"
 tags: [nograph, meta]
 ---
-# Index
+# KTH Anteckningar
 
-## Navigation
+Studieanteckningar från KTH, Högskoleingenjör – **Teknik och Ekonomi**.
+Cirka 470 sammanlänkade anteckningar: begrepp, föreläsningar, laborationer och
+tentaförberedelser. Allt är skrivet på svenska.
 
-Använd taggarna och sök funktionen för att hitta relevanta anteckningar.
+> [!tip] Hitta rätt
+> Använd **sökfunktionen** eller **utforskaren** till vänster för att bläddra per
+> termin och kurs. Varje kurs har en egen översiktssida, och varje kursmapp är
+> uppdelad i `Begrepp`, `Föreläsningar`, `Anteckningar` och `Filer`.
 
-### 2025 Vår
+## Ämnesöversikter
 
-- #HE1028
-- #HF1201
-- #HI1025
+Börja här om du vill läsa dig in på ett område:
 
-### 2024 Höst
+- [[Programmering MOC]] — programmering, mjukvaruarkitektur och algoritmer
+- [[Nätverk MOC]] — nätverk, protokoll och routing
+- [[Matematik MOC]] — envariabel, flervariabel, diskret matematik och statistik
+- [[Ekonomi MOC]] — extern redovisning, finansiering och industriell ekonomi
+- [[Hårdvara MOC]] — digitalteknik och mikrodatorteknik
+- [[Databaser MOC]] — databasteknik och distribuerade system
+- [[Samhälle MOC]] — hållbar utveckling och ergonomi
 
-- #HI1024
-- #HF1005
-- #HF1006
-- #HE1026
+## Terminer
 
-### 2024 Vår
+- [[2024 MOC]]
+- [[2025 MOC]]
+- [[2026 MOC]]
 
-- #CM1005
-- #ME1003
-- #HH1802
-- #HU1801
+## Om anteckningarna
+
+Anteckningarna skrivs i [Obsidian](https://obsidian.md) och publiceras med
+[Quartz](https://quartz.jzhao.xyz). Konventionerna för taggar, mappstruktur och
+filnamn finns i `Meta/Vault Standard.md` i vaultet.
+
+Flashcards och repetitionsdata används aktivt i Obsidian men visas inte här, för
+att hålla sidorna läsbara.
