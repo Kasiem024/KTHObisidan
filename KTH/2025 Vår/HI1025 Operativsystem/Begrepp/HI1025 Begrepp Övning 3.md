@@ -19,7 +19,7 @@ bash (Definition):: En vanlig och kraftfull kommandotolk (shell) för Unix-likna
 
 Konfigurationsfiler (t.ex. .bashrc) (Definition):: Skriptfiler som körs automatiskt när en viss tjänst eller ett program startar för att anpassa dess beteende. `.bashrc` är en specifik skriptfil som `bash`-skalet exekverar vid start av en interaktiv session för att ställa in användarens miljö (alias, variabler, funktioner etc.). (Tänk: *Personliga startinställningar för ditt skal*).
 
-Variabler (Shell, t.ex. $PATH) (Definition):: Namngivna platshållare för data som används av skalet och program. `$PATH` är en central miljovariabel som innehåller en lista över kataloger där skalet letar efter körbara filer. (Tänk: *Skalets minneslappar och programkatalog*).
+Variabler (Shell, t.ex. $\text{PATH}) (\text{Definition}):: \text{Namngivna} \text{platshållare} \text{för} \text{data} \text{som} \text{används} \text{av} \text{skalet} \text{och} \text{program}. `$PATH` är en central miljovariabel som innehåller en lista över kataloger där skalet letar efter körbara filer. (Tänk: *Skalets minneslappar och programkatalog*).
 
 Alias (Shell) (Definition):: Egendefinierade kortkommandon eller alternativa namn för längre eller ofta använda kommandon i ett shell. Syftar till att förenkla och effektivisera kommandoradsanvändning. (Tänk: *Smeknamn för dina favoritkommandon*).
 

@@ -56,7 +56,7 @@ Leverageformlen ([[Hävstångsformeln]])
 PE-Tal (Formel)
 ||
 $$
-P/E = \frac{Aktiekurs}{(\frac{Årets \, resultat}{Antal \, Aktier})}
+P/E = \frac{\text{Aktiekurs}}{(\frac{\text{Årets} \, \text{resultat}}{\text{Antal} \, \text{Aktier}})}
 $$
 <!--SR:!2024-04-22,4,274-->
 
@@ -92,7 +92,7 @@ $$
 Vinstmarginal (Formel)
 ||
 $$
-Vinstmarginal = \frac {Rörelseresultat \,+ \, finansiella \, intäkter}{Omsättning}
+\text{Vinstmarginal} = \frac {\text{Rörelseresultat} \,+ \, \text{finansiella} \, \text{intäkter}}{\text{Omsättning}}
 $$
 <!--SR:!2024-04-22,4,274-->
 
@@ -101,7 +101,7 @@ $$
 Kapitalomsättningshastighet (Formel)
 ||
 $$
-Kapitalomsättningshastighet=\frac{Omsättning}{Totalt \, Kapital}
+\text{Kapitalomsättningshastighet}=\frac{\text{Omsättning}}{\text{Totalt} \, \text{Kapital}}
 $$
 <!--SR:!2024-04-22,4,274-->
 
@@ -110,7 +110,7 @@ $$
 Räntabilitet på Totalt Kapital (Formel)
 ||
 $$
-Räntabilitet \, på \, totalt \, kapital = \frac {Rörelseresultat \, + \, finansiella \, intäkter}{Totalt \, kapital}
+\text{Räntabilitet} \, \text{på} \, \text{totalt} \, \text{kapital} = \frac {\text{Rörelseresultat} \, + \, \text{finansiella} \, \text{intäkter}}{\text{Totalt} \, \text{kapital}}
 $$
 <!--SR:!2024-04-22,4,274-->
 
@@ -119,6 +119,6 @@ $$
 DuPont-Schema (Formel)
 ||
 $$
-Vinstmarginal * Kapitalomsättningshastighet
+\text{Vinstmarginal} * \text{Kapitalomsättningshastighet}
 $$
 <!--SR:!2024-04-22,4,270-->

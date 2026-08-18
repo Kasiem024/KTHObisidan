@@ -69,7 +69,7 @@ Resurssnål produktion, eller Lean Production, handlar om att identifiera och el
 Lageromsättningshastighet är ett [[Nyckeltal]] som uttrycker hur många gånger per tidsperiod som lagret omsätts i en verksamhet. Man kan veta om det är högt eller lågt genom att jämföra med andra företag i branschen. Om den är högre än konkurrenters är det positivt då detta tyder på stark försäljning.
 
 $$
-Genomsnittlig \, Lageromsättningshastighet = \frac{Omsättning}{Genomsnittligt \, Varulager}
+\text{Genomsnittlig} \, \text{Lageromsättningshastighet} = \frac{\text{Omsättning}}{\text{Genomsnittligt} \, \text{Varulager}}
 $$
 
 ### Genomsnittlig Lagringstid
@@ -77,7 +77,7 @@ $$
 Genomsnittlig Lagringstid är ett [[Nyckeltal]] som visar hur många dagar en vara ligger i lagret i genomsnitt. Eftersom det kostar att ha varor i lager är det bättre om lagringstiden är låg jämfört med andra företag i branschen.
 
 $$
-Genomsnittlig \, Lagringstid = \frac{Omsättningsperiod}{Genomsnittlig \, Lageromsättningshastighet}
+\text{Genomsnittlig} \, \text{Lagringstid} = \frac{\text{Omsättningsperiod}}{\text{Genomsnittlig} \, \text{Lageromsättningshastighet}}
 $$
 
 ## Kopplat till

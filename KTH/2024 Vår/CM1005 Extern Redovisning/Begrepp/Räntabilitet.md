@@ -24,7 +24,7 @@ Räntabilitet på Totalt Kapital ($R_{T}$) visar resultatet som en procentandel 
 **Uttrycker avkastningen för företaget som helhet, alltså allt kapital som satsats i verksamheten.**
 
 $$
-Räntabilitet \, på \, totalt \, kapital = \frac {Rörelseresultat \, efter \, avskrivningar + \, finansiella \, intäkter}{Totalt \, kapital}
+\text{Räntabilitet} \, \text{på} \, \text{totalt} \, \text{kapital} = \frac {\text{Rörelseresultat} \, \text{efter} \, \text{avskrivningar} + \, \text{finansiella} \, \text{intäkter}}{\text{Totalt} \, \text{kapital}}
 $$
 
 ### Räntabilitet på Eget Kapital
@@ -34,7 +34,7 @@ Räntabilitet på Eget Kapital ($R_{E}$) är ett mått som avser ägarnas avkast
 **Uttrycker den avkastningen företaget givit på det kapital som tillhör ägarna.**
 
 $$
-Räntabilitet \, på \, eget \, kapital = \frac {Resultat \, efter \, finansiella \, intäkter \, och \, kostnader}{Justerat \, eget \, kapital}
+\text{Räntabilitet} \, \text{på} \, \text{eget} \, \text{kapital} = \frac {\text{Resultat} \, \text{efter} \, \text{finansiella} \, \text{intäkter} \, \text{och} \, \text{kostnader}}{\text{Justerat} \, \text{eget} \, \text{kapital}}
 $$
 
 ### Räntabilitet på Sysselsatt Kapital
@@ -42,7 +42,7 @@ $$
 Räntabilitet på Sysselsatt Kapital ($R_{SYSS}$) är som $R_{T}$ fast bortsett från all skuld som inte har en ränta, exempelvis leverantörsskulder.
 
 $$
-Räntabilitet \, på \, Sysselsatt \, kapital = \frac {Rörelseresultat \, efter \, avskrivningar + \, finansiella \, intäkter}{Totalt \, kapital - icke \, räntebärande \, skulder}
+\text{Räntabilitet} \, \text{på} \, \text{Sysselsatt} \, \text{kapital} = \frac {\text{Rörelseresultat} \, \text{efter} \, \text{avskrivningar} + \, \text{finansiella} \, \text{intäkter}}{\text{Totalt} \, \text{kapital} - \text{icke} \, \text{räntebärande} \, \text{skulder}}
 $$
 
 ### Vinstmarginal, Rörelsemarginal, Bruttomarginal
@@ -50,7 +50,7 @@ $$
 Man kan ställa ett företags vinst i relation till dess försäljning. Då kan man använda olika mått och skillnaden blir på vilken nivå av [[Resultaträkning]] som vinsten beräknas. Vinstmarginal, rörelsemarginal, bruttomarginal är vanliga mått.
 
 $$
-Vinstmarginal = \frac {Rörelseresultat \, efter \, avskrivningar + \, finansiella \, intäkter}{Nettoomsättning}
+\text{Vinstmarginal} = \frac {\text{Rörelseresultat} \, \text{efter} \, \text{avskrivningar} + \, \text{finansiella} \, \text{intäkter}}{\text{Nettoomsättning}}
 $$
 
 ## Kopplat till

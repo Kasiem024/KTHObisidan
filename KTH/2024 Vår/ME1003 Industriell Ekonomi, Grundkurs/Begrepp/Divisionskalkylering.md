@@ -12,7 +12,7 @@ Divisionskalkylering är en metod inom [[Självkostnadskalkylering]] som använd
 Genom att dividera hela företagets kostnader över en period på volymen kan man veta självkostnaden för kalkylobjektet. Eftersom det är hela företagets kostnader man räknar med kan denna metod bara användas om företaget säljer ett väldigt litet antal likartade produkter då det antas att bara en produkt ska stå för hela företagets kostnader och intäkter. Det är därför [[Total Kostnad]] används i formeln då hela företagets kostnader sitter på kalkylobjektet.
 
 $$
-Självkostnad/st= \frac{Total \, Kostnad \, för \, perioden}{Volym}
+\text{Självkostnad}/\text{st}= \frac{\text{Total} \, \text{Kostnad} \, \text{för} \, \text{perioden}}{\text{Volym}}
 $$
 
 $$
@@ -31,7 +31,7 @@ Divisionskalkylering (Definition):: Kalkyleringsmetod om man säljer ett litet a
 Divisionskalkylering (Formel)
 ||
 $$
-Självkostnad/st= \frac{Total \, Kostnad}{Volym}
+\text{Självkostnad}/\text{st}= \frac{\text{Total} \, \text{Kostnad}}{\text{Volym}}
 $$
 $$
 SJK/st= \frac{TK}{q}

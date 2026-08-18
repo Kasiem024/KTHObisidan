@@ -16,7 +16,7 @@ Alltså, ett företag som har pengar över efter utdelning kan använda de penga
 ---
 Formel för att räkna ut g:
 $$
-g = R_{E} \, * Andel \,av \,överskottet \,som \,ej \,delas \,ut
+g = R_{E} \, * \text{Andel} \,\text{av} \,\text{överskottet} \,\text{som} \,\text{ej} \,\text{delas} \,\text{ut}
 $$
 
 ---
@@ -37,7 +37,7 @@ Tillväxttakt (Formel) (2)
 ||
 Formel för att räkna ut g:
 $$
-g = R_{E} \, * Andel \,av \,överskottet \,som \,ej \,delas \,ut
+g = R_{E} \, * \text{Andel} \,\text{av} \,\text{överskottet} \,\text{som} \,\text{ej} \,\text{delas} \,\text{ut}
 $$
 ---
 Ett företags Tillväxttakt påverkar aktiekursen:

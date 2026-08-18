@@ -25,7 +25,7 @@ Genomsnittlig Betalningstid är ett styrmått som används för fakturerings- oc
 Alltså, Genomsnittlig Betalningstid anger den genomsnittliga tiden det tar för ett företag att få betalt efter att en faktura har skickats.
 
 $$
-Genomsnittlig \, Betalningstid = \frac{Kundfordringar}{Omsättning} * 365 \, dagar
+\text{Genomsnittlig} \, \text{Betalningstid} = \frac{\text{Kundfordringar}}{\text{Omsättning}} * 365 \, \text{dagar}
 $$
 
 ## Kopplat till

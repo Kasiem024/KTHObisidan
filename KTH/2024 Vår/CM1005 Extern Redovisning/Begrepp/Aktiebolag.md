@@ -30,13 +30,13 @@ Skatt för Aktiebolag är 20.6%.
 
 Aktiens Kvotvärde är aktiens värde vid grundandet. Grundarna bestämmer själva vad värdet är. Man vill inte ha det för lågt eller för högt.
 
-$Aktiens \, Kvotvärde = \frac{Aktiekapital}{Antal \, Aktier}$
+$\text{Aktiens} \, \text{Kvotvärde} = \frac{\text{Aktiekapital}}{\text{Antal} \, \text{Aktier}}$
 
 ### Aktiens Balansvärde
 
 Aktiens Balansvärde är när man delar upp [[Eget Kapital]] på antalet aktier som finns, detta värde är en faktor som påverkar aktiens pris.
 
-$Aktiens \, Balansvärde = \frac{Eget \, Kapital}{Antal \, Aktier}$
+$\text{Aktiens} \, \text{Balansvärde} = \frac{\text{Eget} \, \text{Kapital}}{\text{Antal} \, \text{Aktier}}$
 
 ### [[Stiftelseurkund]]
 
@@ -76,7 +76,7 @@ Aktiens Kvotvärde (Definition) (Formel)
 ||
 Aktiens värde vid grundandet som grundarna bestämmer själva, beror på aktiekapitalet och antalet aktier
 $$
-Aktiens \, Kvotvärde = \frac{Aktiekapital}{Antal \, Aktier}
+\text{Aktiens} \, \text{Kvotvärde} = \frac{\text{Aktiekapital}}{\text{Antal} \, \text{Aktier}}
 $$
 <!--SR:!2024-04-20,30,292-->
 
@@ -84,13 +84,13 @@ Aktiens Balansvärde (Definition) (Formel)
 ||
 När man delar upp [[Eget Kapital]] på antalet aktier som finns, detta värde är en faktor som påverkar aktiens pris
 $$
-Aktiens \, Balansvärde = \frac{Eget \, Kapital}{Antal \, Aktier}
+\text{Aktiens} \, \text{Balansvärde} = \frac{\text{Eget} \, \text{Kapital}}{\text{Antal} \, \text{Aktier}}
 $$
 <!--SR:!2024-04-19,13,225-->
 
 Antal aktier ett företag har (Formel)
 ||
-$$Antal \, aktier = \frac{Aktiekapital}{Aktiens \, kvotvärde}$$
+$$\text{Antal} \, \text{aktier} = \frac{\text{Aktiekapital}}{\text{Aktiens} \, \text{kvotvärde}}$$
 <!--SR:!2024-05-06,30,292-->
 
 Publika Aktiebolag (Definition):: Typ av Aktiebolag som har inga restriktioner när det kommer till handel med företagets aktier, alltså får aktierna köpas och säljas på aktiebörsen. Aktiekapitalet måste minst vara 500,000 kr

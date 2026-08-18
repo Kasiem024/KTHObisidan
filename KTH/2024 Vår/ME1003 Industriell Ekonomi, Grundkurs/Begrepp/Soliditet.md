@@ -20,11 +20,11 @@ Soliditet \, 1 = \frac{Justerat \, eget \, kapital}{Totalt \, kapital}
 $$
 
 $$
-Soliditet \, 2 = \frac{Riskbärande \, eget \, kapital}{Totalt \, kapital}
+\text{Soliditet} \, 2 = \frac{\text{Riskbärande} \, \text{eget} \, \text{kapital}}{\text{Totalt} \, \text{kapital}}
 $$
 
 $$
-Skuldsättningsgrad = \frac{Skulder + obeskattade \, reserver * skattesats}{Justerat \, eget \, kapital}
+\text{Skuldsättningsgrad} = \frac{\text{Skulder} + \text{obeskattade} \, \text{reserver} * \text{skattesats}}{\text{Justerat} \, \text{eget} \, \text{kapital}}
 $$
 
 ## Kopplat till

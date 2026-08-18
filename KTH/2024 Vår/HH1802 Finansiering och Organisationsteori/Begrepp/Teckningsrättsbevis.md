@@ -15,7 +15,7 @@ Antal teckningsrätter som krävs per nyemitterad aktie
 = Värdet av Teckningsrättsbevis
 
 $$
-Värdet \, av \, Teckningsrättsbevis = \frac{Marknadsvärde \, efter \, emission - Teckningskurs}{Antal \, teckningsrätter \, som \, krävs \, per \, nyemitterad \, aktie}
+\text{Värdet} \, \text{av} \, \text{Teckningsrättsbevis} = \frac{\text{Marknadsvärde} \, \text{efter} \, \text{emission} - \text{Teckningskurs}}{\text{Antal} \, \text{teckningsrätter} \, \text{som} \, \text{krävs} \, \text{per} \, \text{nyemitterad} \, \text{aktie}}
 $$
 
 ## Kopplat till
@@ -30,6 +30,6 @@ Teckningsrättsbevis (Definition):: Utfärdas för gamla aktier och ger innehava
 Teckningsrättsbevis (Formel)
 ||
 $$
-Värdet \, av \, Teckningsrättsbevis = \frac{Marknadsvärde \, efter \, emission - Teckningskurs}{Antal \, teckningsrätter \, som \, krävs \, per \, nyemitterad \, aktie}
+\text{Värdet} \, \text{av} \, \text{Teckningsrättsbevis} = \frac{\text{Marknadsvärde} \, \text{efter} \, \text{emission} - \text{Teckningskurs}}{\text{Antal} \, \text{teckningsrätter} \, \text{som} \, \text{krävs} \, \text{per} \, \text{nyemitterad} \, \text{aktie}}
 $$
 <!--SR:!2024-04-21,7,230-->

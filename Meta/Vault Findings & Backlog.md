@@ -17,12 +17,12 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
-### 🌐 2026-08-18 (7) — PUBLISHING: vault made Quartz-safe (F35 done, F36 open)
+### 🌐 2026-08-18 (7) — PUBLISHING: vault made Quartz-safe (F35, F36 done)
 Quartz v5 publishing set up at `C:\dev\KTHObsidianQuartz`. A real build (489 files →
 1398 output files) revealed three site-only defects, all fixed: the in-body Dataview date
 line on **450 notes**, the `_index` page titles on **all 24 courses**, and 4 protocol
-`Tid:` fields. Details in **F35**. One new open item: **F36** (456 KaTeX warnings from
-Swedish text inside math mode — cosmetic).
+`Tid:` fields. Details in **F35**. Then **F36**: 189 math spans across 31 files rewritten
+with `\text{}`, taking the KaTeX warning count from **456 to 0**. Nothing open.
 
 ### 🎉 2026-08-18 (6) — AUDIT IS CLEAN
 `Vault-Audit.ps1` reports **no deviations from the standard** (469 notes in scope).
@@ -595,16 +595,40 @@ Excluded from the site via `ignorePatterns`: `Litteraturlista` (copyrighted text
 OCR dumps, conversion tooling), `Meta`, `.excalidraw.md` sources, `.trash`,
 `Kurs Mapp Mall`. Third-party analytics disabled.
 
-**Known and accepted:** 456 KaTeX warnings from Swedish characters inside `$…$` math
-(e.g. `$Räntabilitet$`). These render, but the text should not be in math mode. Not yet
-fixed — see F36.
+**Fixed in F36:** the 456 KaTeX warnings from Swedish characters inside math mode.
 
-### F36. 🔵 OPEN — Swedish text inside math mode (456 KaTeX warnings)
+### F36. ✅ DONE (2026-08-18) — Swedish text in math mode wrapped in `\text{}`
 
-The Quartz build emits 456 `unicodeTextInMathMode` warnings for `ä`, `ö`, `å`, `Å`
-inside `$…$` / `$$…$$`. Formulas still render, but words wrapped in math mode are set in
-italic serif and are wrong semantically. Worth sweeping: either move the words outside
-the math delimiters or wrap them in `\text{…}`. Not urgent, purely cosmetic.
+The Quartz build emitted **456** `unicodeTextInMathMode` warnings: Swedish economics
+formulas were written as bare words inside math mode, e.g.
+
+```
+Balanslikviditet = \frac{Omsattningstillgangar}{Kortfristiga \, Skulder}
+```
+
+KaTeX set every letter as an italic single-letter *variable*, which is both ugly and
+semantically wrong. Words are now wrapped in `\text{...}`:
+
+```
+\text{Balanslikviditet} = \frac{\text{Omsattningstillgangar}}{\text{Kortfristiga} \, \text{Skulder}}
+```
+
+**189 math spans across 31 files** (CM1005, HH1802, ME1003, HI1025). Scope was limited
+to math spans containing at least one non-ASCII letter — deliberately, because a blanket
+sweep would have wrapped genuine two-letter maths variables like `dx` in the
+mathematics courses. LaTeX commands were protected before substitution, so `\frac`,
+`\,` and friends are untouched, and single-letter variables (`g`, `P/E`, `R_{E}`,
+`q_{v}`) correctly stay in math mode.
+
+Verified: **456 warnings -> 0**, build exit 0, no `katex-error` on any converted page.
+
+Also fixed while here: one genuine KaTeX parse error in
+`LABA Uppgift 1 HI1029`, where two display-math blocks were concatenated
+(`...\frac{1}{12}n$$$$O(n^4)$$`) and rendered as a red error box.
+
+**Residual, accepted:** formulas whose words are pure ASCII (e.g. WACC's
+`Totalt \, Kapital`) still render italic. They produce no warnings, so they were left
+alone; extending the sweep to them is a cosmetic follow-up.
 
 ---
 

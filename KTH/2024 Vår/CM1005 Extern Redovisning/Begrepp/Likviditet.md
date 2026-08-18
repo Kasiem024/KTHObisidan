@@ -26,11 +26,11 @@ Vanliga nyckeltal för att räkna Likviditet:
 - **Likvida medel i procent av omsättningen**: Företagets behov av likvida medel är beroende av dess storlek. Generellt gäller det att ett stort företag behöver mer likvida medel än ett företag med liten omsättning.
 
 $$
-Kassalikviditet = \frac{Omsättningstillgångar - Förråd \, och \, varulager - Varor \, under \, tillverkning - Förskott \, till \, leverantörer}{Kortfristiga \, Skulder}
+\text{Kassalikviditet} = \frac{\text{Omsättningstillgångar} - \text{Förråd} \, \text{och} \, \text{varulager} - \text{Varor} \, \text{under} \, \text{tillverkning} - \text{Förskott} \, \text{till} \, \text{leverantörer}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 
 $$
-Balanslikviditet = \frac{Omsättningstillgångar}{Kortfristiga \, Skulder}
+\text{Balanslikviditet} = \frac{\text{Omsättningstillgångar}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 
 ### Bristkostnad

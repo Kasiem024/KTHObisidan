@@ -66,35 +66,35 @@ updated: 2026-05-26
 Kassalikviditet (Formel)
 ||
 $$
-Kassalikviditet = \frac{Omsättningstillgångar - Varulager}{Kortfristiga \, Skulder}
+\text{Kassalikviditet} = \frac{\text{Omsättningstillgångar} - \text{Varulager}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 <!--SR:!2024-05-02,5,250-->
 
 Balanslikviditet (Formel)
 ||
 $$
-Balanslikviditet = \frac{Omsättningstillgångar}{Kortfristiga \, Skulder}
+\text{Balanslikviditet} = \frac{\text{Omsättningstillgångar}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 <!--SR:!2024-05-02,5,268-->
 
 Genomsnittlig Betalningstid (Formel)
 ||
 $$
-Genomsnittlig \, Betalningstid = \frac{Kundfordringar}{Omsättning} * 365 \, dagar
+\text{Genomsnittlig} \, \text{Betalningstid} = \frac{\text{Kundfordringar}}{\text{Omsättning}} * 365 \, \text{dagar}
 $$
 <!--SR:!2024-05-04,6,245-->
 
 Genomsnittlig Lageromsättningshastighet (Formel)
 ||
 $$
-Genomsnittlig \, Lageromsättningshastighet = \frac{Omsättning}{Genomsnittligt \, Varulager}
+\text{Genomsnittlig} \, \text{Lageromsättningshastighet} = \frac{\text{Omsättning}}{\text{Genomsnittligt} \, \text{Varulager}}
 $$
 <!--SR:!2024-05-01,2,188-->
 
 Genomsnittlig Lagringstid (Formel)
 ||
 $$
-Genomsnittlig \, Lagringstid = \frac{Omsättningsperiod}{Genomsnittlig \, Lageromsättningshastighet}
+\text{Genomsnittlig} \, \text{Lagringstid} = \frac{\text{Omsättningsperiod}}{\text{Genomsnittlig} \, \text{Lageromsättningshastighet}}
 $$
 <!--SR:!2024-04-30,1,188-->
 

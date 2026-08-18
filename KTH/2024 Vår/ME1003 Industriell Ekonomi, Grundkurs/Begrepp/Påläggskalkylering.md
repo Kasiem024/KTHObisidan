@@ -67,31 +67,31 @@ Självkostnaden (SjK) för en produkt är alltså summan av TvK, AffO och dF.
 ### Formler
 
 $$
-{Materialomkostnadspålägget=\frac{Materialomkostnader}{Direkta Kostnader}}
+{\text{Materialomkostnadspålägget}=\frac{\text{Materialomkostnader}}{\text{Direkta} \text{Kostnader}}}
 $$
 
 $$
-{ MO\!-\!pålägg=\frac{MO}{Direkta \, Kostnader}}
-$$
-
----
-
-$$
-{Tillverkningsomkostnadspålägget=\frac{Tillverkningsomkostnader}{Direkt lön}}
-$$
-
-$$
-{TO\!-\!pålägg=\frac{TO}{dL}}
+{ \text{MO}\!-\!\text{pålägg}=\frac{\text{MO}}{\text{Direkta} \, \text{Kostnader}}}
 $$
 
 ---
 
 $$
-{Affärsomkostnadspålägget=\frac{Affärsomkostnader}{Tillverkningskostnad}}
+{\text{Tillverkningsomkostnadspålägget}=\frac{\text{Tillverkningsomkostnader}}{\text{Direkt} \text{lön}}}
 $$
 
 $$
-{AffO\!-\!pålägg=\frac{AffO}{TvK}}
+{\text{TO}\!-\!\text{pålägg}=\frac{\text{TO}}{\text{dL}}}
+$$
+
+---
+
+$$
+{\text{Affärsomkostnadspålägget}=\frac{\text{Affärsomkostnader}}{\text{Tillverkningskostnad}}}
+$$
+
+$$
+{\text{AffO}\!-\!\text{pålägg}=\frac{\text{AffO}}{\text{TvK}}}
 $$
 
 ## Kopplat till
@@ -124,29 +124,29 @@ Påläggsbaser och Fördelningsnycklar (7)
 Materialomkostnadspålägget (Formel)
 ||
 $$
-{Materialomkostnadspålägget=\frac{Materialomkostnader}{Direkt \, Material}}
+{\text{Materialomkostnadspålägget}=\frac{\text{Materialomkostnader}}{\text{Direkt} \, \text{Material}}}
 $$
 $$
-{ MO\!-\!pålägg=\frac{MO}{dM}}
+{ \text{MO}\!-\!\text{pålägg}=\frac{\text{MO}}{\text{dM}}}
 $$
 <!--SR:!2024-03-13,19,270-->
 
 Tillverkningsomkostnadspålägget (Formel)
 ||
 $$
-{Tillverkningsomkostnadspålägget=\frac{Tillverkningsomkostnader}{Direkt lön}}
+{\text{Tillverkningsomkostnadspålägget}=\frac{\text{Tillverkningsomkostnader}}{\text{Direkt} \text{lön}}}
 $$
 $$
-{TO\!-\!pålägg=\frac{TO}{dL}}
+{\text{TO}\!-\!\text{pålägg}=\frac{\text{TO}}{\text{dL}}}
 $$
 <!--SR:!2024-02-25,6,250-->
 
 Affärsomkostnadspålägget (Formel)
 ||
 $$
-{Affärsomkostnadspålägget=\frac{Affärsomkostnader}{Tillverkningskostnad}}
+{\text{Affärsomkostnadspålägget}=\frac{\text{Affärsomkostnader}}{\text{Tillverkningskostnad}}}
 $$
 $$
-{AffO\!-\!pålägg=\frac{AffO}{TvK}}
+{\text{AffO}\!-\!\text{pålägg}=\frac{\text{AffO}}{\text{TvK}}}
 $$
 <!--SR:!2024-03-17,23,270-->

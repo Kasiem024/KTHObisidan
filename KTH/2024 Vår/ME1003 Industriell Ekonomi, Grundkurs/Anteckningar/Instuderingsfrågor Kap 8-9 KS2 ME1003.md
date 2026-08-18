@@ -75,11 +75,11 @@ Ett [[Resultatdiagram]] visar relationen mellan intäkterna och volymen. Den inn
 ==Säkerhetsmarginalen== i ett [[Resultatdiagram]] anger med hur mycket volymen eller försäljningen kan minska innan en förlust uppstår.
 
 $$
-{ Säkerhetsmarginal (volym) = Verklig Volym - Kritisk Volym }
+{ \text{Säkerhetsmarginal} (\text{volym}) = \text{Verklig} \text{Volym} - \text{Kritisk} \text{Volym} }
 $$
 
 $$
-{ Säkerhetsmarginal (\%) = \frac{Verklig \, Volym - Kritisk \, Volym}{Verklig \, Volym}}
+{ \text{Säkerhetsmarginal} (\%) = \frac{\text{Verklig} \, \text{Volym} - \text{Kritisk} \, \text{Volym}}{\text{Verklig} \, \text{Volym}}}
 $$
 
 ---
@@ -151,15 +151,15 @@ Självkostnaden (SjK) för en produkt är alltså summan av TvK, AffO och dF.
 ---
 15. Hur beräknas
 <br>
-${Materialomkostnadspålägget=\frac{Materialomkostnader}{Direkt \, Material}}$
+${\text{Materialomkostnadspålägget}=\frac{\text{Materialomkostnader}}{\text{Direkt} \, \text{Material}}}$
 <br>
 
 ---
-${Tillverkningsomkostnadspålägget=\frac{Tillverkningsomkostnader}{Direkt \, Lön}}$
+${\text{Tillverkningsomkostnadspålägget}=\frac{\text{Tillverkningsomkostnader}}{\text{Direkt} \, \text{Lön}}}$
 <br>
 
 ---
-${Affärsomkostnadspålägget=\frac{Affärsomkostnader}{Tillverkningskostnad}}$
+${\text{Affärsomkostnadspålägget}=\frac{\text{Affärsomkostnader}}{\text{Tillverkningskostnad}}}$
 
 ---
 
@@ -255,22 +255,22 @@ $$
 #### Täckningsbidrag/st
 
 $$
-{ TB\!/\!st = Särintäkt - Särkostnad}
+{ \text{TB}\!/\!\text{st} = \text{Särintäkt} - \text{Särkostnad}}
 $$
 <br>
 
 #### Totalt Täckningsbidrag
 
 $$
-{ TTB = Total Särintäkt - Total Särkostnad }
+{ \text{TTB} = \text{Total} \text{Särintäkt} - \text{Total} \text{Särkostnad} }
 $$
 <br>
 
 #### Täckningsgrad
 
 $$
-{ TG =
-\frac{TB}{Särinäkt}}
+{ \text{TG} =
+\frac{\text{TB}}{\text{Särinäkt}}}
 $$
 
 #### Kritiska Punkten i ett Resultatdiagram
@@ -283,35 +283,35 @@ $$
 #### Säkerhetsmarginalen i ett Resultatdiagram (volym)
 
 $$
-{ Säkerhetsmarginal (volym) = q_{v} - q_{K}}
+{ \text{Säkerhetsmarginal} (\text{volym}) = q_{v} - q_{K}}
 $$
 <br>
 
 #### Säkerhetsmarginalen i ett Resultatdiagram (%)
 
 $$
-{ Säkerhetsmarginal (\%) = \frac{q_{v} - q_{K}}{q_{v}}}
+{ \text{Säkerhetsmarginal} (\%) = \frac{q_{v} - q_{K}}{q_{v}}}
 $$
 <br>
 
 #### Materialomkostnadspålägget
 
 $$
-{ MO \!-\! pålägg=\frac{MO}{dM}}
+{ \text{MO} \!-\! \text{pålägg}=\frac{\text{MO}}{\text{dM}}}
 $$
 <br>
 
 #### Tillverkningsomkostnadspålägget
 
 $$
-{TO \!-\! pålägg=\frac{TO}{dL}}
+{\text{TO} \!-\! \text{pålägg}=\frac{\text{TO}}{\text{dL}}}
 $$
 <br>
 
 #### Affärsomkostnadspålägget
 
 $$
-{AffO \!-\! pålägg=\frac{AffO}{TvK}}
+{\text{AffO} \!-\! \text{pålägg}=\frac{\text{AffO}}{\text{TvK}}}
 $$
 <br>
 
@@ -379,17 +379,17 @@ Nuvärdemetodens beslutsregler säger att en investering där nuvärdet av de fr
 Alltså, med nuvärdesmetoden kan vi exempelvis veta hur mycket avkastningen skulle varit om vi satte in pengarna i banken istället för att göra investeringen.
 
 $$
-{ Nusummefaktor (NUS) =
-\frac{1 - ( 1 + Kalkylränta )^{-Ekonomisk \, Livslängd (Antal \, År)}}{Kalkylränta}}
+{ \text{Nusummefaktor} (\text{NUS}) =
+\frac{1 - ( 1 + \text{Kalkylränta} )^{-\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}{\text{Kalkylränta}}}
 $$
 
 $$
-{ Nuvärdefaktor (NUV) =
-\frac{1}{( 1 + Kalkylränta )^{Ekonomisk \, Livslängd (Antal \, År)}}}
+{ \text{Nuvärdefaktor} (\text{NUV}) =
+\frac{1}{( 1 + \text{Kalkylränta} )^{\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}}
 $$
 
 $$
-{ Nettonuvärde (NNV) = Grundinvestering + Inbetalningsöverskott * NUS + Restvärde * NUV }
+{ \text{Nettonuvärde} (\text{NNV}) = \text{Grundinvestering} + \text{Inbetalningsöverskott} * \text{NUS} + \text{Restvärde} * \text{NUV} }
 $$
 
 ---
@@ -398,9 +398,9 @@ $$
 När man vill veta hur olika investeringsalternativ kommer utnyttja det satsade kapitalet, grundinvesteringen, kan man beräkna ==nuvärdekvoten==. Ju högre kvoten är ju bättre.
 
 $$
-{ Nuvärdekvot=
+{ \text{Nuvärdekvot}=
 \frac
-{Netoonuvärde}{Grundinvestering}}
+{\text{Netoonuvärde}}{\text{Grundinvestering}}}
 $$
 
 ---
@@ -411,11 +411,11 @@ När man använder [[Annuitetsmetoden]] räknar man om investeringens betalninga
 Annuitetsmetodens beslutsregler säger att en investering där annuiteten av de framtida betalningarna är större än noll är lönsam. Investeringen med störst annuitet är mest lönsam.
 
 $$
-{ Annuitetsfaktor = \frac{Kalkylränta}{1-(1+Kalkylränta)^{-Ekonomisk \, Livslängd (Antal \, År)}}}
+{ \text{Annuitetsfaktor} = \frac{\text{Kalkylränta}}{1-(1+\text{Kalkylränta})^{-\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}}
 $$
 
 $$
-{ Annuitet = Nettonuvärde * Annuitetsfaktor }
+{ \text{Annuitet} = \text{Nettonuvärde} * \text{Annuitetsfaktor} }
 $$
 
 ---
@@ -543,8 +543,8 @@ $$
 ##### Nuvärdekvoten
 
 $$
-{ Nuvärdekvot=
-\frac{NNV}{G}}
+{ \text{Nuvärdekvot}=
+\frac{\text{NNV}}{G}}
 $$
 
 #### Annuitetsmetoden

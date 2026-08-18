@@ -16,7 +16,7 @@ Ett Resultatdiagram visar relationen mellan intäkterna och volymen. Den innehå
 Den kritiska punkten i ett resultatdiagram visar punkten där [[Total Intäkt]] precis räcker för att täcka [[Total Kostnad]].
 
 $$
-{ Kritiska Punkten\!: Total Inäkt = Total Kostnad }
+{ \text{Kritiska} \text{Punkten}\!: \text{Total} \text{Inäkt} = \text{Total} \text{Kostnad} }
 $$
 
 $$
@@ -32,19 +32,19 @@ $$
 Säkerhetsmarginalen anger med hur mycket volymen eller försäljningen kan minska innan en förlust uppstår.
 
 $$
-{ Säkerhetsmarginal (volym) = Verklig Volym - Kritisk Volym }
+{ \text{Säkerhetsmarginal} (\text{volym}) = \text{Verklig} \text{Volym} - \text{Kritisk} \text{Volym} }
 $$
 
 $$
-{ Säkerhetsmarginal (volym) = q_{v} - q_{K}}
+{ \text{Säkerhetsmarginal} (\text{volym}) = q_{v} - q_{K}}
 $$
 ---
 $$
-{ Säkerhetsmarginal (\%) = \frac{Verklig \, Volym - Kritisk \, Volym}{Verklig \, Volym}}
+{ \text{Säkerhetsmarginal} (\%) = \frac{\text{Verklig} \, \text{Volym} - \text{Kritisk} \, \text{Volym}}{\text{Verklig} \, \text{Volym}}}
 $$
 
 $$
-{ Säkerhetsmarginal (\%) = \frac{q_{v} - q_{K}}{q_{v}}}
+{ \text{Säkerhetsmarginal} (\%) = \frac{q_{v} - q_{K}}{q_{v}}}
 $$
 
 ## Kopplat till
@@ -71,19 +71,19 @@ Säkerhetsmarginalen (Definition):: Visar med hur mycket volymen eller försälj
 Säkerhetsmarginal, Volym (Formel)
 ||
 $$
-{ Säkerhetsmarginal (volym) = Verklig \, Volym - Kritisk \, Volym }
+{ \text{Säkerhetsmarginal} (\text{volym}) = \text{Verklig} \, \text{Volym} - \text{Kritisk} \, \text{Volym} }
 $$
 $$
-{ Säkerhetsmarginal (volym) = q_{v} - q_{K}}
+{ \text{Säkerhetsmarginal} (\text{volym}) = q_{v} - q_{K}}
 $$
 <!--SR:!2024-03-18,24,274-->
 
 Säkerhetsmarginal, Procent (Formel)
 ||
 $$
-{ Säkerhetsmarginal (\%) = \frac{Verklig \, Volym - Kritisk \, Volym}{Verklig \, Volym}}
+{ \text{Säkerhetsmarginal} (\%) = \frac{\text{Verklig} \, \text{Volym} - \text{Kritisk} \, \text{Volym}}{\text{Verklig} \, \text{Volym}}}
 $$
 $$
-{ Säkerhetsmarginal (\%) = \frac{q_{v} - q_{K}}{q_{v}}}
+{ \text{Säkerhetsmarginal} (\%) = \frac{q_{v} - q_{K}}{q_{v}}}
 $$
 <!--SR:!2024-02-25,9,254-->

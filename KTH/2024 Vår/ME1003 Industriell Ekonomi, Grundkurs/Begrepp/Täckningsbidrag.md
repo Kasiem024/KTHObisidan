@@ -18,7 +18,7 @@ I kalkylsammanhang definieras täckningsbidrag ofta som skillnaden mellan [[Sä
 Alltså är Täckningsbidrag hur mycket en specifik produkt bidrar till att betala kostnader som är gemensamma för alla produkter, [[Samkostnad]].
 
 $$
-{ Täckningsbidrag (TB\!/\!st) = Särintäkt - Särkostnad}
+{ \text{Täckningsbidrag} (\text{TB}\!/\!\text{st}) = \text{Särintäkt} - \text{Särkostnad}}
 $$
 
 ### Totalt Täckningsbidrag
@@ -30,7 +30,7 @@ Det totala täckningsbidraget ska bidra till att täcka samkostnaderna samt bidr
 Alltså är totalt täckningsbidrag summan av flera produkters täckningsbidrag.
 
 $$
-{ Totalt Täckningsbidrag (TTB) = Total \, Särintäkt - Total \, Särkostnad }
+{ \text{Totalt} \text{Täckningsbidrag} (\text{TTB}) = \text{Total} \, \text{Särintäkt} - \text{Total} \, \text{Särkostnad} }
 $$
 
 ### Täckningsgrad
@@ -38,13 +38,13 @@ $$
 Visar hur mycket kalkylobjektet bidrar med att betala [[Samkostnad]] i procent.
 
 $$
-{ Täckninsgrad =
-\frac{Täckningsbidrag}{Särinäkt}}
+{ \text{Täckninsgrad} =
+\frac{\text{Täckningsbidrag}}{\text{Särinäkt}}}
 $$
 
 $$
-{ TG =
-\frac{TB}{Särinäkt}}
+{ \text{TG} =
+\frac{\text{TB}}{\text{Särinäkt}}}
 $$
 
 ## Kopplat till
@@ -60,21 +60,21 @@ Totalt Täckningsbidrag, TTB (Definition):: Summan av flera produkters Täckning
 Täckningsbidrag och Totalt Täckningsbidrag (Formel)
 ||
 $$
-{ Täckningsbidrag (TB\!/\!st) = Särintäkt - Särkostnad}
+{ \text{Täckningsbidrag} (\text{TB}\!/\!\text{st}) = \text{Särintäkt} - \text{Särkostnad}}
 $$
 $$
-{ Totalt Täckningsbidrag (TTB) = Total \, Särintäkt - Total \, Särkostnad }
+{ \text{Totalt} \text{Täckningsbidrag} (\text{TTB}) = \text{Total} \, \text{Särintäkt} - \text{Total} \, \text{Särkostnad} }
 $$
 <!--SR:!2024-03-22,28,272-->
 
 Täckningsgrad (Formel)
 ||
 $$
-{ Täckninsgrad =
-\frac{Täckningsbidrag}{Särinäkt}}
+{ \text{Täckninsgrad} =
+\frac{\text{Täckningsbidrag}}{\text{Särinäkt}}}
 $$
 $$
-{ TG =
-\frac{TB}{Särinäkt}}
+{ \text{TG} =
+\frac{\text{TB}}{\text{Särinäkt}}}
 $$
 <!--SR:!2024-02-25,2,192-->

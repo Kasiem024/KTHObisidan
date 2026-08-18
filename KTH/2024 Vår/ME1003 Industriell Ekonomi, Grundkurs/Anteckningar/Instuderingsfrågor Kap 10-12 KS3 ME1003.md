@@ -420,15 +420,15 @@ Vanliga nyckeltal för att räkna Räntabilitet:
 - **Vinstmarginal, rörelsemarginal, bruttomarginal**: Man kan ställa ett företags vinst i relation till dess försäljning. Då kan man använda olika mått och skillnaden blir på vilken nivå av [[Resultaträkning]] som vinsten beräknas.
 
 ---
-$R_{E}= \frac {Resultat \, efter \, finansiella \, intäkter \, och \, kostnader}{Justerat \, eget \, kapital}$
+$R_{E}= \frac {\text{Resultat} \, \text{efter} \, \text{finansiella} \, \text{intäkter} \, \text{och} \, \text{kostnader}}{\text{Justerat} \, \text{eget} \, \text{kapital}}$
 
 ---
 
-$R_{T} = \frac {Rörelseresultat \, efter \, avskrivningar \, + \, finansiella \, intäkter}{Totalt \, kapital}$
+$R_{T} = \frac {\text{Rörelseresultat} \, \text{efter} \, \text{avskrivningar} \, + \, \text{finansiella} \, \text{intäkter}}{\text{Totalt} \, \text{kapital}}$
 
 ---
 
-$Vinstmarginal = \frac {Rörelseresultat \, efter \, avskrivningar \, + \, finansiella \, intäkter}{Nettoomsättning}$
+$\text{Vinstmarginal} = \frac {\text{Rörelseresultat} \, \text{efter} \, \text{avskrivningar} \, + \, \text{finansiella} \, \text{intäkter}}{\text{Nettoomsättning}}$
 
 ---
 29. Redogör för nyckeltal som mäter likviditet hos ett företag.
@@ -442,11 +442,11 @@ Vanliga nyckeltal för att räkna Likviditet:
 - **Likvida medel i procent av omsättningen**: Företagets behov av likvida medel är beroende av dess storlek. Generellt gäller det att ett stort företag behöver mer likvida medel än ett företag med liten omsättning.
 ---
 
-$Kassalikviditet = \frac{Omsättningstillgångar - Förråd \, och \, varulager - Varor \, under \, tillverkning - Förskott \, till \, leverantörer}{Kortfristiga \, Skulder}$
+$\text{Kassalikviditet} = \frac{\text{Omsättningstillgångar} - \text{Förråd} \, \text{och} \, \text{varulager} - \text{Varor} \, \text{under} \, \text{tillverkning} - \text{Förskott} \, \text{till} \, \text{leverantörer}}{\text{Kortfristiga} \, \text{Skulder}}$
 
 ---
 
-$Balanslikviditet = \frac{Omsättningstillgångar}{Kortfristiga \, Skulder}$
+$\text{Balanslikviditet} = \frac{\text{Omsättningstillgångar}}{\text{Kortfristiga} \, \text{Skulder}}$
 
 ---
 30. Vad innebär nyckeltalet soliditet?
@@ -463,10 +463,10 @@ Vanliga nyckeltal för att räkna Soliditet:
 $Soliditet \, 1 = \frac{Justerat \, eget \, kapital}{Totalt \, kapital}$
 
 ---
-$Soliditet \, 2 = \frac{Riskbärande \, eget \, kapital}{Totalt \, kapital}$
+$\text{Soliditet} \, 2 = \frac{\text{Riskbärande} \, \text{eget} \, \text{kapital}}{\text{Totalt} \, \text{kapital}}$
 
 ---
-$Skuldsättningsgrad = \frac{Skulder + obeskattade \, reserver * skattesats}{Justerat \, eget \, kapital}$
+$\text{Skuldsättningsgrad} = \frac{\text{Skulder} + \text{obeskattade} \, \text{reserver} * \text{skattesats}}{\text{Justerat} \, \text{eget} \, \text{kapital}}$
 
 ---
 31. Vad innebär det att företaget är en koncern?
@@ -531,7 +531,7 @@ Det finns ett flertal [[Nyckeltal]] för att mäta effektiviteten i ett företag
 ---
 6. Hur beräknas ett företags rörelsekapital?
 
-$Rörelsekapital = Omsättningstillgångar - Kortfristiga \, skulder$
+$\text{Rörelsekapital} = \text{Omsättningstillgångar} - \text{Kortfristiga} \, \text{skulder}$
 
 ---
 7. Rita det principiella diagrammet för ett tillverkande företags kapital bindning samt redogör för de ingående momenten.
@@ -742,25 +742,25 @@ $R_{E} = R_{T} + (R_{T} - R_{S}) * \frac{S}{E}$
 ### Vinstmarginal
 
 $$
-Vinstmarginal = \frac {REFI}{Nettoomsättning}
+\text{Vinstmarginal} = \frac {\text{REFI}}{\text{Nettoomsättning}}
 $$
 
 ### Kassalikviditet
 
 $$
-Kassalikviditet = \frac{Omsättningstillgångar - Förråd \, och \, varulager - Varor \, under \, tillverkning - Förskott \, till \, leverantörer}{Kortfristiga \, Skulder}
+\text{Kassalikviditet} = \frac{\text{Omsättningstillgångar} - \text{Förråd} \, \text{och} \, \text{varulager} - \text{Varor} \, \text{under} \, \text{tillverkning} - \text{Förskott} \, \text{till} \, \text{leverantörer}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 
 Förkortat:
 
 $$
-Kassalikviditet = \frac{Omsättningstillgångar - Varulager}{Kortfristiga \, Skulder}
+\text{Kassalikviditet} = \frac{\text{Omsättningstillgångar} - \text{Varulager}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 
 ### Balanslikviditet
 
 $$
-Balanslikviditet = \frac{Omsättningstillgångar}{Kortfristiga \, Skulder}
+\text{Balanslikviditet} = \frac{\text{Omsättningstillgångar}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 
 ### Soliditet 1
@@ -772,35 +772,35 @@ $$
 ### Soliditet 2
 
 $$
-Soliditet \, 2 = \frac{Riskbärande \, eget \, kapital}{Totalt \, kapital}
+\text{Soliditet} \, 2 = \frac{\text{Riskbärande} \, \text{eget} \, \text{kapital}}{\text{Totalt} \, \text{kapital}}
 $$
 
 ### Rörelsekapital
 
 $$
-Rörelsekapital = Omsättningstillgångar - Kortfristiga \, skulder
+\text{Rörelsekapital} = \text{Omsättningstillgångar} - \text{Kortfristiga} \, \text{skulder}
 $$
 
 ### Kapitalomsättningshastighet
 
 $$
-Kapitalomsättningshastighet \, (ggr/år) = \frac{Försäljning \, (per \, år)}{Totalt \, kapital \, (vid \, årets \, slut)}
+\text{Kapitalomsättningshastighet} \, (\text{ggr}/\text{år}) = \frac{\text{Försäljning} \, (\text{per} \, \text{år})}{\text{Totalt} \, \text{kapital} \, (\text{vid} \, \text{årets} \, \text{slut})}
 $$
 
 ### Lageromsättningshastighet
 
 $$
-Lageromsättningshastighet \, (ggr/år) = \frac{Omsättningsperiod \, (365 \, dagar)}{Genomsnittlig \, lagringstid \, (dagar)}
+\text{Lageromsättningshastighet} \, (\text{ggr}/\text{år}) = \frac{\text{Omsättningsperiod} \, (365 \, \text{dagar})}{\text{Genomsnittlig} \, \text{lagringstid} \, (\text{dagar})}
 $$
 
 ### Genomsnittlig kredittid till kunderna
 
 $$
-Genomsnittlig \, kredittid \, till \, kunderna \, (dagar) = \frac{Genomsnittliga \, kundfordringar \, (kr) * 365 (dagar))}{Försäljning \, (per \, år)}
+\text{Genomsnittlig} \, \text{kredittid} \, \text{till} \, \text{kunderna} \, (\text{dagar}) = \frac{\text{Genomsnittliga} \, \text{kundfordringar} \, (\text{kr}) * 365 (\text{dagar}))}{\text{Försäljning} \, (\text{per} \, \text{år})}
 $$
 
 ### Genomsnittlig kredittid från leverantörerna
 
 $$
-Genomsnittlig \, kredittid \, från \, leverantörerna \, (dagar) = \frac{Genomsnittliga \, leverantörsskulder \, (kr) * 365 \, (dagar)}{Inköpskostnader \, (per \, år)}
+\text{Genomsnittlig} \, \text{kredittid} \, \text{från} \, \text{leverantörerna} \, (\text{dagar}) = \frac{\text{Genomsnittliga} \, \text{leverantörsskulder} \, (\text{kr}) * 365 \, (\text{dagar})}{\text{Inköpskostnader} \, (\text{per} \, \text{år})}
 $$

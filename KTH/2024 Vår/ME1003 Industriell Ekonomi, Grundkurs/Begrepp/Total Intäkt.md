@@ -12,7 +12,7 @@ Totala Intäkter (TI) beräknas genom att pris per styck multipliceras med antal
 ### Formler
 
 $$
-{Total Intäkt = Pris\!/\!st \,*\, Volym}
+{\text{Total} \text{Intäkt} = \text{Pris}\!/\!\text{st} \,*\, \text{Volym}}
 $$
 
 $$
@@ -32,7 +32,7 @@ Totala Intäkter (Definition):: Beräknas genom att pris per styck multipliceras
 Totala Intäkter (Formel)
 ||
 $$
-{Total \, Intäkt = Pris\!/\!st \,*\, Volym}
+{\text{Total} \, \text{Intäkt} = \text{Pris}\!/\!\text{st} \,*\, \text{Volym}}
 $$
 $$
 {TI = Pris\!/\!st \,*\, q}

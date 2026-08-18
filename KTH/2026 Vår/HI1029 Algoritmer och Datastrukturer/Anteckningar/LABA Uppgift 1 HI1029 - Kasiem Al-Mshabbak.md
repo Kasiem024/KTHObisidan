@@ -80,4 +80,6 @@ Detta stämde överens med programmets utdata.
 
 ## Slutsats
 
-$$T(n) = \frac{1}{8}n^4 + \frac{5}{12}n^3 + \frac{3}{8}n^2 + \frac{1}{12}n$$$$O(n^4)$$
+$$T(n) = \frac{1}{8}n^4 + \frac{5}{12}n^3 + \frac{3}{8}n^2 + \frac{1}{12}n$$
+
+$$O(n^4)$$

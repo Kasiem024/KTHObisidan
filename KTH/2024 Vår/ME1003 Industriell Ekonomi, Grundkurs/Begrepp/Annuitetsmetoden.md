@@ -14,7 +14,7 @@ Annuitetsmetodens beslutsregler säger att en investering där annuiteten av de 
 ==Räntetabell D==
 
 $$
-{ Annuitetsfaktor = \frac{Kalkylränta}{1-(1+Kalkylränta)^{-Ekonomisk \, Livslängd (Antal \, År)}}}
+{ \text{Annuitetsfaktor} = \frac{\text{Kalkylränta}}{1-(1+\text{Kalkylränta})^{-\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}}
 $$
 
 $$
@@ -24,7 +24,7 @@ $$
 ### Formel för Annuitetskalkyl (Annuitet)
 
 $$
-{ Annuitet = Nettonuvärde * Annuitetsfaktor }
+{ \text{Annuitet} = \text{Nettonuvärde} * \text{Annuitetsfaktor} }
 $$
 
 $$
@@ -56,7 +56,7 @@ Annuitetsfaktor (Formel)
 ||
 (Finns i formelsamling)
 $$
-{ Annuitetsfaktor = \frac{Kalkylränta}{1-(1+Kalkylränta)^{-Ekonomisk \, Livslängd (Antal \, År)}}}
+{ \text{Annuitetsfaktor} = \frac{\text{Kalkylränta}}{1-(1+\text{Kalkylränta})^{-\text{Ekonomisk} \, \text{Livslängd} (\text{Antal} \, \text{År})}}}
 $$
 $$
 { ANN = \frac{r}{1-(1+r)^{-n}}}
@@ -66,7 +66,7 @@ $$
 Formel för Annuitetskalkyl, Annuitet (Formel)
 ||
 $$
-{ Annuitet = Nettonuvärde * Annuitetsfaktor }
+{ \text{Annuitet} = \text{Nettonuvärde} * \text{Annuitetsfaktor} }
 $$
 $$
 { Annuitet = NNV * ANN }

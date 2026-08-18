@@ -134,37 +134,37 @@ Olika ledarstilar (5)
 Kassalikviditet (Formel)
 ||
 $$
-Kassalikviditet = \frac{Omsättningstillgångar - Varulager}{Kortfristiga \, Skulder}
+\text{Kassalikviditet} = \frac{\text{Omsättningstillgångar} - \text{Varulager}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 
 Balanslikviditet (Formel)
 ||
 $$
-Balanslikviditet = \frac{Omsättningstillgångar}{Kortfristiga \, Skulder}
+\text{Balanslikviditet} = \frac{\text{Omsättningstillgångar}}{\text{Kortfristiga} \, \text{Skulder}}
 $$
 
 Genomsnittlig Betalningstid (Formel)
 ||
 $$
-Genomsnittlig \, Betalningstid = \frac{Kundfordringar}{Omsättning} * 365 \, dagar
+\text{Genomsnittlig} \, \text{Betalningstid} = \frac{\text{Kundfordringar}}{\text{Omsättning}} * 365 \, \text{dagar}
 $$
 
 Genomsnittlig Lageromsättningshastighet (Formel)
 ||
 $$
-Genomsnittlig \, Lageromsättningshastighet = \frac{Omsättning}{Genomsnittligt \, Varulager}
+\text{Genomsnittlig} \, \text{Lageromsättningshastighet} = \frac{\text{Omsättning}}{\text{Genomsnittligt} \, \text{Varulager}}
 $$
 
 Genomsnittlig Lagringstid (Formel)
 ||
 $$
-Genomsnittlig \, Lagringstid = \frac{Omsättningsperiod}{Genomsnittlig \, Lageromsättningshastighet}
+\text{Genomsnittlig} \, \text{Lagringstid} = \frac{\text{Omsättningsperiod}}{\text{Genomsnittlig} \, \text{Lageromsättningshastighet}}
 $$
 
 PE-Tal (Formel)
 ||
 $$
-P/E = \frac{Aktiekurs}{(\frac{Årets \, resultat}{Antal \, Aktier})}
+P/E = \frac{\text{Aktiekurs}}{(\frac{\text{Årets} \, \text{resultat}}{\text{Antal} \, \text{Aktier}})}
 $$
 
 WACC (Formel)
@@ -188,23 +188,23 @@ $$
 Vinstmarginal (Formel)
 ||
 $$
-Vinstmarginal = \frac {Rörelseresultat \,+ \, finansiella \, intäkter}{Omsättning}
+\text{Vinstmarginal} = \frac {\text{Rörelseresultat} \,+ \, \text{finansiella} \, \text{intäkter}}{\text{Omsättning}}
 $$
 
 Kapitalomsättningshastighet (Formel)
 ||
 $$
-Kapitalomsättningshastighet=\frac{Omsättning}{Totalt \, Kapital}
+\text{Kapitalomsättningshastighet}=\frac{\text{Omsättning}}{\text{Totalt} \, \text{Kapital}}
 $$
 
 Räntabilitet på Totalt Kapital (Formel)
 ||
 $$
-Räntabilitet \, på \, totalt \, kapital = \frac {Rörelseresultat \, + \, finansiella \, intäkter}{Totalt \, kapital}
+\text{Räntabilitet} \, \text{på} \, \text{totalt} \, \text{kapital} = \frac {\text{Rörelseresultat} \, + \, \text{finansiella} \, \text{intäkter}}{\text{Totalt} \, \text{kapital}}
 $$
 
 DuPont-Schema (Formel)
 ||
 $$
-Vinstmarginal * Kapitalomsättningshastighet
+\text{Vinstmarginal} * \text{Kapitalomsättningshastighet}
 $$
