@@ -1,7 +1,7 @@
 ---
-tags:
-  - "#nograph"
+tags: [nograph, meta]
 ---
+# Index
 
 ## Navigation
 

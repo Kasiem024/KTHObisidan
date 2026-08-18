@@ -1,10 +1,5 @@
 ---
-tags:
-  - KTH
-  - year<% tp.date.now("YYYY") %>
-  - <% tp.file.folder(true).split('/')[2] || "Kurskod" %>
-  - seminarium
-  - BroadTopic
+tags: [KTH, year<% tp.date.now("YYYY") %>, <% tp.file.folder(true).split('/')[2] || "Kurskod" %>, seminarium, <% tp.system.prompt("Broad Topic (t.ex. programmering / nätverk)") %>]
 ---
 # Seminarium: <% tp.file.title %>
 

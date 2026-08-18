@@ -1,10 +1,5 @@
 ---
-tags:
-  - KTH
-  - year2025
-  - CM1008
-  - övrigt
-  - programmering
+tags: [KTH, year<% tp.date.now("YYYY") %>, CM1008, övrigt, programmering]
 ---
 # Mötesprotokoll: <% tp.file.title %>
 

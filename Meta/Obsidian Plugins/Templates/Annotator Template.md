@@ -1,9 +1,9 @@
 ---
-tags: [kth, övrigt, year2026]
+tags: [KTH, year<% tp.date.now("YYYY") %>, övrigt]
+created: <% tp.date.now("YYYY-MM-DD") %>
+updated: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 # <% tp.file.title %>
 
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
