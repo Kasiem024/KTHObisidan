@@ -1,3 +1,6 @@
+---
+tags: [MOC, meta]
+---
 # 🏛️ Vault Dashboard
 
 Welcome to your structured KTH Vault. This dashboard uses the **Dataview** plugin to provide live updates of your notes.
@@ -12,6 +15,22 @@ Welcome to your structured KTH Vault. This dashboard uses the **Dataview** plugi
 - [[Atlas/Hårdvara MOC|🔌 Hårdvara]]
 - [[Atlas/Databaser MOC|🗄️ Databaser]]
 - [[Atlas/Samhälle MOC|🌍 Samhälle]]
+
+---
+
+## 📅 Terminer
+- [[Atlas/2026 MOC|📅 2026]]
+- [[Atlas/2025 MOC|📅 2025]]
+- [[Atlas/2024 MOC|📅 2024]]
+
+---
+
+## 📚 Kursindex
+```dataview
+TABLE WITHOUT ID link(file.path, regexreplace(file.folder, "^.*/", "")) AS "Kurs", regexreplace(file.folder, "^KTH/([^/]+)/.*", "$1") AS "Termin"
+FROM #index AND "KTH"
+SORT file.folder DESC
+```
 
 ---
 

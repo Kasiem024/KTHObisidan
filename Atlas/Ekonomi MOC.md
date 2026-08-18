@@ -1,5 +1,9 @@
+---
+tags: [MOC, ekonomi]
+---
+# Ekonomi MOC
+
 Anteckningar kring industriell ekonomi, finansiering och marknadsföring.
-#MOC #ekonomi
 
 #### #HH1802 Finansiering och Organisationsteori
 - **#begrepp**
@@ -8,18 +12,18 @@ Anteckningar kring industriell ekonomi, finansiering och marknadsföring.
 	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/Finansiell Plan|Finansiell Plan]]
 	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/Löpande Verksamhet|Löpande Verksamhet]]
 - **#lektion**
-	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Lektioner/05-21 Lektion HH1802|05-21 Lektion HH1802]]
-	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Lektioner/04-15 Lektion HH1802|04-15 Lektion HH1802]]
+	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Föreläsningar/2024-05-21 - HH1802 - Lektion|2024-05-21 - HH1802 - Lektion]]
+	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Föreläsningar/2024-04-15 - HH1802 - Lektion|2024-04-15 - HH1802 - Lektion]]
 
 #### #HU1801 Industriell Marknadsföring
 - **#lektion**
-	- [[KTH/2024 Vår/HU1801 Industriell Marknadsföring/Lektioner/04-09 Lektion HU1801|04-09 Lektion HU1801]]
-	- [[KTH/2024 Vår/HU1801 Industriell Marknadsföring/Lektioner/03-18 Lektion HU1801|03-18 Lektion HU1801]]
+	- [[KTH/2024 Vår/HU1801 Industriell Marknadsföring/Föreläsningar/2024-04-09 - HU1801 - Lektion|2024-04-09 - HU1801 - Lektion]]
+	- [[KTH/2024 Vår/HU1801 Industriell Marknadsföring/Föreläsningar/2024-03-18 - HU1801 - Lektion|2024-03-18 - HU1801 - Lektion]]
 
 #### #ME1003 Industriell Ekonomi, Grundkurs
 - **#lektion**
-	- [[KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-30 Lektion ME1003|01-30 Lektion ME1003]]
-	- [[KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Lektioner/01-18 Lektion ME1003|01-18 Lektion ME1003]]
+	- [[KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Föreläsningar/2024-01-30 - ME1003 - Lektion|2024-01-30 - ME1003 - Lektion]]
+	- [[KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Föreläsningar/2024-01-18 - ME1003 - Lektion|2024-01-18 - ME1003 - Lektion]]
 - **#begrepp**
 	- [[KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs/Begrepp/Resurstransformation|Resurstransformation]]
 

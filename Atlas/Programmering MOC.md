@@ -1,5 +1,9 @@
+---
+tags: [MOC, programmering]
+---
+# Programmering MOC
+
 En samling anteckningar relaterade till programmering, mjukvaruarkitektur och algoritmer.
-#MOC #programmering
 
 #### #HI1024 Programmering, grundkurs
 - **#begrepp**
@@ -11,7 +15,7 @@ En samling anteckningar relaterade till programmering, mjukvaruarkitektur och al
 	- [[KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/HI1027 Begrepp inför TEN1|HI1027 Begrepp inför TEN1]]
 	- [[KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/Lab1 Begrepp HI1027|Lab1 Begrepp HI1027]]
 - **#föreläsning**
-	- [[KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/08-26 Föreläsning 1 HI1027|08-26 Föreläsning 1 HI1027]]
+	- [[KTH/2025 Höst/HI1027 Objektorienterad Programmering/Föreläsningar/2025-08-26 - HI1027 - Föreläsning 1|2025-08-26 - HI1027 - Föreläsning 1]]
 
 #### #HI1029 Algoritmer och Datastrukturer
 - **#begrepp**
@@ -28,7 +32,7 @@ En samling anteckningar relaterade till programmering, mjukvaruarkitektur och al
 
 #### #CM1008 Projektkurs i Applikationsutveckling
 - **#föreläsning**
-	- [[KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/03-26 CM1008 Föreläsning 4|03-26 CM1008 Föreläsning 4]]
+	- [[KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Föreläsningar/2025-03-26 - CM1008 - Föreläsning 4|2025-03-26 - CM1008 - Föreläsning 4]]
 - **#övrigt**
 	- [[KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/CM1008 Rapport Anteckingar|CM1008 Rapport Anteckingar]]
 

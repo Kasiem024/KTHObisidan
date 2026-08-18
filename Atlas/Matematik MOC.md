@@ -1,5 +1,9 @@
+---
+tags: [MOC, matematik]
+---
+# Matematik MOC
+
 Samling av matematiska begrepp, statistik och logik studerat under utbildningen.
-#MOC #matematik
 
 #### #HF1012 Matematisk Statistik
 - **#begrepp**
@@ -14,4 +18,4 @@ Samling av matematiska begrepp, statistik och logik studerat under utbildningen.
 
 #### #HE1026 Digitalteknik
 - **#föreläsning**
-	- [[KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/10-28  Föreläsning HE1026|10-28 Föreläsning HE1026]]
+	- [[KTH/2024 Höst/HE1026 Digitalteknik/Föreläsningar/2024-10-28 - HE1026 - Föreläsning|2024-10-28 - HE1026 - Föreläsning]]

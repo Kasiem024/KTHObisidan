@@ -1,5 +1,9 @@
+---
+tags: [MOC, samhälle]
+---
+# Samhälle MOC
+
 Reflektioner och begrepp rörande hållbar utveckling, etik och organisation.
-#MOC #samhälle
 
 #### #HF1201 Hållbar Utveckling och Ergonomi
 - **#begrepp**
@@ -12,4 +16,4 @@ Reflektioner och begrepp rörande hållbar utveckling, etik och organisation.
 - **#begrepp**
 	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/Inflation|Inflation]]
 - **#lektion**
-	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Lektioner/05-20 Lektion HH1802|05-20 Lektion HH1802]]
+	- [[KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Föreläsningar/2024-05-20 - HH1802 - Lektion|2024-05-20 - HH1802 - Lektion]]
