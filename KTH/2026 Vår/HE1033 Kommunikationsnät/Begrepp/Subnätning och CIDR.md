@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Subnätning och CIDR
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Lager:** OSI 3 (Nätverk)
 > **Matte:** $2^{32-x}$ adresser.
 

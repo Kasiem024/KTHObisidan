@@ -1,22 +1,11 @@
 ---
-tags:
-  - begrepp
-  - föreläsning
-  - HE1033
-  - KTH
-  - nätverk
-  - year2026
+tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
+created: 2026-03-01
+updated: 2026-08-17
 ---
 # HE1033 Begrepp Föreläsning 6-7
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Vad är huvudsyftet med en router i ett nätverk?(Definition)::Att vidarebefordra datapaket mellan olika nätverk baserat på deras IP adresser.
 <!--SR:!2026-03-16,4,200-->

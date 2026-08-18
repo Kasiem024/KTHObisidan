@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-01-16
+updated: 2026-08-17
 ---
 
 # Inkomst
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -13,7 +16,7 @@ En inkomst uppstår då företaget har slutfört en prestation, t.ex. utfört 
 
 > Inkomster är vad företaget får för de varor eller tjänster det säljer, och de ==uppstår vid försäljningstillfället==. I redovisningen registreras inkomster normalt då företaget skriver ut en faktura, ett kvitto e.d. som bekräftar (verifierar) att försäljningen har ägt rum.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=6,0,15,43|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=31&selection=6,0,15,43|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Inkomst kan ses som företagets resurser, när vi faktiskt säljer något och när vi anskaffar en resurs.
 

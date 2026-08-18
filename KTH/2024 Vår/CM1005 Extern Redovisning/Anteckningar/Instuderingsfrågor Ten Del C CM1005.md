@@ -1,8 +1,12 @@
 ---
-tags: [CM1005, year2024]
+tags: [tenta, CM1005, year2024, KTH, ekonomi]
+created: 2024-03-08
+updated: 2026-08-17
 ---
 
 # Instuderingsfrågor Ten Del C CM1005
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 [[Ten Del C Exempel CM1005.pdf]]
 

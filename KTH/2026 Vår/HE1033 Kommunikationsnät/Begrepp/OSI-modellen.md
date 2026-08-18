@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # OSI-modellen
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Lager:** 1-7 (Alla)
 > **Mål:** Standardiserat ramverk för nätverkskommunikation.
 

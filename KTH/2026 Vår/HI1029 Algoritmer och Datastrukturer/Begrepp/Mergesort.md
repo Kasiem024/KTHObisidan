@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Mergesort
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Komplexitet:** Alltid $O(n \log n)$
 > **Stabil:** Ja | **Minne:** $O(n)$ extra
 

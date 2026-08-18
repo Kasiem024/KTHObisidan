@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Binärt sökträd (BST)
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Komplexitet:** $O(\log n)$ (medel), $O(n)$ (värsta fall)
 > **Viktigt:** Ordning och balansering.
 

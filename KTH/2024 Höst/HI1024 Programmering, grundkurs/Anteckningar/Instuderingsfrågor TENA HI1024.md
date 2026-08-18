@@ -1,12 +1,11 @@
 ---
-tags: [ekonomi, HI1024, HI1024/TenA, KTH, year2024, övning]
+tags: [programmering, HI1024, HI1024/TenA, KTH, year2024, övning]
+created: 2024-09-18
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Instuderingsfrågor TENA HI1024
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 1. Beskriv vad datalogi handlar om.
 

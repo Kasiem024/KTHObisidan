@@ -1,12 +1,11 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+created: 2024-01-30
+updated: 2026-05-26
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Utbud och Efterfrågan
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

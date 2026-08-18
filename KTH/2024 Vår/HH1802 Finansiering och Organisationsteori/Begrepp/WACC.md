@@ -1,17 +1,11 @@
 ---
 tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+created: 2024-03-30
+updated: 2026-05-26
 ---
 # WACC
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

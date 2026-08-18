@@ -1,17 +1,11 @@
 ---
 tags: [begrepp, HF1201, KTH, samhälle, year2025]
+created: 2025-02-19
+updated: 2026-05-26
 ---
 # `=this.file.name`
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Livscykelanalys, LCA (Definition):: Metod för att bedöma miljöpåverkan genom en produkts hela livscykel.  
 

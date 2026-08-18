@@ -1,17 +1,11 @@
 ---
 tags: [begrepp, HF1201, KTH, samhälle, year2025]
+created: 2025-02-18
+updated: 2026-05-26
 ---
 # SEM1 Begrepp HF1201
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Miljöteknik (Definition):: Teknik som ger miljöfördelar jämfört med alternativ i hela livscykeln.
 <!--SR:!2025-03-15,9,220!2025-03-19,13,240-->

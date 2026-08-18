@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Routing-principer
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Lager:** OSI 3 (Nätverk)
 > **Viktigt:** Beslutsfattande i routern.
 

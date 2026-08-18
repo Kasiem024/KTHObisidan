@@ -1,12 +1,11 @@
 ---
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+created: 2024-03-03
+updated: 2026-05-26
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Företags Kapitalstruktur
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

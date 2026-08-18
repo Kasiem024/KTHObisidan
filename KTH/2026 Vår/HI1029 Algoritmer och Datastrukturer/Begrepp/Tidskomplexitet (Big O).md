@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Tidskomplexitet (Big O)
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Mål:** Förstå hur algoritmers körtid skalar med indatastorlek $n$.
 > **Viktigt:** Fokusera på tillväxttakt snarare än exakta sekunder.
 
@@ -15,7 +20,7 @@ Tidskomplexitet är ett teoretiskt mått som används för att analysera en algo
 - $O(\log n)$: Logaritmisk tid (t.ex. binär sökning).
 - $O(n)$: Linjär tid (t.ex. genomgång av en lista).
 - $O(n \log n)$: Lin-logaritmisk tid (t.ex. [[Mergesort]] eller [[Quicksort]]).
-- $O(n^2)$: Kvadratisk tid (t.ex. [[Urvalssortering]]).
+- $O(n^2)$: Kvadratisk tid (t.ex. [[Urvalssortering (Selection sort)|Urvalssortering]]).
 
 ## Tenta-fokus
 - **Varför teoretisk analys?** För att kunna jämföra algoritmer oberoende av hårdvara och programmeringsspråk.

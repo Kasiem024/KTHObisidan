@@ -1,17 +1,11 @@
 ---
 tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
+created: 2026-05-14
+updated: 2026-05-26
 ---
 # LABA Begrepp 0
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Stokastisk variabel ($X$) ;; Ett tal vars exakta värde bestäms av slumpen (t.ex. antalet prickar vid ett tärningskast eller väntetid i kö).
 Väntevärde ($E(X)$ eller $\mu$) ;; Det teoretiska medelvärdet om man skulle upprepa ett slumpmässigt försök oändligt många gånger. (Det värde man "förväntar" sig i snitt).

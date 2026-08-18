@@ -1,22 +1,11 @@
 ---
-tags:
-  - begrepp
-  - föreläsning
-  - HE1033
-  - KTH
-  - nätverk
-  - year2026
+tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
+created: 2026-01-19
+updated: 2026-08-17
 ---
 # HE1033 Begrepp Föreläsning 4-5
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 IP (Internet Protocol) (Definition);; Ett **förbindelselöst** (connectionless) protokoll som arbetar enligt **"best-effort"**-principen utan garanterad leverans.
 <!--SR:!2026-03-17,5,186!2026-03-16,4,186-->

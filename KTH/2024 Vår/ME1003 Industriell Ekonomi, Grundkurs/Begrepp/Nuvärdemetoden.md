@@ -1,10 +1,11 @@
 ---
 tags: [begrepp, ekonomi, HH1802/HH1802KS1, KTH, ME1003, ME1003/ME1003KS2, year2024]
+created: 2024-02-07
+updated: 2026-05-26
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Nuvärdemetoden
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

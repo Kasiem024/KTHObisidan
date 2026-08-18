@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-01-16
+updated: 2026-08-17
 ---
 
 # Intäkt
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -17,7 +20,7 @@ Inkomster är det som löpande tas emot under året. När inkomsten hänförs ti
 
 > Intäkter är försäljningsvärdet av de prestationer (varor och tjänster) som levereras eller utförs under en viss period, exempelvis ett år.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=29,0,36,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=31&selection=29,0,36,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Intäkt visar vad vi har presterat/levererat under en viss period.
 

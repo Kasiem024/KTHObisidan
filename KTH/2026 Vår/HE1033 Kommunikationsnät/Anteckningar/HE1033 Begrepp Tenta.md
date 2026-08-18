@@ -1,15 +1,11 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, tenta, year2026]
+created: 2026-03-01
+updated: 2026-05-28
 ---
 # HE1033 Begrepp Tenta (Index)
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## 🌐 Individuella Begrepp (Länkat nätverk)
 

@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Länkad lista
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Komplexitet:** $O(1)$ insättning (om referens finns), $O(n)$ sökning/indexering
 > **Viktigt:** Noder och pekare.
 

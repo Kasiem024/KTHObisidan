@@ -1,17 +1,11 @@
 ---
 tags: [begrepp, HI1027, KTH, labb, programmering, year2025]
+created: 2025-09-02
+updated: 2026-05-26
 ---
 # Lab1 Begrepp HI1027
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Klass(Definition):: En mall eller ritning för att skapa *objekt*. Den definierar de egenskaper (*fields*) och beteenden (*methods*) som objekt av dess typ delar.
 

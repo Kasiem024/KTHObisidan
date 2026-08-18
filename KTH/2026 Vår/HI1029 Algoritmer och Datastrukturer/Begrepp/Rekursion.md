@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Rekursion
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Princip:** En funktion som anropar sig själv.
 > **Viktigt:** Basfall och minnesanvändning.
 

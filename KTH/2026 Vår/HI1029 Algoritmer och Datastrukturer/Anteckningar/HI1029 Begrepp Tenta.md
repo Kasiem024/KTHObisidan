@@ -1,15 +1,11 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, tenta, year2026]
+created: 2026-03-01
+updated: 2026-05-28
 ---
 # HI1029 Begrepp Tenta (Index)
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## 📚 Individuella Begrepp (Länkat nätverk)
 

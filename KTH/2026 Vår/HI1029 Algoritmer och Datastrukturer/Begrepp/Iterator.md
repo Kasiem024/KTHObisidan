@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Iterator
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Mål:** Sekventiell genomgång av en samling.
 > **Viktigt:** Effektivitet för länkade listor.
 

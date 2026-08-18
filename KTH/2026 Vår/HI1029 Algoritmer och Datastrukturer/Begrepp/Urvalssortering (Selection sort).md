@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Urvalssortering (Selection sort)
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Komplexitet:** $O(n^2)$ (jämförelser), $O(n)$ (byten)
 > **Stabil:** Nej
 

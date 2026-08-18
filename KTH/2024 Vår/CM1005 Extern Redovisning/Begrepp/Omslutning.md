@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-01-23
+updated: 2026-08-17
 ---
 
 # Omslutning
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-06-02
 ---
 # Stack
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Princip:** LIFO (Last-In, First-Out)
 > **Viktigt:** Rekursionens call-stack.
 

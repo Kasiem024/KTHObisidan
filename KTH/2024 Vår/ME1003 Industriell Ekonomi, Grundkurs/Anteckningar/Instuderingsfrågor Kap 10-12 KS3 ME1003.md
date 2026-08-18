@@ -1,12 +1,11 @@
 ---
 tags: [ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024, övning]
+created: 2024-02-24
+updated: 2026-05-26
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Instuderingsfrågor Kap 10-12 KS3 ME1003
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Kapitel 10 Bokföring
 

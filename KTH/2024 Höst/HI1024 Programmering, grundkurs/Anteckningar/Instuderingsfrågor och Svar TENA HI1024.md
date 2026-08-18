@@ -1,6 +1,12 @@
 ---
-tags: [nograph]
+tags: [tenta, nograph, HI1024, KTH, year2024, programmering]
+created: 2024-09-23
+updated: 2026-08-17
 ---
+# Instuderingsfrågor och Svar TENA HI1024
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 1. Beskriv vad datalogi handlar om.
 
 **Datalogi** är studiet av information och beräkningar. Det handlar om att utveckla algoritmer och program för att lösa problem, samt att förstå hur datorer fungerar på både hårdvaru- och mjukvarunivå. Genom att använda abstraktion och problemlösningsförmåga kan dataloger skapa innovativa lösningar inom en mängd olika områden.

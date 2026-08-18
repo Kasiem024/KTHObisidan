@@ -1,12 +1,11 @@
 ---
-tags:
-  - KTH
-  - year2026
-  - HE1033
-  - begrepp
-  - nätverk
+tags: [KTH, year2026, HE1033, begrepp, nätverk]
+created: 2026-05-28
+updated: 2026-08-17
 ---
 # Subnätning
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 **Definition:**
 - Processen att dela upp ett fysiskt nätverk i mindre, logiska subnät för att förbättra prestanda och säkerhet.
@@ -20,5 +19,5 @@ Vad är syftet med en Default Gateway?(Definition)::Den IP-adress som en enhet s
 
 ---
 **Relaterade Koncept:**
-- [[IPv4]]
-- [[CIDR Notation]]
+- [[IPv4 och IPv6|IPv4]]
+- [[Subnätning och CIDR|CIDR Notation]]

@@ -1,15 +1,15 @@
 ---
-tags: [CM1008, KTH, year2025]
+tags: [övrigt, CM1008, KTH, year2025, programmering]
+created: 2025-03-19
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Protokoll 1 från Gruppmöte
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
-
----
 Flying Tigers - Grupp 10
 Kurs: CM1008
-Tid: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+Tid: `= this.created`
 Adress: Hälsovägen 11C, 141 57 Huddinge
 
 ---

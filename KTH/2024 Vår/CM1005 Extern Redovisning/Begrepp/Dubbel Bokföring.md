@@ -1,15 +1,18 @@
 ---
-tags: [begrepp, CM1005, ekonomi, kth, me1003, year2024]
+tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+created: 2024-01-23
+updated: 2026-08-17
 ---
 
 # Dubbel Bokföring
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
 > Den dubbla bokföringens grundläggande princip. Varje [[Affärshändelse]] bokförs alltid på två olika konton: På det ena kontot på debetsidan, på det andra på kreditsidan.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=38&selection=77,0,80,61|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 38]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=38&selection=77,0,80,61|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 38]]
 
 ## Kopplat till
 

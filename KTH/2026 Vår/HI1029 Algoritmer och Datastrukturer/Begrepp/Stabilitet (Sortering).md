@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Stabilitet (Sortering)
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Mål:** Bevara inbördes ordning för lika element.
 > **Viktigt:** Avgörande vid sortering i flera steg.
 
@@ -17,12 +22,12 @@ Om vi har en lista med studenter sorterad på namn, och vi sedan sorterar på be
 
 ## Tenta-fokus
 - **Vilka är stabila?**
-	- Stabila: [[Mergesort]], [[Instickssortering]].
-	- Icke-stabila: [[Quicksort]], [[Urvalssortering]], [[Heap]]-sort.
+	- Stabila: [[Mergesort]], [[Instickssortering (Insertion sort)|Instickssortering]].
+	- Icke-stabila: [[Quicksort]], [[Urvalssortering (Selection sort)|Urvalssortering]], [[Heap]]-sort.
 - **Varför spelar det roll?** Ofta en teorifråga på tentan. Svaret handlar om att kunna sortera i flera led (t.ex. först på förnamn, sen på efternamn).
 
 ## Kopplat till
-- **Algoritmer:** [[Mergesort]], [[Quicksort]], [[Instickssortering]], [[Urvalssortering]]
+- **Algoritmer:** [[Mergesort]], [[Quicksort]], [[Instickssortering (Insertion sort)|Instickssortering]], [[Urvalssortering (Selection sort)|Urvalssortering]]
 
 ## Flashcards
 

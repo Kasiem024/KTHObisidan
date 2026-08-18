@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, CM1005, ekonomi, hh1802, year2024]
+tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+created: 2024-02-28
+updated: 2026-08-17
 ---
 
 # Räntabilitet
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

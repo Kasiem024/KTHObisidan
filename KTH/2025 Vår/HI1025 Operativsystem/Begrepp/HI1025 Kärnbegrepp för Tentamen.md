@@ -1,14 +1,11 @@
 ---
 tags: [begrepp, HI1025, KTH, programmering, tenta, year2025]
+created: 2025-05-20
+updated: 2026-05-26
 ---
 # HI1025 Kärnbegrepp för Tentamen
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Del 1: Virtualisering – Processorn (Mekanismer & Policyer)
 

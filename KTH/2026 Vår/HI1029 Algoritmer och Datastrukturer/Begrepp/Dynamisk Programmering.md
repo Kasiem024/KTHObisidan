@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Dynamisk Programmering
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Princip:** Lös delproblem en gång, spara resultatet.
 > **Viktigt:** Överlappande delproblem.
 

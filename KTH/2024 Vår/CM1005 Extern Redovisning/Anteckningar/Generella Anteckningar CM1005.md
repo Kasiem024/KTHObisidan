@@ -1,9 +1,12 @@
 ---
-tags: [CM1005, year2024]
+tags: [övrigt, CM1005, year2024, KTH, ekonomi]
+created: 2024-01-20
+updated: 2026-08-17
 ---
 
 # Generella Anteckningar CM1005
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Länkar
 

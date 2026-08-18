@@ -1,12 +1,11 @@
 ---
-tags: [KTH, ME1003, year2024]
+tags: [övrigt, KTH, ME1003, year2024, ekonomi]
+created: 2024-01-22
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Generella Anteckningar ME1003
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Länkar
 

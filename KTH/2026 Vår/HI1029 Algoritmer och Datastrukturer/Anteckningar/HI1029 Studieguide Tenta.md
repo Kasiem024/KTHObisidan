@@ -1,7 +1,11 @@
 ---
 tags: [KTH, year2026, HI1029, studieguide, tenta, programmering]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # 🎓 Studieguide: HI1029 Algoritmer och Datastrukturer
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Denna guide är sammanställd för att hjälpa dig navigera genom de viktigaste delarna inför tentamen.
 

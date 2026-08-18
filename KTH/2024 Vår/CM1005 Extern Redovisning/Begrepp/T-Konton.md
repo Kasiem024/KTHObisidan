@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, CM1005, ekonomi, kth, me1003, year2024]
+tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+created: 2024-01-22
+updated: 2026-08-17
 ---
 
 # T-Konton
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -19,7 +22,7 @@ Skulder och eget kapital ökar på kredit och minskar på debet.
 
 När man använder T-Konton ska man också följa [[Dubbel Bokföring|Dubbel Bokföringsprincipen]]. Alltså man ska bokföra varje [[Affärshändelse]] på två konton, en gång på debet sidan och en gång på kredit sidan, båda gångerna med samma belopp.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=37&selection=72,0,72,27|Löpande bokföring på konton]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=37&selection=72,0,72,27|Löpande bokföring på konton]]
 
 ![[Kontoplan CM1005.png]]
 

@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-02-13
+updated: 2026-08-17
 ---
 
 # Varutransaktion
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -11,7 +14,7 @@ Varutransaktioner förekommer i alla typer av företag, men är särskilt viktig
 
 En Varutransaktioner kommer till stånd genom att ett avtal sluts mellan två parter, en säljare (leverantör) och en köpare (kund). Varutransaktioner har alltså för det första en ==juridisk== innebörd, varan byter ägare. För det andra innebär transaktionen att en vara också fysiskt förflyttas från säljaren till köparen, detta är transaktionens ==materiella== del. För det tredje finns det alltid en ==finansiell== transaktion kopplas till den materiella, avtalet säger hur mycket köparen ska betala för varan, när betalningen ska erläggas, eventuellt också hur betalningen ska ske.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=119&selection=32,0,32,35|Den nya affärsredovisningen CM1005, page 119]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=119&selection=32,0,32,35|Den nya affärsredovisningen CM1005, page 119]]
 
 ![[Varutransaktioner Grundmodell CM1005.png]]
 

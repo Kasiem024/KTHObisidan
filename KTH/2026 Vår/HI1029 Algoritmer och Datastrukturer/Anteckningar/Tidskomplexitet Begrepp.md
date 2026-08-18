@@ -1,12 +1,11 @@
 ---
-tags:
-  - KTH
-  - year2026
-  - HI1029
-  - begrepp
-  - programmering
+tags: [KTH, year2026, HI1029, begrepp, programmering]
+created: 2026-05-28
+updated: 2026-08-17
 ---
 # Tidskomplexitet
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 **Definition:**
 - Ett teoretiskt mått på hur en algoritms tidsåtgång växer när storleken på indatan ($n$) ökar.
@@ -20,5 +19,4 @@ Vad innebär det att en algoritm är $O(\log n)$?(Definition)::Att tidsåtgånge
 
 ---
 **Relaterade Koncept:**
-- [[Big O Notation]]
-- [[Tidskomplexitet (Big O) - Snabbguide]]
+- [[Tidskomplexitet (Big O)]]

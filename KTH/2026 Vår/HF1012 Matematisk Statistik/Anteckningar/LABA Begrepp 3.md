@@ -1,17 +1,11 @@
 ---
 tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
+created: 2026-05-14
+updated: 2026-05-26
 ---
 # LABA Begrepp 3
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Grafisk relation mellan diskret sannolikhetsfunktion (stem) och fördelningsfunktion (stairs) ;; Höjden av en specifik stolpe motsvarar exakt höjden av trappsteget vid exakt samma x-värde.
 Ett absorberande tillstånd i en Markovkedja ;; Ett tillstånd systemet aldrig kan lämna (raden i övergångsmatrisen P har en 1:a på diagonalen och 0 i övrigt).

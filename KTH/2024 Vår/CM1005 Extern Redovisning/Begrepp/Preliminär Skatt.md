@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-02-26
+updated: 2026-08-17
 ---
 
 # Preliminär Skatt
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -15,7 +18,7 @@ Om du är anställd är det din arbetsgivare som gör ett skatteavdrag (avdrag f
 
 > Uppbörden av preliminär skatt är samordnad med uppbörden av arbetsgivaravgifter. Både arbetsgivaravgift och de anställdas skatter ska redovisas och betalas senast den 12:e i månaden efter den då löneutbetalningen gjordes (uppbördsmånad).
 
-[[Den nya affärsredovisningen CM1005.pdf#page=158&selection=50,0,58,16|Den nya affärsredovisningen CM1005, page 158]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=158&selection=50,0,58,16|Den nya affärsredovisningen CM1005, page 158]]
 
 ### F-Skatt
 

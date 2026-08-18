@@ -1,12 +1,11 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025]
+tags: [begrepp, HI1025, KTH, year2025, programmering]
+created: 2025-03-22
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# HI1025 Begrepp Föreläsning 2
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Begrepp
 

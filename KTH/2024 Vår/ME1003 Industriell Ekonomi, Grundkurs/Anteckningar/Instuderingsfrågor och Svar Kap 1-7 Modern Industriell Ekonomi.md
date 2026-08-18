@@ -1,7 +1,11 @@
 ---
+tags: [tenta, ME1003, ekonomi, KTH, year2024]
+created: 2024-02-03
+updated: 2026-08-17
 ---
 # OBS
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 **Detta är instuderingsfrågor tagna från övningsboken. Det finns inget facit för frågorna utan svaren är mina egna baserat på vad jag har läst i boken och vad som har sagts på föreläsningarna.**
 

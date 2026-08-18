@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Minsta uppspännande träd (MST)
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Mål:** Koppla ihop alla noder med lägsta totala kostnad.
 > **Viktigt:** Inga cykler!
 

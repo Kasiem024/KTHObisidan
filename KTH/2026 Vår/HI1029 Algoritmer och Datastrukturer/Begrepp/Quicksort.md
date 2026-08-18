@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Quicksort
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Komplexitet:** $O(n \log n)$ (medel), $O(n^2)$ (värsta fall)
 > **Stabil:** Nej | **In-place:** Ja
 

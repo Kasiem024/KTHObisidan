@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-01-16
+updated: 2026-08-17
 ---
 
 # Inbetalning
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -13,7 +16,7 @@ En inbetalning är när det kommer in pengar till företaget. Vid kontantförsä
 
 > Inbetalningar är inflödet av pengar och är kopplade till betalningstidpunkten, vilken är en annan tidpunkt än försäljningstidpunkten om företaget säljer på kredit.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=17,1,26,23|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=31&selection=17,1,26,23|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Inbetalning kan ses som likviditet, penningflödet. Det sker i banken, plusgiro och kassan.
 

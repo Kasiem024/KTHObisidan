@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-01-16
+updated: 2026-08-17
 ---
 
 # Kostnad
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -17,7 +20,7 @@ Amortering är aldrig en kostnad.
 
 > Kostnader är anskaffningsvärdet för de resurser företaget förbrukar under en viss period, exempelvis ett år.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=62,0,71,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=31&selection=62,0,71,18|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 Kostnad visar vad för resurser har förbrukat under en viss period. INTE vad vi har anskaffat.
 

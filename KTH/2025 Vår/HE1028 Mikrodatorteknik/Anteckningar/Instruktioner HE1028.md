@@ -1,12 +1,11 @@
 ---
-tags: [HE1028, year2025]
+tags: [övrigt, HE1028, year2025, KTH, hårdvara]
+created: 2025-01-20
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Instruktioner HE1028
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## RISC-V Instruction Set
 

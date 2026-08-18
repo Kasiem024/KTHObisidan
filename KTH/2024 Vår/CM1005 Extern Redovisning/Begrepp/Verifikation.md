@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, CM1005, ekonomi, kth, me1003, year2024]
+tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+created: 2024-01-31
+updated: 2026-08-17
 ---
 
 # Verifikation
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

@@ -1,12 +1,11 @@
 ---
-tags: [begrepp, CM1005/CM1005KS4, ekonomi, kth, me1003, ME1003/ME1003KS3, year2024]
+tags: [begrepp, CM1005/CM1005KS4, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+created: 2024-03-02
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Reservfond
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

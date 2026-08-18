@@ -1,18 +1,13 @@
 ---
 tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
+created: 2026-05-14
+updated: 2026-05-26
 ---
 # LABA Begrepp 1
 
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
-# LABA Begrepp - Kategori 1 (Grundläggande)
+## LABA Begrepp - Kategori 1 (Grundläggande)
 
 Matlab-kommandot `binopdf(x, n, p)` ;; Beräknar punktsannolikheten $P(X=x)$ för en binomialfördelning. 
 Matlab-kommandot `binocdf(x, n, p)` ;; Beräknar den kumulativa fördelningsfunktionen $P(X \le x)$ för en binomialfördelning.

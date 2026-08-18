@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HI1029, KTH, programmering, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # Backtracking
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Princip:** Prova en väg, backa om det skiter sig.
 > **Viktigt:** Systematisk sökning.
 

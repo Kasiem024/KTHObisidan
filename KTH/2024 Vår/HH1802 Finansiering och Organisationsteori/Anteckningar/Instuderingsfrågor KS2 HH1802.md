@@ -1,12 +1,11 @@
 ---
 tags: [ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024, övning]
+created: 2024-03-29
+updated: 2026-05-26
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Instuderingsfrågor KS2 HH1802
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Kapitel 3
 

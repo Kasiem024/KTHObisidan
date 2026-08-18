@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, CM1005, ekonomi, kth, me1003, year2024]
+tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+created: 2024-03-01
+updated: 2026-08-17
 ---
 
 # BAS-Kontoplan
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -29,7 +32,7 @@ BAS består av 10 kontoklasser, 1-8 är de viktiga:
 
 [BAS-kontoplan, Visma](https://vismaspcs.se/ditt-foretagande/driva-eget-foretag/kontoplan)
 
-[[Den nya affärsredovisningen CM1005.pdf#page=105&selection=27,0,27,10|Den nya affärsredovisningen CM1005, page 105]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=105&selection=27,0,27,10|Den nya affärsredovisningen CM1005, page 105]]
 
 ## Kopplat till
 

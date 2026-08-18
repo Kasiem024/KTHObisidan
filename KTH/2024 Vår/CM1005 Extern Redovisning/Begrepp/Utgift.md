@@ -1,9 +1,12 @@
 ---
-tags: [begrepp, year2024]
+tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+created: 2024-01-16
+updated: 2026-08-17
 ---
 
 # Utgift
 
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 
@@ -15,7 +18,7 @@ Innan man har förbrukat det, när man lagt det på lagret.
 
 > Utgifter är vad företaget ger för de resurser det anskaffar, och de upp står vid anskaffningstillfället. I redovisningen registreras utgifter normalt då företaget mottar en faktura, ett kvitto e.d. som bekräftar (verifierar) att anskaffningen har ägt rum.
 
-[[Den nya affärsredovisningen CM1005.pdf#page=31&selection=38,1,48,26|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
+[[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=31&selection=38,1,48,26|Den nya affärsredovisningen Per Arvidson, Thomas Carrington, Gustav Johed 2018, page 31]]
 
 När man skickar en faktura kan man redovisa det som en utgift.
 

@@ -1,17 +1,11 @@
 ---
 tags: [begrepp, HI1027, KTH, programmering, tenta, year2025]
+created: 2025-10-11
+updated: 2026-05-26
 ---
 # HI1027 Begrepp inför TEN1
 
----
-
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
-
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 Hög kohesion(Definition);; Innebär att en klass eller modul har ett **enda, väldefinierat ansvar**. All funktionalitet i klassen bidrar direkt till detta ansvar, vilket gör koden lättare att förstå, underhålla och återanvända.
 <!--SR:!2025-10-16,2,248!2000-01-01,1,250-->

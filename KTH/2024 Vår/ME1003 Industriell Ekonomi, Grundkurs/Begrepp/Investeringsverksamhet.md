@@ -1,12 +1,11 @@
 ---
-tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS4, KTH, year2024]
+tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS4, KTH, year2024, ME1003]
+created: 2024-04-27
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Investeringsverksamhet
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

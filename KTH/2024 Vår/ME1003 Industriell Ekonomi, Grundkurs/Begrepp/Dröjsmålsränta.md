@@ -1,12 +1,11 @@
 ---
-tags: [begrepp, CM1005, CM1005/CM1005KS3, ekonomi, kth, year2024]
+tags: [begrepp, CM1005, CM1005/CM1005KS3, ekonomi, KTH, year2024, ME1003]
+created: 2024-02-13
+updated: 2026-08-17
 ---
-Skapad: `=dateformat(this.file.ctime, "D, HH:mm, EEEE ")`
+# Dröjsmålsränta
 
-Uppdaterad: `=dateformat(this.file.mtime, "D, HH:mm, EEEE")`
-
-
----
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
 
 ## Definition
 

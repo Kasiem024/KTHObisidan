@@ -1,7 +1,12 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
+created: 2026-05-28
+updated: 2026-05-28
 ---
 # BGP
+
+**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
+
 > **Typ:** EGP (External Gateway Protocol)
 > **Metod:** Path Vector.
 
