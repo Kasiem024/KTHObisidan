@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Stabilitet (Sortering)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Mål:** Bevara inbördes ordning för lika element.
 > **Viktigt:** Avgörande vid sortering i flera steg.
 

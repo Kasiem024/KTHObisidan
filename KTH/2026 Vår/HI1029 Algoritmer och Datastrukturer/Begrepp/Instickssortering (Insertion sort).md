@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Instickssortering (Insertion sort)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Komplexitet:** $O(n^2)$ (värsta fall), $O(n)$ (bästa fall)
 > **Stabil:** Ja
 

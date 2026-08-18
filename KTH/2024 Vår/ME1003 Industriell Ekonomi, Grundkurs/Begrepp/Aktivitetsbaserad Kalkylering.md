@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Aktivitetsbaserad Kalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Aktivitetsbaserad Kalkylering (ABC-Kalkylering) grundar sig i att inte betrakta kostnader med hjälp av begreppen fast/rörlig eller direkt/indirekt. Man ska istället utgå från att aktiviteter utförs i företaget och att det är dessa aktiviteter, inte avdelningarna, som ger upphov till kostnaderna.

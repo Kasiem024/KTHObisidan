@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Reala Optioner
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Reala Optioner är samlingsnamnet för de optioner som kan påverka en investerings framtida kassaflöde/värde. En option ger innehavaren rätten att framtiden ta en specifik åtgärd.

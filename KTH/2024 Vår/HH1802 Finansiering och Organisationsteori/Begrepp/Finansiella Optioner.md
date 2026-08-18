@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Finansiella Optioner
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Finansiella Optioner är samlingsnamnet för ==säljoptioner== och ==köpoptioner== när det kommer till aktier. En option ger innehavaren rätten att framtiden ta en specifik åtgärd.

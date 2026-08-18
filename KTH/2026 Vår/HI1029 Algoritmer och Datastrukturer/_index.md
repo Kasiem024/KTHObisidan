@@ -1,4 +1,5 @@
 ---
+title: "HI1029 Algoritmer och Datastrukturer"
 tags: [index, HI1029, KTH, year2026]
 ---
 # 📚 HI1029 Algoritmer och Datastrukturer

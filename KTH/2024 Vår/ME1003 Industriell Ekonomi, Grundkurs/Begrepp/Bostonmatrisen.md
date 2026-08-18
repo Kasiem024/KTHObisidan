@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Bostonmatrisen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bostonmatrisen handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa. Om båda är höga för en viss produkt kallar man den för en stjärna, då ska man investera i den. Medan om båda är låga kallas den för byracka, då ska man döda produkten.

@@ -1,4 +1,5 @@
 ---
+title: "SF1686 Flervariabelanalys"
 tags: [index, SF1686, KTH, year2025]
 ---
 # 📚 SF1686 Flervariabelanalys

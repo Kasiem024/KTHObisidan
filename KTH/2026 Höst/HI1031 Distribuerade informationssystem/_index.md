@@ -1,4 +1,5 @@
 ---
+title: "HI1031 Distribuerade informationssystem"
 tags: [index, HI1031, KTH, databaser, programmering, year2026]
 ---
 # 📚 HI1031 Distribuerade informationssystem

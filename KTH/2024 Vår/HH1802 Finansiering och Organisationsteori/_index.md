@@ -1,4 +1,5 @@
 ---
+title: "HH1802 Finansiering och Organisationsteori"
 tags: [index, HH1802, KTH, year2024]
 ---
 # 📚 HH1802 Finansiering och Organisationsteori

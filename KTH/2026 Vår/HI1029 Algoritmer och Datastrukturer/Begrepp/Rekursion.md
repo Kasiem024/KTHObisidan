@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Rekursion
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Princip:** En funktion som anropar sig själv.
 > **Viktigt:** Basfall och minnesanvändning.
 

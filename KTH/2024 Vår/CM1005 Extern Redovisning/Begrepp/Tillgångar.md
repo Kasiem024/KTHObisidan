@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Tillgångar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Tillgångar är resurser som kan förväntas ge ekonomiska fördelar i framtiden och är summan av ett företags förmögenhet. Också en del av [[Balansräkning]].

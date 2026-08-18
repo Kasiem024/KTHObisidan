@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Graf-representationer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Mål:** Spara noder och bågar i minnet.
 > **Viktigt:** Glesa vs Täta grafer.
 

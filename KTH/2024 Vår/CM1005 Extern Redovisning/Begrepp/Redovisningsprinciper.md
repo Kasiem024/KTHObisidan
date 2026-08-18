@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Redovisningsprinciper
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Redovisningsprinciper är olika principer som är vägledande för hur redovisning ska upprättas för företag. Huvudsyftet med dessa principer är att olika intressenter ska få en rättvisande bild av det aktuella företagets ekonomiska ställning.

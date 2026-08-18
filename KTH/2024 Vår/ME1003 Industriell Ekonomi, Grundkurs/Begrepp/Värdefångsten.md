@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Värdefångsten
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Hur får man betalt, vad är betalningsmodellen? Ibland kan betalningsmodellen vara dold och inte vad man skulle först tro. Ett företag kan erbjuda en gratis plattform och tjäna pengar på reklam (Google, Youtube). Exempelvis så tjänar SF på maten inte biobiljetterna.

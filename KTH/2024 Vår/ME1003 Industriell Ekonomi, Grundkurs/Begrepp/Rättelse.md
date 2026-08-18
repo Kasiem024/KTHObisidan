@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Rättelse
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Rättelse ska göras är något går fel i [[Bokföring]], den ska inte utplåna den tidigare konteringen samt ska man kunna spåra vem som gjort den och varför.

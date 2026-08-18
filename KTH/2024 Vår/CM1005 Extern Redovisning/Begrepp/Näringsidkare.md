@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Näringsidkare
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En Näringsidkare är en fysisk eller juridisk person som driver en näringsverksamhet som exempelvis en [[Enskild Näringsverksamhet]], [[Aktiebolag]] eller [[Handelsbolag]].

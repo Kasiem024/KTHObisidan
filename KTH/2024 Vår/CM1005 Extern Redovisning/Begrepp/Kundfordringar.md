@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Kundfordringar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kundfordringar är en säljares tillgodohavande hos en köpare, som oftast uppstår när säljaren utfärdar en faktura. Fordran upphör när köparen betalar fakturan.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Rationaliseringsinvesteringar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Rationaliseringsinvesteringar är operativa och förbättrar förutsättningarna för den löpande verksamheten. Exempelvis nya arbetsmetoder och eliminering av en trång sektor.

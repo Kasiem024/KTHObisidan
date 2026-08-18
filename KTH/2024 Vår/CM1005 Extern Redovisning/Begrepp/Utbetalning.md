@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Utbetalning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Med utbetalning menas tidpunkten när företaget betalar utgiften. Utbetalningen består av det faktiska belopp som företaget betalar för en viss [[Utgift]].

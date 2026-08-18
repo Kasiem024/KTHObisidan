@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Avräkningsnota
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Avräkningsnota är en skriftlig handling som upprättas vid köp eller försäljning av aktier och andra värdepapper. Innehåller exempelvis köpesumma, [[Courtage]] och stämpelavgift.

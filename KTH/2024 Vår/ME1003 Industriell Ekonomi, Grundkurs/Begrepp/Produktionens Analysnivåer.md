@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktionens Analysnivåer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Man kan dela in [[Produktion]] på tre analysnivåer

@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Binär sökning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Komplexitet:** $O(\log n)$
 > **Krav:** Sorterad indata.
 

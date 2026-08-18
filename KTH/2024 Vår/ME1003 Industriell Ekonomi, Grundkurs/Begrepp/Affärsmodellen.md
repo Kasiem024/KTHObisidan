@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Affärsmodellen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En affärsmodell (eller företagsmodell som det också kallas) är receptet för hur intäkter kommer in till företaget, hur varor och tjänster produceras samt hur kunden slutligen får tillgång till och upplever värdet av varan eller tjänsten. Affärsmodellen styr också hur merförsäljning och nykundsbearbetning ska gå till. Den valda affärsmodellen påverkar alla processer i företaget.

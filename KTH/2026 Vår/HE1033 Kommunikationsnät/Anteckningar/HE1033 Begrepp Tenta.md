@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # HE1033 Begrepp Tenta (Index)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## 🌐 Individuella Begrepp (Länkat nätverk)
 
 Detta nav innehåller fördjupad information om kommunikationsnät, kategoriserat efter OSI-lager och funktion.

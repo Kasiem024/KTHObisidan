@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Marknadsföringsmixen 4P
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kotler byggde på arbetet av McCarthy för att skapa sin Marknadsföringsmix. Den kallas de 4P:

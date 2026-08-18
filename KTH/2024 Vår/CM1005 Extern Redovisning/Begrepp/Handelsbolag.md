@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Handelsbolag
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett handelsbolag är ett företag som har två eller flera bolagsmän, alltså delägare. Bolagsmännen kan vara privatpersoner eller företag. Handelsbolaget är i sig en juridisk person.

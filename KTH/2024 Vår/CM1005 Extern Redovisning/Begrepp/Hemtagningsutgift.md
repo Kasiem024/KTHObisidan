@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Hemtagningsutgift
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Hemtagningsutgifter, eller hemtagningskostnader, är köparens utgifter för att få hem varan från säljarens ort till eget lager. Exempelvis:

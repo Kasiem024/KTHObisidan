@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Intäkt
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Begreppet intäkt är kopplat till företagets redovisning och beskattning. Intäkten är en periodiserad inkomst. Intäkten är de sammanlagda inkomsterna som hör till en viss tidsperiod, t.ex. ett år eller en månad. Att periodisera inkomster innebär att inkomsterna placeras i rätt redovisningsperiod, med utgångspunkt i när de skapats. Här tittar man mest på när en prestation faktiskt har utförts, och bryr sig mindre om när prestationen har fakturerats eller betalats.

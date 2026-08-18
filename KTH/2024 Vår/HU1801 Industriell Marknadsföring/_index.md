@@ -1,4 +1,5 @@
 ---
+title: "HU1801 Industriell Marknadsföring"
 tags: [index, HU1801, KTH, year2024]
 ---
 # 📚 HU1801 Industriell Marknadsföring

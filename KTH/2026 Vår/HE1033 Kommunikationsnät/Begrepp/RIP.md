@@ -5,8 +5,6 @@ updated: 2026-08-18
 ---
 # RIP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Typ:** IGP (Internal Gateway Protocol)
 > **Metod:** Distance Vector.
 

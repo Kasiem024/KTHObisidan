@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kapital
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kapital är ett företags resurser. Det är alltså det som används i ett företags verksamhet, så som maskiner och annan utrustning. Kapitalet ägs ofta av företaget men innebär också sådan utrustning, lokaler, maskiner och annat som hyrs in och kan tänkas användas i verksamheten.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Grundbokföring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Grundbokföring innebär att alla [[Affärshändelse]] ska bokföras på ett sådant sätt att de kan presenteras i den ordning som de har registrerats, det kallas också ==registreringsordning==. Kontanta in- och utbetalningar måste bokföras senast påföljande arbetsdag. Med kontanta in- och utbetalningar menas transaktioner som rör kassan. Denna Grundbokföring kan göras separat, t ex i en kassajournal.

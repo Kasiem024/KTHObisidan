@@ -1,4 +1,5 @@
 ---
+title: "HI2002 Routing i IP-nät"
 tags: [index, HI2002, KTH, nätverk, year2026]
 ---
 # 📚 HI2002 Routing i IP-nät

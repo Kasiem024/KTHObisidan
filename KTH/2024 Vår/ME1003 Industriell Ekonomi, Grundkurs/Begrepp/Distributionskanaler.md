@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Distributionskanaler
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Distributionskanaler har med hur många mellanled det finns mellan producenten av en produkt och själva kunden. Ju mer steg det finns ju dyrare priset av en produkt blir för kunden.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Civilrättsliga Värderingsreglerna
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Civilrättsliga Värderingsreglerna är maximivärderingsregler, de fastställer de högsta belopp vartill [[Tillgångar]] får tas upp i [[Balansräkning]]. Syftet med dessa regler är att skydda intressenter mot att bli vilseledda när det gäller information om företagets ställning och resultat genom att [[Årsredovisning]] ger en alltför optimistisk bild av företaget.

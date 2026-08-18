@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Statsskuldväxel
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Statsskuldväxel är ett [[Diskonteringspapper]] som ges ut av [[Riksgälden]]. Eftersom det är ett diskonteringspapper får långivaren sin avkastning på förfallodatumet.

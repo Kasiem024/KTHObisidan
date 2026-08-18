@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Instuderingsfrågor Kap 14-16 KS1 ME1003
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Kapitel 14 Affärsstrategier och strategimodeller
 
 1. Vad menas med en affärsstrategi?

@@ -5,11 +5,9 @@ updated: 2026-08-17
 ---
 # Protokoll 4 från Gruppmöte
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Flying Tigers - Grupp 10
 Kurs: CM1008
-Tid: `= this.created`
+Tid: 2025-03-29
 Adress: Discord
 
 ---

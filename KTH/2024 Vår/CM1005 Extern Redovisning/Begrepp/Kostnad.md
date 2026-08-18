@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En kostnad definieras som en periodiserad utgift. Periodisering av utgifter innebär att utgifterna hänförs till en viss tidsperiod, t.ex. ett år eller en månad. Företagets kostnader uppkommer i takt med resursförbrukningen i verksamheten. Det är först när företaget förbrukar en resurs som en kostnad uppstår (det kan dock mycket väl ha uppstått en [[Utgift]] och även en [[Utbetalning]]). Kostnaden har alltså ingenting med anskaffningstidpunkten eller betalningstidpunkten för en resurs att göra. Istället är det tidsperioden för när resurser förbrukas som avses.

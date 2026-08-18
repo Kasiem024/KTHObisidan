@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 8
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Inter-Process Communication (IPC) (Interprocesskommunikation) (Definition):: Mekanismer som tillåter olika processer att utbyta data och synkronisera sina aktiviteter. Detta kan ske mellan processer på samma dator eller över ett nätverk. (Tänk: *Hur processer pratar med varandra och samarbetar*).

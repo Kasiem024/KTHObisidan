@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Destinationsprincipen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Destinationsprincipen säger att [[Moms]] är en beskattning av konsumtion, alltså momsen tillfaller staten i det land där varan konsumeras, vart konsumenten är.

@@ -5,8 +5,6 @@ updated: 2026-08-18
 ---
 # Sliding Window
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 2 & 4
 > **Mål:** Utnyttja bandbredden och styra flödet.
 

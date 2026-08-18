@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Subnätning och CIDR
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 3 (Nätverk)
 > **Matte:** $2^{32-x}$ adresser.
 

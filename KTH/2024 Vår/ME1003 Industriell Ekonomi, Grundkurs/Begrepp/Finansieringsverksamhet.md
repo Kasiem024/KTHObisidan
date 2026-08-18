@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Finansieringsverksamhet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Finansieringsverksamhetens [[Kassaflödesanalys]], handlar om pengar som strömmar in eller ut från företaget genom finansieringsaktiviteter.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Särkostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Särkostnader som direkt orsakats av den handling eller det beslut kalkylen avser. Alltså om kostnaden uppstår för att en viss produkt har producerats blir det en Särkostnad för just den produkten.

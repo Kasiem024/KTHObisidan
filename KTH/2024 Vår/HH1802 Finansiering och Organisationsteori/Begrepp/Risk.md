@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Risk
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Risk handlar om att försöka veta vad som kommer hända i framtiden, dock råder det osäkerhet då oväntade händelser kan ske.

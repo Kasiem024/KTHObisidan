@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Lagfart
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Lagfart får man genom registrering av fastighetsköp hos inskrivningsmyndigheten, Lantmäteriet. Det är ett bevis på att man äger fastigheten.

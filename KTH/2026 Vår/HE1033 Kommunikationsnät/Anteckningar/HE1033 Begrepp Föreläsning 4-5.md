@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HE1033 Begrepp Föreläsning 4-5
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 IP (Internet Protocol) (Definition);; Ett **förbindelselöst** (connectionless) protokoll som arbetar enligt **"best-effort"**-principen utan garanterad leverans.
 <!--SR:!2026-03-17,5,186!2026-03-16,4,186-->
 

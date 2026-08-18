@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Redovisningens Kvalitativa Egenskaper
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En finansiell rapport ska kännetecknas av vissa kvalitativa egenskaper som gör den användbar. Dessa egenskaper är:

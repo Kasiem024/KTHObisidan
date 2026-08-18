@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Urvalssortering (Selection sort)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Komplexitet:** $O(n^2)$ (jämförelser), $O(n)$ (byten)
 > **Stabil:** Nej
 

@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Dynamisk Programmering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Princip:** Lös delproblem en gång, spara resultatet.
 > **Viktigt:** Överlappande delproblem.
 

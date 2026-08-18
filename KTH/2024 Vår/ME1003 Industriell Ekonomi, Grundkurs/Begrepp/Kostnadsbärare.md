@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kostnadsbärare
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kostnadsbärare är de varor eller tjänster som företaget producerar. Alltså ska varje produkt bära sin egna kostnad. Man kan också säga att det är ett annat namn för produkt.

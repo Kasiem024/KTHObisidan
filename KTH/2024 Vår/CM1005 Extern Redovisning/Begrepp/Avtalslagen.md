@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Avtalslagen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Avtalslagen innefattar generella regler och riktlinjer som gäller när man ingår ett avtal, och utgör stommen i den allmänna avtalslagstiftningen.

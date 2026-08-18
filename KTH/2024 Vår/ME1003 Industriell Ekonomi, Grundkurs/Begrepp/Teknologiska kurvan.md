@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Teknologiska kurvan
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kan också kallas Technological Trajectory.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kalkylränta
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kalkylränta (r) uttrycker ==avkastningskravet== som ställs på en [[Investering]] och används i en [[Investeringskalkylering]] till att räkna om betalningar i tiden. Denna ränta är något som bestäms internt i företaget. Med avkastning menas vinst på satsat kapital.

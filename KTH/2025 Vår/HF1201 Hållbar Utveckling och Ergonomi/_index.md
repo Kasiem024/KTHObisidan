@@ -1,4 +1,5 @@
 ---
+title: "HF1201 Hållbar Utveckling och Ergonomi"
 tags: [index, HF1201, KTH, year2025]
 ---
 # 📚 HF1201 Hållbar Utveckling och Ergonomi

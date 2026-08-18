@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Obligation
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Obligation är ett lån eller ett skuldebrev. En låntagare, eller emittent, som behöver finansiera sin verksamhet kan utfärda Obligationer. Emittenten kan vara en stat, kommun eller företag. Investerare som köper Obligationer, alltså lånar ut pengar till emittenten, kan vara: fondbolag, institutioner, pensionsbolag eller privata investerare.

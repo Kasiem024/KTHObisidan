@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Rörlig Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Rörlig Kostnad (RK) varierar med verksamhetsvolym. Alltså ändras de beroende på hur mycket som tillverkas och säljs.

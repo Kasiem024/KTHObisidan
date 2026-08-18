@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Processtyper inom Varuproduktion
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 - ==Projekt==: Används vid produktion av unika varor och tjänster, anpassat efter projektuppdraget, alltså är flexibilitet viktigt.

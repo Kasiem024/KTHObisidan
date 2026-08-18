@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Instuderingsfrågor och Svar Kap 8-9 Modern Industriell Ekonomi
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Kapitel 8 Ekonomisk Analys och Produktkalkylering
 
 1. Varför är det viktigt att företag löpande analyserar olika ekonomiska förhållanden i sin verksamhet? Ge minst två anledningar.

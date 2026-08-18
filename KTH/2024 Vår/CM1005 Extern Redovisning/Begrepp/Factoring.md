@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Factoring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Factoring är belåning eller försäljning av kundfordringar. Det går ut på att ett företag tar ut et lån från ett factoringbolag och som pant ger de sina fakturor som de skickar till sina kunder till factoringbolaget. Kunden betalar alltså sin faktura till factoringbolaget och inte till företaget som levererade varan/tjänsten som de betalar för. Factoringbolaget tar en avgift för denna tjänst från företaget.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Blue Ocean Strategi
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Go where profits and growth are and where the competition isn't

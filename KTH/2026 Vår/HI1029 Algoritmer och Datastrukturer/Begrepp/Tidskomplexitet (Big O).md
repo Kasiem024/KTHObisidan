@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Tidskomplexitet (Big O)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Mål:** Förstå hur algoritmers körtid skalar med indatastorlek $n$.
 > **Viktigt:** Fokusera på tillväxttakt snarare än exakta sekunder.
 

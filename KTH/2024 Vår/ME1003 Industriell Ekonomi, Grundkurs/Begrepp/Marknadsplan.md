@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Marknadsplan
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 För att [[Marknadsföring]] ska bli optimal måste man planera noga och göra en marknadsplan. Kontrollera att budgeten och marknadsplanen håller genom att regelbundet göra uppföljningar.

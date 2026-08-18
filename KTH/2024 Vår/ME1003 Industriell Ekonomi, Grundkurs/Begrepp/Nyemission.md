@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Nyemission
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Nyemission innebär att ett företag get ut ett antal nya aktier som kan köpas av dem som anmält sitt intresse genom att teckna sig för emission. Nuvarande aktieägare kan ha företrädesrätt till de nya aktierna, men emission kan också riktas till nya aktieägare. Om emission sker till överkurs det vill säga att emissionskursen (det värde som aktien säljs för) överstiget kvotvärdet, bokförs skillnaden mellan kvotvärdet och försäljningskursen som en [[Överkursfond]]. De flesta emissioner sker till överkurs.

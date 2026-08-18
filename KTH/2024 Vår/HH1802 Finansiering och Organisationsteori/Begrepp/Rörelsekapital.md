@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Rörelsekapital
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Rörelsekapital är värdet av alla [[Omsättningstillgångar]] minus värdet av kortfristig [[Skuld]]. Alltså påverkas Rörelsekapitalets storlek av den löpande verksamheten.

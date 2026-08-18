@@ -1,4 +1,5 @@
 ---
+title: "CM1008 Projektkurs i Applikationsutveckling"
 tags: [index, CM1008, KTH, year2025]
 ---
 # 📚 CM1008 Projektkurs i Applikationsutveckling

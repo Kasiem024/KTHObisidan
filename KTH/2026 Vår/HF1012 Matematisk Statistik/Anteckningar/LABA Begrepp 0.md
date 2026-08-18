@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # LABA Begrepp 0
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Stokastisk variabel ($X$) ;; Ett tal vars exakta värde bestäms av slumpen (t.ex. antalet prickar vid ett tärningskast eller väntetid i kö).
 Väntevärde ($E(X)$ eller $\mu$) ;; Det teoretiska medelvärdet om man skulle upprepa ett slumpmässigt försök oändligt många gånger. (Det värde man "förväntar" sig i snitt).
 Varians ($V(X)$ eller $\sigma^2$) ;; Ett statistiskt mått på hur mycket värdena i en fördelning sprider sig (varierar) kring väntevärdet.

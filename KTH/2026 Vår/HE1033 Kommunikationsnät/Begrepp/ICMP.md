@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # ICMP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 3 (Nätverk)
 > **Mål:** Diagnostik och felhantering.
 

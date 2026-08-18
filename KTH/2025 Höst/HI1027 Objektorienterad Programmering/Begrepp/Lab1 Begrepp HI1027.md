@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Lab1 Begrepp HI1027
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Klass(Definition):: En mall eller ritning för att skapa *objekt*. Den definierar de egenskaper (*fields*) och beteenden (*methods*) som objekt av dess typ delar.
 
 Objekt(Definition):: En *instans* av en klass. Det är en självständig enhet som består av både data (*state*) och procedurer för att manipulera datan (*behavior*).

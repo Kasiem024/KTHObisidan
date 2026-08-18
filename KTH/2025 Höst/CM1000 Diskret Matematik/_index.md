@@ -1,4 +1,5 @@
 ---
+title: "CM1000 Diskret Matematik"
 tags: [index, CM1000, KTH, year2025]
 ---
 # 📚 CM1000 Diskret Matematik

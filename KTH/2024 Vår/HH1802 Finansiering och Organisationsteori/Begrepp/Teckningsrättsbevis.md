@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Teckningsrättsbevis
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Teckningsrättsbevis utfärdas för gamla aktier och ger innehavaren rätt att teckna nya aktier. Om ägaren inte vill delta i [[Nyemission]] kan Teckningsrättsbeviset säljas för att få kompensation för sjunkandet av aktiens marknadsvärde.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Utvecklingstratten
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Utvecklingstratten syftar till att ett företag kan ha många små förstudier och forskningsprojekt igång samtidigt som är i den tidiga fasen av sitt liv men att alla dessa idéer inte kommer leda till lanserade produkter. De studier som visar potential kommer investeras i och eventuellt bli ett produktutvecklingsprojekt. Dessa projekt är betydligt mer väldefinerade och brukar använda cirka 90% av ett företags utvecklingsbudget. Nästan alla dessa projekt kommer leda till en lanserad produkt.

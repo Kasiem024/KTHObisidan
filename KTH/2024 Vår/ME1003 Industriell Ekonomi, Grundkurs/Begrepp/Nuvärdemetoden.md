@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Nuvärdemetoden
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Nuvärdemetoden är en ränteräkningsmetod som med hjälp av [[Kalkylränta]] räknar om de olika investeringsalternativens betalningar till en och samma tidpunkt, till början av det år då ==grundinvesteringen== görs.

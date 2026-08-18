@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Resultatprognos
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Resultatprognosen används för att uppskatta [[Intäkt]] och [[Kostnad]] för ett [[Räkenskapsår]]. Resultatprognosen är viktig när företag ska göra en [[Finansiell Plan]] då en uppskattning av årets resultat kan utläsas.

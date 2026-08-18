@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Interimsskuld
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Interimsskulder är inom redovisning av två olika slag, ==upplupna kostnader== och ==förutbetalda intäkter==. Endast de [[Kostnad]] och [[Intäkt]] som hör till räkenskapsåret ska påverka resultatet. Övrig [[Utbetalning]] och [[Inbetalning]] hör till kommande [[Räkenskapsår]] och måste därför periodiseras och bokas upp som tillgångar respektive skulder i [[Årsbokslut]]. Detta gäller bland annat Interimsskulder.

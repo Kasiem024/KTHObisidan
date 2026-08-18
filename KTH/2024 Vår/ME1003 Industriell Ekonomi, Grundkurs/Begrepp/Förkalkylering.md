@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Förkalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Förkalkylering är när ett företag försöker beräkna sina kostnader för en viss produkt i förväg.

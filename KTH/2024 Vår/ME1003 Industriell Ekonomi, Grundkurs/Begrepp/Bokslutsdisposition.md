@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Bokslutsdisposition
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bokslutsdispositioner ger företag möjlighet att inom vissa ramar minska det redovisade resultatet. De är bokföringsmässiga kostnader som redovisas som kostnader i [[Resultaträkning]] och som samtidigt ger upphov till [[Obeskattade Reserver]] i [[Balansräkning]].

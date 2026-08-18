@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Inbetalning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En inbetalning är när det kommer in pengar till företaget. Vid kontantförsäljning uppkommer, som vi konstaterat ovan, tidpunkten för inkomst och inbetalning samtidigt. Men så är det inte vid försäljning på kredit, d.v.s. mot faktura. Där löper en viss tid, vanligen 10–30 dagar (kredittiden), mellan inkomst- och inbetalningsdagen.

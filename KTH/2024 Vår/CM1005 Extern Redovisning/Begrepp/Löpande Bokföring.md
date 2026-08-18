@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Löpande Bokföring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 [[Affärshändelse|Affärshändelser]] i företaget ska bokföras löpande.

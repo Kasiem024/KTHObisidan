@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Diskonteringspapper
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Diskonteringspapper, eller nollkupongare, är en speciell [[Obligation]] som inte har en direkt ränta utan istället löses obligationen in för ett högre belopp än vad den emitterades för, exempelvis [[Statsskuldväxel]].

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Likviditet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Likviditet är ett [[Nyckeltal]] som visar företagets kortsiktiga betalningsförmåga. Alltså förmågan att kunna betala sina räkningar på kort sikt, vad man har på bankkontot.

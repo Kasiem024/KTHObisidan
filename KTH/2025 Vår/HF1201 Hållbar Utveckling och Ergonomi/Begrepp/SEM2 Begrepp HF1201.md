@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # `=this.file.name`
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Livscykelanalys, LCA (Definition):: Metod för att bedöma miljöpåverkan genom en produkts hela livscykel.  
 
 Miljöinriktade livscykelanalyser (Definition):: LCA med fokus på *miljöaspekter* som utsläpp och resursförbrukning.  

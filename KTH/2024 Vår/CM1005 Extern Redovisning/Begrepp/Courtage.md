@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Courtage
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Courtage, även kallat kommission, är den avgift som du betalar när du handlar med aktier. Courtage utgår på alla dina aktieaffärer, alltså både när du köper och säljer aktier. Det inräknas i de affärer du gör och ingår i likvidbeloppet. Du får alltid ett preliminärt courtage innan du lägger en order. Hur mycket courtage du får betala beror på affärernas storlek och vilken typ av värdepapper du handlar.

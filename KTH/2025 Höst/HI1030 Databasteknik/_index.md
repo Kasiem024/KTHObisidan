@@ -1,4 +1,5 @@
 ---
+title: "HI1030 Databasteknik"
 tags: [index, HI1030, KTH, year2025]
 ---
 # 📚 HI1030 Databasteknik

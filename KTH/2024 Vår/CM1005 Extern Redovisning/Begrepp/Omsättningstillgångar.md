@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Omsättningstillgångar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Omsättningstillgångar är Tillgångar som löpande förbrukas, säljs eller omvandlas till likvida medel. Saker som omsätts och ändras hela tiden.

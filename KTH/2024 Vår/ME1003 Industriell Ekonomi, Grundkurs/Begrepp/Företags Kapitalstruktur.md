@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Företags Kapitalstruktur
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Företags Kapitalstruktur är av stor betydelse för de interna överväganden ett företag gör avseende finansiering. Det kapital som finansierar företaget kan delas in i 3 delar. Ordnade efter ==löptid==, alltså tiden tills skulden ska vara återbetald, är de 3 delarna:

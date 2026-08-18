@@ -1,4 +1,5 @@
 ---
+title: "HE1028 Mikrodatorteknik"
 tags: [index, HE1028, KTH, year2025]
 ---
 # 📚 HE1028 Mikrodatorteknik

@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 7
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Persistens (Storage) (Definition):: Egenskapen hos ett system att lagra data så att den överlever strömavbrott och omstarter. Storage (lagringsenheter) refererar till de fysiska medier (t.ex. hårddiskar, SSD) där persistent data sparas. (Tänk: *Data som stannar kvar, även när datorn stängs av*).

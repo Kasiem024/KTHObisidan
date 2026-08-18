@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Årsbokslut
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Alla företag är skyldiga att upprätta ett Årsbokslut vid räkenskapsårets slut. Bolagsformen och storleken på företaget styr enligt vilket regelverk Årsbokslutet ska upprättas samt om en [[Årsredovisning]] ska göras eller inte.

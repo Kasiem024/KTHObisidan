@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Instuderingsfrågor och Svar TENA HI1024
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 1. Beskriv vad datalogi handlar om.
 
 **Datalogi** är studiet av information och beräkningar. Det handlar om att utveckla algoritmer och program för att lösa problem, samt att förstå hur datorer fungerar på både hårdvaru- och mjukvarunivå. Genom att använda abstraktion och problemlösningsförmåga kan dataloger skapa innovativa lösningar inom en mängd olika områden.

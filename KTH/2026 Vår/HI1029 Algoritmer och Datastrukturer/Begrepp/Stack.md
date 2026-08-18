@@ -5,8 +5,6 @@ updated: 2026-06-02
 ---
 # Stack
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Princip:** LIFO (Last-In, First-Out)
 > **Viktigt:** Rekursionens call-stack.
 

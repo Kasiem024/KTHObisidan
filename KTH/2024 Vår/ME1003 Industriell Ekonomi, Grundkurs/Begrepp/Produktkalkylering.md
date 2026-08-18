@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktkalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Produktkalkylering handlar i grunden om att försöka bestämma intäkter och kostnader för sina produkter och utifrån det göra sina beslut.

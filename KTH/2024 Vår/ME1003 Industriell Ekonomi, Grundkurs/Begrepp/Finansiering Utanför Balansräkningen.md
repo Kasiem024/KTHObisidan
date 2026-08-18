@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Finansiering Utanför Balansräkningen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Finansiering Utanför Balansräkningen är när man finansierar delar av verksamheten utan att det syns i [[Balansräkning]]. Det finns 4 vanliga sätt att göra detta:

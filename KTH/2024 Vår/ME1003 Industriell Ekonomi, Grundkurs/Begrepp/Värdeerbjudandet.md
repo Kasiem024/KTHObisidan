@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Värdeerbjudandet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Värdeerbjudandet av ett företag är det värde som kunderna erbjuds genom de olika varor och tjänster som företaget erbjuder. Alltså är det ==inte bara== de faktiska ==varorna== och ==tjänster== som ett företag säljer men ==också hela upplevelsen==.

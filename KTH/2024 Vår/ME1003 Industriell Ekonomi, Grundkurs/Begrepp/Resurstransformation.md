@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Resurstransformation
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Handlar om hur man transformerar en viss typ av resurs så som råvaror till en vara som kunden vill ha genom att exempelvis använda sig av sin personal och utrustning.

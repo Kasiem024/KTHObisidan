@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Preliminär Skatt
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Preliminär skatt är en skatt som betalas in i förväg och som avräknas (tillgodoräknas) när den slutliga skatten fastställs. Exempel på preliminär skatt är avdragen skatt på löner och ersättningar till anställda, avdragen skatt på räntor och utdelningar samt preliminär F-skatt.

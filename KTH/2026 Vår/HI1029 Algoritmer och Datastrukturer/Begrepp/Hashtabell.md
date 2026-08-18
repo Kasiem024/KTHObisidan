@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Hashtabell
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Komplexitet:** $O(1)$ (förväntad tid)
 > **Viktigt:** Hashfunktionens kvalitet och krockhantering.
 

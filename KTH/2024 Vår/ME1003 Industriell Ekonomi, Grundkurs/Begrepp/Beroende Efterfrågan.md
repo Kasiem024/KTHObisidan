@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Beroende Efterfrågan
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 När efterfrågan för en produkt styrs av efterfrågan för en annan produkt säger man att det är en [[Beroende Efterfrågan]]. Ett exempel på detta är ett företag som tillverkar glass och ett som tillverkar glasskon, när efterfrågan för en av de minskar, minskar också den andras efterfrågan.

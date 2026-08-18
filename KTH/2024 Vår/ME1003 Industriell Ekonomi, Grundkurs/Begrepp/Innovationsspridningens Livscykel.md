@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Innovationsspridningens Livscykel
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Innovationsspridningens Livscykel består av 5 användarkategorier, de är:

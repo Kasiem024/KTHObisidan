@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Fond för Utvecklingsutgifter
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Fond för Utvecklingsutgifter är en post i [[Balansräkning]] och [[Bundet Eget Kapital]]. [[Aktiebolag]] kan välja att över ett antal år skriva av investeringar som har gjorts i exempelvis utveckling av nya produkter. I vissa fall måste bolaget överföra motsvarande belopp till en fond för utvecklingsutgifter.

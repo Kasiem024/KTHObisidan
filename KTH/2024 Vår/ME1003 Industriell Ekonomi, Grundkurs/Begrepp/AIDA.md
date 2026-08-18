@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # AIDA
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 AIDA är en modell som beskriver stegen en konsument tar innan den köper en produkt. Den består av 4 ord:

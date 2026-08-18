@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Varumärke
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Varumärket är företagets löfte till sina kunder, det är kopplat till produkten men är inte produkten i sig. Det tar lång tid att bygga ett starkt varumärke.

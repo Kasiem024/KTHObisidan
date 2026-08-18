@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # PE-Tal
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 P/E-Tal (Price Earnings Ratio) är ett [[Nyckeltal]] som används vid aktievärdering och indikerar om börskursen är hög eller låg i förhållande till företagets vinstnivå. Beroende på branschen bestäms vad som räknas som ett högt eller lågt P/E-Tal.

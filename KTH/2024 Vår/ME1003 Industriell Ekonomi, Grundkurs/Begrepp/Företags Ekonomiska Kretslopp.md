@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Företags Ekonomiska Kretslopp
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett företags ekonomiska kretslopp börjar när grundarna sätter in ett ==startkapital== antingen från sina egna fickor ([[Eget Kapital]]) eller genom lån från banken (Skulder). Startkapitalet används för att anskaffa ==resurser== (material, personal, utrustning) på ==anskaffningsmarknader==. Dessa resurser genomgår en så kallad [[Resurstransformation]] och blir till ==varor/tjänster== som säljs till kunden på ==avsättningsmarknader==. Med dessa intäkter från kunderna har företaget förhoppningsvis fått en vinst som används för att amortera eller betala ränta på lån och blir också vinstutdelningen för ägarna.

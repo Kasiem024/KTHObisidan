@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Kontinuitetsprincipen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kontinuitetsprincipen innebär främst att den utgående balansomslutningen för ett [[Räkenskapsår]] ska vara lika med den ingående balansomslutningen följande räkenskapsår.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktutveckling
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Omfattar alla aktiviteter som bidrar till att utveckla och förbättra företagets [[Värdeerbjudandet]]. Kan vara konceptutveckling, konstruktion och formgivning av produkten eller tjänsteutveckling. I princip handlar det om framtagningen av nya varor/tjänster (R&D).

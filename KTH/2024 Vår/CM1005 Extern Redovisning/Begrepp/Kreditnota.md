@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Kreditnota
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kreditnota är en "minusfaktura" som skrivs ut av säljaren och innebär att denne godtar köparens anspråk på prisreduktion. Vid betalningen dras kreditnotans belopp från fakturabeloppet

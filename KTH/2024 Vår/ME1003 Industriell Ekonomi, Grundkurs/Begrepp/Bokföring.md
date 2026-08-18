@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Bokföring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bokföring är ett system för att registrera, klassificera, värdera och rapportera olika [[Affärshändelse]] för ett företag eller organisation. Det är när man systematiskt redovisar vilka pengar som är förknippade med vilka affärshändelser.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Varulager
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Varulager är tillgångar som är avsedda för tillverkning och förbrukning. Lager brukar räknas som [[Omsättningstillgångar]].

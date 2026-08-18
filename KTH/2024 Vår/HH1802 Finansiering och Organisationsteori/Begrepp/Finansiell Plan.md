@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Finansiell Plan
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Finansiell Planen för ett företag är en detaljerad skriftlig plan som beskriver hur företaget ska hantera sina pengar för att nå sina mål. Det innebär en beräkning av ett framtida över/underskott. Syftet med en Finansiell plan är att matcha ett prognostiserat kapitalbehov med någon form av finansiering.

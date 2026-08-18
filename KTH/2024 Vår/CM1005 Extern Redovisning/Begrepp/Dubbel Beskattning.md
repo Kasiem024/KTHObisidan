@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Dubbel Beskattning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Dubbel Beskattning när det kommer till [[Aktiebolag]] är när bolagets vinst beskattas och sedan också den delen av vinsten som utdelas till aktieägarna.

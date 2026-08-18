@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Statsobligation
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Statsobligation är ett samlingsbegrepp för de [[Obligation]] som [[Riksgälden]] ger ut. Det är ett lån till staten med längre löptid än 1 år. Långivaren får avkastning under löptiden genom att staten betalar ränta på lånet.

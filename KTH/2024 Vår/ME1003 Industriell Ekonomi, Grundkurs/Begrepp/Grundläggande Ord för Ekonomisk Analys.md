@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Grundläggande Ord för Ekonomisk Analys
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Viktiga begreppspar för att kunna beskriva det finansiella flödet.

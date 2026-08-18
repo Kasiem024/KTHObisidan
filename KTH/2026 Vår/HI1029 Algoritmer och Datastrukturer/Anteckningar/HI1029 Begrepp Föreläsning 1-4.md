@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # HI1029 Begrepp Föreläsning 1-4
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Algoritm(Definition);; Ett begränsat antal **instruktioner** för att lösa en uppgift som, från givna indata, med säkerhet leder till **korrekta utdata**.
 <!--SR:!2026-03-11,1,166!2026-03-11,1,200-->
 

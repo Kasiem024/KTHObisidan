@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktionens Konkurrensfaktorer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 ## Konkurrensfaktorer

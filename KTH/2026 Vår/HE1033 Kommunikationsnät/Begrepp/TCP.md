@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # TCP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 4 (Transport)
 > **Egenskap:** Connection-oriented, Reliable.
 

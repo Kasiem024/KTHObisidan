@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Teckningskurs
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Teckningskurs är priset av aktier vid [[Nyemission]]. Den borde vara mindre än aktiens marknadsvärde för att locka köpare. Detta leder till att aktiekursen sjunker.

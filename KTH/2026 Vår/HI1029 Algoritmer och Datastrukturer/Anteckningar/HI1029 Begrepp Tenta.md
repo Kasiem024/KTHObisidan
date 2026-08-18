@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # HI1029 Begrepp Tenta (Index)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## 📚 Individuella Begrepp (Länkat nätverk)
 
 Detta är navet för alla centrala begrepp i kursen. Varje länk leder till en fördjupad fil med "Tenta-fokus" och flashcards.

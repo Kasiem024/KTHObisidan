@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Ekonomisk Livslängd
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ekonomisk livslängd är tiden fram till dess att investeringen har uppnått maximal [[Lönsamhet]]. Med det menas när företaget bedömer att det inte längre är värt det att äga investeringen och borde göra en ==nyinvestering==. Exempelvis kan det vara att underhållet för en maskin blir för dyr och det är mer värt det att köpa en ny än att laga den gamla. Därför är [[Teknisk Livslängd]] alltid lika lång eller längre än den ekonomiska.

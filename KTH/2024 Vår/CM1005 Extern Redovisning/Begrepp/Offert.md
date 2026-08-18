@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Offert
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Offert, eller ==anbud==, är säljarens erbjudande. Anger de villkor på vilka en leverantör kan leverera en bestämd vara eller tjänst.

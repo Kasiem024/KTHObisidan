@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Fritt Eget Kapital
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Fritt Eget Kapital kan företagets ägare fritt kontrollera, exempelvis för vinstutdelning. Inom det ingår: ==Balanserat resultat==, alltså vinster som ackumulerats från tidigare år, och ==årets resultat==.

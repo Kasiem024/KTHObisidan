@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Generella Anteckningar CM1005
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Länkar
 
 - [Kursschema](https://canvas.kth.se/courses/45292/pages/vt24-kursschema-cm1005-med-veckoplanering-uppdateras-lopande-med-anteckningar-fran-lektioner-och-slash-eller-bilder-av-skrivtavlan-fran-en-lektion?module_item_id=802207)

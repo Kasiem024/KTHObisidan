@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Balansräkning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Balansräkning är ett företags finansiella ställning vid en given tidpunkt.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Förädlingsvärde
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Förädlingsvärde definieras som differensen mellan företagens intäkter för de färdiga produkterna och kostnaderna för inköp av nödvändiga resurser för framställning av produkterna.

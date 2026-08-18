@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # LABA Begrepp 1
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## LABA Begrepp - Kategori 1 (Grundläggande)
 
 Matlab-kommandot `binopdf(x, n, p)` ;; Beräknar punktsannolikheten $P(X=x)$ för en binomialfördelning. 

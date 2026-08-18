@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Överkursfond
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Överkursfond en post i [[Balansräkning]] och [[Fritt Eget Kapital]]. Överkursfonden används vid [[Nyemission]]. Vid en nyemission fastställs ett pris på de nya aktierna och ibland är detta pris högre än kvotvärdet på de befintliga aktierna. Den delen av priset som överstiger det nominella värdet tillförs till överkursfonden.

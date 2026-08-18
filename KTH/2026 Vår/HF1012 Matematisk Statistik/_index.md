@@ -1,4 +1,5 @@
 ---
+title: "HF1012 Matematisk Statistik"
 tags: [index, HF1012, KTH, year2026]
 ---
 # 📚 HF1012 Matematisk Statistik

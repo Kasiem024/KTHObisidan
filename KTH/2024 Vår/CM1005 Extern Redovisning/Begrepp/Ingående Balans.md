@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Ingående Balans
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ingående balans är de belopp som bokförs i början av ett nytt [[Räkenskapsår]] som ingående saldon på balanskontona. Den visar företagets tillgångar, eget kapital och skulder vid starten av ett nytt [[Räkenskapsår]].

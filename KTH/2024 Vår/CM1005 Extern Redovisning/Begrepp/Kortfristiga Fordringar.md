@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Kortfristiga Fordringar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kortfristiga Fordringar är fordringar som förfaller inom ett år.

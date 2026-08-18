@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Verifikation
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En Verifikation är underlag för poster i [[Bokföring]]. När bokföring görs ska det finnas underlag för alla [[Affärshändelse]]. Dessa underlag kallas för Verifikationer och kan vara en faktura, kvitto eller annat både fysiskt och elektroniskt dokument. Varje affärshändelse ska ha en egen verifikation.

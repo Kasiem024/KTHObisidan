@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # `=this.file.name`
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Audiell information (Definition):: Information som presenteras via **ljud**, avsedd att **uppmärksamma**, **varna** eller **bekräfta händelser**
 <!--SR:!2025-03-10,4,223!2025-03-19,13,245-->
 

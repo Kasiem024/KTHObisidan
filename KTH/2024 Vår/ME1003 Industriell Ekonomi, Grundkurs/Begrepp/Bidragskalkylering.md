@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Bidragskalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bidragskalkylering är när enbart [[Särkostnad]] hänförs till [[Kostnadsbärare]]. Därefter beräknas det [[Täckningsbidrag]] som kostnadsbäraren lämnar. Denna typ av kalkylering används ofta för att göra snabba beslut på kort sikt. Exempelvis kan ett hotell göra en Bidragskalkylering för att veta om det är värt det att sänka priset en helg. ==Ett täckningsbidrag är särintäkterna minus särkostnaderna==.

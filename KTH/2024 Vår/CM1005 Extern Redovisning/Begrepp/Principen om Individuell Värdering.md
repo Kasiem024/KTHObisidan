@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Principen om Individuell Värdering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Principen säger att de olika tillgångar som utgör de sammanlagda tillgångarna, och de olika skulder som utgör de sammanlagda skulderna, ska värderas separat. Detta innebär bland annat att en ökning av värdet av en tillgång inte får kvittas mot en minskning i värdet av en annan tillgång.

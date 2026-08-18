@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Ideell Förening
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En ideell förening har ett ideellt ändamål eller bedriver ideell verksamhet. En ideell förening får inte ha till syfte att främja medlemmarnas ekonomiska intressen genom att driva affärsmässig verksamhet.

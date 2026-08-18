@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Eget Kapital
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Eget Kapital är det belopp som ägarna satt in i företaget, och som utgör skillnaden mellan tillgångar och skulder. Det är pengar i företaget som tillhör ägarna.

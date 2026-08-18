@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # MAC-adress
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 2 (Datalänk)
 > **Längd:** 48 bitar.
 

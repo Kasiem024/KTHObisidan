@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Riksgälden
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Riksgälden, eller Riksgäldskontoret, är en statlig myndighet som förvaltar statsskulden och sköter statens upplåning. Riksgälden stället ut och förvaltar statliga garantier och lån som riksdagen beslutar om, samt ger lån till statliga myndigheter och affärsverk.

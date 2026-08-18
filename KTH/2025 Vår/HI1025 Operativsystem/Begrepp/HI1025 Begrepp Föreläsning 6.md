@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 6
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Condition Variables (Villkorsvariabler) (Definition):: Synkroniseringsprimitiver som tillåter trådar att vänta (blockera) tills ett visst villkor blir uppfyllt. Används alltid tillsammans med ett mutexlås för att undvika race conditions när villkoret kontrolleras och tråden blockeras. (Tänk: *Ett väntrum där trådar sover tills något specifikt händer*).

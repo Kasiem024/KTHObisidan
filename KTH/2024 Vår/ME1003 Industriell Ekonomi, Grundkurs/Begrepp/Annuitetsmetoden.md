@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Annuitetsmetoden
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Annuitetsmetoden är när man räknar om investeringens betalningar, både [[Grundinvestering]] och framtida betalningar, till belopp som är lika stora varje år. Med andra ord räknar man ut den genomsnittliga årliga betalningen för en [[Investering]], vilket betyder att den och [[Nuvärdemetoden]] är varianter av samma metod. Denna metod är användbar om man ska jämföra investeringar som har olika livslängd.

@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Överavskrivning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Överavskrivning, eller avskrivningar utöver plan, är skillnaden mellan räkenskapsenliga avskrivningar och planenliga avskrivningar.

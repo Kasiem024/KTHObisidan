@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Generella Anteckningar KTH
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Länkar
 
 - <https://www.studocu.com/sv>

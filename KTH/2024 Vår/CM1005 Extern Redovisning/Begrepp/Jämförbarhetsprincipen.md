@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Jämförbarhetsprincipen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Jämförbarhetsprincipen innebär att företag över tiden ska tillämpa samma principer för exempelvis klassificering och värdering av poster i [[Balansräkning]], [[Resultaträkning]] och i [[Årsredovisning]].

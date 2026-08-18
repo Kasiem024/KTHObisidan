@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Koncernredovisning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Koncernredovisningen är en särskild [[Årsredovisning]] som ett moderföretag upprättar utöver sin vanliga årsredovisning. Koncernredovisningen omfattar moderföretaget och alla dess dotterföretag och beskriver deras finansiella ställning som om de vore en enda ekonomisk enhet. Dock finns det undantag för vissa moderföretag. Innehållet för en Koncernredovisning är för det mesta samma som för en årsredovisning.

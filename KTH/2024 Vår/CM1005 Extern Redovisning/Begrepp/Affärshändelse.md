@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Affärshändelse
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En Affärshändelse är en ekonomisk transaktion som dokumenteras genom en så kallad [[Verifikation]] i företagets bokföring. ==Har det varit ett ekonomiskt utbyte med världen?==

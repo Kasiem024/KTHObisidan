@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Bolagsordning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bolagsordning är ett dokument som beskriver de grundläggande reglerna för ett visst [[Aktiebolag]]. Alla aktiebolag måste ha en Bolagsordning. För att få bolaget registrerat måste Bolagsverket godkänna Bolagsordningen.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Självkostnadskalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Självkostnadskalkylering är när man kalkylerar samtliga kostnader som företaget har för en produkt tills den är levererad och betald. Detta blir svårare ju mer produkter företaget har.

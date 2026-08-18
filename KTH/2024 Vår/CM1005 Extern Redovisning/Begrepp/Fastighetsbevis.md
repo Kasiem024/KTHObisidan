@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Fastighetsbevis
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Fastighetsbevis utfärdas av inskrivningsmyndigheten, Lantmäteriet, och lämnar upplysning om vem som har [[Lagfart]] på fastigheten vilka ==inteckningar== som belastar fastigheten.

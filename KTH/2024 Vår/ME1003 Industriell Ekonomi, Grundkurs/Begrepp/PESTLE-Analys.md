@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # PESTLE-Analys
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En PESTLE-Analys är en analys som fokuserar på omvärlden runt ett företag. Dock krävs mycket kunskap om ämnet för att kunna skapa en sådan analys och därför brukar experter anlitas.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Michael Porters Femkraftsmodell
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Michael Porters Femkraftsmodell är ett sätt att analysera de konkurrenskrafter ett företag är utsatt för. Enligt denna modell är ett företag alltid utsatt för fem konkurrenskrafter:

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Förbrukningsinventarier
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Förbrukningsinventarier är en typ inventarier av lägre värde, halva prisbasbeloppet, med kortare livslängd än 3 år men högre än 1 år. Utgiften för sådana inventarier kan dras av omedelbart, samma år som anskaffningen ägt rum.

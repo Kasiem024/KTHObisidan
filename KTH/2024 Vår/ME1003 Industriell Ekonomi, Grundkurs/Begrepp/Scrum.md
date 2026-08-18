@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Scrum
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Scrum kan sägas vara en modell inom [[Produktutveckling]] som blev populär inom mjukvaruutveckling. Det handlar om [[Produktutvecklings Modeller#Agil utveckling|Agil Utveckling]].

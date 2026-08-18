@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # 🎓 Studieguide: HE1033 Kommunikationsnät
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Fokusera på förståelse av lager-modellen och praktiska beräkningar.
 
 ## 🌍 OSI-modellen vs TCP/IP

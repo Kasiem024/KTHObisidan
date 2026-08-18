@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Marknadsportfölj
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Marknadsportfölj är när man tittar på hela aktiemarknaden som en enda stor aktieportfölj. [[Räntabilitet]] för en Marknadsportfölj är ungefär genomsnittet av alla aktiers räntabilitet.

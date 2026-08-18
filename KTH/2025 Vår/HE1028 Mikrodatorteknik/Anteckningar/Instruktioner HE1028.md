@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Instruktioner HE1028
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## RISC-V Instruction Set
 
 ---

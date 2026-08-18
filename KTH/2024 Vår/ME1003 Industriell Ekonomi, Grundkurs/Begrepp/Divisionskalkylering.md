@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Divisionskalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Divisionskalkylering är en metod inom [[Självkostnadskalkylering]] som används när man vill veta självkostnaden av en produkt. Denna metod är väldigt enkel att använda då den fungerar bara om företaget säljer ett väldigt litet antal likartade produkter.

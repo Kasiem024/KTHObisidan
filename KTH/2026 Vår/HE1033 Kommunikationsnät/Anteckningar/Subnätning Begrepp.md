@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Subnätning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 **Definition:**
 - Processen att dela upp ett fysiskt nätverk i mindre, logiska subnät för att förbättra prestanda och säkerhet.
 

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Resultatdiagram
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett Resultatdiagram visar relationen mellan intäkterna och volymen. Den innehåller en linje för [[Fast Kostnad]], en linje som visar [[Total Kostnad]], alltså summan av fasta och rörliga kostnader, och en linje för [[Total Intäkt]]. Man kan använda det till att bättre förstå sina kostnader och hur man borde prissätta sina produkter.

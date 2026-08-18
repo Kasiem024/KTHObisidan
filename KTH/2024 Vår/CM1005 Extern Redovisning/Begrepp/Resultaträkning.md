@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Resultaträkning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Resultaträkning är en rapport över [[Intäkt]] och [[Kostnad]] under en viss period. Man kan säga att den visar om företaget har genererat en vinst eller förlust. Företaget bestämmer själv hur lång perioden är.

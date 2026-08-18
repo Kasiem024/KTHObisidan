@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Instuderingsfrågor Kap 8-9 KS2 ME1003
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 [[Eget Kapital]]
 
 ## Kapitel 8 Ekonomisk Analys och Produktkalkylering

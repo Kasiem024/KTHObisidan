@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Instuderingsfrågor och Svar Kap 10-12 Modern Industriell Ekonomi
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Kapitel 10 Bokföring
 
 1. Vilket är syftet med ett företags bokföring?

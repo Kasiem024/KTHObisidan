@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Intressentmodellen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En intressentmodell är en grafisk beskrivning av vilka projektets intressenter är och vilka intressen de har i förhållande till projektet – alltså vad de förväntar sig att få ut av det.

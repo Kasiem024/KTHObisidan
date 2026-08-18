@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Incoterms
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Incoterms (International Commercial Terms), eller ==leveransklausuler== preciserar ==leveransvillkoren== vid en [[Varutransaktion]].

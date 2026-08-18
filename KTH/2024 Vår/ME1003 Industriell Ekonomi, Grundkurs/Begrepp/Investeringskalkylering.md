@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Investeringskalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En Investeringskalkyl analyserar de effekter som med rimlig säkerhet kan översättas till kronor och ören. Kalkylen behandlar hur en viss [[Investering]] påverkar ==betalningsströmmarna== över företagets gräns, det vill säga hur mycket pengar som flyter in och ut från företaget, alltså [[Kassaflödesanalys]] inte kostnader.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Stegkalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Stegkalkylering är när man gör sina beräkningar i olika steg. Man gör då ett [[Täckningsbidrag]] på varje steg. Detta kan hjälpa om man vill beräkna kostnaderna för enstaka produkter. Man går då upp en nivå i hur många produkter man inkluderar i kalkyleringen för varje steg.

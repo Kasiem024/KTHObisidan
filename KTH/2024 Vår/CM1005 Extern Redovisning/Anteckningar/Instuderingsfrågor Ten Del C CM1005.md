@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Instuderingsfrågor Ten Del C CM1005
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 [[Ten Del C Exempel CM1005.pdf]]
 
 

@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Array-lista
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Komplexitet:** $O(1)$ indexering, $O(n)$ insättning/borttagning (mitt/början)
 > **Viktigt:** Amorterad tid och array-kopiering.
 

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Självdeklaration
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Självdeklaration är ett annat ord för inkomstdeklaration, alltså en årlig handling som ska lämnas till Skatteverket där föregående års inkomster redovisas. Självdeklarationen fastställer hur mycket skatt som ska betalas.

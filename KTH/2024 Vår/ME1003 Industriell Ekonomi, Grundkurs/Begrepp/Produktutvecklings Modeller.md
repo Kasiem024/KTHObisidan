@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktutvecklings Modeller
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Det finns olika modeller inom [[Produktutveckling]]

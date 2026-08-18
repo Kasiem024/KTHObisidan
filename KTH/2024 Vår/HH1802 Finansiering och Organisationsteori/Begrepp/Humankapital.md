@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Humankapital
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Humankapital räknas som människors färdigheter, kunskaper, talanger och utbildning. Den används för att beskriva den mänskliga arbetskraften på en arbetsplats, personalen. Humankapitalet kan sägas vara en del av företagets ==immateriella resurser==.

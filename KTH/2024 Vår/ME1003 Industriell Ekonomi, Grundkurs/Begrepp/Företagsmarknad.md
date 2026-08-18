@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Företagsmarknad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 När ett företag säljer en produkt till ett annat företag. Kallas också Business to Business, B2B.

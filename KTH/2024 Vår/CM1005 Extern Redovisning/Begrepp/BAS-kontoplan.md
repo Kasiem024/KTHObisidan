@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # BAS-Kontoplan
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 BAS-Kontoplan är en typ av kontoplan, alltså en lista över konton som ett företag använder i sin [[Bokföring]]. Den ligger till grund för företagets redovisning, bokslut och deklaration. En kontoplan underlättar bokföringen för ett företag och är därför nödvändig. Det finns olika sorters kontoplaner men i Sverige är BAS standarden. Den består av 4 huvudgrupper:

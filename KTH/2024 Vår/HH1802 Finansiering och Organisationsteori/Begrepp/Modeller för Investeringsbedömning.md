@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Modeller för Investeringsbedömning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Modeller för Investeringsbedömning är de tekniker som används för att hantera [[Risk]] vid enskilda investeringar.

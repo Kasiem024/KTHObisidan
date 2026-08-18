@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Kassarabatt
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kassarabatt har med tidpunkten för betalningen av fakturan att göra och reducerar fakturabeloppets slutsumma, om betalningen sker viss tid före kredittidens utgång.

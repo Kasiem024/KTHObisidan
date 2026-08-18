@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Betavärde
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Betavärde är ett nyckeltal som används som riskmått när det kommer till aktier. Det anger hur mycket en akties pris historiskt har svängt upp och ned i förhållande till börsen. Syftet med Beta är att hjälpa med att gissa hur mycket en akties pris kommer svänga i framtiden baserat på hur den har svängt historiskt.

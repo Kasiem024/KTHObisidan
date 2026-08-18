@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kostnadsbegrepp
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Det finns flera olika typer av [[Kostnad]].

@@ -1,4 +1,5 @@
 ---
+title: "HE1033 Kommunikationsnät"
 tags: [index, HE1033, KTH, year2026]
 ---
 # 📚 HE1033 Kommunikationsnät

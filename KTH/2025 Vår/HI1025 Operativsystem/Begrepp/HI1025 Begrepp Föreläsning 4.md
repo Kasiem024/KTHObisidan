@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 4
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Paging Model (Definition):: En minneshanteringsteknik där både den virtuella adressrymden och det fysiska minnet delas upp i lika stora block: **sidor** (virtuellt minne) och **ramar** (fysiskt minne). Möjliggör virtualisering av minnet, icke-sammanhängande minnesallokering och minskar fragmentering.

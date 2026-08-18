@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Riktad Emission
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Riktad Emission är när aktieägarna säljer emitterade aktier till nya ägare.

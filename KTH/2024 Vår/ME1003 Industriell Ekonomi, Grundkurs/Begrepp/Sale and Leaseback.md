@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Sale and Leaseback
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Sale and Leaseback är när ett företag säljer ett objekt, exempelvis anläggningar och byggnader, till en finansiell institution mot löfte att få hyra objektet under en förutbestämd tid. Risken flyttas då över till institutionen som köper objektet.

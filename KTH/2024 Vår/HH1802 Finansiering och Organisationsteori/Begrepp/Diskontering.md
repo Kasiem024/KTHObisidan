@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Diskontering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Diskontering är när värdet av exempelvis en aktie bedöms utifrån en förväntad utveckling i framtiden.

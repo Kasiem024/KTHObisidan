@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Generella Anteckningar ME1003
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Länkar
 
 - [[Schema ME1003.pdf|Schema]]

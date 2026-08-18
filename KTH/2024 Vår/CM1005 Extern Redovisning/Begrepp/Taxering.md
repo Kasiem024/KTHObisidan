@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Taxering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Taxering är det skattemässiga värdet på [[Tillgångar]]. Det är Skatteverkets arbete att beräkna skatten som ska betalas. [[Inkomst]] och vinst från [[Resultaträkning]] räknas också som en tillgång i detta sammanhang och ska därför också taxeras.

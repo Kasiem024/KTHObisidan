@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktlivscykeln
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Det finns flera stadier inom en produkts livscykel. I vilken stadie man är beror på hur länge produkten har funnits på marknaden och dess försäljningsvolym. Det är viktigt för företag att ha en ==produktportfölj==. Alltså ett flertal produkter som är i olika delar av sin livscykel.

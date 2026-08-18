@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Grundbok
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En grundbok är en lista över ett företags [[Affärshändelse]] presenterad i [[Grundbokföring|registreringsordning]], dvs. ordnade i kronologisk följd.

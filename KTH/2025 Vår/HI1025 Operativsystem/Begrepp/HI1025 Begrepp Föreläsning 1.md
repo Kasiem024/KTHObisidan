@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 1
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Bare metal (Definition):: Ett system där ett operativsystem körs direkt på hårdvaran, *utan* ett underliggande operativsystem eller hypervisor. (Tänk: *Ren metall, direkt kontakt*).

@@ -1,4 +1,5 @@
 ---
+title: "HI1025 Operativsystem"
 tags: [index, HI1025, KTH, year2025]
 ---
 # 📚 HI1025 Operativsystem

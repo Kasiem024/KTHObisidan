@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Affärsmodellkanvasen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Affärsmodellkanvasen är en strategimodell som analyserar ett företags verksamhet genom att dela in ett företags affärsmodell i nio element. Tanken är att man ska länka företagets strategi med dess konkreta verksamhet och lättare se kopplingarna mellan de.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Tillverkningsindustrin
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Tillverkningsindustrin omfattar bland annat produktion av metallvaror, maskiner elektrotekniska produkter samt fordon. Sådana företag är vanligtvis ==personalintensiva== men nuförtiden är har de också en ==högautomatiserad== produktion. [[Produktionsflöden]] är ==konvergerande==.

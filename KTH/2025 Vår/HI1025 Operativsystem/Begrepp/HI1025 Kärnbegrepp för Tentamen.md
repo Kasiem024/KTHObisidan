@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # HI1025 Kärnbegrepp för Tentamen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Del 1: Virtualisering – Processorn (Mekanismer & Policyer)
 
 Process(Definition)::Ett program under exekvering, med egen adressrymd, programräknare och allokerade systemresurser. Det är den grundläggande enheten för resurstilldelning och schemaläggning.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Känslighetsanalys
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Känslighetsanalys ger svar på vilka faktorer/variabler som kan vara extra viktiga för en [[Investering]]. Det är en ==deterministisk== modell som inte har något beslutskriterium inbyggt i sig.

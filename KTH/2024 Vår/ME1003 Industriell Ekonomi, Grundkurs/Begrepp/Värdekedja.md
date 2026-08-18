@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Värdekedja
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kan också kallas produktionskedja. Det behandlar hur värdet av en vara ökar ju längre man kommer i produktionskedjan, exempelvis från en bomull planta till ett klädesplagg.

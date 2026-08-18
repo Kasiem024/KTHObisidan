@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kapitalomsättningshastighet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kapitalomsättningshastigheten är ett [[Nyckeltal]] och är ett verksamhetsmått för arbetskrafts- och kapitalintensitet som visar hur effektivt en verksamhet använder sitt kapital i förhållande till omsättningen. Ju högre kapitalomsättningshastighet, desto mindre kapitalbindning företaget har. För att öka kapitalomsättningshastigheten och därmed minska det bundna kapitalet, är det enklaste att minska varulagret.

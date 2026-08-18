@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Förvaltningsberättelse
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Förvaltningsberättelsen är en obligatorisk del av [[Årsredovisning]]. I den beskriver företaget med ord de viktigaste händelserna under året. Dessutom innehåller den vissa andra lagstadgade uppgifter.

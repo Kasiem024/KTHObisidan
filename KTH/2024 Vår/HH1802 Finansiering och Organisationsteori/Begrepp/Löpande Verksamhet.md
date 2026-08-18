@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Löpande Verksamhet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Löpande Verksamheten av en [[Kassaflödesanalys]] är både den egentliga rörelseverksamheten och den finansiella verksamheten. Fokuserar på de pengar som genereras genom försäljning av produkter.

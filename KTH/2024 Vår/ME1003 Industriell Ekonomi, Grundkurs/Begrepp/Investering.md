@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Investering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En Investering är en kapitalsatsning som ger betalningskonsekvenser under en längre tid, minst mer än ett år.

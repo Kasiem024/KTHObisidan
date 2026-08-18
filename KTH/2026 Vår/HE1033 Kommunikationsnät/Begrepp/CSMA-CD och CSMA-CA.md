@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # CSMA-CD och CSMA-CA
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 2 (MAC)
 > **Mål:** Hantera åtkomst till ett delat medium (kollisionshantering).
 

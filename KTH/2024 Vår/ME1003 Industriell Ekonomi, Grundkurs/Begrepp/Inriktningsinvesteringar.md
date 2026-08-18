@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Inriktningsinvesteringar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Inriktningsinvesteringar är strategiska och binder företagets handlingsutrymme för lång tid framåt. Exempelvis kan det vara en ny produktfamilj eller en ny produktionsanläggning.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Konkurrensstrategier
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Tre exempel på konkurrensstrategier är

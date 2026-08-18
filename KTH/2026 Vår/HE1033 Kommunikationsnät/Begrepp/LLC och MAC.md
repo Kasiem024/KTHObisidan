@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # LLC och MAC
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 2 (Datalänk)
 > **Viktigt:** Uppdelning av ansvar i lager 2.
 

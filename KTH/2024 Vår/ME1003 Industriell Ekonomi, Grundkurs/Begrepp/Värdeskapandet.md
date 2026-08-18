@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Värdeskapandet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Värdeskapandet är hur en råvara transformeras till något kunden vill köpa och vad värdet av den transformationen är. Man kan säga att det har med ==tillverkningen== och ==leveransen== av en produkt.

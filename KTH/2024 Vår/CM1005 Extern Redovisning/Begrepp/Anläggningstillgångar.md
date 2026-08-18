@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Anläggningstillgångar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Anläggningstillgångar är [[Tillgångar]] som ett företag avser att stadigvarande inneha eller använda så som fastigheter och maskiner.

@@ -1,4 +1,5 @@
 ---
+title: "HI1039 Projektkurs"
 tags: [index, HI1039, KTH, year2026]
 ---
 # 📚 HI1039 Projektkurs

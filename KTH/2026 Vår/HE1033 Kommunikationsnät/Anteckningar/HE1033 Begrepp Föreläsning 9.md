@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HE1033 Begrepp Föreläsning 9
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Vad är skillnaden mellan en statisk och dynamisk rutt gällande nätverkets anpassningsförmåga?(Definition)::En statisk rutt har ingen anpassningsförmåga vid förändringar i nätverket (och belastar routern mindre), medan en dynamisk rutt är anpassningsbar och hittar automatiskt nya vägar.
 <!--SR:!2026-03-23,11,250-->
 

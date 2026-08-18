@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Bokslutspolitik
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bokslutspolitik handlar om att komma överens om hur mycket vinstutdelningen ska vara och hur mycket ska sparas i företaget.

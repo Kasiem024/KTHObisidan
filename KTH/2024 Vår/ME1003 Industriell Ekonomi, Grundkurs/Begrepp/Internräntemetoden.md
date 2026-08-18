@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Internräntemetoden
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 I Internräntemetoden beräknas den avkastningen som en [[Investering]] ger, avkastningen kallas då ==internränta==. Man beräknar då den procentuella årliga avkastningen för en investering genom att jämföra internräntan med [[Kalkylränta]].

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Lönsamhet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Lönsamhet är vinsten delat på kapitalet. Alltså genom att veta vår Lönsamhet kan vi veta om verksamhetens vinst är rimlig i relation till det investerade kapitalet

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Samkostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Samkostnader påverkas inte av den handling eller det beslut kalkylen avser, alltså har de inget med vad kalkylen försöker räkna ut. Kostnader för personal och kontor ses som samkostnader då de skulle uppstått även om just den produkten inte producerades.

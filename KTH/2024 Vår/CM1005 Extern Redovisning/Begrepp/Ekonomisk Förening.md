@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Ekonomisk Förening
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Att bilda en ekonomisk förening är ett alternativ om ni är minst tre personer som vill driva verksamhet tillsammans.

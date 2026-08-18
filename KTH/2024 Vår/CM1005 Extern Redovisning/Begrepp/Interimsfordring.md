@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Interimsfordring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Inom redovisning räknas ==förutbetalda kostnader== och ==upplupna intäkter== som interimsfordringar. Endast de [[Kostnad]] och [[Intäkt]] som hör till räkenskapsåret ska påverka resultatet. Övriga [[Utbetalning]] och [[Inbetalning]] hör till kommande [[Räkenskapsår]] och måste därför periodiseras och bokas upp som tillgångar respektive skulder i [[Årsbokslut]]. Detta gäller bland annat Interimsfordringar.

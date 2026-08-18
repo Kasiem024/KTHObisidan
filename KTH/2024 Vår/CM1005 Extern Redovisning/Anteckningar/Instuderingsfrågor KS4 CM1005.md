@@ -6,6 +6,4 @@ updated: 2026-08-17
 
 # Instuderingsfrågor KS4 CM1005
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 [[KS4 Exempel CM1005.pdf]]

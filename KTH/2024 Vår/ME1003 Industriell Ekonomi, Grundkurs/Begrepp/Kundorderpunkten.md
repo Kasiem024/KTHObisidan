@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kundorderpunkten
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kundorderpunkten är den punkt i produktstrukturen från och med vilken en produkts materialsammansättning och tillverkning är kundorderbestämd. Från och med denna punkt är tillverkningen kundorderstyrd medan tillverkningen av artiklar på underliggande strukturnivåer är lagerinitierad. Förkortas ofta KOP.

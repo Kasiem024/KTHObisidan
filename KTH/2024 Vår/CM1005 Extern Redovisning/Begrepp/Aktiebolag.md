@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Aktiebolag
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett aktiebolag är ett företag där delägarna, alltså aktieägarna, normalt sett inte har ett personligt ansvar för företagets skulder. För att starta ett aktiebolag behöver du en kapitalinsats/riskkapital/aktiekapital (minst 25,000).

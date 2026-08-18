@@ -1,4 +1,5 @@
 ---
+title: "ME1003 Industriell Ekonomi, Grundkurs"
 tags: [index, ME1003, KTH, year2024]
 ---
 # 📚 ME1003 Industriell Ekonomi, Grundkurs

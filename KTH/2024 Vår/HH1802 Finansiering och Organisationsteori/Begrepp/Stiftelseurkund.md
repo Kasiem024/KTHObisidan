@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Stiftelseurkund
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Stiftelseurkund är ett dokument som visar att man har beslutat att starta ett [[Aktiebolag]].

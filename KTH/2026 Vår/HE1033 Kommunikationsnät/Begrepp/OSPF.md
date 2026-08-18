@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # OSPF
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Typ:** IGP (Internal Gateway Protocol)
 > **Metod:** Link State.
 

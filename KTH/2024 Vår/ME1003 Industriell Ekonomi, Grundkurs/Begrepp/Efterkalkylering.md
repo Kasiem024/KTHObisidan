@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Efterkalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Efterkalkylering är när ett företag beräknar sina kostnader för en produkt i efter hand, vanligtvis för att se hur det gick med [[Förkalkylering]].

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Moms
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 MervärdesOMSättningsskatt är en statlig konsumtionsskatt som betalas av konsumenter.

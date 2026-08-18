@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # TOWS-Analys
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Baserad på [[SWOT-Analys]]

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Marknadsformer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En ==marknad== är en plats där säljare och köpare möts.

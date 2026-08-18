@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Nedskrivning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Nedskrivning inom redovisning innebär att man minskar en Anläggningstillgångs bokförda värde ned till ett belopp som motsvarar tillgångens värde.

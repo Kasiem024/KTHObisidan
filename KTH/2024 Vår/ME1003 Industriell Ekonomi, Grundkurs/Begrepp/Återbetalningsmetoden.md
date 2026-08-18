@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Återbetalningsmetoden
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Med Återbetalningsmetoden räknar man ==återbetalningstiden==, alltså den tid det tar innan det satsade kapitalet, [[Grundinvestering]], har betalats tillbaka.

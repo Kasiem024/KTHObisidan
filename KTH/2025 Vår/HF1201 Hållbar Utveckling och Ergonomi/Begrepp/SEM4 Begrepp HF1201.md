@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # `=this.file.name`
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Medarbetarundersökningar (Definition):: Verktyg för att samla **feedback** från medarbetare om arbetsmiljö och trivsel.  
 
 Arbetsmiljökartläggningar (Definition):: Systematisk utvärdering av arbetsplatsens **risker** och förbättringsmöjligheter.  

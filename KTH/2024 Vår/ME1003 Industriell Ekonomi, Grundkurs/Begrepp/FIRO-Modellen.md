@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # FIRO-Modellen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 FIRO-Modellen står för Fundamental Interpersonal Relations Orientation. Det är en gruppdynamiks modell som säger att en grupp går från omogen till mogen först efter att den gått igenom tre faser. Dessa tre faser heter:

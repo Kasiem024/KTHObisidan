@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kapitalandelsfond
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kapitalandelsfond är en post i [[Balansräkning]] och [[Bundet Eget Kapital]]. Kapitalandelsfonden används vid [[Koncernredovisning]]. När ett [[Aktiebolag]] förvärvar ett annat bolag, alltså köper minst 50% av aktierna så att det blir ett dotterbolag, förekommer det att värdet som det förvärvade bolaget bokförs till i redovisningen skiljer sig från anskaffningsvärdet, alltså det pris som det köpande bolaget betalade. Om det bokförda värdet överstiget anskaffningsvärdet redovisas skillnaden i kapitalandelsfonden som ingår i bundet eget kapital.

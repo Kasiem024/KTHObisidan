@@ -1,4 +1,5 @@
 ---
+title: "HI1032 Kommunikationssystem"
 tags: [index, HI1032, KTH, nätverk, year2026]
 ---
 # 📚 HI1032 Kommunikationssystem

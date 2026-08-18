@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Anpassningsinvesteringar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Anpassningsinvesteringar är taktiska och görs för att säkerställa att företaget framgångsrikt kan driva den existerande verksamheten vidare på relativt långt sikt. Exempelvis en ny tillverkningsprocess eller en ny maskinpark.

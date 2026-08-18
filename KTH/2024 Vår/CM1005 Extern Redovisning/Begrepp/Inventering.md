@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Inventering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Inventering är när värdet av förråd och lager bestäms. Man gör det genom att gå igenom hur stor volym företaget har av varje material- och produktslag, att dessa värderas och slutligen förtecknas. Görs åtminstone årligen.

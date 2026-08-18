@@ -1,4 +1,5 @@
 ---
+title: "<% tp.file.folder() %>"
 tags: [index, <% tp.file.folder(true).split("/")[2].split(" ")[0] %>, KTH, year<% tp.file.folder(true).split("/")[1].slice(0,4) %>]
 ---
 # 📚 <% tp.file.folder() %>

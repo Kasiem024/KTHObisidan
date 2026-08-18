@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 2
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Throughput (Definition):: Mäter hur mycket arbete ett system utför under en viss tid. Antalet processer som slutförs per tidsenhet

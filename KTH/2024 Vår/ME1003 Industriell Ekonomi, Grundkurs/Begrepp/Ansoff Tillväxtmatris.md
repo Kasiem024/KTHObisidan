@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Ansoff Tillväxtmatris
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 | | Existing Products | New Products |

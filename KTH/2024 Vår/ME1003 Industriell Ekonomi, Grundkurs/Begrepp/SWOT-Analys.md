@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # SWOT-Analys
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett sätt att analysera ett företags omgivning och insida. Består av 4 ord.

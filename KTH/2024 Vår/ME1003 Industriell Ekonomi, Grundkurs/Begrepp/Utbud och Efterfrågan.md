@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Utbud och Efterfrågan
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Leverantören vill sälja så många produkter som möjligt till ett så högt pris som möjligt medan kunden vill köpa för ett så lågt pris som möjligt.

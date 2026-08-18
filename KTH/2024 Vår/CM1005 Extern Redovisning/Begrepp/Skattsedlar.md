@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Skattsedlar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Det finns flera typer av skattsedlar.

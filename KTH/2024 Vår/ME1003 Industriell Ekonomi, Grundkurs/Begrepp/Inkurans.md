@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Inkurans
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Inkurans innebär att delar av lagret är oanvändbart som en följd av att materialet, komponenterna eller produkterna blivit gammalt, omodern eller skadat. Det är praxis att man skriver av eller ner [[Anskaffningsvärde]] med 3% för inkurans.

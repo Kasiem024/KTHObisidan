@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Övning 3
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Shell (Skal) (Definition):: Ett textbaserat användargränssnitt (kommandotolk) som används för att interagera med operativsystemet genom att mata in kommandon. (Tänk: *Operativsystemets tolk och dirigent*).

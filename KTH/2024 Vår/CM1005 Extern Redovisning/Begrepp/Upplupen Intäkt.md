@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Upplupen Intäkt
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Upplupna Intäkt är en sådan [[Intäkt]] som hör till bokslutsåret, men där företaget varken har skickat en faktura eller fått betalt för tjänsten eller varan före bokslutsdagen.

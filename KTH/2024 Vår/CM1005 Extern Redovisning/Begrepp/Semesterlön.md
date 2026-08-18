@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Semesterlön
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 > Semesterlagen stadgar en allmän semester på 25 dagar. Semestern innebär i princip att arbetstagaren har rätt till ledighet med bibehållen lön (i praktiken något mer än normal lön). Denna ska betalas ut till den anställde i samband med ledigheten och kallas semesterlön. Om en arbetstagare slutar sin anställning innan hen haft sin semester, ska hen ha motsvarande belopp, vilket då kallas semesterersättning. Semesterlönen tjänas in (om inte annat avtalats) under intjänandeåret, 1 april - 31 mars, varefter man vanligen tar ut huvuddelen av ledigheten någon gång under den följande sommaren. I bokslutet ska man göra en reservering för intjänad, ännu inte utbetald semesterlön.

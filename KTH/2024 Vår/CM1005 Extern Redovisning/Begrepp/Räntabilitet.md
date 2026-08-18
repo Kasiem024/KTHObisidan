@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Räntabilitet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Räntabilitet visar ett företags förmåga att ge avkastning på kapitalet. Det är ett [[Nyckeltal]] och ett [[Lönsamhet|lönsamhetsmått]] som beskriver ett företags vinst i förhållande till investerat kapital, ju högre ju bättre. Det finns olika sätt att beräkna Räntabilitet.

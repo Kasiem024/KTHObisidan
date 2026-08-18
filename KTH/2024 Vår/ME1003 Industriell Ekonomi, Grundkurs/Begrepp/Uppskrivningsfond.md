@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Uppskrivningsfond
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Uppskrivningsfond är en post i [[Balansräkning]] och en del av [[Bundet Eget Kapital]]. Under vissa omständigheter får [[Anläggningstillgångar]] av ett [[Aktiebolag]] skrivas upp, det vill säga deras bokförda värde får ökas. Sådana uppskrivningar får dock inte påverka företagets resultat. Uppskrivningarna tillförs istället till en särskild Uppskrivningsfond.

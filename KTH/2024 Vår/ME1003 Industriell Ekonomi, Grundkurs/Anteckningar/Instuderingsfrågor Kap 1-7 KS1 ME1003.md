@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Instuderingsfrågor Kap 1-7 KS1 ME1003
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Kapitel 1 Introduktion
 
 1. Vad är utgångspunkten för ämnet industriell ekonomi?

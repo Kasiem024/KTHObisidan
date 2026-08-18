@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Inflation
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Inflation är en generell prisstegring i en ekonomi, vilket innebär att pengarna gradvis förlorar sitt värde.

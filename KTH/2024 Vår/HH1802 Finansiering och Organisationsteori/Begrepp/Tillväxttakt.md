@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Tillväxttakt
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Tillväxttakt (g) är takten som ett företag använder sin avkastning för nyinvesteringar.

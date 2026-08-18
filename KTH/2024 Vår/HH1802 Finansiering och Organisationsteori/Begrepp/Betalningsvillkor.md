@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Betalningsvillkor
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Betalningsvillkor är de villkor som gäller vid betalning av en produkt, innehåller information om hur betalningen ska gå till. Ofta inkluderas information om betalningsmetod och leverans.

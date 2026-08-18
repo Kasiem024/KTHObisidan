@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Täckningsbidrag
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Täckningsbidrag (TB) är ett [[Nyckeltal]] som visar med hur mycket en viss produkt bidrar till att betala kostnader som är gemensamma för alla produkter. Ett centralt begrepp inom [[Bidragskalkylering]].

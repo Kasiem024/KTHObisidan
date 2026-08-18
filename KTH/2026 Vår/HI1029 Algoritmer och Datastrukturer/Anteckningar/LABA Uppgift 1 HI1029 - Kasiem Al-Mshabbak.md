@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # LABA Uppgift 1 HI1029 - Kasiem Al-Mshabbak
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Inledning
 
 I denna rapport genomför vi en numerisk analys av en specifik algoritm för att bestämma dess exakta komplexitetsfunktion $T(n)$ och dess tillväxttakt i form av $O(n)$. Den kod som analyseras består av fyra nästlade loopar där en enkel sats, `r++`, exekveras ett antal gånger beroende på indatastorleken $n$:

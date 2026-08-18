@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Instuderingsfrågor Ten Del C HH1802
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Flashcards
 
 Exempel på steg en bank tar i en kreditbedömning (7)

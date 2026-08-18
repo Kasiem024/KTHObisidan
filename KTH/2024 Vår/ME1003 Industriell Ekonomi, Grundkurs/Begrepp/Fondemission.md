@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Fondemission
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Fondemission är en form av emission som inte tillför nytt kapital till företaget, alltså när [[Fritt Eget Kapital]] omvandlas till [[Bundet Eget Kapital]]. En fondemission ändrar bara strukturen av en [[Balansräkning]] men inte balansomslutningen.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Marknadsföring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Omfattar alla aktiviteter som bidrar till försäljningen av företagets varor och tjänster. Inkluderar också identifieringen av kunders behov. Alltså marknadsföring är inte bara reklam och försäljning.

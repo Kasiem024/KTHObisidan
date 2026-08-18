@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Kö (Queue)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Princip:** FIFO (First-In, First-Out)
 > **Viktigt:** Bufferthantering och BFS.
 

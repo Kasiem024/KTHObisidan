@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Fond för Verkligt Värde
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Fond för Verkligt Värde är en post i [[Balansräkning]] och [[Fritt Eget Kapital]]. Normalt ska ändringar av marknadsvärdet hos en tillgång redovisas som en [[Intäkt]] eller en [[Kostnad]] i [[Resultaträkning]]. Ett undantag är finansiella tillgångar som inte innehas för aktiv handel på börser. För sådana finansiella tillgångar gäller att förändringar av marknadsvärdet ska redovisas i fond för verkligt värde, det vill säga direkt mot Eget Kapital.

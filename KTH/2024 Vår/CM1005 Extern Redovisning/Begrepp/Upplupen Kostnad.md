@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Upplupen Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
  Upplupen Kostnad är en [[Utgift]] som hör till räkenskapsåret men som företaget inte har betalat eller fått faktura på under räkenskapsåret. Exempel på upplupna kostnader kan vara:

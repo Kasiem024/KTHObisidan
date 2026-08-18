@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Konsumenttjänstlagen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Konsumentköplagen gäller när en privatperson köper en tjänst från ett företag, [[Konsumentmarknad]]. Denna lag tvingar företag att agera till konsumentens fördel, alltså skyddar den konsumenter. Den innehåller lagar om vad som gäller om tjänsten är felaktig, alltså om resultatet inte är upp till standard.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Instuderingsfrågor KS3 HH1802
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Kapitel 7
 
 [[Likviditet|Likvida Medel]]

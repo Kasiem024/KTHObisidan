@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Affärsredovisning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Affärsredovisningens syfte är bl.a. att minst en gång om året förse externa intressenter med information om resultat och ekonomisk ställning. Den tillgodoser också företagsledningens informationsbehov bl.a. för kontroll av kostnader, intäkter och resultat. Den är obligatorisk enligt [[Bokföringslagen]], vars regler gäller för alla bokföringsskyldiga.

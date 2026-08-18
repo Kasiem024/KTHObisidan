@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Fast Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Fasta Kostnader (FK) är oberoende av verksamhetsvolym, alltså beror den inte på volymen produkter som verksamheten producerar.

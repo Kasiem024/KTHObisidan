@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kvalitetsledning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kvalitetsledning är en samlingsbeteckning för de principer, metoder och verktyg som används för att nå en god kvalitet på företagets produkter och processer.

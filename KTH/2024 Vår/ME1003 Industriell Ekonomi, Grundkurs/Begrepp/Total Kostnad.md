@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Total Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Total Kostnad (TK) är när man summerar en produkts [[Fast Kostnad]] och [[Rörlig Kostnad]], alltså är det den Totala Kostnaden för att tillverka den produkten.

@@ -5,5 +5,3 @@ updated: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 # <% tp.file.title %>
-
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`

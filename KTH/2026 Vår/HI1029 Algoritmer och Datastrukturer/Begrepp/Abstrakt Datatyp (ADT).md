@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Abstrakt Datatyp (ADT)
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Mål:** Skilja på *vad* en datastruktur gör och *hur* den gör det.
 > **Princip:** Inkapsling och gränssnitt.
 

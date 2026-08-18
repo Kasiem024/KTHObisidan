@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktutvecklingens Analysnivåer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Man kan dela in [[Produktutveckling]] på tre analysnivåer

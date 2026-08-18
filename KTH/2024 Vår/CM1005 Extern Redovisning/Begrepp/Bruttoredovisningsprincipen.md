@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Bruttoredovisningsprincipen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bruttoredovisningsprincipen, eller ==kvittningsförbudet== som den även kallas, innebär att poster i [[Balansräkning]] och [[Resultaträkning]] inte får kvittas mot varandra. Det vill säga, det är inte tillåtet att kvitta tillgångar mot skulder, eller intäkter mot kostnader.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Marknadsföringens Analysnivåer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Man kan dela in [[Marknadsföring]] på tre analysnivåer:

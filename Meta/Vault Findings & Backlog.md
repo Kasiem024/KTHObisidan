@@ -17,10 +17,18 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🌐 2026-08-18 (7) — PUBLISHING: vault made Quartz-safe (F35 done, F36 open)
+Quartz v5 publishing set up at `C:\dev\KTHObsidianQuartz`. A real build (489 files →
+1398 output files) revealed three site-only defects, all fixed: the in-body Dataview date
+line on **450 notes**, the `_index` page titles on **all 24 courses**, and 4 protocol
+`Tid:` fields. Details in **F35**. One new open item: **F36** (456 KaTeX warnings from
+Swedish text inside math mode — cosmetic).
+
 ### 🎉 2026-08-18 (6) — AUDIT IS CLEAN
 `Vault-Audit.ps1` reports **no deviations from the standard** (469 notes in scope).
 F9, F24 closed; F10 left in place at the user's request (they will remove those files
-themselves). **All items are now done or intentionally parked — nothing open.**
+themselves). All items were done or parked as of that point; F36 opened later the same
+day during the publishing work.
 
 **2026-08-18 (5) — F15, F29 closed. `brokenWikilinks` is now 0.**
 Audit baseline is a single deviation: `missingTypeTag 4` (F9-rest, awaiting your decision).
@@ -558,6 +566,48 @@ none of the existing courses used. It now contains exactly
 
 ---
 
+### F35. ✅ DONE (2026-08-18) — vault made publish-safe for Quartz v5
+
+Setting up publishing at `C:\dev\KTHObsidianQuartz` (Quartz **v5.0.0**, branch `v5`)
+exposed three defects that only showed up in the rendered site. Evidence came from an
+actual build of this vault: 489 Markdown files → 1398 output files.
+
+**1. The in-body date line was broken on every page (450 notes).**
+`**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`` is a Dataview inline
+expression. Quartz does not run Dataview, so it published as the literal text
+`= this.created`, and it also leaked into the `og:description` social-preview tag.
+**Removed from all 450 notes** plus `Annotator Template.md`. Quartz reads `created` and
+`updated` straight from frontmatter (its `Frontmatter` plugin accepts `updated` as an
+alias for the modified date), so dates still display — natively, and correctly.
+Obsidian's own Properties panel shows them in-app. `Vault Standard.md` §3 updated.
+
+**2. All 24 course pages were titled `_index`.**
+`_index.md` *does* become the folder page in Quartz v5 (it slugifies to `index.html`),
+but with no `title:` frontmatter Quartz falls back to the filename. Added
+`title: "<CODE Course Name>"` to all 24, derived from the folder name, and to
+`Kurs Index Template.md` so new courses comply automatically. `Vault Standard.md` §5
+updated to make `title` required on index notes.
+
+**3. Four meeting protocols used `Tid: `= this.created``.**
+Replaced with each file's literal `created` date (2025-03-19, -21, -26, -29).
+
+Excluded from the site via `ignorePatterns`: `Litteraturlista` (copyrighted textbooks,
+OCR dumps, conversion tooling), `Meta`, `.excalidraw.md` sources, `.trash`,
+`Kurs Mapp Mall`. Third-party analytics disabled.
+
+**Known and accepted:** 456 KaTeX warnings from Swedish characters inside `$…$` math
+(e.g. `$Räntabilitet$`). These render, but the text should not be in math mode. Not yet
+fixed — see F36.
+
+### F36. 🔵 OPEN — Swedish text inside math mode (456 KaTeX warnings)
+
+The Quartz build emits 456 `unicodeTextInMathMode` warnings for `ä`, `ö`, `å`, `Å`
+inside `$…$` / `$$…$$`. Formulas still render, but words wrapped in math mode are set in
+italic serif and are wrong semantically. Worth sweeping: either move the words outside
+the math delimiters or wrap them in `\text{…}`. Not urgent, purely cosmetic.
+
+---
+
 ## 🤖 AI-friendliness: accepted trade-offs
 
 Deliberate, not bugs — documented so nobody "fixes" them by mistake:
@@ -565,9 +615,10 @@ Deliberate, not bugs — documented so nobody "fixes" them by mistake:
 1. **1,265 `<!--SR:…-->` scheduler comments** and **1,338 flashcard delimiters**
    (`::`, `;;`, `??`, `||`) are noise to an AI but drive the active spaced-repetition
    review schedule. **Never strip them in place.** `llms.txt` explains how to read them.
-2. **Dataview blocks** in `_index.md`, the MOCs and the Dashboard, plus the
-   `` `= this.created` `` mirror line, appear as literal code to an AI. Accepted in
-   exchange for live indexes and dynamic dates — the real values are in frontmatter.
+2. **Dataview blocks** in `_index.md` and the MOCs appear as literal code to an AI, and
+   also render as raw query text on the published Quartz site. Accepted in exchange for
+   live indexes inside Obsidian. The `` `= this.created` `` mirror line that used to sit
+   in every note body was **removed in F35** — dates now live only in frontmatter.
 3. **Better long-term option (not built):** a non-destructive `ai-export/` pipeline that
    copies notes with SR comments stripped, flashcards rewritten as plain
    `Term: definition` prose, Dataview blocks removed and wikilinks flattened — ideal for

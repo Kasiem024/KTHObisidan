@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Prissättning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Priset av en produkt är självkostnaden + vinstpålägg (marginalen). Alltså priset av en produkt och kostnaden av en produkt är olika och ska därför skiljas.

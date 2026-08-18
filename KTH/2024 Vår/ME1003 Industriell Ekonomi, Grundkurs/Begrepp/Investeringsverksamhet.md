@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Investeringsverksamhet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Investeringsverksamhets [[Kassaflödesanalys]] handlar om pengar som rör sig genom företagets investeringsaktiviteter. Exempelvis köp eller sälj av tillgångar eller förvärv av andra företag.

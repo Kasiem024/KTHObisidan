@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # UDP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 4 (Transport)
 > **Egenskap:** Connectionless, Best-effort.
 

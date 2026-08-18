@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Nettoförsäljningsvärde
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Nettoförsäljningsvärde är det pris som företaget skulle få för [[Tillgångar]] vid en normal försäljning, minskat med beräknade försäljningsomkostnader.

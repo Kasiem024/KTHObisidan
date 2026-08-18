@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Inkomst
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En inkomst uppstår då företaget har slutfört en prestation, t.ex. utfört en tjänst eller levererat en vara. Man behöver alltså ==inte ha fått betalt== för att inkomsten ska uppstå. I redovisningen är inkomstdagen den dag företaget fakturerar prestationen. Vid kontantförsäljning får säljaren betalt i direkt samband med slutförd prestation, vilket innebär att inkomsten och inbetalningen sammanfaller.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Instuderingsfrågor Kap 10-12 KS3 ME1003
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Kapitel 10 Bokföring
 
 1. Vilket är syftet med ett företags bokföring?

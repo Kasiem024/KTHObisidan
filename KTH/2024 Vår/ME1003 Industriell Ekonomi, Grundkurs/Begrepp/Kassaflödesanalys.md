@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kassaflödesanalys
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kassaflödesanalys, eller finansieringsanalys, visar ett företags likviditetsförändring under en viss period. Alltså [[Inbetalning]] och [[Utbetalning]] för en viss period. Det är en sammanställning av kassaflödet. Alltså visar den hur företaget har anskaffat och använt kapital.

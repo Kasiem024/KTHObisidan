@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Bokföringslagen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Bokföringslagen (BFL) är den lag som reglerar hur [[Bokföring]] för en verksamhet ska upprättas.

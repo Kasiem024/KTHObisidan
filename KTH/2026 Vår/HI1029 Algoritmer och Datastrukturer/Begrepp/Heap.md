@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Heap
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Komplexitet:** $O(\log n)$ för insättning/borttagning
 > **Viktigt:** Komplett träd och Heap-egenskapen.
 

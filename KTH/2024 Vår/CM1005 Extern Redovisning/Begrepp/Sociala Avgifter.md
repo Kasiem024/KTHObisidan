@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Sociala Avgifter
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Sociala avgifter är olika former av lagstadgade och avtalade avgifter som används för att finansiera socialförsäkringssystemet.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Finansiell Risk
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Detta är en platshållare (stub) för begreppet Finansiell Risk. Länkad från instuderingsfrågor i ME1003.
 
 **Definition:**

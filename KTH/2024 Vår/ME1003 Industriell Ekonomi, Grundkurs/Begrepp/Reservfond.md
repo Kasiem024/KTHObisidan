@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Reservfond
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Reservfond är en post i [[Balansräkning]] och [[Bundet Eget Kapital]]. Syftet med Reservfonden är att skydda externa aktörer som exempelvis har lånat ut pengar till ett [[Aktiebolag]]. En del av bolagets vinst kan avsättas till Reservfonden och eftersom det ingår i det bundna egna kapitalet kan dessa medel inte längre delas ut till aktieägarna.

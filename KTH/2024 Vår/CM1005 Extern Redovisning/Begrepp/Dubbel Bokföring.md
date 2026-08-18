@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Dubbel Bokföring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 > Den dubbla bokföringens grundläggande princip. Varje [[Affärshändelse]] bokförs alltid på två olika konton: På det ena kontot på debetsidan, på det andra på kreditsidan.

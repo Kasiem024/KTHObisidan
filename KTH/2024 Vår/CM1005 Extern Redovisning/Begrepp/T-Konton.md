@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # T-Konton
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 T-Konton är ett sätt att bokföra [[Affärshändelse]] där man har en vänster sida som kallas debet och en höger sida som kallas kredit.

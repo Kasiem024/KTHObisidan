@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Konsumentmarknad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 När ett företag säljer en produkt till en konsument. Kallas också Business to Consumer, B2C.

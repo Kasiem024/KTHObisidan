@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 5
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Inter Process Communication (IPC) (Definition):: Metoder för hur separata processer kan **utbyta data** och synkronisera med varandra. Exempel är delat minne, meddelandeköer (message queues), pipes och signaler. Nödvändigt för **samarbete mellan processer**.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Maslows Behovspyramid
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Maslows Behovspyramid bygger på tanken att det finns ett antal motivationsteorier som säger att människors handlingar styrs av motivet att tillfredsställa vissa behov. Enligt Maslow är vissa behov viktigare än andra och att dessa behov bygger på varandra som en pyramid. Att endast när ett behov längre ner i pyramiden är uppnått kan vi börja tänka på nästa.

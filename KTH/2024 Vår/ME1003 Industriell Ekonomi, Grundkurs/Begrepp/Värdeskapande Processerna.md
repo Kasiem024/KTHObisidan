@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Värdeskapande Processerna
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Det finns 3 Värdeskapande Processer:

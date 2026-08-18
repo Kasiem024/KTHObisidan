@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Utgående Balans
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Utgående balans är summan av de belopp som finns på tillgångs- och skuldsidan i [[Balansräkning]] vid räkenskapsårets slut. Med andra ord är den utgående balansen summan av de belopp som finns på kontona för tillgångar, eget kapital och skulder vid redovisningsperiodens slut.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Reskontra
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Reskontra är en sidoordnad bokföring för att kunna ge detaljerad information om exempelvis kunder och leverantörer.

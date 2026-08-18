@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Avskrivning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Avskrivning är när man fördelar kostnaden av [[Tillgångar]] under dess [[Ekonomisk Livslängd]]. Dock är det enbart [[Anläggningstillgångar]] som avskrivs då de har en förväntad [[Ekonomisk Livslängd]].

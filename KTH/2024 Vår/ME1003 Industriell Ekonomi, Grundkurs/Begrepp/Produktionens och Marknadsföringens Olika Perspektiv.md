@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktionens och Marknadsföringens Olika Perspektiv
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Produktionen och marknadsförings delen av företag har olika perspektiv på olika delar av företag som är ofta motstridiga fastän målet för båda delarna är samma.

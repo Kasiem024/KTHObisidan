@@ -58,9 +58,10 @@ updated: 2024-04-20
 ---
 ```
 
-- `created` / `updated` are the AI-readable source of truth for dates; the Obsidian
-  Linter plugin auto-updates `updated` on save, and notes display them in the body via a
-  Dataview mirror: `` `= this.created` `` / `` `= this.updated` ``.
+- `created` / `updated` are the source of truth for dates and live **only in
+  frontmatter** — there is no in-body date line. The Obsidian Linter plugin
+  auto-updates `updated` on save, Obsidian's Properties panel shows both, and the
+  published Quartz site renders them natively from these two fields.
 - Begin the body with a single H1 (`# <Title>`) matching the note name.
 
 Order convention (recommended, not enforced): type → course code(s) → subject →
@@ -122,7 +123,9 @@ Every course folder contains an `_index.md` at its root that gives a uniform,
 Dataview-driven overview of that course.
 
 - Location: `KTH/<Year Season>/<CODE Course Name>/_index.md`
-- Frontmatter: `tags: [index, <CODE>, KTH, year<YYYY>]`
+- Frontmatter: `title: "<CODE Course Name>"` (exactly the folder name) plus
+  `tags: [index, <CODE>, KTH, year<YYYY>]`. The `title` is required: the published
+  site falls back to the filename otherwise, which would render as "_index".
 - Body: course metadata + Dataview lists grouped by note type, scoped to the
   course folder. See `Meta/Obsidian Plugins/Templates/Kurs Index Template.md`.
 

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Matchningsprincipen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Matchningsprincipen är en av flera [[Redovisningsprinciper]] som innebär att [[Intäkt]] och [[Kostnad]] ska matcha varandra under samma [[Räkenskapsår]].

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Faktura
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Faktura är säljarens meddelande till köparen om hur mycket denne ska betala till säljaren som ersättning för levererade varor eller tjänster. En Faktura innehåller exempelvis:

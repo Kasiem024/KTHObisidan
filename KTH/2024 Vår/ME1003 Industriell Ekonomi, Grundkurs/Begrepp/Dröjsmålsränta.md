@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Dröjsmålsränta
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Dröjsmålsränta är en straffavgift som köparen betalar till säljaren för varje dag en betalning är försenad.

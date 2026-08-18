@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Riskkapital
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Riskkapital är ett samlingsnamn för investeringar i ett företags egna kapital. I ett företag består det av:

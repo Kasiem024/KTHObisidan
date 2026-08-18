@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Genomloppstid
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Genomloppstid är den tid som går åt för att tillverka en artikel från uttag av material och start av första operation till inleverans av färdig produkt. Genomloppstiden är en del av ledtiden.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Förutbetald Intäkt
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Förutbetald Intäkt är en [[Inkomst]] som redan är betald eller där en faktura har skickats och ska helt eller delvis intäktsredovisas kommande [[Räkenskapsår]]. Exempel på förutbetalda intäkter är:

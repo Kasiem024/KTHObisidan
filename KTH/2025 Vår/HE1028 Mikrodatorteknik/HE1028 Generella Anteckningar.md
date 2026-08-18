@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # `=this.file.name`
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Användbara länkar
 
 - <https://projectf.io/posts/riscv-cheat-sheet/>

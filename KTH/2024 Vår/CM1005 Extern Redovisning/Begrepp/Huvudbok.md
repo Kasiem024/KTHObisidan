@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Huvudbok
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En huvudbok är en lista över ett företags [[Affärshändelse]] presenterad i systematisk ordning, det vill säga sorterade efter konto.

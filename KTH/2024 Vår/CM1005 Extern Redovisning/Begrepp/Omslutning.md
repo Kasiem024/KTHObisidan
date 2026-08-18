@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Omslutning
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Omslutning, eller balansomslutning som det även kallas, är summan av alla skulder eller summan av alla tillgångar i balansräkningen. Omslutning är alltså summan av ett företags resurser och resultatet av skulder och eget kapital enligt företagets balansräkning. Omslutningen visar ett företags ekonomiska ställning vid en specifik tidpunkt.

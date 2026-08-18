@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Bundet Eget Kapital
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 I [[Aktiebolag]] och [[Ekonomisk Förening]] skiljer man mellan Bundet Eget Kapital och [[Fritt Eget Kapital]]. Bundet Kapital ==måste användas inom företaget==, och får alltså inte användas för vinstutdelning. För ett aktiebolag utgörs det bundna kapitalet till största del av ==aktiekapital==, reservfond och uppskrivningsfond.

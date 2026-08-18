@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Tekniska Plattformar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Begreppet Tekniska Plattformar används när man skapar en ==standardiserad uppsättning== av delar för ==grundteknologier== vilka sedan kan användas till flera olika produkter och ==modeller==. Dessa produkter kommer då ingå i samma ==produktfamilj==, detta är ett vanligt sätt att arbeta inom ==bilindustrin==. Man brukar kalla slutprodukterna för ==derivat==.

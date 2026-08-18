@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Mervärdesskattelagen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Mervärdesskattelagen innehåller bestämmelserna för vem som ska betalas [[Moms]] och när det ska betalas.

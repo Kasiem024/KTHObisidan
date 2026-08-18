@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Internredovisningen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Internredovisning är viktig för olika typer av företag, men särskilt för industri företag.

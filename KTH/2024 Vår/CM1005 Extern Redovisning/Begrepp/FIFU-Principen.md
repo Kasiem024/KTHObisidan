@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # FIFU-Principen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 FIFU-Principen (Först In Först Ut) innebär att man utgår från att de först köpta varorna sålts först, att lagret innehåller de sist inköpta varorna. FIFU-Principen ligger till grund för lagregler om värdering.

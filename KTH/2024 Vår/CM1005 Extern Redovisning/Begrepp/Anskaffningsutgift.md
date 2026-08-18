@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Anskaffningsutgift
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Anskaffningsutgiften, eller anskaffningskostnad, är summan av varuutgiften enligt leverantörens faktura och [[Hemtagningsutgift]]. Alltså vad företaget har betalat för en tillgång.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Obeskattade Reserver
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Obeskattade Reserver består av vinster som ännu inte beskattats. Uppstår om företaget har valt att skjuta upp beskattningen av vinst till ett senare tillfälle för att jämna ut skattebelastningen.

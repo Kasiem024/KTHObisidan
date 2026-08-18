@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Halvfast Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Halvfasta Kostnader är opåverkade av verksamhetsvolymen upp till en viss nivå. När den nivå av verksamhetsvolym uppnås hoppar [[Fast Kostnad]] upp och är återigen opåverkad av verksamhetsvolymen. Exempelvis kan det vara en utbyggnad av tillverkningslokalerna som gör att den Halvfasta Kostnaden hoppar upp.

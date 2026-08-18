@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Nyckeltal
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Nyckeltal (KPI, Key Performance Indicator) används för att värdera ett företag och dess verksamhet. De kan användas för att jämföra olika företag och för att få en bättre översikt på ett företag. Det finns många olika Nyckeltal som mäter en rad olika faktorer.

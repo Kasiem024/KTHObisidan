@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Övning 4
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Direct Memory Access (DMA) (Definition):: En hårdvarufunktion som tillåter kringutrustning (peripherals) att överföra data direkt till eller från huvudminnet utan CPU:ns direkta medverkan för varje dataenhet (t.ex. byte eller ord). CPU:n initierar DMA-överföringen genom att programmera en DMA-kontroller (DMAC) med källadress, destinationsadress, antal bytes och överföringsriktning. (Tänk: *En specialiserad kopieringsmaskin för data som avlastar CPU:n*).

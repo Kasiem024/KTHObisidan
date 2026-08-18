@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # God Redovisningssed och Praxis
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 God redovisningssed är att följa redovisningslagar och vedertagen praxis. Vedertagen praxis kan förklaras som ofta använd eller allmänt accepterat tillvägagångssätt och det är Bokföringsnämnden som har det övergripliga ansvaret för utvecklingen av vad god redovisningssed är.

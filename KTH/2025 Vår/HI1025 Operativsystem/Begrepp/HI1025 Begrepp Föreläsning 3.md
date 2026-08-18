@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Föreläsning 3
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 Memory virtualization (Definition):: Ger illusionen att applikationer har tillgång till ett större, sammanhängande minnesutrymme än vad som faktiskt finns fysiskt, skapas för varje process av OS.

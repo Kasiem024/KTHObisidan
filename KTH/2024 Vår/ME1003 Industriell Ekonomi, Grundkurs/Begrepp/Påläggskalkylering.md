@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Påläggskalkylering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Påläggskalkylering är när man systematiskt fördelar kostnaderna på en [[Kostnadsbärare]] genom att utgå från [[Direkt Kostnad]].

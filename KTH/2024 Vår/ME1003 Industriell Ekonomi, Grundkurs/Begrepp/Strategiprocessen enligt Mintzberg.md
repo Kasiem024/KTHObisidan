@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Strategiprocessen enligt Mintzberg
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Enligt Mintzbergs strategiprocess ska man ha ett flertal olika planerade strategier. Om inget speciellt händer med dessa kommer de eventuellt övergå till att bli avsiktliga och realiserade strategier. Dock kan saker hända under arbetet som gör att de planerade strategier blir icke-genomförda strategier. Under arbetet kan också nya strategier växa fram som också blir en del av den realiserade strategin.

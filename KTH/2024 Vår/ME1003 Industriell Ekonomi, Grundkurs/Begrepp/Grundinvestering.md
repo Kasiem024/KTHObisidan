@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Grundinvestering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Grundinvestering (G) är den första [[Utbetalning]] man gör när det kommer till en investering. Detta värde används i flera olika metoder inom [[Investeringskalkylering]] för att veta om en viss [[Investering]] har [[Lönsamhet]] eller inte.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Periodiseringsprincipen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Periodiseringsprincipen innebär att företagets intäkter och kostnader ska hänföras till rätt period. Detta relaterar direkt till begreppet periodiseringar.

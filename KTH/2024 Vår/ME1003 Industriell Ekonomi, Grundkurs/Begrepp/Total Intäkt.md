@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Total Intäkt
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Totala Intäkter (TI) beräknas genom att pris per styck multipliceras med antalet sålda enheter. När de Totala Intäkterna är lika stora som [[Total Kostnad]] är företagets resultat noll, det vill säga varken vinst eller förlust.

@@ -5,11 +5,9 @@ updated: 2026-08-17
 ---
 # Protokoll 1 från Gruppmöte
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Flying Tigers - Grupp 10
 Kurs: CM1008
-Tid: `= this.created`
+Tid: 2025-03-19
 Adress: Hälsovägen 11C, 141 57 Huddinge
 
 ---

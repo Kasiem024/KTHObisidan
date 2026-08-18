@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kostnadsställe
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Kostnadsställe är den avdelningen eller funktionen där kostnaden uppstår.

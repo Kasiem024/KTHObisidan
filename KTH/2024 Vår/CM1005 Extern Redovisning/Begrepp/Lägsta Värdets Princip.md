@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Lägsta Värdets Princip
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Lägsta Värdets Princip (LVP) är huvudregel vid lagervärdering. Principen innebär att lagertillgångar ska tas upp till det lägsta av anskaffningsvärdet och [[Nettoförsäljningsvärde]] (marknadsvärdet) på bokslutsdagen.

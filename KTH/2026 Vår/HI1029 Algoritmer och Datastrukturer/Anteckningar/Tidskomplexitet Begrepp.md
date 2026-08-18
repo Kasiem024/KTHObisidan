@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Tidskomplexitet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 **Definition:**
 - Ett teoretiskt mått på hur en algoritms tidsåtgång växer när storleken på indatan ($n$) ökar.
 

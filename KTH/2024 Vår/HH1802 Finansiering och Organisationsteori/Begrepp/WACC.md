@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # WACC
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 WACC (Weighted Average Cost of Capital) är en formel som visar hur stor avkastningen företaget minst måste ge för att möta både ägarnas och långivarnas räntabilitetskrav.

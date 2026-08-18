@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Oberoende Efterfrågan
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 När efterfrågan är ==marknadsstyrd==, ==omedelbar== och i princip ==slumpmässig== säger man att det är en [[Oberoende Efterfrågan]]. Alltså det ==går inte att kontrollera== efterfrågan helt även om man kan påverka den genom [[Prissättning]] och [[Marknadsföring]].

@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # Periodiseringsfond
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Periodiseringsfond används när företag vill avsätta en del av sitt resultat före skatt. Syftet är att fördela vinsten över flera år.

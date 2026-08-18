@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # BGP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Typ:** EGP (External Gateway Protocol)
 > **Metod:** Path Vector.
 

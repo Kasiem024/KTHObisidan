@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HE1033 Begrepp Föreläsning 1-3
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Datalänklagret(Lager 2)(Definition);; Det lager i OSI-modellen som ansvarar för **nod-till-nod**-kommunikation och tillhandahåller en (logiskt) felfri länk genom **inramning**, adressering samt flödes- och felkontroll.
 <!--SR:!2026-03-19,7,181!2026-03-21,9,230-->
 

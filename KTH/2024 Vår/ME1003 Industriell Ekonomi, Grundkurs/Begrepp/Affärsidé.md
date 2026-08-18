@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Affärsidé
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En Affärsidé består av 3 delar:

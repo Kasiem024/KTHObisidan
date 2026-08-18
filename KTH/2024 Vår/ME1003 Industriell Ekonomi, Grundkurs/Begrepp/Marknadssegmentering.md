@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Marknadssegmentering
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Handlar om att dela upp marknaden i olika segment så att man kan lättare rikta sig mot specifika målgrupper. Används inom [[Marknadsföring]] för att kunna skapa bättre reklamkampanjer och veta vad sina kunders behov är.

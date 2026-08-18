@@ -1,4 +1,5 @@
 ---
+title: "CM1005 Extern Redovisning"
 tags: [index, CM1005, KTH, year2024]
 ---
 # 📚 CM1005 Extern Redovisning

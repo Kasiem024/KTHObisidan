@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Varutransaktion
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Varutransaktioner förekommer i alla typer av företag, men är särskilt viktiga i handelsföretag.

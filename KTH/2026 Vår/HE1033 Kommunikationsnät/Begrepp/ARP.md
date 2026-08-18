@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # ARP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 2.5 (Hybrid)
 > **Mål:** Koppla ihop IP och MAC.
 

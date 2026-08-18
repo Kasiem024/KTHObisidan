@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Avsättningar
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Avsättningar är betalningsförpliktelser som är säkra eller sannolika till sin existens, men där det finns osäkerhet beträffande beloppets storlek eller tidpunkten för betalning.

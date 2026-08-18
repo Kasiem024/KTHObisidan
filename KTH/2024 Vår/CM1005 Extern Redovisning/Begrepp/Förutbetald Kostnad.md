@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Förutbetald Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Förutbetalda Kostnad är en [[Kostnad]] som företaget betalat eller fått faktura på under räkenskapsåret, men som helt eller delvis hör till kommande [[Räkenskapsår]].

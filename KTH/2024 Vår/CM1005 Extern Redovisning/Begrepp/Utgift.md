@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Utgift
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 En utgift uppstår vid anskaffningstidpunkten för en speciell resurs, vanligen en vara eller en tjänst. Begreppet utgift är ur redovisningssynpunkt, på samma sätt som begreppet inkomst, knutet till fakturerings- eller betalningstidpunkt.

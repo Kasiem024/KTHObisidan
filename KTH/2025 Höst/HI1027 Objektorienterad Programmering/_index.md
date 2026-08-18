@@ -1,4 +1,5 @@
 ---
+title: "HI1027 Objektorienterad Programmering"
 tags: [index, HI1027, KTH, year2025]
 ---
 # 📚 HI1027 Objektorienterad Programmering

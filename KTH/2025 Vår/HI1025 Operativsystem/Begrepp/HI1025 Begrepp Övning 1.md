@@ -5,8 +5,6 @@ updated: 2026-08-17
 ---
 # HI1025 Begrepp Övning 1
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Begrepp
 
 .h (Header file) (Definition):: En fil som innehåller *deklarationer* av funktioner, variabler, makron och datatyper. Används för att dela kod mellan olika källkodsfiler och främjar **återanvändbarhet** och **abstraktion**. (Tänk: Innehållsförteckning).

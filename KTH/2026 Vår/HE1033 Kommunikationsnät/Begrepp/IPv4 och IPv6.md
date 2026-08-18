@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # IPv4 och IPv6
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 3 (Nätverk)
 > **Viktigt:** Global adressering.
 

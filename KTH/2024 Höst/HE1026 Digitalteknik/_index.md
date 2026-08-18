@@ -1,4 +1,5 @@
 ---
+title: "HE1026 Digitalteknik"
 tags: [index, HE1026, KTH, year2024]
 ---
 # 📚 HE1026 Digitalteknik

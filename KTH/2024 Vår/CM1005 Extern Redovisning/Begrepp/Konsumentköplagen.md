@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Konsumentköplagen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Konsumentköplagen gäller när en privatperson köper varor från ett företag, [[Konsumentmarknad]]. Denna lag tvingar företag att agera till konsumentens fördel, alltså skyddar den konsumenter. Den innehåller lagar om vad som gäller om en vara är felaktig.

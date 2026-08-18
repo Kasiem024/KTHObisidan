@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Tidspreferens
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Tidspreferens syftar till att en betalning vi får idag är mer värd än samma betalning någon gång i framtiden eftersom pengarna kan användas i verksamheten och därigenom ge en avkastning.

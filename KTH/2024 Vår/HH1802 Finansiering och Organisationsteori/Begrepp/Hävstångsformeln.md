@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Hävstångsformeln
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Hävstångsformeln används för att räkna ut [[Räntabilitet]] på eget kapital. Den visar att $R_E$ är beroende av 2 faktorer. Den första är $R_T$, alltså verksamhetens avkastning. Den andra är ==skuldsättningsgraden==, verksamhetens finansiella struktur.

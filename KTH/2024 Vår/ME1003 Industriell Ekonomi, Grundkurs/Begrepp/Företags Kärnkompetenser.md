@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Företags Kärnkompetenser
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett Företags Kärnkompetenser är de unika kompetenser i [[Värdeskapandet]] som gör att företagets produkter får stort kundvärde. Kärnkompetenser brukar karaktäriseras av 3 egenskaper:

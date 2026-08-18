@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktutveckling i Olika Typer av Verksamheter
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 [[Produktutveckling]] ser olika ut beroende på vilken typ av verksamhet man jobbar med

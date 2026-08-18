@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Teknisk Livslängd
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Teknisk Livslängd är den tid objektet faktiskt kan användas med hänsyn till fysiska eller tekniska begränsningar oberoende om [[Lönsamhet]] eller dess värde. Därför är [[Ekonomisk Livslängd]] vanligen kortare eller lika lång som den teknisk.

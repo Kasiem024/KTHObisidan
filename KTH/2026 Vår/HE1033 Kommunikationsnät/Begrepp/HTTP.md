@@ -5,8 +5,6 @@ updated: 2026-08-18
 ---
 # HTTP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 7 (Applikation)
 > **Transport:** TCP, port 80 (HTTPS: 443).
 

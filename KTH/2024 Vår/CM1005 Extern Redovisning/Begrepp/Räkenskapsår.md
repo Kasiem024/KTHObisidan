@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Räkenskapsår
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett Räkenskapsår är den period som en verksamhets bokföring omfattar och som avslutas med ett [[Årsbokslut]] och en [[Årsredovisning]]. Det är normalt ett kalenderår men kan även vara kortare eller längre, dock 18 månader som längst. Dagen då Räkenskapsåret avslutas kallas för balansdag.

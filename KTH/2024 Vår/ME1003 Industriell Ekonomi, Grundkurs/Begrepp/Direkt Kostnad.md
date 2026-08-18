@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Direkt Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Direkta Kostnader kan direkt hänföras till en specifik [[Kostnadsbärare]].

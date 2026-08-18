@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # SEM1 Begrepp HF1201
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 Miljöteknik (Definition):: Teknik som ger miljöfördelar jämfört med alternativ i hela livscykeln.
 <!--SR:!2025-03-15,9,220!2025-03-19,13,240-->
 

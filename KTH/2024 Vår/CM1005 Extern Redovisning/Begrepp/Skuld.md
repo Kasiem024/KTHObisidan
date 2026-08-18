@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Skuld
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Skuld är en tids- och beloppsbestämd förpliktelse.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Hållbarhetsrapport
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Hållbarhetsrapport måste en del större företag upprätta. I den beskriver de sitt arbete med bland annat miljö och mänskliga rättigheter. Hållbarhetsrapporten kallas ibland ”hållbarhetsredovisning” eller ”miljöredovisning”.

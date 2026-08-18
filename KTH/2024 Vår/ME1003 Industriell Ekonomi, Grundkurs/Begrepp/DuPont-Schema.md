@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # DuPont-Schema
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 DuPont-Schema kan användas för att analysera rörelserisken till följd av företagets kostnadsstruktur och kapitalbindning. Av detta schema framgår det **hur effektivt företagets tillgångar används i sin helhet**, samt att både kostnadsstrukturen och kapitalbindningen påverkar $R_{T}$.

@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktion
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Omfattar samtliga aktiviteter som bidrar till att framställa och leverera företagets varor och tjänster företagets kunder. Alltså ==produktion är inte bara tillverkning==.

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Anskaffningsvärde
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Anskaffningsvärdet för [[Anläggningstillgångar]] definieras som ett belopp motsvarande utgifterna för tillgångens förvärv eller tillverkning.

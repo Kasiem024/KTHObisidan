@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # DHCP
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 7 (Applikation)
 > **Mål:** Automatisk nätverkskonfiguration.
 

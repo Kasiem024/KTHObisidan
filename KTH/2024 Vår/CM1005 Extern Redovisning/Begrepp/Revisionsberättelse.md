@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Revisionsberättelse
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 I en Revisionsberättelse redogör en revisor sin granskning av en styrelses förvaltning av en verksamhet eller rörelse och om [[Årsredovisning]] är upprättad enligt [[Årsredovisningslagen]]. Om företaget har en revisor måste den revisorn göra en Revisionsberättelse. Den ska lämnas in till företagsledningen.

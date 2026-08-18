@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # K-Regelverk
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Ett K-regelverk innehåller regler om hur en [[Årsredovisning]] eller ett [[Årsbokslut]] ska utformas och hur tillgångar, skulder, [[Intäkt]] och [[Kostnad]] ska värderas. Ett K-regelverk innehåller samtliga regler som behövs för att upprätta en årsredovisning, ett årsbokslut respektive en [[Koncernredovisning]].

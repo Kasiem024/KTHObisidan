@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Indirekt Kostnad
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Indirekta Kostnader kan indirekt hänföras till en [[Kostnadsbärare]]

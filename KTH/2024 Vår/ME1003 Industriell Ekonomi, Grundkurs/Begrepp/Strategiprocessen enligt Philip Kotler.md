@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Strategiprocessen enligt Philip Kotler
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Strategiprocessen enligt Philip Kotler börjar med att utveckla ==affärsidén== och en ==analys== av ==företaget== samt ==omvärlden==. Därefter ska ett ==mål== och en ==strategi== för hur man ska uppnå målet formuleras. Denna strategi ska sedan bli en konkret ==handlingsplan== som ==genomförs== och eventuellt ==utvärderas==.

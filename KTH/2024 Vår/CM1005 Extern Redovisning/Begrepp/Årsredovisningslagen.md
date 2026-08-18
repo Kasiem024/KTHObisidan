@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Årsredovisningslagen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Årsredovisningslagen är en lag som bestämmer hur företag ska redogöra sin [[Årsredovisning]], [[Koncernredovisning]] och delårsrapport. Den är baserad på direktiv från EU.

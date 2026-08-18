@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Skatterättsliga Värderingsreglerna
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Skatterättsliga Värderingsreglerna är minimivärderingsregler, de fastställer de lägsta belopp vartill tillgångarna får tas upp när det gäller att fastställa den skattemässiga inkomsten. Syftet med dessa regler är att företag inte ska betala för lite skatt genom att värdera sina [[Tillgångar]] för lågt och på det sättet öka sina kostnader. Det är främst Kommunalskattelagen som håller koll på företag.

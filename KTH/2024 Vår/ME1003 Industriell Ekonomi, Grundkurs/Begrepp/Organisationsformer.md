@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Organisationsformer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 - ==Linjeorganisation==

@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Köplagen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Köplagen är som [[Konsumentköplagen]], skillnaden är att köparen inte måste vara en privatperson. Syftet med den är att skydda köparen dock är den inte lika sträng som konsumentköplagen då parternas förhandlingsstyrka är mer balanserad. Alltså är denna lag mer relevant inom en [[Företagsmarknad]].

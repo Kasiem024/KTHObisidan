@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Huvudbokföring
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Huvudbokföring innebär att man lägger upp redovisningen systematiskt, så att man får en översikt över företagets ställning och resultat. I praktiken innebär detta att bokföring görs på olika konton. På så sätt kan man följa verksamhetens utveckling löpande. I ett bokföringsprogram görs [[Grundbokföring]] och Huvudbokföringen samtidigt.

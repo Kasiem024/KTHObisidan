@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Försiktighetsprincipen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Med Försiktighetsprincipen avses att ett företag beaktar god försiktighet vid redovisning av företagets tillgångar och skulder; med detta menas att tillgångar ska värderas lågt och skulder ska värderas högt. Syftet är att företaget inte ska kunna skönmåla företagets verksamhet, det vill säga: företaget ska inte kunna få det att se ut som att verksamheten går bättre än vad den gör.

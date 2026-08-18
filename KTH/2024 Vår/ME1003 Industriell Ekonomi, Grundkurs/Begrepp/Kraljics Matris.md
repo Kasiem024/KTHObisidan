@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Kraljics Matris
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 [[Kraljics Matris]] kan sägas vara en portföljanalys av företagets inköpta artiklar baserat på hur mycket artikeln påverkar [[Värdeerbjudandet]] och [[Lönsamhet]], respektive konsekvenserna av eventuella leveransproblem.

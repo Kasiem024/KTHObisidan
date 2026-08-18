@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Produktionsflöden
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Det finns 4 olika typer av Produktionsflöden:

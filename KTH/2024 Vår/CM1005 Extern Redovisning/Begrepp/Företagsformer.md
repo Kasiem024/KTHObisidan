@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Företagsformer
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 - [[Enskild Näringsverksamhet]]

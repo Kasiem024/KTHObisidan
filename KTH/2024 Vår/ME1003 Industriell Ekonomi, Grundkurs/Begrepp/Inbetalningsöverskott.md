@@ -5,8 +5,6 @@ updated: 2026-05-26
 ---
 # Inbetalningsöverskott
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Inbetalningsöverskott (a) kan användas för att beskriva en [[Investering]]. De flesta investeringar börjar med en Grundinvestering, den första utbetalningen. Över åren kommer företaget att ha en massa in- och utbetalningar, summan av dessa betalningar under ett år kallas Inbetalningsöverskott. Det kan också vara negativt ifall utbetalningarna är större än inbetalningarna ett visst år.

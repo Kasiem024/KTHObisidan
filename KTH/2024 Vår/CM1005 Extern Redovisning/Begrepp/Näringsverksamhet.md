@@ -6,8 +6,6 @@ updated: 2026-08-17
 
 # Näringsverksamhet
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 ## Definition
 
 Verksamhet som bedrivs av en juridisk person, till exempel [[Aktiebolag]] eller [[Handelsbolag]], beskattas i princip alltid som näringsverksamhet.

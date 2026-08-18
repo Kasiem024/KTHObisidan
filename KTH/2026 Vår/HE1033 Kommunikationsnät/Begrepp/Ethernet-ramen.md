@@ -5,8 +5,6 @@ updated: 2026-05-28
 ---
 # Ethernet-ramen
 
-**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`
-
 > **Lager:** OSI 2 (Datalänk)
 > **Storlek:** 64 till 1518 byte.
 
