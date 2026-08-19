@@ -730,8 +730,27 @@ Sorting: newest year first, `Vår` before `Höst` within a year, term folders gr
 above unrelated siblings, everything else folders-first then Swedish collation
 (`localeCompare(…, "sv")` so å/ä/ö sort after z).
 
-**Still worth one glance in a browser**, since the comparator only runs client-side:
-if `2024 Höst` still appears above `2024 Vår`, something further is wrong.
+**Verified (2026-08-19) without a browser.** The client rebuilds the comparator with
+`new Function("a","b","return (" + E.sortFn + ")(a, b)")`, reading the serialized
+options from the `data-data-fns` attribute — confirmed in the emitted
+`public/static/scripts/script-3-*.js`. That runs in **global scope**, which is exactly
+why the original version would have thrown rather than just sorting oddly.
+
+Replicating that same path in Node against the real built `index.html` gives:
+
+```
+sortFn present = true · contains __name = false · comparator does not throw
+term order:  2026 Vår · 2026 Höst · 2025 Vår · 2025 Höst · 2024 Vår · 2024 Höst
+2024 Vår before 2024 Höst = true          (the reported symptom, fixed)
+mixed siblings: term folders → plain folders → files
+Swedish collation: Anteckningar, Zebra, Åter, Änglar, Övningar
+```
+
+**Open design question (not a defect):** the ordering is currently a hybrid — years
+descending but seasons ascending within a year — so the current term (2026 Höst) sits
+second rather than first. Fully reverse-chronological would put the current term at the
+top; fully chronological would read as a study progression. Flagged to the user for a
+decision; the change is two lines in `quartz.ts`.
 
 ---
 
