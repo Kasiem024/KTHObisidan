@@ -17,6 +17,13 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🧹 2026-08-19 (14) — HOUSEKEEPING (F49 done)
+Renamed the `Värdekejda` image at source with both references updated, deleted the merged
+`wip/flashcards` branch from both remotes, and added `tools/slim-svg.mjs` to the CI build so
+the Excalidraw pages shrink ~23% (site ~105 MB → ~90 MB). The slimming under-delivered
+against my 40–50% estimate — coordinates averaged only 3.36 decimals, so integers were
+needed to reach 18%. Nothing open.
+
 ### 🎯 2026-08-19 (13) — EXAM PRIORITY MAP (F48 done)
 `Atlas/Tenta-prioritering.md` ranks concepts by how many distinct question sets reference
 them, as a worklist for writing `## Tenta-fokus` (42 of 352 have one; 225 exam-referenced
@@ -1014,10 +1021,10 @@ images, zero named `Pasted image …` or similar. Two judgement calls, both appr
 
 - **The trailing course code is dropped**: `Bostonmatrisen ME1003.png` → "Bostonmatrisen".
   The page already establishes the course, so reading "ME1003" aloud only adds noise.
-- **One typo is corrected in the alt text only.** The file `Värdekejda ME1003.png`
-  misspells *Värdekedja* (the note embedding it is correctly named `Värdekedja.md`). Alt
-  text is prose read to a human, so it says "Värdekedja". **The filename is untouched**,
-  so no links break. Renaming the file properly remains an option.
+- **One typo was corrected.** The file was named `Värdekejda ME1003.png`, misspelling
+  *Värdekedja* (the note embedding it is correctly named `Värdekedja.md`). The alt text was
+  fixed first, and the **file itself has since been renamed** with its 2 references
+  updated — see F49, so filename and alt text now agree.
 
 **Verified:** rebuilt from the live vault — 183 `<img>` tags, **0 without alt**, 0 pages
 affected, and 0 pages with unparsed embed syntax. Sample output:
@@ -1074,6 +1081,46 @@ Dataview list for day-to-day use in Obsidian, which sorts by total inbound links
 different and cruder measure, and labelled as such.
 
 Linked from `index.md` and `Atlas/Dashboard.md` so it is reachable rather than orphaned.
+
+### F49. ✅ DONE (2026-08-19) — housekeeping: filename typo, merged branch, page weight
+
+**The `Värdekejda` image is renamed at source.** F47 had corrected only the alt text. The
+file is now `Värdekedja ME1003.png`, moved with `git mv` so history follows it, and both
+references updated. One stale mention remains and is **not** worth chasing: an Excalidraw
+scene JSON still points at `.../Bilagor/Värdekejda ME1003.png`, but that path broke during
+the F31 folder migration long before this rename — `Bilagor` became `Filer`.
+
+**`wip/flashcards` is deleted** from both the remote and locally. It was fully merged into
+`v5` at F38. `git branch -d` initially refused because it compares against the
+remote-tracking ref, which the remote deletion had just orphaned; `git fetch --prune`
+cleared that and the safe delete then worked, so `-D` was never needed.
+
+**Excalidraw pages are ~23% smaller.** `tools/slim-svg.mjs` rounds coordinates in large
+inline SVGs to integers, wired into `deploy.yml` between build and upload. HTML goes
+82.3 MB → 67.4 MB (18.1%) and the whole site ~105 MB → ~90 MB; the heaviest page drops from
+6,796 KB to 5,203 KB.
+
+**This under-delivered against my own estimate and that is worth recording.** I predicted
+40–50%. Coordinates average only 3.36 decimal places, so rounding to one decimal saved just
+**7.2%** — integers were needed to reach 18%. A visitor still downloads ~5 MB for one of
+those pages, so the problem is reduced, not solved. The step is trivially removable.
+
+Safety, each verified with a synthetic fixture rather than assumed: only SVGs over 50 KB are
+considered, so UI icons are untouched; only canvases ≥1,000 units across are rounded, and a
+small-canvas or `viewBox`-less SVG is skipped and reported; only values |v| ≥ 1 are rounded,
+protecting opacities and stroke widths; and structure is compared before/after so the build
+fails rather than publishing a mangled drawing. It is idempotent.
+
+**Two of my own verification checks were wrong this round**, both the same mistake:
+PowerShell's `-match` is case-insensitive, so a search for `NaN` matched "nan" inside
+Swedish words like fi**nan**siering, reporting 243 affected pages. The case-sensitive count
+is **0**. The tool's own check uses JavaScript `.test()`, which is case-sensitive and was
+never affected. (The earlier F40 "Dataview leak" false positive was the identical error.)
+
+**Note for future local builds:** `content/` is a pinned submodule, so a local
+`npx quartz build` can lag the vault badly — during this work it sat at `a44efa6` while the
+vault was at `28422ac`, which made alt text appear missing. CI updates the submodule, so
+only local builds are affected.
 
 ---
 
