@@ -32,6 +32,10 @@ Börja här om du vill läsa dig in på ett område:
 - [[2025 MOC]]
 - [[2026 MOC]]
 
+## Tentaförberedelse
+
+- [[Tenta-prioritering]] — vilka begrepp som återkommer oftast i frågeuppsättningarna
+
 ## Om anteckningarna
 
 Anteckningarna skrivs i [Obsidian](https://obsidian.md) och publiceras med

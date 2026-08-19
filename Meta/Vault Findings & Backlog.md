@@ -17,6 +17,14 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🎯 2026-08-19 (13) — EXAM PRIORITY MAP (F48 done)
+`Atlas/Tenta-prioritering.md` ranks concepts by how many distinct question sets reference
+them, as a worklist for writing `## Tenta-fokus` (42 of 352 have one; 225 exam-referenced
+concepts do not). Built as **one** note, not 225 edits, because the `backlinks` panel
+already shows each concept's references — what was missing is the ranking. Also corrects a
+metric I got wrong earlier: counting occurrences instead of distinct notes turned 4 into
+"39". The real range is 1–7. Nothing open.
+
 ### ♿ 2026-08-19 (12) — ACCESSIBILITY (F47 done)
 Every image on the site published with `alt=""` — 183 images across 61 pages, invisible to
 screen readers. All now carry alt text derived from the already-descriptive filenames, with
@@ -1025,6 +1033,47 @@ that. But the site is a GitHub Pages **project** site served from
 **domain** root. A file at the project subpath is ignored, so it would have been dead
 weight. Controlling crawling here would require a `robots.txt` in the separate
 `kasiem024.github.io` user-site repo. `sitemap.xml` is unaffected and still emitted.
+
+### F48. ✅ DONE (2026-08-19) — exam-priority map, and a correction to a bad metric
+
+`Atlas/Tenta-prioritering.md` ranks concepts by how many **distinct** question sets
+reference them, as a worklist for which `## Tenta-fokus` to write first. 42 of 352 concept
+notes have one; **225 exam-referenced concepts do not.**
+
+**A metric I reported earlier was wrong, and the corrected numbers are much smaller.** The
+first pass counted link *occurrences*, not distinct notes, so `Balansräkning` was described
+as appearing in "39 exam question sets". It is referenced by **4**. The true range across
+the whole vault is **1 to 7**, not 1 to 39. Corrected counts, by distinct source note:
+
+| Distinct question sets | Concepts |
+| --- | --- |
+| 7 | 3 |
+| 6 | 2 |
+| 5 | 3 |
+| 4 | 13 |
+| 3 | 35 |
+| 2 | 114 |
+| 1 | 94 |
+
+The top of the list is `Intäkt`, `Kostnad` and `Resultaträkning` at 7, then `Aktiebolag`
+and `Kassaflödesanalys` at 6. Only ME1003 (122), CM1005 (70) and HH1802 (29) have
+meaningful counts; HI1029 and HE1033 have study guides rather than question sets.
+
+**Deliberately built as one note rather than 225 edits.** The obvious approach — writing a
+"Förekommer i: …" list into each concept — would have duplicated something the site
+already does. The `backlinks` plugin is enabled, so every concept page already lists its
+inbound links. Checked on `Balansräkning`: 38 backlinks, of which 4 are question sets. The
+references are therefore already visible, just **buried and unranked**. Aggregation and
+ranking is the part that genuinely did not exist, and it belongs in one place where it can
+be regenerated, not copied into 225 files where it would go stale.
+
+The note is explicit about the metric's weakness: a 1–7 spread is a blunt instrument, 94
+concepts sit at exactly 1 and 114 at exactly 2, and it counts *links* rather than content,
+so a concept discussed without being linked is invisible to it. It also carries a live
+Dataview list for day-to-day use in Obsidian, which sorts by total inbound links — a
+different and cruder measure, and labelled as such.
+
+Linked from `index.md` and `Atlas/Dashboard.md` so it is reachable rather than orphaned.
 
 ---
 

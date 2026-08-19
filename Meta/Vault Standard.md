@@ -190,6 +190,16 @@ Every image embed carries **alt text** after a pipe:
 - Image filenames are themselves descriptive (`Kraljics Inköpsmatris ME1003.png`), which
   is what makes the alt text easy to write — keep naming new ones that way.
 
+### Dataview blocks
+
+Quartz cannot run Dataview, so query blocks are hidden on the published site. Always put
+**at least one line of prose above a Dataview block**, inside the same section.
+
+Otherwise the section's heading is left with nothing visible beneath it on the web — and it
+will not even be hidden by the empty-heading rule in `custom.scss`, because the hidden
+query block is still a sibling element. One explanatory sentence fixes it and reads better
+in Obsidian too.
+
 ### Course literature naming (`Filer/Litteraturlista/`)
 
 **`<Titel> <År> [<Region>] Edition <N> <Författare>`** — omit any part that does not

@@ -16,6 +16,7 @@ Welcome to your structured KTH Vault. This dashboard uses the **Dataview** plugi
 - [[Atlas/Hårdvara MOC|🔌 Hårdvara]]
 - [[Atlas/Databaser MOC|🗄️ Databaser]]
 - [[Atlas/Samhälle MOC|🌍 Samhälle]]
+- [[Atlas/Tenta-prioritering|🎯 Tenta-prioritering]]
 
 ---
 
