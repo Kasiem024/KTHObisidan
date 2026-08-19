@@ -37,8 +37,6 @@ När man gör en Kassaflödesanalys kan man dela upp den beroende på vilken av 
 Kassaflödesanalys (Definition):: Visar ett företags likviditetsförändring under en viss period. Alltså [[Inbetalning]] och [[Utbetalning]] för en viss period, visar hur företaget har anskaffat och använt kapital
 <!--SR:!2024-05-21,11,236!2024-06-09,30,314-->
 
-<!--SR:!2024-03-20,34,272!2024-03-22,17,301-->
-
 Delar av verksamheten Kassaflödesanalysen ska analysera (3)
 ??
 - [[Löpande Verksamhet]]

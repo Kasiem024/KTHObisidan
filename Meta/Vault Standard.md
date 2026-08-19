@@ -48,6 +48,7 @@ Rules deliberately switched off, with reasons, so they are not turned back on by
 | MD032 lists surrounded by blanks | Too noisy against Obsidian's output |
 | MD033 inline HTML | `<!--SR:-->` scheduling comments and `<br>` are required |
 | MD036 emphasis as heading | Swedish notes legitimately use `*emphasis*` for notation such as `*Employee N -> worksFor -> 1 Department*` |
+| MD024 duplicate headings | Scoped to `siblings_only` only: a course may be listed under two different `##` sections of a MOC, but never twice inside the same section |
 | MD025 front-matter title | Set to `""` only: index notes correctly have both a `title:` key and an H1, so the frontmatter title must not count as a second top-level heading |
 
 `Meta/Obsidian Plugins/Templates/` is excluded from linting rather than having rules
@@ -140,6 +141,21 @@ KTH/<Year Season>/<CODE Course Name>/
 - New courses: copy the skeleton from `KTH/Kurs Mapp Mall/`.
 - `Atlas/` holds subject MOCs, the `Dashboard` and the `Vault Health Report`.
   `Meta/` holds tooling, templates and this standard. `Ericsson/` is work, not studies.
+
+### MOC heading structure
+
+All ten MOCs use the same three levels, and heading levels are never skipped:
+
+```text
+# <Subject> MOC          <- H1, the note name
+## Kurser                <- H2 section
+### #CODE Course Name    <- H3 per course, then the note links
+## KTH-relaterat         <- further H2 sections as needed
+### #CODE Course Name
+```
+
+A course may appear under two different `##` sections; it must not appear twice inside the
+same one. Enforced by markdownlint MD001 and MD024, so it cannot drift back.
 
 ### Note file naming
 

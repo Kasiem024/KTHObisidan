@@ -6,15 +6,17 @@ description: "Centraliserad översikt över kommunikationsnät, protokoll och n�
 
 Centraliserad översikt över kommunikationsnät, protokoll och nätverksteknik.
 
-#### #HI1032 Kommunikationssystem
+## Kurser
+
+### #HI1032 Kommunikationssystem
 
 - [[KTH/2026 Höst/HI1032 Kommunikationssystem/_index|HI1032 Kommunikationssystem]]
 
-#### #HI2002 Routing i IP-nät
+### #HI2002 Routing i IP-nät
 
 - [[KTH/2026 Höst/HI2002 Routing i IP-nät/_index|HI2002 Routing i IP-nät]]
 
-#### #HE1033 Kommunikationsnät
+### #HE1033 Kommunikationsnät
 
 - **#begrepp**
 	- [[KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Tenta|HE1033 Begrepp Tenta]]
@@ -25,7 +27,7 @@ Centraliserad översikt över kommunikationsnät, protokoll och nätverksteknik.
 
 ## KTH-relaterat
 
-#### #HE1033 Kommunikationsnät
+### #HE1033 Kommunikationsnät
 
 - **#studieguide**
 	- [[KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Studieguide Tenta|HE1033 Studieguide Tenta]]

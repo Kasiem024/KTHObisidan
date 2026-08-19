@@ -108,8 +108,6 @@ Vad betyder flaggan MF (More Fragments) = 1?(Definition);;Att det **finns fler f
 Vad betyder flaggan MF = 0?(Definition);;Att detta är **det sista** (eller enda) fragmentet av datagrammet.
 <!--SR:!2026-03-15,9,250!2026-03-29,17,260-->
 
-<!--SR:!2000-01-01,1,250!2026-03-05,2,240-->
-
 Första fragmentet har skickat 560 bytes data. Vad blir Fragment Offset för det andra fragmentet?(Definition)::$560 / 8 = \mathbf{70}$.
 <!--SR:!2026-03-25,13,240-->
 

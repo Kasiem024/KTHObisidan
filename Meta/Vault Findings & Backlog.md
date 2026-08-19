@@ -19,13 +19,14 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ### 🧹 2026-08-19 (16) — MARKDOWN LINTING (F52)
 
-Linted all 500 lintable notes: **767 violations → 12**, 213 files fixed. The linter's
+Linted all 500 lintable notes: **767 violations → 0**, 220 files fixed. The linter's
 defaults needed correcting first — MD011's 8 "reversed links" were Templater expressions,
 and MD034's auto-fix genuinely **broke the course template** by splitting a `<% %>`
 expression out of a URL (caught and repaired). Excalidraw and templates are now excluded
 properly; `.markdownlintignore` turned out to be inert, which had silently linted 36 extra
-files. SR fingerprint unchanged on all six measures and the build matched exactly. The 12
-remaining are a heading-hierarchy decision in the MOC hub pages.
+files. The seven subject MOCs were restructured onto the `# → ## → ###` shape the three year
+MOCs already used, so all ten now match. Removed 3 orphaned `<!--SR:-->` comments on request:
+1265 → 1262 markers, 0 orphans left, every separator count unchanged, build identical.
 
 ### 🃏 2026-08-19 (15) — FLASHCARDS + .KIRO (F50, F51 done)
 
@@ -1264,7 +1265,7 @@ would have been published on the public site. The vault audit also had to exclud
 files would be audited as notes and fail for having no tags. Verified after: 0 published files
 matching `.kiro`, page count unchanged at 601, audit clean with `notesInScope` still 470.
 
-### F52. ✅ MOSTLY DONE (2026-08-19) — Markdown linting: 767 → 12
+### F52. ✅ DONE (2026-08-19) — Markdown linting: 767 → 0
 
 Ran `markdownlint-cli2` over the whole vault and fixed everything mechanical. **767
 violations → 12**, and the 12 that remain are a deliberate open question, not a backlog of
@@ -1315,20 +1316,41 @@ on every measure: 1270 `<!--SR:-->` markers, 1070 `::`, 270 `;;`, 100 `||`, 219 
 disabled. A full build then matched the previous one exactly — 601 pages, 353 pages with
 callouts, 1965 callouts, 0 leaks, 0 KaTeX errors, 0 images without alt.
 
-**Found but deliberately not changed — 3 orphaned `<!--SR:-->` comments** whose card text is
-gone, in `Kassaflödesanalys`, `HE1033 Begrepp Föreläsning 1-3` and `... 6-7` (the last dated
-`2000-01-01`). They are invisible on the site and harmless to review. Deleting scheduling
-data is the author's call, not the linter's.
+**Found and then removed on the author's instruction — 3 orphaned `<!--SR:-->` comments** whose
+card text was gone, in `Kassaflödesanalys`, `HE1033 Begrepp Föreläsning 1-3` and `... 6-7` (the
+last dated `2000-01-01`, i.e. never actually reviewed). Deleted with the surrounding blank-line
+run collapsed back to one. Study-note SR markers went 1265 → **1262**, exactly three, with
+**0** orphans left and all four separator counts untouched.
 
-**Still open — the 12 remaining violations, all in hub pages:**
+**The last 12 violations, resolved (2026-08-19).**
 
-- **MD001 heading increment (10).** The nine `Atlas/*.MOC` files jump `# h1` straight to
-  `#### h4`, and `2024-02-16 - CM1005 - Lektion` jumps `h1` to `h3`. Skipped levels break
-  screen-reader navigation and the site's table of contents. Fixing means promoting those
-  headings, which makes them render visibly larger — a design decision.
-- **MD024 duplicate heading (2).** `Nätverk MOC` and `Programmering MOC` each list one
-  course twice, once at the top and once under `## KTH-relaterat`. Either merge the blocks,
-  or set `siblings_only: true` if listing a course under two groupings is intentional.
+**MD001 skipped heading levels (10).** The seven *subject* MOCs jumped `# h1` straight to
+`#### h4`. Rather than invent a shape, they now follow the pattern the three **year** MOCs
+already used — `# h1` → `## h2` → `### h3`:
+
+```text
+# Nätverk MOC
+prose
+## Kurser                      <- inserted; was missing entirely
+### #HI1032 Kommunikationssystem
+## KTH-relaterat
+### #HE1033 Kommunikationsnät
+```
+
+That makes all ten MOCs structurally identical instead of two families. The tenth violation
+was a plain typo: `2024-02-16 - CM1005 - Lektion` had `### [[Sociala Avgifter]]` while its
+sibling section is `## [[Semesterlön]]` — promoted to `##`.
+
+**MD024 duplicate headings (2).** `Nätverk MOC` and `Programmering MOC` each list one course
+in both sections. Now that the sections are real `##` parents, the duplicates sit under
+*different* parents, so `siblings_only: true` states the rule that actually matters — no
+repeated heading **within** one section. No content was merged, because the split between
+`## Kurser` and `## KTH-relaterat` is the author's own organisation.
+
+Verified: **lint 0 errors across 493 files**, audit clean, and the build unchanged at 601
+pages / 353 with callouts / 1965 callouts / 0 leaks. Quartz de-duplicates the repeated course
+anchor as `he1033-kommunikationsnät-1`, so deep links remain unique, and no `<h4>` remains on
+any MOC page.
 
 Line endings: 31 files previously had **mixed** CRLF/LF and are now consistently CRLF, which
 matches `core.autocrlf=true`. The repository stores LF either way, so the commit shows no
