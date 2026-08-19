@@ -20,6 +20,7 @@ Högt P/E-Tal kan betyda att aktien är övervärderad eller att marknaden har h
 
 ## Kopplat till
 
+- [[Nyckeltal]]
 ## Flashcards
 
 P/E-Tal (Definition) (Formel)

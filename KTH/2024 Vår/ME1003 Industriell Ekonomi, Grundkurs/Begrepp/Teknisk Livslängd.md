@@ -14,6 +14,8 @@ Alltså är teknisk livslängd hur länge något fungerar överhuvudtaget.
 
 ## Kopplat till
 
+- [[Ekonomisk Livslängd]]
+- [[Lönsamhet]]
 ## Flashcards
 
 Teknisk Livslängd (Definition):: Tiden objektet faktiskt kan användas med hänsyn till fysiska eller tekniska begränsningar oberoende om [[Lönsamhet]] eller dess värde

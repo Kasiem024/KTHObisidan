@@ -1,6 +1,7 @@
 ---
 title: "HI1029 Algoritmer och Datastrukturer"
 tags: [index, HI1029, KTH, year2026]
+description: "Kursindex för HI1029 Algoritmer och Datastrukturer med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HI1029 Algoritmer och Datastrukturer
 

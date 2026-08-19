@@ -1,6 +1,7 @@
 ---
 title: "HE1026 Digitalteknik"
 tags: [index, HE1026, KTH, year2024]
+description: "Kursindex för HE1026 Digitalteknik med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HE1026 Digitalteknik
 

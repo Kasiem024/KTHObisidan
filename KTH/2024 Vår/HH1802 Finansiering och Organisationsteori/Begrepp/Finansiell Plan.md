@@ -32,6 +32,9 @@ Om finansieringen överstiger kapitalbehovet blir det ett Finansiellt överskott
 
 ## Kopplat till
 
+- [[Eget Kapital]]
+- [[Skuld]]
+- [[Resultatprognos]]
 ## Flashcards
 
 Finansiell Plan (Definition):: Visar ett företags kapitalanvändning och -anskaffning några år i framtiden, baseras på företagets egna mål och strategier men också faktorer som företaget inte har kontroll över

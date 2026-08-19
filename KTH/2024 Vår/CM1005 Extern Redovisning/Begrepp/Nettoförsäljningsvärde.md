@@ -13,6 +13,8 @@ Nettoförsäljningsvärde är det pris som företaget skulle få för [[Tillgån
 
 ## Kopplat till
 
+- [[Tillgångar]]
+- [[Lägsta Värdets Princip]]
 ## Flashcards
 
 Nettoförsäljningsvärde (Definition):: Det pris som företaget skulle få för [[Tillgångar]] vid en normal försäljning, minskat med beräknade försäljningsomkostnader

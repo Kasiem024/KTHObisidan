@@ -2,6 +2,7 @@
 tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
 created: 2026-01-19
 updated: 2026-08-17
+description: "IP (Internet Protocol): Ett förbindelselöst (connectionless) protokoll som arbetar enligt 'best-effort'-principen utan garanterad leverans."
 ---
 # HE1033 Begrepp Föreläsning 4-5
 

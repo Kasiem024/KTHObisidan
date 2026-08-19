@@ -2,6 +2,7 @@
 tags: [begrepp, HI1025, KTH, programmering, tenta, year2025]
 created: 2025-05-20
 updated: 2026-05-26
+description: "Process: Ett program under exekvering, med egen adressrymd, programräknare och allokerade systemresurser."
 ---
 # HI1025 Kärnbegrepp för Tentamen
 

@@ -2,6 +2,7 @@
 tags: [övrigt, HE1028, year2025, KTH, hårdvara]
 created: 2025-01-20
 updated: 2026-08-17
+description: "This is a list of common RISC-V instructions, explained in a beginner-friendly way."
 ---
 # Instruktioner HE1028
 

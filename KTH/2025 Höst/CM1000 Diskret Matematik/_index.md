@@ -1,6 +1,7 @@
 ---
 title: "CM1000 Diskret Matematik"
 tags: [index, CM1000, KTH, year2025]
+description: "Kursindex för CM1000 Diskret Matematik med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 CM1000 Diskret Matematik
 

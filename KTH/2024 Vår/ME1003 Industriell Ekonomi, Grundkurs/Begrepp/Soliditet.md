@@ -30,6 +30,8 @@ $$
 
 ## Kopplat till
 
+- [[Nyckeltal]]
+- [[Risk]]
 ## Flashcards
 
 Soliditet (Definition):: Ett [[Nyckeltal]] där det egna kapitalet sätts i relation till de totala skulderna. Det ger ett mått på hur tåligt företaget är för framtida förluster

@@ -1,6 +1,7 @@
 ---
 title: "HI1025 Operativsystem"
 tags: [index, HI1025, KTH, year2025]
+description: "Kursindex för HI1025 Operativsystem med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HI1025 Operativsystem
 

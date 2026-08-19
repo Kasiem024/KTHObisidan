@@ -21,6 +21,12 @@ Det är inte alla verksamheter som behöver följa denna lag. De verksamheter so
 
 ## Kopplat till
 
+- [[Årsredovisning]]
+- [[Koncernredovisning]]
+- [[Aktiebolag]]
+- [[Handelsbolag]]
+- [[Ekonomisk Förening]]
+- [[Civilrättsliga Värderingsreglerna]]
 ## Flashcards
 
 Årsredovisningslagen (Definition):: En lag som bestämmer hur företag ska redogöra sin [[Årsredovisning]], [[Koncernredovisning]] och delårsrapport. Den är baserad på direktiv från EU

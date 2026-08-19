@@ -87,6 +87,12 @@ Kostnadsslag är vilken typ av kostnad det är. Exempelvis kan det vara lön, ma
 
 ## Kopplat till
 
+- [[Rörlig Kostnad]]
+- [[Fast Kostnad]]
+- [[Samkostnad]]
+- [[Särkostnad]]
+- [[Direkt Kostnad]]
+- [[Indirekt Kostnad]]
 ## Flashcards
 
 Kostnadstyper (3)

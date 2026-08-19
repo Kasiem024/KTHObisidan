@@ -1,6 +1,7 @@
 ---
 title: "SF1686 Flervariabelanalys"
 tags: [index, SF1686, KTH, year2025]
+description: "Kursindex för SF1686 Flervariabelanalys med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 SF1686 Flervariabelanalys
 

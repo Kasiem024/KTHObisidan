@@ -1,6 +1,7 @@
 ---
 title: "EN2720 Etisk hackning"
 tags: [index, EN2720, KTH, nätverk, säkerhet, year2026]
+description: "Kursindex för EN2720 Etisk hackning med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 EN2720 Etisk hackning
 

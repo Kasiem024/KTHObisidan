@@ -1,6 +1,7 @@
 ---
 title: "HI1024 Programmering, grundkurs"
 tags: [index, HI1024, KTH, year2024]
+description: "Kursindex för HI1024 Programmering, grundkurs med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HI1024 Programmering, grundkurs
 

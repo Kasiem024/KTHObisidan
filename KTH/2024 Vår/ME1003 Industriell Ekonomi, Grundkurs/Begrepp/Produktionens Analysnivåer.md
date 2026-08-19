@@ -33,6 +33,8 @@ Man kan dela in [[Produktion]] på tre analysnivåer
 
 ## Kopplat till
 
+- [[Produktion]]
+- [[Värdekedja]]
 ## Flashcards
 
 Delarna av produktionens strategiska nivå (4)

@@ -1,6 +1,7 @@
 ---
 title: "HI1031 Distribuerade informationssystem"
 tags: [index, HI1031, KTH, databaser, programmering, year2026]
+description: "Kursindex för HI1031 Distribuerade informationssystem med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HI1031 Distribuerade informationssystem
 

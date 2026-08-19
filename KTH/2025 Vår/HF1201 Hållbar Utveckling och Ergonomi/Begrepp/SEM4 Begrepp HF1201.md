@@ -2,6 +2,7 @@
 tags: [begrepp, HF1201, KTH, samhälle, year2025]
 created: 2025-02-19
 updated: 2026-05-26
+description: "Medarbetarundersökningar: Verktyg för att samla feedback från medarbetare om arbetsmiljö och trivsel."
 ---
 # `=this.file.name`
 

@@ -1,6 +1,7 @@
 ---
 title: "HU1801 Industriell Marknadsföring"
 tags: [index, HU1801, KTH, year2024]
+description: "Kursindex för HU1801 Industriell Marknadsföring med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HU1801 Industriell Marknadsföring
 

@@ -56,6 +56,12 @@ $$
 
 ## Kopplat till
 
+- [[Nyckeltal]]
+- [[Anläggningstillgångar]]
+- [[Omsättningstillgångar]]
+- [[Eget Kapital]]
+- [[Resultaträkning]]
+- [[Lönsamhet]]
 ## Flashcards
 
 Räntabilitet (Definition):: Visar ett företags förmåga att ge avkastning på kapitalet. Det är ett [[Nyckeltal]] och ett [[Lönsamhet|lönsamhetsmått]] som beskriver ett företags vinst i förhållande till investerat kapital, ju högre ju bättre

@@ -31,6 +31,9 @@ $$
 
 ## Kopplat till
 
+- [[Räntabilitet]]
+- [[Eget Kapital]]
+- [[Nyckeltal]]
 ## Flashcards
 
 Hävstångsformeln (Definition):: Används för att räkna ut [[Räntabilitet]] på eget kapital. Den visar att $R_E$ är beroende av 2 faktorer. Den första är $R_T$, alltså verksamhetens avkastning. Den andra är ==skuldsättningsgraden==, verksamhetens finansiella struktur

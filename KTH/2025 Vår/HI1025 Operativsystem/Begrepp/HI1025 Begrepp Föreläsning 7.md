@@ -2,6 +2,7 @@
 tags: [begrepp, HI1025, KTH, year2025, programmering]
 created: 2025-05-19
 updated: 2026-08-17
+description: "Persistens (Storage): Egenskapen hos ett system att lagra data så att den överlever strömavbrott och omstarter."
 ---
 # HI1025 Begrepp Föreläsning 7
 

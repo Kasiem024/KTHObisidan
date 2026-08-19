@@ -37,6 +37,11 @@ Enligt [[Mervärdesskattelagen]] ska en verifikation innehålla:
 
 ## Kopplat till
 
+- [[Affärshändelse]]
+- [[Bokföring]]
+- [[Mervärdesskattelagen]]
+- [[Bokföringslagen]]
+- [[Rättelse]]
 ## Flashcards
 
 Verifikation (Definition):: Som ett kvitto som visar att en [[Affärshändelse]] har hänt. Kan vara en faktura, kvitto eller annat både fysiskt och elektroniskt dokument

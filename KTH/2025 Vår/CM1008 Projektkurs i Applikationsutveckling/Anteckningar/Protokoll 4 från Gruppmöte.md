@@ -2,6 +2,7 @@
 tags: [övrigt, CM1008, KTH, year2025, programmering]
 created: 2025-03-29
 updated: 2026-08-17
+description: "Mötet öppnas och inleds av Kasiem Al-Mshabbak 12:32."
 ---
 # Protokoll 4 från Gruppmöte
 

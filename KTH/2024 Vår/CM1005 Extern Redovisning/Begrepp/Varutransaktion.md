@@ -61,6 +61,12 @@ Alltså handlar den finansiella aspekten av en Varutransaktion om hur köparen s
 
 ## Kopplat till
 
+- [[Offert]]
+- [[Konsumentköplagen]]
+- [[Konsumenttjänstlagen]]
+- [[Köplagen]]
+- [[Avtalslagen]]
+- [[Incoterms]]
 ## Flashcards
 
 Varutransaktion (Definition):: Kommer till stånd genom att ett avtal sluts mellan två parter, en säljare (leverantör) och en köpare (kund)

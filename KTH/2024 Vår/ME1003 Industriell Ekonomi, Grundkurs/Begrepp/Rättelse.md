@@ -14,6 +14,8 @@ En Rättelse görs genom att en ny [[Verifikation]] skapas där man nollställer
 
 ## Kopplat till
 
+- [[Bokföring]]
+- [[Verifikation]]
 ## Flashcards
 
 Rättelse (Definition):: Görs när något går fel i [[Bokföring]], den ska inte utplåna den tidigare konteringen samt ska man kunna spåra vem som gjort den och varför

@@ -18,6 +18,8 @@ Företags Kapitalstruktur är av stor betydelse för de interna överväganden e
 
 ## Kopplat till
 
+- [[Eget Kapital]]
+- [[Obeskattade Reserver]]
 ## Flashcards
 
 Företags Kapitalstruktur (3)

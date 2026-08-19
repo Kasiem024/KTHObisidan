@@ -1,6 +1,7 @@
 ---
 title: "HE1028 Mikrodatorteknik"
 tags: [index, HE1028, KTH, year2025]
+description: "Kursindex för HE1028 Mikrodatorteknik med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HE1028 Mikrodatorteknik
 

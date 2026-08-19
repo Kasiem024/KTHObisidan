@@ -2,6 +2,7 @@
 tags: [ekonomi, HH1802, HH1802/HH1802KS3, KTH, year2024, övning]
 created: 2024-04-14
 updated: 2026-05-26
+description: "Instuderingsfrågor med svar inför KS3 i kursen HH1802."
 ---
 # Instuderingsfrågor KS3 HH1802
 

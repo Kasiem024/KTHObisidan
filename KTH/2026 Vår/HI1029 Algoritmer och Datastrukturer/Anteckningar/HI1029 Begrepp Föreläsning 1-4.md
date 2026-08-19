@@ -2,6 +2,7 @@
 tags: [begrepp, föreläsning, HI1029, KTH, programmering, year2026]
 created: 2026-01-18
 updated: 2026-05-26
+description: "Algoritm: Ett begränsat antal instruktioner för att lösa en uppgift som, från givna indata, med säkerhet leder till korrekta utdata."
 ---
 # HI1029 Begrepp Föreläsning 1-4
 

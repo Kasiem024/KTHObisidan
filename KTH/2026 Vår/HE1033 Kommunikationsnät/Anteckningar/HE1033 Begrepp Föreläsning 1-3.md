@@ -2,6 +2,7 @@
 tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
 created: 2026-01-18
 updated: 2026-08-17
+description: "Datalänklagret(Lager 2): Det lager i OSI-modellen som ansvarar för nod-till-nod-kommunikation och tillhandahåller en (logiskt) felfri länk genom inramning, adressering..."
 ---
 # HE1033 Begrepp Föreläsning 1-3
 

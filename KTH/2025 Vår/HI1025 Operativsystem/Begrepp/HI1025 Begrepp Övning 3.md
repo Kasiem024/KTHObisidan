@@ -2,6 +2,7 @@
 tags: [begrepp, HI1025, KTH, year2025, programmering]
 created: 2025-05-19
 updated: 2026-08-17
+description: "Shell (Skal): Ett textbaserat användargränssnitt (kommandotolk) som används för att interagera med operativsystemet genom att mata in kommandon."
 ---
 # HI1025 Begrepp Övning 3
 

@@ -2,6 +2,7 @@
 tags: [KTH, year2024, ME1003, begrepp, ekonomi]
 created: 2026-05-26
 updated: 2026-05-26
+description: "Detta är en platshållare (stub) för begreppet Finansiell Risk. Länkad från instuderingsfrågor i ME1003."
 ---
 # Finansiell Risk
 

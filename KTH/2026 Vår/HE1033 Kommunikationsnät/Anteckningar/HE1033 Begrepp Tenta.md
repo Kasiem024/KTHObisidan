@@ -2,6 +2,7 @@
 tags: [begrepp, HE1033, KTH, nätverk, tenta, year2026]
 created: 2026-03-01
 updated: 2026-05-28
+description: "Detta nav innehåller fördjupad information om kommunikationsnät, kategoriserat efter OSI-lager och funktion."
 ---
 # HE1033 Begrepp Tenta (Index)
 

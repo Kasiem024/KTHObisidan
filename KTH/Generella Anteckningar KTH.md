@@ -2,6 +2,7 @@
 tags: [övrigt, KTH]
 created: 2024-01-11
 updated: 2026-08-17
+description: "Samlade länkar och allmänna resurser för studierna vid KTH."
 ---
 
 # Generella Anteckningar KTH

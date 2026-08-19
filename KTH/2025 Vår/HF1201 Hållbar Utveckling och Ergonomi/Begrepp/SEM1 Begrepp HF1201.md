@@ -2,6 +2,7 @@
 tags: [begrepp, HF1201, KTH, samhälle, year2025]
 created: 2025-02-18
 updated: 2026-05-26
+description: "Miljöteknik: Teknik som ger miljöfördelar jämfört med alternativ i hela livscykeln."
 ---
 # SEM1 Begrepp HF1201
 

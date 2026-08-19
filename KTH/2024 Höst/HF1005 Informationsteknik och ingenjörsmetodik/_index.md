@@ -1,6 +1,7 @@
 ---
 title: "HF1005 Informationsteknik och ingenjörsmetodik"
 tags: [index, HF1005, KTH, year2024]
+description: "Kursindex för HF1005 Informationsteknik och ingenjörsmetodik med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HF1005 Informationsteknik och ingenjörsmetodik
 

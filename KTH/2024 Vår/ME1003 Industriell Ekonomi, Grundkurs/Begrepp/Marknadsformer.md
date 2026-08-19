@@ -26,6 +26,8 @@ Den marknaden man befinner sig i bestämmer hur man ska marknadsföra till sina 
 
 ## Kopplat till
 
+- [[Företagsmarknad]]
+- [[Konsumentmarknad]]
 ## Flashcards
 
 Olika typer av marknadsformer (3)

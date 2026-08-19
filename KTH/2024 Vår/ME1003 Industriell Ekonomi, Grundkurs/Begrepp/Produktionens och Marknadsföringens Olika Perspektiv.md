@@ -29,6 +29,8 @@ Inom [[Produktion]] vill man vara vart det är billigast att producera produkten
 
 ## Kopplat till
 
+- [[Produktion]]
+- [[Marknadsföring]]
 ## Flashcards
 
 Produktion och Marknadsföring Olika Perspektiv (5)

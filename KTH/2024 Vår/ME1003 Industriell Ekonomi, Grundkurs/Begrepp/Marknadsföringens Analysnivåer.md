@@ -30,4 +30,10 @@ Man kan dela in [[Marknadsföring]] på tre analysnivåer:
 
 ## Kopplat till
 
+- [[Marknadsföring]]
+- [[Marknadssegmentering]]
+- [[Prissättning]]
+- [[Distributionskanaler]]
+- [[Varumärke]]
+- [[Värdeerbjudandet]]
 ## Flashcards

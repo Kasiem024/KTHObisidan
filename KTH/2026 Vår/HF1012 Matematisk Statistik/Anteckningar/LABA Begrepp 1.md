@@ -2,6 +2,7 @@
 tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
 created: 2026-05-14
 updated: 2026-05-26
+description: "Matlab-kommandot binopdf(x, n, p): Beräknar punktsannolikheten $P(X=x)$ för en binomialfördelning."
 ---
 # LABA Begrepp 1
 

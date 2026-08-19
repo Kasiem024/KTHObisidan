@@ -1,6 +1,7 @@
 ---
 title: "CM1005 Extern Redovisning"
 tags: [index, CM1005, KTH, year2024]
+description: "Kursindex för CM1005 Extern Redovisning med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 CM1005 Extern Redovisning
 

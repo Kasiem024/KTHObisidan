@@ -2,6 +2,7 @@
 tags: [ekonomi, HH1802, HH1802/HH1802TenDelC, KTH, year2024, övning]
 created: 2024-05-23
 updated: 2026-05-26
+description: "Instuderingsfrågor med svar inför Ten Del C i kursen HH1802."
 ---
 # Instuderingsfrågor Ten Del C HH1802
 

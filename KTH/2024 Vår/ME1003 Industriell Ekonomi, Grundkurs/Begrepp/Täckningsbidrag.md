@@ -50,6 +50,12 @@ $$
 
 ## Kopplat till
 
+- [[Bidragskalkylering]]
+- [[Nyckeltal]]
+- [[Rörlig Kostnad]]
+- [[Särintäkt]]
+- [[Särkostnad]]
+- [[Samkostnad]]
 ## Flashcards
 
 Täckningsbidrag, TB (Definition):: Skillnaden mellan [[Särintäkt]] och [[Särkostnad]], visar med hur mycket en viss produkt bidrar till att betala kostnader som är gemensamma för alla produkter

@@ -2,6 +2,7 @@
 tags: [tenta, nograph, HI1024, KTH, year2024, programmering]
 created: 2024-09-23
 updated: 2026-08-17
+description: "Instuderingsfrågor med svar inför TENA i kursen HI1024."
 ---
 # Instuderingsfrågor och Svar TENA HI1024
 

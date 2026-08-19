@@ -1,6 +1,7 @@
 ---
 title: "HE1033 Kommunikationsnät"
 tags: [index, HE1033, KTH, year2026]
+description: "Kursindex för HE1033 Kommunikationsnät med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HE1033 Kommunikationsnät
 

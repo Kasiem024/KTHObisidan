@@ -17,6 +17,14 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 📈 2026-08-19 (9) — CONTENT DEPTH + SITE POLISH (F40, F41, F42 done)
+Every note in scope now carries a `description` (315 → **488 of 506**; the 18 without
+are the scope-excluded `excalidraw` notes). Empty `## Kopplat till` sections went
+**129 → 29**, with 319 evidence-based links added across 100 notes and the remaining 29
+honestly left alone. Site: `recent-notes` and `tag-list` enabled, footer repointed at
+own repos, two unused plugins switched off, empty section headings hidden, term order
+now fully reverse-chronological. Nothing open.
+
 ### 🎴 2026-08-19 (8) — FLASHCARDS + TERM SORT (F38, F39 done)
 Flashcards now render as **collapsible callouts** instead of being hidden: 316 of 326
 pages, 686 cards, **0 pages left showing raw syntax**. Five different card formats had
@@ -751,6 +759,83 @@ descending but seasons ascending within a year — so the current term (2026 Hö
 second rather than first. Fully reverse-chronological would put the current term at the
 top; fully chronological would read as a study progression. Flagged to the user for a
 decision; the change is two lines in `quartz.ts`.
+
+### F40. ✅ DONE (2026-08-19) — every note in scope now has a `description`
+
+Coverage went from 315 to **488 of 506** notes. The 18 without one are exactly the
+notes tagged `excalidraw`, which section 6 of the Standard puts out of scope. Before
+this, only `begrepp` notes had descriptions, so every lecture, lesson, lab, exam and
+index page published with an empty meta description and empty social preview.
+
+The 191 notes had no `## Definition` to harvest, so seven rules were used:
+
+| rule | n | source |
+|---|---|---|
+| `prose` | 117 | first genuinely prose sentence of the note |
+| `index` | 24 | synthesised: `Kursindex för <Course> med …` |
+| `exam` | 19 | synthesised from the exam token + course code |
+| `lesson` | 9 | synthesised: `Anteckningar från lektion <date> i kursen <code>` |
+| `links` | 2 | synthesised for link-collection notes |
+| `generic` / `conceptlist` | 2 | fallback / leading concept list |
+
+**Four bugs were caught in the dry run, which is the reason for always dry-running:**
+
+1. The prose rule harvested **Dataview query internals** (`FROM 'KTH/2025 Vår/…'`),
+   because only lines *starting* with a fence were skipped, not lines *inside* one.
+   This would have published query text as the meta description on all 24 course
+   index pages.
+2. Length was validated on the raw line, so a line that was mostly wikilink markup
+   collapsed to two words after stripping (`Räkningar Excalidraw`). Now validated
+   after stripping.
+3. Flashcard syntax leaked in (`Throughput (Definition):: Mäter …`). The hint label
+   is now dropped and `Term:: Answer` becomes `Term: Answer`, which reads well.
+4. `Instuderingsfrågor` notes grabbed a question label as their description. They
+   now always use the synthesised exam wording, which is also more uniform.
+
+Verified: 0 duplicate `description` keys, 0 unbalanced quotes, audit clean, and a
+live-vault build confirms the text reaches both `<meta name="description">` and
+`og:description`.
+
+### F41. ✅ DONE (2026-08-19) — empty `## Kopplat till` sections filled from evidence
+
+Empty sections went **129 → 29**, adding 319 links across 100 notes.
+
+Proposals were never guessed. Each link had to be backed by one of:
+
+- **BOTH** (78) — the note links to it *and* it links back.
+- **OUT** (179) — the note already references it in its own body.
+- **IN** (62) — that note links here, so the relationship exists but was one-way.
+
+Targets were then filtered to `begrepp` notes only. The first run proposed
+`Instuderingsfrågor` question lists and dated lecture notes, which mention a term
+without being conceptually related — `AIDA` came out with three question-list links
+and no concepts at all.
+
+The remaining **29 notes were deliberately left alone**: they have no concept-level
+evidence, being mostly standalone models (`AIDA`, `PESTLE-Analys`,
+`Maslows Behovspyramid`, `Bostonmatrisen`). An honestly empty section is better than
+a padded one.
+
+### F42. ✅ DONE (2026-08-19) — site polish
+
+- **`recent-notes` enabled** ("Senast uppdaterat", 6 items) — useful on an actively
+  updated study vault.
+- **`tag-list` enabled**, so the standardised taxonomy is reachable from a page you
+  are reading. Tag pages were already being generated but nothing linked to them;
+  582 pages now show their tags.
+- **Footer** pointed at this vault and the site source instead of Quartz's own GitHub
+  and Discord, which were the defaults and looked unintentional.
+- **`encrypted-pages` and `cname` disabled** — nothing is encrypted and the site is
+  served from a `github.io` subpath, so a `CNAME` file would be wrong. Verified
+  neither artifact is emitted any more.
+- **Empty section headings hidden** via `custom.scss`. The Standard requires concept
+  notes to carry `## Kopplat till` and `## Flashcards`, so an empty section is
+  standard-compliant in the vault; it is only noise on the page. Verified against the
+  built DOM that a *filled* section can never match the selectors: filled
+  `Kopplat till` is followed by `<ul>`, filled `Flashcards` by
+  `<blockquote class="callout question">`.
+- **Term sort changed to fully reverse-chronological** (see F39), so the term
+  currently being studied is always first.
 
 ---
 

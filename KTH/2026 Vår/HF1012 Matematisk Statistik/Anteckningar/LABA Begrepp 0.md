@@ -2,6 +2,7 @@
 tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
 created: 2026-05-14
 updated: 2026-05-26
+description: "Stokastisk variabel ($X$): Ett tal vars exakta värde bestäms av slumpen (t.ex. antalet prickar vid ett tärningskast eller väntetid i kö)."
 ---
 # LABA Begrepp 0
 

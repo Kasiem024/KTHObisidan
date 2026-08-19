@@ -2,6 +2,7 @@
 tags: [begrepp, HI1029, KTH, programmering, tenta, year2026]
 created: 2026-03-01
 updated: 2026-05-28
+description: "Detta är navet för alla centrala begrepp i kursen. Varje länk leder till en fördjupad fil med 'Tenta-fokus' och flashcards."
 ---
 # HI1029 Begrepp Tenta (Index)
 

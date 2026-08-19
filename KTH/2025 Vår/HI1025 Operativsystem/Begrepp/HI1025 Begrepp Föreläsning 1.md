@@ -2,6 +2,7 @@
 tags: [begrepp, HI1025, KTH, year2025, programmering]
 created: 2025-03-18
 updated: 2026-08-17
+description: "Bare metal: Ett system där ett operativsystem körs direkt på hårdvaran, utan ett underliggande operativsystem eller hypervisor. (Tänk: Ren metall, direkt kontakt)."
 ---
 # HI1025 Begrepp Föreläsning 1
 

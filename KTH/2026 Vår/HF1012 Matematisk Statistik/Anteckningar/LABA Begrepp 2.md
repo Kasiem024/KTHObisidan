@@ -2,6 +2,7 @@
 tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
 created: 2026-05-14
 updated: 2026-05-26
+description: "Grafisk relation mellan diskret sannolikhetsfunktion (stem) och fördelningsfunktion (stairs): Höjden av en specifik stolpe motsvarar exakt höjden av trappsteget vid..."
 ---
 # LABA Begrepp 2
 

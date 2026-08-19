@@ -1,5 +1,6 @@
 ---
 tags: [meta]
+description: "Live checks against Meta/Vault Standard.md. Anything listed below is drift that needs"
 ---
 # 🚩 Vault Health Report
 

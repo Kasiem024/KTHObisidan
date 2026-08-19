@@ -20,6 +20,12 @@ Viktiga begreppspar för att kunna beskriva det finansiella flödet.
 
 ## Kopplat till
 
+- [[Lönsamhet]]
+- [[Intäkt]]
+- [[Kostnad]]
+- [[Inkomst]]
+- [[Utgift]]
+- [[Inbetalning]]
 ## Flashcards
 
 Grundläggande Begrepp för Ekonomisk Analys (6)

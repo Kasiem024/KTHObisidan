@@ -31,6 +31,9 @@ $$
 
 ## Kopplat till
 
+- [[Dröjsmålsränta]]
+- [[Faktura]]
+- [[Varutransaktion]]
 ## Flashcards
 
 Betalningsvillkor (Definition);; Villkor som gäller vid betalning av en produkt, information om hur betalningen ska gå till, exempelvis **betalningsmetod och leverans**

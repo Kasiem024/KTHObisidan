@@ -12,6 +12,8 @@ Mervärdesskattelagen innehåller bestämmelserna för vem som ska betalas [[Mom
 
 ## Kopplat till
 
+- [[Moms]]
+- [[Verifikation]]
 ## Flashcards
 
 Mervärdesskattelagen (Definition):: Innehåller bestämmelserna för vem som ska betalas [[Moms]] och när det ska betalas

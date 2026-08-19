@@ -2,6 +2,7 @@
 tags: [tenta, CM1005, year2024, KTH, ekonomi]
 created: 2024-03-08
 updated: 2026-08-17
+description: "Instuderingsfrågor med svar inför Ten Del C i kursen CM1005."
 ---
 
 # Instuderingsfrågor Ten Del C CM1005

@@ -1,5 +1,6 @@
 ---
 tags: [MOC, hårdvara]
+description: "Information om datorarkitektur, digitalteknik och mikrodatorteknik."
 ---
 # Hårdvara MOC
 

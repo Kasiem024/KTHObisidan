@@ -1,5 +1,6 @@
 ---
 tags: [MOC, samhälle]
+description: "Reflektioner och begrepp rörande hållbar utveckling, etik och organisation."
 ---
 # Samhälle MOC
 

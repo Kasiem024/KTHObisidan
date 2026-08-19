@@ -2,6 +2,7 @@
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
 created: 2026-05-28
 updated: 2026-05-28
+description: "OSPF (Open Shortest Path First) är ett routingprotokoll som används inom ett företag eller ett universitet."
 ---
 # OSPF
 

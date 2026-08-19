@@ -14,6 +14,12 @@ Alltså är Ekonomisk Livslängd hur länge något fungerar bra och är värt de
 
 ## Kopplat till
 
+- [[Teknisk Livslängd]]
+- [[Lönsamhet]]
+- [[Återbetalningsmetoden]]
+- [[Inbetalningsöverskott]]
+- [[Överavskrivning]]
+- [[Avskrivning]]
 ## Flashcards
 
 Ekonomisk Livslängd (Definition):: Tiden fram till dess att investeringen har uppnått maximal [[Lönsamhet]], när företaget bedömer att det inte längre är värt det att äga investeringen och borde göra en ==nyinvestering==

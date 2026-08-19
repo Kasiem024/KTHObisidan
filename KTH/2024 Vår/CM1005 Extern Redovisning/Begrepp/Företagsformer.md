@@ -2,6 +2,7 @@
 tags: [begrepp, year2024, CM1005, KTH, ekonomi]
 created: 2024-01-16
 updated: 2026-08-17
+description: "Fåmansföretag: Ett skatterättsligt begrepp, när ett AB/HB/KB/EF ägs till majoriteten av en eller ett fåtal fysiska personer"
 ---
 
 # Företagsformer

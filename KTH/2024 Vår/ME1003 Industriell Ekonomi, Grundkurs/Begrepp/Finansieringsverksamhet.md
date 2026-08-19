@@ -18,6 +18,8 @@ Exempel på finansieringsaktiviteter:
 
 ## Kopplat till
 
+- [[Kassaflödesanalys]]
+- [[Nyemission]]
 ## Flashcards
 
 Finansieringsverksamhet (Definition) (3)

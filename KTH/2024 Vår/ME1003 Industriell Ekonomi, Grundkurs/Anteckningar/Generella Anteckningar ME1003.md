@@ -2,6 +2,7 @@
 tags: [övrigt, KTH, ME1003, year2024, ekonomi]
 created: 2024-01-22
 updated: 2026-08-17
+description: "Samlade länkar och resurser för kursen ME1003."
 ---
 # Generella Anteckningar ME1003
 

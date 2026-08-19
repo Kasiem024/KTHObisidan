@@ -13,6 +13,10 @@ Obeskattade Reserver består av vinster som ännu inte beskattats. Uppstår om f
 
 ## Kopplat till
 
+- [[Riskkapital]]
+- [[Företags Kapitalstruktur]]
+- [[Överavskrivning]]
+- [[Bokslutsdisposition]]
 ## Flashcards
 
 Obeskattade Reserver (Definition):: Vinster som ännu inte beskattats. Uppstår om företaget har valt att skjuta upp beskattningen av vinst till ett senare tillfälle för att jämna ut skattebelastningen

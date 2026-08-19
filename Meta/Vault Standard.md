@@ -60,9 +60,13 @@ updated: 2024-04-20
 ```
 
 - `description` is a one-sentence summary, used by the published site for search
-  results and social previews. Concept (`begrepp`) notes should have one; it is
-  normally the first sentence of the note's `## Definition` section. Optional on
-  other note types.
+  results and social previews. **Required on every note in scope** — notes tagged
+  `excalidraw` are the only exception, being scope-excluded by section 6. For
+  `begrepp` notes it is normally the first sentence of the `## Definition` section;
+  for other types it is the first meaningful sentence of the note, or a synthesised
+  summary where the note is a structured list (course indexes, `Instuderingsfrågor`).
+  Keep it plain text: no wikilink brackets, no flashcard delimiters, and never text
+  taken from inside a Dataview block.
 - `created` / `updated` are the source of truth for dates and live **only in
   frontmatter** — there is no in-body date line. The Obsidian Linter plugin
   auto-updates `updated` on save, Obsidian's Properties panel shows both, and the
@@ -104,6 +108,43 @@ KTH/<Year Season>/<CODE Course Name>/
   ISO date first so files sort chronologically; never omit the year.
 - Concept notes: the concept name itself, e.g. `Balansräkning`.
 - Single spaces only, and the H1 heading must match the filename.
+
+### Concept note body format
+
+Concept (`begrepp`) notes follow one shape, in this order:
+
+```markdown
+# <Concept>
+
+> **Kurs:** ...            ← optional label callouts
+
+---
+
+## Definition
+**<Term>** — the definition, bold term first.
+
+## Tenta-fokus
+
+## Kopplat till
+- [[Related Concept]]
+
+## Flashcards
+<Term>:: <Answer>
+```
+
+- The order is fixed and `## Flashcards` is always the **last** section.
+- A section may be **empty**, but the heading still stays: it keeps every concept
+  note uniform and acts as a prompt to fill in later. Empty sections cost nothing on
+  the published site — Quartz hides any heading with no content beneath it (see
+  `quartz/styles/custom.scss`).
+- `## Kopplat till` links **related concepts only**. Do not link study-question
+  lists or dated session notes just because they mention the term; that dilutes the
+  graph without adding meaning.
+- `## Flashcards` uses obsidian-spaced-repetition syntax (`::`, `;;`, `??`, `||`,
+  and `==DISABLEDFLASHCARD==` for a card switched off). **Never** strip these
+  delimiters or the `<!--SR:...-->` scheduling comments: they drive a live review
+  schedule. The published site rewrites cards into collapsible callouts at build
+  time and leaves the vault untouched.
 
 ### Course literature naming (`Filer/Litteraturlista/`)
 

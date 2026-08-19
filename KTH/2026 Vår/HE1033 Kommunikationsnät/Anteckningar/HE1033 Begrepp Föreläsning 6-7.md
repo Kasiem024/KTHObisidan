@@ -2,6 +2,7 @@
 tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
 created: 2026-03-01
 updated: 2026-08-17
+description: "Vad är huvudsyftet med en router i ett nätverk? Att vidarebefordra datapaket mellan olika nätverk baserat på deras IP adresser."
 ---
 # HE1033 Begrepp Föreläsning 6-7
 

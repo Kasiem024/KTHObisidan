@@ -1,6 +1,7 @@
 ---
 title: "HF1006 Linjär algebra och analys"
 tags: [index, HF1006, KTH, year2024]
+description: "Kursindex för HF1006 Linjär algebra och analys med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HF1006 Linjär algebra och analys
 

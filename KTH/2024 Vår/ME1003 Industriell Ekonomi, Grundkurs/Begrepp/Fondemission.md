@@ -16,6 +16,12 @@ Kan också ske genom att värdet av företagets [[Anläggningstillgångar]] skri
 
 ## Kopplat till
 
+- [[Uppskrivningsfond]]
+- [[Överkursfond]]
+- [[Fritt Eget Kapital]]
+- [[Bundet Eget Kapital]]
+- [[Balansräkning]]
+- [[Anläggningstillgångar]]
 ## Flashcards
 
 Fondemission (Definition):: En form av emission som inte tillför nytt kapital till företaget, alltså när [[Fritt Eget Kapital]] omvandlas till [[Bundet Eget Kapital]], ändrar bara strukturen av en [[Balansräkning]] men inte balansomslutningen, ==aktiekapital ökar==

@@ -29,6 +29,12 @@ Alla [[Aktiebolag]] får följa K3 men om företaget är tillräckligt stort må
 
 ## Kopplat till
 
+- [[Årsredovisning]]
+- [[Årsbokslut]]
+- [[Intäkt]]
+- [[Kostnad]]
+- [[Koncernredovisning]]
+- [[Enskild Näringsverksamhet]]
 ## Flashcards
 
 K-Regelverk (Definition):: Innehåller regler om hur en [[Årsredovisning]] eller ett [[Årsbokslut]] ska utformas och hur tillgångar, skulder, [[Intäkt]] och [[Kostnad]] ska värderas

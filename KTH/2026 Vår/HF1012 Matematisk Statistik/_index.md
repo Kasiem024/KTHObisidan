@@ -1,6 +1,7 @@
 ---
 title: "HF1012 Matematisk Statistik"
 tags: [index, HF1012, KTH, year2026]
+description: "Kursindex för HF1012 Matematisk Statistik med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HF1012 Matematisk Statistik
 

@@ -2,6 +2,7 @@
 tags: [ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024, övning]
 created: 2024-02-24
 updated: 2026-05-26
+description: "Instuderingsfrågor med svar inför KS3 i kursen ME1003."
 ---
 # Instuderingsfrågor Kap 10-12 KS3 ME1003
 

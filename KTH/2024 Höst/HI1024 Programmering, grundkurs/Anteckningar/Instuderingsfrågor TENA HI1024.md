@@ -2,6 +2,7 @@
 tags: [programmering, HI1024, HI1024/TenA, KTH, year2024, övning]
 created: 2024-09-18
 updated: 2026-08-17
+description: "Instuderingsfrågor med svar inför TENA i kursen HI1024."
 ---
 # Instuderingsfrågor TENA HI1024
 

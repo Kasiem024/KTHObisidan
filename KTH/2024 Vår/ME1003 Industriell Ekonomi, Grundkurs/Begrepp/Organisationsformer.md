@@ -2,6 +2,7 @@
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
 created: 2024-02-08
 updated: 2026-05-26
+description: "Linjeorganisation: Handlar om att alla ska endast ha 1 överordnad chef och cheferna ska inte ge order till de som inte är direkt under sig"
 ---
 # Organisationsformer
 

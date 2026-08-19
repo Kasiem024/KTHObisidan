@@ -2,6 +2,7 @@
 tags: [begrepp, HI1027, KTH, labb, programmering, year2025]
 created: 2025-09-02
 updated: 2026-05-26
+description: "Klass: En mall eller ritning för att skapa objekt. Den definierar de egenskaper (fields) och beteenden (methods) som objekt av dess typ delar."
 ---
 # Lab1 Begrepp HI1027
 

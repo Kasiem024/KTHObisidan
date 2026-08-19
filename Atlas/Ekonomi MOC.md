@@ -1,5 +1,6 @@
 ---
 tags: [MOC, ekonomi]
+description: "Anteckningar kring industriell ekonomi, finansiering och marknadsföring."
 ---
 # Ekonomi MOC
 

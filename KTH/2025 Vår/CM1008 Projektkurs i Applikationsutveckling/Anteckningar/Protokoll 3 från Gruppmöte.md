@@ -2,6 +2,7 @@
 tags: [övrigt, CM1008, KTH, year2025, programmering]
 created: 2025-03-26
 updated: 2026-08-17
+description: "Mötet öppnas och inleds av Van Matti kl 16:00."
 ---
 # Protokoll 3 från Gruppmöte
 

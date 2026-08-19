@@ -2,6 +2,7 @@
 tags: [KTH, year2026, HE1033, studieguide, tenta, nätverk]
 created: 2026-05-28
 updated: 2026-05-28
+description: "Fokusera på förståelse av lager-modellen och praktiska beräkningar."
 ---
 # 🎓 Studieguide: HE1033 Kommunikationsnät
 

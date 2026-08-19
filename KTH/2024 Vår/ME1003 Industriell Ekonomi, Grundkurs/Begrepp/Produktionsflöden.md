@@ -19,6 +19,7 @@ Det finns 4 olika typer av Produktionsflöden:
 
 ## Kopplat till
 
+- [[Tillverkningsindustrin]]
 ## Flashcards
 
 Typer av Produktionsflöden (4)

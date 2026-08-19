@@ -1,5 +1,6 @@
 ---
 tags: [meta]
+description: "A repo to store Obsidian vault for studying (KTH, Högskoleingenjör – Teknik och Ekonomi)."
 ---
 # README
 

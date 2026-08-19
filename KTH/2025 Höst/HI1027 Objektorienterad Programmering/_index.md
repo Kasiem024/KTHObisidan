@@ -1,6 +1,7 @@
 ---
 title: "HI1027 Objektorienterad Programmering"
 tags: [index, HI1027, KTH, year2025]
+description: "Kursindex för HI1027 Objektorienterad Programmering med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HI1027 Objektorienterad Programmering
 

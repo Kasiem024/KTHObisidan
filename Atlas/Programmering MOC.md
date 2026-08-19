@@ -1,5 +1,6 @@
 ---
 tags: [MOC, programmering]
+description: "En samling anteckningar relaterade till programmering, mjukvaruarkitektur och algoritmer."
 ---
 # Programmering MOC
 

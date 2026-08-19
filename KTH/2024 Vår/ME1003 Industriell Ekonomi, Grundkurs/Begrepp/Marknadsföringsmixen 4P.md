@@ -17,6 +17,8 @@ Kotler byggde på arbetet av McCarthy för att skapa sin Marknadsföringsmix. De
 
 ## Kopplat till
 
+- [[Prissättning]]
+- [[Distributionskanaler]]
 ## Flashcards
 
 Marknadsföringsmixen 4P (Definition) (4)

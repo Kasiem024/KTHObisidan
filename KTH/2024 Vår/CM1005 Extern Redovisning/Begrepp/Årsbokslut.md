@@ -33,6 +33,12 @@ Hur mycket av vinsten efter skatt ska gå till ägarna som vinstutdelning och hu
 
 ## Kopplat till
 
+- [[Årsredovisning]]
+- [[Räkenskapsår]]
+- [[Aktiebolag]]
+- [[Ekonomisk Förening]]
+- [[Handelsbolag]]
+- [[Enskild Näringsverksamhet]]
 ## Flashcards
 
 Årsbokslut (Definition):: En redovisning över verksamhetens tillgångar, eget kapital och skulder, alltså RR och BR

@@ -2,6 +2,7 @@
 tags: [begrepp, HI1029, KTH, programmering, year2026]
 created: 2026-05-28
 updated: 2026-05-28
+description: "Binär sökning är en 'söndra och härska'-algoritm som hittar ett element genom att hela tiden titta i mitten och halvera sökrymden."
 ---
 # Binär sökning
 
