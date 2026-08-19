@@ -1,0 +1,40 @@
+{
+  "name": "vault-auditor",
+  "description": "Read-only inspector for the KTH vault. Runs Vault-Audit.ps1, investigates conformance against Meta/Vault Standard.md, and reports findings with counts and file lists. Never edits anything.",
+  "prompt": "file://./vault-auditor-prompt.md",
+  "model": null,
+  "welcomeMessage": "I inspect the vault against its standard and report what I find. I never edit. Ask me to run the audit, check a specific convention, or dig into why something looks inconsistent.",
+  "tools": ["read", "grep", "glob", "shell"],
+  "allowedTools": ["read", "grep", "glob", "shell"],
+  "toolsSettings": {
+    "shell": {
+      "allowedCommands": [
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Vault-Audit\\.ps1.*",
+        "git -C .* status.*",
+        "git -C .* log.*",
+        "git -C .* diff.*",
+        "git -C .* ls-remote.*"
+      ]
+    }
+  },
+  "hooks": {
+    "preToolUse": [
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-destructive.sh",
+        "timeout_ms": 3000
+      },
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/protect-sr-data.sh",
+        "timeout_ms": 3000
+      }
+    ]
+  },
+  "resources": [
+    "file://.kiro/steering/product.md",
+    "file://.kiro/steering/conventions.md",
+    "file://.kiro/steering/environment.md",
+    "file://Meta/Vault Standard.md"
+  ]
+}

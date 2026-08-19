@@ -4,7 +4,7 @@ created: 2025-02-19
 updated: 2026-05-26
 description: "Livscykelanalys, LCA: Metod för att bedöma miljöpåverkan genom en produkts hela livscykel."
 ---
-# `=this.file.name`
+# SEM2 Begrepp HF1201
 
 Livscykelanalys, LCA (Definition):: Metod för att bedöma miljöpåverkan genom en produkts hela livscykel.  
 

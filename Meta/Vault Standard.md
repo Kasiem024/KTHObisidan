@@ -159,11 +159,16 @@ The definition, in plain prose. Wiki-link related concepts inline.
   heading acts as a prompt to fill in later. Empty sections cost nothing on the
   published site — Quartz hides any heading with no content beneath it (see
   `quartz/styles/custom.scss`).
-- `## Flashcards` uses obsidian-spaced-repetition syntax (`::`, `;;`, `??`, `||`, and
-  `==DISABLEDFLASHCARD==` for a card switched off). **Never** strip these delimiters
-  or the `<!--SR:...-->` scheduling comments: they drive a live review schedule. The
-  site rewrites cards into collapsible callouts at build time and never touches the
-  vault.
+- `## Flashcards` uses obsidian-spaced-repetition syntax. **The four separators are not
+  interchangeable** — per the plugin's settings, `::` is single-line one-directional, `;;`
+  single-line **reversed**, `||` multi-line one-directional and `??` multi-line **reversed**.
+  A reversed card also generates a back-to-front card, so rewriting one form into another
+  would silently delete half the deck. `==DISABLEDFLASHCARD==` marks a card switched off.
+  **Never** change a separator or strip an `<!--SR:...-->` comment: they drive a live review
+  schedule. The site rewrites cards into collapsible callouts at build time and never touches
+  the vault. It converts cards **anywhere in a note**, not only under this heading, so the
+  34 notes that keep their cards elsewhere still publish correctly — but new concept notes
+  should still use `## Flashcards` for consistency.
 
 **Concept collections are a recognised exception.** Notes named like
 `HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` gather many short definitions

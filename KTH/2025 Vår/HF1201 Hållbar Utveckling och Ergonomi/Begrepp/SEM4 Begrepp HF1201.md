@@ -4,7 +4,7 @@ created: 2025-02-19
 updated: 2026-05-26
 description: "Medarbetarundersökningar: Verktyg för att samla feedback från medarbetare om arbetsmiljö och trivsel."
 ---
-# `=this.file.name`
+# SEM4 Begrepp HF1201
 
 Medarbetarundersökningar (Definition):: Verktyg för att samla **feedback** från medarbetare om arbetsmiljö och trivsel.  
 

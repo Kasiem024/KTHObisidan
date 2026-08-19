@@ -38,6 +38,7 @@ $structPat= '^(KTH|MOC|meta|index|nograph|excalidraw)$'
 # ---------------- scope: what counts as an authored study note ----------------
 function InScope($full,$name){
   if($full -match '\\\.obsidian\\' -or $full -match '\\\.trash\\' -or $full -match '\\node_modules\\'){ return $false }
+  if($full -match '\\\.kiro\\'){ return $false }                  # agent context, not study content
   if($full -match '\\Litteraturlista\\'){ return $false }          # course literature + conversions
   if($full -match '\\Ericsson\\'){ return $false }                 # work notes, not studies
   if($full -match 'Obsidian Plugins\\Templates'){ return $false }  # templates
@@ -131,6 +132,10 @@ foreach($f in $md){
   }
   # Meta docs quote the old syntax deliberately when documenting it
   if(($t -match 'this\.file\.(ctime|mtime)') -and ($f.FullName -notmatch '\\Meta\\')){ (Bucket 'oldDataviewDates').Add($rel) }
+  # Inline Dataview expressions (`= ...`) publish as literal text: Quartz has no Dataview
+  # engine, and unlike fenced query blocks these are not hidden by custom.scss. Five notes
+  # had one as their H1, so the page heading read "=this.file.name".
+  if(($t -match '`\s*=\s*this\.') -and ($f.FullName -notmatch '\\Meta\\')){ (Bucket 'inlineDataviewExpression').Add($rel) }
   # path-derived expectations
   $seg=$rel -split '\\'
   if($seg.Length -ge 3 -and $seg[0] -eq 'KTH' -and $seg[1] -match '^\d{4}\s' -and $seg[2] -cmatch '^[A-Z]{2}\d{4}'){

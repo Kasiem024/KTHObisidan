@@ -95,8 +95,11 @@ metadata, not prose:
     alone on its own line or inline in place of `::`. These are ordinary cards that
     have been switched off for review. Read them as normal question/answer pairs; the
     marker itself carries no meaning for comprehension.
-  - Cards only ever appear under a `## Flashcards` heading. A `::` found anywhere else
-    is a Dataview inline field, not a flashcard.
+  - Cards usually sit under a `## Flashcards` heading, but **not always** — 34 notes keep
+    them under a different heading (`## Begrepp`, `## Ursprungliga Flashcards`) or
+    interleaved with prose under chapter headings. Treat any of the delimiter forms above as
+    a card wherever it appears. There are **no** Dataview inline fields (`[key:: value]`) in
+    this vault, so a `::` outside a fenced code block is a flashcard.
 - `` `= dateformat(this.file.ctime, ...)` `` and fenced ```` ```dataview ```` blocks —
   Dataview dynamic queries/fields. These render live in Obsidian; as raw text they are
   **not meaningful content — ignore them.**

@@ -18,9 +18,10 @@ vault-commit själv, så ingen extra åtgärd behövs.
 | --- | --- |
 | `llms.txt` | Ingång för AI-verktyg: struktur, taggar, kurskatalog och hur Obsidian-syntaxen ska tolkas |
 | `Meta/Vault Standard.md` | Reglerna: taggar, frontmatter, mappstruktur, namngivning, notstruktur |
-| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F49) |
+| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F51) |
 | `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1` | Kontrollerar hela vaultet mot standarden |
 | `Meta/Obsidian Plugins/Templates/` | Mallar som följer standarden automatiskt |
+| `.kiro/steering/` | Kontext för AI-agenter: hårda regler, miljöfällor, dokumentationskrav |
 | `Atlas/Dashboard.md` | Live-översikt (Dataview): MOC:er, terminer, kursindex |
 | `Atlas/Vault Health Report.md` | Automatiska kontroller mot standarden |
 

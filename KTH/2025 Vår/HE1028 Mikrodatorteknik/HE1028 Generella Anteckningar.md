@@ -4,7 +4,7 @@ created: 2025-01-16
 updated: 2026-05-26
 description: "Studieanteckningar i kursen HE1028."
 ---
-# `=this.file.name`
+# HE1028 Generella Anteckningar
 
 ## Användbara länkar
 

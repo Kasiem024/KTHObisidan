@@ -4,7 +4,7 @@ created: 2025-02-19
 updated: 2026-05-26
 description: "Audiell information: Information som presenteras via ljud, avsedd att uppmärksamma, varna eller bekräfta händelser"
 ---
-# `=this.file.name`
+# SEM5 Begrepp HF1201
 
 Audiell information (Definition):: Information som presenteras via **ljud**, avsedd att **uppmärksamma**, **varna** eller **bekräfta händelser**
 <!--SR:!2025-03-10,4,223!2025-03-19,13,245-->

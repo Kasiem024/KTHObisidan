@@ -17,6 +17,15 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🃏 2026-08-19 (15) — FLASHCARDS + .KIRO (F50, F51 done)
+The flashcard separators must **not** be normalised — `;;` and `??` are the reversed forms and
+rewriting them would delete half the deck. The real defect was that **34 notes keep their cards
+outside a `## Flashcards` heading** and so published raw `::` syntax; my earlier "0 raw syntax"
+check had been scoped too narrowly to see them. The transformer now converts cards anywhere in
+a note: leaks 34 → 0, callouts 686 → **1,965**. Also fixed 5 notes with `=this.file.name` as
+their H1. Both repos gained a `.kiro/` folder with steering, guard hooks and one agent each.
+Nothing open.
+
 ### 🧹 2026-08-19 (14) — HOUSEKEEPING (F49 done)
 Renamed the `Värdekejda` image at source with both references updated, deleted the merged
 `wip/flashcards` branch from both remotes, and added `tools/slim-svg.mjs` to the CI build so
@@ -1121,6 +1130,82 @@ never affected. (The earlier F40 "Dataview leak" false positive was the identica
 `npx quartz build` can lag the vault badly — during this work it sat at `a44efa6` while the
 vault was at `28422ac`, which made alt text appear missing. CI updates the submodule, so
 only local builds are affected.
+
+### F50. ✅ DONE (2026-08-19) — flashcards: the answer is "do not normalise", plus a real defect
+
+**Asked whether the flashcards could be made more uniform. Mostly they should not be.** The
+four separators look like sloppy variation and are not. From the plugin's own settings in
+`.obsidian/plugins/obsidian-spaced-repetition/data.json`:
+
+| Separator | Meaning |
+|---|---|
+| `::` | single-line, one-directional |
+| `;;` | single-line, **reversed** |
+| `\|\|` | multi-line, one-directional |
+| `??` | multi-line, **reversed** |
+
+A reversed card also generates a back-to-front card, so "normalising" `;;` → `::` would have
+silently deleted half the deck. Spacing was already uniform — all 499 single-line cards use
+exactly one space after the separator. There was nothing to tidy.
+
+**The real defect was elsewhere: 34 notes hold cards with no `## Flashcards` heading**, up to
+189 markers each. They use `## Begrepp`, `## 📝 Ursprungliga Flashcards`, or interleave cards
+with prose under chapter headings. Because the build-time transformer only looked under
+`## Flashcards`, every one of those pages published **raw `::` syntax**.
+
+**My earlier "0 pages show raw card syntax" was wrong** — that check only inspected pages
+containing `id="flashcards"`, so it could not see these 34 by construction. A verification is
+only as good as its scope, and this one was never stated.
+
+Fixed on the **transformer** side rather than by restructuring 34 differently-shaped notes:
+it now processes the whole note body, skipping frontmatter, fenced blocks, table rows and
+blockquotes. Safe because it was checked rather than assumed — the vault contains **zero**
+bracketed Dataview inline fields (`[key:: value]`) and no `std::`-style code outside fences.
+
+Three further bugs surfaced while verifying:
+
+- **No blank line between cards** (common in the HI1025 notes) made the answer collector
+  swallow the *next* card's question, orphaning its `??` so it printed raw.
+- A question line containing `::` was consumed as a single-line card when the following line
+  was a bare separator, breaking the multi-line card.
+- **Five cards have no answer at all** (`Term (Definition)::` then nothing) in
+  `Instuderingsfrågor TENA HI1024`. They now render as plain question text. **This is a
+  content gap worth filling.**
+
+**Result: 34 leaking pages → 0. Callout pages 316 → 353. Total callouts 686 → 1,965** — those
+notes held roughly 1,280 cards that had never rendered. KaTeX errors 0, images without alt 0.
+
+Also fixed **5 notes that still had `` `=this.file.name` `` as their H1** — HE1028 Generella
+Anteckningar, CM1008 Rapport Anteckingar, and SEM2/SEM4/SEM5 Begrepp HF1201 — so those pages
+published a literal `=this.file.name` heading. Same defect class as F35, missed then because
+that sweep targeted the date mirror specifically. Now enforced by a new
+`inlineDataviewExpression` audit check.
+
+### F51. ✅ DONE (2026-08-19) — `.kiro` agent context in both repos
+
+Both repos now carry a `.kiro/` folder, modelled on the layout in `Kana-App` and trimmed to
+what each project needs. The point is that hard-won knowledge stops living in chat history.
+
+**Vault** — `steering/` (product, conventions, environment, documentation-standard),
+three `preToolUse` hooks, and a read-only `vault-auditor` agent.
+**Site** — `steering/` (product, conventions), a destructive-operation hook, and a
+`site-builder` agent that knows the submodule trap.
+
+The steering files deliberately **do not restate** the conventions: `Meta/Vault Standard.md`
+and `PROJECT-NOTES.md` stay the sources of truth, and steering says how to work rather than
+what the rules are.
+
+The hooks encode the mistakes that actually happened: `require-ascii-ps1.sh` blocks a `.ps1`
+containing non-ASCII, which PowerShell 5.1 would silently corrupt; `protect-sr-data.sh` blocks
+bulk rewrites of `<!--SR:-->` data or separators; `block-destructive.sh` blocks
+`reset --hard`, `clean -f`, force push, `branch -D` and recursive deletes. They are a backstop
+— a `preToolUse` hook sees the command, not the diff.
+
+**Two exclusions were needed and are easy to miss.** Quartz does **not** skip dot-folders
+automatically, only the ones in `ignorePatterns`, so without adding `.kiro` the steering docs
+would have been published on the public site. The vault audit also had to exclude it, or the
+files would be audited as notes and fail for having no tags. Verified after: 0 published files
+matching `.kiro`, page count unchanged at 601, audit clean with `notesInScope` still 470.
 
 ---
 
