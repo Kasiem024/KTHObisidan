@@ -35,6 +35,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scrip
 Lägg till `-Detail` för att lista filerna bakom varje avvikelse. Förväntat resultat:
 `RESULT: clean - no deviations from the standard.`
 
+**Detta körs automatiskt.** `.github/workflows/vault-checks.yml` kör auditen och linter vid
+varje push till `main`, så avvikelser upptäcks utan att du behöver komma ihåg något. Du får
+mejl från GitHub bara när något går fel. I CI används `-ContentOnly`, som hoppar över de två
+kontroller som kräver filer git inte lagrar (tomma mappar, och länkar till `Litteraturlista/`
+som är gitignorerad) — kör auditen lokalt utan flaggor för fullständig kontroll.
+
 ## Kontrollera markdown-syntax
 
 ```powershell

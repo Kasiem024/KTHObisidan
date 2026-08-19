@@ -1,0 +1,65 @@
+name: Vault checks
+
+# Runs the two checks that already exist locally, so drift cannot be pushed unnoticed.
+# Designed to be cheap: the repo is ~463 MB (262 MB of PDFs, 132 MB of .obsidian plugin
+# files, 30 MB of Excalidraw drawings) but the checks only need the ~1.5 MB of Markdown.
+# A blobless, sparse checkout takes ~9 s instead of ~35 s+, and the whole job is well
+# under a minute.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A newer push makes an in-flight run pointless.
+concurrency:
+  group: vault-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    # windows-latest because Vault-Audit.ps1 matches Windows path separators in its
+    # InScope filter (e.g. '\\Templates'). On Linux those exclusions would silently fail
+    # and the templates would be audited as if they were notes.
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out only what the checks need
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/.obsidian/
+            !*.pdf
+            !*.png
+            !*.jpg
+            !*.zip
+            !*.excalidraw.md
+
+      - name: Vault audit (conventions)
+        shell: pwsh
+        run: |
+          # -ContentOnly skips the two checks that need state git does not store:
+          # empty category folders, and wikilinks into the gitignored Litteraturlista.
+          # Everything else still runs, across all 470 notes.
+          & './Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1' -ContentOnly -Detail
+          if ($LASTEXITCODE -ne 0) {
+            Write-Output '::error::Vault audit found deviations from Meta/Vault Standard.md. The offending files are listed above.'
+            exit 1
+          }
+
+      - name: Markdown syntax
+        shell: pwsh
+        run: |
+          npx --yes markdownlint-cli2@0.18.1 "**/*.md"
+          if ($LASTEXITCODE -ne 0) {
+            Write-Output '::error::Markdown lint failed. Most of it is auto-fixable: run  npx markdownlint-cli2 --fix "**/*.md"  and commit the result.'
+            exit 1
+          }

@@ -16,7 +16,13 @@
 
 param(
   [string]$Root,
-  [switch]$Detail
+  [switch]$Detail,
+  # CI mode. Skips the two checks that depend on state git does not store, so they would
+  # fail on every fresh clone no matter how clean the vault is:
+  #   courseMissingFolder - empty category folders are not tracked (git stores no empty dirs)
+  #   brokenWikilinks     - links into Litteraturlista/, which .gitignore excludes
+  # Everything else is reproducible from the repository and still runs.
+  [switch]$ContentOnly
 )
 $ErrorActionPreference='Stop'
 if(-not $Root){
@@ -157,12 +163,15 @@ foreach($f in $md){
     if($inner -match '\|(.*)$'){ $alt=$matches[1].Trim() }
     if($alt -eq '' -or $alt -match '^\d+(x\d+)?$'){ (Bucket 'imageEmbedWithoutAlt').Add($rel + ' :: ' + $leaf) }
   }
-  # broken links (ignore embeds)
-  foreach($lk in [regex]::Matches($body,'(?<!!)\[\[([^\]\|#\^]+)')){
-    $tgt=$lk.Groups[1].Value.Trim(); if($tgt -eq ''){ continue }
-    $t2=$tgt.TrimEnd('/')
-    if($names.Contains($t2) -or $paths.Contains($t2) -or $names.Contains($t2+'.md') -or $paths.Contains($t2+'.md')){ continue }
-    (Bucket 'brokenWikilinks').Add("$rel  ->  $tgt")
+  # broken links (ignore embeds). Skipped in -ContentOnly: many targets live in
+  # Litteraturlista/, which is gitignored, so a clone can never resolve them.
+  if(-not $ContentOnly){
+    foreach($lk in [regex]::Matches($body,'(?<!!)\[\[([^\]\|#\^]+)')){
+      $tgt=$lk.Groups[1].Value.Trim(); if($tgt -eq ''){ continue }
+      $t2=$tgt.TrimEnd('/')
+      if($names.Contains($t2) -or $paths.Contains($t2) -or $names.Contains($t2+'.md') -or $paths.Contains($t2+'.md')){ continue }
+      (Bucket 'brokenWikilinks').Add("$rel  ->  $tgt")
+    }
   }
 }
 # folder conformance
@@ -172,7 +181,10 @@ $allowed=@('Anteckningar','Begrepp','Filer'); if($forel){ $allowed+=$forel }
 foreach($t in (Get-ChildItem -LiteralPath (Join-Path $Root 'KTH') -Directory)){
   foreach($c in (Get-ChildItem -LiteralPath $t.FullName -Directory)){
     if($c.Name -match '^[A-Z]{2}\d{4}'){
-      foreach($n in $allowed){ if(-not (Test-Path -LiteralPath (Join-Path $c.FullName $n))){ (Bucket 'courseMissingFolder').Add($c.Name + ' -> ' + $n) } }
+      # Skipped in -ContentOnly: an empty category folder is not tracked by git.
+      if(-not $ContentOnly){
+        foreach($n in $allowed){ if(-not (Test-Path -LiteralPath (Join-Path $c.FullName $n))){ (Bucket 'courseMissingFolder').Add($c.Name + ' -> ' + $n) } }
+      }
       if(-not (Test-Path -LiteralPath (Join-Path $c.FullName '_index.md'))){ (Bucket 'courseMissingIndex').Add($c.Name) }
     }
     foreach($s in (Get-ChildItem -LiteralPath $c.FullName -Directory)){
@@ -192,6 +204,11 @@ foreach($f in ($all | Where-Object { $_.DirectoryName -match '\\Litteraturlista$
 Write-Output "=== VAULT AUDIT  $(Get-Date -Format 'yyyy-MM-dd HH:mm') ==="
 Write-Output ("root={0}" -f $Root)
 Write-Output ("notesInScope={0}  (of {1} markdown files)" -f $md.Count, @($all | Where-Object { $_.Extension -eq '.md' }).Count)
+if($ContentOnly){
+  Write-Output "mode=ContentOnly - skipping courseMissingFolder and brokenWikilinks."
+  Write-Output "  These need state git does not store (empty folders, gitignored Litteraturlista)."
+  Write-Output "  Run the audit locally with no switches for the full check."
+}
 Write-Output ""
 $clean=$true
 foreach($k in $res.Keys){
@@ -204,5 +221,14 @@ foreach($k in $res.Keys){
 if($casing.Count -gt 0){ $clean=$false; Write-Output ("{0,-26} {1}" -f 'tagCasingViolations',$casing.Count); foreach($k in ($casing.Keys|Sort-Object)){ Write-Output "      $k = $($casing[$k])" } }
 if($unknown.Count -gt 0){ $clean=$false; Write-Output ("{0,-26} {1}" -f 'tagsOutsideVocabulary',$unknown.Count); foreach($k in ($unknown.Keys|Sort-Object)){ Write-Output "      $k = $($unknown[$k])" } }
 Write-Output ""
-if($clean){ Write-Output "RESULT: clean - no deviations from the standard." }
-else { Write-Output "RESULT: deviations found (see above). Known/accepted items are tracked in Meta/Vault Findings & Backlog.md." }
+if($clean){
+  Write-Output "RESULT: clean - no deviations from the standard."
+  exit 0
+}
+else {
+  Write-Output "RESULT: deviations found (see above). Known/accepted items are tracked in Meta/Vault Findings & Backlog.md."
+  Write-Output "Re-run with -Detail to list the offending files."
+  # Non-zero so automation can gate on this. Without it the script only ever printed its
+  # verdict and always exited 0, which would make any CI step pass unconditionally.
+  exit 1
+}

@@ -1357,6 +1357,57 @@ matches `core.autocrlf=true`. The repository stores LF either way, so the commit
 line-ending churn. A `.gitattributes` with `*.md text eol=lf` would make this deterministic
 if the mixture ever returns.
 
+### F53. ✅ DONE (2026-08-19) — the checks now run themselves
+
+**The problem was never missing checks — it was that nothing ever ran them.** The audit and
+the linter only executed when someone typed the command, so drift accumulated silently
+between sweeps. The vault repo had **no CI at all** and the site deployed whatever the build
+produced, verified by nobody.
+
+**Two things were quietly broken, and only testing found them.**
+
+1. **`Vault-Audit.ps1` always exited 0** — even when printing `RESULT: deviations found`. A CI
+   step calling it would have passed unconditionally: pure theatre. It now exits 1 when not
+   clean. Verified: clean → 0, deviations → 1.
+2. **The audit cannot pass on a fresh clone.** Two of its checks depend on state git does not
+   store: `courseMissingFolder` looks for empty category folders (git stores no empty
+   directories) and `brokenWikilinks` resolves links into `Litteraturlista/`, which
+   `.gitignore` excludes. On a clone they reported **68 and 49** false failures. Added
+   `-ContentOnly`, which skips exactly those two and still covers all **470** notes. Proven
+   against a real clone: clean with the switch, 117 failures without it.
+
+**Vault CI** (`.github/workflows/vault-checks.yml`) runs the audit and the linter on every
+push. Made cheap deliberately: the repo is **462.9 MB** (262.7 MB of PDFs, 131.9 MB of
+`.obsidian/` plugin files, 30.1 MB of Excalidraw drawings) but the checks need only the
+**1.45 MB** of Markdown. A blobless sparse checkout takes **8.7 s** instead of 34.7 s, the
+audit **2.1 s**, the lint **3.8 s** — about 15 s of work. Runs on `windows-latest` because
+`InScope` matches Windows path separators; on Linux those exclusions would silently fail and
+the templates would be audited as notes.
+
+**Site CI** (`tools/check-site.mjs`, wired into `deploy.yml` before the upload) verifies the
+artifact in ~2 s. Zero-tolerance invariants for raw card syntax, missing alt and KaTeX errors,
+plus a comparison against `site-baseline.json` that is **deliberately asymmetric**: counts may
+grow freely, but a drop over 5% fails. That is the part that catches defects nobody enumerated
+— F50's transformer silently missed 34 notes and ~1,280 cards, which no named check would have
+found, but callouts collapsing from 1965 is unmistakable.
+
+**Verified by breaking it on purpose**, because a check that has never failed is not a check:
+
+| Injected fault | Result |
+|---|---|
+| unmodified build | exit 0 |
+| raw card syntax on one page | exit 1, `cardLeakPages 0 → 1` |
+| stripped an `alt` attribute | exit 1, `imagesWithoutAlt 0 → 4` |
+| deleted 60 pages (10%) | exit 1, "pages fell from 601 to 541" |
+| one new broken link | exit 1, "brokenInternalLinks rose 43 → 44" |
+| **added 25 pages (growth)** | **exit 0** — growth must not fail |
+
+**Found on the way: 43 broken internal links on the published site.** All are links into PDFs,
+and Quartz emits **no** PDFs — the course literature is copyrighted and deliberately
+unpublished. They work in Obsidian and 404 for readers. Baselined at 43 rather than fixed, so
+the check catches new breakage without demanding these be resolved. Worth revisiting if the
+dead links bother readers.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs
