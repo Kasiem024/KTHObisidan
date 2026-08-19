@@ -111,40 +111,65 @@ KTH/<Year Season>/<CODE Course Name>/
 
 ### Concept note body format
 
-Concept (`begrepp`) notes follow one shape, in this order:
+Concept (`begrepp`) notes follow one shape. Measured across the 352 concept notes in
+the vault: `## Definition` 320, `## Flashcards` 320, `## Kopplat till` 297,
+`## Tenta-fokus` 42.
 
 ```markdown
 # <Concept>
 
-> **Kurs:** ...            ← optional label callouts
+> **Lager:** OSI 2 & 4        ← optional label callouts, used by newer notes
+> **Mål:** ...
 
 ---
 
 ## Definition
-**<Term>** — the definition, bold term first.
 
-## Tenta-fokus
+The definition, in plain prose. Wiki-link related concepts inline.
+
+### <Sub-heading>          ← optional, for worked examples or sub-topics
+
+## Tenta-fokus             ← optional, only where exam guidance exists
 
 ## Kopplat till
-- [[Related Concept]]
+
+- Motsatsen till [[Other Concept]]
+- Används vid [[Third Concept]]
 
 ## Flashcards
-<Term>:: <Answer>
+
+<Term> (Definition):: <answer>
 ```
 
-- The order is fixed and `## Flashcards` is always the **last** section.
-- A section may be **empty**, but the heading still stays: it keeps every concept
-  note uniform and acts as a prompt to fill in later. Empty sections cost nothing on
-  the published site — Quartz hides any heading with no content beneath it (see
+- `## Definition` and `## Flashcards` are expected on every concept note;
+  `## Kopplat till` on any concept that relates to another.
+- The leading `> **Label:**` callouts and the `---` rule after them are **optional**.
+  Newer notes use them to surface exam-relevant framing; most older notes do not.
+- **`## Flashcards` is always the last section.** This holds in 320 of 320 notes that
+  have one, and the published site depends on it — the build-time card transformer
+  only rewrites content under that heading.
+- `## Tenta-fokus` is **optional**. Add it only where there is real exam guidance;
+  most notes do not have one.
+- The definition is written as plain prose. Opening with a bold term is allowed but is
+  not the house style (15 notes do, 304 do not).
+- `## Kopplat till` links **related concepts only**. Do not link study-question lists
+  or dated session notes just because they mention the term; that dilutes the graph
+  without adding meaning. Leaving it empty is fine when nothing genuinely relates.
+- An empty section keeps its heading, so every concept note stays uniform and the
+  heading acts as a prompt to fill in later. Empty sections cost nothing on the
+  published site — Quartz hides any heading with no content beneath it (see
   `quartz/styles/custom.scss`).
-- `## Kopplat till` links **related concepts only**. Do not link study-question
-  lists or dated session notes just because they mention the term; that dilutes the
-  graph without adding meaning.
-- `## Flashcards` uses obsidian-spaced-repetition syntax (`::`, `;;`, `??`, `||`,
-  and `==DISABLEDFLASHCARD==` for a card switched off). **Never** strip these
-  delimiters or the `<!--SR:...-->` scheduling comments: they drive a live review
-  schedule. The published site rewrites cards into collapsible callouts at build
-  time and leaves the vault untouched.
+- `## Flashcards` uses obsidian-spaced-repetition syntax (`::`, `;;`, `??`, `||`, and
+  `==DISABLEDFLASHCARD==` for a card switched off). **Never** strip these delimiters
+  or the `<!--SR:...-->` scheduling comments: they drive a live review schedule. The
+  site rewrites cards into collapsible callouts at build time and never touches the
+  vault.
+
+**Concept collections are a recognised exception.** Notes named like
+`HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` gather many short definitions
+into a single note, written directly as flashcards, and have no `## Definition`
+section of their own. 32 of the 352 concept notes are of this kind. They are still
+tagged `begrepp` and still end with `## Flashcards`.
 
 ### Course literature naming (`Filer/Litteraturlista/`)
 

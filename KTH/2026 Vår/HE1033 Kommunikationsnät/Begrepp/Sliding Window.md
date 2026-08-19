@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Fönsterstorlek vid sekvensnummer-bitar - Go-Back-N: - Selective Repeat:"
+description: "Tekniken som låter en sändare skicka flera paket innan ACK kommit på det första, för att utnyttja bandbredden och styra flödet."
 created: 2026-08-18
 updated: 2026-08-18
 ---

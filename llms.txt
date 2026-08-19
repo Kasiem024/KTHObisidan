@@ -11,6 +11,15 @@ This file is an entry point for AI tools (NotebookLM, ChatGPT/Claude Projects, R
 pipelines, Kiro, etc.). It explains how the vault is organized and how to correctly
 interpret the Obsidian-specific syntax inside the notes.
 
+The vault is also published as a website at
+<https://kasiem024.github.io/KTHObsidianQuartz/>, built with Quartz. The site is
+generated from these same files, so anything true here is true there. Two differences
+worth knowing: flashcards are rewritten into collapsible callouts at build time, and
+course PDFs under `Filer/` are deliberately not published.
+
+The authoritative rules live in `Meta/Vault Standard.md`; this file is a summary aimed
+at reading comprehension rather than authoring.
+
 ## How the vault is organized
 
 - `KTH/` — All coursework, grouped by term then course:
@@ -32,10 +41,12 @@ interpret the Obsidian-specific syntax inside the notes.
   - Every course folder also contains `_index.md` at its root: a generated,
     Dataview-driven overview of that course's notes. Best per-course entry point.
 - `Atlas/` — "Maps of Content" (MOCs): curated hub notes that link out to
-  related notes by subject, plus a `Dashboard.md`. Good starting points for
+  related notes by subject, plus `Dashboard.md` (live Dataview overview) and
+  `Vault Health Report.md` (automated conformance checks). Good starting points for
   understanding a topic area.
-- `Meta/` — Obsidian tooling: note `Templates`, plugin notes, Excalidraw drawings.
-  Not study content.
+- `Meta/` — Vault tooling and documentation, **not study content**: `Vault Standard.md`
+  (the conventions), `Vault Findings & Backlog.md` (change log and tracker), note
+  `Templates`, `Scripts/Vault-Audit.ps1` (enforces the standard), plugin notes.
 - `Ericsson/` — Work/internship notes, separate from studies (currently empty;
   out of scope for study content).
 - `KTH/Generella Anteckningar KTH.md` — General cross-course links/resources.
@@ -47,11 +58,14 @@ interpret the Obsidian-specific syntax inside the notes.
 ## Tag taxonomy (in YAML frontmatter)
 
 Most notes begin with a frontmatter block like `tags: [begrepp, HI1027, programmering, KTH, year2025]`,
-plus ISO `created:` / `updated:` dates. Tags fall into four groups:
+a one-sentence `description:`, plus ISO `created:` / `updated:` dates. The
+`description` is the most reliable one-line summary of a note — prefer it over
+guessing from the body. Tags fall into four groups:
 
 - Note type: `begrepp` (concept), `föreläsning`/`lektion` (lecture/lesson),
   `övning` (exercise), `labb` (lab), `seminarium` (seminar), `studieguide` (study
-  guide), `tenta` (exam prep), `övrigt` (misc), `index`/`MOC` (hub notes).
+  guide), `tenta` (exam prep), `övrigt` (misc), `index`/`MOC` (hub notes),
+  `meta` (vault tooling and documentation, not study content).
 - Subject: `programmering`, `nätverk`, `matematik`, `ekonomi`, `hårdvara`,
   `databaser`, `samhälle`, `säkerhet`.
 - Course code: e.g. `HI1027`, `CM1005`, `HH1802`, `HE1026` (see catalog below).
@@ -70,9 +84,19 @@ metadata, not prose:
   delete it — it drives an active study-review schedule.**
 - Flashcard delimiters, all meaning "term/question → definition/answer":
   - `Term(Definition):: answer` and `Term(Definition);; answer` — the text before
-    `::`/`;;` is the term/question, the text after is the definition/answer.
+    `::`/`;;` is the term/question, the text after is the definition/answer. The
+    `(Definition)` part is a hint label for the plugin, not part of the term.
   - `Question ??` / `Question ||` followed by lines — a Q&A flashcard; the text after
     the `??`/`||` is the answer.
+  - A **bare `??` or `||` alone on its own line** — the question is the line(s)
+    *above* it and the answer is the line(s) *below*, which is often a bullet list.
+    This is the most common multi-line form in this vault.
+  - `DISABLED` or `==DISABLEDFLASHCARD==` **used where a separator would go** — either
+    alone on its own line or inline in place of `::`. These are ordinary cards that
+    have been switched off for review. Read them as normal question/answer pairs; the
+    marker itself carries no meaning for comprehension.
+  - Cards only ever appear under a `## Flashcards` heading. A `::` found anywhere else
+    is a Dataview inline field, not a flashcard.
 - `` `= dateformat(this.file.ctime, ...)` `` and fenced ```` ```dataview ```` blocks —
   Dataview dynamic queries/fields. These render live in Obsidian; as raw text they are
   **not meaningful content — ignore them.**
@@ -107,6 +131,28 @@ metadata, not prose:
   `HE1033` Kommunikationsnät · `HI1029` Algoritmer och Datastrukturer
 - 2026 Höst: `HI2002` Routing i IP-nät · `EN2720` Etisk hackning ·
   `HI1032` Kommunikationssystem · `HI1031` Distribuerade informationssystem
+
+## How concept notes are structured
+
+Concept (`begrepp`) notes are the densest source of meaning. They use a consistent
+section layout:
+
+- `## Definition` — the definition, in plain prose. Present on 320 of 352 concept
+  notes. **This is the section to read first.**
+- `## Tenta-fokus` — optional exam guidance; only about 1 note in 8 has one.
+- `## Kopplat till` — a bullet list of wiki-links to *related concepts only*. This is
+  the hand-curated concept graph; it is more reliable than inferring relatedness.
+- `## Flashcards` — **always the last section.** Self-test question/answer pairs, in
+  the delimiter forms described above.
+
+Two things worth knowing:
+
+- A section may be present but **empty**. That is intentional: the heading is kept so
+  every concept note looks the same and acts as a prompt to fill in later. An empty
+  `## Kopplat till` means "nothing genuinely relates", not "data missing".
+- Notes named like `HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` are
+  **concept collections**: many short definitions in one note, written as flashcards,
+  with no `## Definition` section of their own. Read the cards as term/definition pairs.
 
 ## Suggested reading order for an AI
 

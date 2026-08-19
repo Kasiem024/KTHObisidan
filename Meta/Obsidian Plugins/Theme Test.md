@@ -1,5 +1,6 @@
 ---
-tags: []
+tags: [meta]
+description: "Testsida med alla rubriknivåer och textelement för att kontrollera hur ett Obsidian-tema ser ut."
 ---
 
 # Theme Test

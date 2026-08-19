@@ -90,6 +90,17 @@ foreach($f in $md){
       if($blk -notmatch '(?m)^created:'){ (Bucket 'missingCreated').Add($rel) }
       if($blk -notmatch '(?m)^updated:'){ (Bucket 'missingUpdated').Add($rel) }
     }
+    # Standard section 3: description is required on every note in scope. It feeds the
+    # published site's search results and social previews. Notes tagged excalidraw are
+    # the only exception and are skipped above.
+    if($blk -notmatch '(?m)^description:'){ (Bucket 'missingDescription').Add($rel) }
+    else{
+      $dv=[regex]::Match($blk,'(?m)^description:[ \t]*(.*)$').Groups[1].Value.Trim()
+      if($dv -eq '' -or $dv -eq '""' -or $dv -eq "''"){ (Bucket 'emptyDescription').Add($rel) }
+      # A description must read as plain text: no card delimiters, no wikilink
+      # brackets, and nothing lifted out of a Dataview query.
+      elseif($dv -match '::|;;|\[\[' -or $dv -cmatch '\b(FROM|WHERE|SORT|FLATTEN)\b'){ (Bucket 'malformedDescription').Add($rel) }
+    }
   }
   $dups=@($tags | Group-Object | Where-Object { $_.Count -gt 1 })
   if($dups.Count -gt 0){ (Bucket 'duplicateTags').Add($rel + ' :: ' + (($dups|ForEach-Object{$_.Name}) -join ',')) }
@@ -110,6 +121,14 @@ foreach($f in $md){
   }
   $h1=[regex]::Matches($body,'(?m)^#[ \t]+\S').Count
   if($h1 -eq 0){ (Bucket 'noH1').Add($rel) } elseif($h1 -gt 1){ (Bucket 'multipleH1').Add("$rel ($h1)") }
+  # Standard section 4: "## Flashcards" is always the last section. This is a hard
+  # invariant, not a preference - the published site's card transformer only rewrites
+  # content that sits under that heading, so anything after it would render as raw
+  # "::" syntax on the page.
+  $h2s=@([regex]::Matches($body,'(?m)^##[ \t]+(.+?)[ \t]*$') | ForEach-Object { $_.Groups[1].Value.Trim() })
+  if($h2s.Count -gt 0 -and ($h2s -contains 'Flashcards') -and $h2s[$h2s.Count-1] -ne 'Flashcards'){
+    (Bucket 'flashcardsNotLastSection').Add($rel + ' :: last is "' + $h2s[$h2s.Count-1] + '"')
+  }
   # Meta docs quote the old syntax deliberately when documenting it
   if(($t -match 'this\.file\.(ctime|mtime)') -and ($f.FullName -notmatch '\\Meta\\')){ (Bucket 'oldDataviewDates').Add($rel) }
   # path-derived expectations

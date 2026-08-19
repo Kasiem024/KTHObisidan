@@ -1,6 +1,9 @@
 ---
 title: "<% tp.file.folder() %>"
 tags: [index, <% tp.file.folder(true).split("/")[2].split(" ")[0] %>, KTH, year<% tp.file.folder(true).split("/")[1].slice(0,4) %>]
+description: "Kursindex för <% tp.file.folder() %> med föreläsningar, begrepp, anteckningar och kursmaterial."
+created: <% tp.date.now("YYYY-MM-DD") %>
+updated: <% tp.date.now("YYYY-MM-DD") %>
 ---
 # 📚 <% tp.file.folder() %>
 

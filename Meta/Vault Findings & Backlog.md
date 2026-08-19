@@ -17,6 +17,18 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 📚 2026-08-19 (10) — DOCS + ENFORCEMENT (F43, F44, F45 done)
+The templates were contradicting the Standard: `Begrepp Template.md` used `**Flashcards:**`
+as a bold label, so every **new** concept note would have published its cards as raw `::`
+syntax. All seven templates rewritten. The Standard's own concept-note section was written
+from memory and has been corrected against a measurement of all 352 concept notes
+(`Tenta-fokus` is optional at 12%, not standard; bold-first definitions are not house
+style). The audit now enforces `description` and the Flashcards-last invariant, which
+found 2 real gaps, and a re-check of all 490 descriptions found 5 genuinely bad ones
+(citation text, a heading, a dangling clause, a wrap-truncation) now fixed. `llms.txt`,
+`README.md` and the Health Report updated; the Quartz repo gained `PROJECT-NOTES.md`.
+Nothing open.
+
 ### 📈 2026-08-19 (9) — CONTENT DEPTH + SITE POLISH (F40, F41, F42 done)
 Every note in scope now carries a `description` (315 → **488 of 506**; the 18 without
 are the scope-excluded `excalidraw` notes). Empty `## Kopplat till` sections went
@@ -836,6 +848,85 @@ a padded one.
   `<blockquote class="callout question">`.
 - **Term sort changed to fully reverse-chronological** (see F39), so the term
   currently being studied is always first.
+
+### F43. ✅ DONE (2026-08-19) — templates rewritten; they had been contradicting the standard
+
+The templates were quietly the biggest source of future drift in the vault, and one of
+them had a consequence beyond tidiness.
+
+**`Begrepp Template.md` used bold labels, not headings** — `**Definition:**`,
+`**Flashcards:**`, `**Relaterade Koncept:**`, plus a stray `---` and no frontmatter
+beyond `tags`. Because the published site's card transformer only rewrites content under
+a `## Flashcards` **heading**, every *new* concept note would have published its cards as
+raw `::` syntax — reintroducing exactly the defect F38 fixed. `Föreläsning Template.md`
+likewise used `## Relaterade Begrepp` instead of `## Kopplat till`.
+
+All seven templates now emit `tags` (type-first), `description`, `created` and `updated`,
+and the section names the Standard documents. `description` uses a Templater prompt so it
+cannot silently be left blank; the course index and meeting templates synthesise theirs.
+
+**The Standard itself was wrong and has been corrected.** The concept-note format section
+was written from memory rather than measurement. Measuring all 352 concept notes:
+
+| Claimed | Measured |
+| --- | --- |
+| `## Tenta-fokus` part of the fixed order | 42 of 352 (12%) — **optional** |
+| `## Definition` opens with a bold term | 15 bold vs 304 plain prose — **not** house style |
+| no label callouts / `---` rule | newer notes **do** use them — optional |
+
+Genuine invariants, now documented as such: `## Definition` 320, `## Flashcards` 320 and
+**last in 320 of 320**, `## Kopplat till` 297, tags type-first in 349 of 352. Concept
+*collections* (`HI1025 Begrepp Föreläsning 2`, `SEM4 Begrepp HF1201`) are recorded as a
+recognised exception — 32 notes that hold many definitions as flashcards with no
+`## Definition` of their own.
+
+### F44. ✅ DONE (2026-08-19) — the audit now enforces what the Standard claims
+
+Two documented rules were going unchecked, so the audit could report "clean" while the
+vault drifted. `Vault-Audit.ps1` now also reports:
+
+- `missingDescription` — required on every note in scope, `excalidraw` excepted.
+- `emptyDescription` / `malformedDescription` — rejects a description containing card
+  delimiters, wikilink brackets, or text lifted out of a Dataview query.
+- `flashcardsNotLastSection` — the hard invariant the site depends on.
+
+Turning these on found 2 real gaps (`Meta/NotebookLM Ideas.md`,
+`Meta/Obsidian Plugins/Theme Test.md`), fixed by writing descriptions rather than
+special-casing the files. Audit is clean at 469 notes in scope.
+
+**A bug in the F40 generator surfaced here.** Its prose rule took a single *line*, but
+this vault hard-wraps paragraphs, so a wrapped paragraph was cut at the wrap point.
+Auditing all 490 descriptions for ones not ending in terminal punctuation gave 42 hits,
+of which **5 were genuinely wrong** and were rewritten by hand:
+
+- `Dubbel Bokföring`, `Semesterlön` — the description was **citation link text**
+  ("Den nya affärsredovisningen …, page 38").
+- `Sliding Window` — a heading plus list markers.
+- `2024-10-29 - HE1026 - Föreläsning` — dangling ("… Boolesk algebra. Alltså").
+- `Atlas/Vault Health Report` — cut at a wrap ("… is drift that needs").
+
+The other 37 are fine: complete statements that simply lack a final period, or that end
+in a colon introducing a list, or that were correctly ellipsised with `…` (which the
+first version of the checker missed, since it only looked for three dots).
+
+### F45. ✅ DONE (2026-08-19) — documentation set brought into line
+
+- **`llms.txt`** — documents `description` as the most reliable one-line summary of a
+  note; adds the `meta` type; adds a "How concept notes are structured" section; notes
+  that cards appear **only** under `## Flashcards`, so a `::` anywhere else is a Dataview
+  inline field; and records the **fifth flashcard form** (a bare `??`/`||` on its own
+  line with the question above and the answer below, plus
+  `DISABLED` / `==DISABLEDFLASHCARD==`), which an AI would otherwise misread. Corrected
+  the `Atlas/` and `Meta/` folder descriptions and added the published-site note.
+- **`README.md`** — the entry table now lists the audit script and the templates, and
+  there is a "Kontrollera vaultet" section with the command and expected output.
+- **`Atlas/Vault Health Report.md`** — two new Dataview checks mirroring the audit: notes
+  without a `description`, and `Flashcards` not last.
+- **`PROJECT-NOTES.md` in the Quartz repo** (new) — records the site setup where the code
+  lives: the submodule-vs-`-d` build trap, the mandatory no-op plugin `build` script, the
+  serialised-`sortFn` constraint, the registry override path, all five card forms, the
+  deliberate exclusions, which plugins are off and why, and the two `custom.scss` rules.
+  Previously this knowledge existed only in this backlog and in commit messages.
 
 ---
 

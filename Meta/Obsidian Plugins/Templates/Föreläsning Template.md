@@ -1,16 +1,18 @@
 ---
-tags: [KTH, year<% tp.date.now("YYYY") %>, <% tp.file.folder(true).split('/')[2] || "Kurskod" %>, föreläsning, <% tp.system.prompt("Broad Topic (t.ex. programmering / nätverk)") %>]
+tags: [föreläsning, <% tp.file.folder(true).split('/')[2].split(' ')[0] || "Kurskod" %>, <% tp.system.prompt("Ämne (t.ex. programmering / nätverk / ekonomi)") %>, KTH, year<% tp.date.now("YYYY") %>]
+description: "<% tp.system.prompt("Kort beskrivning, en mening (visas i sökresultat och länkförhandsvisningar)") %>"
+created: <% tp.date.now("YYYY-MM-DD") %>
+updated: <% tp.date.now("YYYY-MM-DD") %>
 ---
 # <% tp.file.title %>
 
-**Datum:** <% tp.date.now("YYYY-MM-DD") %>
-**Kurs:** [[KTH/<% tp.file.folder(true).split('/')[1] %>/<% tp.file.folder(true).split('/')[2] %>/_index|<% tp.file.folder(true).split('/')[2] || "Kurskod" %>]]
+> [!info] Kurs
+> [[KTH/<% tp.file.folder(true).split('/')[1] %>/<% tp.file.folder(true).split('/')[2] %>/_index|<% tp.file.folder(true).split('/')[2] || "Kurskod" %>]]
 
 ## Sammanfattning
-- 
 
 ## Anteckningar
-- 
 
-## Relaterade Begrepp
-- 
+## Kopplat till
+
+## Flashcards

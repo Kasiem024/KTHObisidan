@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Live checks against Meta/Vault Standard.md. Anything listed below is drift that needs"
+description: "Live Dataview checks against the Vault Standard; an empty section means the vault is healthy."
 ---
 # 🚩 Vault Health Report
 
@@ -82,6 +82,34 @@ WHERE file.name != "_index"
   AND !contains(file.name, ".opt")
   AND !contains(file.name, ".excalidraw")
   AND !any(file.headings, (h) => h.level = 1)
+SORT file.folder ASC
+```
+
+## 🗒️ Anteckningar utan description
+`description` krävs på varje not i scope och används av den publicerade sidan för
+sökresultat och länkförhandsvisningar. Excalidraw-ritningar är undantagna.
+```dataview
+LIST
+FROM "KTH" AND !#excalidraw
+WHERE !description
+  AND file.name != "_index"
+  AND !contains(file.folder, "Litteraturlista")
+  AND !contains(file.name, ".ai")
+  AND !contains(file.name, ".opt")
+  AND !contains(file.name, ".excalidraw")
+SORT file.folder ASC
+```
+
+## 🎴 Flashcards som inte är sista avsnittet
+`## Flashcards` ska alltid ligga sist. Detta är ett hårt krav, inte en preferens:
+sidans kortomvandlare läser bara innehåll under den rubriken, så allt som hamnar
+efter den publiceras som rå `::`-syntax.
+```dataview
+LIST
+FROM "KTH" AND !#excalidraw
+WHERE contains(file.headings.heading, "Flashcards")
+  AND filter(file.headings, (h) => h.level = 2)[length(filter(file.headings, (h) => h.level = 2)) - 1].heading != "Flashcards"
+  AND !contains(file.name, ".excalidraw")
 SORT file.folder ASC
 ```
 
