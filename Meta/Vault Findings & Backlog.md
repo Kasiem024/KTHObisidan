@@ -17,6 +17,13 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🎴 2026-08-19 (8) — FLASHCARDS + TERM SORT (F38, F39 done)
+Flashcards now render as **collapsible callouts** instead of being hidden: 316 of 326
+pages, 686 cards, **0 pages left showing raw syntax**. Five different card formats had
+to be handled — see **F38**. The explorer term sort turned out to be **broken** rather
+than unverified (it is serialized to the browser and referenced enclosing scope plus an
+esbuild helper); fixed in **F39**. Nothing open.
+
 ### 🌐 2026-08-18 (7) — PUBLISHING: vault made Quartz-safe (F35, F36 done)
 Quartz v5 publishing set up at `C:\dev\KTHObsidianQuartz`. A real build (489 files →
 1398 output files) revealed three site-only defects, all fixed: the in-body Dataview date
@@ -666,35 +673,65 @@ Quartz-side and vault-side improvements, all verified by a real build:
 client-side from `contentIndex.json`, so a server-side `sortFn` may have no effect.
 Needs eyeballing in a browser; if `2024 Höst` still precedes `2024 Vår`, it did nothing.
 
-### F38. 🟡 IN PROGRESS — flashcards as collapsible callouts
+### F38. ✅ DONE (2026-08-19) — flashcards render as collapsible callouts
 
-Goal: stop hiding flashcards and render them as collapsed Obsidian callouts, so they
-become a study feature on the site instead of noise.
+Flashcards are no longer hidden. Each card is rewritten at build time into a
+collapsed Obsidian callout, so they became a study feature on the site instead of
+noise.
 
-**Built and working:** a local Quartz transformer at
-`C:\dev\KTHObsidianQuartz\plugins\flashcards\` (plain ESM, no build step). It uses the
-`textTransform` hook to rewrite card syntax into `> [!question]- Q` / `> A` *before*
-markdown parsing, so answers keep their LaTeX, wikilinks and bold. Callouts are used
-rather than raw `<details>` because `enableInHtmlEmbed` is `false`, which would leave
-raw HTML bodies unparsed. Only content under `## Flashcards` is touched, since Dataview
-inline fields elsewhere also use `::`.
+**Implementation:** a local Quartz transformer at
+`C:\dev\KTHObsidianQuartz\plugins\flashcards\` (plain ESM, no build step — but the
+`package.json` still needs a no-op `build` script or `quartz plugin install`
+fails). It uses the `textTransform` hook to rewrite cards into
+`> [!question]- Q` / `> A` **before** markdown parsing, at `order: 25` so it runs
+ahead of `obsidian-flavored-markdown` (30).
 
-**Status: 282 of 326 pages convert correctly** (verified: `data-callout="question"`,
-collapsed by default, `::` gone from rendered text).
+Callouts rather than raw `<details>`: callout bodies are still parsed as markdown,
+so LaTeX, wikilinks, bold and **list answers** keep working. Raw HTML bodies would
+not be, because `enableInHtmlEmbed` is `false`. Only content under `## Flashcards`
+is touched, since Dataview inline fields elsewhere also use `::`.
 
-**Blocker — 114 pages still show raw card syntax.** Card forms in the vault:
-`::` 474 · `;;` 25 · `??` 129 · `||` 43. The un-converted ones are concentrated in
-CM1005 `Begrepp`. Likely causes to investigate: cards inside list items (leading `-`
-or indentation, which the line matcher does not strip), cards spanning multiple lines,
-and `??`/`||` answers separated by a blank line.
+**Five card forms had to be handled** — the first attempt only did the first one
+and left 114 pages showing raw syntax:
 
-**Because of this the work is parked on branch `wip/flashcards`, not on `v5`.** The CSS
-that hid flashcards was removed in that branch, so shipping it as-is would make those
-114 pages worse than before. `v5` keeps the CSS hiding and is safe to publish.
+1. `Question:: Answer` and `Question;; Answer` — single line.
+2. `Question ??` — separator trailing the question line.
+3. A **bare** `??` / `||` alone on its own line, with the question on the preceding
+   line(s) and the answer (often a markdown list) below. This was the big miss.
+4. `DISABLED` / `==DISABLEDFLASHCARD==` standing in for a separator, marking cards
+   switched off for review. Structurally identical cards, so they now render like
+   any other and the marker is dropped — a reader does not care about review state.
+5. The same disabled marker used **inline** in place of `::` on one line.
 
-**To resume:** check out `wip/flashcards`, extend the matcher in
-`plugins/flashcards/index.js` to handle list-item and multi-line cards, rebuild, and
-confirm `pages_with_LEFTOVER_raw_card_syntax=0` before merging to `v5`.
+Also: scheduler-only `<!--SR:...-->` lines are dropped, and `###` subsections
+inside the Flashcards section no longer stop the transform.
+
+**Verified:** 326 pages have a Flashcards section → **316 render collapsible
+question callouts, 10 sections are genuinely empty (heading only), 0 pages show raw
+card syntax**, 686 callouts total. The CSS that used to hide flashcards has been
+removed from `quartz/styles/custom.scss`; only the Dataview hiding remains.
+
+The vault is untouched, so the spaced-repetition schedule and its `<!--SR:-->` data
+are intact.
+
+### F39. ✅ DONE (2026-08-19) — explorer term sort now survives serialization
+
+The `quartz.ts` sort override from F37 was **broken**, not merely unverified. The
+explorer ships the comparator to the browser via `sortFn.toString()`, so it must be
+entirely self-contained. The first version referenced a regex, a season lookup table
+and a helper function from the enclosing scope — all `undefined` client-side — and
+esbuild additionally wrapped the named inner helper in its `__name()` helper, which
+also does not exist once the string is rebuilt. It would have thrown.
+
+Everything is now inline inside the function body. Verified from the emitted HTML
+that the serialized source contains no `__name` and no free identifiers.
+
+Sorting: newest year first, `Vår` before `Höst` within a year, term folders grouped
+above unrelated siblings, everything else folders-first then Swedish collation
+(`localeCompare(…, "sv")` so å/ä/ö sort after z).
+
+**Still worth one glance in a browser**, since the comparator only runs client-side:
+if `2024 Höst` still appears above `2024 Vår`, something further is wrong.
 
 ---
 
