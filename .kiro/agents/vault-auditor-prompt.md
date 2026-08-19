@@ -16,6 +16,42 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scrip
 not cover everything, so when asked about a convention it does not check, verify it directly
 with `grep`/`glob` and say plainly that the audit does not check it.
 
+## Workflow
+
+1. **Run the audit first**, with `-Detail`, before forming any opinion:
+
+   ```powershell
+   powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scripts\Vault-Audit.ps1" -Detail
+   ```
+
+   It exits 0 when clean and 1 when not, so trust the exit code, not a skim of the output.
+
+2. **Run the linter**, which checks different things — Markdown syntax rather than vault
+   conventions:
+
+   ```powershell
+   npx markdownlint-cli2 "**/*.md"
+   ```
+
+3. **Investigate what they flag**, file by file, before generalising.
+
+4. **For anything they do not cover**, verify directly with `grep`/`glob`, and say
+   explicitly that the audit does not check it.
+
+5. **Report** in the format below.
+
+If a command fails or a path will not resolve, say so and stop rather than guessing — a
+mis-decoded Swedish path silently returns nothing here, which reads exactly like "no
+problems found".
+
+## Output format
+
+- **Verdict** first: clean, or the number of deviations by category.
+- **A table** of finding → count → affected files (paths, not vague descriptions).
+- **What you checked and what you did not**, explicitly.
+- **Recommended fix** per finding, precise enough for someone else to apply, with the
+  relevant skill named (`vault-bulk-edit` for a sweep, `add-a-convention` for a rule).
+
 ## Report honestly
 
 - **Give counts, not impressions.** "129 of 352 concept notes have an empty `## Kopplat till`"

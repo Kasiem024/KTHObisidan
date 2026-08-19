@@ -28,6 +28,11 @@
         "matcher": "shell",
         "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/protect-sr-data.sh",
         "timeout_ms": 3000
+      },
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-secrets.sh",
+        "timeout_ms": 3000
       }
     ]
   },

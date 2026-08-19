@@ -1408,6 +1408,46 @@ unpublished. They work in Obsidian and 404 for readers. Baselined at 43 rather t
 the check catches new breakage without demanding these be resolved. Worth revisiting if the
 dead links bother readers.
 
+### F54. ✅ DONE (2026-08-19) — `.kiro` deepened: skills, not more docs
+
+Re-read the reference `.kiro` in `Kana-App` properly this time — **808 files**, against the
+158 I sampled first. The structural insight was in its own `agent-standards.md`:
+
+> Not reasons to make an agent: "I want it to know about X" — **write a skill; skills are
+> auto-discovered.**
+
+Our `.kiro` had steering (the *rules*) and agents, but nowhere for **procedures**. Every sweep
+over this vault has re-derived the same steps from scratch. Added `skills/`, in the Agent
+Skills open format, with progressive disclosure so detail costs nothing until it is needed:
+`SKILL.md` is navigation, `references/` holds the content.
+
+| Skill | Covers |
+|---|---|
+| `vault-bulk-edit` | Inventory, ASCII `.ps1`, never hardcode Swedish paths, dry run, backup, BOM and line endings, descending line numbers, flashcard-region guard, re-runnability. Plus `references/verification.md` with the exact SR fingerprint, audit, lint and build checks and their current numbers. |
+| `add-a-convention` | Standard → audit or lint check → template → Health Report → backlog → fix existing violations, in one change. Includes the CI-reproducibility trap. |
+| `verify-the-site` (site repo) | The pinned-submodule trap, `check-site.mjs`, the asymmetric baseline, stripping `<script>/<pre>/<code>`, verifying a dependency bump. |
+
+The four steps in `vault-bulk-edit` about paths and line numbers are all mistakes made in this
+vault — the Swedish-path decoding failure alone happened **four separate times**, once
+reporting 34 markdown files when there were 529.
+
+Also added `block-secrets.sh` to both repos. The vault is a **public** repository and the site
+is public, so key material must never land in the tree. Deliberately narrow: it fires on
+`.env`/`.pem`/`id_rsa`, GitHub tokens, AWS keys and PEM private keys, but **not** on study
+notes that merely discuss the words "token" or "password" — verified both directions.
+
+Gave `vault-auditor` a numbered workflow and an explicit output format, which its reference's
+agent standard requires and mine lacked.
+
+**Corrected an overclaim of my own.** The site README said `block-destructive.sh` blocks
+"writes into `content/`". It blocks *shell commands* that write there — both hooks use the
+`shell` matcher and never see write-tool payloads. The real guarantee is that neither agent has
+the `write` tool at all (`read, grep, glob, shell`). The wording now says so.
+
+Verified: audit clean with `notesInScope` still **470** (of 540 files, up from 536 — the four
+new skill docs are correctly out of scope), lint still **493 files / 0 errors**, both agent
+JSONs parse, and every hook tested in both directions.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs
