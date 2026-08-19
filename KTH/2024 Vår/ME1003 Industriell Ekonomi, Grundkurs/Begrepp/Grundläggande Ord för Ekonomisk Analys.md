@@ -26,6 +26,7 @@ Viktiga begreppspar för att kunna beskriva det finansiella flödet.
 - [[Inkomst]]
 - [[Utgift]]
 - [[Inbetalning]]
+
 ## Flashcards
 
 Grundläggande Begrepp för Ekonomisk Analys (6)

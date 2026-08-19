@@ -20,6 +20,7 @@ Det finns olika typer av Kapital, 3 vanliga typer är:
 
 - [[Anläggningstillgångar]]
 - [[Skuld]]
+
 ## Flashcards
 
 Kapital (Definition):: Ett företags resurser, används i verksamheten

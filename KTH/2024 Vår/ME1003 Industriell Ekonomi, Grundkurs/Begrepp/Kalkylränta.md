@@ -36,6 +36,7 @@ Real Kalkylränta är den avtalade räntan som anges i procent per år. Den tar 
 - [[Grundinvestering]]
 - [[Lönsamhet]]
 - [[Inflation]]
+
 ## Flashcards
 
 Kalkylränta (r) (Definition):: Avkastningskravet som ett företag ställer på en investering, ju högre det är ju svårare det är för en investering att ha hög [[Lönsamhet]]

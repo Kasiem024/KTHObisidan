@@ -12,20 +12,24 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 En **Länkad lista** består av noder där varje nod innehåller ett dataelement och en referens (pekare) till nästa nod.
 
 - **Enkellänkad:** Pekare till nästa.
 - **Dubbellänkad:** Pekare till både nästa och föregående.
 
 ## Tenta-fokus
+
 - **Pekar-manipulation:** Vanliga tentauppgifter involverar att rita hur pekare flyttas vid `add` eller `remove`.
 - **Prestanda:** Till skillnad från en array-lista kan man lägga till i början på $O(1)$. Dock tar det $O(n)$ att hitta ett element på ett specifikt index.
 - **Minne:** Tar mer minne än en array per element eftersom pekarna också måste lagras.
 
 ## Java-tips
+
 - Implementeras i Java som `LinkedList`. Denna är dubbellänkad.
 
 ## Kopplat till
+
 - **ADT:** [[Abstrakt Datatyp (ADT)]]
 - **Alternativ:** [[Array-lista]]
 - **Hjälpmedel:** [[Iterator]]

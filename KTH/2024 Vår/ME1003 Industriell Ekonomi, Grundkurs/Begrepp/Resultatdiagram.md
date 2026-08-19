@@ -53,6 +53,7 @@ $$
 - [[Total Intäkt]]
 - [[Fast Kostnad]]
 - [[Total Kostnad]]
+
 ## Flashcards
 
 Resultatdiagram (Definition):: Ett diagram som visar ==relationen== mellan ==intäkterna== och ==verksamhetsvolymen==, innehåller en linje för [[Fast Kostnad]], [[Total Kostnad]] och [[Total Intäkt]]

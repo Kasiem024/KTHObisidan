@@ -12,16 +12,20 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 En **Array-lista** är en dynamisk [[Abstrakt Datatyp (ADT)|ADT]] som använder en underliggande array för att lagra element. När arrayen blir full skapas en ny, större array och alla element kopieras över.
 
 ## Tenta-fokus
+
 - **Amorterad tid:** Att lägga till sist (`add`) är oftast $O(1)$, men $O(n)$ när arrayen måste expanderas. I genomsnitt (amorterat) räknas det som $O(1)$.
 - **Prestanda:** Mycket snabb för läsning via index, men långsam om man ofta lägger till eller tar bort i början (eftersom alla element efteråt måste skiftas).
 
 ## Java-tips
+
 - Implementeras i Java som `ArrayList`.
 
 ## Kopplat till
+
 - **ADT:** [[Abstrakt Datatyp (ADT)]]
 - **Alternativ:** [[Länkad lista]]
 - **Användning:** [[Stack]], [[Kö (Queue)]]

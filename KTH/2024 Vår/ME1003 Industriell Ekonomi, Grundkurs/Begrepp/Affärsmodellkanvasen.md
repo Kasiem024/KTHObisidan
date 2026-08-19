@@ -29,6 +29,7 @@ Ett exempel på när Nestlé använde sig av denna strategimodell vid skapandet 
 ## Kopplat till
 
 - [[Värdeerbjudandet]]
+
 ## Flashcards
 
 Affärsmodellkanvasen (Definition):: En strategimodell som analyserar ett företags verksamhet genom att dela in ett företags affärsmodell i 9 element. Tanken är att man ska länka företagets strategi med dess konkreta verksamhet och lättare se kopplingarna mellan de

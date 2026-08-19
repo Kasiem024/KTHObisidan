@@ -10,17 +10,20 @@ description: "Kursindex för EN2720 Etisk hackning med föreläsningar, begrepp,
 > - **Termin:** 2026 Höst · Period 1 (start 2026-08-24)
 > - **Omfattning:** 7,5 hp
 > - **Examination:** PRO1 (7,5 hp) — projektbaserad
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/EN2720
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/EN2720>
 
 ## 📚 Litteratur
+
 - *Learn Ethical Hacking from Scratch*, Zaid Sabih
 	- **ISBN-13:** 978-1788622059
 
 ## 🔗 Länkar
+
 - [[Atlas/2026 MOC|2026 MOC]]
 - [[Atlas/Nätverk MOC|Nätverk MOC]]
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2026 Höst/EN2720 Etisk hackning"
@@ -29,6 +32,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2026 Höst/EN2720 Etisk hackning"
@@ -37,6 +41,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2026 Höst/EN2720 Etisk hackning"
@@ -45,6 +50,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2026 Höst/EN2720 Etisk hackning"
@@ -53,6 +59,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2026 Höst/EN2720 Etisk hackning"

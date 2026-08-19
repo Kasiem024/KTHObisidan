@@ -12,19 +12,23 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Ett **Binärt sökträd (BST)** är en trädstruktur där varje nod har max två barn. För varje nod gäller:
 - Allt i **vänster** subträd är **mindre** än noden.
 - Allt i **höger** subträd är **större** än noden.
 
 ## Tenta-fokus
+
 - **Balansering:** Om element sätts in i sorterad ordning blir trädet en lång kedja (som en länkad lista) och prestandan sjunker till $O(n)$.
 - **Traversering:** *In-order* traversering av ett BST ger elementen i sorterad ordning.
 - **Definitioner:** Ha koll på skillnaden mellan *Fullt*, *Komplett* och *Balanserat* träd (ofta korta teorifrågor).
 
 ## Java-tips
+
 - `TreeSet` och `TreeMap` i Java använder balanserade binära sökträd (Röd-svarta träd) för att garantera $O(\log n)$.
 
 ## Kopplat till
+
 - **Relaterat:** [[Heap]] (liknande form, annan ordning)
 - **Alternativ:** [[Hashtabell]] (snabbare men saknar ordning)
 

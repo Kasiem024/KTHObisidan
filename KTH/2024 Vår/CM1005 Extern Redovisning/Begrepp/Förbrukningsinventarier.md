@@ -16,6 +16,7 @@ Om inventarien har en uppskattad livslängd kortare än 1 år är det istället 
 ## Kopplat till
 
 - [[Anläggningstillgångar]]
+
 ## Flashcards
 
 Förbrukningsinventarier (Definition):: Inventarier av lägre värde, halva prisbasbeloppet, med kortare livslängd än 3 år men högre än 1 år. Utgiften för sådana inventarier kan dras av omedelbart, samma år som anskaffningen ägt rum

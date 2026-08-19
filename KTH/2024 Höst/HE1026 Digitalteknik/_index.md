@@ -8,9 +8,10 @@ description: "Kursindex för HE1026 Digitalteknik med föreläsningar, begrepp, 
 > [!info] Kursinformation
 > - **Kurskod:** HE1026
 > - **Termin:** 2024 Höst
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HE1026
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HE1026>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HE1026 Digitalteknik"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HE1026 Digitalteknik"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HE1026 Digitalteknik"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HE1026 Digitalteknik"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HE1026 Digitalteknik"

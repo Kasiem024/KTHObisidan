@@ -17,7 +17,18 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🧹 2026-08-19 (16) — MARKDOWN LINTING (F52)
+
+Linted all 500 lintable notes: **767 violations → 12**, 213 files fixed. The linter's
+defaults needed correcting first — MD011's 8 "reversed links" were Templater expressions,
+and MD034's auto-fix genuinely **broke the course template** by splitting a `<% %>`
+expression out of a URL (caught and repaired). Excalidraw and templates are now excluded
+properly; `.markdownlintignore` turned out to be inert, which had silently linted 36 extra
+files. SR fingerprint unchanged on all six measures and the build matched exactly. The 12
+remaining are a heading-hierarchy decision in the MOC hub pages.
+
 ### 🃏 2026-08-19 (15) — FLASHCARDS + .KIRO (F50, F51 done)
+
 The flashcard separators must **not** be normalised — `;;` and `??` are the reversed forms and
 rewriting them would delete half the deck. The real defect was that **34 notes keep their cards
 outside a `## Flashcards` heading** and so published raw `::` syntax; my earlier "0 raw syntax"
@@ -27,6 +38,7 @@ their H1. Both repos gained a `.kiro/` folder with steering, guard hooks and one
 Nothing open.
 
 ### 🧹 2026-08-19 (14) — HOUSEKEEPING (F49 done)
+
 Renamed the `Värdekejda` image at source with both references updated, deleted the merged
 `wip/flashcards` branch from both remotes, and added `tools/slim-svg.mjs` to the CI build so
 the Excalidraw pages shrink ~23% (site ~105 MB → ~90 MB). The slimming under-delivered
@@ -34,6 +46,7 @@ against my 40–50% estimate — coordinates averaged only 3.36 decimals, so int
 needed to reach 18%. Nothing open.
 
 ### 🎯 2026-08-19 (13) — EXAM PRIORITY MAP (F48 done)
+
 `Atlas/Tenta-prioritering.md` ranks concepts by how many distinct question sets reference
 them, as a worklist for writing `## Tenta-fokus` (42 of 352 have one; 225 exam-referenced
 concepts do not). Built as **one** note, not 225 edits, because the `backlinks` panel
@@ -42,6 +55,7 @@ metric I got wrong earlier: counting occurrences instead of distinct notes turne
 "39". The real range is 1–7. Nothing open.
 
 ### ♿ 2026-08-19 (12) — ACCESSIBILITY (F47 done)
+
 Every image on the site published with `alt=""` — 183 images across 61 pages, invisible to
 screen readers. All now carry alt text derived from the already-descriptive filenames, with
 the course code dropped. Verified 183 `<img>` tags and **0 without alt**. Documented in the
@@ -50,6 +64,7 @@ considered and dropped: crawlers only honour it at the domain root, and this is 
 site on a subpath. Nothing open.
 
 ### 🔌 2026-08-19 (11) — PLUGIN REVIEW (F46 done)
+
 Enumerated the entire Quartz plugin ecosystem from the npm registry: 53 packages carry the
 `quartz-plugin` keyword, 50 of them official, and only **2** third-party packages exist at
 all. 49 of the scope's 52 are already installed, so there is nothing meaningful left to add.
@@ -58,6 +73,7 @@ the one genuine candidate. Also corrected the provenance of the "860 themes" fig
 retired a wrong assumption that the course index pages were dead ends. Nothing open.
 
 ### 📚 2026-08-19 (10) — DOCS + ENFORCEMENT (F43, F44, F45 done)
+
 The templates were contradicting the Standard: `Begrepp Template.md` used `**Flashcards:**`
 as a bold label, so every **new** concept note would have published its cards as raw `::`
 syntax. All seven templates rewritten. The Standard's own concept-note section was written
@@ -70,6 +86,7 @@ found 2 real gaps, and a re-check of all 490 descriptions found 5 genuinely bad 
 Nothing open.
 
 ### 📈 2026-08-19 (9) — CONTENT DEPTH + SITE POLISH (F40, F41, F42 done)
+
 Every note in scope now carries a `description` (315 → **488 of 506**; the 18 without
 are the scope-excluded `excalidraw` notes). Empty `## Kopplat till` sections went
 **129 → 29**, with 319 evidence-based links added across 100 notes and the remaining 29
@@ -78,6 +95,7 @@ own repos, two unused plugins switched off, empty section headings hidden, term 
 now fully reverse-chronological. Nothing open.
 
 ### 🎴 2026-08-19 (8) — FLASHCARDS + TERM SORT (F38, F39 done)
+
 Flashcards now render as **collapsible callouts** instead of being hidden: 316 of 326
 pages, 686 cards, **0 pages left showing raw syntax**. Five different card formats had
 to be handled — see **F38**. The explorer term sort turned out to be **broken** rather
@@ -85,6 +103,7 @@ than unverified (it is serialized to the browser and referenced enclosing scope 
 esbuild helper); fixed in **F39**. Nothing open.
 
 ### 🌐 2026-08-18 (7) — PUBLISHING: vault made Quartz-safe (F35, F36 done)
+
 Quartz v5 publishing set up at `C:\dev\KTHObsidianQuartz`. A real build (489 files →
 1398 output files) revealed three site-only defects, all fixed: the in-body Dataview date
 line on **450 notes**, the `_index` page titles on **all 24 courses**, and 4 protocol
@@ -92,6 +111,7 @@ line on **450 notes**, the `_index` page titles on **all 24 courses**, and 4 pro
 with `\text{}`, taking the KaTeX warning count from **456 to 0**. Nothing open.
 
 ### 🎉 2026-08-18 (6) — AUDIT IS CLEAN
+
 `Vault-Audit.ps1` reports **no deviations from the standard** (469 notes in scope).
 F9, F24 closed; F10 left in place at the user's request (they will remove those files
 themselves). All items were done or parked as of that point; F36 opened later the same
@@ -151,6 +171,7 @@ Confirmed clean on 2026-08-17 — keep it that way:
 ## P1 — Mechanical and safe
 
 ### F1. ✅ DONE (2026-08-18) — 235 notes had no `created` / `updated` dates
+
 **Resolved:** 184 study notes backfilled (`created`/`updated` seeded from filesystem
 dates + body mirror line). Coverage went 267 → 451 notes. Per the scope decision above,
 `_index.md` / MOCs / Dashboard / `index.md` / `README.md` / `Meta` docs were
@@ -184,10 +205,12 @@ Breakdown of notes missing dates:
 </details>
 
 ### F2. ✅ DONE (2026-08-18) — Folder typo `Billagor`
+
 `KTH/2024 Vår/HU1801 Industriell Marknadsföring/Billagor` renamed to `Bilagor`
 (folder was empty; no note linked to it, so no links needed updating).
 
 ### F3. ✅ DONE (2026-08-18) — 8 MOC links pointed to old, pre-rename filenames
+
 All 8 link targets were updated to the current filenames. The table below is kept as the
 historical record of what was repaired (and as a warning for F13):
 
@@ -206,15 +229,18 @@ historical record of what was repaired (and as a warning for F13):
 Databaser, Programmering).
 
 ### F4. ✅ DONE (2026-08-18) — `Atlas/Dashboard.md` had no frontmatter
+
 Added `tags: [MOC, meta]`, matching the 10 MOCs.
 
 ### F5. ✅ DONE (2026-08-18) — Dashboard linked to a non-existent Vault Health Report
+
 Created `Atlas/Vault Health Report.md` — a live Dataview health page that flags notes
 missing a subject tag, type tag, `KTH` tag or dates, plus orphans, broken links and a
 per-course note count. The Dashboard link now resolves, and future drift surfaces
 automatically instead of needing a manual audit.
 
 ### F6. ✅ DONE (2026-08-18) — links to a PDF that appeared to be missing
+
 The PDF was never missing — it had simply been **renamed twice**, leaving links pointing
 at dead names:
 
@@ -240,6 +266,7 @@ citations.
 </details>
 
 ### F7. ✅ DONE (2026-08-18) — Study note with two H1 headings
+
 `KTH/2026 Vår/HF1012 Matematisk Statistik/Anteckningar/LABA Begrepp 1.md` — the second
 heading (`LABA Begrepp - Kategori 1 (Grundläggande)`) was demoted to `##`.
 Verified against the pre-edit backup that **both H1s pre-existed** the 2026-08-17 work;
@@ -247,6 +274,7 @@ the H1 script correctly skipped this file.
 (Remaining multi-H1 files are the OCR/working/Ericsson files in F10/F24 — lower priority.)
 
 ### F8. ✅ CLOSED (2026-08-18) — not applicable
+
 `Ericsson/Overview.md`, `Ericsson/Onboarding.md` have frontmatter but no tags. Since
 `Ericsson/` is out of scope per `Meta/Vault Standard.md` §6 (work notes, not coursework),
 this is not a standard violation. The audit script now excludes `Ericsson/`, so these no
@@ -254,6 +282,7 @@ longer appear. Reopen only if you decide work notes should get their own tag voc
 (F24).
 
 ### F9. ✅ DONE (2026-08-18) — notes with no note-type tag
+
 **Resolved (14 on 2026-08-18):** `tenta` added to the 6 `Instuderingsfrågor…` notes
 (HI1024, CM1005, ME1003 ×4); `övrigt` added to the 3 `Generella Anteckningar` notes,
 `Instruktioner HE1028`, and `Protokoll 1–4 från Gruppmöte`.
@@ -290,6 +319,7 @@ merged content and that 0 inbound links remained. Backups:
 </details>
 
 ### F11. ✅ DONE (2026-08-18) — 12 folder wikilinks that could not resolve
+
 Each of the 4 landing notes had a "📂 Undermappar" list of 4 folder wikilinks (Obsidian
 cannot link a folder). Replaced with a cross-link to the course `_index` plus a Dataview
 listing of the course's notes — self-maintaining and no longer broken. This accounted for
@@ -298,6 +328,7 @@ most of the broken-link drop (43 → 27).
 2026 Höst courses have notes, which is expected).
 
 ### F10. ⏸️ PARKED (2026-08-18) — user will remove these files personally
+
 **Decision:** leave everything in `Filer/Litteraturlista/` untouched. The user will
 delete what they no longer need themselves. **Do not touch these files.**
 They are out of scope per `Meta/Vault Standard.md` §6, so they do not affect the audit.
@@ -351,6 +382,7 @@ whole-vault audits that do not apply the exclusions.
 </details>
 
 ### F11-old. (superseded — see F11 above)
+
 The four 2026 Höst landing notes each linked to their 4 category folders. Fixed.
 
 ---
@@ -358,6 +390,7 @@ The four 2026 Höst landing notes each linked to their 4 category folders. Fixed
 ## P2 — Structural: needs a decision, touches filenames/links
 
 ### F12. ✅ DONE (2026-08-18) — three competing folder schemes unified
+
 **New standard — exactly 4 category folders, created on demand:**
 `Anteckningar/` · `Begrepp/` · `Filer/` (+ `Filer/Litteraturlista/`) · `Föreläsningar/`
 
@@ -400,6 +433,7 @@ query inside the affected `_index.md` files — must be done together.
 </details>
 
 ### F13. ✅ DONE (2026-08-18) — one lecture-filename convention
+
 All dated session notes now use **`YYYY-MM-DD - CODE - Type`**
 (e.g. `2024-10-28 - HE1026 - Föreläsning`, `2024-04-16 - HH1802 - Lektion`).
 - **54 files renamed** from the year-less `MM-DD Type CODE` form.
@@ -413,11 +447,13 @@ Documented in `Meta/Vault Standard.md` §4 ("Note file naming").
 `MM-DD …` names — they are attachments, not session notes.
 
 ### F14. ✅ DONE (2026-08-18) — double spaces in filenames
+
 Fixed automatically by the F13 rename (whitespace is collapsed), including
 `10-28  Föreläsning HE1026` and `10-29  Föreläsning HE1026`, plus two H1 headings that
 also contained double spaces.
 
 ### F31. ✅ DONE (2026-08-18) — all 4 folders now exist in every course
+
 The migration created folders on demand, which left some courses showing only 1–2 of the
 four. Per user preference for **visual uniformity**, **47 missing folders** were created
 so all 24 courses now show `Anteckningar` · `Begrepp` · `Filer` · `Föreläsningar`.
@@ -425,6 +461,7 @@ Verified: **0 courses missing any folder**. `Meta/Vault Standard.md` §4 updated
 that all four always exist, even when empty.
 
 ### F32. ✅ DONE (2026-08-18) — one naming convention for all course literature
+
 Determined the dominant format from the existing 28 files, then applied it everywhere.
 
 **Convention: `<Titel> <År> [<Region>] Edition <N> <Författare>`**
@@ -457,12 +494,14 @@ style (e.g. `Malmodin et al 2014 - Life Cycle Assesment of ICT.pdf`) and were le
 — tell me if you want those standardised too.
 
 ### F30. ✅ DONE (2026-08-18) — audit is now a permanent script with scope exclusions
+
 Saved as **`Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1`** (no longer a throwaway in
 `%TEMP%`). Run it any time:
 
-```
+```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scripts\Vault-Audit.ps1"
 ```
+
 Add `-Detail` to list offending files; `-Root <path>` if auto-detection fails (it walks
 up from the script until it finds `KTH/`).
 
@@ -478,6 +517,7 @@ literature filename rules — and it applies the §6 scope exclusions
 any new number is real drift.
 
 ### F15. ✅ DONE (2026-08-18) — all broken concept links resolved
+
 **Key finding:** most of these were **not missing notes** — they were links to notes that
 already existed under fuller names. Writing new notes would have created duplicates.
 
@@ -531,6 +571,7 @@ positive — it is code, not a wikilink.)
 </details>
 
 ### F29. ✅ DONE (2026-08-18) — health report reviewed and Excalidraw excluded
+
 User confirmed the report renders correctly in Obsidian. Per request, **all Excalidraw
 drawings are now excluded** — they are special files, not authored notes. Verified that
 all 17 `*.excalidraw.md` files carry `tags: [excalidraw]`, so every query now uses
@@ -544,35 +585,42 @@ report now points to `Vault-Audit.ps1` for the same checks outside Obsidian.
 ## P3 — Config, workflow, judgement
 
 ### F16. ✅ DONE (2026-08-18) — Linter timestamp rule enabled by user
+
 `created` / `updated` now auto-update on save (Linter → *YAML timestamp*, keys `created`
 / `updated`, format `YYYY-MM-DD`, lint on save). The dynamic + AI-readable date design is
 complete: values live in frontmatter, the body mirrors them via Dataview.
 
 ### F17. ✅ DONE (2026-08-18) — template folder paths verified after reload
+
 `.obsidian/templates.json` → `Meta/Obsidian Plugins/Templates` and Templater's
 `templates_folder` / `user_scripts_folder` → `Meta/Obsidian Plugins/…` survived the
 reload (verified by reading the JSON back). Templates are reachable again.
 
 ### F18. ✅ DONE (2026-08-18) — `CM1008 Meeting Template` year now dynamic
+
 `year2025` replaced with `year<% tp.date.now("YYYY") %>`. The `CM1008` course tag is kept
 deliberately — it is a course-specific template.
 
 ### F19. ✅ DONE (2026-08-18) — `Föreläsning Template` course link now resolves
+
 The template now emits a `**Kurs:**` wikilink to the course `_index.md`
 (`KTH/<termin>/<kurs>/_index`) instead of a bare course code that matched no note.
 
 ### F25. ✅ DONE (2026-08-18) — `README.md` now points to the key entry files
+
 Added frontmatter plus a "Var man börjar" table linking `llms.txt`,
 `Meta/Vault Standard.md`, `Meta/Vault Findings & Backlog.md`, `Atlas/Dashboard.md` and
 `Atlas/Vault Health Report.md`.
 
 ### F20. ✅ DONE (2026-08-18) — `NotebookLM Ideas.md` moved out of the vault root
+
 Now `Meta/NotebookLM Ideas.md` with `tags: [meta, övrigt]`, an H1, and the scratch
 content restructured into headed sections (topics + the draft Kiro prompt as a
 blockquote). Verified 0 inbound links before removing the root copy. The vault root now
 holds only `README.md`, `index.md` and `llms.txt`.
 
 ### F21. ✅ DONE (2026-08-18) — `index.md` oddities
+
 Tag normalised from the quoted `"#nograph"` form to plain `nograph` (+ `meta`), and an
 `# Index` heading added. **Still open:** decide whether `index.md` or
 `Atlas/Dashboard.md` is the canonical entry point — both exist and overlap. `index.md`
@@ -580,10 +628,12 @@ is a static tag list; the Dashboard is the live Dataview version. Recommend keep
 Dashboard and reducing `index.md` to a pointer (or deleting it).
 
 ### F27. ✅ DONE (2026-08-18) — empty stray note deleted
+
 `KTH/2024 Vår/HH1802 …/Begrepp/Untitled.md` (0 bytes, created 2026-08-18) deleted with
 the user's approval.
 
 ### F28. ✅ DONE (2026-08-18) — vault docs polluted their own audits
+
 `Meta/Vault Standard.md` and `Meta/Vault Findings & Backlog.md` quote the syntax they
 describe (`=dateformat(this.file.…)`, the `= this.created` mirror, double-bracket link
 examples), which made naive audits count them as real violations and broken links.
@@ -593,9 +643,11 @@ in any future audit — treat as expected, not drift:
 - `mirrorWithoutFrontmatterDates` = 2 (both docs quote the mirror line)
 
 ### F29-old. (merged into F29 above — done)
+
 The report's Dataview queries were unverified when written; user confirmed 2026-08-18.
 
 ### F22. ✅ DONE (2026-08-18) — subject tags cross-checked, vault is clean
+
 Every note's subject tags were compared against its course's expected subject(s):
 **0 mismatches**. The `ekonomi`-in-a-programming-course error on
 `Instuderingsfrågor TENA HI1024.md` (fixed 2026-08-17) was the only one.
@@ -608,10 +660,12 @@ Re-run this check after bulk tag edits. Reference map (a course may have several
 `databaser`: HI1030, HI1031 · `säkerhet`: EN2720 · `samhälle`: HF1201.
 
 ### F23. ✅ DONE (2026-08-18) — support folders no longer inconsistent
+
 Obsolete after F12/F31: `Journal`, `Bilagor`, `PDFs` and `Excalidraw` no longer exist —
 they were merged into `Filer/`, and all 24 courses now have the same four folders.
 
 ### F24. ✅ DONE (2026-08-18) — `Ericsson/` confirmed out of scope
+
 User confirmed: `Ericsson/` is work, not coursework, and stays exempt from the vault
 standard. It is listed in `Meta/Vault Standard.md` §6 and excluded by both
 `Vault-Audit.ps1` and `Atlas/Vault Health Report.md`. The 6 work notes there keep their
@@ -624,9 +678,11 @@ multiple H1s. **Decision taken:** `Ericsson/` is now listed as out of scope in
 vocabulary. Note these files still inflate counts in raw whole-vault audits.
 
 ### F25-old. (merged into F25 above — done)
+
 `README.md` was minimal and undated. Resolved 2026-08-18.
 
 ### F26. ✅ DONE (2026-08-18) — `KTH/Kurs Mapp Mall` rebuilt to the new scheme
+
 It previously used the numbered `01–04` folders, so every new course inherited a scheme
 none of the existing courses used. It now contains exactly
 `Anteckningar` · `Begrepp` · `Filer` (+ `Filer/Litteraturlista`) · `Föreläsningar`.
@@ -640,9 +696,10 @@ exposed three defects that only showed up in the rendered site. Evidence came fr
 actual build of this vault: 489 Markdown files → 1398 output files.
 
 **1. The in-body date line was broken on every page (450 notes).**
-`**Skapad:** `= this.created` · **Uppdaterad:** `= this.updated`` is a Dataview inline
-expression. Quartz does not run Dataview, so it published as the literal text
-`= this.created`, and it also leaked into the `og:description` social-preview tag.
+The line paired `**Skapad:**` with the Dataview inline expression `= this.created`, and
+`**Uppdaterad:**` with `= this.updated`. Quartz does not run Dataview, so it published as
+the literal text `= this.created`, and it also leaked into the `og:description`
+social-preview tag.
 **Removed from all 450 notes** plus `Annotator Template.md`. Quartz reads `created` and
 `updated` straight from frontmatter (its `Frontmatter` plugin accepts `updated` as an
 alias for the modified date), so dates still display — natively, and correctly.
@@ -655,7 +712,7 @@ but with no `title:` frontmatter Quartz falls back to the filename. Added
 `Kurs Index Template.md` so new courses comply automatically. `Vault Standard.md` §5
 updated to make `title` required on index notes.
 
-**3. Four meeting protocols used `Tid: `= this.created``.**
+**3. Four meeting protocols used a `Tid:` label followed by `= this.created`.**
 Replaced with each file's literal `created` date (2025-03-19, -21, -26, -29).
 
 Excluded from the site via `ignorePatterns`: `Litteraturlista` (copyrighted textbooks,
@@ -669,14 +726,14 @@ OCR dumps, conversion tooling), `Meta`, `.excalidraw.md` sources, `.trash`,
 The Quartz build emitted **456** `unicodeTextInMathMode` warnings: Swedish economics
 formulas were written as bare words inside math mode, e.g.
 
-```
+```text
 Balanslikviditet = \frac{Omsattningstillgangar}{Kortfristiga \, Skulder}
 ```
 
 KaTeX set every letter as an italic single-letter *variable*, which is both ugly and
 semantically wrong. Words are now wrapped in `\text{...}`:
 
-```
+```text
 \text{Balanslikviditet} = \frac{\text{Omsattningstillgangar}}{\text{Kortfristiga} \, \text{Skulder}}
 ```
 
@@ -798,7 +855,7 @@ why the original version would have thrown rather than just sorting oddly.
 
 Replicating that same path in Node against the real built `index.html` gives:
 
-```
+```text
 sortFn present = true · contains __name = false · comparator does not throw
 term order:  2026 Vår · 2026 Höst · 2025 Vår · 2025 Höst · 2024 Vår · 2024 Höst
 2024 Vår before 2024 Höst = true          (the reported symptom, fixed)
@@ -1017,7 +1074,7 @@ All 183 now carry alt text: `![[Bostonmatrisen ME1003.png|Bostonmatrisen]]`.
 The mechanism was verified in the shipped transformer before any bulk edit, rather than
 assumed. `obsidian-flavored-markdown` parses the text after the pipe with:
 
-```
+```text
 /^(?<alt>(?!^\d*x?\d*$).*?)?(\|?\s*?(?<width>\d+)(x(?<height>\d+))?)?$/
 ```
 
@@ -1206,6 +1263,77 @@ automatically, only the ones in `ignorePatterns`, so without adding `.kiro` the 
 would have been published on the public site. The vault audit also had to exclude it, or the
 files would be audited as notes and fail for having no tags. Verified after: 0 published files
 matching `.kiro`, page count unchanged at 601, audit clean with `notesInScope` still 470.
+
+### F52. ✅ MOSTLY DONE (2026-08-19) — Markdown linting: 767 → 12
+
+Ran `markdownlint-cli2` over the whole vault and fixed everything mechanical. **767
+violations → 12**, and the 12 that remain are a deliberate open question, not a backlog of
+mess (see the end of this entry).
+
+Fixed automatically across **213 files**: MD022 blank lines around headings (501), MD031
+around code fences (148), MD012 collapsed runs of blank lines (33), MD034 bare URLs wrapped
+as autolinks (25), MD047 missing final newline (21), MD009 stray single trailing spaces
+(16), MD058 blank lines around a table (1). Fixed by hand: MD040 unlabelled code fences (8)
+and MD038 two malformed nested code spans in this file.
+
+**The linter's defaults fight this vault in several places, and taking them at face value
+would have done damage.** Each of the following was verified, not assumed:
+
+- **MD011 "reversed link" — 8 hits, all false.** They were Templater expressions:
+  `tp.file.folder(true).split('/')[1]` reads as `(text)[url]`. Auto-fixing would have
+  rewritten it to `[1]('/')` and broken both templates.
+- **MD034's auto-fix did break the course template** — the one thing that got through. The
+  URL was `.../kurs/<% CODE %>`, and the fix wrapped only the literal part, producing
+  `<https://...kurs/><% CODE %>`. Every new course index would have linked to `.../kurs/`
+  with the code stranded outside. Caught by checking the template after the run, and
+  repaired so it emits one complete autolink. The 25 existing `_index.md` files were fine,
+  since their codes were already substituted.
+- **MD025 "multiple top-level headings" — 26 files.** markdownlint counts a frontmatter
+  `title:` as the document H1, so the body H1 looked like a second one. That combination is
+  required by F35. Set `front_matter_title: ""` rather than disabling the rule.
+- **MD036 "emphasis as heading" — 3 hits, all legitimate**, e.g.
+  `*Employee N -> worksFor -> 1 Department*`. Rule off.
+
+**Excluding `Meta/.../Templates/` turned out to be better than disabling rules for it**, and
+let MD011 stay enabled for real notes — the first config attempt had switched MD011 off
+vault-wide to accommodate two template files, weakening a real check everywhere.
+
+Two scoping errors of my own, both caught before they mattered:
+
+1. **`.markdownlintignore` is inert** — markdownlint-cli2 does not read it (cli v1 only). It
+   silently linted 536 files instead of 500, pulling in the Excalidraw drawings and
+   inflating the count from 767 to 1673. Ignores must live in `.markdownlint-cli2.jsonc`.
+2. **One Excalidraw note is identified only by its tag**, not by a `.excalidraw.md` filename
+   — `CM1008 Lean Canvas Grupp 10.md`. Ignoring `**/Filer/**` covers it; verified that
+   `Filer/` holds only drawings (18) and Litteraturlista files (7), no authored notes.
+
+**Safety, since 213 files were rewritten mechanically.** Before applying, verified that
+**zero** of the 501 MD022 headings sat inside a flashcard region, where an inserted blank
+line would have split a card; and that MD012 only ever collapses 2+ blank lines to 1, so no
+card boundary can disappear. After applying, the spaced-repetition fingerprint was identical
+on every measure: 1270 `<!--SR:-->` markers, 1070 `::`, 270 `;;`, 100 `||`, 219 `??`, 13
+disabled. A full build then matched the previous one exactly — 601 pages, 353 pages with
+callouts, 1965 callouts, 0 leaks, 0 KaTeX errors, 0 images without alt.
+
+**Found but deliberately not changed — 3 orphaned `<!--SR:-->` comments** whose card text is
+gone, in `Kassaflödesanalys`, `HE1033 Begrepp Föreläsning 1-3` and `... 6-7` (the last dated
+`2000-01-01`). They are invisible on the site and harmless to review. Deleting scheduling
+data is the author's call, not the linter's.
+
+**Still open — the 12 remaining violations, all in hub pages:**
+
+- **MD001 heading increment (10).** The nine `Atlas/*.MOC` files jump `# h1` straight to
+  `#### h4`, and `2024-02-16 - CM1005 - Lektion` jumps `h1` to `h3`. Skipped levels break
+  screen-reader navigation and the site's table of contents. Fixing means promoting those
+  headings, which makes them render visibly larger — a design decision.
+- **MD024 duplicate heading (2).** `Nätverk MOC` and `Programmering MOC` each list one
+  course twice, once at the top and once under `## KTH-relaterat`. Either merge the blocks,
+  or set `siblings_only: true` if listing a course under two groupings is intentional.
+
+Line endings: 31 files previously had **mixed** CRLF/LF and are now consistently CRLF, which
+matches `core.autocrlf=true`. The repository stores LF either way, so the commit shows no
+line-ending churn. A `.gitattributes` with `*.md text eol=lf` would make this deterministic
+if the mixture ever returns.
 
 ---
 

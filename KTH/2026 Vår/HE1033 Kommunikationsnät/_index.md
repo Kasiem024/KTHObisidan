@@ -8,9 +8,10 @@ description: "Kursindex för HE1033 Kommunikationsnät med föreläsningar, begr
 > [!info] Kursinformation
 > - **Kurskod:** HE1033
 > - **Termin:** 2026 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HE1033
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HE1033>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HE1033 Kommunikationsnät"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HE1033 Kommunikationsnät"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HE1033 Kommunikationsnät"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HE1033 Kommunikationsnät"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HE1033 Kommunikationsnät"

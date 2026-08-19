@@ -17,11 +17,13 @@ Fokusera på förståelse av lager-modellen och praktiska beräkningar.
 5. **Fysiska:** Bitströmmar, Kablar, Hubbar
 
 ## 🔢 Beräknings-Checklista
+
 - [ ] **Subnätning:** Kan du räkna ut nätadress, broadcast och första/sista värd från en CIDR (t.ex. /26)?
 - [ ] **Dijkstra:** Kan du stega igenom algoritmen utan att göra slarvfel?
 - [ ] **ARQ:** Skillnaden i fönsterstorlek mellan Go-Back-N ($2^k-1$) och Selective Repeat ($2^{k-1}$).
 
 ## 🛠️ Viktiga Protokoll att förstå
+
 - **ARP:** "Vem har IP X? Berätta för MAC Y."
 - **DHCP:** "Jag är ny här, kan jag få en IP?"
 - **DNS:** "Vilken IP har google.se?"

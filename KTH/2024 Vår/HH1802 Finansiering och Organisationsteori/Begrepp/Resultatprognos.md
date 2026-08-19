@@ -16,6 +16,7 @@ Resultatprognosen används för att uppskatta [[Intäkt]] och [[Kostnad]] för e
 - [[Intäkt]]
 - [[Kostnad]]
 - [[Räkenskapsår]]
+
 ## Flashcards
 
 Resultatprognos (Definition):: Används för att uppskatta [[Intäkt]] och [[Kostnad]] för ett [[Räkenskapsår]], viktig när företag ska göra en [[Finansiell Plan]] då en uppskattning av årets resultat kan utläsas

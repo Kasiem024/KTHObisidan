@@ -12,9 +12,11 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Används av routingprotokoll (som [[OSPF]]) för att räkna ut den billigaste vägen från en router till alla andra punkter i nätverket.
 
 ### Stegen (Praktiskt för tentan)
+
 1. Markera startnoden som permanent (kostnad 0).
 2. Uppdatera kostnaden till alla dess grannar.
 3. Välj den nod i hela grafen som har **lägst tillfällig kostnad**.
@@ -22,10 +24,12 @@ Används av routingprotokoll (som [[OSPF]]) för att räkna ut den billigaste v�
 5. Upprepa tills alla noder är permanenta.
 
 ## Tenta-fokus
-- **Vanlig uppgift:** Du får en ritad graf och ska fylla i en tabell steg-för-steg. 
+
+- **Vanlig uppgift:** Du får en ritad graf och ska fylla i en tabell steg-för-steg.
 - **Tips:** Glöm inte att räkna den *ackumulerade* kostnaden från startnoden, inte bara vikten på den senaste länken.
 
 ## Kopplat till
+
 - **Protokoll:** [[OSPF]]
 - **Teori:** [[Graf-representationer]] (HI1029)
 

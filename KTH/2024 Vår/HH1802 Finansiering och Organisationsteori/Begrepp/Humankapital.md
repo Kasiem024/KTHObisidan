@@ -18,6 +18,7 @@ Eftersom företaget inte äger sin personal är det en risk att ha mycket av fö
 
 - [[Balansräkning]]
 - [[Resultaträkning]]
+
 ## Flashcards
 
 Humankapital (Definition):: Människors färdigheter, kunskaper, talanger och utbildning, används för att beskriva den mänskliga arbetskraften på en arbetsplats, personalen, brukar sägas vara en del av företagets ==immateriella resurser==

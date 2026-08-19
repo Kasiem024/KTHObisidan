@@ -12,9 +12,11 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Tidskomplexitet är ett teoretiskt mått som används för att analysera en algoritms effektivitet när indatans storlek $n$ växer. Genom att använda **Big O-notation** kan vi beskriva algoritmens "värsta fall" oberoende av specifik hårdvara.
 
 ### Vanliga komplexitetsklasser
+
 - $O(1)$: Konstant tid (t.ex. indexering i en array).
 - $O(\log n)$: Logaritmisk tid (t.ex. binär sökning).
 - $O(n)$: Linjär tid (t.ex. genomgång av en lista).
@@ -22,11 +24,13 @@ Tidskomplexitet är ett teoretiskt mått som används för att analysera en algo
 - $O(n^2)$: Kvadratisk tid (t.ex. [[Urvalssortering (Selection sort)|Urvalssortering]]).
 
 ## Tenta-fokus
+
 - **Varför teoretisk analys?** För att kunna jämföra algoritmer oberoende av hårdvara och programmeringsspråk.
 - **Dominerande term:** Vid analys behåller vi endast termen med högst tillväxttakt och tar bort konstanter. $T(n) = 3n^2 + 5n + 2 \implies O(n^2)$.
 - **Analysera kod:** Var uppmärksam på nästlade loopar ($O(n^2)$) och loopar där sökrymden halveras ($O(\log n)$).
 
 ## Kopplat till
+
 - **Grundpelare:** [[Rekursion]]
 - **Implementationer:** [[Binär sökning]], [[Quicksort]], [[Hashtabell]]
 

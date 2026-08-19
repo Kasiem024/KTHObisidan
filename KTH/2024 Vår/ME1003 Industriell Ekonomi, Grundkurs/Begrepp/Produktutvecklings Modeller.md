@@ -30,6 +30,7 @@ Genom att införa beslutspunkter vid övergångarna mellan olika stadier av utve
 
 - [[Produktutveckling]]
 - [[Scrum]]
+
 ## Flashcards
 
 Produktutvecklings Modeller (4)

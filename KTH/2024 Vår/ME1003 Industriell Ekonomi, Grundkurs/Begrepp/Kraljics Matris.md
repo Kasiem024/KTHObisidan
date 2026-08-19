@@ -23,6 +23,7 @@ Alltså visar den hur viktig en viss inköpt artikel är och hur problematiskt d
 
 - [[Lönsamhet]]
 - [[Värdeerbjudandet]]
+
 ## Flashcards
 
 Kraljics Matris (Definition):: Visar hur viktig en viss inköpt artikel är och hur problematiskt det är ifall den inte levereras i tid

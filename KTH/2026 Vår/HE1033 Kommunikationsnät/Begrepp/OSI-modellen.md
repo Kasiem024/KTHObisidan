@@ -12,6 +12,7 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 En teoretisk modell i sju lager som beskriver hur data skickas från en applikation på en dator till en applikation på en annan.
 
 1. **Fysiska:** Bitströmmar, kablar.
@@ -23,10 +24,12 @@ En teoretisk modell i sju lager som beskriver hur data skickas från en applikat
 7. **Applikation:** Gränssnitt för användaren ([[DNS]], [[HTTP]]).
 
 ## Tenta-fokus
+
 - **Inkapsling:** Varje lager lägger till sin egen header (PDU). Data $\to$ Segment (L4) $\to$ Paket (L3) $\to$ Ram (L2).
 - **Lager-ansvar:** Du måste veta vilket lager som hanterar vad (t.ex. Routing = Lager 3, Switching = Lager 2).
 
 ## Kopplat till
+
 - **Modeller:** [[LLC och MAC]]
 - **Protokoll:** [[TCP]], [[UDP]], [[IPv4 och IPv6]]
 

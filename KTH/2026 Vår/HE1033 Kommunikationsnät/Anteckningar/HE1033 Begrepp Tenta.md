@@ -11,17 +11,20 @@ description: "Detta nav innehåller fördjupad information om kommunikationsnät
 Detta nav innehåller fördjupad information om kommunikationsnät, kategoriserat efter OSI-lager och funktion.
 
 ### Modeller & Grundpelare
+
 - [[OSI-modellen]] - De sju lagren.
 - [[LLC och MAC]] - Datalänklagret (L2) uppdelning.
 - [[ARQ-protokoll]] - Felhantering (Stop-and-Wait, GBN, SR).
 - [[CSMA-CD och CSMA-CA]] - Åtkomstmetoder för trådburet/trådlöst.
 
 ### Adressering & Subnät
+
 - [[MAC-adress]] - Fysisk adressering (L2).
 - [[IPv4 och IPv6]] - Logisk adressering (L3) och skillnader.
 - [[Subnätning och CIDR]] - Beräkningar, prefix och nätmasker.
 
 ### Protokoll
+
 - [[ARP]] - Kopplingen mellan IP och MAC.
 - [[ICMP]] - Felmeddelanden, Ping och Traceroute.
 - [[DHCP]] - Automatisk tilldelning (DORA).
@@ -30,12 +33,14 @@ Detta nav innehåller fördjupad information om kommunikationsnät, kategorisera
 - [[UDP]] - Snabb och anslutningslös transport.
 
 ### Routing & Algoritmer
+
 - [[Routing-principer]] - Longest Prefix Match och Default Route.
 - [[OSPF]] - Internt routingprotokoll (Link State).
 - [[BGP]] - Internetets huvudprotokoll (Path Vector).
 - [[Dijkstras algoritm]] - Beräkning av kortaste vägen.
 
 ### Format
+
 - [[Ethernet-ramen]] - Header-fält och minimistorlek.
 
 ---

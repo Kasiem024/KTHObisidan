@@ -13,6 +13,7 @@ Inkurans innebär att delar av lagret är oanvändbart som en följd av att mate
 ## Kopplat till
 
 - [[Anskaffningsvärde]]
+
 ## Flashcards
 
 Inkurans (Definition):: Innebär att delar av lagret är oanvändbart som en följd av att materialet, komponenterna eller produkterna blivit gammalt, omodern eller skadat. Det är praxis att man skriver av eller ner [[Anskaffningsvärde]] med 3%

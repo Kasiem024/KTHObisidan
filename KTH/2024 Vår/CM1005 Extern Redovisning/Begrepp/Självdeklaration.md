@@ -36,6 +36,7 @@ Om den Beräknade Skatten är större än [[Preliminär Skatt]] har företaget e
 - [[Preliminär Skatt]]
 - [[Årsbokslut]]
 - [[Dröjsmålsränta]]
+
 ## Flashcards
 
 Självdeklaration (Definition):: En årlig handling som ska lämnas till Skatteverket där föregående års inkomster redovisas, fastställer hur mycket skatt som ska betalas

@@ -52,6 +52,7 @@ Alltså handlar Affärsrisk om Risk som har med verksamheten att göra.
 - [[Räntabilitet]]
 - [[Modeller för Investeringsbedömning]]
 - [[DuPont-Schema]]
+
 ## Flashcards
 
 Risk (Definition):: Handlar om att försöka veta vad som kommer hända i framtiden, dock råder det osäkerhet då oväntade händelser kan ske, osäkerheten på hur långt något är från medelvärdet, osäkerhet gällande konsekvenserna av en handling. I teorin leder det till att man kan tjäna mer pengar

@@ -83,6 +83,7 @@ Efter allt annat är gjort ska man skapa en aktivitetsplan. Som en kombination a
 - [[SWOT-Analys]]
 - [[Marknadsföring]]
 - [[Affärsidé]]
+
 ## Flashcards
 
 Marknadsplan (Definition);; För att [[Marknadsföring]] ska bli optimal måste man planera noga och göra en marknadsplan. Kontrollera att budgeten och marknadsplanen håller genom att regelbundet göra uppföljningar

@@ -10,9 +10,10 @@ updated: <% tp.date.now("YYYY-MM-DD") %>
 > [!info] Kursinformation
 > - **Kurskod:** <% tp.file.folder(true).split("/")[2].split(" ")[0] %>
 > - **Termin:** <% tp.file.folder(true).split("/")[1] %>
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/<% tp.file.folder(true).split("/")[2].split(" ")[0] %>
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/<% tp.file.folder(true).split("/")[2].split(" ")[0] %>>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "<% tp.file.folder(true) %>"
@@ -21,6 +22,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "<% tp.file.folder(true) %>"
@@ -29,6 +31,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "<% tp.file.folder(true) %>"
@@ -37,6 +40,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "<% tp.file.folder(true) %>"
@@ -45,6 +49,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "<% tp.file.folder(true) %>"

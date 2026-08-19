@@ -19,6 +19,7 @@ Den [[Utgående Balans]] från förra året blir den ingående balans för detta
 
 - [[Utgående Balans]]
 - [[Räkenskapsår]]
+
 ## Flashcards
 
 Ingående Balans (Definition):: De belopp som bokförs i början av ett nytt [[Räkenskapsår]] som ingående saldon på balanskontona. Den visar företagets tillgångar, eget kapital och skulder vid starten av ett nytt [[Räkenskapsår]]

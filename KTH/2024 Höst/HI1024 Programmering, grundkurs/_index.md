@@ -8,9 +8,10 @@ description: "Kursindex för HI1024 Programmering, grundkurs med föreläsningar
 > [!info] Kursinformation
 > - **Kurskod:** HI1024
 > - **Termin:** 2024 Höst
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HI1024
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HI1024>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HI1024 Programmering, grundkurs"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HI1024 Programmering, grundkurs"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HI1024 Programmering, grundkurs"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HI1024 Programmering, grundkurs"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HI1024 Programmering, grundkurs"

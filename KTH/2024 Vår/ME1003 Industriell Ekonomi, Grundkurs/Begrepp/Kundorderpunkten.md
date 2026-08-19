@@ -32,6 +32,7 @@ När en produkt produceras mot kundorder betyder det att det redan finns råmate
 
 - [[Värdekedja]]
 - [[Varulager]]
+
 ## Flashcards
 
 Kundorderpunkt (Definition):: Ett begrepp som beskriver hur mycket av produktens tillverkning som är redan färdig, ==genomloppstid==, när kunden gör beställningen, ==leveranstid==, och hur ==kundanpassad== produkten är

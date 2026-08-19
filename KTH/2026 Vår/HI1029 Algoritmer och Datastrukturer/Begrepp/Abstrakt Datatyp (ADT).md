@@ -12,22 +12,27 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 En **Abstrakt Datatyp (ADT)** är en specifikation av en mängd data och de operationer som kan utföras på denna data. Den definierar *gränssnittet* men inte den tekniska implementationen.
 
 ### Exempel på ADT:er
+
 - **Stack:** (LIFO - Last In, First Out)
 - **Kö:** (FIFO - First In, First Out)
 - **Prioritetskö**
 - **Lista** (t.ex. Java `List`-interface)
 
 ## Tenta-fokus
+
 - **Skillnaden ADT vs Datastruktur:** Detta är en klassisk tentafråga. ADT:n är "kontraktet" (t.ex. en Stack), medan datastrukturen är den faktiska koden (t.ex. en array eller länkad lista).
 - **Abstraktion:** Fördelen är att man kan byta implementation (t.ex. från Array till Länkad lista) utan att den som använder ADT:n behöver ändra sin kod.
 
 ## Java-tips
+
 - I Java motsvaras ADT:er ofta av **Interfaces** (t.ex. `List`, `Queue`, `Set`).
 
 ## Kopplat till
+
 - **Implementationer:** [[Array-lista]], [[Länkad lista]], [[Stack]], [[Kö (Queue)]]
 - **Prestanda:** [[Tidskomplexitet (Big O)]]
 

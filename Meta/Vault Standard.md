@@ -9,11 +9,51 @@ for every new note so the vault stays uniform and machine-readable. See also
 `Meta/Vault Findings & Backlog.md` for known outstanding issues.
 
 **Check compliance any time:**
-```
+
+```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scripts\Vault-Audit.ps1"
 ```
+
 (add `-Detail` to list offending files). `Atlas/Vault Health Report.md` does the same
 checks live inside Obsidian.
+
+**Check Markdown syntax any time:**
+
+```powershell
+npx markdownlint-cli2 "**/*.md"          # report
+npx markdownlint-cli2 --fix "**/*.md"    # apply the fixable rules
+```
+
+The two tools do different jobs and neither replaces the other: the audit enforces *vault
+conventions* (tags, `description`, folder placement, section order), the linter enforces
+*Markdown syntax* (blank lines around headings and fences, single trailing newline, no bare
+URLs). Expected result: only the deviations listed in `Vault Findings & Backlog.md` F52.
+
+Configuration lives in two files at the vault root, one job each:
+
+- `.markdownlint.json` — which rules apply.
+- `.markdownlint-cli2.jsonc` — which files are linted. Note that markdownlint-cli2 does
+  **not** read `.markdownlintignore`; that is cli v1 only, and a stray one is silently
+  ignored.
+
+Rules deliberately switched off, with reasons, so they are not turned back on by accident:
+
+| Rule | Off because |
+| --- | --- |
+| MD003 heading style | Mixed ATX styles are harmless here |
+| MD007 ul indent | Obsidian writes tab-indented lists |
+| MD010 hard tabs | Obsidian writes tabs for nested list items |
+| MD013 line length | Notes are prose, not code |
+| MD029 ol prefix | Obsidian renumbers lists on edit |
+| MD032 lists surrounded by blanks | Too noisy against Obsidian's output |
+| MD033 inline HTML | `<!--SR:-->` scheduling comments and `<br>` are required |
+| MD036 emphasis as heading | Swedish notes legitimately use `*emphasis*` for notation such as `*Employee N -> worksFor -> 1 Department*` |
+| MD025 front-matter title | Set to `""` only: index notes correctly have both a `title:` key and an H1, so the frontmatter title must not count as a second top-level heading |
+
+`Meta/Obsidian Plugins/Templates/` is excluded from linting rather than having rules
+disabled for it, because a Templater `<% %>` expression is not valid Markdown until it is
+rendered — it can sit inside a URL or a link. That exclusion is what allows MD011 to stay
+**on** for real notes.
 
 ## 1. Tag casing rules (authoritative)
 
@@ -78,7 +118,7 @@ Order convention (recommended, not enforced): type → course code(s) → subjec
 
 ## 4. Folder & note structure
 
-```
+```text
 KTH/<Year Season>/<CODE Course Name>/
 ├── _index.md          ← generated course index
 ├── Anteckningar/      ← study guides, exam prep, labs, projects, protocols

@@ -12,6 +12,7 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Den fysiska adressen som är hårdkodad i nätverkskortet. Skrivs hexadecimalt: `AA:BB:CC:DD:EE:FF`.
 
 - **Struktur:**
@@ -19,10 +20,12 @@ Den fysiska adressen som är hårdkodad i nätverkskortet. Skrivs hexadecimalt: 
 	- Andra hälften (24 bit): Unikt serienummer för kortet.
 
 ## Tenta-fokus
+
 - **Lager 2 vs 3:** MAC-adresser används för att flytta ramar mellan enheter på **samma** lokala nätverk. IP-adresser används för att hitta vägen **mellan** olika nätverk.
 - **Broadcast:** `FF:FF:FF:FF:FF:FF` (Alla bitar är ettor).
 
 ## Kopplat till
+
 - **Underlager:** [[LLC och MAC]]
 - **Format:** [[Ethernet-ramen]]
 - **Protokoll:** [[ARP]] (Kopplingen till IP)

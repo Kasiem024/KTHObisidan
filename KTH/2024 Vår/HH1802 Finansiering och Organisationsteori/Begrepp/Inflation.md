@@ -29,6 +29,7 @@ Köpkraft är pengars värde i förhållande till gällande priser i ett samhäl
 ## Kopplat till
 
 - [[Kalkylränta]]
+
 ## Flashcards
 
 Inflation (Definition):: Handlar om att pengar förlorar sitt värde med tiden och har försämrad köpkraft

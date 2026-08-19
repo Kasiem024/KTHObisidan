@@ -24,6 +24,7 @@ Exempel på Reala Optioner:
 - [[Lönsamhet]]
 - [[Investering]]
 - [[Modeller för Investeringsbedömning]]
+
 ## Flashcards
 
 Reala Optioner (Definition):: Framtida handlingar som påverkar [[Lönsamhet]] av en [[Investering]]

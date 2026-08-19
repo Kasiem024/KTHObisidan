@@ -12,6 +12,7 @@ updated: 2026-06-02
 ---
 
 ## Definition
+
 En **Stack** är en linjär datastruktur där man bara kommer åt det element som senast lades till. Tänk på en stapel med tallrikar.
 
 **Huvudoperationer:**
@@ -20,10 +21,12 @@ En **Stack** är en linjär datastruktur där man bara kommer åt det element so
 - `peek`: Titta på översta utan att ta bort ($O(1)$).
 
 ## Tenta-fokus
+
 - **Användning:** Används för att hantera metodanrop ([[Rekursion]]), för att utvärdera matematiska uttryck (postfix) och i algoritmer som *Depth-First Search* (DFS).
 - **Implementation:** Kan implementeras effektivt med både en array och en länkad lista.
 
 ## Kopplat till
+
 - **ADT:** [[Abstrakt Datatyp (ADT)]]
 - **Relaterat:** [[Kö (Queue)]]
 - **Logik:** [[Rekursion]]

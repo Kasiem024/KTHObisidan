@@ -150,6 +150,7 @@ $$
 - [[Resultaträkning]]
 - [[Kundfordringar]]
 - [[Hävstångsformeln]]
+
 ## Flashcards
 
 Nyckeltal (Definition):: Används för att värdera ett företag och dess verksamhet, kan användas för att jämföra olika företag och för att få en bättre översikt på ett företag

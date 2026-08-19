@@ -19,6 +19,7 @@ Syftet med Bokföring är att låta företag löpande kontrollera sitt ekonomisk
 - [[BAS-kontoplan]]
 - [[Bokföringslagen]]
 - [[Verifikation]]
+
 ## Flashcards
 
 Bokföring (Definition):: Ett system att registrera, klassificera, värdera och rapportera olika [[Affärshändelse]] för ett företag eller organisation, när man **systematiskt redovisar vilka pengar som är förknippade med vilka affärshändelser**

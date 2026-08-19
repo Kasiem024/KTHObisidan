@@ -36,4 +36,5 @@ Man kan dela in [[Marknadsföring]] på tre analysnivåer:
 - [[Distributionskanaler]]
 - [[Varumärke]]
 - [[Värdeerbjudandet]]
+
 ## Flashcards

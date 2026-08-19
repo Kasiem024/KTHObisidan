@@ -28,6 +28,7 @@ Ordet "värde" i detta sammanhang är värde för kunden.
 - [[Värdeerbjudandet]]
 - [[Värdeskapandet]]
 - [[Värdefångsten]]
+
 ## Flashcards
 
 Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera ![[Affärsmodellen ME1003.png|Affärsmodellen]]

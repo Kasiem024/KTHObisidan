@@ -43,6 +43,24 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scrip
 Expected: `RESULT: clean - no deviations from the standard.` Add `-Detail` to list offending
 files. A change is not finished until this is clean.
 
+For Markdown syntax there is a second, separate tool:
+
+```powershell
+npx markdownlint-cli2 "**/*.md"          # report
+npx markdownlint-cli2 --fix "**/*.md"    # apply the fixable rules
+```
+
+They are complementary, not alternatives: the audit checks vault conventions, the linter
+checks Markdown syntax. Three traps, all of which have already bitten:
+
+- Ignores must live in `.markdownlint-cli2.jsonc`. **`.markdownlintignore` is silently
+  inert** — that is cli v1 only — and a stray one linted 36 extra files without complaining.
+- **Never run `--fix` on the Templater templates.** MD034's fix split a `<% %>` expression
+  out of a URL and broke the course template. They are excluded for this reason.
+- Before any bulk `--fix`, confirm no heading or fence needing blank lines sits **inside a
+  flashcard region**, because an inserted blank line would split the card. Afterwards,
+  re-count the `<!--SR:-->` markers and each separator and require them to be identical.
+
 If a rule is worth having, add a check to the audit in the same change. Documented-but-
 unenforced rules drift: `description` and the Flashcards-last invariant were both in the
 standard for a while without being checked, and both had already been violated.

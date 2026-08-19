@@ -8,16 +8,16 @@ updated: <% tp.date.now("YYYY-MM-DD") %>
 
 **Tid:** <% tp.date.now("YYYY-MM-DD") %>
 **Närvarande:**
-- 
+-
 
 ## Agenda
 
-1. 
+1.
 
 ## Beslut
 
-- [ ] 
+- [ ]
 
 ## Nästa Steg
 
-- [ ] 
+- [ ]

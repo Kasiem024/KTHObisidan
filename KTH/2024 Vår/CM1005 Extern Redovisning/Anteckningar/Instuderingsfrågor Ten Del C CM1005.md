@@ -9,7 +9,6 @@ description: "Instuderingsfrågor med svar inför Ten Del C i kursen CM1005."
 
 [[Ten Del C Exempel CM1005.pdf]]
 
-
 - Bra och effektivt entreprenörskap
 - Hållbart entreprenörskap som kan höja kvalitet och resultat genom att ta tillvara mänskliga resurser och behov.
 	- [[Affärsmodellen]]

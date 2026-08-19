@@ -12,13 +12,16 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Den standardiserade PDU (Protocol Data Unit) som används i trådbundna lokalnät.
 
 ## Tenta-fokus
+
 - **Minimistorlek:** 64 byte. Varför? För att sändningen ska ta tillräckligt lång tid så att sändaren hinner upptäcka en kollision i andra änden av kabeln ([[CSMA-CD och CSMA-CA]]).
 - **Beståndsdelar:** Preamble (synk), Dest/Source [[MAC-adress]], Typ/Längd, Data och FCS (felkontroll).
 
 ## Kopplat till
+
 - **Adressering:** [[MAC-adress]]
 - **Metod:** [[CSMA-CD och CSMA-CA]]
 

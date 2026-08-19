@@ -12,16 +12,20 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 En **Iterator** är ett objekt som används för att stega igenom elementen i en samling (t.ex. en lista) ett efter ett utan att exponera samlingens inre struktur.
 
 ## Tenta-fokus
+
 - **Varför behövs den?** Om man använder en `for`-loop med `get(i)` på en [[Länkad lista]] blir tidskomplexiteten $O(n^2)$. Med en iterator blir den $O(n)$ eftersom iteratorn kommer ihåg var den är.
 - **Fail-fast:** De flesta iteratorer i Java kastar ett exception om samlingen ändras (t.ex. `add`/`remove`) samtidigt som man itererar.
 
 ## Java-tips
+
 - För att kunna använda en "for-each" loop (`for (E e : list)`) måste klassen implementera interfacet `Iterable`.
 
 ## Kopplat till
+
 - **Strukturer:** [[Länkad lista]], [[Array-lista]]
 - **Prestanda:** [[Tidskomplexitet (Big O)]]
 

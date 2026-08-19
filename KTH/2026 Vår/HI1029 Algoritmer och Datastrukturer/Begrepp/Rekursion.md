@@ -12,6 +12,7 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 **Rekursion** innebär att man löser ett problem genom att bryta ner det i mindre delproblem av samma typ.
 
 Två krav för en fungerande rekursion:
@@ -19,14 +20,17 @@ Två krav för en fungerande rekursion:
 2. **Rekursivt steg:** Funktionen anropar sig själv med en "mindre" indata.
 
 ## Tenta-fokus
+
 - **Minne:** Varje rekursivt anrop tar upp plats på **Call Stacken** ($O(\text{djup})$). Om rekursionen är för djup får man `StackOverflowError`.
 - **Fördel:** Mycket enklare och renare kod för träd- och grafproblem.
 - **Nackdel:** Kan vara mindre effektiv än iteration pga overhead vid metodanrop.
 
 ## Java-tips
+
 - Var försiktig med rekursion i Java då call-stacken är begränsad. För mycket djupa problem är iteration (loopar) säkrare.
 
 ## Kopplat till
+
 - **Strategier:** [[Backtracking]], [[Dynamisk Programmering]]
 - **Algoritmer:** [[Quicksort]], [[Mergesort]], [[Binär sökning]]
 - **Strukturer:** [[Stack]] (Call-stack)

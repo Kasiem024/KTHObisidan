@@ -29,6 +29,7 @@ Alltså en bokföringsperiod som är vanligen 12 månader lång och avslutas med
 - [[Handelsbolag]]
 - [[Balansräkning]]
 - [[Ingående Balans]]
+
 ## Flashcards
 
 Räkenskapsår (Definition):: En bokföringsperiod som är vanligen 12 månader lång, men max 18 månader, och avslutas med ett [[Årsbokslut]] och en [[Årsredovisning]], behöver inte nödvändigtvis följa ett kalenderår

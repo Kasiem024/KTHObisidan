@@ -12,6 +12,7 @@ updated: 2026-08-18
 ---
 
 ## Definition
+
 **Sliding Window (glidande fönster)** är tekniken som låter en sändare skicka flera paket innan den fått bekräftelse (ACK) på det första. Fönstret är antalet obekräftade paket som får vara "i luften" samtidigt.
 
 - **Glider framåt:** När ett ACK kommer in flyttas fönstrets nedre kant fram, och sändaren får utrymme att skicka nya paket.
@@ -19,16 +20,19 @@ updated: 2026-08-18
 - **Stop-and-Wait** är specialfallet med fönsterstorlek 1 — sändaren står still och väntar på varje ACK, vilket ger dåligt utnyttjande av länken.
 
 ### Fönsterstorlek vid $k$ sekvensnummer-bitar
+
 - **Go-Back-N:** $2^k-1$
 - **Selective Repeat:** $2^{k-1}$
 
 ## Tenta-fokus
+
 - **Varför inte $2^k$ i Go-Back-N?** Om fönstret vore lika stort som sekvensnummerrymden kan mottagaren inte skilja ett nytt paket från en omsändning av ett gammalt.
 - **Varför halva rymden i Selective Repeat?** Mottagaren buffrar paket ur ordning, så fönstren för sändare och mottagare får inte kunna överlappa samma sekvensnummer.
 - **Utnyttjande:** Med fönster $W$, paketstorlek $L$ och rundtid RTT blir genomströmningen ungefär $\frac{W \cdot L}{RTT}$. Fönstret bör täcka bandbredd-fördröjningsprodukten för att länken ska hållas full.
 - **TCP:** Använder ett glidande fönster för flödeskontroll, där mottagaren annonserar sitt lediga buffertutrymme (*receive window*) i varje segment.
 
 ## Kopplat till
+
 - **Mekanism:** [[ARQ-protokoll]]
 - **Protokoll:** [[TCP]]
 

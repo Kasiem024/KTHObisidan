@@ -61,6 +61,7 @@ Efterkalkylering är när ett företag beräknar sina kostnader för en produkt 
 - [[Självkostnadskalkylering]]
 - [[Divisionskalkylering]]
 - [[Aktivitetsbaserad Kalkylering]]
+
 ## Flashcards
 
 Typer av Produktkalkylering (7)

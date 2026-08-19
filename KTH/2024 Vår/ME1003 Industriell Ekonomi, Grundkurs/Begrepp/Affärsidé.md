@@ -26,6 +26,7 @@ För att en Affärsidé ska lyckas behöver man alla tre delarna. Exempelvis om 
 
 - [[Värdeerbjudandet]]
 - [[Marknadsplan]]
+
 ## Flashcards
 
 Delarna av en Affärsidé (3)

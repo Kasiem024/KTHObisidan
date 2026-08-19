@@ -17,8 +17,10 @@ specialfiler som inte är egna anteckningar), and `Ericsson/` (work notes, not s
 > `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1`.
 
 ## 🏷️ Kursanteckningar utan ämnestagg
+
 Ska ha minst en av: programmering, nätverk, matematik, ekonomi, hårdvara, databaser,
 samhälle, säkerhet.
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -32,8 +34,10 @@ SORT file.folder ASC
 ```
 
 ## 🧩 Kursanteckningar utan typtagg
+
 Ska ha en av: begrepp, föreläsning, lektion, övning, labb, seminarium, studieguide,
 tenta, övrigt.
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -47,6 +51,7 @@ SORT file.folder ASC
 ```
 
 ## 🎓 Anteckningar utan KTH-tagg
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -59,7 +64,9 @@ SORT file.folder ASC
 ```
 
 ## 📅 Studieanteckningar utan created/updated
+
 Navigationsfiler (`_index`, MOC:er, Dashboard) ska medvetet **inte** ha datum.
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -73,6 +80,7 @@ SORT file.folder ASC
 ```
 
 ## 🧱 Anteckningar utan H1-rubrik
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -86,8 +94,10 @@ SORT file.folder ASC
 ```
 
 ## 🗒️ Anteckningar utan description
+
 `description` krävs på varje not i scope och används av den publicerade sidan för
 sökresultat och länkförhandsvisningar. Excalidraw-ritningar är undantagna.
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -101,9 +111,11 @@ SORT file.folder ASC
 ```
 
 ## 🎴 Flashcards som inte är sista avsnittet
+
 `## Flashcards` ska alltid ligga sist. Detta är ett hårt krav, inte en preferens:
 sidans kortomvandlare läser bara innehåll under den rubriken, så allt som hamnar
 efter den publiceras som rå `::`-syntax.
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -114,7 +126,9 @@ SORT file.folder ASC
 ```
 
 ## 🕸️ Orphans — anteckningar utan inlänkar
+
 Kandidater för att länkas in i en MOC eller ett kursindex.
+
 ```dataview
 LIST
 FROM "KTH" AND !#excalidraw
@@ -129,6 +143,7 @@ LIMIT 50
 ```
 
 ## 🔗 Trasiga länkar
+
 ```dataview
 TABLE WITHOUT ID file.link AS "Anteckning", length(filter(file.outlinks, (l) => !l.file)) AS "Trasiga"
 FROM ("KTH" OR "Atlas") AND !#excalidraw
@@ -138,6 +153,7 @@ SORT file.folder ASC
 ```
 
 ## 📊 Antal anteckningar per kurs
+
 ```dataview
 TABLE WITHOUT ID Kurs, length(rows) AS "Antal"
 FROM "KTH" AND !#excalidraw

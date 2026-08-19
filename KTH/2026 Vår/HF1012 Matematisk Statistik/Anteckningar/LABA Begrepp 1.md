@@ -8,7 +8,7 @@ description: "Matlab-kommandot binopdf(x, n, p): Beräknar punktsannolikheten $P
 
 ## LABA Begrepp - Kategori 1 (Grundläggande)
 
-Matlab-kommandot `binopdf(x, n, p)` ;; Beräknar punktsannolikheten $P(X=x)$ för en binomialfördelning. 
+Matlab-kommandot `binopdf(x, n, p)` ;; Beräknar punktsannolikheten $P(X=x)$ för en binomialfördelning.
 Matlab-kommandot `binocdf(x, n, p)` ;; Beräknar den kumulativa fördelningsfunktionen $P(X \le x)$ för en binomialfördelning.
 Matlab-ändelsen `cdf` (Cumulative Distribution Function) ;; Används i Matlab för att beräkna den kumulativa sannolikheten att en variabel är "högst x" ($P(X \le x)$).
 Matlab-ändelsen `pdf` (Probability Density Function) ;; Används i Matlab för att beräkna punktsannolikheten (diskreta) eller täthetsfunktionen (kontinuerliga) i exakt punkten x.

@@ -19,6 +19,7 @@ Statsskuldväxel är ett lån med låg ränta, låg risk och låg avkastning. Ri
 - [[Diskonteringspapper]]
 - [[Riksgälden]]
 - [[Statsobligation]]
+
 ## Flashcards
 
 Statsskuldväxel (Definition):: Ett [[Diskonteringspapper]] som ges ut av [[Riksgälden]], långivaren får sin avkastning på förfallodatumet, löptiden är vanligen 3 månader men max 1 år, låg ränta, låg risk och låg avkastning

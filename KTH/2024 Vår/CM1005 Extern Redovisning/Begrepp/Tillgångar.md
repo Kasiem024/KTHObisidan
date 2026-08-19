@@ -52,6 +52,7 @@ Det finns 4 typer av Omsättningstillgångar:
 - [[Omsättningstillgångar]]
 - [[Anskaffningsvärde]]
 - [[Ekonomisk Livslängd]]
+
 ## Flashcards
 
 Tillgångar (Definition):: Resurser som kan förväntas ge ekonomiska fördelar i framtiden och är summan av ett företags förmögenhet, en del av [[Balansräkning]]

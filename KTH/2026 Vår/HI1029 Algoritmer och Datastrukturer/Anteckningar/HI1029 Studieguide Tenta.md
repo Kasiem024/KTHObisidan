@@ -26,6 +26,7 @@ Denna guide är sammanställd för att hjälpa dig navigera genom de viktigaste 
 - **Mergesort:** Alltid $O(n \log n)$. Kräver $O(n)$ extra minne. Stabil: Ja.
 
 ## 💡 Strategier för plugg
+
 1. **Rita strukturerna:** Kan du rita hur en Heap ser ut efter `remove()`?
 2. **Implementera ADTs:** Testa att skriva en enkel `Stack` eller `Kön` från grunden.
 3. **Analysera kod:** Öva på att se om en loop-struktur är $O(n)$ eller $O(n^2)$.

@@ -15,6 +15,7 @@ Dröjsmålsränta är en straffavgift som köparen betalar till säljaren för v
 - [[Självdeklaration]]
 - [[Varutransaktion]]
 - [[Betalningsvillkor]]
+
 ## Flashcards
 
 Dröjsmålsränta (Definition):: En straffavgift som köparen betalar till säljaren för varje dag en betalning är försenad

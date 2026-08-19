@@ -19,6 +19,7 @@ Exempelvis om tillgången är en bil som företaget har köpt blir Anskaffningsv
 - [[Avskrivning]]
 - [[Tillgångar]]
 - [[Inkurans]]
+
 ## Flashcards
 
 Anskaffningsvärde (Definition):: Ett belopp motsvarande utgifterna för tillgångens förvärv eller tillverkning, inte bara inköpspriset men också alla utgifter som kan direkt hänföras till den

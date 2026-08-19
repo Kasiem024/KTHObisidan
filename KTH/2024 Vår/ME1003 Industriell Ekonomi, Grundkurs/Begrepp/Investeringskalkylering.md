@@ -33,6 +33,7 @@ Det investerade kapitalet skall förräntas alltså öka i värde. Detta kallas 
 - [[Annuitetsmetoden]]
 - [[Internräntemetoden]]
 - [[Återbetalningsmetoden]]
+
 ## Flashcards
 
 Investeringskalkylering (Definition):: Handlar om att bedöma [[Lönsamhet]] eller värdet av en investering, syftet är att veta om en viss investering är bra eller inte, hur påverkar en viss investering företagets ==betalningsströmmar==

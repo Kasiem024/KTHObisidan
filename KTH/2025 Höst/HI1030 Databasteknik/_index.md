@@ -8,9 +8,10 @@ description: "Kursindex för HI1030 Databasteknik med föreläsningar, begrepp, 
 > [!info] Kursinformation
 > - **Kurskod:** HI1030
 > - **Termin:** 2025 Höst
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HI1030
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HI1030>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1030 Databasteknik"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1030 Databasteknik"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1030 Databasteknik"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1030 Databasteknik"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1030 Databasteknik"

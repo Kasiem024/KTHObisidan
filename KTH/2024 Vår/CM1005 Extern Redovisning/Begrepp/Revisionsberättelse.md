@@ -48,6 +48,7 @@ Om en [[Enskild Näringsverksamhet]] uppfyller två av dessa kriterier måste de
 - [[Balansräkning]]
 - [[Aktiebolag]]
 - [[Enskild Näringsverksamhet]]
+
 ## Flashcards
 
 Revisionsberättelse (Definition):: När en revisor redogör sin granskning av ett företags ledningen och om [[Årsredovisning]] är upprättad enligt [[Årsredovisningslagen]]

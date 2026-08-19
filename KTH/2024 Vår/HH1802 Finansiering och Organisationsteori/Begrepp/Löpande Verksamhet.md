@@ -29,6 +29,7 @@ Det finns 2 sätt att upprätta en kassaflödesanalys för den Löpande verksamh
 - [[Resultaträkning]]
 - [[Intäkt]]
 - [[Kostnad]]
+
 ## Flashcards
 
 Löpande Verksamhet (Definition):: En del av en [[Kassaflödesanalys]], är både den egentliga rörelseverksamheten och den finansiella verksamheten. **Fokuserar på de pengar som genereras genom försäljning av produkter**

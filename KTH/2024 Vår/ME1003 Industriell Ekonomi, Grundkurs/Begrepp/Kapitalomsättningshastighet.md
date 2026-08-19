@@ -21,6 +21,7 @@ $$
 ## Kopplat till
 
 - [[Nyckeltal]]
+
 ## Flashcards
 
 Kapitalomsättningshastighet (Definition):: Ett [[Nyckeltal]] och ett verksamhetsmått för arbetskrafts- och kapitalintensitet som **visar hur effektivt en verksamhet använder sitt kapital i förhållande till omsättningen**$\text{Kapitalomsättningshastighet}=\frac{\text{Omsättning}}{\text{Totalt} \, \text{Kapital}}$

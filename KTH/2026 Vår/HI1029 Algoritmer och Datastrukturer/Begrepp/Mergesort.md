@@ -12,17 +12,21 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Delar upp listan i två halvor rekursivt tills man har listor med bara ett element. Sedan "mergas" (slås samman) dessa listor i sorterad ordning.
 
 ## Tenta-fokus
+
 - **Förutsägbarhet:** Den är garanterat $O(n \log n)$ oavsett indata, till skillnad från Quicksort.
 - **Nackdel:** Den kräver en temporär array under sammanslagningen, vilket ger $O(n)$ i extra minnesåtgång.
 - **Användning:** Eftersom den är stabil används den ofta för att sortera objekt (där stabilitet är viktigare än för enkla siffror).
 
 ## Java-tips
+
 - `Collections.sort()` och `Arrays.sort()` för objekt i Java använder oftast Timsort, som är en hybrid baserad på Mergesort.
 
 ## Kopplat till
+
 - **Metod:** [[Rekursion]]
 - **Alternativ:** [[Quicksort]]
 - **Egenskap:** [[Stabilitet (Sortering)]]

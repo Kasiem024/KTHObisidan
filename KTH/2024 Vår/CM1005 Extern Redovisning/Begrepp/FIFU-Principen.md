@@ -14,6 +14,7 @@ FIFU-Principen (Först In Först Ut) innebär att man utgår från att de först
 ## Kopplat till
 
 - [[Varulager]]
+
 ## Flashcards
 
 FIFU-Principen (Definition):: När man utgår från att de först köpta varorna sålts först, att lagret innehåller de sist inköpta varorna

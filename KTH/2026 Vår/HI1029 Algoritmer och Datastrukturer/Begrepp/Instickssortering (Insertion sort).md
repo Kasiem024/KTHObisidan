@@ -12,13 +12,16 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Man tar ett element i taget och "sticker in" det på rätt plats i den redan sorterade delen av listan (tänk hur man sorterar en korthand).
 
 ## Tenta-fokus
+
 - **Bästa fall:** Om listan redan är sorterad tar det bara $O(n)$ tid. Detta gör den mycket effektiv för "nästan sorterad" data.
 - **Egenskap:** Den är stabil och sorterar "in-place" (kräver inget extra minne).
 
 ## Kopplat till
+
 - **Egenskap:** [[Stabilitet (Sortering)]]
 - **Alternativ:** [[Urvalssortering (Selection sort)]]
 

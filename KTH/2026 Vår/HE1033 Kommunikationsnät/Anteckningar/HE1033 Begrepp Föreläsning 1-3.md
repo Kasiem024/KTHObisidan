@@ -9,7 +9,6 @@ description: "Datalänklagret(Lager 2): Det lager i OSI-modellen som ansvarar f�
 Datalänklagret(Lager 2)(Definition);; Det lager i OSI-modellen som ansvarar för **nod-till-nod**-kommunikation och tillhandahåller en (logiskt) felfri länk genom **inramning**, adressering samt flödes- och felkontroll.
 <!--SR:!2026-03-19,7,181!2026-03-21,9,230-->
 
-
 <!--SR:!2026-03-05,4,211-->
 
 Inkapsling(Encapsulation)(Definition);; Processen där data från ett högre lager (t.ex. ett IP-paket) placeras inuti en **ram** med tillhörande **header** och **trailer** för sändning på datalänksnivå.

@@ -12,13 +12,16 @@ description: "Binär sökning är en 'söndra och härska'-algoritm som hittar e
 ---
 
 ## Definition
+
 **Binär sökning** är en "söndra och härska"-algoritm som hittar ett element genom att hela tiden titta i mitten och halvera sökrymden.
 
 ## Tenta-fokus
+
 - **Varför logaritmisk tid?** Eftersom man halverar antalet element i varje steg ($n \to n/2 \to n/4 \dots$).
 - **Viktigt villkor:** Algoritmen fungerar **endast** på sorterad data. Om listan är osorterad måste man använda linjär sökning ($O(n)$) eller sortera först.
 
 ## Kopplat till
+
 - **Prestanda:** [[Tidskomplexitet (Big O)]]
 - **Metod:** [[Rekursion]]
 - **Strukturer:** [[Binärt sökträd (BST)]]

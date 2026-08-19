@@ -18,4 +18,5 @@ Baserad på [[SWOT-Analys]]
 ## Kopplat till
 
 - [[SWOT-Analys]]
+
 ## Flashcards

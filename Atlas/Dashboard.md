@@ -9,6 +9,7 @@ Welcome to your structured KTH Vault. This dashboard uses the **Dataview** plugi
 ---
 
 ## 🗺️ Maps of Content (MOCs)
+
 - [[Atlas/Programmering MOC|💻 Programmering]]
 - [[Atlas/Nätverk MOC|🌐 Nätverk]]
 - [[Atlas/Matematik MOC|🔢 Matematik]]
@@ -21,6 +22,7 @@ Welcome to your structured KTH Vault. This dashboard uses the **Dataview** plugi
 ---
 
 ## 📅 Terminer
+
 - [[Atlas/2026 MOC|📅 2026]]
 - [[Atlas/2025 MOC|📅 2025]]
 - [[Atlas/2024 MOC|📅 2024]]
@@ -28,6 +30,7 @@ Welcome to your structured KTH Vault. This dashboard uses the **Dataview** plugi
 ---
 
 ## 📚 Kursindex
+
 ```dataview
 TABLE WITHOUT ID link(file.path, regexreplace(file.folder, "^.*/", "")) AS "Kurs", regexreplace(file.folder, "^KTH/([^/]+)/.*", "$1") AS "Termin"
 FROM #index AND "KTH"
@@ -37,6 +40,7 @@ SORT file.folder DESC
 ---
 
 ## 📅 Denna Termin (2026)
+
 ```dataview
 LIST FROM #year2026
 SORT file.mtime DESC
@@ -46,6 +50,7 @@ LIMIT 10
 ---
 
 ## 📝 Nyligen Uppdaterade
+
 ```dataview
 TABLE tags, file.mtime AS "Senast ändrad"
 SORT file.mtime DESC
@@ -55,6 +60,7 @@ LIMIT 10
 ---
 
 ## 🎓 Exam Prep (#tenta)
+
 ```dataview
 LIST FROM #tenta
 ```
@@ -62,5 +68,6 @@ LIST FROM #tenta
 ---
 
 ## 🛠️ Vault Health
+
 - [[Vault Health Report|🚩 Health Report]]
 - **Orphans:** Check the report for notes that need linking!

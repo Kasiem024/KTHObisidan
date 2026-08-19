@@ -12,15 +12,18 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Datalänklagret är uppdelat i två underlager för att separera mjukvaru- och hårdvaruansvar.
 
 1. **LLC (Logical Link Control):** Den övre delen. Hanterar flödeskontroll, felkontroll och talar om för nätverkslagret vilket protokoll som används.
 2. **MAC (Media Access Control):** Den undre delen. Hanterar fysisk adressering ([[MAC-adress]]) och reglerar hur flera enheter delar på samma fysiska medium.
 
 ## Tenta-fokus
+
 - **Oberoende:** LLC-lagret gör att mjukvaran kan vara densamma oavsett om man använder Ethernet, Wifi eller Token Ring.
 
 ## Kopplat till
+
 - **Adressering:** [[MAC-adress]]
 - **Hårdvara:** [[Ethernet-ramen]]
 - **Metoder:** [[CSMA-CD och CSMA-CA]]

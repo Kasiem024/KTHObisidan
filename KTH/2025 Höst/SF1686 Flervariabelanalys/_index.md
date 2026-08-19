@@ -8,9 +8,10 @@ description: "Kursindex för SF1686 Flervariabelanalys med föreläsningar, begr
 > [!info] Kursinformation
 > - **Kurskod:** SF1686
 > - **Termin:** 2025 Höst
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/SF1686
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/SF1686>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/SF1686 Flervariabelanalys"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/SF1686 Flervariabelanalys"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/SF1686 Flervariabelanalys"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/SF1686 Flervariabelanalys"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/SF1686 Flervariabelanalys"

@@ -108,7 +108,6 @@ Vad betyder flaggan MF (More Fragments) = 1?(Definition);;Att det **finns fler f
 Vad betyder flaggan MF = 0?(Definition);;Att detta är **det sista** (eller enda) fragmentet av datagrammet.
 <!--SR:!2026-03-15,9,250!2026-03-29,17,260-->
 
-
 <!--SR:!2000-01-01,1,250!2026-03-05,2,240-->
 
 Första fragmentet har skickat 560 bytes data. Vad blir Fragment Offset för det andra fragmentet?(Definition)::$560 / 8 = \mathbf{70}$.
@@ -140,12 +139,6 @@ Vilken specifik algoritm används av Distance Vector-protokoll?(Definition);;**B
 
 Vilken specifik algoritm används av Link State-protokoll?(Definition);;**Dijkstras algoritm**.
 <!--SR:!2026-03-21,9,220!2026-03-22,10,220-->
-
-
-
-
-
-
 
 Routing Information Protocol(RIP) (Kategori & Algoritm)(Definition);;Ett **Intra-domain** protokoll (IGP) av typen **Distance Vector** (Bellman-Ford).
 <!--SR:!2026-03-24,12,232!2026-03-25,13,232-->

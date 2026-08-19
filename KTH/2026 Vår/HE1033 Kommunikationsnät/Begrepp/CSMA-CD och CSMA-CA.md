@@ -12,15 +12,18 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Metoder för att bestämma när en enhet får sända data.
 
 - **CSMA/CD (Collision Detection):** Används i trådbundet Ethernet. Lyssnar medan den sänder. Vid kollision: avbryt, skicka "jam signal", vänta slumpmässig tid.
 - **CSMA/CA (Collision Avoidance):** Används i trådlöst Wifi. Försöker undvika kollisioner helt genom att lyssna (Carrier Sense) och använda tidsluckor (IFS). Kan använda RTS/CTS.
 
 ## Tenta-fokus
+
 - **Varför inte CD i Wifi?** Trådlösa sändare kan sällan höra en kollision samtidigt som de sänder ("Half-duplex" begränsning och Hidden Node Problem).
 
 ## Kopplat till
+
 - **Underlager:** [[LLC och MAC]]
 - **Format:** [[Ethernet-ramen]]
 

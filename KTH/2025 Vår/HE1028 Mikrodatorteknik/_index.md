@@ -8,9 +8,10 @@ description: "Kursindex för HE1028 Mikrodatorteknik med föreläsningar, begrep
 > [!info] Kursinformation
 > - **Kurskod:** HE1028
 > - **Termin:** 2025 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HE1028
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HE1028>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HE1028 Mikrodatorteknik"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HE1028 Mikrodatorteknik"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HE1028 Mikrodatorteknik"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HE1028 Mikrodatorteknik"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HE1028 Mikrodatorteknik"

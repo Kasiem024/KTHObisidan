@@ -12,9 +12,11 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 Huvudprotokollen för adressering på internet.
 
 ### Skillnader (Viktigt!)
+
 | Egenskap | IPv4 | IPv6 |
 | :--- | :--- | :--- |
 | **Adresslängd** | 32 bitar | 128 bitar |
@@ -23,10 +25,12 @@ Huvudprotokollen för adressering på internet.
 | **Broadcast** | Ja | Nej (ersatt av Multicast) |
 
 ## Tenta-fokus
+
 - **Header-förändringar:** När ett paket passerar en router minskas **TTL** (Time To Live) med 1. Om TTL blir 0 kastas paketet och ett [[ICMP]] "Time Exceeded" skickas.
 - **Header Checksum:** Beräknas om i varje router i IPv4 pga TTL-ändring.
 
 ## Kopplat till
+
 - **Adressering:** [[Subnätning och CIDR]], [[MAC-adress]]
 - **Kontroll:** [[ICMP]], [[ARP]]
 

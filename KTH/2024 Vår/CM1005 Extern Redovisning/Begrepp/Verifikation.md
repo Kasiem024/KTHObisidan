@@ -24,7 +24,6 @@ En verifikation ska innehålla:
 
 Man kan se på det som ett kvitto som visar att en affärshändelse har skett.
 
-
 Enligt [[Mervärdesskattelagen]] ska en verifikation innehålla:
 
 - Ett unikt löpnummer.
@@ -42,6 +41,7 @@ Enligt [[Mervärdesskattelagen]] ska en verifikation innehålla:
 - [[Mervärdesskattelagen]]
 - [[Bokföringslagen]]
 - [[Rättelse]]
+
 ## Flashcards
 
 Verifikation (Definition):: Som ett kvitto som visar att en [[Affärshändelse]] har hänt. Kan vara en faktura, kvitto eller annat både fysiskt och elektroniskt dokument

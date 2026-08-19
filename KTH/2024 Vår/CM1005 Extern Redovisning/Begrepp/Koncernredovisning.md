@@ -32,6 +32,7 @@ Innehållet av en Koncernredovisning liknar årsredovisningen:
 - [[Årsredovisningslagen]]
 - [[K-Regelverk]]
 - [[Kapitalandelsfond]]
+
 ## Flashcards
 
 Koncernredovisning (Definition):: En särskild [[Årsredovisning]] som ett moderföretag upprättar utöver sin vanliga årsredovisning där moderföretaget och alla dess dotterföretag ses som en ekonomisk enhet. Innehållet liknar årsredovisningen och vissa moderföretag har undantag

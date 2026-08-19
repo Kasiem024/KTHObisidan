@@ -72,8 +72,6 @@ Vad är IGMP (Internet Group Management Protocol) och vilken roll spelar det?(De
 Vilka typer av meddelanden skickas typiskt i IGMP?(Definition)::Query (routern frågar ut i nätverket om det finns ett fortsatt intresse för gruppen) och Report (datorn svarar vilka grupper den vill ta emot trafik från).
 <!--SR:!2026-03-22,10,250-->
 
-
-
 Vilken matematisk algoritm använder protokollet OSPF för att hitta den kortaste vägen i ett nätverk?(Definition)::Dijkstras algoritm.
 <!--SR:!2026-03-15,3,230-->
 
@@ -148,5 +146,3 @@ Vilken är den nuvarande och mest använda versionen av protokollet IGMP?(Defini
 
 Vad gör ett IGMP Membership Report meddelande?(Definition)::Det skickas av en klient för att tala om för routern att klienten vill gå med i en specifik Multicast grupp.
 <!--SR:!2026-03-23,11,250-->
-
-

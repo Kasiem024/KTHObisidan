@@ -21,6 +21,7 @@ Finansiering Utanför Balansräkningen är när man finansierar delar av verksam
 - [[Balansräkning]]
 - [[Factoring]]
 - [[Leasing]]
+
 ## Flashcards
 
 Finansiering Utanför Balansräkningen (Definition) (4)

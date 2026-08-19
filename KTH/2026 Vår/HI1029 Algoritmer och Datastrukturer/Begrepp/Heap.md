@@ -12,6 +12,7 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 En **Heap** är ett *komplett binärt träd* (alla nivåer fyllda utom sista, fylls från vänster) som uppfyller:
 - **Max-heap:** Föräldern $\ge$ barnen.
 - **Min-heap:** Föräldern $\le$ barnen.
@@ -19,6 +20,7 @@ En **Heap** är ett *komplett binärt träd* (alla nivåer fyllda utom sista, fy
 Detta gör att roten alltid innehåller det största (eller minsta) elementet.
 
 ## Tenta-fokus
+
 - **Implementation:** Heapar implementeras nästan alltid i en **array** trots att de är träd.
 	- Barn till index `i`: `2i + 1` och `2i + 2`.
 	- Förälder till index `i`: `(i - 1) / 2`.
@@ -28,9 +30,11 @@ Detta gör att roten alltid innehåller det största (eller minsta) elementet.
 - **Användning:** Basen för Heap-sort och [[Kö (Queue)]] (Prioritetsköer).
 
 ## Java-tips
+
 - Java-klassen `PriorityQueue` är en implementation av en Min-heap.
 
 ## Kopplat till
+
 - **Relaterat:** [[Binärt sökträd (BST)]] (båda är träd, men heapen har striktare form/lösare ordning).
 - **ADT:** [[Kö (Queue)]] (Prioritetskö).
 

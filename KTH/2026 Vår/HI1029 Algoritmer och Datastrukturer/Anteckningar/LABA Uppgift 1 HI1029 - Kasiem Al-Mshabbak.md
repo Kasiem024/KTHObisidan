@@ -10,7 +10,7 @@ description: "I denna rapport genomför vi en numerisk analys av en specifik alg
 
 I denna rapport genomför vi en numerisk analys av en specifik algoritm för att bestämma dess exakta komplexitetsfunktion $T(n)$ och dess tillväxttakt i form av $O(n)$. Den kod som analyseras består av fyra nästlade loopar där en enkel sats, `r++`, exekveras ett antal gånger beroende på indatastorleken $n$:
 
-```
+```text
 for(int i=1; i<=n; i++)
     for(int j=1; j<=i; j++)
         for(int k=j; k<=i+j; k++)
@@ -52,21 +52,21 @@ Vi körde programmet och registrerade antalet exekveringar $T(n)$ för $n$ mella
 I det första försöket anpassade vi polynom av grad 2, 3 och 4 till de första 20 mätvärdena. Vi fick följande resultat:
 
 - **Grad 2:**
-    
+
     $$T(n) \approx 78,8n^2 - 473n + 710$$
-    
+
     Residualerna var mycket stora, vilket visar att modellen inte stämmer.
-    
+
 - **Grad 3:**
-    
+
     $$T(n) \approx 5,21n^3 - 61,5n^2 + 252n - 280$$
-    
+
     Residualerna var fortfarande betydande.
-    
+
 - Grad 4:
-    
+
     När vi anpassade ett fjärdegradspolynom blev residualerna försumbara (i storleksordningen $10^{-12}$). Vi fick följande exakta polynom:
-    
+
     $$T(n) = \frac{1}{8}n^4 + \frac{5}{12}n^3 + \frac{3}{8}n^2 + \frac{1}{12}n$$
 
 I det andra försöket använde vi data upp till $n=40$. Koefficienterna förblev stabila, vilket bekräftade att grad 4 är korrekt.

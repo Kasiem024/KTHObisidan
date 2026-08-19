@@ -8,9 +8,10 @@ description: "Kursindex för CM1005 Extern Redovisning med föreläsningar, begr
 > [!info] Kursinformation
 > - **Kurskod:** CM1005
 > - **Termin:** 2024 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/CM1005
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/CM1005>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/CM1005 Extern Redovisning"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/CM1005 Extern Redovisning"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/CM1005 Extern Redovisning"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/CM1005 Extern Redovisning"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/CM1005 Extern Redovisning"

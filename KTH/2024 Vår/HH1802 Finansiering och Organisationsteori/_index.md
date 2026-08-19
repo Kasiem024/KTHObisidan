@@ -8,9 +8,10 @@ description: "Kursindex för HH1802 Finansiering och Organisationsteori med för
 > [!info] Kursinformation
 > - **Kurskod:** HH1802
 > - **Termin:** 2024 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HH1802
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HH1802>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori"

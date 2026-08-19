@@ -8,9 +8,10 @@ description: "Kursindex för HF1201 Hållbar Utveckling och Ergonomi med förel�
 > [!info] Kursinformation
 > - **Kurskod:** HF1201
 > - **Termin:** 2025 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HF1201
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HF1201>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HF1201 Hållbar Utveckling och Ergonomi"

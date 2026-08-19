@@ -39,6 +39,7 @@ Om försäljningspriset är högre än bokfört restvärde är det ==realisation
 - [[Anskaffningsvärde]]
 - [[Ekonomisk Livslängd]]
 - [[Nedskrivning]]
+
 ## Flashcards
 
 Avskrivning (Definition):: När man fördelar kostnaden av [[Tillgångar]] under dess [[Ekonomisk Livslängd]], dock är det enbart [[Anläggningstillgångar]] då de har en förväntad ekonomisk livslängd

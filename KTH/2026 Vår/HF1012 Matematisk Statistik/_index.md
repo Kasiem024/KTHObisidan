@@ -8,9 +8,10 @@ description: "Kursindex för HF1012 Matematisk Statistik med föreläsningar, be
 > [!info] Kursinformation
 > - **Kurskod:** HF1012
 > - **Termin:** 2026 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HF1012
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HF1012>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HF1012 Matematisk Statistik"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HF1012 Matematisk Statistik"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HF1012 Matematisk Statistik"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HF1012 Matematisk Statistik"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HF1012 Matematisk Statistik"

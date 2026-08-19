@@ -33,8 +33,6 @@ Vilken del av ett IPv4-paket skyddas av Header Checksum?:: Endast **IP-huvudet**
 Fragmentering (IP) (Definition);; Processen att dela upp ett IP-datagram i mindre delar om det är större än länkens **MTU**. Sker i routrar (IPv4) eller sändare.
 <!--SR:!2026-03-20,8,230!2026-03-15,9,250-->
 
-
-
 IPv4-huvud: Flags (3)
 ??
 - Reserverad (alltid 0)
@@ -305,8 +303,6 @@ IPv6 Anycast-adress(Definition);;En adress som tilldelas flera gränssnitt; ett 
 
 Vilka är de tre huvudstrategierna för samexistens mellan IPv4 och IPv6?(Definition)::Dual Stack, Tunneling och NAT64.
 <!--SR:!2026-03-13,7,217-->
-
-
 
 Vilka fält i en IPv4 header ändras alltid när ett paket passerar en router?(Definition)::Fälten Time To Live och Header Checksum ändras alltid.
 <!--SR:!2026-03-27,15,250-->

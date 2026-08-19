@@ -18,6 +18,7 @@ Alltså, en Obligation är ett lån. Den ger avkastning till långivaren genom r
 
 - [[Statsobligation]]
 - [[Diskonteringspapper]]
+
 ## Flashcards
 
 Obligation (Definition):: En typ av lån som ger avkastning till långivaren genom ränta under lånets löptid

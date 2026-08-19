@@ -11,6 +11,7 @@ description: "Detta är navet för alla centrala begrepp i kursen. Varje länk l
 Detta är navet för alla centrala begrepp i kursen. Varje länk leder till en fördjupad fil med "Tenta-fokus" och flashcards.
 
 ### Grundläggande Teorier
+
 - [[Tidskomplexitet (Big O)]] - Analysera effektivitet.
 - [[Abstrakt Datatyp (ADT)]] - Specifikation vs Implementation.
 - [[Rekursion]] - Basfall och anropsstack.
@@ -18,6 +19,7 @@ Detta är navet för alla centrala begrepp i kursen. Varje länk leder till en f
 - [[Binär sökning]] - Effektiv sökning i sorterad data.
 
 ### Datastrukturer (Linjära)
+
 - [[Array-lista]] - Dynamiska arrayer.
 - [[Länkad lista]] - Noder och pekare.
 - [[Iterator]] - Effektiv genomgång.
@@ -26,18 +28,21 @@ Detta är navet för alla centrala begrepp i kursen. Varje länk leder till en f
 - [[Hashtabell]] - $O(1)$ sökning.
 
 ### Träd & Grafer
+
 - [[Binärt sökträd (BST)]] - Sorterade träd.
 - [[Heap]] - Prioritetsköer.
 - [[Graf-representationer]] - Matriser och listor.
 - [[Minsta uppspännande träd (MST)]] - Prims och Kruskals.
 
 ### Sortering
+
 - [[Urvalssortering (Selection sort)]] - Få byten.
 - [[Instickssortering (Insertion sort)]] - Bäst för nästan sorterat.
 - [[Quicksort]] - Praktiskt snabbast.
 - [[Mergesort]] - Alltid stabil.
 
 ### Avancerade Strategier
+
 - [[Backtracking]] - Systematisk sökning.
 - [[Dynamisk Programmering]] - Memoization.
 

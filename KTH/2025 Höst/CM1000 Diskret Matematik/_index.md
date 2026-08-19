@@ -8,9 +8,10 @@ description: "Kursindex för CM1000 Diskret Matematik med föreläsningar, begre
 > [!info] Kursinformation
 > - **Kurskod:** CM1000
 > - **Termin:** 2025 Höst
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/CM1000
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/CM1000>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/CM1000 Diskret Matematik"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/CM1000 Diskret Matematik"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/CM1000 Diskret Matematik"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/CM1000 Diskret Matematik"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/CM1000 Diskret Matematik"

@@ -12,19 +12,23 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 **TCP (Transmission Control Protocol)** säkerställer att data kommer fram felfritt och i rätt ordning.
 
 ### Funktioner
+
 - **Handskakning:** SYN $\to$ SYN-ACK $\to$ ACK (Tre-vägs).
 - **Sekvensnummer:** Håller koll på ordningen och upptäcker förluster.
 - **Flödeskontroll:** Använder *Sliding Window* för att inte överbelasta mottagaren.
 - **Congestion Control:** Saktar ner sändningen om nätverket är segt.
 
 ## Tenta-fokus
+
 - **Flags:** Ha koll på SYN, ACK, FIN (avsluta) och RST (reset).
 - **Tillförlitlighet:** Om ett paket saknas bekräftas det inte, och sändaren gör en omsändning ([[ARQ-protokoll]]).
 
 ## Kopplat till
+
 - **Alternativ:** [[UDP]]
 - **Metod:** [[ARQ-protokoll]]
 

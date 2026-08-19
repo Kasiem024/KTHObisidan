@@ -12,6 +12,7 @@ updated: 2026-08-18
 ---
 
 ## Definition
+
 **HTTP (HyperText Transfer Protocol)** är applikationsprotokollet som webben bygger på. Det följer en **klient-server**-modell där klienten skickar en *request* och servern svarar med en *response*.
 
 - **Tillståndslöst (stateless):** Servern minns inget mellan två anrop. Tillstånd byggs istället med cookies, sessioner eller tokens.
@@ -19,6 +20,7 @@ updated: 2026-08-18
 - **HTTPS:** Samma protokoll men inkapslat i TLS, vilket ger kryptering och autentisering av servern.
 
 ### Vanliga metoder
+
 - **GET:** Hämta en resurs (ska inte ändra något).
 - **POST:** Skicka data till servern, t.ex. ett formulär.
 - **PUT:** Skapa eller ersätt en resurs.
@@ -26,6 +28,7 @@ updated: 2026-08-18
 - **HEAD:** Som GET men enbart headers, utan kropp.
 
 ### Statuskoder
+
 - **1xx:** Informativt.
 - **2xx:** Lyckades — `200 OK`.
 - **3xx:** Omdirigering — `301` (permanent), `304` (Not Modified, använd cache).
@@ -33,12 +36,14 @@ updated: 2026-08-18
 - **5xx:** Serverfel — `500 Internal Server Error`.
 
 ## Tenta-fokus
+
 - **Varför TCP och inte UDP?** Webbsidor måste komma fram kompletta och i rätt ordning; TCP ger både omsändning och ordning.
 - **Persistenta kopplingar:** HTTP/1.0 öppnade en ny TCP-koppling per objekt. HTTP/1.1 återanvänder kopplingen (*keep-alive*), vilket sparar en handskakning per objekt.
 - **Utveckling:** HTTP/2 multiplexar flera förfrågningar i samma koppling (binärt format). HTTP/3 byter transport till QUIC, som körs över UDP.
 - **Tillståndslöshet:** En vanlig fråga är *hur* en inloggning kan fungera trots att HTTP är tillståndslöst — svaret är cookies som skickas med i varje request.
 
 ## Kopplat till
+
 - **Transport:** [[TCP]]
 - **Ramverk:** [[OSI-modellen]]
 - **Namnuppslagning:** [[DNS]]

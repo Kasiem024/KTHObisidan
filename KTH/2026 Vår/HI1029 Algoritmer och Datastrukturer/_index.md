@@ -8,9 +8,10 @@ description: "Kursindex för HI1029 Algoritmer och Datastrukturer med föreläsn
 > [!info] Kursinformation
 > - **Kurskod:** HI1029
 > - **Termin:** 2026 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HI1029
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HI1029>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer"

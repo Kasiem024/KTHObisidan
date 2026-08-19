@@ -21,6 +21,7 @@ Det finns 3 Värdeskapande Processer:
 - [[Produktion]]
 - [[Produktutveckling]]
 - [[Marknadsföring]]
+
 ## Flashcards
 
 Värdeskapande Processerna (3)

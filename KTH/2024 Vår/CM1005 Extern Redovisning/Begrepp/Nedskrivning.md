@@ -20,6 +20,7 @@ Nedskrivning är en [[Avskrivning]] av ==engångskaraktär==, alltså en avskriv
 - [[Anläggningstillgångar]]
 - [[Avskrivning]]
 - [[Resultaträkning]]
+
 ## Flashcards
 
 Nedskrivning (Definition):: Om [[Anläggningstillgångar]] på balansdagen har ett värde som understiger anskaffningsvärdet minus gjorda planenliga avskrivningar ska tillgången skrivas ned till detta lägre värde, om det kan antas att värdenedgången är ==bestående==. Det är en avskrivning av ==engångskaraktär==, den upprepas inte

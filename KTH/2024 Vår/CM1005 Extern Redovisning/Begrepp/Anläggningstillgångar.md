@@ -46,6 +46,7 @@ Nedskrivning är en [[Avskrivning]] av ==engångskaraktär==, alltså en avskriv
 - [[Nedskrivning]]
 - [[Förbrukningsinventarier]]
 - [[Resultaträkning]]
+
 ## Flashcards
 
 Anläggningstillgångar (Definition):: Tillgångar som ett företag avser att stadigvarande inneha eller använda så som fastigheter och maskiner

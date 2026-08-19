@@ -12,6 +12,7 @@ updated: 2026-05-28
 ---
 
 ## Definition
+
 **ARQ (Automatic Repeat Request)** är metoder för att hantera paketförluster genom omsändning.
 
 1. **Stop-and-Wait:** Skicka ett paket, vänta på ACK. Lågt utnyttjande av bandbredd.
@@ -19,10 +20,12 @@ updated: 2026-05-28
 3. **Selective Repeat:** Skicka flera paket. Endast det specifika paket som gick förlorat skickas om. Fönster: $2^{k-1}$.
 
 ## Tenta-fokus
+
 - **Fönsterberäkning:** Ofta frågor om maximal fönsterstorlek givet $k$ sekvensnummer-bitar.
 - **Komponenter:** Sekvensnummer (för ordning), ACK (bekräftelse), Timeout (när ska vi skicka om?).
 
 ## Kopplat till
+
 - **Protokoll:** [[TCP]]
 - **Koncept:** [[Sliding Window]]
 

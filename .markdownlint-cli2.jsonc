@@ -1,0 +1,38 @@
+// markdownlint-cli2 scope. Rules live in .markdownlint.json; this file only says
+// WHICH files to lint. Run from the vault root with:
+//
+//   npx markdownlint-cli2 "**/*.md"          (report)
+//   npx markdownlint-cli2 --fix "**/*.md"    (apply fixable rules)
+//
+// Note: markdownlint-cli2 does NOT read .markdownlintignore - that is cli v1 only.
+// Ignores must be declared here or they are silently inert, which linted 536 files
+// instead of 500 and inflated the violation count from 804 to 1673.
+{
+  "ignores": [
+    // Plugin state, trash, agent context, tooling.
+    ".obsidian/**",
+    ".trash/**",
+    ".kiro/**",
+    "**/node_modules/**",
+
+    // Attachments. Excalidraw notes are generated JSON wrapped in Markdown - each holds
+    // thousands of violations and rewriting one would corrupt the drawing. Verified
+    // 2026-08-19 that Filer/ contains only Excalidraw (18) and Litteraturlista (7)
+    // files, no authored notes. The folder is ignored rather than just the extension
+    // because some Excalidraw notes are identified only by tag, not by filename -
+    // e.g. "CM1008 Lean Canvas Grupp 10.md".
+    "**/Filer/**",
+    "**/*.excalidraw.md",
+
+    // Copyrighted course literature and its conversion tooling. Out of scope (F10).
+    "**/Litteraturlista/**",
+
+    // Templater templates are not valid Markdown until rendered: a <% %> expression can
+    // sit inside a URL or a link, so the linter reads code as broken syntax. Every MD011
+    // "reversed link" hit was really tp.file.folder(true).split('/')[1], and MD034's
+    // auto-fix split a Templater expression out of a URL, which would have generated a
+    // broken KTH course link in every new course index. Excluding the folder is what
+    // allows MD011 to stay ENABLED for real notes.
+    "Meta/Obsidian Plugins/Templates/**"
+  ]
+}

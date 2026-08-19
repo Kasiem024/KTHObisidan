@@ -14,6 +14,7 @@ Lagfart får man genom registrering av fastighetsköp hos inskrivningsmyndighete
 ## Kopplat till
 
 - [[Fastighetsbevis]]
+
 ## Flashcards
 
 Lagfart (Definition):: Något man får genom registrering av fastighetsköp hos Lantmäteriet, ett bevis på att man äger fastigheten

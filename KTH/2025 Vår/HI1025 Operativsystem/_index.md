@@ -8,9 +8,10 @@ description: "Kursindex för HI1025 Operativsystem med föreläsningar, begrepp,
 > [!info] Kursinformation
 > - **Kurskod:** HI1025
 > - **Termin:** 2025 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HI1025
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HI1025>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HI1025 Operativsystem"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HI1025 Operativsystem"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HI1025 Operativsystem"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HI1025 Operativsystem"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2025 Vår/HI1025 Operativsystem"

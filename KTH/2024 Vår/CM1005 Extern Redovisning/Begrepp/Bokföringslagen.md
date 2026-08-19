@@ -27,6 +27,7 @@ En del av BFL är Bokföringsskyldighet som innebär att bokföring ska ske av a
 - [[Ideell Förening]]
 - [[Affärshändelse]]
 - [[Grundbok]]
+
 ## Flashcards
 
 Bokföringslagen (Definition):: En lag som reglerar hur bokföring för en verksamhet ska upprättas och vilka som är bokföringsskyldiga

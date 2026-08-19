@@ -8,9 +8,10 @@ description: "Kursindex för HI1027 Objektorienterad Programmering med föreläs
 > [!info] Kursinformation
 > - **Kurskod:** HI1027
 > - **Termin:** 2025 Höst
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HI1027
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HI1027>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1027 Objektorienterad Programmering"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1027 Objektorienterad Programmering"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1027 Objektorienterad Programmering"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1027 Objektorienterad Programmering"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2025 Höst/HI1027 Objektorienterad Programmering"

@@ -8,9 +8,10 @@ description: "Kursindex för HF1005 Informationsteknik och ingenjörsmetodik med
 > [!info] Kursinformation
 > - **Kurskod:** HF1005
 > - **Termin:** 2024 Höst
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HF1005
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HF1005>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HF1005 Informationsteknik och ingenjörsmetodik"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HF1005 Informationsteknik och ingenjörsmetodik"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HF1005 Informationsteknik och ingenjörsmetodik"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HF1005 Informationsteknik och ingenjörsmetodik"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2024 Höst/HF1005 Informationsteknik och ingenjörsmetodik"

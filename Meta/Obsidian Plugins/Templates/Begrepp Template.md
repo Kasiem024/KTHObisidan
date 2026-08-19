@@ -12,4 +12,4 @@ updated: <% tp.date.now("YYYY-MM-DD") %>
 
 ## Flashcards
 
-<% tp.file.title %> (Definition):: 
+<% tp.file.title %> (Definition)::

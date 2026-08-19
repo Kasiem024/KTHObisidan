@@ -8,9 +8,10 @@ description: "Kursindex för HU1801 Industriell Marknadsföring med föreläsnin
 > [!info] Kursinformation
 > - **Kurskod:** HU1801
 > - **Termin:** 2024 Vår
-> - **KTH kursplan:** https://www.kth.se/student/kurser/kurs/HU1801
+> - **KTH kursplan:** <https://www.kth.se/student/kurser/kurs/HU1801>
 
 ## 📅 Föreläsningar & Lektioner
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HU1801 Industriell Marknadsföring"
@@ -19,6 +20,7 @@ SORT file.name ASC
 ```
 
 ## 🧠 Begrepp
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HU1801 Industriell Marknadsföring"
@@ -27,6 +29,7 @@ SORT file.name ASC
 ```
 
 ## 📝 Anteckningar, studieguider & tenta
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HU1801 Industriell Marknadsföring"
@@ -35,6 +38,7 @@ SORT file.name ASC
 ```
 
 ## 🧪 Labb, projekt & övningar
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HU1801 Industriell Marknadsföring"
@@ -43,6 +47,7 @@ SORT file.name ASC
 ```
 
 ## 🗂️ Alla anteckningar i kursen
+
 ```dataview
 LIST
 FROM "KTH/2024 Vår/HU1801 Industriell Marknadsföring"

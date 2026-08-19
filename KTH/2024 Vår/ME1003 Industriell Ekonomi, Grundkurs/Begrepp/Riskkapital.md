@@ -20,6 +20,7 @@ Efterställda räntebärande skulder är sådana skulder som har låg prioritet.
 
 - [[Eget Kapital]]
 - [[Obeskattade Reserver]]
+
 ## Flashcards
 
 Riskkapital (Definition) (3)

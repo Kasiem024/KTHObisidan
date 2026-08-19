@@ -29,6 +29,7 @@ Genomsnittlig Kapitalbindning per Enhet är den genomsnittliga tiden som en enhe
 - [[Varulager]]
 - [[Omsättningstillgångar]]
 - [[Skuld]]
+
 ## Flashcards
 
 Rörelsekapital (Definition):: Värdet av alla [[Omsättningstillgångar]] minus värdet av kortfristig [[Skuld]], alltså beror storleken på den löpande verksamheten

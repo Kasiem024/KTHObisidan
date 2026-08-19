@@ -24,6 +24,7 @@ Finansiell Leasing är när den som hyr in maskinen ansvarar för maskinens serv
 - [[Likviditet]]
 - [[Finansiering Utanför Balansräkningen]]
 - [[Sale and Leaseback]]
+
 ## Flashcards
 
 Leasing (Definition);; Ett annat ord för hyra, utgår på att inte köpa en maskin men hyra den vilket leder till ett **flertal små utbetalningar över en längre period.** Detta gör man för att undvika en stor utbetalning vid anskaffningstillfället, vilket **förbättrar företagets likviditet**
