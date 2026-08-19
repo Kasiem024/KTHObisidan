@@ -17,6 +17,14 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🔌 2026-08-19 (11) — PLUGIN REVIEW (F46 done)
+Enumerated the entire Quartz plugin ecosystem from the npm registry: 53 packages carry the
+`quartz-plugin` keyword, 50 of them official, and only **2** third-party packages exist at
+all. 49 of the scope's 52 are already installed, so there is nothing meaningful left to add.
+Nothing installed or enabled, by the owner's decision — including `stacked-pages`, which was
+the one genuine candidate. Also corrected the provenance of the "860 themes" figure and
+retired a wrong assumption that the course index pages were dead ends. Nothing open.
+
 ### 📚 2026-08-19 (10) — DOCS + ENFORCEMENT (F43, F44, F45 done)
 The templates were contradicting the Standard: `Begrepp Template.md` used `**Flashcards:**`
 as a bold label, so every **new** concept note would have published its cards as raw `::`
@@ -927,6 +935,44 @@ first version of the checker missed, since it only looked for three dots).
   serialised-`sortFn` constraint, the registry override path, all five card forms, the
   deliberate exclusions, which plugins are off and why, and the two `custom.scss` rules.
   Previously this knowledge existed only in this backlog and in commit messages.
+
+### F46. ✅ DONE (2026-08-19) — Quartz plugin ecosystem reviewed; nothing added, by decision
+
+The whole ecosystem was enumerated from the npm registry rather than guessed, so this does
+not need re-researching. **It is small and the site already covers essentially all of it:**
+53 packages carry the `quartz-plugin` keyword (stable at higher search limits, so a real
+total) — 50 in `@quartz-community`, of which **49 of the scope's 52 are installed**, plus
+exactly **2** third-party packages in the entire ecosystem.
+
+Nothing was installed or enabled. The reasoning is recorded in
+`PROJECT-NOTES.md` in the Quartz repo, in short:
+
+- **Three official packages are missing and should stay missing** — `obsidian-plugin-leaflet`
+  (no maps in the vault), `obsidian-plugin-ttrpg-tools-maps` (tabletop RPG), and `runtime`
+  (a library for plugin authors, not a feature).
+- **Both third-party packages were rejected.** `quartz-plugin-pseudo` renders pseudocode with
+  KaTeX and looked plausible for `HI1029 Algoritmer och Datastrukturer`, but the vault has
+  **zero** pseudocode blocks. `quartz-navbar` is v0.1.0 from a single maintainer outside the
+  official scope, and the sidebar already handles navigation.
+- **`stacked-pages` was the one real candidate** — binder-style side-by-side pages, a good fit
+  now that 297 notes have a `Kopplat till` section. **The owner decided against enabling it.**
+- **Several enabled plugins are inert** because the content does not use them: `canvas-page`,
+  `bases-page`, `alias-redirects` and the `mermaid` / `enableYouTubeEmbed` /
+  `parseBlockReferences` options (measured: mermaid 0, `.canvas` 0, `.base` 0, footnotes 0,
+  block refs 0, YouTube 0, aliases 0). **The owner chose to leave them on**, so this is noted
+  to prevent the inertness being mistaken for a misconfiguration later.
+
+Two corrections came out of the review:
+
+1. **The "860 themes" figure needed provenance.** It comes from the `saberzero1/quartz-themes`
+   repo table, not from npm — `npm search keywords:quartz-theme` returns exactly 250 results at
+   *any* `--searchlimit`, because the registry search endpoint caps there. Recorded so the two
+   numbers are not treated as contradictory.
+2. **An earlier assumption about course index pages was wrong.** Their bodies are entirely
+   Dataview, which the site hides, so they looked like dead ends. In fact `folder-page` emits
+   its own listing alongside: the CM1005 `Begrepp` page carries 718 internal links covering all
+   112 concepts. The Dataview blocks are redundant on the web, not lost content — **nothing to
+   fix.**
 
 ---
 

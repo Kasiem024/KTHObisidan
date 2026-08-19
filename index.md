@@ -38,5 +38,9 @@ Anteckningarna skrivs i [Obsidian](https://obsidian.md) och publiceras med
 [Quartz](https://quartz.jzhao.xyz). Konventionerna för taggar, mappstruktur och
 filnamn finns i `Meta/Vault Standard.md` i vaultet.
 
-Flashcards och repetitionsdata används aktivt i Obsidian men visas inte här, för
-att hålla sidorna läsbara.
+**Flashcards** finns med på sidorna som ihopfällda frågekort — klicka på en fråga för
+att fälla ut svaret. Själva repetitionsschemat ligger kvar i Obsidian och visas inte
+här.
+
+Kurslitteratur (PDF:er) publiceras **inte** av upphovsrättsliga skäl. Länkar till
+sådana filer fungerar därför bara i Obsidian, inte på den här sidan.
