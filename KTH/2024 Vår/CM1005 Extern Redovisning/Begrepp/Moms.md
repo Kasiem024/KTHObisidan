@@ -42,7 +42,7 @@ Alltså för detta exempel blir momsen som företaget betalar till staten:
 
 Destinationsprincipen säger att [[Moms]] är en beskattning av konsumtion, alltså momsen tillfaller staten i det land där varan konsumeras, vart konsumenten är.
 
-![[Destinationsprincipen CM1005.png]]
+![[Destinationsprincipen CM1005.png|Destinationsprincipen]]
 
 Möbelaffären C har ingen ingående moms för att Möbelfabrikant B är i ett annat land. Alltså, C betalar 500 i moms till staten.
 

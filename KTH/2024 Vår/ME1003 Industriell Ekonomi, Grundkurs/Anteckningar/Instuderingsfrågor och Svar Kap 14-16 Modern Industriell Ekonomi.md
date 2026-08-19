@@ -33,7 +33,7 @@ Man kan säga att en [[Affärsidé]] är ett övergripande och långsiktigt syft
 
 Michael Porters generiska affärsstrategier bygger på idén att det endast finns två sätt att bli bättre än sina konkurrenter, antingen genom att ha låga kostnader eller genom att erbjuda differentierade produkter.
 
-![[Michael Porters Generiska Affärsstrategier ME1003.png]]
+![[Michael Porters Generiska Affärsstrategier ME1003.png|Michael Porters Generiska Affärsstrategier]]
 
 6. Beskriv följande konkurrenskrafter baserade på Porters och Ansoffs typstrategier:
 
@@ -58,7 +58,7 @@ När man har ett resursbaserat synsätt på strategi innebär det att man långs
 
 Strategiprocessen enligt Philip Kotler börjar med att utveckla affärsidén och en analys av företaget samt omvärlden. Därefter ska ett mål och en strategi för hur man ska uppnå målet formuleras. Denna strategi ska sedan bli en konkret handlingsplan som genomförs och eventuellt utvärderas.
 
-![[Strategiprocessen enligt Philip Kotler ME1003.png]]
+![[Strategiprocessen enligt Philip Kotler ME1003.png|Strategiprocessen enligt Philip Kotler]]
 
 10. Vad menas med funktionella strategier?
 
@@ -74,7 +74,7 @@ Enligt Mintzberg ska man ha ett flertal olika planerade strategier. Om inget spe
 
 Alltså handlar strategiprocessen enligt Mintzberg om att man ska börja med ett flertal olika strategier men att man inte ska vara rädd att eliminera de eller att ta fram nya så att man kan skapa en bättre realiserad strategi.
 
-![[Strategiprocessen enligt Mintzberg ME1003.png]]
+![[Strategiprocessen enligt Mintzberg ME1003.png|Strategiprocessen enligt Mintzberg]]
 
 12. Vad är en SWOT-analys?
 
@@ -89,13 +89,13 @@ En [[SWOT-Analys]] är en metod för att analysera ett företag internt och exte
 
 Bostonmatrisen handlar om hur stor andel av marknaden som vill ha en viss produkt och hur mycket utrymme den produkten har att växa. Om båda är höga för en viss produkt kallar man den för en stjärna, då ska man investera i den. Medan om båda är låga kallas den för byracka, då ska man döda produkten.
 
-![[Bostonmatrisen ME1003.png]]
+![[Bostonmatrisen ME1003.png|Bostonmatrisen]]
 
 14. Redogör för GE-McKinsey-matrisen som en portföljanalys.
 
 GE-McKinsey-matrisen liknar Bostonmatrisen då båda har med en produkts marknadsandel och potential att växa. Skillnaden är att McKinsey matrisen är mer detaljerad.
 
-![[GE-McKinsey-Matrisen ME1003.png]]
+![[GE-McKinsey-Matrisen ME1003.png|GE-McKinsey-Matrisen]]
 
 15. Varför är det viktigt med omvärldsanalyser inom ett företag?
 
@@ -111,17 +111,17 @@ Michael Porters Femkraftsmodell är ett sätt att analysera de konkurrenskrafter
 - ==Nya aktörer==: Potentiella konkurrenter.
 - ==Substitut==: Nya tekniska lösningar som kan förändra hela marknaden.
 
-![[Michael Porters Femkraftsmodell ME1003.png]]
+![[Michael Porters Femkraftsmodell ME1003.png|Michael Porters Femkraftsmodell]]
 
 17. Beskriv intressentmodellen och makt/intresse-matrisen baserad på intressentmodellen.
 
 [[Intressentmodellen]] är en grafisk beskrivning av vilka projektets intressenter är och vilka intressen de har i förhållande till projektet, alltså vad de förväntar sig att få ut av det.
 
-![[Intressentmodellen ME1003.png]]
+![[Intressentmodellen ME1003.png|Intressentmodellen]]
 
 Beroende på hur mycket makt en viss intressent har över företaget och hur intresserad den är kan man kategorisera den i en makt/intresse-matris.
 
-![[Makt och Intresse Matrisen ME1003.png]]
+![[Makt och Intresse Matrisen ME1003.png|Makt och Intresse Matrisen]]
 
 18. Redogör för och ge exempel på de olika faktorerna i en PESTLE-analys.
 
@@ -134,7 +134,7 @@ En [[PESTLE-Analys]] är en analys som fokuserar på omvärlden runt ett företa
 - ==Legal factors==: Konsumentlagstiftning, Arbetsgivaransvar för säkerhet och hälsa, Arbetsmarknadslagar, Handelshinder.
 - ==Environmental factors==: Klimatförändringar, Utsläppsregler, Lokala miljöeffekter, Miljöavgifter.
 
-![[PESTLE-Analys ME1003.png]]
+![[PESTLE-Analys ME1003.png|PESTLE-Analys]]
 
 19. Beskriv arbetsgången vid användning av scenarioteknik som analysmetod.
 
@@ -169,7 +169,7 @@ Ett exempel på när Nestlé använde sig av denna strategimodell vid skapandet 
 - ==Intäktsflöden==: Försäljning av kaffekapslar.
 - ==Kundsegment==: Espresso älskare.
 
-![[Affärsmodellkanvas ME1003.png]]
+![[Affärsmodellkanvas ME1003.png|Affärsmodellkanvas]]
 
 21. Ge exempel på problem som kan uppkomma i strategiarbetet i ett företag.
 
@@ -273,13 +273,13 @@ När en arbetare får en känsla av utanförskap och meningslöshet i förhålla
 
 Maslows behovspyramid bygger på tanken att det finns ett antal motivationsteorier som säger att människors handlingar styrs av motivet att tillfredsställa vissa behov. Enligt Maslow är vissa behov viktigare än andra och att dessa behov bygger på varandra som en pyramid. Att endast när ett behov längre ner i pyramiden är uppnått kan vi börja tänka på nästa.
 
-![[Maslow's Hierarchy Of Needs ME1003.png]]
+![[Maslow's Hierarchy Of Needs ME1003.png|Maslow's Hierarchy Of Needs]]
 
 16. Redogör för Herzbergs tvåfaktorsteori. Ge tre exempel på varje faktor.
 
 Enligt Herzbergs tvåfaktorsteori finns det endast hygienfaktorer och motivationsfaktorer. ==Hygienfaktorer== är sådana som är nödvändiga för att man ska överhuvudtaget trivas vid sin arbetsplats, exempelvis: lön, arbetsmiljö och personalpolitik. Även om alla dessa faktorer är uppfyllda betyder det inte nödvändigtvis att man är motiverad till att jobba. Endast när ==motivationsfaktorerna== är uppfyllda kommer en arbetare göra ett bra jobb, exempel på det är intressant arbetsinnehåll, professionellt erkännande och möjligheter till utveckling.
 
-![[Herzbergs Tvåfaktorsteori ME1003.png]]
+![[Herzbergs Tvåfaktorsteori ME1003.png|Herzbergs Tvåfaktorsteori]]
 
 17. Redogör för och exemplifiera krav-kontrollmodellen.
 

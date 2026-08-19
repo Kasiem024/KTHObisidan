@@ -23,7 +23,7 @@ Aktiebolaget är ett eget skattesubjekt. Det betalar sin egna skatt.
 
 ==Börskurs== är hur mycket varje aktie är värd på börsen just nu.
 
-![[Aktiebolag Karta CM1005.png]]
+![[Aktiebolag Karta CM1005.png|Aktiebolag Karta]]
 
 Skatt för Aktiebolag är 20.6%.
 

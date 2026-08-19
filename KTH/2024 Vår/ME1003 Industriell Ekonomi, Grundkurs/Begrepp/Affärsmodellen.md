@@ -20,7 +20,7 @@ Man kan dela in affärsmodellen i tre delar
 
 Ordet "värde" i detta sammanhang är värde för kunden.
 
-![[Affärsmodellen ME1003.png]]
+![[Affärsmodellen ME1003.png|Affärsmodellen]]
 [Affärsmodell, Visma](https://vismaspcs.se/ditt-foretagande/starta-eget-foretag/formulera-din-affarside)
 
 ## Kopplat till
@@ -30,7 +30,7 @@ Ordet "värde" i detta sammanhang är värde för kunden.
 - [[Värdefångsten]]
 ## Flashcards
 
-Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera ![[Affärsmodellen ME1003.png]]
+Affärsmodell (Definition):: Ett recept för hur intäkter kommer in till företaget. Hur varor och tjänster produceras samt hur kunden får tillgång till de. En beskrivning av hur verksamheten är tänkt att fungera ![[Affärsmodellen ME1003.png|Affärsmodellen]]
 <!--SR:!2024-03-02,15,232!2024-03-09,4,270-->
 
 Delarna av en affärsmodell (3)

@@ -23,7 +23,7 @@ När man använder T-Konton ska man också följa [[Dubbel Bokföring|Dubbel Bok
 
 [[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=37&selection=72,0,72,27|Löpande bokföring på konton]]
 
-![[Kontoplan CM1005.png]]
+![[Kontoplan CM1005.png|Kontoplan]]
 
 ## Flashcards
 

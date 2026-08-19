@@ -17,7 +17,7 @@ En PESTLE-Analys är en analys som fokuserar på omvärlden runt ett företag. D
 - ==Legal factors==: Konsumentlagstiftning, Arbetsgivaransvar för säkerhet och hälsa, Arbetsmarknadslagar, Handelshinder.
 - ==Environmental factors==: Klimatförändringar, Utsläppsregler, Lokala miljöeffekter, Miljöavgifter.
 
-![[PESTLE-Analys ME1003.png]]
+![[PESTLE-Analys ME1003.png|PESTLE-Analys]]
 
 ## Kopplat till
 

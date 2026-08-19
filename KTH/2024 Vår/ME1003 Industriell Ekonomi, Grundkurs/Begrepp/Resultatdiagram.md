@@ -10,7 +10,7 @@ updated: 2026-05-26
 
 Ett Resultatdiagram visar relationen mellan intäkterna och volymen. Den innehåller en linje för [[Fast Kostnad]], en linje som visar [[Total Kostnad]], alltså summan av fasta och rörliga kostnader, och en linje för [[Total Intäkt]]. Man kan använda det till att bättre förstå sina kostnader och hur man borde prissätta sina produkter.
 
-![[Resultatdiagram ME1003.png]]
+![[Resultatdiagram ME1003.png|Resultatdiagram]]
 
 ### Kritiska punkten
 
@@ -57,7 +57,7 @@ $$
 
 Resultatdiagram (Definition):: Ett diagram som visar ==relationen== mellan ==intäkterna== och ==verksamhetsvolymen==, innehåller en linje för [[Fast Kostnad]], [[Total Kostnad]] och [[Total Intäkt]]
 <!--SR:!2024-02-25,9,256-->
-![[Resultatdiagram ME1003.png]]
+![[Resultatdiagram ME1003.png|Resultatdiagram]]
 
 Kritiska Punkten i ett Resultatdiagram (Definition):: Punkten där de totala intäkterna precis räcker för att täcka de totala kostnaderna i ett Resultatdiagram, [[Total Intäkt]] = [[Total Kostnad]]
 <!--SR:!2024-03-04,14,296-->

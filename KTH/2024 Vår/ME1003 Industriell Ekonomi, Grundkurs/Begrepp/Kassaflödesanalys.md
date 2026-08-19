@@ -16,7 +16,7 @@ Utifrån kassaflödet går det att få fram information som inte alltid kan utl�
 
 Summan från kassaflöde kallas saldo. Det är dina likvida medel, pengar på bankkontot i slutet av perioden.
 
-![[Kassaflödesanalys enligt FAR ME1003.png]]
+![[Kassaflödesanalys enligt FAR ME1003.png|Kassaflödesanalys enligt FAR]]
 
 ### Årets Kassaflöde
 

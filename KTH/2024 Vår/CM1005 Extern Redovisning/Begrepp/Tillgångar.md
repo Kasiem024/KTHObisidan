@@ -17,7 +17,7 @@ Tillgångar värderas med hänsyn till ==inköpsmarknaden== eller ==försäljnin
 
 En tillgång har 4 olika värden beroende på tid och om man ska köpa eller sälja den.
 
-![[Tillgångars Värde CM1005.png]]
+![[Tillgångars Värde CM1005.png|Tillgångars Värde]]
 
 ### [[Anläggningstillgångar]]
 
@@ -63,5 +63,5 @@ Sätt att värdera en Tillgång (4)
 - Återanskaffningsvärde - Idag
 - Försäljningsvärde - Idag
 - Försäljningsvärde - Imorgon
-![[Tillgångars Värde CM1005.png]]
+![[Tillgångars Värde CM1005.png|Tillgångars Värde]]
 <!--SR:!2024-03-22,17,290!2024-03-15,10,270-->

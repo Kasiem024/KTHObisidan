@@ -20,7 +20,7 @@ Om man följer "Make to Stock" har man kort leveranstid då produkten är redan 
 
 Om man följer "Engineer to Order" är leveranstiden lång då ingen del av produkten är färdig och måste göras efter kundens behov.
 
-![[Kundorderpunkten ME1003.png]]
+![[Kundorderpunkten ME1003.png|Kundorderpunkten]]
 
 ### Skillnaden mellan produktion mot lager och produktion mot kundorder
 

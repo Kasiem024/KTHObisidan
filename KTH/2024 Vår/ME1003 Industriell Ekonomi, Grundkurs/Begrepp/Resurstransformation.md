@@ -13,18 +13,18 @@ Handlar om hur man transformerar en viss typ av resurs så som råvaror till en 
 ### Enkel
 
 Resurstransformation som utgångspunkt. Enkel resurstransformation.
-![[Resurstransformation Utgångspunkt ME1003.png]]
+![[Resurstransformation Utgångspunkt ME1003.png|Resurstransformation Utgångspunkt]]
 
 ### Marknadsplattform
 
 Resurstransformation som marknadsplattform:
 Google levererar en tjänst till kunden och samtidigt ger kunden information om sig själv till Google som de säljer till andra företag. Därför finns input och output åt båda hållen.
-![[Resurstransformation Marknadsplattform ME1003.png]]
+![[Resurstransformation Marknadsplattform ME1003.png|Resurstransformation Marknadsplattform]]
 
 ### Cirkulär Ekonomi
 
 Cirkulär ekonomi är ett perspektiv som syftar till att ==öka samhällets ekologiska hållbarhet==. Man kan uppnå detta genom att hela tiden försöka se produkten som en råvara som fortfarande kan genom gå värdeskapande processen. Praktiskt betyder det att man ska ==utveckla produkter== som går att ==återanvändas== eller ==återvinnas==.
-![[Resurstransformation Cirkel ME1003.png]]
+![[Resurstransformation Cirkel ME1003.png|Resurstransformation Cirkel]]
 
 ### [[4V]]
 

@@ -10,7 +10,7 @@ updated: 2026-05-26
 
 Enligt Herzbergs Tvåfaktorsteori finns det endast hygienfaktorer och motivationsfaktorer. ==Hygienfaktorer== är sådana som är nödvändiga för att man ska överhuvudtaget trivas vid sin arbetsplats, exempelvis: lön, arbetsmiljö och personalpolitik. Även om alla dessa faktorer är uppfyllda betyder det inte nödvändigtvis att man är motiverad till att jobba. Endast när ==motivationsfaktorerna== är uppfyllda kommer en arbetare göra ett bra jobb, exempel på det är intressant arbetsinnehåll, professionellt erkännande och möjligheter till utveckling.
 
-![[Herzbergs Tvåfaktorsteori ME1003.png]]
+![[Herzbergs Tvåfaktorsteori ME1003.png|Herzbergs Tvåfaktorsteori]]
 
 ## Kopplat till
 

@@ -12,7 +12,7 @@ Det finns flera stadier inom en produkts livscykel. I vilken stadie man är bero
 
 Introduktion --> Tillväxt --> Mognad --> Nedgång
 
-![[Produktlivscykeln ME1003.png]]
+![[Produktlivscykeln ME1003.png|Produktlivscykeln]]
 
 Man börjar med ==introduktionen== av produkten när den först ==lanseras== och marknadsandelen fortfarande är liten. Sedan börjar ==tillväxt== fasen där försäljningsvolym börjar stadigt öka som leder in till ==mognads== fasen där produkten kommer nå sin ==maximala försäljningsvolym==. Eventuellt börjar ==nedgångs== fasen där försäljningen minskar.
 

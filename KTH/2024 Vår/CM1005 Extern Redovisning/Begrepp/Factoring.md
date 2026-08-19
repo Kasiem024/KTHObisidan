@@ -15,7 +15,7 @@ Factoring utgår på att ett företag inte har tillräckligt med [[Likviditet]] 
 
 Factoring är en finansiell tjänst som utförs oftast av företag. Eftersom det är en finansiell tjänst regleras sådana företag av ==Finansinspektionen==.
 
-![[Factoring CM1005.png]]
+![[Factoring CM1005.png|Factoring]]
 
 ### Exempel
 

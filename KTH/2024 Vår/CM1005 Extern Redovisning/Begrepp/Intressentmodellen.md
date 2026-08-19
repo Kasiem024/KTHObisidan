@@ -23,9 +23,9 @@ Ett företag har intressenter. Intressenter är grupper eller personer som påve
 - ==Myndigheter==: Skatt. Sjukvård, lokaltrafik,
 - ==Ledningen==: Har mer av en risk
 
-![[Intressentmodellen CM1005.jpg]]
+![[Intressentmodellen CM1005.jpg|Intressentmodellen]]
 
-![[Intressenter CM1005.png]]
+![[Intressenter CM1005.png|Intressenter]]
 
 ## Flashcards
 

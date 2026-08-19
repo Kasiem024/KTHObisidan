@@ -29,23 +29,23 @@ Kostnader som är oberoende av verksamhetsvolym, alltså beror den inte på voly
 ==Proportionellt== rörliga kostnader:
 När kostnaden per styck är alltid samma och den totala kostnaden ökar ständigt i en rak linje.
 
-![[Proportionellt Rörliga Kostnader ME1003.png]]
+![[Proportionellt Rörliga Kostnader ME1003.png|Proportionellt Rörliga Kostnader]]
 
 ==Progressivt== rörliga kostnader:
 När styckkostnaden ökar för varje tillverkad produkt. Alltså dyrt om volymen är hög men billig med låg volym. Kan hända om personalen behöver jobba övertid.
 
-![[Progressivt Rörliga Kostnader ME1003.png]]
+![[Progressivt Rörliga Kostnader ME1003.png|Progressivt Rörliga Kostnader]]
 
 ==Regressivt== rörliga kostnader:
 När styckkostnaden minskar för varje tillverkad produkt. Alltså dyrt om volymen är hög men billig med hög volym. Kan hända om man får en rabatt från leverantören för att köpa råmaterial i bulk.
 
-![[Regressivt Rörliga Kostnader ME1003.png]]
+![[Regressivt Rörliga Kostnader ME1003.png|Regressivt Rörliga Kostnader]]
 
 ### [[Halvfast Kostnad]]
 
 Kostnader som är opåverkade av verksamhetsvolymen upp till en viss nivå. När den nivå av verksamhetsvolym uppnås hoppar den fasta kostnaden upp och är återigen opåverkad av verksamhetsvolymen. Exempelvis kan det vara en utbyggnad av tillverkningslokalerna som gör att den halvfasta kostnaden hoppar upp.
 
-![[Halvfasta Kostnader ME1003.png]]
+![[Halvfasta Kostnader ME1003.png|Halvfasta Kostnader]]
 
 ### [[Total Kostnad]]
 

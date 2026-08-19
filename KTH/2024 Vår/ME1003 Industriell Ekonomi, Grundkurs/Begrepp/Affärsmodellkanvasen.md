@@ -24,7 +24,7 @@ Ett exempel på när Nestlé använde sig av denna strategimodell vid skapandet 
 - ==Intäktsflöden==: Försäljning av kaffekapslar.
 - ==Kundsegment==: Espresso älskare.
 
-![[Affärsmodellkanvas ME1003.png]]
+![[Affärsmodellkanvas ME1003.png|Affärsmodellkanvas]]
 
 ## Kopplat till
 
@@ -45,5 +45,5 @@ Affärsmodellkanvasen (9)
 - ==Kostnadsstruktur==: Tillverkning, marknadsföring, distribution.
 - ==Intäktsflöden==: Försäljning av kaffekapslar.
 - ==Kundsegment==: Espresso älskare.
-![[Affärsmodellkanvas ME1003.png]]
+![[Affärsmodellkanvas ME1003.png|Affärsmodellkanvas]]
 <!--SR:!2024-02-13,3,248!2024-02-18,2,247-->

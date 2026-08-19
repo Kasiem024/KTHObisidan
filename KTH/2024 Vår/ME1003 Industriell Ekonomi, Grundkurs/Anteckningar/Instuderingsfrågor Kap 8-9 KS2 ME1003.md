@@ -36,7 +36,7 @@ En vanlig anledning till att löpande analysera ekonomiska förhållanden i för
 
 En [[Halvfast Kostnad]] är en fast kostnad som är opåverkad av verksamhetsvolymen upp till en viss nivå. När den nivå av verksamhetsvolym uppnås hoppar den fasta kostnaden upp och är återigen opåverkad av verksamhetsvolymen. Exempelvis kan det vara en utbyggnad av tillverkningslokalerna som gör att den halvfasta kostnaden hoppar upp.
 
-![[Halvfasta Kostnader ME1003.png]]
+![[Halvfasta Kostnader ME1003.png|Halvfasta Kostnader]]
 
 ---
 5. Redogör för följande typer av rörliga kostnader:
@@ -46,24 +46,24 @@ Det finns flera olika typer av [[Rörlig Kostnad]]:
 ==Proportionellt== rörliga kostnader:
 När kostnaden per styck är alltid samma och den totala kostnaden ökar ständigt i en rak linje.
 
-![[Proportionellt Rörliga Kostnader ME1003.png]]
+![[Proportionellt Rörliga Kostnader ME1003.png|Proportionellt Rörliga Kostnader]]
 
 ==Progressivt== rörliga kostnader:
 När styckkostnaden ökar för varje tillverkad produkt. Alltså dyrt om volymen är hög men billig med låg volym. Kan hända om personalen behöver jobba övertid.
 
-![[Progressivt Rörliga Kostnader ME1003.png]]
+![[Progressivt Rörliga Kostnader ME1003.png|Progressivt Rörliga Kostnader]]
 
 ==Regressivt== rörliga kostnader:
 När styckkostnaden minskar för varje tillverkad produkt. Alltså dyrt om volymen är hög men billig med hög volym. Kan hända om man får en rabatt från leverantören för att köpa råmaterial i bulk.
 
-![[Regressivt Rörliga Kostnader ME1003.png]]
+![[Regressivt Rörliga Kostnader ME1003.png|Regressivt Rörliga Kostnader]]
 
 ---
 6. Beskriv vad ett resultatdiagram innehåller och vad det brukar användas till.
 
 Ett [[Resultatdiagram]] visar relationen mellan intäkterna och volymen. Den innehåller en linje för [[Fast Kostnad]], en linje som visar [[Total Kostnad]], alltså summan av fasta och rörliga kostnader, och en linje för totala intäkter. Man kan använda det till att bättre förstå sina kostnader och hur man borde prissätta sina produkter.
 
-![[Resultatdiagram ME1003.png]]
+![[Resultatdiagram ME1003.png|Resultatdiagram]]
 
 ---
 7. Vad visar den kritiska punkten i ett resultatdiagram?
@@ -147,7 +147,7 @@ Affärsomkostnader (AffO) består av Administrationskostnad (AO) och Försäljni
 
 Självkostnaden (SjK) för en produkt är alltså summan av TvK, AffO och dF.
 
-![[Självkostnaden av en Produkt ME1003.png]]
+![[Självkostnaden av en Produkt ME1003.png|Självkostnaden av en Produkt]]
 
 ---
 15. Hur beräknas
@@ -357,7 +357,7 @@ Syftet med en investeringskalkyl är att utgöra ett underlag för att bedöma [
 
 Alltså, en investeringskalkyl bedömer lönsamheten eller värdet av en investering och syftet med kalkylen är att veta om en viss investering är bra eller inte.
 
-![[Investeringskalkyleringsmetoder ME1003.png]]
+![[Investeringskalkyleringsmetoder ME1003.png|Investeringskalkyleringsmetoder]]
 
 ---
 5. Vad menas med kalkylränta och vad innebär det att kalkylräntan är ett mått på tidspreferensen?

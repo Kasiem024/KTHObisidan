@@ -23,7 +23,7 @@ Det investerade kapitalet skall förräntas alltså öka i värde. Detta kallas 
 - [[Internräntemetoden]]
 - [[Återbetalningsmetoden]]
 
-![[Investeringskalkyleringsmetoder ME1003.png]]
+![[Investeringskalkyleringsmetoder ME1003.png|Investeringskalkyleringsmetoder]]
 
 ## Kopplat till
 

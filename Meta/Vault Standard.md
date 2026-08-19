@@ -171,6 +171,25 @@ into a single note, written directly as flashcards, and have no `## Definition`
 section of their own. 32 of the 352 concept notes are of this kind. They are still
 tagged `begrepp` and still end with `## Flashcards`.
 
+### Images and embeds
+
+Every image embed carries **alt text** after a pipe:
+
+```markdown
+![[Bostonmatrisen ME1003.png|Bostonmatrisen]]
+```
+
+- This is required, not optional. Without it the published site emits `alt=""`, which
+  makes the diagram invisible to anyone using a screen reader. The audit reports
+  `imageEmbedWithoutAlt`.
+- It is native to both tools. Obsidian shows the text as the embed's display name, and
+  Quartz's `obsidian-flavored-markdown` parses a **non-numeric** value after the pipe as
+  the `alt` attribute — while `|300` still means width, so sizing keeps working.
+- Write what the image *shows*, normally the figure's own name. **Drop the course code**:
+  the page already establishes the course, so "ME1003" only adds noise when read aloud.
+- Image filenames are themselves descriptive (`Kraljics Inköpsmatris ME1003.png`), which
+  is what makes the alt text easy to write — keep naming new ones that way.
+
 ### Course literature naming (`Filer/Litteraturlista/`)
 
 **`<Titel> <År> [<Region>] Edition <N> <Författare>`** — omit any part that does not

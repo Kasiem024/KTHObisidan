@@ -17,7 +17,7 @@ Alltså visar den hur viktig en viss inköpt artikel är och hur problematiskt d
 | Hög | ==Hävstång==<br>Utnyttja förhandlingsstyrkan<br>genom att konkurrensutsätta<br>flera olika leverantörer | ==Strategisk==<br>Utveckla ett fåtal nyckelleverantörer |
 | Låg | ==Icke-kritisk==<br>Minska transaktionskostnaderna med färre leverantörer | ==Flaskhals==<br>Säkra leveranser hos nyckelleverantörer, sök alternativa leverantörer |
 
-![[Kraljics Inköpsmatris ME1003.png]]
+![[Kraljics Inköpsmatris ME1003.png|Kraljics Inköpsmatris]]
 
 ## Kopplat till
 
@@ -34,5 +34,5 @@ Kraljics Matris (4)
 - ==Strategisk==: Utveckla ett fåtal nyckelleverantörer
 - ==Icke-kritisk==: Minska transaktionskostnaderna med färre leverantörer
 - ==Flaskhals==: Säkra leveranser hos nyckelleverantörer, sök alternativa leverantörer
-![[Kraljics Inköpsmatris ME1003.png]]
+![[Kraljics Inköpsmatris ME1003.png|Kraljics Inköpsmatris]]
 <!--SR:!2024-02-12,2,228!2024-02-11,2,244-->

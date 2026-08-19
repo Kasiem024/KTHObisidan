@@ -15,7 +15,7 @@ En Varutransaktioner kommer till stånd genom att ett avtal sluts mellan två pa
 
 [[Den Nya Affärsredovisningen 2018 Edition 21.pdf#page=119&selection=32,0,32,35|Den nya affärsredovisningen CM1005, page 119]]
 
-![[Varutransaktioner Grundmodell CM1005.png]]
+![[Varutransaktioner Grundmodell CM1005.png|Varutransaktioner Grundmodell]]
 
 En Varutransaktion har alltså tre delar:
 

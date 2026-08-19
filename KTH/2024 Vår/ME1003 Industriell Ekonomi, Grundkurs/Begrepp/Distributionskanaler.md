@@ -10,7 +10,7 @@ updated: 2026-05-26
 
 Distributionskanaler har med hur många mellanled det finns mellan producenten av en produkt och själva kunden. Ju mer steg det finns ju dyrare priset av en produkt blir för kunden.
 
-![[Distributionskanaler ME1003.png]]
+![[Distributionskanaler ME1003.png|Distributionskanaler]]
 
 E-handel har starkt påverkat Distributionskanalerna och därmed priset av produkter. Det har blivit enklare för producenter att sälja direkt till kunden, vilket leder till lägre pris.
 

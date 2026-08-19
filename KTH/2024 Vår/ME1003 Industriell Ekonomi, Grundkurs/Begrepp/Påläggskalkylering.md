@@ -12,7 +12,7 @@ Påläggskalkylering är när man systematiskt fördelar kostnaderna på en [[Ko
 
 ### Påläggsbaser och Fördelningsnycklar
 
-![[Självkostnaden av en Produkt ME1003.png]]
+![[Självkostnaden av en Produkt ME1003.png|Självkostnaden av en Produkt]]
 
 - ==Direkt material== (dM)
 	- Kostnader för det material som ingår i produkten.

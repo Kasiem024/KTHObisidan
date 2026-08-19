@@ -15,17 +15,17 @@ Rörlig Kostnad (RK) varierar med verksamhetsvolym. Alltså ändras de beroende 
 ==Proportionellt== rörliga kostnader:
 När kostnaden per styck är alltid samma och den totala kostnaden ökar ständigt i en rak linje.
 
-![[Proportionellt Rörliga Kostnader ME1003.png]]
+![[Proportionellt Rörliga Kostnader ME1003.png|Proportionellt Rörliga Kostnader]]
 
 ==Progressivt== rörliga kostnader:
 När styckkostnaden ökar för varje tillverkad produkt. Alltså dyrt om volymen är hög men billig med låg volym. Kan hända om personalen behöver jobba övertid.
 
-![[Progressivt Rörliga Kostnader ME1003.png]]
+![[Progressivt Rörliga Kostnader ME1003.png|Progressivt Rörliga Kostnader]]
 
 ==Regressivt== rörliga kostnader:
 När styckkostnaden minskar för varje tillverkad produkt. Alltså dyrt om volymen är låg men billig med hög volym. Kan hända om man får en rabatt från leverantören för att köpa råmaterial i bulk.
 
-![[Regressivt Rörliga Kostnader ME1003.png]]
+![[Regressivt Rörliga Kostnader ME1003.png|Regressivt Rörliga Kostnader]]
 
 ## Kopplat till
 
@@ -47,12 +47,12 @@ Typer av Rörlig Kostnad (3)
 
 Rörliga Kostnader, Proportionellt (Definition):: När kostnaden per styck är alltid samma och den totala kostnaden ökar ständigt i en rak linje
 <!--SR:!2024-03-08,18,299-->
-![[Proportionellt Rörliga Kostnader ME1003.png]]
+![[Proportionellt Rörliga Kostnader ME1003.png|Proportionellt Rörliga Kostnader]]
 
 Rörliga Kostnader, Progressivt (Definition):: När styckkostnaden ökar för varje tillverkad produkt. Alltså dyrt om volymen är hög men billig med låg volym. Kan hända om personalen behöver jobba övertid
 <!--SR:!2024-03-06,16,292-->
-![[Progressivt Rörliga Kostnader ME1003.png]]
+![[Progressivt Rörliga Kostnader ME1003.png|Progressivt Rörliga Kostnader]]
 
 Rörliga Kostnader, Regressivt (Definition):: När styckkostnaden minskar för varje tillverkad produkt. Alltså dyrt om volymen är låg men billig med hög volym. Kan hända om man får en rabatt från leverantören för att köpa råmaterial i bulk
 <!--SR:!2024-03-09,15,306-->
-![[Regressivt Rörliga Kostnader ME1003.png]]
+![[Regressivt Rörliga Kostnader ME1003.png|Regressivt Rörliga Kostnader]]

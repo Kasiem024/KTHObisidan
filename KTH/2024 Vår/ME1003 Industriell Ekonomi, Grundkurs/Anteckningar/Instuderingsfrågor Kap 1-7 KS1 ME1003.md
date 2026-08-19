@@ -262,7 +262,7 @@ Definitionen av innovation är en ny eller märkbart förbättrad produkt, proce
 
 [[Teknologiska kurvan]] är ett begrepp som beskriver relationen mellan prestandan av en teknologi och tiden som den har varit på marknaden.
 
-![[Teknologiska Kurvan ME1003.png]]
+![[Teknologiska Kurvan ME1003.png|Teknologiska Kurvan]]
 
 4. Förklara skillnaden mellan inkrementell innovation och radikal innovation.
 
@@ -388,13 +388,13 @@ Fyra exempel på utgångspunkter för [[Prissättning]]:
 - ==Självkostnad + vinstpålägg==: När man räknar kostnaden av produktion och lägger på ett procentuellt påslag för att täcka sina egna administrationskostnader.
 - ==Särkostnader + täckningsbidrag==: När priset av produkten är knappt högre en självkostnaden. Vanligtvis en kortsiktig prissättningsstrategi som används när företaget har för mycket kapacitet och ville hellre sälja något än inget.
 
-![[Prissättning ME1003.png]]
+![[Prissättning ME1003.png|Prissättning]]
 
 8. Vilka är skillnaderna mellan en grossist och en detaljist?
 
 Man kan säga att en ==detaljist== är som en livsmedelsbutik (ICA, Coop, Willys etc.) och en ==grossist== är mellanhanden mellan ==producenten== och ==detaljisten==. Funktionen av en ==grossist== är att minska detaljistens behov av leverantörskontakter och hjälpa till med varusortimentet.
 
-![[Distributionskanaler ME1003.png]]
+![[Distributionskanaler ME1003.png|Distributionskanaler]]
 
 9. På vilket sätt påverkar typen av distributionskanal företagets marknadsföring?
 
@@ -404,7 +404,7 @@ Om ett företag är en ==detaljist== kan den marknadsföra direkt till kunden vi
 
 För en ==producent== handlar det inte om reklamkampanjer utan om relationsmarknadsföring, alltså att bygga lång siktiga relationer då man är i en [[Företagsmarknad]] och säljer till andra företag/==producenter==.
 
-![[Reklam VS Relationsmarknadsföring ME1003.png]]
+![[Reklam VS Relationsmarknadsföring ME1003.png|Reklam VS Relationsmarknadsföring]]
 
 10. Vad innebär relations marknadsföring?
 
@@ -472,7 +472,7 @@ Inom [[Produktion]] vill man utnyttja hela sin kapacitet, alltså utrustning och
 ==Lokalisering==:
 Inom [[Produktion]] vill man vara vart det är billigast att producera produkten. Inom [[Marknadsföring]] vill man vara så när kunden som möjligt.
 
-![[Produktion och Marknadsföring Olika Perspektiv ME1003.png]]
+![[Produktion och Marknadsföring Olika Perspektiv ME1003.png|Produktion och Marknadsföring Olika Perspektiv]]
 
 3. Varför är skillnaden mellan oberoende efterfrågan och beroende efterfrågan viktig för ett företags produktionsstrategi?
 
@@ -507,7 +507,7 @@ Ordervinnare (Definition):: Faktorer i [[Värdeerbjudandet]] som till slut avgö
 
 Variation och Volym är två delar inom [[4V]]. Om man har hög volym har man hög repeterbarhet och standardisering medan enhetskostnad blir låg. Hög variation leder till att hög flexibilitet och enhetskostnad men det gör det enklare att matcha kundens behov.
 
-![[Produktvariation och Produktionsvolym ME1003.png]]
+![[Produktvariation och Produktionsvolym ME1003.png|Produktvariation och Produktionsvolym]]
 
 8. Redogör för de fem typiska processtyperna i varuproduktion och hur de är relaterade till olika produktionslayouter.
 
@@ -519,7 +519,7 @@ Det finns 5 typiska [[Processtyper inom Varuproduktion]]:
 - ==Massproduktion==: Används när man ska producera stora volymer av samma produkt.
 - ==Kontinuerlig produktion==: Används när man ska producera mycket stora volymer av en enda produkt i ett kontinuerligt flöde. Kräver vanligtvis stora investeringar i produktionsanläggningar.
 
-![[Varuproduktion ME1003.png]]
+![[Varuproduktion ME1003.png|Varuproduktion]]
 
 9. Förklara skillnaderna mellan professionella tjänster, serviceverkstäder och standardtjänster.
 
@@ -527,7 +527,7 @@ Det finns 5 typiska [[Processtyper inom Varuproduktion]]:
 - ==Serviceverkstäder==: Normal mängd variation och volym.
 - ==Standardtjänster==: Låg variation men stor volym, alltså lätt att standardisera.
 
-![[Tjänsteproduktion ME1003.png]]
+![[Tjänsteproduktion ME1003.png|Tjänsteproduktion]]
 
 Typer av tjänsteproduktion (3)
 ??
@@ -545,7 +545,7 @@ Det finns 4 olika typer av [[Produktionsflöden]]:
 - ==Timglasformade==: När ett företags produkter är modulariserade. Alltså att en liten mängd resurser kan transformeras till en mängd produkter med stor variation.
 - ==T-Formade==: När man skapar variation vid det sista steget i produktionen. Man kan tillverka en stor volym identiska klädesplagg och ge de stor variation i sista steget genom att färga de.
 
-![[Produktionsflöden vid Varuproduktion ME1003.png]]
+![[Produktionsflöden vid Varuproduktion ME1003.png|Produktionsflöden vid Varuproduktion]]
 
 11. Vilken effekt har kundorderpunkten på produktionssystemet?
 
@@ -555,7 +555,7 @@ Genomloppstid och leveranstid är två begrepp som är viktiga för att förstå
 
 Alltså är kundorderpunkten hur mycket av produktens tillverkning som är redan färdig (genomloppstid) när kunden gör beställningen (leveranstid) och hur kundanpassad produkten är.
 
-![[Kundorderpunkten ME1003.png]]
+![[Kundorderpunkten ME1003.png|Kundorderpunkten]]
 
 12. Vilka är skillnaderna mellan produktion mot lager och produktion mot kundorder?
 
@@ -578,7 +578,7 @@ En ==trång sektor==, eller flaskhals som det också kallas, är det produktions
 
 Trång Sektor (Definition):: Det moment i produktionsflödet med lägst kapacitet
 <!--SR:!2024-02-11,3,264!2024-03-09,4,292-->
-![[Trång Sektor ME1003.png]]
+![[Trång Sektor ME1003.png|Trång Sektor]]
 
 15. Beskriv några typiska försörjningskedjor i varu- respektive tjänsteproduktion.
 
@@ -586,7 +586,7 @@ Trång Sektor (Definition):: Det moment i produktionsflödet med lägst kapacite
 
 ==Tjänsteproduktion==: Systemutvecklare --> Server --> Konsult
 
-![[Försörjningskedja ME1003.png]]
+![[Försörjningskedja ME1003.png|Försörjningskedja]]
 
 16. Vad är en legotillverkare?
 
@@ -605,17 +605,17 @@ Legotillverkare (Definition):: En tillverkare som producerar komponenter efter f
 
 Alltså visar den hur viktig en viss inköpt artikel är och hur problematiskt det är ifall den inte levereras i tid.
 
-![[Kraljics Inköpsmatris ME1003.png]]
+![[Kraljics Inköpsmatris ME1003.png|Kraljics Inköpsmatris]]
 
 19. Redogör för skillnaden mellan en funktionell layout och en flödeslayout i varuproduktion.
 
 När ett företag ska tillverka varor med ==hög variation== använder man sig av en ==funktionell layout==. I en sådan layout placeras maskiner med likartade funktioner fysiskt nära varandra, alltså skapas det ==avdelningar== för varje del av produktionen vilket leder till stor ==flexibilitet== men lång genomloppstid då produkten behöver transporteras från avdelning till avdelning.
 
-![[Funktionell Layout ME1003.png]]
+![[Funktionell Layout ME1003.png|Funktionell Layout]]
 
 När man ska ==massproducera== en ==standardprodukt== använder man sig av en ==flödeslayout==. I en sådan layout placeras maskinerna på en ==linje== så att produkten produceras från början till slut i ett ==sammanhållet flöde==. Detta leder till ett ==snabbt== flöde och kort genomloppstid men flexibiliteten blir låg.
 
-![[Flödeslayout ME1003.png]]
+![[Flödeslayout ME1003.png|Flödeslayout]]
 
 Funktionell Layout (Definition):: När maskiner med samma funktion placeras fysiskt nära varandra, leder till ==stor flexibilitet== men lång genomloppstid då produkten behöver transporteras från avdelning till avdelning
 <!--SR:!2024-02-18,10,284!2024-03-09,4,292-->
@@ -627,7 +627,7 @@ Flödeslayout (Definition):: När maskiner placeras i ordningen som produkten be
 
 Hur en produktionslayout påverkar produktions kostnaderna har med varje layouts ==fasta och rörliga kostnader== att göra. En flödeslayout har väldigt höga fast kostnader då man är tvungen att investera i dyra specialiserade maskiner. Dock är de rörliga kostnaderna låga eftersom när man väl börjat tillverka produkten är kostnaden för varje ny produkt låg då systemet är väldigt effektivt på att tillverka just den produkten. Alltså ska man använda en flödeslayout för stora volymer.
 
-![[Kostnadsstruktur vid olika Produktionslayouter ME1003.png]]
+![[Kostnadsstruktur vid olika Produktionslayouter ME1003.png|Kostnadsstruktur vid olika Produktionslayouter]]
 
 21. Redogör för hur flexibilitet och buffertar kan användas för att hantera variation och osäkerhet i produktionsprocessen.
 
@@ -670,13 +670,13 @@ Beordringsprincipen Pull (Definition):: När ett moment beställer material frå
 Relationen mellan Lagernivå och Påfyllningsvolym;; Låg påfyllningsvolym, många små leveranser, leder till låg lagernivå. Hög påfyllningsvolym, ett fåtal stora leveranser, leder till hög lagernivå
 <!--SR:!2024-03-01,15,307-->
 
-![[Lagernivå och Påfyllningsvolym ME1003.png]]
+![[Lagernivå och Påfyllningsvolym ME1003.png|Lagernivå och Påfyllningsvolym]]
 
 25. Vad är ett säkerhetslager?
 
 När man vill ha en miniminivå av artiklar i lager som en buffert kallar man det för att ha ett ==säkerhetslager==, detta förhindrar att brist uppkommer. När lagret kommer till en viss punkt görs en ny beställning, alltså beställningspunkten. Ett sådant lager system kallas för beställningspunktssystem.
 
-![[Lager med Beställningspunktssystem ME1003.png]]
+![[Lager med Beställningspunktssystem ME1003.png|Lager med Beställningspunktssystem]]
 
 26. Förklara begreppet ekonomisk orderkvantitet.
 
@@ -777,7 +777,7 @@ Det finns flera stadier inom en [[Produktlivscykeln]]. I vilken stadie man är b
 
 Man börjar med ==introduktionen== av produkten när den först lanseras och marknadsandelen fortfarande är liten. Sedan börjar ==tillväxt== fasen där försäljningsvolym börjar stadigt öka som leder in till ==mognads== fasen där produkten kommer nå sin maximala försäljningsvolym. Eventuellt börjar ==nedgångs== fasen där försäljningen minskar.
 
-![[Produktlivscykeln ME1003.png]]
+![[Produktlivscykeln ME1003.png|Produktlivscykeln]]
 
 5. Beskriv de fyra typiska innovationsstrategierna.
 
@@ -830,7 +830,7 @@ Projektportfölj (Definition):: När man klassificerar olika utvecklingsprojekt 
 
 Utvecklingstratten (Definition):: Handlar om hur ett företag ska ha många förstudier igång samtidigt som kommer sållas för att hitta de bästa som eventuellt leder till en lanserad produkt
 <!--SR:!2024-02-12,4,288!2024-03-09,4,292-->
-![[Utvecklingstratten ME1003.png]]
+![[Utvecklingstratten ME1003.png|Utvecklingstratten]]
 
 11. Beskriv de viktigaste faserna i en typisk produktutvecklingsprocess.
 
@@ -849,7 +849,7 @@ Faserna i en Typisk Produktutvecklingsprocess (6)
 - ==Detaljkonstruktion==: Här konstrueras olika komponenter och delsystem.
 - ==Testning==: Här testas produkten och justeringar görs när det behövs.
 - ==Produktionsstart==: Här lanseras produkten.
-![[Produktutvecklingsprocessen ME1003.png]]
+![[Produktutvecklingsprocessen ME1003.png|Produktutvecklingsprocessen]]
 <!--SR:!2024-02-09,1,248!2024-02-11,1,256-->
 
 12. Beskriv skillnaderna mellan sekventiell, parallell och agil produkt utveckling. Vilka är för- respektive nackdelarna med dessa tre modeller?

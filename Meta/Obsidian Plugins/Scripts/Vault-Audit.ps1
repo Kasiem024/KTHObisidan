@@ -141,6 +141,17 @@ foreach($f in $md){
     if(@($tags | Where-Object { $_ -match $typePat }).Count -eq 0){ (Bucket 'missingTypeTag').Add($rel) }
     if(@($tags | Where-Object { $_ -match $subjPat }).Count -eq 0){ (Bucket 'missingSubjectTag').Add($rel) }
   }
+  # Standard section 4: every image embed needs alt text after a pipe. Without it the
+  # site emits alt="", making the diagram invisible to screen readers. A numeric value
+  # is a width, not alt text, so it does not count.
+  foreach($em in [regex]::Matches($body,'!\[\[([^\]]+)\]\]')){
+    $inner=$em.Groups[1].Value
+    $leaf=($inner -split '\|')[0]
+    if($leaf -notmatch '\.(png|jpg|jpeg|gif|webp|svg)$'){ continue }
+    $alt=''
+    if($inner -match '\|(.*)$'){ $alt=$matches[1].Trim() }
+    if($alt -eq '' -or $alt -match '^\d+(x\d+)?$'){ (Bucket 'imageEmbedWithoutAlt').Add($rel + ' :: ' + $leaf) }
+  }
   # broken links (ignore embeds)
   foreach($lk in [regex]::Matches($body,'(?<!!)\[\[([^\]\|#\^]+)')){
     $tgt=$lk.Groups[1].Value.Trim(); if($tgt -eq ''){ continue }

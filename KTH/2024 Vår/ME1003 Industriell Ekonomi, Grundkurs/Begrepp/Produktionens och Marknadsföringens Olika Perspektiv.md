@@ -25,7 +25,7 @@ Inom [[Produktion]] vill man utnyttja hela sin kapacitet, alltså utrustning och
 ==Lokalisering==:
 Inom [[Produktion]] vill man vara vart det är billigast att producera produkten. Inom [[Marknadsföring]] vill man vara så när kunden som möjligt.
 
-![[Produktion och Marknadsföring Olika Perspektiv ME1003.png]]
+![[Produktion och Marknadsföring Olika Perspektiv ME1003.png|Produktion och Marknadsföring Olika Perspektiv]]
 
 ## Kopplat till
 
@@ -40,5 +40,5 @@ Produktion och Marknadsföring Olika Perspektiv (5)
 - ==Prestationsmätning==: Kostnadsenhet mot intäktsenhet.
 - ==Kapacitetsutnyttjande==: Hög kapacitet mot överbemanning.
 - ==Lokalisering==: Nära produkten eller nära kunden.
-![[Produktion och Marknadsföring Olika Perspektiv ME1003.png]]
+![[Produktion och Marknadsföring Olika Perspektiv ME1003.png|Produktion och Marknadsföring Olika Perspektiv]]
 <!--SR:!2024-02-10,1,168!2024-01-31,1,230-->

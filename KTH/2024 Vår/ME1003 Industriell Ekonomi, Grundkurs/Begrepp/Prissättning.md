@@ -10,7 +10,7 @@ updated: 2026-05-26
 
 Priset av en produkt är självkostnaden + vinstpålägg (marginalen). Alltså priset av en produkt och kostnaden av en produkt är olika och ska därför skiljas.
 
-![[Prissättning ME1003.png]]
+![[Prissättning ME1003.png|Prissättning]]
 
 Grunden för Prissättning, verksamhetsanalyser och beslut:
 

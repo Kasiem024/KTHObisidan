@@ -11,7 +11,7 @@ updated: 2026-08-17
 
 Destinationsprincipen säger att [[Moms]] är en beskattning av konsumtion, alltså momsen tillfaller staten i det land där varan konsumeras, vart konsumenten är.
 
-![[Destinationsprincipen CM1005.png]]
+![[Destinationsprincipen CM1005.png|Destinationsprincipen]]
 
 Möbelaffären C har ingen ingående moms för att Möbelfabrikant B är i ett annat land. Alltså, C betalar 500 i moms till staten.
 
@@ -20,5 +20,5 @@ Möbelaffären C har ingen ingående moms för att Möbelfabrikant B är i ett a
 - [[Moms]]
 ## Flashcards
 
-Destinationsprincipen (Definition):: Bestämmer i vilket land [[Moms]] ska betalas, alltså vart konsumenten är ![[Destinationsprincipen CM1005.png]]
+Destinationsprincipen (Definition):: Bestämmer i vilket land [[Moms]] ska betalas, alltså vart konsumenten är ![[Destinationsprincipen CM1005.png|Destinationsprincipen]]
 <!--SR:!2024-03-12,9,250!2024-03-16,11,288-->

@@ -17,6 +17,14 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### ♿ 2026-08-19 (12) — ACCESSIBILITY (F47 done)
+Every image on the site published with `alt=""` — 183 images across 61 pages, invisible to
+screen readers. All now carry alt text derived from the already-descriptive filenames, with
+the course code dropped. Verified 183 `<img>` tags and **0 without alt**. Documented in the
+Standard and enforced by a new `imageEmbedWithoutAlt` audit check. `robots.txt` was
+considered and dropped: crawlers only honour it at the domain root, and this is a project
+site on a subpath. Nothing open.
+
 ### 🔌 2026-08-19 (11) — PLUGIN REVIEW (F46 done)
 Enumerated the entire Quartz plugin ecosystem from the npm registry: 53 packages carry the
 `quartz-plugin` keyword, 50 of them official, and only **2** third-party packages exist at
@@ -973,6 +981,50 @@ Two corrections came out of the review:
    its own listing alongside: the CM1005 `Begrepp` page carries 718 internal links covering all
    112 concepts. The Dataview blocks are redundant on the web, not lost content — **nothing to
    fix.**
+
+### F47. ✅ DONE (2026-08-19) — alt text on every image; the site had none at all
+
+**183 images across 61 pages published with `alt=""`.** Every embed in the vault was a
+bare `![[image.png]]`, so every diagram was invisible to anyone using a screen reader —
+an accessibility failure on a public site, not a cosmetic issue.
+
+All 183 now carry alt text: `![[Bostonmatrisen ME1003.png|Bostonmatrisen]]`.
+
+The mechanism was verified in the shipped transformer before any bulk edit, rather than
+assumed. `obsidian-flavored-markdown` parses the text after the pipe with:
+
+```
+/^(?<alt>(?!^\d*x?\d*$).*?)?(\|?\s*?(?<width>\d+)(x(?<height>\d+))?)?$/
+```
+
+so a **non-numeric** value becomes the `alt` attribute while `|300` still means width.
+Obsidian renders the same form as the embed's display name, so the change is native to
+both tools and nothing had to be converted to standard-markdown image syntax.
+
+Alt text is derived from the filenames, which were already descriptive — all 75 distinct
+images, zero named `Pasted image …` or similar. Two judgement calls, both approved:
+
+- **The trailing course code is dropped**: `Bostonmatrisen ME1003.png` → "Bostonmatrisen".
+  The page already establishes the course, so reading "ME1003" aloud only adds noise.
+- **One typo is corrected in the alt text only.** The file `Värdekejda ME1003.png`
+  misspells *Värdekedja* (the note embedding it is correctly named `Värdekedja.md`). Alt
+  text is prose read to a human, so it says "Värdekedja". **The filename is untouched**,
+  so no links break. Renaming the file properly remains an option.
+
+**Verified:** rebuilt from the live vault — 183 `<img>` tags, **0 without alt**, 0 pages
+affected, and 0 pages with unparsed embed syntax. Sample output:
+`<img src="…boolesk-algebra-he1026.png" alt="Boolesk Algebra" …>`.
+
+Now enforced: `Vault Standard.md` §4 gained an *Images and embeds* section, and the audit
+reports `imageEmbedWithoutAlt`, so new embeds cannot silently regress.
+
+**`robots.txt` was considered and correctly dropped.** It was on the shortlist, and a
+vault-root file *would* publish at the site root — verified, since `llms.txt` does exactly
+that. But the site is a GitHub Pages **project** site served from
+`kasiem024.github.io/KTHObsidianQuartz/`, and crawlers only honour `robots.txt` at the
+**domain** root. A file at the project subpath is ignored, so it would have been dead
+weight. Controlling crawling here would require a `robots.txt` in the separate
+`kasiem024.github.io` user-site repo. `sitemap.xml` is unaffected and still emitted.
 
 ---
 

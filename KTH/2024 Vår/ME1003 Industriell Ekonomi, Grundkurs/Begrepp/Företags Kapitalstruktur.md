@@ -14,7 +14,7 @@ Företags Kapitalstruktur är av stor betydelse för de interna överväganden e
 - ==Räntebärande skulder==: Lån där kostnaden för kapital sätts i form av en ränta, alltså **vanliga banklån.**
 - ==Rörelseskulder==, eller icke räntebärande skulder: Består huvudsakligen av de skulder företager har till sina leverantörer, alltså **leverantörsskulder.**
 
-![[Företags Kapitalstruktur ME1003.png]]
+![[Företags Kapitalstruktur ME1003.png|Företags Kapitalstruktur]]
 
 ## Kopplat till
 

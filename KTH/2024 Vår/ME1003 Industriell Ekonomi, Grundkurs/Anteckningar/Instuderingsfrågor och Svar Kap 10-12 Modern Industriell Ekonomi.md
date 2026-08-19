@@ -539,7 +539,7 @@ $\text{Rörelsekapital} = \text{Omsättningstillgångar} - \text{Kortfristiga} \
 
 Diagrammet visar hur lång tid det tar från råmaterial till att få betalt för produkten. Värdet av färdigvarulagret är högre än råmaterial lagret.
 
-![[Tillverkande Företags Kapitalbindning ME1003.png]]
+![[Tillverkande Företags Kapitalbindning ME1003.png|Tillverkande Företags Kapitalbindning]]
 
 ---
 8. Vad är ett företags eget kapital? Varför anses eget kapital vara den dyraste formen av finansiering för ett företag?
@@ -571,7 +571,7 @@ Alla aktier i ett [[Aktiebolag]] har samma kvotvärde dock finns det olika typer
 - ==Räntebärande skulder==: Lån där kostnaden för kapital sätts i form av en ränta, alltså **vanliga banklån.**
 - ==Rörelseskulder==, eller icke räntebärande skulder: Består huvudsakligen av de skulder företager har till sina leverantörer, alltså **leverantörsskulder.**
 
-![[Företags Kapitalstruktur ME1003.png]]
+![[Företags Kapitalstruktur ME1003.png|Företags Kapitalstruktur]]
 
 ---
 12. Redogör för vad som ingår i ett företags riskkapital.
@@ -638,7 +638,7 @@ Den visar också distinktionen mellan internt och extern genererade medel, samt 
 ---
 19. Ställ upp en kassaflödesanalys enligt FAR:s rekommendationer.
 
-![[Kassaflödesanalys enligt FAR ME1003.png]]
+![[Kassaflödesanalys enligt FAR ME1003.png|Kassaflödesanalys enligt FAR]]
 
 ---
 20. Förklara skillnaden mellan rörelserisk och finansiell risk.
@@ -662,7 +662,7 @@ Den visar också distinktionen mellan internt och extern genererade medel, samt 
 
 [[DuPont-Schema]] kan användas för att analysera ==rörelserisken== till följd av företagets kostnadsstruktur och kapitalbindning. Av detta schema framgår det **hur effektivt företagets tillgångar används i sin helhet**, samt att både kostnadsstrukturen och kapitalbindningen påverkar avkastningen på totalt kapital.
 
-![[DuPont-Schema ME1003.png]]
+![[DuPont-Schema ME1003.png|DuPont-Schema]]
 
 ---
 22. Redogör för begreppen:

@@ -10,7 +10,7 @@ updated: 2026-05-26
 
 Kan också kallas produktionskedja. Det behandlar hur värdet av en vara ökar ju längre man kommer i produktionskedjan, exempelvis från en bomull planta till ett klädesplagg.
 
-![[Värdekejda ME1003.png]]
+![[Värdekejda ME1003.png|Värdekedja]]
 
 Vanligtvis visar man värdekedjor vertikalt, uppifrån ner, men i denna bild är det horisontellt, höger till vänster.
 

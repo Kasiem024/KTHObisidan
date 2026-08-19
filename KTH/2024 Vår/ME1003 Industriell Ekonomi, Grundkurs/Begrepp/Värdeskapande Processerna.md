@@ -14,7 +14,7 @@ Det finns 3 Värdeskapande Processer:
 - [[Produktutveckling]]
 - [[Marknadsföring]]
 
-![[Värdeskapande Processer Tvärs Organisationen ME1003.png]]
+![[Värdeskapande Processer Tvärs Organisationen ME1003.png|Värdeskapande Processer Tvärs Organisationen]]
 
 ## Kopplat till
 
