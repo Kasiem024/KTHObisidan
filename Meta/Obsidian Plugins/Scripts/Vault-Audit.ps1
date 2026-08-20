@@ -105,8 +105,17 @@ foreach($f in $md){
       $dv=[regex]::Match($blk,'(?m)^description:[ \t]*(.*)$').Groups[1].Value.Trim()
       if($dv -eq '' -or $dv -eq '""' -or $dv -eq "''"){ (Bucket 'emptyDescription').Add($rel) }
       # A description must read as plain text: no card delimiters, no wikilink
-      # brackets, and nothing lifted out of a Dataview query.
+      # brackets, nothing lifted out of a Dataview query, and no raw markdown. The
+      # markdown cases are all harvest residue - a generator took the first content
+      # line without checking it was prose, so 16 notes published a heading, a bullet
+      # or a $...$ formula as their meta description and social preview.
       elseif($dv -match '::|;;|\[\[' -or $dv -cmatch '\b(FROM|WHERE|SORT|FLATTEN)\b'){ (Bucket 'malformedDescription').Add($rel) }
+      elseif($dv -match '#{2,}' -or $dv -match '\$' -or $dv -match '^"?\s*-\s' -or $dv -match '^"?\s*\d+\.\s'){ (Bucket 'malformedDescription').Add($rel) }
+      # A summary is not a quiz item. Four notes had a flashcard's question AND its
+      # answer as their description, with the separator already stripped, so no
+      # delimiter test could see it. A question mark followed by a new sentence is
+      # the signature that survives that stripping.
+      elseif($dv -match '\?\s+\p{Lu}'){ (Bucket 'malformedDescription').Add($rel) }
     }
   }
   $dups=@($tags | Group-Object | Where-Object { $_.Count -gt 1 })

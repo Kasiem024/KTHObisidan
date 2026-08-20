@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Funktioner - Path Vector: Istället för bara en kostnad ser BGP hela listan av AS-nummer som ett paket måste passera."
+description: "BGP (Border Gateway Protocol) är protokollet som kopplar samman de stora nätverken (Autonoma System, AS) som utgör internet."
 created: 2026-05-28
 updated: 2026-05-28
 ---

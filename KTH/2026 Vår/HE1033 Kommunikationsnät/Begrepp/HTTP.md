@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Vanliga metoder - GET: Hämta en resurs (ska inte ändra något). - POST: Skicka data till servern, t.ex. ett formulär. - PUT: Skapa eller ersätt en resurs. - DELETE: Ta bort en resurs. - HEAD: Som…"
+description: "HTTP (HyperText Transfer Protocol) är applikationsprotokollet som webben bygger på, där klienten skickar en request och servern svarar med en response."
 created: 2026-08-18
 updated: 2026-08-18
 ---

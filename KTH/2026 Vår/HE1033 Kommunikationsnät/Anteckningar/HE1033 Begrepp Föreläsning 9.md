@@ -2,7 +2,7 @@
 tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
 created: 2026-03-01
 updated: 2026-08-17
-description: "Vad är skillnaden mellan en statisk och dynamisk rutt gällande nätverkets anpassningsförmåga? En statisk rutt har ingen anpassningsförmåga vid förändringar i nätverket..."
+description: "Flashcards om routing: statiska och dynamiska rutter, administrative distance, distance vector och link-state samt RIP med split horizon."
 ---
 # HE1033 Begrepp Föreläsning 9
 

@@ -2,7 +2,7 @@
 tags: [KTH, year2026, HE1033, begrepp, nätverk]
 created: 2026-05-28
 updated: 2026-08-17
-description: "Vad är en Nätmask (Subnet Mask)? En 32-bitars siffra som används för att skilja på nätverksdelen och värddelen i en IP-adress."
+description: "Flashcards om subnätning: nätmask, antal adresser i ett nät och default gateway."
 ---
 # Subnätning
 

@@ -36,4 +36,4 @@ Om vi har en lista med studenter sorterad på namn, och vi sedan sorterar på be
 
 Vad innebär det att en sorteringsalgoritm är stabil?(Definition):: Att element med samma värde behåller sin inbördes ordning från ursprungslistan.
 
-Namnge en stabil och en ike-stabil sorteringsalgoritm.:: Stabil: Mergesort. Icke-stabil: Quicksort.
+Namnge en stabil och en icke-stabil sorteringsalgoritm.:: Stabil: Mergesort. Icke-stabil: Quicksort.

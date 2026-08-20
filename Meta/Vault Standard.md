@@ -106,8 +106,13 @@ updated: 2024-04-20
   `begrepp` notes it is normally the first sentence of the `## Definition` section;
   for other types it is the first meaningful sentence of the note, or a synthesised
   summary where the note is a structured list (course indexes, `Instuderingsfrågor`).
-  Keep it plain text: no wikilink brackets, no flashcard delimiters, and never text
-  taken from inside a Dataview block.
+  Keep it plain text prose: no wikilink brackets, no flashcard delimiters, no markdown
+  syntax (a `##` heading, a leading `-` or `1.` bullet, a `$...$` formula), never text
+  taken from inside a Dataview block, and never a flashcard's question with its answer.
+  All of those are **harvest residue** — a generator took the first content line without
+  checking it was prose. 21 notes published a heading, a bullet, a formula or a quiz item
+  as their `<meta name="description">` before this was enforced; see F56. A card's *answer*
+  alone is fine, and often is the right summary for a `begrepp` note.
 - `created` / `updated` are the source of truth for dates and live **only in
   frontmatter** — there is no in-body date line. The Obsidian Linter plugin
   auto-updates `updated` on save, Obsidian's Properties panel shows both, and the

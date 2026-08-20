@@ -1513,6 +1513,66 @@ Verified: audit clean and exit 0 in both modes, lint **493 files / 0 errors** (t
 docs correctly out of scope), both agent JSONs and `lsp.json` parse, every hook tested in both
 directions, `check-site` still exit 0 with all nine metrics matching the baseline.
 
+### F56. ✅ DONE (2026-08-20) — 21 notes published raw markdown or a quiz item as their page summary
+
+**Found by delegating a semantic review, which is the only reason it was found at all.** Four
+read-only agents each read one course folder and were asked the one question no script here can
+answer: are these notes actually any good? One came back with five notes in `HE1033/Begrepp/`
+whose `description` was a markdown heading rather than a sentence.
+
+The real count was **21**, in three disguises:
+
+| Disguise | Count | Example |
+|---|---|---|
+| A `##`/`###` heading | 12 | `ARP.md` → `"### Hur det fungerar 1. En enhet skickar en ARP Request ..."` |
+| A `$...$` formula or ordered/bulleted list | 5 | `ARQ-protokoll.md` → `"1. Stop-and-Wait: Skicka ett paket, vänta på ACK."` |
+| A flashcard's question **and** its answer | 4 | `Subnätning Begrepp.md` → `"Vad är en Nätmask (Subnet Mask)? En 32-bitars siffra ..."` |
+
+`description` is emitted as `<meta name="description">` and drives search results and social
+previews, so all 21 were publishing this on the live site. The worst was
+`Subnätning och CIDR.md`: `"### Beräkningsregler 1. Totala adresser: . 2."` — a stripped formula
+left a bare period.
+
+Same root cause as the Dataview-harvest near-miss recorded earlier: a generator took the first
+content line without checking it was prose.
+
+**The audit already had a `malformedDescription` check, and it passed.** It tested for `::`, `;;`,
+`[[` and Dataview keywords — a list built from the defects known at the time, which is why raw
+markdown walked straight through it. A green check over the wrong predicate reads exactly like a
+green check over the right one.
+
+**Fixed** by rewriting all 21 descriptions from each note's own `## Definition` or heading
+structure — nothing invented. `updated` was deliberately **not** bumped: the study content did not
+change, and touching it would push 21 notes to the top of the site's recent-notes list as if they
+had been freshly studied.
+
+**Check extended** in the same change, to headings, `$` math, leading bullets and ordered lists,
+and to a question followed by its answer — the last being the signature that survives the card
+separator already having been stripped. Verified in both directions: four deliberately broken
+descriptions each produced exit 1 and a `malformedDescription` hit; the clean vault gives exit 0.
+
+**Three enumeration failures worth recording, all the same shape.** The agent found 5 of the 10
+cases in its own zone. My follow-up script found 16 of 17 — it tested for bullets but not ordered
+lists, so `ARQ-protokoll.md` slipped past and only the stricter audit check caught it. Then a
+build sample surfaced the 4 question-and-answer cases, which no delimiter test could see. Each
+time the enumeration was exactly as complete as its pattern list, and each time the missing
+pattern was invisible until something with a different predicate looked.
+
+A fourth attempt over-reached in the other direction: a detector for "description appears verbatim
+in a flashcard line" returned 17 notes, of which 13 were **false positives** — for a `begrepp`
+note the definition, the description and the card answer are legitimately the same sentence.
+`"När ett företag säljer en produkt till en konsument."` is a good summary, not residue. The
+Standard now says so explicitly.
+
+Also fixed: `ike-stabil` → `icke-stabil` in a flashcard question in
+`HI1029/Begrepp/Stabilitet (Sortering).md`. That card carries no `<!--SR:-->` marker, so editing
+the question side could not orphan a schedule.
+
+Verified: audit `RESULT: clean`, exit 0, `notesInScope=470`; lint 493 files / 0 errors;
+`<!--SR:` at 1262 and all four separator counts byte-identical before and after; a fresh build of
+the live vault emits 601 pages with **0** raw-markdown and **0** question-and-answer meta
+descriptions, and all nine `check-site` metrics match the baseline exactly.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

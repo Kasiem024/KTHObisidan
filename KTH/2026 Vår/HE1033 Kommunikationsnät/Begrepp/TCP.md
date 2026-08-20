@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Funktioner - Handskakning: SYN SYN-ACK ACK (Tre-vägs). - Sekvensnummer: Håller koll på ordningen och upptäcker förluster. - Flödeskontroll: Använder *Sliding Window* för att inte överbelasta…"
+description: "TCP (Transmission Control Protocol) säkerställer att data kommer fram felfritt och i rätt ordning."
 created: 2026-05-28
 updated: 2026-05-28
 ---

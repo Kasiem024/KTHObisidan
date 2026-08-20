@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Versioner - RIPv1: Classful, skickar med broadcast, stöder inte VLSM. - RIPv2: Classless, stöder VLSM och nätmask i uppdateringarna, skickar med multicast till 224.0.0.9. - RIPng: Varianten för…"
+description: "RIP (Routing Information Protocol) är ett av de äldsta routingprotokollen, används inom ett enskilt nätverk (AS) och har i praktiken ersatts av OSPF."
 created: 2026-08-18
 updated: 2026-08-18
 ---

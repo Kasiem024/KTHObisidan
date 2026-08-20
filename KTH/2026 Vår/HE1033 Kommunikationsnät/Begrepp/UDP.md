@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Varför UDP? - Snabbhet: Ingen handskakning sparar tid. - Låg overhead: Minimal header (8 byte). - Realtid: Bättre att tappa enstaka paket än att vänta på omsändningar i t.ex. röstsamtal."
+description: "UDP (User Datagram Protocol) skickar paket utan att först etablera en anslutning eller kontrollera om de kommit fram."
 created: 2026-05-28
 updated: 2026-05-28
 ---

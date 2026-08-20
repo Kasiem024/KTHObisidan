@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Hur det fungerar 1. En enhet skickar en ARP Request som en broadcast till alla på lokalnätet: \"Vem har IP 192.168.1.5?\". 2."
+description: "ARP (Address Resolution Protocol) används för att hitta en enhets MAC-adress när man bara vet dess IP-adress."
 created: 2026-05-28
 updated: 2026-05-28
 ---

@@ -112,6 +112,64 @@ way.
 
 **Lesson:** before reporting a surprising number, reproduce it by a different method.
 
+## 2026-08-20 — a check is only as good as its predicate, and mine was a list of known defects
+
+**What happened:** 21 notes published raw markdown or a flashcard question as their
+`<meta name="description">` on the live site. The audit had a `malformedDescription` check the
+whole time, and it reported clean.
+
+**Why the checks missed it:** the check tested for `::`, `;;`, `[[` and Dataview keywords — a list
+assembled from the defects known when it was written. Raw markdown was never in the list, so it
+passed. A green check over an incomplete predicate is indistinguishable from a green check over a
+complete one.
+
+It then took three more passes to enumerate, each limited the same way: a delegated review found 5
+of 10, a script found 16 of 17 (it tested bullets but not ordered lists), and a build sample
+surfaced the last 4, which no delimiter test could see because the separator had already been
+stripped.
+
+**Rule added:** the check now tests headings, `$` math, leading bullets, ordered lists and a
+question followed by its answer, and was verified in both directions. The Standard states the
+positive rule — a description is prose — rather than only enumerating what it must not contain.
+
+**Lesson:** when a check is a blocklist of known defects, it will keep passing for every defect
+nobody has met yet; state the rule as what the value must *be*.
+
+## 2026-08-20 — a detector that flags legitimate work is worse than a blind spot
+
+**What happened:** hunting the above, I wrote a detector for "description appears verbatim in a
+flashcard line". It returned 17 notes. Thirteen were fine — for a `begrepp` note the definition,
+the description and the card's answer are legitimately the same sentence. Acting on that list
+would have rewritten 13 correct descriptions into something worse.
+
+Independently, a delegated review flagged 12 notes for keeping cards under `## Begrepp` instead of
+`## Flashcards` — a deliberate arrangement the site's transformer was widened to support.
+
+**Why the checks missed it:** nothing was missed. The opposite: two detectors were confident about
+things that were correct, in one case because it did not know a documented decision existed.
+
+**Rule added:** a new detector's first output is reviewed as a *sample*, not as a worklist, and its
+false-positive rate is stated before anything is fixed in bulk. The `vault-bulk-edit` skill already
+required reading the dry run; this makes the false-positive count an explicit part of it.
+
+**Lesson:** measure a detector's precision before you trust its recall — a list of 17 that is 13
+wrong will do more damage than the defect it was chasing.
+
+## 2026-08-20 — delegation is good at noticing, bad at counting
+
+**What happened:** four read-only subagents reviewed four course folders for the thing no script
+can judge — whether the notes are any good. One surfaced a real defect class no check covered
+(F56). Collectively they produced roughly 21 findings, of which about 7 were real.
+
+**Why the checks missed it:** the automated checks cover conventions and structure. Nothing read
+the prose, because nothing can.
+
+**Rule added:** fan out read-only agents to *discover* an unnamed problem; then write a script to
+*enumerate* it, and never let an agent's own count stand as the number. Their own standard already
+says a worker's self-verification is not authoritative — here it was off by half.
+
+**Lesson:** use delegation to find out what to look for, and a script to find out how many.
+
 ## 2026-08-20 — a doc full of exact numbers is a doc that will go stale
 
 **What happened:** the steering and skill files now quote hard figures — 470 notes, 601 pages,

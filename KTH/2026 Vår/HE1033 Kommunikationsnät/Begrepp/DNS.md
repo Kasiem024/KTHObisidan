@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Struktur - Hierarkisk: Rot-servrar (.) Toppdomäner (.se, .com) Auktoritativa servrar. - Resolver: Den lokala mjukvaran (ofta i routern/OS) som ställer frågan."
+description: "DNS (Domain Name System) översätter domännamn (t.ex. kth.se) till IP-adresser."
 created: 2026-05-28
 updated: 2026-05-28
 ---

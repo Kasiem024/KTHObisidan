@@ -5,60 +5,73 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: in progress — an open question, no unfinished code.**
+**Status: nothing in flight.**
 
-Paused: 2026-08-20. Both repos are clean and pushed (vault `7f97793`, site `8ab233f`).
-Nothing is half-applied; the only thing outstanding is a decision.
+Everything is committed, both remotes match, and there is no partially-finished work.
 
-## The open question
+Settled 2026-08-20: the `description` harvest residue is fixed and checked (F56), and the
+parallel-wave question is decided — read-only fan-out is kept for semantic discovery only, the
+wave/DAG machinery is rejected. Both outcomes are recorded in
+`Meta/Vault Findings & Backlog.md` and `.kiro/lessons-learned.md`.
 
-Whether the reference `.kiro` in `Kana-App` has anything usable in its **parallel-wave and
-subagent-DAG** machinery, which F55 deliberately skipped as "does not apply to sequential
-single-repo work". That dismissal was made from a summary, not from the source.
+---
 
-## What is already known
+## What this file is for
 
-From `Kana-App/.kiro/steering/agent-standards.md`:
+A long task can outlive the conversation it started in. When that happens, the useful facts are
+not in the chat any more: which step we reached, what has already been verified, which decisions
+were made and why. Twice that had to be reconstructed by hand.
 
-- The delegation tree is **intentionally two levels**. Leaves never sub-delegate; iteration is an
-  orchestrator loop (`loop_to`: target / trigger / max_iterations), not deeper nesting.
-- **Read-only fan-out is cheap and parallel-safe** — soft ceiling ~6, not counted against the
-  write cap. **Write fan-out is capped at 4** and bounded by disjoint zones.
-- **Nested write-dispatch is fragile**; a write-dispatching stage must fall back to doing the work
-  directly if its dispatch fails or times out.
-- A subagent's result reaches the parent **only if its `summary` call completes**. They measured
-  **~22.6%** of dispatches silently returning nothing — ~53% for one coder role, near-zero for
-  read-only roles. `Pipeline completed: N stages finished` counts stages that *ran*, not stages
-  that *delivered*.
-- Their mitigation is a **unique marker token** per stage: the stage must begin its output with
-  it, so a missing marker is an unambiguous "lost", distinguishable from "found nothing".
+This is the smallest thing that fixes it — one short file, in the repo, updated when work pauses
+mid-task.
 
-## Why this is worth a real look rather than a dismissal
+## When to write it
 
-The lost-stage failure mode is the same class this vault has fought all session: a plausible
-result that is actually the absence of a result. "Returned nothing" and "found nothing" are
-byte-identical from the caller's side — see `.kiro/lessons-learned.md`.
+- Before a long-running operation, so an interruption is recoverable.
+- When pausing a multi-step task that is not finished.
+- **Not** for finished work. That belongs in `Meta/Vault Findings & Backlog.md`.
 
-And there were genuine read-only fan-out moments recently: reading ~30 files across another
-repository, auditing 500 notes, inspecting 601 built pages. Read-only fan-out is precisely the
-category they call safe.
+## When to clear it
 
-## Not yet read — start here
+As soon as the task is done and pushed, reset this file to "nothing in flight". A stale state
+file is worse than none, because it describes a situation that no longer exists.
 
-- `Kana-App/.kiro/steering/parallel-workflow.md`
-- `Kana-App/.kiro/skills/dev-workflows/technical/parallel-workflow-dispatch/SKILL.md`
-- `Kana-App/.kiro/skills/dev-workflows/technical/parallel-workflow-ops/SKILL.md`
-- `Kana-App/.kiro/plans/kana/subagent-dag-pilot.md`
-- `Kana-App/.kiro/docs/subagent-optimization-research-{brief,report}.md`
-- `Kana-App/.kiro/docs/subagent-usage-assessment.md`
+## Template
 
-## Constraint worth checking first
+```markdown
+# Current state
 
-Neither `vault-auditor` nor `site-builder` has the `subagent` tool, so today neither can fan out
-at all. Any adoption starts by deciding whether to grant it — and their standard warns that
-giving a read-only leaf the `subagent` tool lets it spawn writers.
+**Status: in progress — <one line: what is being done>**
 
-## Clear this file when the decision is made
+Started: YYYY-MM-DD
 
-Record the outcome in `Meta/Vault Findings & Backlog.md` and reset this file to
-"nothing in flight".
+## Done so far
+- <step>, verified by <evidence>
+
+## Next step
+<the single next action>
+
+## Decisions made
+- <decision> — because <reason>
+
+## Verified numbers at this point
+- audit: clean / N deviations
+- lint: N errors
+- build: pages / callouts / leaks
+
+## Do not redo
+- <things already tried that did not work, so they are not repeated>
+```
+
+## Where the durable facts live
+
+This file is deliberately thin, because most of what a new session needs is already permanent:
+
+| Need | Where |
+|---|---|
+| The rules | `Meta/Vault Standard.md` |
+| What changed and how it was verified | `Meta/Vault Findings & Backlog.md` |
+| How to do a recurring job | `.kiro/skills/` |
+| What fails silently | `.kiro/traps.md` |
+| Why a check exists | `.kiro/lessons-learned.md` |
+| What is unfinished right now | this file |

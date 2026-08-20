@@ -1,6 +1,6 @@
 ---
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
-description: "### Vanliga verktyg - Ping: Skickar *Echo Request* och väntar på *Echo Reply*. - Traceroute: Skickar paket med successivt högre TTL för att se vilka routers paketet passerar."
+description: "ICMP (Internet Control Message Protocol) används för att skicka kontrollmeddelanden mellan nätverksenheter."
 created: 2026-05-28
 updated: 2026-05-28
 ---
