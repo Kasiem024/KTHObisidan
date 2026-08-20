@@ -50,3 +50,14 @@ npx markdownlint-cli2 "**/*.md"
 Audit och linter gör olika saker: auditen kontrollerar vault-konventioner (taggar,
 `description`, mappar, sektionsordning), linter kontrollerar markdown-syntax. Reglerna som
 är avstängda och varför står i `Meta/Vault Standard.md`.
+
+## Kontrollera att auditen själv fortfarande fungerar
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scripts\Test-VaultAudit.ps1"
+```
+
+Bygger ett litet kastvault under `%TEMP%`, bevisar att auditen rapporterar det rent, och
+planterar sedan ett avsiktligt regelbrott per check — alla 29 stycken — och kräver att
+varje check slår. Tar ~8 sekunder. Kör efter varje ändring av `Vault-Audit.ps1`.
+CI kör det automatiskt vid varje push.

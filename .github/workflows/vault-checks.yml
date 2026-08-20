@@ -63,3 +63,16 @@ jobs:
             Write-Output '::error::Markdown lint failed. Most of it is auto-fixable: run  npx markdownlint-cli2 --fix "**/*.md"  and commit the result.'
             exit 1
           }
+
+      # Proves every check in the audit still fires on a deliberate violation. Without
+      # this, a regex that silently stops matching still exits 0 and reports clean. The
+      # test builds a throwaway fixture vault under %TEMP% — it never touches the real
+      # vault. Takes ~8 seconds.
+      - name: Audit self-test
+        shell: pwsh
+        run: |
+          & './Meta/Obsidian Plugins/Scripts/Test-VaultAudit.ps1'
+          if ($LASTEXITCODE -ne 0) {
+            Write-Output '::error::The audit self-test failed. One or more checks in Vault-Audit.ps1 no longer fire on a deliberate violation — that check has silently become inert.'
+            exit 1
+          }
