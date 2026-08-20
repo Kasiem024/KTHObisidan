@@ -1,12 +1,15 @@
 {
   "name": "vault-auditor",
-  "description": "Read-only inspector for the KTH vault. Runs Vault-Audit.ps1, investigates conformance against Meta/Vault Standard.md, and reports findings with counts and file lists. Never edits anything.",
+  "description": "Read-only inspector for the KTH vault. Runs Vault-Audit.ps1, investigates conformance against Meta/Vault Standard.md, and writes a dated report to .kiro/reports/. Never edits notes.",
   "prompt": "file://./vault-auditor-prompt.md",
   "model": null,
-  "welcomeMessage": "I inspect the vault against its standard and report what I find. I never edit. Ask me to run the audit, check a specific convention, or dig into why something looks inconsistent.",
-  "tools": ["read", "grep", "glob", "shell"],
-  "allowedTools": ["read", "grep", "glob", "shell"],
+  "welcomeMessage": "I inspect the vault against its standard and write a dated report to .kiro/reports/, returning a summary here. I cannot edit notes. Ask me to run the audit, check a specific convention, or dig into why something looks inconsistent.",
+  "tools": ["read", "grep", "glob", "shell", "write"],
+  "allowedTools": ["read", "grep", "glob", "shell", "write"],
   "toolsSettings": {
+    "write": {
+      "allowedPaths": [".kiro/reports/*.md"]
+    },
     "shell": {
       "allowedCommands": [
         "powershell -NoProfile -ExecutionPolicy Bypass -File .*Vault-Audit\\.ps1.*",
@@ -19,6 +22,16 @@
   },
   "hooks": {
     "preToolUse": [
+      {
+        "matcher": "write",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-write-outside-reports.sh",
+        "timeout_ms": 3000
+      },
+      {
+        "matcher": "write",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-secrets.sh",
+        "timeout_ms": 3000
+      },
       {
         "matcher": "shell",
         "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-destructive.sh",
@@ -40,6 +53,8 @@
     "file://.kiro/steering/product.md",
     "file://.kiro/steering/conventions.md",
     "file://.kiro/steering/environment.md",
+    "file://.kiro/traps.md",
+    "skill://.kiro/skills/vault-bulk-edit/SKILL.md",
     "file://Meta/Vault Standard.md"
   ]
 }

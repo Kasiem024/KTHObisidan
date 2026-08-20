@@ -43,6 +43,18 @@ the templates do not produce will be broken by the next note created. The concep
 once emitted `**Flashcards:**` as a bold label instead of a `## Flashcards` heading, which
 would have made every new note's cards publish as raw `::` syntax.
 
+## A stale number is a finding against the doc
+
+Several docs quote exact figures — 470 notes, 601 pages, 1965 callouts, 43 broken links, 1262
+scheduling markers. Every one was correct when written, and nothing verifies them afterwards. A
+confident wrong number is worse than no number, because it gets quoted instead of checked.
+
+When a figure in a doc disagrees with a fresh measurement, **fix the doc**; never adjust the
+measurement to match. The machine-checked copies are `site-baseline.json` and the audit's own
+output — prose copies are convenience, not truth. The same applies to a trap that no longer
+reproduces, or a path a skill names that has moved: report it against the document, not against
+the vault.
+
 ## Never commit secrets
 
 There are none in this vault today, and it should stay that way. Do not add API keys, tokens

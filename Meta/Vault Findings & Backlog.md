@@ -1448,6 +1448,71 @@ Verified: audit clean with `notesInScope` still **470** (of 540 files, up from 5
 new skill docs are correctly out of scope), lint still **493 files / 0 errors**, both agent
 JSONs parse, and every hook tested in both directions.
 
+### F55. ✅ DONE (2026-08-20) — third pass over the reference `.kiro`, and the patterns worth keeping
+
+Read the reference `.kiro` in `Kana-App` properly: the parts never opened before — `settings/`,
+`plans/` (448 files), `research/`, `debug-reports/`, `ui-review/`, the seven unread hooks, the
+agent standards in full, and the `ui-governance` reference set.
+
+**`traps.md` — the highest-signal thing either repo now has.** Their `codebase-traps.md` sets
+three entry rules: nothing derivable from general knowledge, **every entry silent**, and no
+additions without reproducing them. Our silent failure modes were scattered across three steering
+files where they read as background rather than landmines. Now consolidated: **nine** for the
+vault, **seven** for the site, each recording the wrong result it actually produced — 243
+corrupted pages that did not exist, 34 tracked markdown files that were really 529, 117 false
+audit failures on a clean clone, a build reporting 183 alt-less images that had already been fixed.
+
+**"Green" now states its own scope.** Their rule: *an `ALL GREEN` result means nothing was found
+by the checks that were listed — it does not mean the UI is good*, enforced with a mandatory
+`NOT AUDITED` section. That is exactly the mistake behind F50, where "0 pages leak card syntax"
+was true of the pages inspected and false of the vault. `tools/check-site.mjs` now prints a
+`NOT CHECKED` block on **every** run — visual layout, mobile, Swedish search, formula legibility as
+opposed to absence of errors, drawing readability, prose accuracy, load time — and the site
+steering says a pass describes the checks that ran.
+
+**`MANUAL-CHECK.md`** — the checks no script can make, ordered so Priority 1 takes about ten
+minutes, marked 📱 / 🖥️ / 📓. Priority 1 leads with the flashcard deck **inside Obsidian**, because
+that is the one thing automation can never confirm: the markers can all be present while the
+plugin no longer parses them into cards.
+
+**A discovery while writing it.** `Atlas/Dashboard.md` and `Atlas/Vault Health Report.md` are
+excluded from the site by `ignorePatterns`, with the reason recorded in the config — Quartz cannot
+run Dataview, so they would publish as raw query text. Zero pages emitted for either. They are
+Obsidian-only **by design**, so the checklist asks about them under 📓 rather than in a browser.
+Checking this is what stopped a checklist item pointing at a page that does not exist.
+
+**`lessons-learned.md`** — their framing: *without this file the skill stays exactly as smart as
+the day it was written*. It is for the cases where everything was green and the result was still
+wrong, which is a different thing from this backlog. Seeded with six real entries for the vault
+and four for the site, each ending in the rule it produced.
+
+**Durable audit reports.** Copied from their `researcher`, which writes its full report to disk and
+returns only a summary plus a path. `vault-auditor` now has a `write` tool restricted by
+`toolsSettings.write.allowedPaths` to `.kiro/reports/*.md`, with
+`hooks/block-write-outside-reports.sh` as a backstop — verified that a write to a note or to the
+Standard is refused. Audits become comparable over time instead of evaporating in a conversation.
+
+**`current-state.md`** — a thin version of their `session.json`. Records only what is unfinished
+right now, with an explicit rule to clear it when done, because a stale state file is worse than
+none. This session's context was compacted twice and the position had to be reconstructed by hand
+both times.
+
+**A real bug in what shipped on 2026-08-19.** Their agents load skills with a `skill://` scheme;
+mine used `file://`. Corrected in both agent JSONs, which now also load `traps.md`. Added
+`.kiro/settings/lsp.json` to the site repo — a TypeScript entry giving real symbol navigation over
+`quartz.ts`, `plugins/flashcards/` and `tools/`; the vault gets none, being pure Markdown. Gave
+`site-builder` the numbered workflow, error-handling table and output format their agent standard
+requires, including a mandatory "what you did not check".
+
+**Deliberately not copied:** `plans/` (448 files of status machine built for multi-agent
+orchestration), the parallel-wave and subagent-DAG machinery — though their measurement that
+**22.6%** of subagent dispatches silently return nothing is worth remembering — `docs/add-a-feature.md`,
+and 262 skill files of Mermaid references, slide templates and canvas fonts.
+
+Verified: audit clean and exit 0 in both modes, lint **493 files / 0 errors** (the new `.kiro`
+docs correctly out of scope), both agent JSONs and `lsp.json` parse, every hook tested in both
+directions, `check-site` still exit 0 with all nine metrics matching the baseline.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

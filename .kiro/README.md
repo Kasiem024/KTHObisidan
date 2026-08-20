@@ -9,22 +9,24 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `steering/conventions.md` | Hard rules; what must never be touched |
 | `steering/environment.md` | Windows / PowerShell / Google Drive / encoding pitfalls |
 | `steering/documentation-standard.md` | Which docs to update, and where each fact belongs |
+| `traps.md` | The nine things that fail **silently**. Read before trusting a measurement |
+| `lessons-learned.md` | Where a miss becomes a new rule |
+| `current-state.md` | What is unfinished right now. Empty when nothing is in flight |
 | `skills/` | **Procedures** for the recurring jobs, loaded on demand |
+| `reports/` | Dated audit reports, written by `vault-auditor` |
 | `hooks/*.sh` | `preToolUse` guards — read stdin, `exit 2` blocks |
-| `agents/vault-auditor.*` | Read-only conformance inspector |
+| `agents/vault-auditor.*` | Conformance inspector; writes reports, never edits notes |
 
-## Steering vs. skills vs. the vault's own docs
+## The four kinds of knowledge here
 
-Three different jobs, and keeping them apart is what stops the docs drifting:
+Keeping these apart is what stops the docs drifting into each other:
 
 - **`Meta/Vault Standard.md`** — the rules themselves. Single source of truth.
-- **`steering/`** — how to *work on* the vault: what is off limits, which traps exist, where
-  each fact belongs. Loaded automatically.
-- **`skills/`** — how to *carry out* a recurring job, step by step. Loaded only when relevant,
-  so detail costs nothing until needed.
-
-Steering deliberately does not restate the conventions, and skills deliberately do not
-restate the steering.
+- **`steering/`** — how to *work on* the vault. Loaded automatically.
+- **`skills/`** — how to *carry out* a recurring job, step by step. Loaded on demand.
+- **`traps.md` + `lessons-learned.md`** — what has actually gone wrong here, and why each check
+  exists. Traps are silent failure modes; lessons are cases where everything was green and the
+  result was still wrong.
 
 ## Skills
 
@@ -54,11 +56,12 @@ invoked through Git bash:
 | `protect-sr-data.sh` | `shell` | Bulk rewrites of `<!--SR:-->` data or card separators |
 | `block-destructive.sh` | `shell` | Recursive deletes, `reset --hard`, `clean -f`, force push, `branch -D` |
 | `block-secrets.sh` | `write`, `shell` | Key material and credential patterns — this repo is public |
+| `block-write-outside-reports.sh` | `write` | Any write by `vault-auditor` outside `.kiro/reports/` |
 
-They are a backstop, not a guarantee — a `preToolUse` hook sees the command, not the diff. The
-real protection is the rules in `steering/conventions.md`. Where a hard guarantee is needed,
-restrict the agent instead: `vault-auditor` has no `write` tool at all, which is why it cannot
-edit anything regardless of hooks.
+They are a backstop, not a guarantee — a `preToolUse` hook sees the command, not the diff. Where
+a hard guarantee is needed, restrict the tool instead. `vault-auditor` is the worked example: its
+`write` tool is confined by `toolsSettings.write.allowedPaths` to `.kiro/reports/*.md`, and the
+hook above is only a second line of defence.
 
 ## Excluded from the vault's own tooling
 
