@@ -48,8 +48,7 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` tracks findings F1–F56: all closed except **F10**, which is
-parked because the author removes those files personally. Both the audit and the linter run
+`Meta/Vault Findings & Backlog.md` tracks findings F1–F56: all closed. Both the audit and the linter run
 automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on

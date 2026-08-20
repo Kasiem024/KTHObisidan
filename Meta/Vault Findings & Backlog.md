@@ -330,7 +330,7 @@ most of the broken-link drop (43 → 27).
 **Verify in Obsidian:** confirm the new Dataview lists render (they are empty until the
 2026 Höst courses have notes, which is expected).
 
-### F10. ⏸️ PARKED (2026-08-18) — user will remove these files personally
+### F10. ✅ DONE (2026-08-20) — conversion tooling removed, literature files renamed
 
 **Decision:** leave everything in `Filer/Litteraturlista/` untouched. The user will
 delete what they no longer need themselves. **Do not touch these files.**
