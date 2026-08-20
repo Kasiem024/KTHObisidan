@@ -107,8 +107,8 @@ foreach($f in $md){
       # A description must read as plain text: no card delimiters, no wikilink
       # brackets, nothing lifted out of a Dataview query, and no raw markdown. The
       # markdown cases are all harvest residue - a generator took the first content
-      # line without checking it was prose, so 16 notes published a heading, a bullet
-      # or a $...$ formula as their meta description and social preview.
+      # line without checking it was prose, so 21 notes published a heading, a bullet,
+      # a $...$ formula or a quiz item as their meta description and social preview.
       elseif($dv -match '::|;;|\[\[' -or $dv -cmatch '\b(FROM|WHERE|SORT|FLATTEN)\b'){ (Bucket 'malformedDescription').Add($rel) }
       elseif($dv -match '#{2,}' -or $dv -match '\$' -or $dv -match '^"?\s*-\s' -or $dv -match '^"?\s*\d+\.\s'){ (Bucket 'malformedDescription').Add($rel) }
       # A summary is not a quiz item. Four notes had a flashcard's question AND its

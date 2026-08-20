@@ -11,7 +11,7 @@ that have already been made here.
 
 | Skill | Use it when |
 |---|---|
-| **`vault-bulk-edit`** | Any change touching more than a handful of notes. The single most dangerous operation in this vault — it has both fixed 745 violations in one pass and nearly destroyed a live flashcard deck. |
+| **`vault-bulk-edit`** | Any change touching more than a handful of notes. The single most dangerous operation in this vault — it has both fixed 745 violations mechanically in one pass and nearly destroyed a live flashcard deck. |
 | **`add-a-convention`** | Adding or changing a rule. A documented-but-unchecked rule always drifts; this is the pipeline that stops it. |
 
 ## Navigation

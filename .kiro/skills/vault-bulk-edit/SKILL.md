@@ -5,9 +5,10 @@ description: Safe procedure for changing many notes at once in the KTH vault - i
 
 # Bulk editing the vault
 
-Most work here is a sweep over hundreds of notes. Done properly it fixed 745 lint
-violations across 213 files with zero damage. Done carelessly it silently deletes a live
-spaced-repetition deck, and you will not notice for weeks.
+Most work here is a sweep over hundreds of notes. Done properly it fixed 745 lint violations
+mechanically across 213 notes with zero damage — 745 of a total 767, the rest needing judgement.
+Done carelessly it silently deletes a live spaced-repetition deck, and you will not notice for
+weeks.
 
 Every step below exists because skipping it caused a real failure.
 

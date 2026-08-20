@@ -212,7 +212,7 @@ The definition, in plain prose. Wiki-link related concepts inline.
 - `## Tenta-fokus` is **optional**. Add it only where there is real exam guidance;
   most notes do not have one.
 - The definition is written as plain prose. Opening with a bold term is allowed but is
-  not the house style (15 notes do, 304 do not).
+  not the house style (15 notes do, 305 do not).
 - `## Kopplat till` links **related concepts only**. Do not link study-question lists
   or dated session notes just because they mention the term; that dilutes the graph
   without adding meaning. Leaving it empty is fine when nothing genuinely relates.
@@ -228,13 +228,13 @@ The definition, in plain prose. Wiki-link related concepts inline.
   **Never** change a separator or strip an `<!--SR:...-->` comment: they drive a live review
   schedule. The site rewrites cards into collapsible callouts at build time and never touches
   the vault. It converts cards **anywhere in a note**, not only under this heading, so the
-  34 notes that keep their cards elsewhere still publish correctly — but new concept notes
+  29 notes that keep their cards elsewhere still publish correctly — but new concept notes
   should still use `## Flashcards` for consistency.
 
 **Concept collections are a recognised exception.** Notes named like
 `HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` gather many short definitions
 into a single note, written directly as flashcards, and have no `## Definition`
-section of their own. 32 of the 352 concept notes are of this kind. They are still
+section of their own. 31 of the 352 concept notes are of this kind. They are still
 tagged `begrepp` and still end with `## Flashcards`.
 
 ### Images and embeds

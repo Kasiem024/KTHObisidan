@@ -48,9 +48,12 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` tracks findings F1–F50, all closed. Remaining work is
-content the author must write — chiefly `## Tenta-fokus` sections for the concepts
-prioritised in `Atlas/Tenta-prioritering.md`.
+`Meta/Vault Findings & Backlog.md` tracks findings F1–F56: all closed except **F10**, which is
+parked because the author removes those files personally. Both the audit and the linter run
+automatically on every push via `.github/workflows/vault-checks.yml`.
+
+Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on
+42 of the 352 concept notes, prioritised in `Atlas/Tenta-prioritering.md`.
 
 ## What it is not
 

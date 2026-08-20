@@ -110,6 +110,32 @@ WHERE !description
 SORT file.folder ASC
 ```
 
+## 🧾 Noter med `description` som inte är löpande text
+
+`description` publiceras som `<meta name="description">` och styr sökresultat och
+länkförhandsvisningar. Den ska vara **en mening löpande text** — inte en rubrik, en
+punktlista, en formel eller ett flashcard. 21 noter publicerade sådant skräp fram till
+2026-08-20 (F56), eftersom en generator tog första innehållsraden utan att kontrollera att
+den var prosa. Auditen kontrollerar detta nu; den här listan visar samma sak i Obsidian.
+
+```dataview
+LIST
+FROM "KTH" AND !#excalidraw
+WHERE description
+  AND (contains(description, "##")
+    OR contains(description, "$")
+    OR contains(description, "::")
+    OR contains(description, ";;")
+    OR regexmatch("^\s*(-|\d+\.)\s.*", description)
+    OR regexmatch(".*\?\s+[A-ZÅÄÖ].*", description))
+  AND !contains(file.folder, "Litteraturlista")
+SORT file.folder ASC
+```
+
+Wikilink brackets in a `description` are deliberately **not** tested here: writing them as a
+string literal in this query makes the audit's own wikilink checker read them as a link and
+report a broken one. The audit covers that case, so this view does not repeat it.
+
 ## 🎴 Flashcards som inte är sista avsnittet
 
 `## Flashcards` ska alltid ligga sist. Detta är ett hårt krav, inte en preferens:

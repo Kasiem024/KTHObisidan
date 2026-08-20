@@ -7,18 +7,25 @@ Run all four. A change is not finished until every one passes.
 The deck is live review data. Count these before and after; any difference that you cannot
 explain is data loss.
 
-| Measure | Pattern | Expected (2026-08-19) |
+**The absolute values matter far less than the fact that they are unchanged.** They are
+method-dependent — a slightly different regex gives a different, equally "correct" number —
+so always use the exact patterns below, and treat a mismatch against the snapshot as a
+prompt to re-measure rather than as proof of damage.
+
+| Measure | Pattern | Snapshot (2026-08-20) |
 |---|---|---|
-| scheduling markers | `<!--SR:` | **1262** in study notes |
-| single-line | `(?m)^.+?::\s` | 1070 |
-| single-line reversed | `(?m)^.+?;;\s` | 270 |
+| scheduling markers | `<!--SR:` | **1262** |
+| single-line | `(?m)^.+?::\s` | 1071 |
+| single-line reversed | `(?m)^.+?;;\s` | 269 |
 | multi-line | `(?m)^\s*\|\|\s*$` | 100 |
 | multi-line reversed | `(?m)^\s*\?\?\s*$` | 219 |
-| disabled | `DISABLEDFLASHCARD` | 13 |
+| disabled | `DISABLEDFLASHCARD` | 10 |
 
-**Count study notes and `Meta/` docs separately.** A naive count reports the docs that
-*describe* `<!--SR:-->` alongside real markers — that produced a false "1273 vs 1270"
-mismatch and a minute of unnecessary panic. Exclude `\\Meta\\` from the study-note count.
+**Scope for every row: study notes only** — exclude `\\Meta\\` *and* `\\.kiro\\`. A naive
+count reports the docs that *describe* `<!--SR:-->` and `DISABLEDFLASHCARD` alongside the real
+ones. That produced a false "1273 vs 1270" mismatch and a minute of unnecessary panic, and this
+very table used to say `13` disabled — the count with `Meta/` included — while the row above it
+was scoped to study notes. Mixed scopes in one table is the same bug in miniature.
 
 ## 2. Audit — must be clean
 

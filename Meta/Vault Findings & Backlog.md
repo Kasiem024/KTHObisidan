@@ -19,7 +19,9 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ### 🧹 2026-08-19 (16) — MARKDOWN LINTING (F52)
 
-Linted all 500 lintable notes: **767 violations → 0**, 220 files fixed. The linter's
+Linted all 500 lintable notes: **767 violations → 0**. 745 of those were fixed mechanically
+across 213 notes, 10 more by hand in the same pass, and the last 12 needed judgement and were
+done separately — see F52 for the per-rule breakdown. The linter's
 defaults needed correcting first — MD011's 8 "reversed links" were Templater expressions,
 and MD034's auto-fix genuinely **broke the course template** by splitting a `<% %>`
 expression out of a URL (caught and repaired). Excalidraw and templates are now excluded
@@ -1572,6 +1574,66 @@ Verified: audit `RESULT: clean`, exit 0, `notesInScope=470`; lint 493 files / 0 
 `<!--SR:` at 1262 and all four separator counts byte-identical before and after; a fresh build of
 the live vault emits 601 pages with **0** raw-markdown and **0** question-and-answer meta
 descriptions, and all nine `check-site` metrics match the baseline exactly.
+
+### F57. ✅ DONE (2026-08-20) — every figure in every doc measured against reality
+
+The docs had accumulated hard numbers with no mechanism verifying any of them. This is the
+first pass that actually checked, and it was done by **extraction, not by reading**: a script
+pulled every numeric claim and every backticked path out of all 40 docs across both repos, and
+each was compared against a fresh measurement.
+
+**Corrected — stale figures:**
+
+| Doc | Said | Measured |
+|---|---|---|
+| `.kiro/steering/product.md` | findings F1–F50, all closed | F1–F56, all closed **except F10** (parked) |
+| `llms.txt` | `~500+` notes | ~470 in scope, 539 `.md` on disk |
+| `llms.txt`, `Meta/Vault Standard.md` | 34 notes keep cards outside `## Flashcards` | **29** in scope |
+| `Meta/Vault Standard.md` | Definition opens bold: 15 vs **304** plain | 15 vs **305** — and 15+304 never summed to the 320 notes that have the section |
+| `Meta/Vault Standard.md` | 32 concept collections | **31** |
+| `verification.md` | `::` 1070, `;;` 270 | **1071**, **269** by the doc's own regexes |
+| `PROJECT-NOTES.md` | 524 notes; dataview 145 of ~170 fences | **507** in publish scope; **141 of 168** |
+| `PROJECT-NOTES.md` | math 79, tables 52, callouts 27 | **78**, **51**, **26** |
+| `Vault-Audit.ps1` comment | 16 notes | **21** (written hours earlier, already wrong) |
+
+**A mixed scope inside one table.** `verification.md` listed `DISABLEDFLASHCARD` as 13 — the
+count *including* `Meta/` — directly beneath a row scoped to study notes only. The study-note
+figure is **10**. The same table warns about exactly this trap for `<!--SR:-->` markers, and had
+fallen into it one row down. Every row now names the scope, and the table says plainly that the
+absolute values are method-dependent and that **unchanged** is what matters, not the number.
+
+**A number I nearly broke by "correcting" it.** Four docs quoted 745, 755, 767 and 220 for the
+same lint sweep. Git settled it: commit `ebb5599` auto-fixed **745** violations across **213**
+notes, 10 more went by hand in that commit (its message says 755), and `9efe359` closed the last
+**12** — total **767**. So 745 was right all along; it simply never said it counted only the
+mechanical subset. I changed it to 755, caught it, and reverted. Every one of those figures now
+states which subset it is.
+
+**A trap, not a stale number.** The site's size figures (~90 MB, 67.4 MB of HTML, 5,203 KB
+heaviest page) describe the *deployed* artifact. `tools/slim-svg.mjs` runs only as a step in
+`deploy.yml` and has no npm script, so a local `npx quartz build` measures 105.5 MB / 82.8 MB /
+6,796 KB — precisely the "before" numbers, which invites the conclusion that the slimmer broke.
+Recorded as site trap **T8** and both figures now labelled.
+
+**All 74 "dead path references" were false positives** from my own extractor: cross-repo
+references, generic extensions like `.ps1`, the deliberately-absent `robots.txt`, and two
+mentions of `quartz.config.ts` that exist precisely to say *"v5 uses YAML, not
+`quartz.config.ts`"*. No doc points at a file that should exist and does not.
+
+**Loop closed.** `Atlas/Vault Health Report.md` gained a Dataview query for non-prose
+descriptions, so F56's rule is now visible in Obsidian as well as enforced by the audit — the
+"a rule without a check will drift" requirement.
+
+**Confirmed accurate, not changed:** 470 notes in scope, 24 courses, six terms, 352 concept
+notes with `## Definition` 320 / `## Flashcards` 320 / `## Kopplat till` 297 / Flashcards-last
+320 of 320, `## Tenta-fokus` on 42, 1262 scheduling markers, `||` 100 and `??` 219, 13 Atlas
+notes, 105 PDFs / 84 PNGs / 6 JPGs, 601 pages, and all nine `site-baseline.json` metrics.
+`Atlas/Tenta-prioritering.md` was already correct and already labels its tables a dated
+snapshot with a live query beneath — which is the pattern the rest of the docs should copy.
+
+Verified: audit `RESULT: clean`, exit 0, `notesInScope=470`; lint 493 files / 0 errors; a fresh
+build emits 601 pages with `check-site` exit 0 and every metric matching baseline; the claim
+extractor re-run reports zero remaining discrepancies.
 
 ---
 
