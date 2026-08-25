@@ -8,11 +8,10 @@
   "obsidian-linter",
   "omnisearch",
   "text-extractor",
-  "handwritten-notes",
-  "templater-obsidian",
   "obsidian-style-settings",
   "obsidian-git",
   "obsidian-spaced-repetition",
   "dataview",
-  "obsidian-advanced-slides"
+  "templater-obsidian",
+  "table-editor-obsidian"
 ]

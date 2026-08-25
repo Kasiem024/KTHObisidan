@@ -1,7 +1,15 @@
+<%*
+const k = tp.user.kursinfo(tp);
+const datum = tp.date.now("YYYY-MM-DD");
+const amneArr = k.hasSubjects ? k.subjects : (k.hasCourse ? [await tp.system.prompt("Ämne (t.ex. programmering / nätverk)")] : []);
+const taggar = ["övrigt", k.kurskod, ...amneArr, "KTH", "year" + k.year].filter(Boolean);
+const bas = [k.kurskod, k.kursnamn].filter(Boolean).join(" ");
+const beskrivning = bas ? `${bas} – ${tp.file.title}` : tp.file.title;
+-%>
 ---
-tags: [övrigt, <% tp.file.folder(true).split('/')[2].split(' ')[0] || "Kurskod" %>, <% tp.system.prompt("Ämne (t.ex. programmering / nätverk / ekonomi)") %>, KTH, year<% tp.date.now("YYYY") %>]
-description: "<% tp.system.prompt("Kort beskrivning, en mening (visas i sökresultat och länkförhandsvisningar)") %>"
-created: <% tp.date.now("YYYY-MM-DD") %>
-updated: <% tp.date.now("YYYY-MM-DD") %>
+tags: [<% taggar.join(", ") %>]
+description: "<% beskrivning %>"
+created: <% datum %>
+updated: <% datum %>
 ---
 # <% tp.file.title %>

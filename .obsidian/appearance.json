@@ -2,7 +2,6 @@
   "accentColor": "",
   "baseFontSize": 27,
   "enabledCssSnippets": [
-    "stylesPDF",
     "styles"
   ],
   "translucency": false,

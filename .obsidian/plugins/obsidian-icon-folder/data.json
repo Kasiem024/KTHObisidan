@@ -23,66 +23,66 @@
         "useFilePath": true
       },
       {
-        "rule": "Journal",
-        "icon": "FasPen",
-        "for": "everything",
+        "rule": "Litteraturlista",
+        "icon": "FasBook",
+        "for": "folders",
         "order": 1,
         "useFilePath": true
       },
       {
-        "rule": "Bilagor",
-        "icon": "FasImage",
-        "for": "everything",
+        "rule": "Kurs Mapp Mall",
+        "icon": "FasClone",
+        "for": "folders",
         "order": 2,
         "useFilePath": true
       },
       {
-        "rule": ".pdfs",
+        "rule": "Anteckningar",
+        "icon": "TiNotes",
+        "for": "folders",
+        "order": 10,
+        "useFilePath": true
+      },
+      {
+        "rule": "Begrepp",
+        "icon": "FasBrain",
+        "for": "folders",
+        "order": 11,
+        "useFilePath": true
+      },
+      {
+        "rule": "Föreläsningar",
+        "icon": "FasChalkboard",
+        "for": "folders",
+        "order": 12,
+        "useFilePath": true
+      },
+      {
+        "rule": "Filer",
+        "icon": "FasPaperclip",
+        "for": "folders",
+        "order": 13,
+        "useFilePath": true
+      },
+      {
+        "rule": ".pdf",
         "icon": "FasFilePdf",
         "for": "files",
-        "order": 4,
+        "order": 40,
         "useFilePath": true
       },
       {
         "rule": ".jpg",
         "icon": "FasImage",
         "for": "files",
-        "order": 4,
+        "order": 41,
         "useFilePath": true
       },
       {
         "rule": ".png",
         "icon": "FasImage",
         "for": "files",
-        "order": 6,
-        "useFilePath": true
-      },
-      {
-        "rule": "Lektioner",
-        "icon": "FasCalendar",
-        "for": "everything",
-        "order": 8,
-        "useFilePath": true
-      },
-      {
-        "rule": "PDFs",
-        "icon": "FasFilePdf",
-        "for": "everything",
-        "order": 9,
-        "useFilePath": true
-      },
-      {
-        "rule": "Obsidian Plugins/",
-        "icon": "SiObsidian",
-        "for": "everything",
-        "order": 11,
-        "useFilePath": true
-      },
-      {
-        "rule": "Anteckningar",
-        "icon": "TiNotes",
-        "for": "everything",
-        "order": 12,
+        "order": 42,
         "useFilePath": true
       }
     ],
@@ -107,5 +107,15 @@
     "useInternalPlugins": false
   },
   "Obsidian Plugins": "SiObsidian",
-  "KTH": "FasSchool"
+  "Meta/Obsidian Plugins": "SiObsidian",
+  "KTH": "FasSchool",
+  "Atlas": "FasMap",
+  "Meta": "FasWrench",
+  "Ericsson": "FasBriefcase",
+  "KTH/2024 Höst": "FasCalendar",
+  "KTH/2024 Vår": "FasCalendar",
+  "KTH/2025 Höst": "FasCalendar",
+  "KTH/2025 Vår": "FasCalendar",
+  "KTH/2026 Vår": "FasCalendar",
+  "KTH/2026 Höst": "FasCalendar"
 }

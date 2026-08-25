@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b4d568b84750df56",
+        "id": "664c0d4b4334c59e",
         "type": "tabs",
         "children": [
           {
-            "id": "95b8a6726086199c",
+            "id": "c84173fdb101df82",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Atlas/Vault Health Report.md",
-                "mode": "preview",
+                "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 02 Systemmodeller.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vault Health Report"
+              "title": "HI1031 Begrepp - Kap 02 Systemmodeller"
             }
           }
         ]
@@ -42,7 +42,7 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "autoReveal": false,
-                "showSearch": true,
+                "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
@@ -199,6 +199,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "templater-obsidian:Templater": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -208,14 +209,29 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "omnisearch:Omnisearch": false,
       "handwritten-notes:Create empty handwritten note": false,
-      "templater-obsidian:Templater": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "85154ac5110aa970",
+  "active": "c84173fdb101df82",
   "lastOpenFiles": [
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 02 Systemmodeller.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Föreläsningar/2026-08-24 Föreläsning 1.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Grunder (kap 1-2).md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Begrepp - Grunder (kap 1-2).md",
+    "Meta/Obsidian Plugins/Templates/Ny kurs.md",
+    "Meta/Obsidian Plugins/Templates/_Auto (mappstyrd).md",
+    "Meta/Obsidian Plugins/Scripts/nyKurs.js",
+    "KTH/_Kvalitetskoll.md",
+    "Meta/Obsidian Plugins/Scripts/nastaNummer.js",
+    "Meta/Obsidian Plugins/Scripts/kursinfo.js",
+    "KTH/2024 Vår/CM1005 Extern Redovisning/Föreläsningar/2024-01-16 - CM1005 - Lektion.md",
+    "KTH/2024 Vår/CM1005 Extern Redovisning/Föreläsningar/2024-01-23 - CM1005 - Lektion.md",
+    "KTH/2024 Vår/CM1005 Extern Redovisning/Föreläsningar/2024-01-31 - CM1005 - Lektion.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Litteraturlista/Distributed Systems Concepts and Design 2012 Edition 5.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/_index.md",
     "Atlas/Vault Health Report.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/04 Kursinfo & Tenta/Litteraturlista/Distributed Systems Concepts and Design 2012 5th Edition.opt.md",
     "KTH/2026 Höst/HI2002 Routing i IP-nät/04 Kursinfo & Tenta/Litteraturlista/CCNP and CCIE Enterprise Core ENCOR 350-401.opt.md",
@@ -229,19 +245,6 @@
     "Meta/Obsidian Plugins/Templates/Annotator Template.md",
     "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/WACC.md",
     "KTH/2024 Vår/HH1802 Finansiering och Organisationsteori/Begrepp/Untitled.md",
-    "PREVIEW - WACC (AI-optimized).md",
-    "NotebookLM Ideas.md",
-    "Atlas/2025 MOC.md",
-    "Atlas/2026 MOC.md",
-    "Atlas/2024 MOC.md",
-    "Atlas/Hårdvara MOC.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/HI1031 Distribuerade informationssystem.md",
-    "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Anteckningar/Protokoll 1 från Gruppmöte.md",
-    "Atlas/Programmering MOC.md",
-    "Atlas/Ekonomi MOC.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/HI1027 Begrepp inför TEN1.md",
-    "KTH/Generella Anteckningar KTH.md",
-    "KTH/2025 Höst/HI1027 Objektorienterad Programmering/Begrepp/Lab1 Begrepp HI1027.md",
     "David Hucaby_ Jason Gooley_ Ramiro Garza Rios_ Bradley Edgeworth - CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide (2019, Cisco Press) - libgen.li.epub",
     "Forouzan, Behrouz - Data Communications and Network (2013, McGraw-Hill) - libgen.li.pdf",
     "Zaid Sabih - Learn Ethical Hacking From Scratch_ Your Stepping Stone To Penetration Testing (2018, Packt Publishing) - libgen.li.pdf",
@@ -249,9 +252,6 @@
     "Obekräftade 403739.crdownload",
     "Obekräftade 555178.crdownload",
     "Obekräftade 709509.crdownload",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/04 Kursinfo & Tenta/Litteraturlista/Distributed Systems Concepts and Design 2012 5th Edition.pdf",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/04 Kursinfo & Tenta/Litteraturlista",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/04 Kursinfo & Tenta/Ny mapp",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/Pasted image 20260115153312.png",
     "Untitled.canvas",
     "Pasted image 20250321104620.png",

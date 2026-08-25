@@ -1,13 +1,23 @@
+<%*
+const k = tp.user.kursinfo(tp);
+const datum = tp.date.now("YYYY-MM-DD");
+const n = tp.user.nastaNummer(tp, "Föreläsning");
+const titel = `${datum} Föreläsning ${n}`;
+const amneArr = k.hasSubjects ? k.subjects : [await tp.system.prompt("Ämne (t.ex. programmering / nätverk)")];
+const taggar = ["föreläsning", k.kurskod, ...amneArr, "KTH", "year" + k.year].filter(Boolean);
+const beskrivning = [k.kurskod, k.kursnamn, "Föreläsning " + n].filter(Boolean).join(" ");
+await tp.file.rename(titel);
+-%>
 ---
-tags: [föreläsning, <% tp.file.folder(true).split('/')[2].split(' ')[0] || "Kurskod" %>, <% tp.system.prompt("Ämne (t.ex. programmering / nätverk / ekonomi)") %>, KTH, year<% tp.date.now("YYYY") %>]
-description: "<% tp.system.prompt("Kort beskrivning, en mening (visas i sökresultat och länkförhandsvisningar)") %>"
-created: <% tp.date.now("YYYY-MM-DD") %>
-updated: <% tp.date.now("YYYY-MM-DD") %>
+tags: [<% taggar.join(", ") %>]
+description: "<% beskrivning %>"
+created: <% datum %>
+updated: <% datum %>
 ---
-# <% tp.file.title %>
+# <% titel %>
 
 > [!info] Kurs
-> [[KTH/<% tp.file.folder(true).split('/')[1] %>/<% tp.file.folder(true).split('/')[2] %>/_index|<% tp.file.folder(true).split('/')[2] || "Kurskod" %>]]
+> [[<% k.courseFolderPath %>/_index|<% k.courseSegment %>]]
 
 ## Sammanfattning
 
