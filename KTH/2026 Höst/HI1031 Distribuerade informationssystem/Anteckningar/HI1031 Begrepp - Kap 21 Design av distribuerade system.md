@@ -4,7 +4,7 @@ created: 2026-08-24
 updated: 2026-08-24
 description: "Flashcards HI1031 kap 21 – design av distribuerade system: Google-infrastrukturen (GFS, Chubby, Bigtable, MapReduce) och dess designprinciper."
 ---
-# HI1031 Begrepp - Kap 21 Design av distribuerade system (Google)
+# HI1031 Begrepp - Kap 21 Design av distribuerade system
 
 Vad kännetecknar den fysiska arkitekturen bakom Googles infrastruktur?::==Enormt många billiga standarddatorer (commodity hardware)== i datacenter – man utgår från att komponenter *kommer* att fela och designar för det.
 

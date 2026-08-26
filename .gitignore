@@ -1,2 +1,8 @@
 litteraturlista/
 *.gdoc
+
+# Third-party course material downloaded from Canvas: KTH templates, grading criteria,
+# detailed plans, seminar slides and other students' example theses. This repository and
+# the site built from it are public, so none of it belongs in git. The vault keeps the
+# files locally; the audit and the linter skip the folder.
+**/Filer/Canvas/

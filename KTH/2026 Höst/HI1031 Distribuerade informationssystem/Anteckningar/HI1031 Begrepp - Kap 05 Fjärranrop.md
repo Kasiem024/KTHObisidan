@@ -4,7 +4,7 @@ created: 2026-08-24
 updated: 2026-08-24
 description: "Flashcards HI1031 kap 5 – fjärranrop: request-reply, RPC, RMI, anropssemantik och proxy/skeleton."
 ---
-# HI1031 Begrepp - Kap 05 Fjärranrop (Remote Invocation)
+# HI1031 Begrepp - Kap 05 Fjärranrop
 
 ## Grundmönster
 

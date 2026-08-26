@@ -12,14 +12,22 @@ method-dependent — a slightly different regex gives a different, equally "corr
 so always use the exact patterns below, and treat a mismatch against the snapshot as a
 prompt to re-measure rather than as proof of damage.
 
-| Measure | Pattern | Snapshot (2026-08-20) |
+| Measure | Pattern | Snapshot (2026-08-26) |
 |---|---|---|
 | scheduling markers | `<!--SR:` | **1262** |
-| single-line | `(?m)^.+?::\s` | 1071 |
-| single-line reversed | `(?m)^.+?;;\s` | 269 |
-| multi-line | `(?m)^\s*\|\|\s*$` | 100 |
+| single-line | `(?m)^[^\|\r\n]+?::` | 1500 |
+| single-line reversed | `(?m)^[^\|\r\n]+?;;` | 596 |
+| multi-line | `(?m)^\s*\|\|\s*$` | 245 |
 | multi-line reversed | `(?m)^\s*\?\?\s*$` | 219 |
 | disabled | `DISABLEDFLASHCARD` | 10 |
+
+The two single-line patterns count **card lines**, one per line, and exclude table rows (a
+`|` anywhere before the separator). They were changed on 2026-08-26: the previous versions
+required whitespace *after* the separator (`::\s`), and the HI1031/HI1032 notes added in
+August write cards as `**RMI** (Remote Method Invocation);;Att ett objekt...` with none. The
+old patterns therefore reported `;;` as 269 both before and after 292 new reversed cards
+appeared — a measurement that could not see a third of the deck. If you tighten these
+patterns again, re-derive the numbers a second way and compare.
 
 **Scope for every row: study notes only** — exclude `\\Meta\\` *and* `\\.kiro\\`. A naive
 count reports the docs that *describe* `<!--SR:-->` and `DISABLEDFLASHCARD` alongside the real
@@ -33,7 +41,7 @@ was scoped to study notes. Mixed scopes in one table is the same bug in miniatur
 powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scripts\Vault-Audit.ps1"
 ```
 
-Expected `RESULT: clean - no deviations from the standard.` with `notesInScope=470`, exit
+Expected `RESULT: clean - no deviations from the standard.` with `notesInScope=561`, exit
 code **0**. Add `-Detail` to list offenders. It exits **1** when not clean, so it can be
 gated on.
 
@@ -46,7 +54,7 @@ depend on state git does not store. Locally, run with no switches.
 npx markdownlint-cli2 "**/*.md"
 ```
 
-Expected `Linting: 493 file(s)` / `Summary: 0 error(s)`. Ignores live in
+Expected `Linting: 584 file(s)` / `Summary: 0 error(s)`. Ignores live in
 `.markdownlint-cli2.jsonc`; **`.markdownlintignore` is inert** in cli2 and silently linted
 36 extra files when it was tried.
 
@@ -63,9 +71,9 @@ npx quartz build -d "G:\My Drive\KTHObsidian" -o C:\Temp\out
 node tools/check-site.mjs C:\Temp\out
 ```
 
-Expected: exit 0, and every metric matching `site-baseline.json` — 601 pages, 353 with
-callouts, 1965 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 43 broken
-links (all PDF links; PDFs are deliberately unpublished).
+Expected: exit 0, and every metric matching `site-baseline.json` — 1270 pages, 442 with
+callouts, 2476 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 87 broken
+links (almost all PDF links; PDFs are deliberately unpublished).
 
 Counts may grow; a drop over 5% fails. That asymmetry is what catches a transformer silently
 stopping work.

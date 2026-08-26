@@ -12,10 +12,6 @@ Centraliserad översikt över kommunikationsnät, protokoll och nätverksteknik.
 
 - [[KTH/2026 Höst/HI1032 Kommunikationssystem/_index|HI1032 Kommunikationssystem]]
 
-### #HI2002 Routing i IP-nät
-
-- [[KTH/2026 Höst/HI2002 Routing i IP-nät/_index|HI2002 Routing i IP-nät]]
-
 ### #HE1033 Kommunikationsnät
 
 - **#begrepp**

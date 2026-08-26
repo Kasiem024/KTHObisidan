@@ -19,7 +19,7 @@ Vad är skillnaden mellan ett "rent namn" (pure name) och en adress?
 - **Rent namn:** säger *inget* om objektet – måste ==slås upp== för att bli användbart.
 - **Adress:** anger *var* objektet finns – effektivt att nå, men blir fel om objektet flyttas.
 
-**DNS** (Domain Name System);;Internets namntjänst som ==översätter domännamn (t.ex. www.kth.se) till IP-adresser==, via en hierarkisk och replikerad struktur.
+**DNS** (Domain Name System);;Internets namntjänst som ==översätter domännamn (t.ex. `www.kth.se`) till IP-adresser==, via en hierarkisk och replikerad struktur.
 
 Vad skiljer iterativ från rekursiv namnupplösning?
 ||

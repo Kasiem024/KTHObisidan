@@ -171,6 +171,14 @@ Write-Utf8 (Join-Path $c2 '_index.md') "---`ntags: [index, CM1005, KTH, ekonomi,
 $c3 = Join-Path $termDir 'ME1003 Testkurs'
 foreach ($n in @('Anteckningar', 'Begrepp', 'Filer', $forelas)) { New-Item -ItemType Directory -Path (Join-Path $c3 $n) -Force | Out-Null }
 
+# A degree-project course code: KTH ends these with X rather than a fourth digit
+# (HT100X, HI111X). The checks must treat it as a course like any other - before the
+# pattern was widened on 2026-08-26, the whole thesis course was invisible to them.
+# This one is deliberately missing its _index.md too, so courseMissingIndex must catch it.
+$c4 = Join-Path $termDir 'HT100X Testexamensarbete'
+foreach ($n in @('Anteckningar', 'Begrepp', 'Filer', $forelas)) { New-Item -ItemType Directory -Path (Join-Path $c4 $n) -Force | Out-Null }
+Write-Utf8 (Join-Path $c4 'Begrepp\Trasig X-kod.md') "---`ntags: [begrepp, HT100X, KTH, $natverk, year2026, hittepa]`n$goodDesc`n$dates`n---`n# Trasig X-kod`n"
+
 $full = Invoke-Audit
 Add-Result 'violations produce exit 1' 'exit 1' ($full.Code -eq 1) ("exit " + $full.Code)
 
@@ -202,6 +210,14 @@ $descCount = 0
 if ($m.Success) { $descCount = [int]$m.Groups[1].Value }
 Add-Result 'malformedDescription catches all 8 shapes' '8 files' ($descCount -eq 8) "reported $descCount"
 
+# A degree-project code (HT100X) must be accepted as a course code, and its folder must be
+# checked like any other course. Two assertions: the code itself is NOT reported as an
+# unknown tag, and the X-coded course without an _index.md IS reported.
+$xTagRejected = [bool]([regex]::IsMatch($full.Text, '(?m)^\s+HT100X\s*=\s*\d+\s*$'))
+Add-Result 'HT100X accepted as a course code' 'not an unknown tag' (-not $xTagRejected) ''
+$xCourseSeen = [bool]($full.Text -match 'HT100X Testexamensarbete')
+Add-Result 'X-coded course is structure-checked' 'reported missing index' $xCourseSeen ''
+
 # =========================================================== 3. -ContentOnly skips two
 # ...and only those two. If it silently skipped more, CI would be weaker than it looks.
 $co = Invoke-Audit -ContentOnly
@@ -223,6 +239,7 @@ $junk = "---`ntags: [hittepa]`n---`nIngen H1, ingen description, okand tagg.`n"
 Write-Utf8 (Join-Path $fx '.kiro\junk.md') $junk
 Write-Utf8 (Join-Path $fx 'Ericsson\junk.md') $junk
 Write-Utf8 (Join-Path $courseDir 'Filer\Litteraturlista\junk.md') $junk
+Write-Utf8 (Join-Path $courseDir 'Filer\Canvas\junk.md') $junk
 Write-Utf8 (Join-Path $begrepp 'bok.opt.md') $junk
 Write-Utf8 (Join-Path $begrepp 'bok.ai.md') $junk
 Write-Utf8 (Join-Path $begrepp 'ritning.excalidraw.md') $junk

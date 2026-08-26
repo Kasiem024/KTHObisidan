@@ -6,7 +6,7 @@ description: "Studieanteckningar från KTH, Högskoleingenjör – Teknik och Ek
 # KTH Anteckningar
 
 Studieanteckningar från KTH, Högskoleingenjör – **Teknik och Ekonomi**.
-Cirka 470 sammanlänkade anteckningar: begrepp, föreläsningar, laborationer och
+Cirka 560 sammanlänkade anteckningar: begrepp, föreläsningar, laborationer och
 tentaförberedelser. Allt är skrivet på svenska.
 
 > [!tip] Hitta rätt

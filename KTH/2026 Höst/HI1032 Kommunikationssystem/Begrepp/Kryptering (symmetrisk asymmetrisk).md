@@ -4,7 +4,7 @@ created: 2026-08-24
 updated: 2026-08-24
 description: "Begrepp: kryptering, symmetrisk och asymmetrisk (HI1032)."
 ---
-# Kryptering (symmetrisk/asymmetrisk)
+# Kryptering (symmetrisk asymmetrisk)
 
 ## Definition
 

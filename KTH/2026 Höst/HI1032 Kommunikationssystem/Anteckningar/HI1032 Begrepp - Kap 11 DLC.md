@@ -4,7 +4,7 @@ created: 2026-08-24
 updated: 2026-08-24
 description: "Flashcards HI1032 kap 11 – DLC: ramning (byte-/bit-stuffing), flödes- och felkontroll, Stop-and-Wait, piggybacking, HDLC och PPP."
 ---
-# HI1032 Begrepp - Kap 11 DLC (Data Link Control)
+# HI1032 Begrepp - Kap 11 DLC
 
 **Ramning** (framing);;Att ==packa bitarna från fysiska lagret i avgränsade ramar==, var och en med adressinformation, så att en ram kan skiljas från nästa. Metafor: att lägga ett brev i ett kuvert.
 

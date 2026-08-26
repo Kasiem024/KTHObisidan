@@ -1635,6 +1635,41 @@ Verified: audit `RESULT: clean`, exit 0, `notesInScope=470`; lint 493 files / 0 
 build emits 601 pages with `check-site` exit 0 and every metric matching baseline; the claim
 extractor re-run reports zero remaining discrepancies.
 
+### F58. ✅ DONE (2026-08-26) — a push failed two CI jobs: stale site baseline + two markdownlint slips
+
+Pushing vault `9169892c` went red in two independent jobs.
+
+**Site `check-site` — `brokenInternalLinks` rose 43 → 87.** The vault roughly doubled since the
+baseline was set (601 → 1270 pages, 35373 → 40905 internal links), and the gate fails on any
+rise in broken links. The extra links are overwhelmingly into the deliberately-unpublished
+`Litteraturlista` PDFs — dead on the site, fine in Obsidian, and counted as real by design — plus
+three MOC links to the parked, dot-prefixed `.EN2720`/`.HI2002` course folders (being cleaned up
+separately). Re-baselined `site-baseline.json` to the CI build's own numbers, not a local Windows
+build whose broken-link count can diverge and set too low a ceiling: **1270 / 442 / 2476 / 183 /
+40905 / 87**. Committed on the Quartz `v5` branch. PDF links are not ignored — counting them is the
+author's deliberate design.
+
+**Vault `markdownlint` — 3 errors** in the new HI1031/HI1032 notes: two bare URLs (`www.kth.se`,
+MD034) and one trailing space (MD009), fixed in the notes (URLs wrapped in backticks, matching the
+vault style).
+
+**Prevention, so a red push is caught before it happens rather than after:**
+
+- **Obsidian Linter, on save** — enabled two rules that cannot split or merge a flashcard:
+  `trailing-spaces` (preserving intentional two-space breaks) and `line-break-at-document-end`.
+  `no-bare-urls` is deliberately left **off**: its fix rewrites to `<url>` autolinks, not the
+  backtick style used here.
+- **`.git/hooks/pre-push`** — mirrors CI (`markdownlint-cli2 "**/*.md"` +
+  `Vault-Audit.ps1 -ContentOnly`) and blocks the push on failure; bypass with
+  `git push --no-verify`. Local to the clone, since git does not track hooks.
+- **Deliberately not done:** no blanket `markdownlint --fix` in a hook. The blank-line rules
+  (MD022/MD031/MD012) can split a card, and a marker-count guard cannot detect a blank line
+  inserted *inside* a multi-line card, so they stay report-only via the guard.
+
+**Verified:** `markdownlint-cli2` 0 errors across 583 files; audit `RESULT: clean` (`-ContentOnly`);
+the pre-push hook passes on a clean tree and blocks a planted bare-URL file (exit 1);
+`site-baseline.json` parses and its diff touches only the five changed metrics.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

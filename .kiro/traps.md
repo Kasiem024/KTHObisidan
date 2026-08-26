@@ -77,7 +77,7 @@ excludes. Both pass locally because your disk holds state the repository does no
 **What it produced:** **68 + 49 = 117** false failures on a clean clone.
 
 **What to do:** CI uses `-ContentOnly`, which skips exactly those two and still covers all
-470 notes. Run the audit with no switches locally. If you add a check that reads untracked
+561 notes. Run the audit with no switches locally. If you add a check that reads untracked
 state, add it to that exclusion and say why.
 
 ## T6 — `Select-Object -First N` in a pipeline destroys the exit code

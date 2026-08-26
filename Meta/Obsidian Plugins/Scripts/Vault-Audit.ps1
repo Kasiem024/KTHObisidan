@@ -46,6 +46,11 @@ function InScope($full,$name){
   if($full -match '\\\.obsidian\\' -or $full -match '\\\.trash\\' -or $full -match '\\node_modules\\'){ return $false }
   if($full -match '\\\.kiro\\'){ return $false }                  # agent context, not study content
   if($full -match '\\Litteraturlista\\'){ return $false }          # course literature + conversions
+  # Third-party course material downloaded from Canvas: KTH templates, grading criteria,
+  # seminar slides and other students' example theses. Not authored notes, gitignored, and
+  # deliberately never published. Literature naming rules do not apply either, because the
+  # official document titles legitimately contain course codes.
+  if($full -match '\\Filer\\Canvas\\'){ return $false }
   if($full -match '\\Ericsson\\'){ return $false }                 # work notes, not studies
   if($full -match 'Obsidian Plugins\\Templates'){ return $false }  # templates
   if($full -match '\\Kurs Mapp Mall\\'){ return $false }           # empty skeleton
@@ -122,13 +127,13 @@ foreach($f in $md){
   if($dups.Count -gt 0){ (Bucket 'duplicateTags').Add($rel + ' :: ' + (($dups|ForEach-Object{$_.Name}) -join ',')) }
   foreach($tg in $tags){
     $ok=$false
-    if($tg -cmatch '^[A-Z]{2}\d{4}$' -or $tg -cmatch '^[A-Z]{2}\d{4}/[A-Za-z0-9]+$' -or $tg -cmatch '^year\d{4}$'){ $ok=$true }
+    if($tg -cmatch '^[A-Z]{2}\d{3}[0-9X]$' -or $tg -cmatch '^[A-Z]{2}\d{3}[0-9X]/[A-Za-z0-9]+$' -or $tg -cmatch '^year\d{4}$'){ $ok=$true }
     elseif($tg -cmatch $structPat){ $ok=$true }
     elseif($tg -match $typePat -and $tg -ceq $tg.ToLowerInvariant()){ $ok=$true }
     elseif($tg -match $subjPat -and $tg -ceq $tg.ToLowerInvariant()){ $ok=$true }
     if(-not $ok){
       $lc=$tg.ToLowerInvariant()
-      if($lc -match $typePat -or $lc -match $subjPat -or $lc -eq 'kth' -or $lc -eq 'moc' -or ($tg -match '^[A-Za-z]{2}\d{4}$')){
+      if($lc -match $typePat -or $lc -match $subjPat -or $lc -eq 'kth' -or $lc -eq 'moc' -or ($tg -match '^[A-Za-z]{2}\d{3}[0-9Xx]$')){
         if($casing.ContainsKey($tg)){$casing[$tg]++}else{$casing[$tg]=1}
       } else {
         if($unknown.ContainsKey($tg)){$unknown[$tg]++}else{$unknown[$tg]=1}
@@ -153,7 +158,7 @@ foreach($f in $md){
   if(($t -match '`\s*=\s*this\.') -and ($f.FullName -notmatch '\\Meta\\')){ (Bucket 'inlineDataviewExpression').Add($rel) }
   # path-derived expectations
   $seg=$rel -split '\\'
-  if($seg.Length -ge 3 -and $seg[0] -eq 'KTH' -and $seg[1] -match '^\d{4}\s' -and $seg[2] -cmatch '^[A-Z]{2}\d{4}'){
+  if($seg.Length -ge 3 -and $seg[0] -eq 'KTH' -and $seg[1] -match '^\d{4}\s' -and $seg[2] -cmatch '^[A-Z]{2}\d{3}[0-9X]'){
     $code=($seg[2] -split ' ')[0]; $yr='year'+([regex]::Match($seg[1],'\d{4}').Value)
     if($tags -notcontains 'KTH'){ (Bucket 'missingKTHtag').Add($rel) }
     if($tags -notcontains $yr){ (Bucket 'missingYearTag').Add($rel) }
@@ -189,7 +194,7 @@ foreach($d in (Get-ChildItem -LiteralPath (Join-Path $Root 'KTH') -Recurse -Dire
 $allowed=@('Anteckningar','Begrepp','Filer'); if($forel){ $allowed+=$forel }
 foreach($t in (Get-ChildItem -LiteralPath (Join-Path $Root 'KTH') -Directory)){
   foreach($c in (Get-ChildItem -LiteralPath $t.FullName -Directory)){
-    if($c.Name -match '^[A-Z]{2}\d{4}'){
+    if($c.Name -match '^[A-Z]{2}\d{3}[0-9X]'){
       # Skipped in -ContentOnly: an empty category folder is not tracked by git.
       if(-not $ContentOnly){
         foreach($n in $allowed){ if(-not (Test-Path -LiteralPath (Join-Path $c.FullName $n))){ (Bucket 'courseMissingFolder').Add($c.Name + ' -> ' + $n) } }
@@ -207,7 +212,7 @@ foreach($f in ($all | Where-Object { $_.DirectoryName -match '\\Litteraturlista$
   if($b -match '(?i)\d+(st|nd|rd|th)\s+Edition'){ (Bucket 'litWrongEditionFormat').Add($b) }
   if($b -match '(?i)Upplagan'){ (Bucket 'litWrongEditionFormat').Add($b) }
   if($b -ne $b.Trim() -or $b -match '\s{2,}'){ (Bucket 'litBadSpacing').Add($b) }
-  if($b -cmatch '\b[A-Z]{2}\d{4}\b'){ (Bucket 'litHasCourseCode').Add($b) }
+  if($b -cmatch '\b[A-Z]{2}\d{3}[0-9X]\b'){ (Bucket 'litHasCourseCode').Add($b) }
 }
 # ---------------- report ----------------
 Write-Output "=== VAULT AUDIT  $(Get-Date -Format 'yyyy-MM-dd HH:mm') ==="

@@ -8,7 +8,7 @@ description: "Begrepp: DNS (HI1032)."
 
 ## Definition
 
-*Domain Name System* – ett klient-server-system som ==översätter domännamn (t.ex. www.kth.se) till IP-adresser== via en *hierarkisk* och decentraliserad namnrymd. Använder caching och replikering för snabba, tillgängliga svar.
+*Domain Name System* – ett klient-server-system som ==översätter domännamn (t.ex. `www.kth.se`) till IP-adresser== via en *hierarkisk* och decentraliserad namnrymd. Använder caching och replikering för snabba, tillgängliga svar.
 
 ## Kopplat till
 

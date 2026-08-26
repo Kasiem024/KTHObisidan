@@ -62,7 +62,7 @@ Tags are normalized with exactly these rules:
 
 | Kind | Rule | Examples |
 | --- | --- | --- |
-| Course code | **UPPERCASE**, pattern `[A-Z]{2}[0-9]{4}` | `ME1003`, `HH1802`, `HI1029` |
+| Course code | **UPPERCASE**, pattern `[A-Z]{2}[0-9]{3}[0-9X]` | `ME1003`, `HH1802`, `HI1029`, `HT100X` |
 | Acronyms | **UPPERCASE** | `KTH`, `MOC` |
 | Type / subject / status | **lowercase** | `begrepp`, `föreläsning`, `ekonomi`, `tenta` |
 | Year | `year` + 4 digits, lowercase | `year2024`, `year2026` |
@@ -70,6 +70,11 @@ Tags are normalized with exactly these rules:
 
 Rule of thumb: **if it is a course code or a well-known acronym, uppercase it; every
 descriptive word is lowercase.**
+
+KTH ends its degree-project course codes with an `X` rather than a fourth digit —
+`HT100X`, `HT101X`, `HI111X`, `HE111X`. The pattern allows that final position to be a
+digit **or** `X`, so the thesis course is a course like any other. Nothing else may use a
+letter there.
 
 ## 2. Controlled tag vocabulary
 
@@ -143,6 +148,14 @@ KTH/<Year Season>/<CODE Course Name>/
 - `Filer/` holds every non-note file. Course literature goes in
   `Filer/Litteraturlista/` together with any generated `.opt.md` / `.ai.md`
   conversions and conversion tooling docs.
+- `Filer/Canvas/` is for **third-party course material downloaded from Canvas** — KTH
+  templates, grading criteria, detailed plans, seminar slides, other students' example
+  theses. It is **gitignored**, because the repository and the site are public, and it is
+  outside the audit's scope: these are not authored notes, and the literature naming rules
+  do not apply because the official document titles legitimately contain course codes
+  (`Detaljplan Examensarbete HE111X, HI111X, HT100X, HT101X.pdf`). Use it only for files
+  that came from someone else; anything you wrote belongs in the four category folders.
+  Only `HT100X Examensarbete` has one today.
 - New courses: copy the skeleton from `KTH/Kurs Mapp Mall/`.
 - `Atlas/` holds subject MOCs, the `Dashboard` and the `Vault Health Report`.
   `Meta/` holds tooling, templates and this standard. `Ericsson/` is work, not studies.
@@ -172,8 +185,8 @@ same one. Enforced by markdownlint MD001 and MD024, so it cannot drift back.
 
 ### Concept note body format
 
-Concept (`begrepp`) notes follow one shape. Measured across the 352 concept notes in
-the vault: `## Definition` 320, `## Flashcards` 320, `## Kopplat till` 297,
+Concept (`begrepp`) notes follow one shape. Measured 2026-08-26 across the 441 concept notes in
+the vault: `## Definition` 356, `## Flashcards` 356, `## Kopplat till` 333,
 `## Tenta-fokus` 42.
 
 ```markdown
@@ -206,13 +219,13 @@ The definition, in plain prose. Wiki-link related concepts inline.
   `## Kopplat till` on any concept that relates to another.
 - The leading `> **Label:**` callouts and the `---` rule after them are **optional**.
   Newer notes use them to surface exam-relevant framing; most older notes do not.
-- **`## Flashcards` is always the last section.** This holds in 320 of 320 notes that
+- **`## Flashcards` is always the last section.** This holds in 356 of 356 notes that
   have one, and the published site depends on it — the build-time card transformer
   only rewrites content under that heading.
 - `## Tenta-fokus` is **optional**. Add it only where there is real exam guidance;
   most notes do not have one.
 - The definition is written as plain prose. Opening with a bold term is allowed but is
-  not the house style (15 notes do, 305 do not).
+  not the house style (15 notes do, 341 do not).
 - `## Kopplat till` links **related concepts only**. Do not link study-question lists
   or dated session notes just because they mention the term; that dilutes the graph
   without adding meaning. Leaving it empty is fine when nothing genuinely relates.
@@ -228,13 +241,13 @@ The definition, in plain prose. Wiki-link related concepts inline.
   **Never** change a separator or strip an `<!--SR:...-->` comment: they drive a live review
   schedule. The site rewrites cards into collapsible callouts at build time and never touches
   the vault. It converts cards **anywhere in a note**, not only under this heading, so the
-  29 notes that keep their cards elsewhere still publish correctly — but new concept notes
+  94 notes that keep their cards elsewhere still publish correctly — but new concept notes
   should still use `## Flashcards` for consistency.
 
 **Concept collections are a recognised exception.** Notes named like
 `HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` gather many short definitions
 into a single note, written directly as flashcards, and have no `## Definition`
-section of their own. 31 of the 352 concept notes are of this kind. They are still
+section of their own. 84 of the 441 concept notes are of this kind. They are still
 tagged `begrepp` and still end with `## Flashcards`.
 
 ### Images and embeds

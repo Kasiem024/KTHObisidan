@@ -45,9 +45,14 @@ would have made every new note's cards publish as raw `::` syntax.
 
 ## A stale number is a finding against the doc
 
-Several docs quote exact figures — 470 notes, 601 pages, 1965 callouts, 43 broken links, 1262
-scheduling markers. Every one was correct when written, and nothing verifies them afterwards. A
-confident wrong number is worse than no number, because it gets quoted instead of checked.
+Several docs quote exact figures — 561 notes in scope, 441 concept notes, 1262 scheduling
+markers, 584 linted files, and on the site side 1270 pages, 2476 callouts and 87 broken links.
+Every one was correct when written, and nothing verifies them afterwards. A confident wrong
+number is worse than no number, because it gets quoted instead of checked.
+
+The vault figures moved on 2026-08-26 when HI1031 and HI1032 gained 92 notes: 470 became 561,
+352 concept notes became 441, and 493 linted files became 584. The site figures moved on 2026-08-26 too, when `site-baseline.json` was re-baselined to
+1270/2476/87 — the gated deploy had been failing on the rise in broken links until then (see backlog F58). Do not copy a local build's numbers into a doc while the baseline disagrees.
 
 When a figure in a doc disagrees with a fresh measurement, **fix the doc**; never adjust the
 measurement to match. The machine-checked copies are `site-baseline.json` and the audit's own
