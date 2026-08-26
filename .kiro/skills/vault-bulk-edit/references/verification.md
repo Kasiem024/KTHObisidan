@@ -72,14 +72,14 @@ node tools/check-site.mjs C:\Temp\out
 ```
 
 Expected: exit 0, and every metric matching `site-baseline.json` — 693 pages, 442 with
-callouts, 2476 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 87 broken
+callouts, 2476 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 85 broken
 links (almost all PDF links; PDFs are deliberately unpublished).
 
 Build into an **empty** directory. `check-site.mjs` refuses `--update` when the pages were
 written over more than 300 seconds, because that means the directory holds two builds' output
-and every count is inflated. Note the ceiling for `brokenInternalLinks` is 87 from the CI log,
-not the 85 a local build reports: that metric fails on any *rise*, so the higher figure is the
-safe one. See F58.
+and every count is inflated. `pages` counts DISTINCT CASE-INSENSITIVE routes, not raw `.html`
+files: Quartz emits a redirect stub at each note's original-cased path, so Linux holds 1269
+files where Windows holds 693. Every metric now matches CI exactly. See F59.
 
 Counts may grow; a drop over 5% fails. That asymmetry is what catches a transformer silently
 stopping work.

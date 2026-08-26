@@ -1704,31 +1704,51 @@ and publishing drafts risks both confidentiality and the plagiarism check flaggi
 own public draft. Pattern deliberately written as `**/HT100X Examensarbete/**` with no Swedish
 characters, since a path containing `ö` risks an NFC/NFD mismatch between Windows and CI.
 
-**Where I was wrong.** I found `site-baseline.json` at 1270 pages, could not reproduce it — two
-clean local builds both give exactly 693 — and concluded it had been measured from a directory
-holding two builds' output. F58 says plainly that 1270 came from **the CI build's own log**,
-chosen because a local Windows build's broken-link count "can diverge and set too low a
-ceiling". So I re-baselined from precisely the source F58 warns against, and set
-`brokenInternalLinks` to 85 when CI had reported 87 — which would have turned the next CI run
-red for exactly the reason F58 documented.
+**Where I was wrong, and what it actually was.** I found `site-baseline.json` at 1270 pages,
+could not reproduce it — two clean local builds both give exactly 693 — and concluded it had
+been measured from a directory holding two builds' output. F58 says plainly that 1270 came
+from **the CI build's own log**. I then re-baselined to 693 from a local Windows build and set
+`brokenInternalLinks` to 85, calling F58's 87 the safer ceiling.
 
-Corrected by setting the baseline **per metric, by the direction each check fails in**: counts
-that fail on a *drop* take the lower build (693 / 442 / 2476 / 183 / 40892), and
-`brokenInternalLinks`, which fails on any *rise*, takes the higher (87). Recorded in the
-baseline's own `_meta.notes` so the asymmetry is not "tidied up" later.
+Reading an actual CI log settled it, and **both numbers were correct measurements of different
+things.** Quartz emits a 448-byte redirect stub at each note's *original-cased* path
+(`KTH/2026-Höst/.../Replikering.html` — `meta http-equiv="refresh"`, `rel=canonical`,
+`robots: noindex`) pointing at the lowercase slug it actually serves. Linux keeps both files;
+**NTFS is case-insensitive, so every pair collapses into one.** CI's own artifact listing:
+1269 HTML files = **576 mixed-case stubs + 693 real pages**, every stub with a lowercase twin
+and none orphaned. A Windows build physically cannot emit 1269, and CI cannot emit 693.
 
-**Why local and CI disagree on `pages` by a factor of 1.8 is still unknown** and is worth
-reading a CI run log to settle. It is harmless for now only because that metric fails on a drop.
+The stubs hold no callouts, no images and no `<a>` links, which is why **every other metric was
+byte-identical** between the two builds: 442 / 2476 / 183 / 0 / 0 / 0 / 40892. Including
+`brokenInternalLinks`, which CI reports as **85** — the same as local. So F58's stated reason
+for preferring the CI figure (that a local broken-link count "can diverge") was not borne out,
+and my 87 was two too high, quietly allowing two new broken links through.
 
-Also added, and kept despite the wrong diagnosis: `check-site.mjs` now measures the mtime spread
-of the emitted pages and **refuses `--update`** when it exceeds 300 s, since a single build
-writes everything in seconds. Tested both ways — backdating 50 pages by three hours makes
-`--update` exit 1 with the baseline untouched; a clean directory is accepted. The baseline now
-records when and from where it was taken.
+**The fix was to change the metric, not the number.** `check-site.mjs` now counts **distinct
+case-insensitive routes** rather than raw `.html` files, so both platforms report `pages 693`
+and a local build is once again a valid gate. Verified by running the implemented expression
+over CI's real 1269 paths: 693 distinct, 576 stubs. Baseline is now
+693 / 442 / 2476 / 183 / 0 / 0 / 0 / 40892 / **85**, valid on either platform.
+
+Two smaller defects found on the way and fixed:
+
+- The mtime staleness guard compared max-minus-min, which made it warn on a **verified-clean**
+  build: `deploy.yml` runs `slim-svg.mjs` between the build and the check, rewriting 17
+  Excalidraw pages and pushing the newest mtime 370 s past the oldest. It would have fired on
+  every CI run from then on. Now measured against the **median** with a 5 % minority share, so
+  a post-build step touching a handful of files is invisible while a stack of stale pages is
+  not.
+- `quartz.config.yaml` was briefly left with invalid YAML — `ööst/HT100X Examensarbete/**"` —
+  because a Swedish string built by concatenating `[char]0xF6` inside a PowerShell array
+  literal split apart. The build emitted 0 pages until it was repaired. The pattern is now
+  `**/HT100X Examensarbete/**`, deliberately free of Swedish characters.
+
+**The generalisable lesson: before changing a number, establish what it counts.** Both sides of
+this argument were measuring honestly and disagreeing about the unit.
 
 Verified: audit `RESULT: clean`, exit 0 in both modes, `notesInScope=561`; lint **583 files / 0
-errors**; self-test **40/40**; a clean build passes `check-site` with `check-site OK` and no
-staleness warning.
+errors**; self-test **40/40**; a clean local build passes `check-site` with `check-site OK` and
+no staleness warning; the implemented page-count expression reproduces CI's own numbers.
 
 ---
 

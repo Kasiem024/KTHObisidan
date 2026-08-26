@@ -170,6 +170,32 @@ says a worker's self-verification is not authoritative — here it was off by ha
 
 **Lesson:** use delegation to find out what to look for, and a script to find out how many.
 
+## 2026-08-26 — two correct measurements, one wrong unit
+
+`site-baseline.json` said 1270 pages. A clean local build produced 693. I could not reproduce
+1270, so I concluded it was measured from a polluted output directory and re-baselined to 693.
+
+Both numbers were right. Quartz emits a 448-byte redirect stub at each note's *original-cased*
+path beside the lowercase slug it serves. Linux keeps both files; **NTFS is case-insensitive, so
+each pair collapses into one.** CI: 1269 files = 576 stubs + 693 pages. Windows: 693. Neither
+platform can produce the other's figure.
+
+Three things to carry forward:
+
+- **Before changing a number, establish what it counts.** A disagreement between two honest
+  measurements is usually a disagreement about the unit, not an error in one of them.
+- **The fix belonged in the metric, not the baseline.** Counting distinct case-insensitive
+  routes makes both platforms report 693, which restores the local build as a usable gate.
+  Re-baselining from CI would have "worked" while leaving the local run permanently red.
+- **I trusted my own reconstruction over the written record.** F58 stated where 1270 came from.
+  Had I read it before re-baselining, I would not have spent the effort — the backlog entry was
+  right and I overrode it. Read the entry that documents a number before overwriting it.
+
+A corollary about evidence: I disproved four hypotheses from local data alone (plugin
+differences, duplicate URL forms, a tracked `public/`, `slim-svg`) and none of it converged. One
+CI log settled it in minutes. When the question is "why does that environment differ", local
+reasoning cannot answer it — get the log.
+
 ## 2026-08-20 — a doc full of exact numbers is a doc that will go stale
 
 **What happened:** the steering and skill files now quote hard figures — 470 notes, 601 pages,

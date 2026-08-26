@@ -53,26 +53,25 @@ number is worse than no number, because it gets quoted instead of checked.
 The vault figures moved on 2026-08-26 when HI1031 and HI1032 gained 92 notes: 470 became 561,
 352 concept notes became 441, and 493 linted files became 583.
 
-**The site figures moved twice on 2026-08-26, and the two builds disagree.** `site-baseline.json`
-was first set to `1270` pages from **the CI build's own log** (F58), deliberately, on the reasoning
-that a local Windows build's broken-link count can diverge and set too low a ceiling. Two
-independent clean **local** builds emit exactly **693** — every other metric matches CI, but pages
-differ by a factor of 1.8. Why is not yet known and is worth finding out from a CI run log.
+**The site figures moved twice on 2026-08-26, and the reason took three attempts to find.**
+`site-baseline.json` was set to `1270` pages from a CI log, then "corrected" to `693` from a
+local build, and both numbers were **correct measurements of different things**.
 
-Until it is, the baseline is set per metric according to **which direction each one fails in**:
+Quartz emits a 448-byte redirect stub at each note's *original-cased* path
+(`KTH/2026-Höst/.../Replikering.html` — meta-refresh, `rel=canonical`, `robots: noindex`)
+pointing at the lowercase slug it actually serves. Linux keeps both files; **NTFS is
+case-insensitive, so every pair collapses into one.** CI's own artifact listing: 1269 HTML
+files = 576 mixed-case stubs + 693 real pages. A Windows build physically cannot produce
+1269 files, and CI cannot produce 693.
 
-| Metric | Fails on | Safe baseline | Value |
-|---|---|---|---|
-| `pages`, callouts, images, `internalLinks` | a **drop** over 5% | the **lower** of the two builds | 693 / 442 / 2476 / 183 / 40892 |
-| `brokenInternalLinks` | any **rise** | the **higher** of the two builds | 87 |
+`check-site.mjs` now counts **distinct case-insensitive routes**, so both platforms report
+`pages 693`. Verified by running the implemented expression over CI's real 1269 paths.
+Every other metric was already byte-identical between the two builds — including
+`brokenInternalLinks`, which is **85** on both, so the earlier worry that it diverges by
+platform was unfounded.
 
-Setting `brokenInternalLinks` from the local build (85) would fail the moment CI reported its 87 —
-which is exactly what F58 warned about, and what happened when this was first re-baselined. The
-baseline records `_meta` so a future reader can tell which build produced it.
-
-Do not copy a local build's numbers into a doc while the baseline disagrees — and if they
-disagree, work out which one is reproducible, and in which direction the check fails, before
-changing either.
+The lesson generalises: before changing a number, establish **what it counts**. Both sides of
+this argument were measuring honestly and disagreeing about the unit.
 
 When a figure in a doc disagrees with a fresh measurement, **fix the doc**; never adjust the
 measurement to match. The machine-checked copies are `site-baseline.json` and the audit's own
