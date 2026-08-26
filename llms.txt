@@ -3,7 +3,7 @@
 > Personal study vault for a KTH (Kungliga Tekniska Högskolan) student on the
 > "Högskoleingenjör – Teknik och Ekonomi" programme (computer/IT engineering with
 > an economics track). It contains roughly 560 interconnected Markdown notes covering
-> university coursework across six terms and 24 courses. **The note content is written in
+> university coursework across six terms and 23 courses. **The note content is written in
 > Swedish**; technical terms are often English. Unless asked otherwise, respond
 > in Swedish when answering questions about this material.
 
@@ -95,7 +95,7 @@ metadata, not prose:
     alone on its own line or inline in place of `::`. These are ordinary cards that
     have been switched off for review. Read them as normal question/answer pairs; the
     marker itself carries no meaning for comprehension.
-  - Cards usually sit under a `## Flashcards` heading, but **not always** — about 85 notes keep
+  - Cards usually sit under a `## Flashcards` heading, but **not always** — about 91 notes keep
     them under a different heading (`## Begrepp`, `## Ursprungliga Flashcards`) or
     interleaved with prose under chapter headings. Treat any of the delimiter forms above as
     a card wherever it appears. There are **no** Dataview inline fields (`[key:: value]`) in

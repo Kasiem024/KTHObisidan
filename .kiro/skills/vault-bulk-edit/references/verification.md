@@ -15,7 +15,7 @@ prompt to re-measure rather than as proof of damage.
 | Measure | Pattern | Snapshot (2026-08-26) |
 |---|---|---|
 | scheduling markers | `<!--SR:` | **1262** |
-| single-line | `(?m)^[^\|\r\n]+?::` | 1500 |
+| single-line | `(?m)^[^\|\r\n]+?::` | 1404 |
 | single-line reversed | `(?m)^[^\|\r\n]+?;;` | 596 |
 | multi-line | `(?m)^\s*\|\|\s*$` | 245 |
 | multi-line reversed | `(?m)^\s*\?\?\s*$` | 219 |
@@ -54,7 +54,7 @@ depend on state git does not store. Locally, run with no switches.
 npx markdownlint-cli2 "**/*.md"
 ```
 
-Expected `Linting: 584 file(s)` / `Summary: 0 error(s)`. Ignores live in
+Expected `Linting: 583 file(s)` / `Summary: 0 error(s)`. Ignores live in
 `.markdownlint-cli2.jsonc`; **`.markdownlintignore` is inert** in cli2 and silently linted
 36 extra files when it was tried.
 
@@ -71,9 +71,15 @@ npx quartz build -d "G:\My Drive\KTHObsidian" -o C:\Temp\out
 node tools/check-site.mjs C:\Temp\out
 ```
 
-Expected: exit 0, and every metric matching `site-baseline.json` — 1270 pages, 442 with
+Expected: exit 0, and every metric matching `site-baseline.json` — 693 pages, 442 with
 callouts, 2476 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 87 broken
 links (almost all PDF links; PDFs are deliberately unpublished).
+
+Build into an **empty** directory. `check-site.mjs` refuses `--update` when the pages were
+written over more than 300 seconds, because that means the directory holds two builds' output
+and every count is inflated. Note the ceiling for `brokenInternalLinks` is 87 from the CI log,
+not the 85 a local build reports: that metric fails on any *rise*, so the higher figure is the
+safe one. See F58.
 
 Counts may grow; a drop over 5% fails. That asymmetry is what catches a transformer silently
 stopping work.

@@ -241,7 +241,7 @@ The definition, in plain prose. Wiki-link related concepts inline.
   **Never** change a separator or strip an `<!--SR:...-->` comment: they drive a live review
   schedule. The site rewrites cards into collapsible callouts at build time and never touches
   the vault. It converts cards **anywhere in a note**, not only under this heading, so the
-  94 notes that keep their cards elsewhere still publish correctly — but new concept notes
+  91 notes that keep their cards elsewhere still publish correctly — but new concept notes
   should still use `## Flashcards` for consistency.
 
 **Concept collections are a recognised exception.** Notes named like

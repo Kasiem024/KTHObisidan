@@ -1670,6 +1670,66 @@ vault style).
 the pre-push hook passes on a clean tree and blocks a planted bare-URL file (exit 1);
 `site-baseline.json` parses and its diff touches only the five changed metrics.
 
+### F59. ✅ DONE (2026-08-26) — thesis course brought into scope, and a baseline I got wrong
+
+Follow-up to F58, on the same day. Four things, and one correction of my own reasoning.
+
+**The audit could not see the degree project at all.** `HT100X Examensarbete` does not match
+`^[A-Z]{2}\d{4}` — KTH ends degree-project codes with an `X` (`HT100X`, `HT101X`, `HI111X`,
+`HE111X`). So the most important course of the degree was invisible to `courseMissingIndex`,
+`courseMissingFolder`, the path-derived tag checks and the tag vocabulary. Widened to
+`[A-Z]{2}[0-9]{3}[0-9X]` in `Meta/Vault Standard.md` and **five** places in `Vault-Audit.ps1`.
+`Test-VaultAudit.ps1` gained an `HT100X Testexamensarbete` fixture and two assertions, so the
+widened pattern is proven rather than assumed — **40 assertions, 0 failed**. Proven end-to-end
+by hiding the real `_index.md` and seeing `courseMissingIndex → HT100X Examensarbete`.
+
+**Three broken MOC links.** `.EN2720` and `.HI2002` had been dot-prefixed to hide them in
+Obsidian, which also hid them from the audit's course checks, while the MOC links still pointed
+at the undotted paths. The folders were then deleted; the dead entries were removed from
+`Atlas/2026 MOC.md` and `Atlas/Nätverk MOC.md`, and `HT100X` added under Period 2.
+
+**A new folder for third-party material.** `Filer/Canvas/` holds the 34 Canvas files — KTH
+templates, grading criteria, seminar slides and other students' example theses. Gitignored
+(`**/Filer/Canvas/**`), out of the audit's scope, and excluded from the site. Two things went
+wrong on the way: flattening it into `Litteraturlista/` made `litHasCourseCode` fire on three
+KTH document titles that legitimately contain course codes (`Detaljplan Examensarbete HE111X,
+HI111X, HT100X, HT101X`), because the subfolder had been shielding non-literature from
+literature naming rules; and my first `.gitignore` line was `Filer/Canvas/`, which git anchors
+to the **repository root**, so it matched nothing — `git check-ignore` returned empty and 16 MB
+including another student's thesis would have been committed to a public repo. Fixed to
+`**/Filer/Canvas/`, verified with `git check-ignore -v`.
+
+**The degree project is unpublished** until examined: a thesis is normally done for a company,
+and publishing drafts risks both confidentiality and the plagiarism check flagging against your
+own public draft. Pattern deliberately written as `**/HT100X Examensarbete/**` with no Swedish
+characters, since a path containing `ö` risks an NFC/NFD mismatch between Windows and CI.
+
+**Where I was wrong.** I found `site-baseline.json` at 1270 pages, could not reproduce it — two
+clean local builds both give exactly 693 — and concluded it had been measured from a directory
+holding two builds' output. F58 says plainly that 1270 came from **the CI build's own log**,
+chosen because a local Windows build's broken-link count "can diverge and set too low a
+ceiling". So I re-baselined from precisely the source F58 warns against, and set
+`brokenInternalLinks` to 85 when CI had reported 87 — which would have turned the next CI run
+red for exactly the reason F58 documented.
+
+Corrected by setting the baseline **per metric, by the direction each check fails in**: counts
+that fail on a *drop* take the lower build (693 / 442 / 2476 / 183 / 40892), and
+`brokenInternalLinks`, which fails on any *rise*, takes the higher (87). Recorded in the
+baseline's own `_meta.notes` so the asymmetry is not "tidied up" later.
+
+**Why local and CI disagree on `pages` by a factor of 1.8 is still unknown** and is worth
+reading a CI run log to settle. It is harmless for now only because that metric fails on a drop.
+
+Also added, and kept despite the wrong diagnosis: `check-site.mjs` now measures the mtime spread
+of the emitted pages and **refuses `--update`** when it exceeds 300 s, since a single build
+writes everything in seconds. Tested both ways — backdating 50 pages by three hours makes
+`--update` exit 1 with the baseline untouched; a clean directory is accepted. The baseline now
+records when and from where it was taken.
+
+Verified: audit `RESULT: clean`, exit 0 in both modes, `notesInScope=561`; lint **583 files / 0
+errors**; self-test **40/40**; a clean build passes `check-site` with `check-site OK` and no
+staleness warning.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

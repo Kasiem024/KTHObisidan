@@ -46,13 +46,33 @@ would have made every new note's cards publish as raw `::` syntax.
 ## A stale number is a finding against the doc
 
 Several docs quote exact figures — 561 notes in scope, 441 concept notes, 1262 scheduling
-markers, 584 linted files, and on the site side 1270 pages, 2476 callouts and 87 broken links.
+markers, 583 linted files, and on the site side 693 pages, 2476 callouts and 85 broken links.
 Every one was correct when written, and nothing verifies them afterwards. A confident wrong
 number is worse than no number, because it gets quoted instead of checked.
 
 The vault figures moved on 2026-08-26 when HI1031 and HI1032 gained 92 notes: 470 became 561,
-352 concept notes became 441, and 493 linted files became 584. The site figures moved on 2026-08-26 too, when `site-baseline.json` was re-baselined to
-1270/2476/87 — the gated deploy had been failing on the rise in broken links until then (see backlog F58). Do not copy a local build's numbers into a doc while the baseline disagrees.
+352 concept notes became 441, and 493 linted files became 583.
+
+**The site figures moved twice on 2026-08-26, and the two builds disagree.** `site-baseline.json`
+was first set to `1270` pages from **the CI build's own log** (F58), deliberately, on the reasoning
+that a local Windows build's broken-link count can diverge and set too low a ceiling. Two
+independent clean **local** builds emit exactly **693** — every other metric matches CI, but pages
+differ by a factor of 1.8. Why is not yet known and is worth finding out from a CI run log.
+
+Until it is, the baseline is set per metric according to **which direction each one fails in**:
+
+| Metric | Fails on | Safe baseline | Value |
+|---|---|---|---|
+| `pages`, callouts, images, `internalLinks` | a **drop** over 5% | the **lower** of the two builds | 693 / 442 / 2476 / 183 / 40892 |
+| `brokenInternalLinks` | any **rise** | the **higher** of the two builds | 87 |
+
+Setting `brokenInternalLinks` from the local build (85) would fail the moment CI reported its 87 —
+which is exactly what F58 warned about, and what happened when this was first re-baselined. The
+baseline records `_meta` so a future reader can tell which build produced it.
+
+Do not copy a local build's numbers into a doc while the baseline disagrees — and if they
+disagree, work out which one is reproducible, and in which direction the check fails, before
+changing either.
 
 When a figure in a doc disagrees with a fresh measurement, **fix the doc**; never adjust the
 measurement to match. The machine-checked copies are `site-baseline.json` and the audit's own

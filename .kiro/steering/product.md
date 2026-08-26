@@ -4,7 +4,7 @@
 
 A personal Obsidian vault of university coursework for one student on KTH's
 **Högskoleingenjör – Teknik och Ekonomi** programme (IT/computer engineering with an
-economics track). Around 560 interlinked Markdown notes across 24 courses and six terms.
+economics track). Around 560 interlinked Markdown notes across 23 courses and six terms.
 
 It is two things at once, and both matter:
 
@@ -48,7 +48,7 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` tracks findings F1–F57: all closed. Both the audit and the linter run
+`Meta/Vault Findings & Backlog.md` ––F57: all closed. Both the audit and the linter run
 automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on
