@@ -73,6 +73,27 @@ platform was unfounded.
 The lesson generalises: before changing a number, establish **what it counts**. Both sides of
 this argument were measuring honestly and disagreeing about the unit.
 
+### A number needs a declared unit and an observable source
+
+Two rules came out of that day, both mechanically enforced rather than left to memory:
+
+1. **Every compared metric declares what it counts.** The site's are in
+   `tools/lib/page-count.mjs` (`METRIC_UNITS`), and `tools/test-check-site.mjs` fails if a
+   baselined metric has no declaration. "Pages" meant two different things to two machines and
+   nothing in the system recorded which.
+2. **The other environment's numbers must be readable without privileges.** Every site build
+   now writes `build-report.json` into its output, so CI's own measurements are published at
+   `/build-report.json`. Diagnosing this the first time needed a run log gated behind
+   `actions:read`, with artifacts returning 403 and the anonymous API rate-limited at 60/hour —
+   so four hypotheses were tested against local data alone and none of them converged.
+   `node tools/check-site.mjs <dir> --compare-ci` diffs a local build against that report and
+   names any metric that is not machine-independent.
+
+**When a doc figure disagrees with a fresh measurement, read the backlog entry that documents
+the figure before changing anything.** F58 recorded exactly where `1270` came from; overriding
+it on the strength of my own reconstruction is what turned a five-minute question into a day.
+The record was right and I was confident.
+
 When a figure in a doc disagrees with a fresh measurement, **fix the doc**; never adjust the
 measurement to match. The machine-checked copies are `site-baseline.json` and the audit's own
 output — prose copies are convenience, not truth. The same applies to a trap that no longer
