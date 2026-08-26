@@ -6,3 +6,7 @@ litteraturlista/
 # the site built from it are public, so none of it belongs in git. The vault keeps the
 # files locally; the audit and the linter skip the folder.
 **/Filer/Canvas/
+
+# Text-extractor plugin OCR cache: derived data regenerated on demand, not authored
+# content, and nothing a public repo should carry.
+.obsidian/plugins/text-extractor/cache/
