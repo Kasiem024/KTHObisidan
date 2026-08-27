@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Flashcards HI1031 kap 9 – web services: SOAP, WSDL, UDDI och REST samt lös koppling och interoperabilitet."
 ---
 # HI1031 Begrepp - Kap 09 Web services
@@ -24,3 +24,7 @@ Vad skiljer SOAP-baserade webbtjänster från REST?
 **Löst kopplad** (loose coupling);;När parter samverkar ==med minimalt beroende av varandras interna detaljer==; en bärande idé bakom webbtjänster och tjänsteorienterad arkitektur (SOA).
 
 Varför bygger webbtjänster på öppna format som XML och HTTP?::För ==interoperabilitet== – öppna, textbaserade standarder gör att helt olika system och språk kan samverka, och trafiken tar sig igenom brandväggar.
+
+**SOA** (tjänsteorienterad arkitektur);;Att bygga system av ==löst kopplade, oberoende tjänster med väldefinierade gränssnitt== som kan kombineras (t.ex. *mashups*) och nås globalt – möjliggör *business-to-business*-integration mellan organisationer.
+
+**Ajax** (Asynchronous JavaScript and XML);;En teknik där webbläsaren gör ==asynkrona anrop i bakgrunden== (ofta till webbtjänster) och uppdaterar *delar* av sidan utan omladdning – ger responsiva webbappar trots nätets fördröjning (t.ex. Google Maps).

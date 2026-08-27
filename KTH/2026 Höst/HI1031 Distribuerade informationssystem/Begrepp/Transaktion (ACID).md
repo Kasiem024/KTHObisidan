@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Begrepp: transaktion och ACID (HI1031)."
 ---
 # Transaktion (ACID)
@@ -13,7 +13,6 @@ En sekvens av operationer som utförs som ==en enda odelbar enhet== – antingen
 ## Kopplat till
 
 - [[Tvåfas-commit (2PC)]]
-- [[Replikering]]
 
 ## Flashcards
 

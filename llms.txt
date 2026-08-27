@@ -2,7 +2,7 @@
 
 > Personal study vault for a KTH (Kungliga Tekniska Högskolan) student on the
 > "Högskoleingenjör – Teknik och Ekonomi" programme (computer/IT engineering with
-> an economics track). It contains roughly 560 interconnected Markdown notes covering
+> an economics track). It contains roughly 520 interconnected Markdown notes covering
 > university coursework across six terms and 23 courses. **The note content is written in
 > Swedish**; technical terms are often English. Unless asked otherwise, respond
 > in Swedish when answering questions about this material.
@@ -132,15 +132,15 @@ metadata, not prose:
   `HI1030` Databasteknik · `HI1027` Objektorienterad Programmering
 - 2026 Vår: `HF1012` Matematisk Statistik · `HI1039` Projektkurs ·
   `HE1033` Kommunikationsnät · `HI1029` Algoritmer och Datastrukturer
-- 2026 Höst: `HI2002` Routing i IP-nät · `EN2720` Etisk hackning ·
-  `HI1032` Kommunikationssystem · `HI1031` Distribuerade informationssystem
+- 2026 Höst: `HI1031` Distribuerade informationssystem ·
+  `HI1032` Kommunikationssystem · `HT100X` Examensarbete
 
 ## How concept notes are structured
 
 Concept (`begrepp`) notes are the densest source of meaning. They use a consistent
 section layout:
 
-- `## Definition` — the definition, in plain prose. Present on 356 of 441 concept
+- `## Definition` — the definition, in plain prose. Present on 346 of 400 concept
   notes. **This is the section to read first.**
 - `## Tenta-fokus` — optional exam guidance; only about 1 note in 8 has one.
 - `## Kopplat till` — a bullet list of wiki-links to *related concepts only*. This is

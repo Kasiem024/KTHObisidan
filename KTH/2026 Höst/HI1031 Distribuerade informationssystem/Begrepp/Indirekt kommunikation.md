@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Begrepp: indirekt kommunikation (HI1031)."
 ---
 # Indirekt kommunikation
@@ -13,7 +13,6 @@ Kommunikation ==via en mellanhand==, där sändare och mottagare inte pratar dir
 ## Kopplat till
 
 - [[Middleware]]
-- [[Replikering]]
 
 ## Flashcards
 

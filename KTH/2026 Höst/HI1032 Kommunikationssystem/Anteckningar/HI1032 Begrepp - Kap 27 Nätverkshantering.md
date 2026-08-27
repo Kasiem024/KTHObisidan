@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1032, nätverk, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Flashcards HI1032 kap 27 – nätverkshantering: SNMP (manager/agent, trap) samt SMI och MIB."
 ---
 # HI1032 Begrepp - Kap 27 Nätverkshantering
@@ -26,3 +26,13 @@ Vilka tre protokoll samverkar i internets nätverkshantering? (3)
 **MIB** (Management Information Base);;En ==samling av de objekt (variabler) som kan hanteras== hos en enhet, namngivna enligt SMI:s regler – som en databas av metadata.
 
 Vad är en *trap* i SNMP?::Ett ==meddelande som en agent skickar oombedd till managern== för att varna om en ovanlig händelse.
+
+**OID** (Object Identifier);;En ==hierarkisk, punktseparerad talföljd== som unikt namnger ett hanterat objekt i MIB-trädet (t.ex. `1.3.6.1.2.1.7.1.0` för *udpInDatagrams*).
+
+Vilka fem områden delar ISO in nätverkshantering i (FCAPS)? (5)
+||
+- **F** – *Fault* (upptäcka och åtgärda fel)
+- **C** – *Configuration* (konfiguration och dokumentation)
+- **A** – *Accounting* (styra och debitera användares resursbruk)
+- **P** – *Performance* (övervaka och optimera prestanda)
+- **S** – *Security* (skydd och åtkomstkontroll)

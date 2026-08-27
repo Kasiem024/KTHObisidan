@@ -15,9 +15,9 @@ prompt to re-measure rather than as proof of damage.
 | Measure | Pattern | Snapshot (2026-08-26) |
 |---|---|---|
 | scheduling markers | `<!--SR:` | **1262** |
-| single-line | `(?m)^[^\|\r\n]+?::` | 1404 |
-| single-line reversed | `(?m)^[^\|\r\n]+?;;` | 596 |
-| multi-line | `(?m)^\s*\|\|\s*$` | 245 |
+| single-line | `(?m)^[^\|\r\n]+?::` | 1373 |
+| single-line reversed | `(?m)^[^\|\r\n]+?;;` | 460 |
+| multi-line | `(?m)^\s*\|\|\s*$` | 174 |
 | multi-line reversed | `(?m)^\s*\?\?\s*$` | 219 |
 | disabled | `DISABLEDFLASHCARD` | 10 |
 
@@ -41,7 +41,7 @@ was scoped to study notes. Mixed scopes in one table is the same bug in miniatur
 powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scripts\Vault-Audit.ps1"
 ```
 
-Expected `RESULT: clean - no deviations from the standard.` with `notesInScope=561`, exit
+Expected `RESULT: clean - no deviations from the standard.` with `notesInScope=520`, exit
 code **0**. Add `-Detail` to list offenders. It exits **1** when not clean, so it can be
 gated on.
 
@@ -54,7 +54,7 @@ depend on state git does not store. Locally, run with no switches.
 npx markdownlint-cli2 "**/*.md"
 ```
 
-Expected `Linting: 583 file(s)` / `Summary: 0 error(s)`. Ignores live in
+Expected `Linting: 542 file(s)` / `Summary: 0 error(s)`. Ignores live in
 `.markdownlint-cli2.jsonc`; **`.markdownlintignore` is inert** in cli2 and silently linted
 36 extra files when it was tried.
 
@@ -71,8 +71,8 @@ npx quartz build -d "G:\My Drive\KTHObsidian" -o C:\Temp\out
 node tools/check-site.mjs C:\Temp\out
 ```
 
-Expected: exit 0, and every metric matching `site-baseline.json` — 693 pages, 442 with
-callouts, 2476 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 85 broken
+Expected: exit 0, and every metric matching `site-baseline.json` — 652 pages, 401 with
+callouts, 2241 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 74 broken
 links (almost all PDF links; PDFs are deliberately unpublished).
 
 Build into an **empty** directory. `check-site.mjs` refuses `--update` when the pages were

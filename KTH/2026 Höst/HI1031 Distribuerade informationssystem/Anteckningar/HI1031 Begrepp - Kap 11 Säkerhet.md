@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, säkerhet, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Flashcards HI1031 kap 11 – säkerhet: kryptering (symmetrisk/asymmetrisk), digitala signaturer, certifikat, autentisering och Kerberos."
 ---
 # HI1031 Begrepp - Kap 11 Säkerhet
@@ -19,6 +19,10 @@ Vad skiljer symmetrisk från asymmetrisk kryptering?
 
 **Asymmetrisk kryptering** (public-key);;Kryptering med ett *nyckelpar*: en ==öppen (publik) nyckel== som alla får använda och en *privat* nyckel som hålls hemlig.
 
+**Hybridkryptering**;;Kombinerar de två sorterna: *asymmetrisk* kryptering används för att ==autentisera parterna och utbyta en hemlig sessionsnyckel==, sedan sköter snabb *symmetrisk* kryptering all vidare kommunikation. Grunden i bl.a. TLS.
+
+**Säker hashfunktion** (digest);;En *enkelriktad* funktion som gör ett meddelande av godtycklig längd till ett ==kort värde av fast längd== som inte går att vända. Används i digitala signaturer. Exempel: *MD5* (128 bitar), *SHA-1* (160 bitar).
+
 **Digital signatur**;;Ett värde skapat med avsändarens ==privata nyckel== som låter vem som helst verifiera *vem som skickat* datan och att den *inte ändrats*.
 
 **Certifikat** (digitalt);;Ett ==signerat intyg som binder en identitet till en publik nyckel==, utfärdat av en betrodd part (certifikatutfärdare).
@@ -34,6 +38,10 @@ Vad skiljer symmetrisk från asymmetrisk kryptering?
 **Kerberos**;;En *autentiseringstjänst* för intranät där en betrodd server delar ut ==biljetter och sessionsnycklar== så att klient och server kan lita på varandra utan att skicka lösenord över nätet.
 
 **Biljett** (ticket, i Kerberos);;Ett ==krypterat intyg== som visar att bäraren nyligen autentiserats; innehåller en sessionsnyckel och en utgångstid.
+
+**TLS/SSL**;;Ett protokoll som lägger en ==säker kanal (sekretess, integritet, autenticitet) under applikationsprotokoll== (t.ex. *https*). Består av ett *record-protokoll* (själva kanalen) och ett *handskakningsprotokoll*.
+
+Hur går TLS-handskakningen till översiktligt?::Den sker först *i klartext* och ==förhandlar krypterings- och autentiseringsalgoritmer== samt etablerar sessionsnycklar; servern (och ev. klienten) autentiseras med *certifikat*. Först därefter krypteras trafiken.
 
 ## Hot
 

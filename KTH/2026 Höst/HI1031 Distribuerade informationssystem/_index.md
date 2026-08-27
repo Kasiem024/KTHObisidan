@@ -17,6 +17,13 @@ description: "Kursindex för HI1031 Distribuerade informationssystem med förel�
 - *Distributed Systems: Concepts and Design* (5:e uppl.), Coulouris, Dollimore, Kindberg & Blair
 	- **ISBN-13:** 978-0273760597
 
+## 📋 Kursmaterial
+
+Kursens Canvas-material ligger i `Filer/Canvas/` och är avsiktligt utanför git och den
+publicerade sidan (upphovsrättsskyddat material). Det är organiserat i `Kursinformation/`
+(kurs-PM och kursintroduktion) och `Tentor/` (tentafrågor med lösningsförslag), plus
+`AI-optimerad Markdown/` med AI-optimerade Markdown-versioner av materialet.
+
 ## 🔗 Länkar
 
 - [[Atlas/2026 MOC|2026 MOC]]

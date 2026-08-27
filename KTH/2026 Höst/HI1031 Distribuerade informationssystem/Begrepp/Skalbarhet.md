@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Begrepp: skalbarhet (HI1031)."
 ---
 # Skalbarhet
@@ -14,7 +14,6 @@ Ett systems förmåga att ==förbli effektivt när det växer== – när antalet
 
 - [[Distribuerat system]]
 - [[Peer-to-peer]]
-- [[Replikering]]
 
 ## Flashcards
 

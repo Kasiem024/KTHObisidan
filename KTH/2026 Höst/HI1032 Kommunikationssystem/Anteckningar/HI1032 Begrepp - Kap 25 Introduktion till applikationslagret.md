@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1032, nätverk, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Flashcards HI1032 kap 25 – applikationslagret: klient-server- och P2P-paradigm, socket-gränssnitt och iterativ/samtidig server."
 ---
 # HI1032 Begrepp - Kap 25 Introduktion till applikationslagret
@@ -12,6 +12,8 @@ Vilka två paradigm kan värdar utbyta tjänster med på internet? (2)
 ||
 - **Klient-server:** en *alltid igång* server erbjuder tjänster; klienter frågar vid behov.
 - **Peer-to-peer (P2P):** ==noder erbjuder tjänster åt varandra direkt==, utan en central server.
+
+**BitTorrent**;;Ett populärt *P2P-protokoll för fildelning*: filen delas i bitar som hämtas från många peers samtidigt (en *swarm*). En *tracker* (eller en trackerlös DHT/Kademlia) ger listan på peers. ==Snabbare än t.ex. FTP== eftersom nedladdningen sprids på många källor.
 
 **Socket-gränssnitt** (socket interface);;Ett ==API mellan applikationen och transportlagret== som låter program skicka och ta emot data över nätet.
 

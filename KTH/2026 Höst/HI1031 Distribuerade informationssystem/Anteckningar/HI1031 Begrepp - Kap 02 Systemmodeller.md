@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Flashcards HI1031 kap 2 – systemmodeller: arkitekturmodeller, skiktning samt de fundamentala modellerna (interaktion, fel, säkerhet)."
 ---
 # HI1031 Begrepp - Kap 02 Systemmodeller
@@ -22,6 +22,8 @@ Vad kännetecknar klient–server-modellen?::Rollerna är *asymmetriska*: ==klie
 **Proxyserver**;;En *mellanhand* som hanterar förfrågningar åt en server och ==cachar svar== för att öka prestanda och tillgänglighet; kan även fungera som brandvägg.
 
 **Tunn klient** (thin client);;En enkel enhet som ==gör minimalt lokalt== och låter en fjärrserver sköta beräkning och program (t.ex. fjärrskrivbord).
+
+**Mobil agent** (mobile agent);;Ett *körande program* – ==kod och data== – som förflyttar sig mellan datorer och utför en uppgift åt en användare. Utgör en säkerhetsrisk för värden och kan själv hindras om den nekas åtkomst.
 
 ## Struktur och lager
 

@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1032, nätverk, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Begrepp: IP-adress och CIDR (HI1032)."
 ---
 # IP-adress (CIDR)
@@ -12,7 +12,6 @@ En *logisk adress* på nätverkslagret som identifierar en värd (IPv4 = 32 bita
 
 ## Kopplat till
 
-- [[MAC-adress]]
 - [[Router]]
 
 ## Flashcards

@@ -45,13 +45,16 @@ would have made every new note's cards publish as raw `::` syntax.
 
 ## A stale number is a finding against the doc
 
-Several docs quote exact figures — 561 notes in scope, 441 concept notes, 1262 scheduling
-markers, 583 linted files, and on the site side 693 pages, 2476 callouts and 85 broken links.
+Several docs quote exact figures — 520 notes in scope, 400 concept notes, 1262 scheduling
+markers, 542 linted files, and on the site side 652 pages, 2241 callouts and 74 broken links.
 Every one was correct when written, and nothing verifies them afterwards. A confident wrong
 number is worse than no number, because it gets quoted instead of checked.
 
-The vault figures moved on 2026-08-26 when HI1031 and HI1032 gained 92 notes: 470 became 561,
-352 concept notes became 441, and 493 linted files became 583.
+The vault figures moved twice on 2026-08-26. First, HI1031 and HI1032 gained 92 notes: 470
+became 561, 352 concept notes became 441, and 493 linted files became 583. Then those two
+courses' flashcard decks and concept notes were pruned to course-relevant scope, removing 41
+notes: 561 became 520, 441 became 400, and 583 became 542 — scheduling markers stayed at 1262,
+since the removed notes carried none.
 
 **The site figures moved twice on 2026-08-26, and the reason took three attempts to find.**
 `site-baseline.json` was set to `1270` pages from a CI log, then "corrected" to `693` from a

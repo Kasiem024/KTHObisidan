@@ -17,6 +17,21 @@ touches filenames/links · **P3** = config, workflow, or judgement calls.
 
 ## 📌 Progress log
 
+### 🗂️ 2026-08-26 (17) — CANVAS-MATERIAL FÖR HI1031 + HI1032
+
+Extended the `Filer/Canvas/` pattern (see the third-party-material finding under P3) from
+HT100X to **HI1031** and **HI1032**, now that their Canvas PDFs are converted to AI-optimized
+Markdown. Each course's `Filer/Canvas/` was organised into thematic subfolders plus an
+`AI-optimerad Markdown/` folder and deployed to both the vault and the raw `G:\My Drive\KTH`
+tree. HI1031: `Kursinformation/` + `Tentor/` (5 md). HI1032: `Laborationer/` /
+`Föreläsningar och artiklar/` / `Kursinformation/`, keeping the source's own `Gamla Tentor/` +
+`Lösningar till boken/` (34 md + 210 images). Gitignored (`**/Filer/Canvas/`) and out of the
+audit's scope — audit still **clean** (561 in scope of 702 markdown files). Markdown-lint
+hygiene (pinned `markdownlint-cli2@0.18.1`) left only heading-structure rules
+(MD001/MD025/MD024), 0 broken image links. `Vault Standard.md`'s "only HT100X has one" line was
+corrected to name all three. Conversion tooling and the full record live in the separate
+pdf2md repo (`CONVERSION_LOG.md` §48).
+
 ### 🧹 2026-08-19 (16) — MARKDOWN LINTING (F52)
 
 Linted all 500 lintable notes: **767 violations → 0**. 745 of those were fixed mechanically
@@ -1749,6 +1764,66 @@ this argument were measuring honestly and disagreeing about the unit.
 Verified: audit `RESULT: clean`, exit 0 in both modes, `notesInScope=561`; lint **583 files / 0
 errors**; self-test **40/40**; a clean local build passes `check-site` with `check-site OK` and
 no staleness warning; the implemented page-count expression reproduces CI's own numbers.
+
+### F60. ✅ DONE (2026-08-26) — HI1031 + HI1032 flashcards pruned to course-relevant scope
+
+HI1031's and HI1032's concept notes and per-chapter flashcard decks had been generated to cover
+the *whole* course book, not the parts each course actually examines. Pruned them to scope, then
+gap-filled the exam-tested topics that were missing. Relevance came from each course's own Canvas
+materials (KursPM reading lists, exam question sets, lab briefs); the *content* of new cards came
+from the course-book knowledge bases — nothing invented.
+
+**Removed 41 `begrepp`-tagged files** (moved to a backup outside the vault, not deleted):
+
+- **HI1031** — 11 decks (Kap 03, 07, 08, 12–15, 18–21) + 4 concept notes (Byzantinfel, Konsensus,
+  Logiska klockor, Replikering). The reading list and every exam question map to chapters
+  1, 2, 4, 5, 6, 9, 10, 11, 16, 17.
+- **HI1032** — 20 decks (Kap 01, 03–16, 21, 22, 29, 31, 32) + 6 concept notes (Kryptering, CSMA-CA,
+  CSMA-CD, Multiplexering, MAC-adress, Ethernet). The written exam (RED1) is strictly transport +
+  application layer; the decks kept also cover the LAB1 topics (OSPF, switching/VLAN, network
+  management, IPv4 addressing).
+
+**Fixed 6 dead `[[wikilinks]]`** in kept notes (→ `[[Replikering]]` ×4, → `[[Konsensus]]`,
+→ `[[MAC-adress]]`); no `## Kopplat till` was emptied, and no note linked to any removed *deck*
+(grep = 0).
+
+**Added 25 gap cards** across 9 kept decks, each grounded in the KB (HI1031: *Distributed Systems:
+Concepts and Design* 5th ed; HI1032: *Data Communications and Networking* 5th ed) plus the HI1032
+lecture for MSS/Path-MTU — mobile agent, SOA, Ajax, hybrid encryption, secure hash, TLS handshake,
+dirty read, optimistic/timestamp concurrency (HI1031); MSS/Path-MTU, slow-start vs
+congestion-avoidance, Tahoe/Reno, RTO+Karn, BitTorrent, DNS record types + TTL, MIME + Base64/QP,
+OID + FCAPS, JPEG/DCT + MPEG spatial/temporal (HI1032). **MVC/MVVM was deliberately not written**:
+the HI1031 exam asks it, but it is the applied ASP.NET lab topic, not in the textbook KB, so
+inventing it would have broken the "ground new cards in real course literature" rule.
+
+**⚠️ Edition mismatch worth recording.** HI1032's decks are numbered Kap 01–32 (Forouzan *5th* ed,
+which the KB also is), but the course now uses the *6th* ed (2022), reading list "kap 9–12".
+Relevance was mapped by **topic**, not chapter number; the concepts are edition-stable, so the kept
+cards stand.
+
+**Numbers (measured, not computed):** notes in scope 561 → **520**; linted files 583 → **542**;
+concept notes 441 → **400**; `## Definition` 356 → **346**; `## Flashcards` 356 → **346**
+(last-section invariant 346 of 346); `## Kopplat till` 333 → **323**; `## Tenta-fokus` 42
+(unchanged); concept collections 84 → **54**. **Scheduling markers unchanged at 1262** — the
+removed files carried **zero** `<!--SR:-->` (grep-verified before removal), so no review schedule
+was touched and no separator was converted.
+
+**A measurement trap, per the F58/F59 lesson.** A first vault-wide count read 1274 SR markers, not
+1262; the extra 12 are the literal `<!--SR:-->` strings this backlog (10) and `Vault Standard.md`
+(2) quote when documenting the syntax. The study-note scope is 1262. Established what the number
+counted before touching any doc.
+
+**Verified.** A diff of every edited deck against a pre-edit snapshot showed **additions only**
+(0 lines removed → nothing existing altered); files stayed LF / no-BOM. `Vault-Audit.ps1` →
+`RESULT: clean`, `notesInScope=520`; markdownlint (`markdownlint-cli2@0.18.1`, `"**/*.md"`) →
+**542 files, 0 errors**. Docs synced in the same change: `Vault Standard.md`, both `.kiro/steering/`
+docs, `llms.txt`, `README.md`, the `vault-bulk-edit` skill's `verification.md` fingerprint, and the `updated` date on the 15 edited notes; also corrected
+`llms.txt`'s course catalog (EN2720/HI2002 gone, HT100X added — F59 changes it had missed).
+Backups: `G:\My Drive\_kth_flashcard_prune_backup_20260826`.
+
+**Open, in the Quartz repo (cannot fix from the vault).** Removing 41 published notes drops the
+site ~693 → ~652 pages, a ~5.9% fall that exceeds `check-site.mjs`'s 5% drop guard — the next
+`main` push will fail the site job until `site-baseline.json` is re-baselined against the new build.
 
 ---
 

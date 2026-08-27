@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Begrepp: transparens i distribuerade system (HI1031)."
 ---
 # Transparens
@@ -13,7 +13,6 @@ Att ==dölja att systemet är utspritt== så att det upplevs och används som *e
 ## Kopplat till
 
 - [[Distribuerat system]]
-- [[Replikering]]
 
 ## Flashcards
 

@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1032, nätverk, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Flashcards HI1032 kap 28 – multimedia: förlustfri/förstörande kompression, strömning samt RTP, RTCP och SIP."
 ---
 # HI1032 Begrepp - Kap 28 Multimedia
@@ -12,6 +12,17 @@ Vad skiljer förlustfri (lossless) från förstörande (lossy) kompression?
 ||
 - **Förlustfri:** ==ingen data går förlorad== – originalet kan återskapas exakt (t.ex. text/program; RLE, Huffman).
 - **Förstörande:** ==kastar detaljer man knappt märker== för högre kompression (t.ex. JPEG, MPEG).
+
+Hur komprimerar JPEG en bild (stegen)?
+||
+- Dela bilden i *block* och gör en **DCT** → koefficienter i *frekvensdomänen*.
+- **Kvantisering** – avrundar koefficienterna; ==detta är det enda förstörande steget==.
+- *Zigzag*-ordna och koda sedan *förlustfritt* (t.ex. run-length).
+
+Vad skiljer spatial från temporal kompression i MPEG?
+||
+- **Spatial:** komprimera ==varje bildruta för sig== (som JPEG).
+- **Temporal:** ta bort *redundans mellan* rutor – ==I-frames== (självständiga), *P-frames* (från föregående ruta) och *B-frames* (från både för- och efterföljande).
 
 På vilka tre sätt kan multimedia levereras över internet? (3)
 ||

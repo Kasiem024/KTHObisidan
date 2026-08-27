@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 description: "Begrepp: tvåfas-commit (2PC) (HI1031)."
 ---
 # Tvåfas-commit (2PC)
@@ -13,7 +13,6 @@ Det vanligaste *atomiska commit-protokollet* för distribuerade transaktioner: i
 ## Kopplat till
 
 - [[Transaktion (ACID)]]
-- [[Konsensus]]
 
 ## Flashcards
 

@@ -155,7 +155,9 @@ KTH/<Year Season>/<CODE Course Name>/
   do not apply because the official document titles legitimately contain course codes
   (`Detaljplan Examensarbete HE111X, HI111X, HT100X, HT101X.pdf`). Use it only for files
   that came from someone else; anything you wrote belongs in the four category folders.
-  Only `HT100X Examensarbete` has one today.
+  `HT100X Examensarbete`, `HI1031 Distribuerade informationssystem` and
+  `HI1032 Kommunikationssystem` have one today; each Canvas folder also contains an
+  `AI-optimerad Markdown/` subfolder with AI-optimized Markdown conversions of the material.
 - New courses: copy the skeleton from `KTH/Kurs Mapp Mall/`.
 - `Atlas/` holds subject MOCs, the `Dashboard` and the `Vault Health Report`.
   `Meta/` holds tooling, templates and this standard. `Ericsson/` is work, not studies.
@@ -185,8 +187,8 @@ same one. Enforced by markdownlint MD001 and MD024, so it cannot drift back.
 
 ### Concept note body format
 
-Concept (`begrepp`) notes follow one shape. Measured 2026-08-26 across the 441 concept notes in
-the vault: `## Definition` 356, `## Flashcards` 356, `## Kopplat till` 333,
+Concept (`begrepp`) notes follow one shape. Measured 2026-08-26 across the 400 concept notes in
+the vault: `## Definition` 346, `## Flashcards` 346, `## Kopplat till` 323,
 `## Tenta-fokus` 42.
 
 ```markdown
@@ -219,7 +221,7 @@ The definition, in plain prose. Wiki-link related concepts inline.
   `## Kopplat till` on any concept that relates to another.
 - The leading `> **Label:**` callouts and the `---` rule after them are **optional**.
   Newer notes use them to surface exam-relevant framing; most older notes do not.
-- **`## Flashcards` is always the last section.** This holds in 356 of 356 notes that
+- **`## Flashcards` is always the last section.** This holds in 346 of 346 notes that
   have one, and the published site depends on it — the build-time card transformer
   only rewrites content under that heading.
 - `## Tenta-fokus` is **optional**. Add it only where there is real exam guidance;
@@ -247,7 +249,7 @@ The definition, in plain prose. Wiki-link related concepts inline.
 **Concept collections are a recognised exception.** Notes named like
 `HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` gather many short definitions
 into a single note, written directly as flashcards, and have no `## Definition`
-section of their own. 84 of the 441 concept notes are of this kind. They are still
+section of their own. 54 of the 400 concept notes are of this kind. They are still
 tagged `begrepp` and still end with `## Flashcards`.
 
 ### Images and embeds

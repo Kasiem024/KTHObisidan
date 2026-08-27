@@ -19,6 +19,14 @@ description: "Kursindex för HI1032 Kommunikationssystem med föreläsningar, be
 - *Data and Computer Communications*, Stallings (9:e uppl.)
 	- **ISBN-13:** 978-0131392052
 
+## 📋 Kursmaterial
+
+Kursens Canvas-material ligger i `Filer/Canvas/` och är avsiktligt utanför git och den
+publicerade sidan (upphovsrättsskyddat material). Det är organiserat i `Laborationer/`
+(laborationer, Packet Tracer-filer och labbnoteringar), `Föreläsningar och artiklar/`,
+`Kursinformation/`, `Gamla Tentor/` och `Lösningar till boken/`, plus `AI-optimerad Markdown/`
+med AI-optimerade Markdown-versioner av materialet.
+
 ## 🔗 Länkar
 
 - [[Atlas/2026 MOC|2026 MOC]]
