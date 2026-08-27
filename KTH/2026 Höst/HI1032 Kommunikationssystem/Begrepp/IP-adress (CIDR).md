@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1032, nätverk, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-26
+updated: 2026-08-27
 description: "Begrepp: IP-adress och CIDR (HI1032)."
 ---
 # IP-adress (CIDR)
@@ -16,6 +16,6 @@ En *logisk adress* på nätverkslagret som identifierar en värd (IPv4 = 32 bita
 
 ## Flashcards
 
-**CIDR** (Classless Inter-Domain Routing);;Klasslös adressering där ett block anges med en ==prefixlängd== (t.ex. /24) i stället för fasta klasser (A/B/C).
+**CIDR** (Classless Inter-Domain Routing) ==DISABLEDFLASHCARD== Klasslös adressering där ett block anges med en ==prefixlängd== (t.ex. /24) i stället för fasta klasser (A/B/C).
 
-**NAT** (Network Address Translation);;Teknik som låter många enheter ==dela på en publik IP-adress== genom att översätta mellan privata och publika adresser.
+**NAT** (Network Address Translation) ==DISABLEDFLASHCARD== Teknik som låter många enheter ==dela på en publik IP-adress== genom att översätta mellan privata och publika adresser.

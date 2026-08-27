@@ -1825,6 +1825,57 @@ Backups: `G:\My Drive\_kth_flashcard_prune_backup_20260826`.
 site ~693 → ~652 pages, a ~5.9% fall that exceeds `check-site.mjs`'s 5% drop guard — the next
 `main` push will fail the site job until `site-baseline.json` is re-baselined against the new build.
 
+### F61. ✅ DONE (2026-08-27) — cross-course duplicate concept notes consolidated; in-note duplicate cards disabled
+
+The F60 begrepp-overlap scan surfaced two kinds of duplication across the 396 concept notes. Fixed both.
+
+**Cross-course duplicates — 4 concept notes merged into the older course.** `OSI-modellen`, `TCP`,
+`UDP` and `DNS` existed as standalone notes in **both** HI1032 Kommunikationssystem (2026 Höst, created
+2026-08-24) and HE1033 Kommunikationsnät (2026 Vår, created 2026-05-28). Kept the older, richer HE1033
+versions (each already carries `## Tenta-fokus`); removed the HI1032 ones. Merged the only genuinely new
+info first, as `## Tenta-fokus` bullets on the HE1033 notes: OSI never replaced TCP/IP (came too late;
+session/presentation never fully defined), and DNS recursive-vs-iterative resolution. The bare
+`[[OSI-modellen]]` / `[[TCP]]` links in the surviving HI1032 notes (TCP-IP-modellen, Protokollskiktning,
+Trevägshandskakning) auto-heal to the HE1033 versions once the same-course file is gone — the full
+audit's `brokenWikilinks` check is clean, confirming none dangled.
+
+**In-note duplicate cards disabled, not deleted — reversibly.** 23 flashcards inside 17 surviving
+HI1031/HI1032 concept notes duplicated cards already carried by the per-chapter decks, so the
+spaced-repetition plugin scheduled each concept twice. Switched off the concept-note copies with the
+established `==DISABLEDFLASHCARD==` convention (18 single-line `;;`, 5 multi-line `||`): Obsidian stops
+scheduling them, the Quartz flashcard plugin still renders them as ordinary callouts (marker dropped, so
+no card-leak and `questionCallouts` is unaffected), and they re-enable by restoring the separator. Deck
+copies stay active. Scoped to same-course notes only; HE1033's own lecture decks were left untouched — a
+cross-course *card* overlap remains, flagged for later, not in this task's scope.
+
+**Numbers (measured):** notes in scope 520 → **516**; linted files 542 → **538**; concept notes 400 →
+**396**; `## Definition` 346 → **342**; `## Flashcards` 346 → **342** (last-section invariant 342 of 342);
+`## Kopplat till` 323 → **319**; `## Tenta-fokus` 42 (unchanged). Separator fingerprint (study-note
+scope): `::` 1400 → **1399**, `;;` 461 → **440**, `||` 174 → **165**, `??` **219** (unchanged),
+`DISABLEDFLASHCARD` 10 → **33**. **Scheduling markers unchanged at 1262** — the 4 removed and 17 disabled
+notes carried **zero** `<!--SR:-->` (the 21 backed-up originals measured SR=0), so no review schedule was
+touched.
+
+**A snapshot that was slightly off.** `verification.md`'s prior `::` / `;;` snapshot (1373 / 460) proved
+~27 / 1 low against a fresh measurement — the true pre-change values were 1400 / 461, and the deltas above
+are exact. Per that file's own rule (treat a mismatch as a prompt to re-measure, not proof of damage),
+corrected the snapshot rather than the vault; the patterns are method-dependent and flagged as such.
+
+**Verified.** `Vault-Audit.ps1` → `RESULT: clean`, `notesInScope=516`; markdownlint
+(`markdownlint-cli2@0.18.1`, `"**/*.md"`) → **538 files, 0 errors**; deltas proven exact against the 21
+backed-up originals (`::` 1, `;;` 21, `||` 9 removed; 23 → `DISABLEDFLASHCARD`); 0 BOM, 0 mixed EOL
+(HE1033 stayed CRLF, HI103x LF). Docs synced in the same change: `Vault Standard.md`, both
+`.kiro/steering/` docs, `llms.txt`, `README.md`, the `vault-bulk-edit` skill's `verification.md`
+fingerprint, and `updated: 2026-08-27` on the 19 edited notes. Backups:
+`G:\My Drive\_kth_consolidate_backup_20260827`.
+
+**Site (Quartz repo), re-baselined.** Removing the 4 notes took the build 652 → **648** pages, 397 with
+callouts, **2233** question callouts (only −8 — the removed notes' cards; the 23 disabled cards still
+render), 38241 internal links. `brokenInternalLinks` **fell 74 → 44** (removing the duplicate
+TCP/UDP/DNS/OSI notes de-ambiguated the HE1033 cross-links), which trips the 5%-drop guard, so
+`site-baseline.json` was re-baselined (`check-site` OK, `test-check-site` 22/0). The vault is pushed
+before the baseline so the must-not-rise `brokenInternalLinks` never sees the old vault against it.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

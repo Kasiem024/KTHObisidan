@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-27
 description: "Begrepp: marshalling (HI1031)."
 ---
 # Marshalling
@@ -17,4 +17,4 @@ Att ==omvandla data till en följd av bytes== som kan skickas över nätet, och 
 
 ## Flashcards
 
-**Marshalling**;;Att ==omvandla data till en följd av bytes== som kan skickas över nätet (och tillbaka via *unmarshalling*), oberoende av datorarkitektur.
+**Marshalling** ==DISABLEDFLASHCARD== Att ==omvandla data till en följd av bytes== som kan skickas över nätet (och tillbaka via *unmarshalling*), oberoende av datorarkitektur.

@@ -4,7 +4,7 @@
 
 A personal Obsidian vault of university coursework for one student on KTH's
 **Högskoleingenjör – Teknik och Ekonomi** programme (IT/computer engineering with an
-economics track). Around 520 interlinked Markdown notes across 23 courses and six terms.
+economics track). Around 516 interlinked Markdown notes across 23 courses and six terms.
 
 It is two things at once, and both matter:
 
@@ -37,7 +37,7 @@ blog with an audience to serve.
 
 **Uniformity.** This vault is deliberately, aggressively consistent: one tag vocabulary,
 one frontmatter shape, one folder layout per course, one concept-note structure, one
-literature naming scheme. That consistency is the point — it is what makes ~520 notes
+literature naming scheme. That consistency is the point — it is what makes ~516 notes
 navigable and machine-readable. A change that introduces a second way of doing something
 is a regression even if it looks locally reasonable.
 
@@ -52,7 +52,7 @@ Conventions are settled and the vault is clean against them. The change log in
 automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on
-42 of the 400 concept notes, prioritised in `Atlas/Tenta-prioritering.md`.
+42 of the 396 concept notes, prioritised in `Atlas/Tenta-prioritering.md`.
 
 ## What it is not
 

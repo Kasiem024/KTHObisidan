@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-27
 description: "Begrepp: heterogenitet (HI1031)."
 ---
 # Heterogenitet
@@ -17,4 +17,4 @@ Att delarna i ett system är *olika sinsemellan* – skilda nätverk, hårdvara,
 
 ## Flashcards
 
-**Heterogenitet**;;Att delarna i ett system är *olika* (nätverk, hårdvara, OS, språk) men ändå måste kunna ==samarbeta==.
+**Heterogenitet** ==DISABLEDFLASHCARD== Att delarna i ett system är *olika* (nätverk, hårdvara, OS, språk) men ändå måste kunna ==samarbeta==.

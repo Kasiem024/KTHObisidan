@@ -12,14 +12,14 @@ method-dependent — a slightly different regex gives a different, equally "corr
 so always use the exact patterns below, and treat a mismatch against the snapshot as a
 prompt to re-measure rather than as proof of damage.
 
-| Measure | Pattern | Snapshot (2026-08-26) |
+| Measure | Pattern | Snapshot (2026-08-27) |
 |---|---|---|
 | scheduling markers | `<!--SR:` | **1262** |
-| single-line | `(?m)^[^\|\r\n]+?::` | 1373 |
-| single-line reversed | `(?m)^[^\|\r\n]+?;;` | 460 |
-| multi-line | `(?m)^\s*\|\|\s*$` | 174 |
+| single-line | `(?m)^[^\|\r\n]+?::` | 1399 |
+| single-line reversed | `(?m)^[^\|\r\n]+?;;` | 440 |
+| multi-line | `(?m)^\s*\|\|\s*$` | 165 |
 | multi-line reversed | `(?m)^\s*\?\?\s*$` | 219 |
-| disabled | `DISABLEDFLASHCARD` | 10 |
+| disabled | `DISABLEDFLASHCARD` | 33 |
 
 The two single-line patterns count **card lines**, one per line, and exclude table rows (a
 `|` anywhere before the separator). They were changed on 2026-08-26: the previous versions
@@ -41,7 +41,7 @@ was scoped to study notes. Mixed scopes in one table is the same bug in miniatur
 powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scripts\Vault-Audit.ps1"
 ```
 
-Expected `RESULT: clean - no deviations from the standard.` with `notesInScope=520`, exit
+Expected `RESULT: clean - no deviations from the standard.` with `notesInScope=516`, exit
 code **0**. Add `-Detail` to list offenders. It exits **1** when not clean, so it can be
 gated on.
 
@@ -54,7 +54,7 @@ depend on state git does not store. Locally, run with no switches.
 npx markdownlint-cli2 "**/*.md"
 ```
 
-Expected `Linting: 542 file(s)` / `Summary: 0 error(s)`. Ignores live in
+Expected `Linting: 538 file(s)` / `Summary: 0 error(s)`. Ignores live in
 `.markdownlint-cli2.jsonc`; **`.markdownlintignore` is inert** in cli2 and silently linted
 36 extra files when it was tried.
 

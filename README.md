@@ -18,7 +18,7 @@ vault-commit själv, så ingen extra åtgärd behövs.
 | --- | --- |
 | `llms.txt` | Ingång för AI-verktyg: struktur, taggar, kurskatalog och hur Obsidian-syntaxen ska tolkas |
 | `Meta/Vault Standard.md` | Reglerna: taggar, frontmatter, mappstruktur, namngivning, notstruktur |
-| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser ––F60) |
+| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser ––F61) |
 | `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1` | Kontrollerar hela vaultet mot standarden |
 | `.markdownlint.json` | Vilka markdown-regler som gäller (`.markdownlint-cli2.jsonc` styr vilka filer) |
 | `Meta/Obsidian Plugins/Templates/` | Mallar som följer standarden automatiskt |

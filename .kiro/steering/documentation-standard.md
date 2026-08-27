@@ -45,8 +45,8 @@ would have made every new note's cards publish as raw `::` syntax.
 
 ## A stale number is a finding against the doc
 
-Several docs quote exact figures — 520 notes in scope, 400 concept notes, 1262 scheduling
-markers, 542 linted files, and on the site side 652 pages, 2241 callouts and 74 broken links.
+Several docs quote exact figures — 516 notes in scope, 396 concept notes, 1262 scheduling
+markers, 538 linted files, and on the site side 648 pages, 2233 callouts and 44 broken links.
 Every one was correct when written, and nothing verifies them afterwards. A confident wrong
 number is worse than no number, because it gets quoted instead of checked.
 
@@ -55,6 +55,11 @@ became 561, 352 concept notes became 441, and 493 linted files became 583. Then 
 courses' flashcard decks and concept notes were pruned to course-relevant scope, removing 41
 notes: 561 became 520, 441 became 400, and 583 became 542 — scheduling markers stayed at 1262,
 since the removed notes carried none.
+
+On 2026-08-27 a further consolidation removed the 4 cross-course duplicate concept notes
+(`OSI-modellen`, `TCP`, `UDP`, `DNS`, kept in the older HE1033) and disabled 23 in-note duplicate
+flashcards: 520 became 516, 400 became 396, and 542 became 538 — scheduling markers again
+unchanged at 1262, since those notes carried none either (F61).
 
 **The site figures moved twice on 2026-08-26, and the reason took three attempts to find.**
 `site-baseline.json` was set to `1270` pages from a CI log, then "corrected" to `693` from a

@@ -2,7 +2,7 @@
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
 description: "En teoretisk modell i sju lager som beskriver hur data skickas från en applikation på en dator till en applikation på en annan."
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-08-27
 ---
 # OSI-modellen
 
@@ -27,6 +27,7 @@ En teoretisk modell i sju lager som beskriver hur data skickas från en applikat
 
 - **Inkapsling:** Varje lager lägger till sin egen header (PDU). Data $\to$ Segment (L4) $\to$ Paket (L3) $\to$ Ram (L2).
 - **Lager-ansvar:** Du måste veta vilket lager som hanterar vad (t.ex. Routing = Lager 3, Switching = Lager 2).
+- **OSI vs TCP/IP:** OSI ersatte aldrig TCP/IP i praktiken — modellen blev klar när TCP/IP redan var etablerat, och session-/presentationslagren definierades aldrig fullt ut. Används idag främst som referensmodell för att förstå och jämföra.
 
 ## Kopplat till
 

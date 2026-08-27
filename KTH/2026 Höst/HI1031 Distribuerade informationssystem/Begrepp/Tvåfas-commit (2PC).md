@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-08-26
+updated: 2026-08-27
 description: "Begrepp: tvåfas-commit (2PC) (HI1031)."
 ---
 # Tvåfas-commit (2PC)
@@ -16,4 +16,4 @@ Det vanligaste *atomiska commit-protokollet* för distribuerade transaktioner: i
 
 ## Flashcards
 
-**Tvåfas-commit** (2PC);;Ett atomiskt commit-protokoll: fas 1 = röstning om alla kan commit:a, fas 2 = ==sprid det gemensamma beslutet== (commit/abort).
+**Tvåfas-commit** (2PC) ==DISABLEDFLASHCARD== Ett atomiskt commit-protokoll: fas 1 = röstning om alla kan commit:a, fas 2 = ==sprid det gemensamma beslutet== (commit/abort).

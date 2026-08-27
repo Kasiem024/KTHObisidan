@@ -187,8 +187,8 @@ same one. Enforced by markdownlint MD001 and MD024, so it cannot drift back.
 
 ### Concept note body format
 
-Concept (`begrepp`) notes follow one shape. Measured 2026-08-26 across the 400 concept notes in
-the vault: `## Definition` 346, `## Flashcards` 346, `## Kopplat till` 323,
+Concept (`begrepp`) notes follow one shape. Measured 2026-08-27 across the 396 concept notes in
+the vault: `## Definition` 342, `## Flashcards` 342, `## Kopplat till` 319,
 `## Tenta-fokus` 42.
 
 ```markdown
@@ -221,7 +221,7 @@ The definition, in plain prose. Wiki-link related concepts inline.
   `## Kopplat till` on any concept that relates to another.
 - The leading `> **Label:**` callouts and the `---` rule after them are **optional**.
   Newer notes use them to surface exam-relevant framing; most older notes do not.
-- **`## Flashcards` is always the last section.** This holds in 346 of 346 notes that
+- **`## Flashcards` is always the last section.** This holds in 342 of 342 notes that
   have one, and the published site depends on it — the build-time card transformer
   only rewrites content under that heading.
 - `## Tenta-fokus` is **optional**. Add it only where there is real exam guidance;
@@ -249,7 +249,7 @@ The definition, in plain prose. Wiki-link related concepts inline.
 **Concept collections are a recognised exception.** Notes named like
 `HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` gather many short definitions
 into a single note, written directly as flashcards, and have no `## Definition`
-section of their own. 54 of the 400 concept notes are of this kind. They are still
+section of their own. 54 of the 396 concept notes are of this kind. They are still
 tagged `begrepp` and still end with `## Flashcards`.
 
 ### Images and embeds

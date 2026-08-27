@@ -2,7 +2,7 @@
 tags: [begrepp, HE1033, KTH, nätverk, year2026]
 description: "DNS (Domain Name System) översätter domännamn (t.ex. kth.se) till IP-adresser."
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-08-27
 ---
 # DNS
 
@@ -24,6 +24,7 @@ updated: 2026-05-28
 
 - **Transport:** Använder oftast [[UDP]] på port 53. Om svaret är för stort används [[TCP]].
 - **Caching:** DNS-svar sparas lokalt en viss tid (TTL) för att minska trafik.
+- **Rekursiv vs iterativ upplösning:** Vid *rekursiv* upplösning frågar servern vidare åt klienten och returnerar ett färdigt svar; vid *iterativ* ger servern en hänvisning och klienten frågar nästa server själv.
 
 ## Kopplat till
 
