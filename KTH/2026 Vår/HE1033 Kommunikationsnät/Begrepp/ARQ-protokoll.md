@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
 description: "ARQ (Automatic Repeat Request) är metoder för att hantera paketförluster genom omsändning: Stop-and-Wait, Go-Back-N och Selective Repeat."
 created: 2026-05-28
 updated: 2026-05-28

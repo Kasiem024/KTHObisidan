@@ -23,7 +23,7 @@ SORT file.name ASC
 
 ```dataview
 LIST
-FROM "KTH/2026 Vår/HF1012 Matematisk Statistik"
+FROM "KTH/2026 Vår/HF1012 Matematisk Statistik" OR #HF1012
 WHERE contains(tags, "begrepp")
 SORT file.name ASC
 ```

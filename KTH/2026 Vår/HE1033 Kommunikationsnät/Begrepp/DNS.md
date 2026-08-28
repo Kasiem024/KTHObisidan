@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026]
 description: "DNS (Domain Name System) översätter domännamn (t.ex. kth.se) till IP-adresser."
 created: 2026-05-28
 updated: 2026-08-27

@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026]
 description: "UDP (User Datagram Protocol) skickar paket utan att först etablera en anslutning eller kontrollera om de kommit fram."
 created: 2026-05-28
 updated: 2026-05-28

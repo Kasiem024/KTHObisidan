@@ -1916,6 +1916,56 @@ edited files stay UTF-8 **no-BOM, LF**; the two `.ps1`/config touches are pure A
 `<!--SR:-->` markers or flashcard separators exist in any touched file, so the review schedule
 is untouched.
 
+### F63. ✅ DONE (2026-08-28) — cross-course concept notes tagged into HI1031/HI1032; course-index Begrepp queries made tag-aware
+
+Follow-up to F61, at the user's request. F61 consolidated the four cross-course duplicate concept
+notes into the older HE1033 (kept there, removed from HI1031/HI1032), which left each shared concept
+associated with only one course. Per §2's "a note may carry more than one course code when a concept
+is shared" rule, re-associated them by **tag** — no note duplicated or moved — and made the course
+indexes surface them.
+
+**Part 1 — tags added to HE1033's 21 concept notes.** All 21 gained `HI1032` (HE1033
+Kommunikationsnät and HI1032 Kommunikationssystem are two networking courses over the same material,
+confirmed against HI1032's own chapter decks Kap 02/17/18/19/20 and 23–30). Four — `TCP`, `UDP`,
+`DNS`, `HTTP` — additionally gained `HI1031`, since HI1031 Distribuerade informationssystem teaches
+them too (its Kap 04 Interprocesskommunikation covers sockets and UDP/TCP, Kap 09 Web services covers
+HTTP, and Coulouris covers DNS naming). The new code is inserted right after `HE1033` so course codes
+stay grouped; subject `nätverk` and everything else untouched. Scope was **standalone concept notes
+only** (user's choice): HI1030's Begrepp folder is empty and HI1025/HI1027 hold only
+concept-collection decks, so neither contributed; HI1029 (algorithms) and HI1024 have no networking
+or distributed-systems concept overlap.
+
+**Part 2 — course-index Begrepp lists made additive.** Each course `_index.md` listed concepts with
+`FROM "<folder>" WHERE contains(tags, "begrepp")` — folder-scoped, so a note shared from another
+course's folder never showed. Changed to `FROM "<folder>" OR #<CODE>` in all **23** course indexes
+and in the index template (`Kurs Index Template.md`), so any begrepp note carrying the course code
+appears in that course's index wherever it lives. Purely additive — a course's own notes are
+unaffected. Applied vault-wide, not just to HI1031/HI1032, to avoid a second index-query style (a
+uniformity regression); documented in `Vault Standard.md` §5.
+
+**Numbers (measured).** 45 content files changed, one line each: 21 HE1033 notes + 23 indexes + 1
+template. Notes in scope unchanged at **516** (nothing added or removed). Spaced-repetition
+fingerprint **identical** before and after — `<!--SR:-->` **1262**, `::` **1378**, `;;` **440**,
+`||` **165**, `??` **219**, `DISABLEDFLASHCARD` **33** — because the edits touch only the frontmatter
+`tags:` line and one Dataview `FROM` line, nowhere near a card region. (Separator counts use
+`verification.md`'s line-anchored, study-note-scoped patterns, excluding `Meta/` and `.kiro/`; a naive
+full-text count runs a few higher — e.g. `::` 1381, `;;` 441 — and is a different measure, so compare
+like with like.)
+
+**Verified.** `Vault-Audit.ps1` (full, no switches) → **RESULT: clean**, `notesInScope=516` (extra
+course codes are valid vocabulary; the audit only requires the folder's own code and never forbids
+more); local `markdownlint-cli2 **/*.md` (v0.23.2) over **538 files** → **0 issues** (the index edits
+sit inside a fenced dataview block, so no rule applies). `git diff --stat` = 45 files × 1 line, with
+no line-ending rewrite: HE1033's three F15-authored notes (`HTTP`, `RIP`, `Sliding Window`) stayed
+**LF**, the other 18 **CRLF**. Dry-run reviewed before applying; every touched file backed up to
+`%TEMP%\vault-tag-backup-20260828-132756` with BOM and line endings preserved; the script is
+re-runnable (adds only missing tokens). Docs synced in the same change: this entry and
+`Vault Standard.md` §5.
+
+**Not done here — publishing.** The index change has **no** effect on the site (Quartz does not run
+Dataview; those blocks are hidden), but the added tags do change tag-page membership. Pushing the
+vault and bumping the Quartz `content` submodule is a separate step, left for that flow.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

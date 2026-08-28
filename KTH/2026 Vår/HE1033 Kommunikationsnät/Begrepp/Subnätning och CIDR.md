@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
 description: "Subnätning innebär att dela upp ett stort nätverk i mindre delar för bättre prestanda och kontroll, och CIDR använder prefix-notation (t.ex. /24)."
 created: 2026-05-28
 updated: 2026-05-28

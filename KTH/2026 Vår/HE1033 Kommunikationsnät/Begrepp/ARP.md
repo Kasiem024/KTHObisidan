@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
 description: "ARP (Address Resolution Protocol) används för att hitta en enhets MAC-adress när man bara vet dess IP-adress."
 created: 2026-05-28
 updated: 2026-05-28

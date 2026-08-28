@@ -71,8 +71,8 @@ npx quartz build -d "G:\My Drive\KTHObsidian" -o C:\Temp\out
 node tools/check-site.mjs C:\Temp\out
 ```
 
-Expected: exit 0, and every metric matching `site-baseline.json` — 652 pages, 401 with
-callouts, 2241 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 74 broken
+Expected: exit 0, and every metric matching `site-baseline.json` — 648 pages, 397 with
+callouts, 2233 callouts, 183 images, 0 alt-less, 0 KaTeX errors, 0 card leaks, 44 broken
 links (almost all PDF links; PDFs are deliberately unpublished).
 
 Build into an **empty** directory. `check-site.mjs` refuses `--update` when the pages were

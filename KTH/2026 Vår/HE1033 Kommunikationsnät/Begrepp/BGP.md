@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
 description: "BGP (Border Gateway Protocol) är protokollet som kopplar samman de stora nätverken (Autonoma System, AS) som utgör internet."
 created: 2026-05-28
 updated: 2026-05-28

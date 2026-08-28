@@ -45,7 +45,7 @@ SORT file.name ASC
 
 ```dataview
 LIST
-FROM "KTH/2026 Höst/HI1032 Kommunikationssystem"
+FROM "KTH/2026 Höst/HI1032 Kommunikationssystem" OR #HI1032
 WHERE contains(tags, "begrepp")
 SORT file.name ASC
 ```

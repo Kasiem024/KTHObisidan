@@ -309,7 +309,10 @@ Dataview-driven overview of that course.
   `tags: [index, <CODE>, KTH, year<YYYY>]`. The `title` is required: the published
   site falls back to the filename otherwise, which would render as "_index".
 - Body: course metadata + Dataview lists grouped by note type, scoped to the
-  course folder. See `Meta/Obsidian Plugins/Templates/Kurs Index Template.md`.
+  course folder. The **Begrepp** list is additive — `FROM "<folder>" OR #<CODE>` —
+  so a concept note shared from another course (tagged with this course's code, per
+  §2) also surfaces here even though it lives in that course's folder; see F63 and
+  `Meta/Obsidian Plugins/Templates/Kurs Index Template.md`.
 
 ## 6. Out of scope
 

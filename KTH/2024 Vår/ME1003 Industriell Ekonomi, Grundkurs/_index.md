@@ -23,7 +23,7 @@ SORT file.name ASC
 
 ```dataview
 LIST
-FROM "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs"
+FROM "KTH/2024 Vår/ME1003 Industriell Ekonomi, Grundkurs" OR #ME1003
 WHERE contains(tags, "begrepp")
 SORT file.name ASC
 ```

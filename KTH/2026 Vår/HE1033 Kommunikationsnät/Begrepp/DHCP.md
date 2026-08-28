@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
 description: "DHCP (Dynamic Host Configuration Protocol) gör att enheter kan få IP-adress, nätmask, gateway och DNS-server automatiskt när de ansluter."
 created: 2026-05-28
 updated: 2026-05-28

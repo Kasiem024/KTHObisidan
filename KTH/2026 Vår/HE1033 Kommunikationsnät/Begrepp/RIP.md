@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
 description: "RIP (Routing Information Protocol) är ett av de äldsta routingprotokollen, används inom ett enskilt nätverk (AS) och har i praktiken ersatts av OSPF."
 created: 2026-08-18
 updated: 2026-08-18

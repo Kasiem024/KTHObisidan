@@ -1,5 +1,5 @@
 ---
-tags: [begrepp, HE1033, KTH, nätverk, year2026]
+tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026]
 description: "HTTP (HyperText Transfer Protocol) är applikationsprotokollet som webben bygger på, där klienten skickar en request och servern svarar med en response."
 created: 2026-08-18
 updated: 2026-08-18

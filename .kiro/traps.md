@@ -13,7 +13,7 @@ entry came from an actual wrong result in this repository.
 produce a plausible wrong answer, which is far worse. That is the entry criterion: if it
 throws, it does not belong here, it belongs in a normal doc.
 
-There are **ten**. Do not add an eleventh without verifying it the same way — reproduce it, and
+There are **eleven**. Do not add a twelfth without verifying it the same way — reproduce it, and
 record the wrong result it produced.
 
 ---
@@ -142,6 +142,24 @@ Latent locally because a normal `C:\Users\<name>` path has no short form (F62).
 `$Root = (Get-Item -LiteralPath $Root).FullName` expands the 8.3 name to its long form so
 `$Root` and `$f.FullName` share a prefix. More generally, never assume two paths to the same
 file are string-comparable; resolve both through `Get-Item` / `Resolve-Path` first.
+
+## T11 — Through `cmd /c`, quoting the markdownlint glob makes it lint zero files
+
+`npx` needs `cmd /c` here (the execution policy blocks `npm.ps1`, see `environment.md`). But the
+documented invocation quotes the glob — `markdownlint-cli2 "**/*.md"` — and inside
+`cmd /c "npx markdownlint-cli2 \"**/*.md\""` the escaped quotes are passed through as part of the
+pattern. markdownlint-cli2 then globs the literal string `"**/*.md"`, quote and all, matches
+nothing, prints `Linting: 0 files` and exits **0** — a clean-looking pass that checked nothing. Its
+`Finding:` line is the tell: `Finding: " **/*.md/ ...` (leading quote, trailing slash) instead of
+the correct `Finding: **/*.md ...`.
+
+**What it produced:** `Linting: 0 files` / `0 issues` read as "lint clean" three times in one
+session while all 538 files went unchecked.
+
+**What to do:** through `cmd /c`, pass the glob **unquoted** —
+`cmd /c "npx markdownlint-cli2 **/*.md"` — and confirm the `Linting: N files` line says **538**, not
+0 (the same discipline as T4). Run directly in PowerShell and the quotes are fine
+(`npx markdownlint-cli2 "**/*.md"`); only the `cmd /c` wrapper breaks them.
 
 ---
 

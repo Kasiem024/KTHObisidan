@@ -40,7 +40,7 @@ SORT file.name ASC
 
 ```dataview
 LIST
-FROM "<% k.courseFolderPath %>"
+FROM "<% k.courseFolderPath %>" OR #<% k.kurskod %>
 WHERE contains(tags, "begrepp")
 SORT file.name ASC
 ```
