@@ -1876,6 +1876,46 @@ TCP/UDP/DNS/OSI notes de-ambiguated the HE1033 cross-links), which trips the 5%-
 `site-baseline.json` was re-baselined (`check-site` OK, `test-check-site` 22/0). The vault is pushed
 before the baseline so the must-not-rise `brokenInternalLinks` never sees the old vault against it.
 
+### F62. ✅ DONE (2026-08-28) — CI self-test broke on an 8.3 short-name path; MD060 version skew
+
+The audit of 2026-08-28 (`.kiro/reports/2026-08-28-vault-audit.md`) found the vault **content
+clean** but two tooling defects. Both fixed here; **no notes touched**.
+
+**Fix A — 8.3 short-name path mismatch failed 6 of 40 self-test assertions, on CI only.** On
+`windows-latest` the runner's `$env:TEMP` is `C:\Users\RUNNER~1\...` — an 8.3 short name for
+`runneradmin`. `Test-VaultAudit.ps1` builds its throwaway fixture there and passes it as
+`-Root`, but `Get-ChildItem` returns each file's `.FullName` in **long** form
+(`...\runneradmin\...`). The audit computed `$rel = $f.FullName.Substring($Root.Length+1)` with
+a `$Root` three characters too short, so `$seg[0]` came out `min` instead of `KTH`, the
+`KTH / <term> / <code>` path gate never matched, and the five path-gated tag checks
+(`missingKTHtag`, `missingYearTag`, `missingCourseCode`, `missingTypeTag`, `missingSubjectTag`)
+silently skipped every fixture note — failing those 5 plus the `-ContentOnly keeps every other
+check` meta-assertion: **34/40 on CI, 40/40 locally** (the local `$env:TEMP` holds no short
+name, so the bug was latent). The real vault audit was never affected — the checkout path
+`D:\a\...` carries no 8.3 names; only the temp-dir fixture did. Fix: one line in
+`Vault-Audit.ps1`, right after `$Root` is determined — `$Root = (Get-Item -LiteralPath
+$Root).FullName` — which expands the short name before any `Substring` arithmetic. Recorded as
+trap **T10**.
+
+**Fix B — MD060 version skew, 48 local-only lint hits.** Local `markdownlint-cli2` v0.23.2
+(markdownlint v0.41.1) has `MD060 table-column-style` **on by default**; CI pins v0.18.1
+(markdownlint v0.38.0), which predates the rule — so CI stayed green while a local
+`markdownlint-cli2 "**/*.md"` reported **48 issues in 3 files**, self-measured here by toggling
+the rule: `Ansoff Tillväxtmatris` in ME1003 (2), `LABA Uppgift 1 HI1029 - Kasiem
+Al-Mshabbak.md` (19), and this backlog file (27). Obsidian and its table-editor write
+compact/tight tables with inconsistent pipe spacing — exactly what MD060 flags — matching the
+vault's existing stance on Obsidian table output (MD029, MD032 already off). Fix:
+`"MD060": false` in `.markdownlint.json`, with a documenting row added to the disabled-rules
+table in `Meta/Vault Standard.md`.
+
+**Verified (this change).** `Test-VaultAudit.ps1` -> **40 assertions, 0 failed, exit 0**;
+`Vault-Audit.ps1` (full, no switches) -> **RESULT: clean**, `notesInScope=516`; local
+`markdownlint-cli2 "**/*.md"` (v0.23.2 / v0.41.1) over **538 files** -> **0 issues** (was 48 —
+before/after proven on the same file set by re-enabling then disabling the rule). All five
+edited files stay UTF-8 **no-BOM, LF**; the two `.ps1`/config touches are pure ASCII. No
+`<!--SR:-->` markers or flashcard separators exist in any touched file, so the review schedule
+is untouched.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

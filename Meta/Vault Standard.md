@@ -50,6 +50,7 @@ Rules deliberately switched off, with reasons, so they are not turned back on by
 | MD036 emphasis as heading | Swedish notes legitimately use `*emphasis*` for notation such as `*Employee N -> worksFor -> 1 Department*` |
 | MD024 duplicate headings | Scoped to `siblings_only` only: a course may be listed under two different `##` sections of a MOC, but never twice inside the same section |
 | MD025 front-matter title | Set to `""` only: index notes correctly have both a `title:` key and an H1, so the frontmatter title must not count as a second top-level heading |
+| MD060 table column style | Obsidian writes compact tables with inconsistent pipe spacing; a version skew (local markdownlint v0.41.1 has it on by default, CI's pinned v0.38.0 does not) surfaced 48 hits it would never flag on CI |
 
 `Meta/Obsidian Plugins/Templates/` is excluded from linting rather than having rules
 disabled for it, because a Templater `<% %>` expression is not valid Markdown until it is

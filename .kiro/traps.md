@@ -13,7 +13,7 @@ entry came from an actual wrong result in this repository.
 produce a plausible wrong answer, which is far worse. That is the entry criterion: if it
 throws, it does not belong here, it belongs in a normal doc.
 
-There are **nine**. Do not add a tenth without verifying it the same way — reproduce it, and
+There are **ten**. Do not add an eleventh without verifying it the same way — reproduce it, and
 record the wrong result it produced.
 
 ---
@@ -122,6 +122,26 @@ single character `U+FEFF`, so a regex written against the byte form never matche
 
 **What to do:** detect with `[int][char]$raw[0] -eq 0xFEFF` and preserve it on write with
 `New-Object System.Text.UTF8Encoding($hadBom)`.
+
+## T10 — A Windows 8.3 short-name root path throws off Substring path math
+
+Closely related to T2, but a different cause: not Swedish decoding, **Windows 8.3 short names**.
+A root path like `C:\Users\RUNNER~1\...` (CI's `$env:TEMP`, the short form of `runneradmin`) is
+a valid, existing path — `Test-Path` and `Get-ChildItem` both accept it. But `Get-ChildItem`
+returns each item's `.FullName` in **long** form (`...\runneradmin\...`), so
+`$f.FullName.Substring($Root.Length + 1)` starts several characters too early. Every derived
+path segment is then shifted, and a gate such as `$seg[0] -eq 'KTH'` quietly fails.
+
+**What it produced:** `Vault-Audit.ps1`'s five path-gated tag checks (`missingKTHtag`,
+`missingYearTag`, `missingCourseCode`, `missingTypeTag`, `missingSubjectTag`) skipped every note
+in the self-test fixture on `windows-latest`, so `Test-VaultAudit.ps1` reported **34/40** on CI
+while showing **40/40** locally. The vault was clean; the harness had gone silently blind.
+Latent locally because a normal `C:\Users\<name>` path has no short form (F62).
+
+**What to do:** canonicalise any root path before doing arithmetic on it —
+`$Root = (Get-Item -LiteralPath $Root).FullName` expands the 8.3 name to its long form so
+`$Root` and `$f.FullName` share a prefix. More generally, never assume two paths to the same
+file are string-comparable; resolve both through `Get-Item` / `Resolve-Path` first.
 
 ---
 

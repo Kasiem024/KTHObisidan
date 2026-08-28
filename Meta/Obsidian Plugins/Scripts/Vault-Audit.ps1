@@ -30,6 +30,7 @@ if(-not $Root){
   while($d -ne $null -and -not (Test-Path -LiteralPath (Join-Path $d.FullName 'KTH'))){ $d=$d.Parent }
   if($d){ $Root=$d.FullName }
 }
+$Root = (Get-Item -LiteralPath $Root).FullName
 if(-not $Root -or -not (Test-Path -LiteralPath (Join-Path $Root 'KTH'))){ throw "Vault root (folder containing KTH) not found - pass -Root explicitly" }
 $enc=New-Object System.Text.UTF8Encoding($false)
 function RT($p){
