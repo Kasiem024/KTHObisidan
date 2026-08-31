@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: distribuerat system (HI1031)."
 ---
 # Distribuerat system
@@ -19,4 +19,4 @@ Ett system där hård- eller mjukvarukomponenter på *skilda, nätverksanslutna*
 
 ## Flashcards
 
-**Distribuerat system** ==DISABLEDFLASHCARD== Datorer och komponenter på skilda, nätverksanslutna maskiner som samordnar sig ==enbart genom att skicka meddelanden== – utan delat minne eller klocka.
+**Distribuerat system**;;Datorer och komponenter på skilda, nätverksanslutna maskiner som samordnar sig ==enbart genom att skicka meddelanden== – utan delat minne eller klocka.

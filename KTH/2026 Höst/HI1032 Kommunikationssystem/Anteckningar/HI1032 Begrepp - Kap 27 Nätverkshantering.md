@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-26
+updated: 2026-08-31
 description: "Flashcards HI1032 kap 27 – nätverkshantering: SNMP (manager/agent, trap) samt SMI och MIB."
 ---
 # HI1032 Begrepp - Kap 27 Nätverkshantering

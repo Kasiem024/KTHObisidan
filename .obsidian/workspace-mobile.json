@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -137,7 +137,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "KTH/2025 Vår/HF1201 Hållbar utveckling och ergonomi/Begrepp/SEM2 Begrepp HF1201.md",
+            "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -147,23 +147,13 @@
         }
       },
       {
-        "id": "8adced53c9641895",
-        "type": "leaf",
-        "state": {
-          "type": "advanced-tables-toolbar",
-          "state": {},
-          "icon": "spreadsheet",
-          "title": "Advanced Tables"
-        }
-      },
-      {
         "id": "f63a10f10b70431a",
         "type": "leaf",
         "state": {
           "type": "review-queue-list-view",
           "state": {},
-          "icon": "lucide-ghost",
-          "title": "review-queue-list-view"
+          "icon": "SpacedRepIcon",
+          "title": "Notes Review Queue"
         }
       }
     ],

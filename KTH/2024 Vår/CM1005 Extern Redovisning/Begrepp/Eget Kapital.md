@@ -2,7 +2,7 @@
 tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
 description: "Eget Kapital är det belopp som ägarna satt in i företaget, och som utgör skillnaden mellan tillgångar och skulder."
 created: 2024-02-01
-updated: 2026-08-17
+updated: 2026-08-31
 ---
 
 # Eget Kapital
@@ -84,7 +84,7 @@ Eget Kapital (Definition):: En benämning på en mängd pengar som ägarna av et
 <!--SR:!2024-04-21,47,250!2024-03-22,17,300-->
 
 Exempel på Eget Kapital (3)
-==DISABLEDFLASHCARD==
+??
 - ==Startkapital==: Det ägarna satte in vid grundandet.
 - ==Kapitaltillskott==: Det ägarna satte in efter grundandet.
 - ==Vinster==: Vad företag tjänat efter vinstutdelning.

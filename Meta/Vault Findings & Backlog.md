@@ -1966,6 +1966,118 @@ re-runnable (adds only missing tokens). Docs synced in the same change: this ent
 Dataview; those blocks are hidden), but the added tags do change tag-page membership. Pushing the
 vault and bumping the Quartz `content` submodule is a separate step, left for that flow.
 
+### F64. ✅ DONE (2026-08-31) — HI1031 + HI1032 review decks scoped by a new `nosr` tag
+
+At the user's request, narrowed the two autumn-2026 courses' *active* review decks so only the
+currently relevant cards are scheduled — via a new functional tag `nosr` that the spaced-repetition
+plugin ignores. (A first attempt used the `==DISABLEDFLASHCARD==` marker; the user preferred a tag,
+so that was reverted with `git checkout` and the separator fingerprint confirmed back to baseline
+before this approach.)
+
+**How it works.** obsidian-spaced-repetition adds a note's cards to a deck only when
+`topicPath.hasPath && !isAnyTagIgnoredForFlashcards(tags)` (`main.js`). Tagging a note `nosr` and
+listing `#nosr` in the plugin setting `flashcardTagsToIgnore` excludes that note's whole card set
+from review, while the `::`/`;;`/`||`/`??` separators and any `<!--SR:-->` schedule stay intact and
+the cards still render on the published site. Fully reversible by removing the tag.
+
+**New convention, landed in one change (add-a-convention pipeline).** `nosr` joins
+`nograph`/`excalidraw` as a functional tag: documented in `Meta/Vault Standard.md` §2; accepted by
+`Vault-Audit.ps1` (`$structPat`); surfaced by an informational panel in `Atlas/Vault Health Report.md`.
+Templates are unchanged — like `nograph`, `nosr` is applied selectively, not emitted for every note.
+The runtime half is the plugin setting `flashcardTagsToIgnore = ["#nosr"]` in
+`.obsidian/.../data.json` (reload Obsidian, or set it via Settings -> Spaced Repetition ->
+"Flashcard tags to ignore", for it to take effect).
+
+**HI1031 (keep Kap 1, 2, 4, 5).** `nosr` on the 6 per-chapter decks Kap 06, 09, 10, 11, 16, 17.
+`Begrepp/Klient-server-modellen` (a Kap 2 concept) left untagged.
+
+**HI1032 (keep only Lab 1 "TCP + Wireshark"-relevant).** Relevance read from `Lab-TCP-Full.md`
+(OSI-layer placement, IP/ICMP/ARP, ping/traceroute/TTL, TCP core, HTTP/DNS/FTP). `nosr` on the decks
+the lab does not exercise: Kap 17, 20, 27, 28, 30 + `Begrepp/Router`, `Routing`, `Switching`. Kept:
+Kap 02, 18, 19, 23, 24, 25, 26 + `Begrepp/TCP-IP-modellen` (Kap 25 is the weakest keep).
+
+**Numbers (measured).** 14 notes tagged, one `tags:` line + `updated: 2026-08-31` each. Notes in
+scope unchanged at **516**. **Spaced-repetition fingerprint identical before and after** —
+`<!--SR:-->` 1262, `::` 1374, `;;` 440, `||` 165, `??` 219, `DISABLEDFLASHCARD` 33 — because the
+edits touch only the frontmatter `tags:` line, never a card region.
+
+**Verified.** `Vault-Audit.ps1` (full) -> **RESULT: clean**, `notesInScope=516`;
+`Test-VaultAudit.ps1` -> **40 assertions, 0 failed**; `markdownlint-cli2 "**/*.md"` -> **538 files,
+0 issues**; `nosr` present on exactly the 14 notes and their cards remain active (separators intact).
+Dry-run reviewed before applying; every touched note backed up (`add-nosr-tag.ps1`, dry-run by
+default); `data.json` backed up before the setting edit; files stay UTF-8 no-BOM, LF.
+
+**Activation + not pushed.** The deck filtering takes effect once Obsidian reloads the
+`flashcardTagsToIgnore` setting. Nothing committed or pushed — left for the user's flow.
+
+### F65. ✅ DONE (2026-08-31) — 23 `==DISABLEDFLASHCARD==` duplicate cards in HI1031/HI1032 migrated to `nosr`
+
+Follow-on to F64, at the user's request to drop the `==DISABLEDFLASHCARD==` marker entirely. The 17
+HI1031/HI1032 concept notes that F61 had switched off with the per-card marker were migrated to the
+per-file `nosr` mechanism: each disabled card was **re-enabled to its real separator** and the note
+tagged `nosr`, so the plugin excludes the whole note. Same review outcome, cleaner content, and the
+cards now render as normal callouts on the site instead of a highlighted `DISABLEDFLASHCARD` string.
+
+**Deterministic restore.** F61 recorded the 23 as **18 single-line `;;` + 5 multi-line `||`**; the
+migration re-derived exactly that from the files (5 own-line markers -> `||`, 18 inline -> `;;`) before
+writing. A wrong `::`-vs-`;;` guess would be harmless anyway — the notes are `nosr`-excluded and the
+site renders both identically — but the split matched the record.
+
+**Scope: HI1031/HI1032 only (17 files).** The marker also appears in **10 ME1003/CM1005 (2024 Vår)
+notes**, deliberately **left untouched**. Unlike the HI1031/HI1032 notes (which held only disabled
+duplicates, `SR=0`), those files also carry **active cards and live review schedules** — e.g.
+`Aktiebolag` has 9 active cards and 10 `<!--SR:-->` markers. Because `nosr` excludes a whole file, it
+would pull actively-scheduled economics cards out of review, so it is the wrong tool there. Flagged
+for a separate decision (per-card handling, not `nosr`).
+
+**Numbers (measured).** 17 notes changed; `nosr` now on **31** notes across the two courses (14 from
+F64 + these 17). Fingerprint: `;;` 440 -> **458** (+18), `||` 165 -> **170** (+5), `DISABLEDFLASHCARD`
+33 -> **10** (the 10 untouched economics markers); `::` 1374, `??` 219, `<!--SR:-->` **1262** — all
+unchanged. Notes in scope 516.
+
+**Verified.** `Vault-Audit.ps1` -> **RESULT: clean**, `notesInScope=516`; `markdownlint-cli2 "**/*.md"`
+-> **538 files, 0 issues**; **0** `==DISABLEDFLASHCARD==` left in HI1031/HI1032; deltas proven against
+the 17 pre-edit backups (`%TEMP%\marker-migrate-backup-20260831-141653`); files stay UTF-8 no-BOM, LF,
+`updated: 2026-08-31`. Dry-run reviewed before apply (`migrate-markers.ps1`). `verification.md`
+fingerprint updated in the same change. Not committed/pushed.
+
+### F66. ✅ DONE (2026-08-31) — 10 ME1003/CM1005 `==DISABLEDFLASHCARD==` cards re-enabled (no tag), marker retired vault-wide
+
+The economics files deferred in F65. Per the user's decision, the marker was removed **without** adding
+`nosr` — these notes hold active, scheduled cards and should stay in review, and `nosr` (per-file) would
+over-exclude them. Each disabled card was re-enabled to its real separator, preserving its `<!--SR:-->`
+schedule; no tag added.
+
+**Separator recovered from the schedule.** The 6 own-line disabled cards each carried **2 SR blocks**,
+and in these same files every active multi-line card obeys `||` = 1 block / `??` = 2 blocks, so they were
+restored to **`??`** (reversed multi-line). The 4 inline cards (`Fond…`, `Kapitalandelsfond`) had no
+schedule and match the file's `Term (Definition):: answer` style, so restored to **`::`**. A wrong
+`::`-vs-`;;` guess on the 4 unscheduled cards is harmless (no schedule, renders identically); the 6
+scheduled cards' `??` maps their 2 blocks exactly.
+
+**Numbers (measured).** 10 notes changed (6 `??`, 4 `::`), `updated: 2026-08-31`. Fingerprint: `??`
+219 -> **225** (+6), `::` 1374 -> **1378** (+4), `DISABLEDFLASHCARD` 10 -> **0**, `;;` 458 / `||` 170
+unchanged. **`<!--SR:-->` unchanged at 1262** — the 22 schedule comments in these files were preserved
+(script asserted SR count 22 before and after). Notes in scope 516; **no `nosr`** added (0 in the 2024
+Vår notes).
+
+**Net result of F64-F66.** `==DISABLEDFLASHCARD==` is now **gone from the whole vault**: HI1031/HI1032
+duplicates are excluded via `nosr` (F64/F65); the ME1003/CM1005 markers were cleaned up (F66).
+
+**Correction (2026-08-31, verified in `main.js`).** The flashcard deck is scoped by
+`flashcardTags = ["#HI1031","#HI1032"]`: `getTopicPathOfFile` (line 9314) returns an empty path for any
+note lacking one of those tags, so its cards are never collected (`hasTopicPaths` gate ~line 32987, load
+gate ~line 33539). The ME1003/CM1005 notes carry neither tag, so re-enabling their cards **does not** put
+them into review — an earlier claim here that they would show as due/overdue was wrong. F66 was a
+content/site cleanup only; those `<!--SR:-->` comments are legacy 2024 data and stay inert unless the deck
+scope changes. This also confirms why `nosr` is the right tool: it trims specific chapters *within* the
+already-scoped `#HI1031`/`#HI1032` set.
+
+**Verified.** `Vault-Audit.ps1` -> **RESULT: clean**, `notesInScope=516`; `markdownlint-cli2 "**/*.md"`
+-> **538 files, 0 issues**; **0** `==DISABLEDFLASHCARD==` under `KTH`; backups
+`%TEMP%\econ-marker-backup-...`; files stay UTF-8 no-BOM, EOL preserved. Dry-run reviewed before apply
+(`economics-remove-marker.ps1`). `verification.md` fingerprint updated in the same change. Not committed/pushed.
+
 ---
 
 ## 🤖 AI-friendliness: accepted trade-offs

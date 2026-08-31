@@ -2,7 +2,7 @@
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
 description: "När ett företag säljer en produkt till ett annat företag."
 created: 2024-01-30
-updated: 2026-05-26
+updated: 2026-08-31
 ---
 # Företagsmarknad
 
@@ -33,7 +33,7 @@ Företagsmarknad (Definition):: När ett företag säljer en produkt till ett an
 <!--SR:!2024-02-22,14,290!2024-03-09,4,280-->
 
 Egenskaperna av en Företagsmarknad (6)
-==DISABLEDFLASHCARD==
+??
 - ==Kundrelationer==: Få och djupa. Anställda vars enda jobb är att jobba med ett företag.
 - ==Kundantal== och -storlek: Få och stora.
 - ==Köpprocess==: Komplex med många beslutssteg som involverar många aktörer. Juridiska handlingar, avtal, IT-system, fler steg i processen.

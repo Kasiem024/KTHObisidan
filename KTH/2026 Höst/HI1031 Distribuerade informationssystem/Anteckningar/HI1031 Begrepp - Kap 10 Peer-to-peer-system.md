@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-31
 description: "Flashcards HI1031 kap 10 – peer-to-peer: overlay-nät, routing overlay, DHT samt strukturerade kontra ostrukturerade nät."
 ---
 # HI1031 Begrepp - Kap 10 Peer-to-peer-system

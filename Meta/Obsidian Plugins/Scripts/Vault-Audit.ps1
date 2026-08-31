@@ -41,7 +41,7 @@ function RT($p){
 # ---------------- vocabulary (Swedish matched by pattern to stay ASCII) ----------------
 $typePat  = '^(begrepp|f.rel.sning|lektion|.vning|labb|seminarium|studieguide|tenta|.vrigt|index)$'
 $subjPat  = '^(programmering|n.tverk|matematik|ekonomi|h.rdvara|databaser|samh.lle|s.kerhet)$'
-$structPat= '^(KTH|MOC|meta|index|nograph|excalidraw)$'
+$structPat= '^(KTH|MOC|meta|index|nograph|excalidraw|nosr)$'
 # ---------------- scope: what counts as an authored study note ----------------
 function InScope($full,$name){
   if($full -match '\\\.obsidian\\' -or $full -match '\\\.trash\\' -or $full -match '\\node_modules\\'){ return $false }

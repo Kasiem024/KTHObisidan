@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: peer-to-peer (HI1031)."
 ---
 # Peer-to-peer
@@ -17,4 +17,4 @@ En arkitektur där *alla noder är likvärdiga* och ==både använder och bidrar
 
 ## Flashcards
 
-**Peer-to-peer** (P2P) ==DISABLEDFLASHCARD== En arkitektur där *alla noder är likvärdiga* och ==både använder och bidrar med resurser==, utan fast server.
+**Peer-to-peer** (P2P);;En arkitektur där *alla noder är likvärdiga* och ==både använder och bidrar med resurser==, utan fast server.

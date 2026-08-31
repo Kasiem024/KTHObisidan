@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-31
 description: "Flashcards HI1032 kap 30 – Quality of Service: dataflödesegenskaper, schemaläggning, traffic shaping samt IntServ/RSVP och DiffServ."
 ---
 # HI1032 Begrepp - Kap 30 Quality of Service

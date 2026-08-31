@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, säkerhet, KTH, year2026]
+tags: [begrepp, HI1031, databaser, säkerhet, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-26
+updated: 2026-08-31
 description: "Flashcards HI1031 kap 11 – säkerhet: kryptering (symmetrisk/asymmetrisk), digitala signaturer, certifikat, autentisering och Kerberos."
 ---
 # HI1031 Begrepp - Kap 11 Säkerhet

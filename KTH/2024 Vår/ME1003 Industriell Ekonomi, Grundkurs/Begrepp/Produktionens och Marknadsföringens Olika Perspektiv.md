@@ -2,7 +2,7 @@
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
 description: "Produktionen och marknadsförings delen av företag har olika perspektiv på olika delar av företag som är ofta motstridiga fastän målet för båda delarna är samma."
 created: 2024-01-27
-updated: 2026-05-26
+updated: 2026-08-31
 ---
 # Produktionens och Marknadsföringens Olika Perspektiv
 
@@ -35,7 +35,7 @@ Inom [[Produktion]] vill man vara vart det är billigast att producera produkten
 ## Flashcards
 
 Produktion och Marknadsföring Olika Perspektiv (5)
-==DISABLEDFLASHCARD==
+??
 - ==Produktportfölj==: Antalet produkter/varianter.
 - ==Produktstandardisering==: Hög eller låg standardisering.
 - ==Prestationsmätning==: Kostnadsenhet mot intäktsenhet.

@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: skalbarhet (HI1031)."
 ---
 # Skalbarhet
@@ -17,4 +17,4 @@ Ett systems förmåga att ==förbli effektivt när det växer== – när antalet
 
 ## Flashcards
 
-**Skalbarhet** (scalability) ==DISABLEDFLASHCARD== Ett systems förmåga att ==förbli effektivt när det växer==, dvs. när antalet användare eller resurser ökar kraftigt.
+**Skalbarhet** (scalability);;Ett systems förmåga att ==förbli effektivt när det växer==, dvs. när antalet användare eller resurser ökar kraftigt.

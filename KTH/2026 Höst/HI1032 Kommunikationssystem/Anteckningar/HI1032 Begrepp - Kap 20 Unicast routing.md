@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-31
 description: "Flashcards HI1032 kap 20 – unicast routing: distansvektor/länktillstånd/vägvektor, RIP/OSPF/BGP samt autonoma system (IGP/EGP)."
 ---
 # HI1032 Begrepp - Kap 20 Unicast routing

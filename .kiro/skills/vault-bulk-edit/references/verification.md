@@ -12,14 +12,23 @@ method-dependent — a slightly different regex gives a different, equally "corr
 so always use the exact patterns below, and treat a mismatch against the snapshot as a
 prompt to re-measure rather than as proof of damage.
 
-| Measure | Pattern | Snapshot (2026-08-27) |
+| Measure | Pattern | Snapshot (2026-08-31) |
 |---|---|---|
 | scheduling markers | `<!--SR:` | **1262** |
-| single-line | `(?m)^[^\|\r\n]+?::` | 1399 |
-| single-line reversed | `(?m)^[^\|\r\n]+?;;` | 440 |
-| multi-line | `(?m)^\s*\|\|\s*$` | 165 |
-| multi-line reversed | `(?m)^\s*\?\?\s*$` | 219 |
-| disabled | `DISABLEDFLASHCARD` | 33 |
+| single-line | `(?m)^[^\|\r\n]+?::` | 1378 |
+| single-line reversed | `(?m)^[^\|\r\n]+?;;` | 458 |
+| multi-line | `(?m)^\s*\|\|\s*$` | 170 |
+| multi-line reversed | `(?m)^\s*\?\?\s*$` | 225 |
+| disabled | `DISABLEDFLASHCARD` | 0 |
+
+Updated 2026-08-31 (F64-F66): the `==DISABLEDFLASHCARD==` marker was retired vault-wide. F64 added the
+`nosr` tag; F65 re-enabled the 23 HI1031/HI1032 duplicates and excluded them via the tag (`;;` 440 ->
+458, `||` 165 -> 170); F66 re-enabled the 10 ME1003/CM1005 cards **without** a tag, keeping them in
+review (`??` 219 -> 225 for the 6 own-line reversed cards, `::` 1374 -> 1378 for the 4 inline definition
+cards). `DISABLEDFLASHCARD` 33 -> 10 -> **0**. `<!--SR:-->` unchanged at **1262** throughout — every
+schedule comment preserved (F66's 22 economics markers verified before/after). The `::` base re-measured
+1374 (25 below the 2026-08-27 figure of 1399 — a pre-existing method/scope drift), recorded per the
+"re-measure, don't assume damage" rule.
 
 The two single-line patterns count **card lines**, one per line, and exclude table rows (a
 `|` anywhere before the separator). They were changed on 2026-08-26: the previous versions

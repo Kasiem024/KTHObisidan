@@ -2,7 +2,7 @@
 tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
 description: "Ett aktiebolag är ett företag där delägarna, alltså aktieägarna, normalt sett inte har ett personligt ansvar för företagets skulder."
 created: 2024-01-16
-updated: 2026-08-17
+updated: 2026-08-31
 ---
 
 # Aktiebolag
@@ -101,7 +101,7 @@ Aktiekurs (Definition):: Priset av en aktie, bestäms av tillgång och efterfrå
 <!--SR:!2024-04-20,30,290!2024-04-19,30,322-->
 
 Vad som påverkar en akties börskurs (6)
-==DISABLEDFLASHCARD==
+??
 - Balansvärdet.
 - Framtida vinstförmåga.
 - Marknadens likviditet.

@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: transparens i distribuerade system (HI1031)."
 ---
 # Transparens
@@ -16,8 +16,8 @@ Att ==dölja att systemet är utspritt== så att det upplevs och används som *e
 
 ## Flashcards
 
-**Transparens** (i distribuerade system) ==DISABLEDFLASHCARD== Att ==dölja att systemet är utspritt== så att det upplevs som *en enda helhet*.
+**Transparens** (i distribuerade system);;Att ==dölja att systemet är utspritt== så att det upplevs som *en enda helhet*.
 
 Vilka former av transparens finns? (8)
-==DISABLEDFLASHCARD==
+||
 - Åtkomst, lokalisering, samtidighet, replikering, fel, mobilitet, prestanda, skalning

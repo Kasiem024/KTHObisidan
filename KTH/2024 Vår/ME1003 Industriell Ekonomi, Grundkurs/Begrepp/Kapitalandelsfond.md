@@ -2,7 +2,7 @@
 tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
 description: "Kapitalandelsfond är en post i Balansräkning och Bundet Eget Kapital."
 created: 2024-03-02
-updated: 2026-05-26
+updated: 2026-08-31
 ---
 # Kapitalandelsfond
 
@@ -16,4 +16,4 @@ Kapitalandelsfond är en post i [[Balansräkning]] och [[Bundet Eget Kapital]]. 
 
 ## Flashcards
 
-Kapitalandelsfond (Definition) ==DISABLEDFLASHCARD== En post i [[Balansräkning]] och [[Bundet Eget Kapital]], den används vid [[Koncernredovisning]]. När ett [[Aktiebolag]] förvärvar ett annat bolag förekommer det att värdet som det förvärvade bolaget bokförs till i redovisningen skiljer sig från anskaffningsvärdet. Om det bokförda värdet överstiget anskaffningsvärdet redovisas skillnaden i en fond
+Kapitalandelsfond (Definition):: En post i [[Balansräkning]] och [[Bundet Eget Kapital]], den används vid [[Koncernredovisning]]. När ett [[Aktiebolag]] förvärvar ett annat bolag förekommer det att värdet som det förvärvade bolaget bokförs till i redovisningen skiljer sig från anskaffningsvärdet. Om det bokförda värdet överstiget anskaffningsvärdet redovisas skillnaden i en fond

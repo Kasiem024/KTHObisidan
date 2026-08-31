@@ -1,12 +1,12 @@
 {
   "settings": {
     "flashcardTags": [
-      "#HE1033",
-      "#HI1029",
       "#HI1031",
       "#HI1032"
     ],
-    "flashcardTagsToIgnore": [],
+    "flashcardTagsToIgnore": [
+      "#nosr"
+    ],
     "convertFoldersToDecks": false,
     "burySiblingCards": false,
     "flashcardCardOrder": "DueFirstRandom",
@@ -50,8 +50,8 @@
     "initiallyExpandAllSubdecksInTree": false,
     "showContextInCards": true,
     "showIntervalInReviewButtons": true,
-    "flashcardHeightPercentage": 100,
-    "flashcardWidthPercentage": 100,
+    "flashcardHeightPercentage": 74.83370288248337,
+    "flashcardWidthPercentage": 85.22135416666666,
     "flashcardHeightPercentageMobile": 100,
     "flashcardWidthPercentageMobile": 100,
     "flashcardAgainText": "Again",
@@ -70,7 +70,7 @@
     "lapsesIntervalChange": 0.5,
     "easyBonus": 1.3,
     "loadBalance": true,
-    "maximumInterval": 36525,
+    "maximumInterval": 30,
     "maxLinkFactor": 1,
     "fsrsDesiredRetention": 0.9,
     "startOfDay": "00:00:00",
@@ -82,7 +82,7 @@
     "preferredDateFormatForNoteReviewQueue": "MMM DD YYYY",
     "preferredLocale": "-"
   },
-  "buryDate": "2026-08-27",
+  "buryDate": "2026-08-31",
   "buryList": [],
   "historyDeck": null,
   "scheduleData": {

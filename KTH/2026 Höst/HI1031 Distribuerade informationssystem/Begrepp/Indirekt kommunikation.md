@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: indirekt kommunikation (HI1031)."
 ---
 # Indirekt kommunikation
@@ -16,9 +16,9 @@ Kommunikation ==via en mellanhand==, där sändare och mottagare inte pratar dir
 
 ## Flashcards
 
-**Indirekt kommunikation** ==DISABLEDFLASHCARD== Kommunikation ==via en mellanhand==, där sändare och mottagare inte pratar direkt med varandra.
+**Indirekt kommunikation**;;Kommunikation ==via en mellanhand==, där sändare och mottagare inte pratar direkt med varandra.
 
 Vilka två former av frikoppling ger indirekt kommunikation? (2)
-==DISABLEDFLASHCARD==
+||
 - **Rumslig** – behöver inte veta *vem* som tar emot
 - **Tidsmässig** – behöver inte finnas till *samtidigt*

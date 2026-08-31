@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: fjärrmetodanrop (RMI) (HI1031)."
 ---
 # Fjärrmetodanrop (RMI)
@@ -18,4 +18,4 @@ Att ett objekt i en process ==anropar en metod på ett objekt i en annan process
 
 ## Flashcards
 
-**RMI** (Remote Method Invocation) ==DISABLEDFLASHCARD== Att ett objekt ==anropar en metod på ett objekt i en annan process==; en objektorienterad utökning av RPC.
+**RMI** (Remote Method Invocation);;Att ett objekt ==anropar en metod på ett objekt i en annan process==; en objektorienterad utökning av RPC.

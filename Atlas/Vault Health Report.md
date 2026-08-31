@@ -188,3 +188,16 @@ WHERE file.name != "_index"
 GROUP BY regexreplace(file.folder, "^KTH/[^/]+/([^/]+).*", "$1") AS Kurs
 SORT length(rows) DESC
 ```
+
+## 💤 Flashcards undantagna från repetition (`nosr`)
+
+Noter vars flashcards medvetet hoppas över i spaced repetition — taggen `nosr` tillsammans med
+plugin-inställningen `flashcardTagsToIgnore` (i `data.json`). Korten ligger kvar i noten och på
+den publicerade sidan; de schemaläggs bara inte för repetition. Listan är informativ, inte ett
+fel (se F64).
+
+```dataview
+LIST
+FROM "KTH" AND #nosr
+SORT file.folder ASC
+```

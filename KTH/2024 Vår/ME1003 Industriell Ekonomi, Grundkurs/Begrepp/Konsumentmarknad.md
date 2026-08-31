@@ -2,7 +2,7 @@
 tags: [begrepp, ekonomi, KTH, ME1003, year2024]
 description: "När ett företag säljer en produkt till en konsument."
 created: 2024-01-30
-updated: 2026-05-26
+updated: 2026-08-31
 ---
 # Konsumentmarknad
 
@@ -29,7 +29,7 @@ Konsumentmarknad (Definition):: När ett företag säljer en produkt till en kon
 <!--SR:!2024-02-25,17,290!2024-03-09,4,274-->
 
 Egenskaperna av en Konsumentmarknad (6)
-==DISABLEDFLASHCARD==
+??
 - ==Kundrelationer==: Många och ytliga. Marknadsföringen vill nå så många som möjligt.
 - ==Kundantal== och -storlek: Många och små.
 - ==Köpprocess==: Enkel (spontanköp) eller längre, beroende av köpsituation.

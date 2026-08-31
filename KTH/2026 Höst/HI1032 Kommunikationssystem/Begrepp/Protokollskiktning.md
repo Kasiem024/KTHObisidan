@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: protokollskiktning (HI1032)."
 ---
 # Protokollskiktning
@@ -18,4 +18,4 @@ Att dela upp kommunikationsuppgiften i ==lager med ett protokoll per lager==. Ge
 
 ## Flashcards
 
-**Protokollskiktning** (protocol layering) ==DISABLEDFLASHCARD== Att dela upp kommunikationen i ==lager med ett protokoll per lager==, vilket ger modularitet och döljer komplexitet.
+**Protokollskiktning** (protocol layering);;Att dela upp kommunikationen i ==lager med ett protokoll per lager==, vilket ger modularitet och döljer komplexitet.

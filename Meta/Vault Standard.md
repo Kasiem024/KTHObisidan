@@ -88,7 +88,12 @@ Use existing tags rather than inventing synonyms. Current vocabulary:
   `databaser`, `samhälle`, `säkerhet`.
 - Structural: `index` (course index note), `MOC` (map of content), `meta`
   (vault-management notes), `KTH` (all coursework), `year<YYYY>`.
-- Functional (plugin): `excalidraw`, `nograph`.
+- Functional (plugin): `excalidraw`, `nograph`, `nosr`. `nosr` marks a note whose
+  flashcards should be **excluded from spaced-repetition review** while left intact on the
+  page: it must also be listed in the plugin setting `flashcardTagsToIgnore`
+  (`.obsidian/plugins/obsidian-spaced-repetition/data.json`), which is what the plugin
+  actually checks. Used to scope a course's active deck without deleting or disabling cards
+  (see F64); parallels `nograph`, which excludes a note from the graph view.
 - Course codes: one per relevant course, e.g. `HI1027`. A note may carry more than
   one course code when a concept is shared between courses.
 
@@ -240,7 +245,7 @@ The definition, in plain prose. Wiki-link related concepts inline.
   interchangeable** — per the plugin's settings, `::` is single-line one-directional, `;;`
   single-line **reversed**, `||` multi-line one-directional and `??` multi-line **reversed**.
   A reversed card also generates a back-to-front card, so rewriting one form into another
-  would silently delete half the deck. `==DISABLEDFLASHCARD==` marks a card switched off.
+  would silently delete half the deck. `==DISABLEDFLASHCARD==` marks a single card switched off; the vault no longer uses it, and excludes whole notes from review with the `nosr` tag instead.
   **Never** change a separator or strip an `<!--SR:...-->` comment: they drive a live review
   schedule. The site rewrites cards into collapsible callouts at build time and never touches
   the vault. It converts cards **anywhere in a note**, not only under this heading, so the

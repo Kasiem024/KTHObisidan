@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-31
 description: "Begrepp: switching (krets- kontra paketförmedling) (HI1032)."
 ---
 # Switching

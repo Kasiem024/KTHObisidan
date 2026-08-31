@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: trevägshandskakning (three-way handshake) (HI1032)."
 ---
 # Trevägshandskakning
@@ -16,4 +16,4 @@ Sättet TCP ==upprättar en förbindelse== på, i tre steg: **SYN** (klienten be
 
 ## Flashcards
 
-**Trevägshandskakning** (three-way handshake) ==DISABLEDFLASHCARD== Sättet TCP ==upprättar en förbindelse== på i tre steg: SYN → SYN+ACK → ACK.
+**Trevägshandskakning** (three-way handshake);;Sättet TCP ==upprättar en förbindelse== på i tre steg: SYN → SYN+ACK → ACK.

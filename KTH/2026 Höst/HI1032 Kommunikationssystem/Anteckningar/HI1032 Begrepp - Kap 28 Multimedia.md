@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-26
+updated: 2026-08-31
 description: "Flashcards HI1032 kap 28 – multimedia: förlustfri/förstörande kompression, strömning samt RTP, RTCP och SIP."
 ---
 # HI1032 Begrepp - Kap 28 Multimedia

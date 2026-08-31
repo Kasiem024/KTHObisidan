@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-27
+updated: 2026-08-31
 description: "Begrepp: fjärrprocedursanrop (RPC) (HI1031)."
 ---
 # Fjärrprocedursanrop (RPC)
@@ -18,4 +18,4 @@ Att anropa en ==procedur i en annan process eller dator som om den vore lokal== 
 
 ## Flashcards
 
-**RPC** (Remote Procedure Call) ==DISABLEDFLASHCARD== Att anropa en ==procedur i en annan process/dator som om den vore lokal==; systemet döljer nätverket.
+**RPC** (Remote Procedure Call);;Att anropa en ==procedur i en annan process/dator som om den vore lokal==; systemet döljer nätverket.
