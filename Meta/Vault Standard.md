@@ -1,5 +1,6 @@
 ---
 tags: [meta]
+description: "Vaultets enda källa till sanning för taggar, frontmatter, mappstruktur, namngivning och notstruktur."
 ---
 # 📐 Vault Standard & Conventions
 
@@ -27,7 +28,11 @@ npx markdownlint-cli2 --fix "**/*.md"    # apply the fixable rules
 The two tools do different jobs and neither replaces the other: the audit enforces *vault
 conventions* (tags, `description`, folder placement, section order), the linter enforces
 *Markdown syntax* (blank lines around headings and fences, single trailing newline, no bare
-URLs). Expected result: only the deviations listed in `Vault Findings & Backlog.md` F52.
+URLs). Expected result: **0 issues**. Check the `Linting: N files` line too — it was 539 on
+2026-09-06, and `Linting: 0 files` with exit 0 means the glob never resolved (see `.kiro/steering/traps.md`
+T4 and T11). F52 records the sweep that took the count from 767 to 0 — including the last 12
+(MD001 skipped heading levels in the seven subject MOCs, and two MD024 duplicates), fixed by
+giving all ten MOCs the same heading shape.
 
 Configuration lives in two files at the vault root, one job each:
 
@@ -125,9 +130,12 @@ updated: 2024-04-20
   as their `<meta name="description">` before this was enforced; see F56. A card's *answer*
   alone is fine, and often is the right summary for a `begrepp` note.
 - `created` / `updated` are the source of truth for dates and live **only in
-  frontmatter** — there is no in-body date line. The Obsidian Linter plugin
-  auto-updates `updated` on save, Obsidian's Properties panel shows both, and the
-  published Quartz site renders them natively from these two fields.
+  frontmatter** — there is no in-body date line. Obsidian's Properties panel shows
+  both, and the published Quartz site renders them natively from these two fields.
+  **`updated` is maintained by hand.** This bullet used to credit the Obsidian Linter
+  plugin with updating it on save; that plugin had `lintOnSave: false` and every rule
+  disabled for as long as it was installed, so the automation never ran. It was
+  removed in F75.
 - Begin the body with a single H1 (`# <Title>`) matching the note name.
 
 Order convention (recommended, not enforced): type → course code(s) → subject →
@@ -153,7 +161,9 @@ KTH/<Year Season>/<CODE Course Name>/
   `lektion` / `övning` tag carries that distinction, not the folder.
 - `Filer/` holds every non-note file. Course literature goes in
   `Filer/Litteraturlista/` together with any generated `.opt.md` / `.ai.md`
-  conversions and conversion tooling docs.
+  conversions and conversion tooling docs. Nothing under `Filer/` is an authored note:
+  the whole folder is out of scope for the audit **and excluded from Obsidian's tag
+  index**, per §6.
 - `Filer/Canvas/` is for **third-party course material downloaded from Canvas** — KTH
   templates, grading criteria, detailed plans, seminar slides, other students' example
   theses. It is **gitignored**, because the repository and the site are public, and it is
@@ -193,9 +203,10 @@ same one. Enforced by markdownlint MD001 and MD024, so it cannot drift back.
 
 ### Concept note body format
 
-Concept (`begrepp`) notes follow one shape. Measured 2026-08-27 across the 396 concept notes in
-the vault: `## Definition` 342, `## Flashcards` 342, `## Kopplat till` 319,
-`## Tenta-fokus` 42.
+Concept (`begrepp`) notes follow one shape. Measured 2026-09-05 by
+`Meta/Obsidian Plugins/Scripts/Get-NoteStructureCensus.ps1`, which owns these figures — quote it
+rather than this sentence. Across the 396 concept notes: `## Definition` 342, `## Flashcards` 342,
+`## Kopplat till` 319, `## Tenta-fokus` 42.
 
 ```markdown
 # <Concept>
@@ -233,7 +244,8 @@ The definition, in plain prose. Wiki-link related concepts inline.
 - `## Tenta-fokus` is **optional**. Add it only where there is real exam guidance;
   most notes do not have one.
 - The definition is written as plain prose. Opening with a bold term is allowed but is
-  not the house style (15 notes do, 341 do not).
+  not the house style (15 of the 342 notes that have a `## Definition` do, 327 do not —
+  `Get-NoteStructureCensus.ps1` owns both figures).
 - `## Kopplat till` links **related concepts only**. Do not link study-question lists
   or dated session notes just because they mention the term; that dilutes the graph
   without adding meaning. Leaving it empty is fine when nothing genuinely relates.
@@ -249,13 +261,13 @@ The definition, in plain prose. Wiki-link related concepts inline.
   **Never** change a separator or strip an `<!--SR:...-->` comment: they drive a live review
   schedule. The site rewrites cards into collapsible callouts at build time and never touches
   the vault. It converts cards **anywhere in a note**, not only under this heading, so the
-  91 notes that keep their cards elsewhere still publish correctly — but new concept notes
+  62 notes that keep their cards elsewhere still publish correctly — but new concept notes
   should still use `## Flashcards` for consistency.
 
 **Concept collections are a recognised exception.** Notes named like
 `HI1025 Begrepp Föreläsning 2` or `SEM4 Begrepp HF1201` gather many short definitions
 into a single note, written directly as flashcards, and have no `## Definition`
-section of their own. 54 of the 396 concept notes are of this kind. They are still
+section of their own. 53 of the 396 concept notes are of this kind. They are still
 tagged `begrepp` and still end with `## Flashcards`.
 
 ### Images and embeds
@@ -327,11 +339,54 @@ notes, and audits/health checks must exclude them:
 - `_index.md` — generated course indexes (no `created`/`updated`; tags are fixed).
 - `Atlas/` MOCs, `Dashboard`, `Vault Health Report`, root `index.md`, `README.md`,
   `Meta/` docs — navigation and vault-management notes (no dates).
+- `**/Filer/**` — **everything under a `Filer/` folder**, not just the subfolders named
+  below. None of it is authored by the author: Excalidraw drawings, course literature and
+  its conversions, and third-party Canvas downloads. 98 `.md` files, out of 673 in the vault when
+  last counted (2026-09-06 17:45) — `Vault-Audit.ps1` prints the current total, which moves
+  whenever a report or a scratch note is added.
+  Also excluded from Obsidian's **tag index** — see below.
 - `**/Litteraturlista/**` — PDF→Markdown conversion tooling docs (`CONVERSION_*.md`,
   `FIX_PLAN.md`) and the source PDFs. **Do not delete these — active working files.**
-- `*.ai.md` — raw OCR text dumps from the Text Extractor plugin.
+- `*.ai.md` / `*.opt.md` — raw OCR dumps and AI-optimised book conversions. None exist in the
+  vault today (checked 2026-09-06); the rule stands so a future one is out of scope on sight.
 - `Ericsson/` — work notes, not coursework.
 - `KTH/Kurs Mapp Mall/` — the empty new-course skeleton.
+
+### `Filer/` is excluded from the tag index too
+
+Out of scope is not enough on its own. Obsidian indexes tags from **every** Markdown file
+it can see, so text inside a converted book or a Canvas download becomes a real tag in the
+tag pane. Measured 2026-09-06: of the vault's 69 distinct inline tags, **52 existed only in
+`Filer/` files** — 42 `#page-N-M` OCR anchors, `#include` 15 times from a C code listing in
+*Data Communications and Networking*, and postal-address debris such as `#633/EC/US`. Not
+one of them overlapped with a tag used by a real note.
+
+The mechanism is `userIgnoreFilters` in `.obsidian/app.json` (Settings → Files and links →
+Excluded files). `MetadataCache.getTags()` skips ignored paths and the tag pane is built
+from it, so this is the **only** setting that keeps a junk tag out of the pane — the
+setting's own description never mentions tags. The two entries the audit requires are:
+
+```json
+"userIgnoreFilters": [
+  "/(^|\\/)Filer\\//",
+  "/Meta\\/Obsidian Plugins\\//"
+]
+```
+
+The live setting also carries `/excalidraw/` and one filter per `Instuderingsfrågor` note — 7
+filters covering 112 of 673 `.md` files on 2026-09-06. Extra entries are allowed; a filter that
+matches **nothing** is the defect, and `Get-ObsidianExcludes.ps1` reports it.
+
+A filter wrapped in `/…/` is a case-insensitive **regex** matched anywhere in the path;
+anything else is an anchored **prefix**. That distinction is why a bare `Obsidian Plugins/`
+sat in this vault's settings matching **zero** files — the real path is
+`Meta/Obsidian Plugins/`. Write path fragments as regexes.
+
+Enforced by the audit's `tagIndexNotExcluded` check and reported by
+`Meta/Obsidian Plugins/Scripts/Get-ObsidianExcludes.ps1`, which also flags any filter that
+matches nothing. **Dataview does not consult this setting at all**, so
+`Atlas/Vault Health Report.md` carries its own `!contains(file.folder, "Filer")` guard on
+every query. Links, embeds and backlinks are unaffected — drawings still render. See F67.
 
 ## 7. Adding a new course or note
 

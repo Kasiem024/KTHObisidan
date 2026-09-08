@@ -80,12 +80,35 @@ descriptions, which would have published `FROM "KTH/2025 Vår/..."` on 24 pages.
 
 ## 4. Out of scope — do not edit
 
+- **Anything under a `Filer/` folder.** Not authored by the author: Excalidraw drawings,
+  copyrighted course literature (`Filer/Litteraturlista/`) and third-party Canvas downloads
+  (`Filer/Canvas/`). 98 `.md` files live there, of 673 in the vault on 2026-09-06 — quote
+  `Vault-Audit.ps1` for the current total rather than this sentence.
 - `KTH/2026 Höst/HI1031 .../Filer/Litteraturlista/` — conversion tooling docs
   (`CONVERSION_*.md`, `FIX_PLAN.md`, `VAULT_CHANGES_CONTEXT.md`, `*.opt.md`). The author
   deletes these personally. Tracked as F10.
-- Anything under `Filer/Litteraturlista/` — copyrighted course literature.
-- `.obsidian/` — plugin state. Read it for facts; do not edit it.
 - Notes tagged `excalidraw` — drawing files, not authored notes.
+
+### `.obsidian/` is read-only, with one exception
+
+Plugin and app state. Read it for facts; do not edit it — **except
+`userIgnoreFilters` in `.obsidian/app.json`**, which is a vault convention like any
+other: it is declared in `Meta/Vault Standard.md` §6 and enforced by the audit's
+`tagIndexNotExcluded` check. A rule the audit reports but nothing is allowed to repair is
+the worst of both worlds.
+
+**Obsidian's filter syntax fails silently when you get it wrong**, and it is not what the settings
+dialog implies. A bare `Obsidian Plugins/` matched nothing for as long as it existed, because an
+unwrapped filter is an anchored *prefix* and the real path is `Meta/Obsidian Plugins/`. Write
+path-fragment filters as regexes: `/(^|\/)Filer\//`, `/Meta\/Obsidian Plugins\//`. This setting is
+also **the only mechanism that keeps a junk tag out of the tag pane**, and Dataview ignores it
+entirely, which is why `Atlas/Vault Health Report.md` carries its own `Filer/` guard.
+
+`Meta/Vault Standard.md` §6 holds the declared filters, the regex-versus-prefix rule and what the
+setting does and does not affect; the parser source from `obsidian-1.13.7.asar` and the audit of all
+18 `isUserIgnored` call sites are in `Meta/Vault Findings & Backlog.md` (F67). Read §6 before changing
+a filter, and run `Get-ObsidianExcludes.ps1` afterwards — it flags any filter matching nothing. See
+also `traps.md` T14.
 
 ## 5. Writing style for note content
 

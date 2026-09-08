@@ -6,6 +6,13 @@
 # Optional:
 #   -KeepFixture    leave the throwaway vault on disk for inspection
 #
+# WHAT THIS COUNTS
+#   Assertions, not vault facts. It prints "N assertions, F failed": one assertion per audit
+#   check that must fire on a planted violation, plus the assertions that a rule-following
+#   fixture is reported clean, that -ContentOnly skips exactly two checks, and that every
+#   documented scope exclusion holds. F must be 0. The numbers say nothing about the real
+#   vault - the fixture lives under %TEMP% and this script never opens the vault.
+#
 # WHY THIS EXISTS
 #   The audit is the only thing standing between this vault and silent drift. A check
 #   that has quietly stopped matching still prints nothing and still exits 0, which is
@@ -73,6 +80,18 @@ function New-Fixture {
   }
   Write-Utf8 (Join-Path $courseDir '_index.md') "---`ntags: [index, HE1033, KTH, $natverk, year2026]`ndescription: `"Kursindex.`"`n$dates`n---`n# $course`n"
   Write-Utf8 (Join-Path $begrepp 'Testbegrepp.md') (Clean-Note 'Testbegrepp')
+  # Standard section 6: a Markdown file under Filer/ is not an authored note, and must also
+  # be kept out of Obsidian's tag index. Both halves need a fixture:
+  #   - the file itself, so InScope is proven to skip it (it breaks every content rule);
+  #   - .obsidian/app.json with the filter, so tagIndexNotExcluded has something to pass on.
+  # Without the .md file the check is vacuous and would "pass" even if deleted.
+  Write-Utf8 (Join-Path $courseDir 'Filer\Skrapad Bok.md') "# Rubrik utan frontmatter`n`n#include <stdio.h>`n`n#page-12-0`n"
+  # Single-quoted so the backslashes survive: PowerShell's double quotes leave \\ alone but
+  # this is JSON, where \\ means one backslash. The stored filter must end up as
+  # /(^|\/)Filer\/ - the exact string the real vault uses - so the test exercises the form
+  # that is easiest to get wrong, not a simplified one.
+  $filterJson = '{' + "`n" + '  "userIgnoreFilters": [' + "`n" + '    "/(^|\\/)Filer\\//"' + "`n" + '  ]' + "`n" + '}' + "`n"
+  Write-Utf8 (Join-Path $fx '.obsidian\app.json') $filterJson
 }
 
 function Invoke-Audit([switch]$ContentOnly) {
@@ -152,6 +171,20 @@ Bad 'ab-widthonly.md'  "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`n![[b
 Bad 'ac-inlinedv.md'   "---`n$goodTags`n$goodDesc`n$dates`n---`n# ``= this.file.name```n"
 Bad 'ad-olddates.md'   "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`nSkapad: ``= dateformat(this.file.ctime, 'yyyy-MM-dd')```n"
 Bad 'ae-brokenlink.md' "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`nSe [[Finns Inte Alls]].`n"
+# A note that only MENTIONS excalidraw in its prose, and has a --- rule later on. It is a
+# normal note and every content check must still see it. The excalidraw test used to be
+# '(?s)\A---\n.*?excalidraw.*?\n---', which with (?s) matched from the frontmatter's opening
+# --- to that later rule, so the whole note was skipped. Two Meta docs were silently exempt
+# from every check for as long as that regex existed. This file has no description, so if it
+# is being skipped, missingDescription simply will not count it.
+Bad 'af-mentions-excalidraw.md' "---`ntags: [begrepp, HE1033, KTH, $natverk, year2026]`n$dates`n---`n# Trasig`n`nVi anvander excalidraw for ritningar.`n`n---`n`n## Definition`n`nText.`n"
+# A CRLF file whose fenced code block contains an H1. The code-stripper must blank it, so this
+# note has exactly ONE H1 and must NOT be reported. In .NET multiline mode $ matches before the
+# \n without absorbing a preceding \r, so a closing-fence pattern of '[ \t]*$' silently matches
+# nothing in a CRLF file - it found 0 of Vault Findings & Backlog.md's 6 blocks. This vault
+# genuinely mixes the two conventions, so the LF fixtures above cannot catch it.
+$crlf = "---`r`ntags: [begrepp, HE1033, KTH, $natverk, year2026]`r`n$goodDesc`r`ncreated: 2026-01-01`r`nupdated: 2026-01-01`r`n---`r`n# Ett CRLF-dokument`r`n`r`n## Definition`r`n`r`n" + '```text' + "`r`n# Inte en riktig rubrik`r`n" + '```' + "`r`n"
+Write-Utf8 (Join-Path $begrepp 'ag-crlf-fence.md') $crlf
 
 # literature filenames
 $lit = Join-Path $courseDir 'Filer\Litteraturlista'
@@ -161,6 +194,12 @@ Write-Utf8 (Join-Path $lit 'Nagon Bok HE1033 2020 Edition 5.pdf') 'x'
 
 # a folder that is not one of the four
 New-Item -ItemType Directory -Path (Join-Path $courseDir 'Bilagor') -Force | Out-Null
+
+# Empty the excluded-files setting. The Filer/ note planted by New-Fixture is now in the
+# tag index, so tagIndexNotExcluded must fire. This is the only violation that lives in
+# .obsidian/ rather than in a note, and it is invisible from inside the vault - which is
+# exactly why it needs a check and a test.
+Write-Utf8 (Join-Path $fx '.obsidian\app.json') ('{' + "`n" + '  "userIgnoreFilters": []' + "`n" + '}' + "`n")
 
 # a second course missing a required folder (no Filer)
 $c2 = Join-Path $termDir 'CM1005 Testkurs'
@@ -193,7 +232,8 @@ $expect = @(
   'noH1', 'multipleH1', 'flashcardsNotLastSection',
   'imageEmbedWithoutAlt', 'inlineDataviewExpression', 'oldDataviewDates',
   'brokenWikilinks', 'courseMissingFolder', 'courseMissingIndex', 'nonConformingFolder',
-  'litWrongEditionFormat', 'litBadSpacing', 'litHasCourseCode'
+  'litWrongEditionFormat', 'litBadSpacing', 'litHasCourseCode',
+  'tagIndexNotExcluded'
 )
 foreach ($e in $expect) {
   $fired = Reports $full.Text $e
@@ -209,6 +249,25 @@ $m = [regex]::Match($full.Text, '(?m)^malformedDescription\s+(\d+)\s*$')
 $descCount = 0
 if ($m.Success) { $descCount = [int]$m.Groups[1].Value }
 Add-Result 'malformedDescription catches all 8 shapes' '8 files' ($descCount -eq 8) "reported $descCount"
+
+# REGRESSION GUARD. Two planted files lack a description: f-nodesc.md and
+# af-mentions-excalidraw.md. The second one only mentions "excalidraw" in its prose and has a
+# --- rule further down. If the excalidraw test ever goes back to scanning the whole file
+# instead of just the first frontmatter block, that note is skipped and this count drops to 1
+# while everything else still passes. That is exactly how Meta/Vault Standard.md and
+# Meta/Vault Findings & Backlog.md stayed exempt from every content check.
+$m2 = [regex]::Match($full.Text, '(?m)^missingDescription\s+(\d+)\s*$')
+$noDescCount = 0
+if ($m2.Success) { $noDescCount = [int]$m2.Groups[1].Value }
+Add-Result 'a note that merely mentions excalidraw is still audited' '2 files' ($noDescCount -eq 2) "missingDescription reported $noDescCount"
+
+# REGRESSION GUARD for the CRLF fence. Only y-twoh1.md has two real H1s. ag-crlf-fence.md is a
+# CRLF file whose single extra "# " line sits inside a code fence, so if the stripper stops
+# working on CRLF this count becomes 2 and nothing else changes.
+$m3 = [regex]::Match($full.Text, '(?m)^multipleH1\s+(\d+)\s*$')
+$h1Count = 0
+if ($m3.Success) { $h1Count = [int]$m3.Groups[1].Value }
+Add-Result 'a heading inside a CRLF code fence is not an H1' '1 file' ($h1Count -eq 1) "multipleH1 reported $h1Count"
 
 # A degree-project code (HT100X) must be accepted as a course code, and its folder must be
 # checked like any other course. Two assertions: the code itself is NOT reported as an

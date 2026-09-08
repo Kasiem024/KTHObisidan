@@ -13,6 +13,8 @@ that have already been made here.
 |---|---|
 | **`vault-bulk-edit`** | Any change touching more than a handful of notes. The single most dangerous operation in this vault — it has both fixed 745 violations mechanically in one pass and nearly destroyed a live flashcard deck. |
 | **`add-a-convention`** | Adding or changing a rule. A documented-but-unchecked rule always drifts; this is the pipeline that stops it. |
+| **`write-flashcards`** | Authoring or improving spaced-repetition cards. The scheduler is solved; the wording is not, and it decides what every future review costs. |
+| **`query-notebooklm`** | A decision needs literature the user holds in NotebookLM. One pasteable block per round, provenance demanded up front, and an explicit answer for what the corpus does *not* cover. |
 
 ## Navigation
 

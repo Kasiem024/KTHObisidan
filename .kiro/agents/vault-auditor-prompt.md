@@ -28,11 +28,16 @@ with `grep`/`glob` and say plainly that the audit does not check it.
    It exits 0 when clean and 1 when not, so trust the exit code, not a skim of the output.
 
 2. **Run the linter**, which checks different things — Markdown syntax rather than vault
-   conventions:
+   conventions. `npm` needs `cmd /c` here, and the glob must go through **unquoted** or it lints
+   nothing (`.kiro/steering/traps.md` T11):
 
    ```powershell
-   npx markdownlint-cli2 "**/*.md"
+   cmd /c "npx markdownlint-cli2 **/*.md"
    ```
+
+   Read the `Linting: N files` line: it was **539** on 2026-09-06, and `Linting: 0 files` with
+   exit 0 means the glob did not resolve, not that the vault is clean. This is the only shell
+   command you have besides the audit and read-only `git`.
 
 3. **Investigate what they flag**, file by file, before generalising.
 
@@ -62,7 +67,7 @@ Both the file and the summary use this shape:
 
 ## Report honestly
 
-- **Give counts, not impressions.** "129 of 352 concept notes have an empty `## Kopplat till`"
+- **Give counts, not impressions.** "77 of 396 concept notes have an empty `## Kopplat till`"
   is useful; "several notes look thin" is not.
 - **Separate a real defect from a variation.** Not every inconsistency is a fault. The four
   flashcard separators look interchangeable and are not — `;;` and `??` are the reversed

@@ -1,6 +1,6 @@
 ---
-inclusion: auto
-description: The feedback loop. When something passed every check and was still wrong, it gets recorded here and the miss becomes a new rule. Read when a check turns out to have been insufficient.
+inclusion: manual
+description: The feedback loop. When something passed every check and was still wrong, it gets recorded here and the miss becomes a new rule. Read when a check turns out to have been insufficient, or before adding one. NOT auto-loaded - this file explains why the rules exist; the rules themselves live in .kiro/steering/.
 ---
 
 # Lessons learned
@@ -29,6 +29,97 @@ result was still wrong.
 **Rule added:** the new or amended rule, and where it now lives.
 **Lesson:** one sentence a future reader can act on.
 ```
+
+---
+
+## 2026-09-07 — a document can be well-researched, confidently written and still unusable
+
+**What happened:** two long Markdown documents arrived in `Downloads` and were considered as a skill or a
+reference for this vault. *Training AI To Write Human-Like Text* (internally *"Detection, Artifacts, and
+Evasion Strategies"*) and *Crafting AI Persona for Book Summaries*. Both read as authoritative: headed
+sections, citation markers, tables of figures. Both were rejected.
+
+Measured before deciding, which is what made the decision cheap: the first cites **46 unique domains, 19.6 %
+academic, 63 % blog, vendor or Reddit, with 20 Reddit links**; the second **35 domains, 0 % academic, 57 %
+blog, vendor or Reddit**. Then the disqualifying details. The first is an evasion manual — **35 uses of
+evasion, evade, undetectable or bypass** — sourced simultaneously to detector vendors *and* to the humanizer
+vendors selling against them, carrying an invented "Effectiveness" column, mangled citation markers, an
+instruction to insert deliberate typos, and no engagement anywhere with detector false positives. The second
+is about the wrong course entirely, mandates the Cornell method (a second note structure, against
+`Meta/Vault Standard.md` §4), forbids verbatim quoting where this vault requires it, and instructs the AI to
+invent study guidance.
+
+The vindication came two days later. The corpus built to check the same topic properly contained one
+experiment that actually tests the typo advice — 105 participants — and found the error-rate change
+**non-significant after Holm correction** while lexical diversity fell sharply. The document's central
+tactic had no measured effect, and its confident tone was the only thing carrying it.
+
+**Why the checks missed it:** nothing checks an incoming document. `Vault-Audit.ps1` validates notes already
+in scope; markdownlint validates syntax. A file in `Downloads` passes both by not being examined. And the
+document's *form* — sections, citations, tables — is exactly what a reader uses as a proxy for rigour, so
+the proxy pointed the wrong way.
+
+**Rule added:** before adopting any outside document as a skill or reference, count its sources by domain
+class and search it for the vocabulary of its own agenda. Two numbers and one word-search settled both cases
+in minutes. Recorded with the figures in `.kiro/research/2026-09-07-llm-style-what-survived-checking.md`,
+whose tier table now also marks which lines of the derived prompt rest on **nothing measured** — the same
+distinction these documents blurred.
+
+**Lesson:** measure a document's bibliography before reading its conclusions, because confident structure is
+free and citations are not.
+
+**What happened:** across one session of hardening a skill and distilling a research corpus, my own
+verification scripts produced **nine** wrong results. Six of them were false negatives: the script
+reported a phrase or figure *absent* from a file that contained it. Two were false positives from a
+broken pattern. One wiped a variable and read null from four files.
+
+The consequences differed in kind. When a script reported a stale claim removed, I told the user it
+was fixed and it was not — the text was still in the file, wrapped across two lines while I searched
+for it on one. When three figures came back missing from a file I had just written, I nearly rewrote
+correct content to "restore" them; they were formatted `8 290` while I searched `8,290`. A search for
+one table row returned **31 372 matches** in a 31 KB file, because an unescaped `|` turned the pattern
+into an alternation of empty branches.
+
+**Why the checks missed it:** nothing was checking the checks. A green `Vault-Audit.ps1` and a clean
+`markdownlint` prove the *file* is well-formed; neither can tell whether the ad-hoc script I wrote to
+answer today's question is asking the right question. And the failure is asymmetric: a false
+**positive** looks wrong immediately — 31 372 matches is absurd on its face — while a false
+**negative** looks exactly like the truth. `absent = False` is the answer I usually expect, so it
+passes without a second look.
+
+**Rule added:** T16, T17 and T18 in `.kiro/steering/traps.md`, covering unescaped regex metacharacters, the
+four rendering variants that defeat a phrase search (line wrapping, blockquote markers, digit
+grouping, unicode punctuation), and the backtick escape. All three now carry the shared instruction:
+**never report a negative from a single test.** Confirm it with a differently-shaped one — a shorter
+fragment, a whitespace-normalised comparison, or a literal `.Contains()` instead of a regex.
+
+**Lesson:** when a check says the thing you were looking for is not there, the likeliest explanation
+is that the check is wrong, because that is the one answer no one questions.
+
+---
+
+## 2026-09-07 — quoting a table without its baseline row loses the only thing that made it mean something
+
+**What happened:** a research report reproduced a benchmark's results table with the value column
+intact and correct, but with every label shifted one row, because it silently dropped the source's
+first row. That row was the human-versus-human baseline — the distance between two halves of the same
+human corpus. The result attributed the human baseline to a model, and named the *worst*
+instruction-tuned configuration as the best available, reversing the paper's conclusion. I quoted it
+to the user as fact.
+
+**Why the checks missed it:** every individual number in the table was real and appeared in the
+source. A spot-check of figures — the check I had, and the one that caught a sign-reversed
+fabrication earlier the same day — cannot detect a transposition, because transposition preserves
+every value and corrupts only the pairing. And without the baseline row there was nothing in the
+table to look wrong against: 7.1 and 33.8 are both plausible model scores.
+
+**Rule added:** checklist item 7 in `.kiro/skills/query-notebooklm/references/reading-a-report.md` —
+when a table carries the argument, ask for its rows in the source's own order and demand any baseline
+or reference row. What surfaced it: quoting **both** conflicting claims back verbatim in one question,
+with their numbers, and forbidding reconciliation.
+
+**Lesson:** verify the mapping, not just the values — and a table's baseline row is data, not
+decoration.
 
 ---
 
@@ -89,7 +180,7 @@ count read 1673 instead of 767.
 **Why the checks missed it:** the tool reported success. Nothing compares the number of files
 linted against the number expected.
 
-**Rule added:** recorded as trap T4 in `.kiro/traps.md`; after changing ignores, check the
+**Rule added:** recorded as trap T4 in `.kiro/steering/traps.md`; after changing ignores, check the
 `Linting: N file(s)` line, because that number is the only proof the config took effect.
 
 **Lesson:** when a config file is added, verify the tool actually read it — silence is not
@@ -106,7 +197,7 @@ reporting exit `-1` while clean (`Select-Object` closing the pipe), and an agent
 **Why the checks missed it:** none of these produced an error. Every one returned a plausible
 number.
 
-**Rule added:** `.kiro/traps.md` collects them as T2, T3, T6 and T7, with the rule that a
+**Rule added:** `.kiro/steering/traps.md` collects them as T2, T3, T6 and T7, with the rule that a
 surprisingly large or small count is treated as a suspect measurement until re-derived a second
 way.
 

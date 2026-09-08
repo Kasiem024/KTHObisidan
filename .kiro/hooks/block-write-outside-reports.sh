@@ -4,8 +4,11 @@
 # The vault-auditor may only write its dated reports, never a note. Exit 2 = block.
 # Accepts an optional argument ($1) for the agent name.
 #
-# This is a backstop. The hard guarantee is toolsSettings.write.allowedPaths in the agent
-# JSON, which restricts writes to .kiro/reports/*.md.
+# THIS IS THE HARD BLOCK, NOT A BACKSTOP.
+#   toolsSettings.write.allowedPaths only *auto-approves* paths; it does not confine anything, and
+#   vault-auditor.json carries no deniedPaths at all. Exit 2 from this hook is the only
+#   unconditional stop, so it fails CLOSED. See .kiro/README.md and the 2026-09-06 adversarial
+#   review, which falsified the earlier claim that allowedPaths was the guarantee.
 
 INPUT=$(cat)
 

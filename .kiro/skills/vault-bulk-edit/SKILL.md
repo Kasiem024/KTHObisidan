@@ -15,14 +15,19 @@ Every step below exists because skipping it caused a real failure.
 ## 1. Inventory before you touch anything
 
 Count what is in scope and what you are excluding, and print it. Never start from an
-assumption about which files match.
+assumption about which files match. **Check `.kiro/steering/scripts.md` first** — the
+measurement you need may already exist, with its definition recorded. `Get-TagInventory.ps1`
+and `Get-NoteStructureCensus.ps1` cover most "how many notes have X" questions, and
+`Get-NoteStructureCensus.ps1` also carries the scope predicate that mirrors the audit's.
 
 Exclude: `.obsidian/`, `.trash/`, `.kiro/`, `node_modules/`, `**/Filer/`,
 `**/Litteraturlista/`, `*.excalidraw.md`.
 
 **Not every Excalidraw note is named `*.excalidraw.md`** — some are identified only by tag
 (`CM1008 Lean Canvas Grupp 10.md`). Excluding by extension alone leaves a 30 MB generated
-drawing in scope.
+drawing in scope. When testing for that tag, match against the **captured frontmatter block**
+only: `(?s)\A---.*?excalidraw.*?---` runs on to the next `---` horizontal rule and silently
+swallows any note that merely mentions the word (traps T13).
 
 ## 2. Write a `.ps1`, and keep it pure ASCII
 
@@ -84,8 +89,14 @@ types and `;;`/`??` are the reversed ones — normalising them deletes half the 
 
 ## 8. Prove nothing broke
 
-See `references/verification.md` for the exact checks and the current expected numbers. In
-short: SR fingerprint identical, audit clean, lint 0, build metrics unchanged.
+`Get-SRIntegrity.ps1 -Save` **before** the sweep and `-Compare` **after** — it owns the
+marker patterns, exits 1 on any drift, and saves you re-deriving a regex that has been got
+wrong before. Then see `references/verification.md` for the other three checks and the current
+expected numbers. In short: SR fingerprint identical, audit clean, lint 0, build metrics
+unchanged.
+
+Note that a whole-vault total cannot prove *your* edit was harmless — this vault also receives
+mobile syncs and a second agent's edits. Name your own files with `git diff --numstat`.
 
 ## 9. Be re-runnable
 

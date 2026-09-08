@@ -6,7 +6,7 @@
 //
 // Note: markdownlint-cli2 does NOT read .markdownlintignore - that is cli v1 only.
 // Ignores must be declared here or they are silently inert, which linted 536 files
-// instead of 500 and inflated the violation count from 804 to 1673.
+// instead of 500 and inflated the violation count from 767 to 1673 (F52, traps T4).
 {
   "ignores": [
     // Plugin state, trash, agent context, tooling.

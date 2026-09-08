@@ -34,9 +34,16 @@ jobs:
           fetch-depth: 1
           filter: blob:none
           sparse-checkout-cone-mode: false
+          # The re-include of .obsidian/app.json is required, not cosmetic: the audit's
+          # tagIndexNotExcluded check reads userIgnoreFilters from it, and without the file
+          # every Filer/ note is reported as unexcluded. Verified in a real sparse clone -
+          # this brings in exactly ONE file from .obsidian/ (4 KB), leaving the working tree
+          # at 1.7 MB. Later patterns win in gitignore syntax, so it must follow the
+          # exclusion above it.
           sparse-checkout: |
             /*
             !/.obsidian/
+            /.obsidian/app.json
             !*.pdf
             !*.png
             !*.jpg
@@ -48,7 +55,7 @@ jobs:
         run: |
           # -ContentOnly skips the two checks that need state git does not store:
           # empty category folders, and wikilinks into the gitignored Litteraturlista.
-          # Everything else still runs, across all 470 notes.
+          # Everything else still runs, across all 516 notes in scope.
           & './Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1' -ContentOnly -Detail
           if ($LASTEXITCODE -ne 0) {
             Write-Output '::error::Vault audit found deviations from Meta/Vault Standard.md. The offending files are listed above.'
@@ -67,7 +74,7 @@ jobs:
       # Proves every check in the audit still fires on a deliberate violation. Without
       # this, a regex that silently stops matching still exits 0 and reports clean. The
       # test builds a throwaway fixture vault under %TEMP% — it never touches the real
-      # vault. Takes ~8 seconds.
+      # vault. Takes ~9 seconds.
       - name: Audit self-test
         shell: pwsh
         run: |

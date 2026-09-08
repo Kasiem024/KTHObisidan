@@ -31,6 +31,16 @@ For the audit, add a bucket and increment it; the script exits 1 when any bucket
 non-empty, which is what makes CI able to gate on it. Verify both directions: clean → exit 0,
 a deliberately broken file → exit 1.
 
+**Then add the matching assertion to `Test-VaultAudit.ps1` in the same change**, and add the
+bucket name to its `$expect` list. A check nobody has ever seen fail is a check that may never
+have worked: before that suite existed, exactly one of the audit's checks had been proven to
+fire on purpose. Two checks have since been caught doing nothing — one regex silently skipped
+every CRLF file, another swallowed whole notes (traps T12, T13).
+
+If the rule needs a **measurement** rather than a pass/fail, that belongs in a read-only script
+in `Meta/Obsidian Plugins/Scripts/` listed in `.kiro/steering/scripts.md`, not in the audit.
+The audit judges; the scripts count.
+
 If a rule genuinely cannot be checked mechanically, say so in the Standard next to the rule,
 so nobody assumes it is enforced.
 
@@ -38,6 +48,12 @@ so nobody assumes it is enforced.
 gitignored files — cannot pass on a fresh clone. Two existing checks have this problem and
 are skipped under `-ContentOnly`. If your new check needs untracked state, add it to that
 exclusion and note why.
+
+A check that reads a **tracked but unusual** path needs the opposite fix: make CI check the
+file out. `tagIndexNotExcluded` reads `.obsidian/app.json`, which CI's sparse checkout excluded,
+so the check reported every `Filer/` note and would have failed the next push. The workflow now
+re-includes that one file. Test this before pushing — clone into `%TEMP%` with the workflow's
+own sparse-checkout patterns and run the audit there.
 
 ## 3. Make the templates produce it
 

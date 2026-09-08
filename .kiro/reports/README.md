@@ -23,9 +23,11 @@ The file is the authoritative version.
 
 ## Constraints
 
-The agent's `write` tool is path-restricted to `.kiro/reports/*.md` in `vault-auditor.json`, and
-`hooks/block-write-outside-reports.sh` is a second line of defence. It cannot edit a note, the
-Standard, or the audit script.
+`hooks/block-write-outside-reports.sh` is what actually confines the agent's `write` tool to
+`.kiro/reports/*.md`: its exit 2 is the only unconditional stop. `vault-auditor.json`'s
+`allowedPaths` merely auto-approves those paths — it cannot block anything, and the file carries no
+`deniedPaths` — so the hook is the hard block, not a second line of defence. With it in place the
+agent cannot edit a note, the Standard, or the audit script.
 
 Reports are committed. They are small, they are excluded from the audit, the linter and the
 published site along with the rest of `.kiro/`, and the history is the point.

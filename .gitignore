@@ -10,3 +10,17 @@ litteraturlista/
 # Text-extractor plugin OCR cache: derived data regenerated on demand, not authored
 # content, and nothing a public repo should carry.
 .obsidian/plugins/text-extractor/cache/
+
+# Get-SRIntegrity.ps1's pre-sweep snapshot. Transient by design: taken immediately before a
+# bulk edit and consumed immediately after, so a committed copy would be stale the moment it
+# lands and would dirty the tree on every use.
+Meta/Obsidian Plugins/Scripts/sr-baseline.json
+
+# Per-device Obsidian config folder for the phone, selected there with Settings >
+# "Override config folder" so mobile does not load the desktop's plugin set. It is state
+# for one device and recreatable, so it is not tracked - unlike .obsidian/, which is
+# deliberately committed as a restore point. Note that if a plugin installed there ever
+# ships a .md file, both .markdownlint-cli2.jsonc and Vault-Audit.ps1's InScope would need
+# the same exclusion they give .obsidian/: neither one matches .obsidian-mobile, because
+# both test for a path segment that ends exactly at ".obsidian". See F75 and current-state.
+.obsidian-mobile/

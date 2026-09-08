@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "db0b3a7204e25c6f",
+        "id": "6fc50e16364f3d11",
         "type": "tabs",
         "children": [
           {
-            "id": "dc7ad96335334335",
+            "id": "082a7096a8ca625e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system"
             }
           }
         ]
@@ -81,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 551.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -208,9 +212,46 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "70cd9e2e7b6bf985",
+  "active": "082a7096a8ca625e",
   "lastOpenFiles": [
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/Laborationer/Lab-TCP-Full.pdf",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 01 Karakterisering av distribuerade system.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 02 Systemmodeller.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 02 Systemmodeller (visuell).md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
+    "Meta/Obsidian Plugins/Scripts/Test-DocHygiene.ps1",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 02 Systemmodeller.md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Labb 1 - Flashcards (TCP).md",
+    "_paste-tests/nblm-limit-3200.txt",
+    "_paste-tests/nblm-limit-3500.txt",
+    "_paste-tests/nblm-limit-3800.txt",
+    "_paste-tests/nblm-limit-12000.txt",
+    "_paste-tests/nblm-limit-1000.txt",
+    "_paste-tests/Build-PasteTests.ps1",
+    "_paste-tests/nblm-limit-2000.txt",
+    "_paste-tests/nblm-limit-3000.txt",
+    "_paste-tests/nblm-limit-24000.txt",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Begrepp/Fjärrprocedursanrop (RPC).md",
+    "KTH/2024 Vår/CM1005 Extern Redovisning/Begrepp/Lagfart.md",
+    "KTH/2024 Vår/CM1005 Extern Redovisning/Begrepp/Fastighetsbevis.md",
+    "KTH/2026 Vår/HI1029 Algoritmer och Datastrukturer/Begrepp/Rekursion.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Begrepp/Tvåfas-commit (2PC).md",
+    "KTH/2024 Vår/CM1005 Extern Redovisning/Begrepp/Varutransaktion.md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Begrepp - Kap 20 Unicast routing.md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Begrepp - Kap 18 Introduktion till nätverkslagret.md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Begrepp - Kap 17 Kopplingsenheter och VLAN.md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Begrepp - Kap 02 Nätverksmodeller.md",
+    "inlamning3-arkitekturanalys.md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_5_Figure_0.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_4_Picture_1.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_5_Figure_1.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_4_Figure_5.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_2_Picture_2.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_0_Picture_0.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_1_Picture_7.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Lab_TCP_GetStarted___page_3_Figure_0.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning03_TCP___page_24_Figure_2.jpeg",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning03_TCP___page_9_Diagram_2.jpeg",
+    "Untitled.canvas",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Begrepp/TCP-IP-modellen.md",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Begrepp/Inkapsling.md",
     "KTH/2026 Höst/HT100X Examensarbete/Filer/Canvas/AI-optimerad Markdown/Vad är ett exjobb.md",
@@ -218,45 +259,8 @@
     "KTH/2026 Höst/HT100X Examensarbete/Filer/Canvas/AI-optimerad Markdown/HT100X-20262 (1).md",
     "KTH/2025 Vår/CM1008 Projektkurs i Applikationsutveckling/Filer/CM1008 Lean Canvas Grupp 10.md",
     "KTH/_Kvalitetskoll.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 02 Systemmodeller.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Föreläsningar/2026-08-24 Föreläsning 1.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Grunder (kap 1-2).md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Begrepp - Grunder (kap 1-2).md",
-    "Meta/Obsidian Plugins/Templates/Ny kurs.md",
-    "Meta/Obsidian Plugins/Templates/_Auto (mappstyrd).md",
-    "Meta/Obsidian Plugins/Scripts/nyKurs.js",
-    "Meta/Obsidian Plugins/Scripts/nastaNummer.js",
-    "Meta/Obsidian Plugins/Scripts/kursinfo.js",
-    "KTH/2024 Vår/CM1005 Extern Redovisning/Föreläsningar/2024-01-16 - CM1005 - Lektion.md",
-    "KTH/2024 Vår/CM1005 Extern Redovisning/Föreläsningar/2024-01-23 - CM1005 - Lektion.md",
-    "KTH/2024 Vår/CM1005 Extern Redovisning/Föreläsningar/2024-01-31 - CM1005 - Lektion.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Litteraturlista/Distributed Systems Concepts and Design 2012 Edition 5.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/_index.md",
-    "Atlas/Vault Health Report.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/04 Kursinfo & Tenta/Litteraturlista/Distributed Systems Concepts and Design 2012 5th Edition.opt.md",
-    "KTH/2026 Höst/HI2002 Routing i IP-nät/04 Kursinfo & Tenta/Litteraturlista/CCNP and CCIE Enterprise Core ENCOR 350-401.opt.md",
-    "Ericsson/EricAI.md",
-    "Ericsson/Kiro Loop.md",
-    "Ericsson/prompts.md",
-    "David Hucaby_ Jason Gooley_ Ramiro Garza Rios_ Bradley Edgeworth - CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide (2019, Cisco Press) - libgen.li.epub",
-    "Forouzan, Behrouz - Data Communications and Network (2013, McGraw-Hill) - libgen.li.pdf",
-    "Zaid Sabih - Learn Ethical Hacking From Scratch_ Your Stepping Stone To Penetration Testing (2018, Packt Publishing) - libgen.li.pdf",
-    "Obekräftade 548283.crdownload",
-    "Obekräftade 403739.crdownload",
-    "Obekräftade 555178.crdownload",
-    "Obekräftade 709509.crdownload",
-    "KTH/2026 Vår/HE1033 Kommunikationsnät/Föreläsningar/Pasted image 20260115153312.png",
-    "Untitled.canvas",
-    "Pasted image 20250321104620.png",
-    "KTH/2024 Höst/HE1026 Digitalteknik/Bilagor/Minnes Buss HE1026.png",
-    "KTH/2024 Höst/HE1026 Digitalteknik/Lektioner/Pasted image 20241202140128.png",
-    "KTH/2024 Höst/HE1026/Lektioner/Pasted image 20241202140128.png",
-    "KTH/2024 Höst/HE1026/Lektioner/Minnes Buss HE1026.png",
-    "KTH/2024 Höst/HE1026/Bilagor/CPLD Konstruktion HE1026.png",
-    "KTH/2024 Höst/HE1026/Bilagor/3 Signaler HE1026.png",
-    "KTH/2024 Höst/HE1026/Bilagor/Moore- och Mealy-maskiner HE1026.png",
-    "KTH/2024 Höst/HE1026/Bilagor/Sanningstabell Notation HE1026.png",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]
 }

@@ -17,9 +17,17 @@ it makes both the author and any future agent act on something that is no longer
 | How to read the vault as an AI tool | `llms.txt` |
 | Entry points for a human | `README.md` |
 | Live conformance queries | `Atlas/Vault Health Report.md` |
+| A reusable measurement, and what it counts | a script in `Meta/Obsidian Plugins/Scripts/`, listed in `.kiro/steering/scripts.md` |
 | How the *website* is built | `PROJECT-NOTES.md` in the Quartz repo |
+| Which chat transcript still holds something undistilled | `.kiro/sessions.md`, and how to reopen one |
 
 Link to these rather than restating them. Duplicated rules drift apart.
+
+`.kiro/sessions.md` is the one entry above that is *provenance* rather than content: it names the
+transcripts whose output has not yet landed in any of the others, and a row there is deleted as
+soon as it has. Reach for it when you are about to end a session having decided not to write
+something down — and read it before concluding that a piece of reasoning was never recorded.
+Nothing in it is a substitute for the rows above.
 
 ## The backlog is a record, not a wish list
 
@@ -36,6 +44,30 @@ If a convention is worth documenting, add a check to
 Flashcards-last invariant sat documented-but-unchecked, and both had already been violated
 by the time a check was added.
 
+**And when a check passed while the thing it protected was broken anyway, that goes in
+`.kiro/lessons-learned.md`** — the one file that records where a *check* was insufficient rather than
+where a rule was broken. It is not auto-loaded, because it explains why the rules exist rather than
+what to do. Read it before adding a check. **Add an entry when any of these four happen**, because
+they are the cases the checks cannot catch and none of them announces itself:
+
+1. A check passed and the thing it was meant to protect was broken anyway.
+2. A measurement produced a confident number that turned out to be false.
+3. A rule turned out to be wrong, or to have a case it did not cover.
+4. A doc said something that was true when written and silently stopped being true.
+
+## Before a task counts as done
+
+Ask one question: **did anything go wrong in a way no doc predicted?** If so it belongs in one of the
+five durable homes — the standard, the backlog, `traps.md`, `lessons-learned.md`, or a script — and the
+table above says which. Write it in the same session, not "later".
+
+Every other instruction here is conditional on already having decided to document something. This one
+is not, and it exists because the decision is what gets skipped when a session ends. `.kiro/sessions.md`
+is the ledger of times it was skipped; a row there is a debt, and an empty ledger is the healthy state.
+
+**If nothing fits any of the five homes, that is a finding against this file, not a reason to drop the
+fact.** Say so, and say what kind of home is missing.
+
 ## Templates are documentation too
 
 `Meta/Obsidian Plugins/Templates/` is where a convention actually takes effect. A rule that
@@ -48,54 +80,38 @@ would have made every new note's cards publish as raw `::` syntax.
 Several docs quote exact figures — 516 notes in scope, 396 concept notes, 1262 scheduling
 markers, 538 linted files, and on the site side 648 pages, 2233 callouts and 44 broken links.
 Every one was correct when written, and nothing verifies them afterwards. A confident wrong
-number is worse than no number, because it gets quoted instead of checked.
+number is worse than no number, because it gets quoted instead of checked. Three of those are
+already superseded: the linted-file count is **539** as of 2026-09-06, the marker count is a dated
+reading that no prose copy should carry, and the site's page and broken-link figures were corrected to
+**693** pages and **85** broken links once `check-site.mjs` was taught what it was counting (F58) — the
+648 / 44 pair above is the pre-fix measurement, kept because the paragraph is about how figures rot.
 
-The vault figures moved twice on 2026-08-26. First, HI1031 and HI1032 gained 92 notes: 470
-became 561, 352 concept notes became 441, and 493 linted files became 583. Then those two
-courses' flashcard decks and concept notes were pruned to course-relevant scope, removing 41
-notes: 561 became 520, 441 became 400, and 583 became 542 — scheduling markers stayed at 1262,
-since the removed notes carried none.
+Where a script now owns a figure, quote the script rather than the prose. `Vault-Audit.ps1`
+prints `notesInScope`, and `Get-SRIntegrity.ps1` prints the scheduling-marker counts in two
+named scopes — `studyNotes` and `wholeVault` — because the same marker has two legitimate
+totals and quoting one without its scope name is how a wrong figure spreads. See
+`.kiro/steering/scripts.md`.
 
-On 2026-08-27 a further consolidation removed the 4 cross-course duplicate concept notes
-(`OSI-modellen`, `TCP`, `UDP`, `DNS`, kept in the older HE1033) and disabled 23 in-note duplicate
-flashcards: 520 became 516, 400 became 396, and 542 became 538 — scheduling markers again
-unchanged at 1262, since those notes carried none either (F61).
-
-**The site figures moved twice on 2026-08-26, and the reason took three attempts to find.**
-`site-baseline.json` was set to `1270` pages from a CI log, then "corrected" to `693` from a
-local build, and both numbers were **correct measurements of different things**.
-
-Quartz emits a 448-byte redirect stub at each note's *original-cased* path
-(`KTH/2026-Höst/.../Replikering.html` — meta-refresh, `rel=canonical`, `robots: noindex`)
-pointing at the lowercase slug it actually serves. Linux keeps both files; **NTFS is
-case-insensitive, so every pair collapses into one.** CI's own artifact listing: 1269 HTML
-files = 576 mixed-case stubs + 693 real pages. A Windows build physically cannot produce
-1269 files, and CI cannot produce 693.
-
-`check-site.mjs` now counts **distinct case-insensitive routes**, so both platforms report
-`pages 693`. Verified by running the implemented expression over CI's real 1269 paths.
-Every other metric was already byte-identical between the two builds — including
-`brokenInternalLinks`, which is **85** on both, so the earlier worry that it diverges by
-platform was unfounded.
-
-The lesson generalises: before changing a number, establish **what it counts**. Both sides of
-this argument were measuring honestly and disagreeing about the unit.
+Every vault figure quoted above has moved at least once, and each move is recorded with its cause
+in `Meta/Vault Findings & Backlog.md` — F61 and F67 for the note and marker counts, F58 for the
+site's pages. **Read the backlog entry before changing a figure**, because the entry says what the
+number counted, and that is usually where the disagreement is rather than in the measurement.
 
 ### A number needs a declared unit and an observable source
 
-Two rules came out of that day, both mechanically enforced rather than left to memory:
+Both rules came out of F58, where `1270` and `693` were **correct measurements of different
+things** — a Linux build keeps Quartz's mixed-case redirect stubs, and case-insensitive NTFS
+collapses each pair into one file. Neither platform was wrong; nothing recorded what "pages"
+meant. Both rules are mechanically enforced rather than left to memory:
 
 1. **Every compared metric declares what it counts.** The site's are in
    `tools/lib/page-count.mjs` (`METRIC_UNITS`), and `tools/test-check-site.mjs` fails if a
-   baselined metric has no declaration. "Pages" meant two different things to two machines and
-   nothing in the system recorded which.
+   baselined metric has no declaration.
 2. **The other environment's numbers must be readable without privileges.** Every site build
-   now writes `build-report.json` into its output, so CI's own measurements are published at
-   `/build-report.json`. Diagnosing this the first time needed a run log gated behind
-   `actions:read`, with artifacts returning 403 and the anonymous API rate-limited at 60/hour —
-   so four hypotheses were tested against local data alone and none of them converged.
-   `node tools/check-site.mjs <dir> --compare-ci` diffs a local build against that report and
-   names any metric that is not machine-independent.
+   writes `build-report.json` into its output, so CI's own measurements are published at
+   `/build-report.json`, and `node tools/check-site.mjs <dir> --compare-ci` names any metric that
+   is not machine-independent. Diagnosing F58 without this needed a run log behind `actions:read`,
+   and four hypotheses were tested against local data alone before any of them could converge.
 
 **When a doc figure disagrees with a fresh measurement, read the backlog entry that documents
 the figure before changing anything.** F58 recorded exactly where `1270` came from; overriding

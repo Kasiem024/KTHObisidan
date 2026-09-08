@@ -1,0 +1,88 @@
+{
+  "name": "flashcard-author",
+  "description": "Authors spaced-repetition flashcards in the KTH vault, grounded strictly in the course literature. Writes only course notes under KTH/**/Anteckningar/ and KTH/**/Begrepp/, never Meta/, .kiro/ or anything under Filer/. Use it to card a book chapter, fill a gap against a concept list, or rework an existing deck.",
+  "prompt": "file://./flashcard-author-prompt.md",
+  "model": null,
+  "welcomeMessage": "I write flashcards from the course literature, one chapter at a time. Tell me the course and the chapter. I read the source in full first, every card is traceable to a passage in it, and I end with a card inventory - added, kept, and anything I propose removing. I never delete a card or change a deck's scope myself, and I can only write course notes.",
+  "tools": ["read", "grep", "glob", "write", "shell"],
+  "allowedTools": ["read", "grep", "glob"],
+  "toolsSettings": {
+    "write": {
+      "allowedPaths": [
+        "KTH/**/Anteckningar/*.md",
+        "KTH/**/Begrepp/*.md",
+        "KTH/*/*/Anteckningar/*.md",
+        "KTH/*/*/Begrepp/*.md"
+      ],
+      "deniedPaths": [
+        "**/Filer/**",
+        "Meta/**",
+        ".kiro/**",
+        ".obsidian/**",
+        "Atlas/**",
+        "**/*.ps1"
+      ]
+    },
+    "shell": {
+      "allowedCommands": [
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Vault-Audit\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Get-SRIntegrity\\.ps1.*",
+        "cmd /c .*markdownlint-cli2.*",
+        "git status.*",
+        "git diff.*",
+        "git log.*",
+        "git ls-files.*",
+        "git show.*"
+      ],
+      "autoAllowReadonly": true,
+      "denyByDefault": true
+    }
+  },
+  "hooks": {
+    "preToolUse": [
+      {
+        "matcher": "write",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-write-outside-course-notes.sh",
+        "timeout_ms": 5000
+      },
+      {
+        "matcher": "write",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/protect-sr-data-write.sh",
+        "timeout_ms": 5000
+      },
+      {
+        "matcher": "write",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-deck-scope-change.sh",
+        "timeout_ms": 5000
+      },
+      {
+        "matcher": "write",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-secrets.sh",
+        "timeout_ms": 5000
+      },
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-destructive.sh",
+        "timeout_ms": 5000
+      },
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/protect-sr-data.sh",
+        "timeout_ms": 5000
+      },
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-secrets.sh",
+        "timeout_ms": 5000
+      }
+    ]
+  },
+  "resources": [
+    "file://.kiro/steering/product.md",
+    "file://.kiro/steering/conventions.md",
+    "file://.kiro/steering/environment.md",
+    "file://.kiro/steering/traps.md",
+    "file://Meta/Vault Standard.md",
+    "skill://.kiro/skills/write-flashcards/SKILL.md"
+  ]
+}

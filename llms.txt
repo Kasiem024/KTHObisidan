@@ -20,6 +20,49 @@ course PDFs under `Filer/` are deliberately not published.
 The authoritative rules live in `Meta/Vault Standard.md`; this file is a summary aimed
 at reading comprehension rather than authoring.
 
+## What the author is optimising for (read before generating study material)
+
+**Passing the exam, not covering the book.** Stated by the author on 2026-09-06 and recorded
+here because it changes what "good" means for anything generated from this vault:
+
+> my goal isn't to learn the chapters and coursebook as a whole, it's to pass the exam.
+
+So where a course publishes its exam questions, **those questions are the specification**, and
+the course literature is a source of grounded answers to them rather than the scope. Material
+that is correct, present in the chapter, and needed by no exam question is waste: it costs
+review time the examinable material should be getting.
+
+The test to apply to anything you write: *if the author practised only this, could they answer
+the exam questions cold?* Aim at exactly that, and no wider.
+
+**A finished course's deck is dropped, not reviewed.** Also stated on 2026-09-06:
+
+> i dont actually mind duplicate cards that much. i dont practice old decks at all, once i'm
+> done with a course then i drop that whole deck. therefore each deck for a course needs to be
+> self contained.
+
+So each course's `Anteckningar/` flashcard notes — the `<CODE> Begrepp - Kap NN …` decks — must
+between them answer that course's exam questions **without depending on any other course's notes**.
+Duplication across courses is acceptable and often required; duplication with a shared `Begrepp/`
+concept note is acceptable too. Duplication **within one course's** decks is waste. Where two
+courses run in the same term a cross-course duplicate genuinely is reviewed twice, and that cost is
+accepted deliberately (see `Meta/Vault Findings & Backlog.md` F72).
+
+Exam questions and the examination form live in each course's `Filer/Canvas/` folder — for
+HI1031, `Filer/Canvas/Tentor/Tentafrågor HI1031 Distribuerade informationssystem.md` lists
+questions per chapter, and the KursPM there states that the exam is a **muntlig enskild
+examination**, so cards must train speaking an answer rather than recognising one. That folder
+holds third-party Canvas downloads: **read it, never edit it** (`Meta/Vault Standard.md` §4).
+
+Two consequences, both of which have already been got wrong:
+
+- **Narrow is not shallow.** Cutting scope means cutting *topics*, not depth within a topic. An
+  oral examiner asks the follow-up, so a question in scope needs its mechanism, its tradeoff and
+  its failure mode.
+- **A gap is reported, never filled from memory.** Where an exam question has no source in the
+  course material, name what is missing instead of inventing a plausible answer — a deck is
+  memorised on purpose, so a wrong card is worse than a missing one.
+
 ## How the vault is organized
 
 - `KTH/` — All coursework, grouped by term then course:
@@ -35,9 +78,14 @@ at reading comprehension rather than authoring.
     - `Anteckningar` — general notes, study guides, exam-prep question sets, labs,
       projects, meeting protocols
     - `Filer` — attachments only (PDF, PNG, Excalidraw). `Filer/Litteraturlista/`
-      holds course literature plus any generated `.opt.md` / `.ai.md` book
-      conversions and conversion tooling docs. **Not authored study notes — skip
-      these when reading for meaning.**
+      holds course literature (PDF plus a Markdown conversion of the book) and
+      conversion tooling docs; `Filer/Canvas/` holds third-party
+      material downloaded from Canvas, including an `AI-optimerad Markdown/` subfolder.
+      **Not authored study notes — skip
+      these when reading for meaning.** Any `#hashtag` you see inside them is an
+      artifact of the conversion (`#include` from a code listing, `#page-12-0` from an
+      OCR anchor), never a vault tag; Obsidian is configured to keep the whole folder
+      out of its tag index.
   - Every course folder also contains `_index.md` at its root: a generated,
     Dataview-driven overview of that course's notes. Best per-course entry point.
 - `Atlas/` — "Maps of Content" (MOCs): curated hub notes that link out to
@@ -91,11 +139,12 @@ metadata, not prose:
   - A **bare `??` or `||` alone on its own line** — the question is the line(s)
     *above* it and the answer is the line(s) *below*, which is often a bullet list.
     This is the most common multi-line form in this vault.
-  - `DISABLED` or `==DISABLEDFLASHCARD==` **used where a separator would go** — either
-    alone on its own line or inline in place of `::`. These are ordinary cards that
-    have been switched off for review. Read them as normal question/answer pairs; the
-    marker itself carries no meaning for comprehension.
-  - Cards usually sit under a `## Flashcards` heading, but **not always** — about 91 notes keep
+  - `==DISABLEDFLASHCARD==` **used where a separator would go** — a card switched off for
+    review. **No study note uses it any more** (measured 2026-09-06: zero occurrences outside
+    `Meta/` and `.kiro/` docs that discuss it); whole notes are taken out of review with the
+    `nosr` tag instead. If you meet one in older material, read it as an ordinary
+    question/answer pair — the marker carries no meaning for comprehension.
+  - Cards usually sit under a `## Flashcards` heading, but **not always** — about 62 notes keep
     them under a different heading (`## Begrepp`, `## Ursprungliga Flashcards`) or
     interleaved with prose under chapter headings. Treat any of the delimiter forms above as
     a card wherever it appears. There are **no** Dataview inline fields (`[key:: value]`) in
@@ -118,6 +167,9 @@ metadata, not prose:
 - `Atlas/Hårdvara MOC.md` — Hardware / digital electronics
 - `Atlas/Databaser MOC.md` — Databases
 - `Atlas/Samhälle MOC.md` — Society / sustainability
+- `Atlas/2024 MOC.md`, `Atlas/2025 MOC.md`, `Atlas/2026 MOC.md` — the same structure per
+  calendar year rather than per subject; ten MOCs in total, seven subject and three year.
+- `Atlas/Tenta-prioritering.md` — which concepts recur most often across the exam-question sets
 - `Atlas/Dashboard.md` — Live dashboard (Dataview-driven)
 
 ## Course catalog (by term)
@@ -142,7 +194,8 @@ section layout:
 
 - `## Definition` — the definition, in plain prose. Present on 342 of 396 concept
   notes. **This is the section to read first.**
-- `## Tenta-fokus` — optional exam guidance; only about 1 note in 8 has one.
+- `## Tenta-fokus` — optional exam guidance; present on 42 of the 396 concept notes, so
+  roughly one in ten.
 - `## Kopplat till` — a bullet list of wiki-links to *related concepts only*. This is
   the hand-curated concept graph; it is more reliable than inferring relatedness.
 - `## Flashcards` — **always the last section.** Self-test question/answer pairs, in

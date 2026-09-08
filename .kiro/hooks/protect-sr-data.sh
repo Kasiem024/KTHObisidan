@@ -20,7 +20,8 @@ fi
 
 if printf '%s' "$INPUT" | grep -qiE 'SR:'; then
   echo "BLOCKED: this looks like a bulk rewrite touching <!--SR:--> scheduling data." >&2
-  echo "Those comments carry the live review schedule for ~1900 flashcards and must never" >&2
+  echo "Those comments carry the live review schedule for the active deck - 2218 cards and" >&2
+  echo "1425 markers on 2026-09-06 - and must never" >&2
   echo "be stripped. The published site converts cards at BUILD time instead - see the" >&2
   echo "Quartz repo's plugins/flashcards/. If you really need this, do it yourself." >&2
   exit 2

@@ -147,17 +147,17 @@
         }
       },
       {
-        "id": "f63a10f10b70431a",
+        "id": "155674d5c8dc2cd2",
         "type": "leaf",
         "state": {
           "type": "review-queue-list-view",
           "state": {},
-          "icon": "SpacedRepIcon",
-          "title": "Notes Review Queue"
+          "icon": "lucide-ghost",
+          "title": "review-queue-list-view"
         }
       }
     ],
-    "currentTab": 3
+    "currentTab": 2
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,6 +177,7 @@
   "active": "3b6dbd9e7507c465",
   "lastOpenFiles": [
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
+    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Labb 1 - Flashcards (TCP).md",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Tenta.md",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Tenta (conflict 2026-03-04-08-17-46).md",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Anteckningar/HE1033 Begrepp Föreläsning 9.md",

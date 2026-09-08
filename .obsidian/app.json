@@ -159,10 +159,11 @@
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "userIgnoreFilters": [
+    "/(^|\\/)Filer\\//",
+    "/Meta\\/Obsidian Plugins\\//",
     "/Instuderingsfrågor och Svar Kap 14-16 Modern Industriell Ekonomi/",
     "/Instuderingsfrågor och Svar Kap 1-7 Modern Industriell Ekonomi/",
     "/excalidraw/",
-    "Obsidian Plugins/",
     "/Instuderingsfrågor och Svar Kap 10-12 Modern Industriell Ekonomi/",
     "/Instuderingsfrågor och Svar Kap 8-9 Modern Industriell Ekonomi/"
   ],

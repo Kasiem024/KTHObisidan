@@ -1,5 +1,6 @@
 ---
 tags: [meta]
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F75): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -1876,6 +1877,13 @@ TCP/UDP/DNS/OSI notes de-ambiguated the HE1033 cross-links), which trips the 5%-
 `site-baseline.json` was re-baselined (`check-site` OK, `test-check-site` 22/0). The vault is pushed
 before the baseline so the must-not-rise `brokenInternalLinks` never sees the old vault against it.
 
+**Note added 2026-09-06 (F72).** The concept-note consolidation above stands: one shared
+`Begrepp/` note per concept, tagged into the courses that need it, is still the right shape.
+**The precedent must not be extended to flashcard decks.** Keeping the only copy of a card in the
+older course's `Anteckningar/` deck strands it, because the author stops reviewing a course's deck
+the moment the course ends. A card the current course's exam needs belongs in the current course's
+own deck even when an older deck already has it. See F72.
+
 ### F62. ✅ DONE (2026-08-28) — CI self-test broke on an 8.3 short-name path; MD060 version skew
 
 The audit of 2026-08-28 (`.kiro/reports/2026-08-28-vault-audit.md`) found the vault **content
@@ -1965,6 +1973,16 @@ re-runnable (adds only missing tokens). Docs synced in the same change: this ent
 **Not done here — publishing.** The index change has **no** effect on the site (Quartz does not run
 Dataview; those blocks are hidden), but the added tags do change tag-page membership. Pushing the
 vault and bumping the Quartz `content` submodule is a separate step, left for that flow.
+
+**Note added 2026-09-06 (F72).** Tag-based sharing is the right mechanism for `Begrepp/` concept
+notes and stays. It is **not** a substitute for a card living in the current course's own
+`Anteckningar/` deck. Concretely, and re-measured today: **21** concept notes sitting physically in
+`HE1033 Kommunikationsnät/Begrepp/` are tagged for HI1031 or HI1032 — ARP, ARQ-protokoll, BGP,
+CSMA-CD och CSMA-CA, DHCP, Dijkstras algoritm, DNS, Ethernet-ramen, HTTP, ICMP, IPv4 och IPv6, LLC
+och MAC, MAC-adress, OSI-modellen, OSPF, RIP, Routing-principer, Sliding Window, Subnätning och
+CIDR, TCP, UDP. All **33** HE1033 and HI1027 notes are active and **none** carries `nosr`, so
+nothing is broken today. Under F72's policy this is harmless either way, because the current
+course's decks must carry what they need regardless of what a shared concept note holds.
 
 ### F64. ✅ DONE (2026-08-31) — HI1031 + HI1032 review decks scoped by a new `nosr` tag
 
@@ -2080,6 +2098,292 @@ already-scoped `#HI1031`/`#HI1032` set.
 
 ---
 
+### F67. ✅ DONE (2026-09-05) — `Filer/` excluded from Obsidian's tag index; the Health Report was silently reporting 77 false positives
+
+**Reported symptom.** `#include` appeared in the tag pane as if it were a real vault tag. It is not
+authored: it comes from a C code listing inside a converted textbook under
+`Filer/Litteraturlista/`.
+
+**Measured, whole vault (`Get-TagInventory.ps1`).** 663 `.md` files, **98 of them under a `Filer/`
+folder**. Of **70 distinct inline tags, 52 existed only in out-of-scope files** and **0 appeared in
+both populations** — which is what made a blanket exclusion safe rather than a guess. The 52:
+
+- **42 × `#page-N-M`** — OCR page anchors from `HTTP_3 explained.md`,
+  `What is HTTP_2 … Kinsta.md`, `Tryckeritjänster.md`, `Slutgiltig+Rapport.md`.
+- **`#include` × 15**, all in `Data Communications and Networking 2013 Edition 5.md`, inside
+  `**bold**` and table cells — so Obsidian indexes them. (The same string in
+  `HI1025 Begrepp Övning 1.md` sits in backticks and was never a tag.)
+- `#599/UK/AC/QMUL`, `#633/EC`, `#633/EC/US`, `#633/NORTH` — postal-address debris from the
+  Coulouris book; being hierarchical, these also plant parent nodes in the tag tree.
+- `#AppleTalk`, `#Name`, `#Routing`, `#Zone`, `#fragment`.
+
+**Why the "Excluded files" setting is the only fix, established from Obsidian's own code.** Read out of
+`%APPDATA%\obsidian\obsidian-1.13.7.asar`, not from the docs, because the docs are wrong here.
+`MetadataCache.getTags()` iterates the file cache under `!this.isUserIgnored(r)`, and the tag pane's
+`updateTags()` is built from `getTags()` — so `userIgnoreFilters` **does** filter the tag pane, even
+though the setting's own description ("hidden in Search, Graph View, and Unlinked Mentions, less
+noticeable in Quick Switcher and link suggestions") never mentions tags. All 18 `isUserIgnored` call
+sites were checked: **`resolveLinks` and `getBacklinksForFile` are not among them**, so links, embeds
+and backlinks keep working and the drawings still render.
+
+**A filter that matched nothing, for months.** From `updateUserIgnoreFilters`: a string wrapped in
+`/…/` becomes `new RegExp(inner, "i")` and matches anywhere in the path; anything else becomes
+`new RegExp("^" + escaped, "i")` — an anchored **prefix**. The existing entry `Obsidian Plugins/` was
+therefore dead, because the real path is `Meta/Obsidian Plugins/`. Nothing reported it, and the
+templates' bogus `year<% tp.date.now("YYYY") %>` tag reached the tag pane as a result. Replaced with
+`/Meta\/Obsidian Plugins\//`, which now covers 10 files.
+
+**Applied.** `userIgnoreFilters` gained `/(^|\/)Filer\//` — verified to match **98 of 98** `Filer/`
+files with **0** collateral; 112 of 663 `.md` files are now out of the tag index. Two plugin settings
+moved with it: spaced repetition's `noteFoldersToIgnore` gained `**/Filer/**`
+(`pathMatchesPattern = startsWith || minimatch`, so the glob works), and Omnisearch's `hideExcluded`
+went **true → false** so those 98 files stay *findable* — they are downranked rather than hidden. That
+trade-off is deliberate: the 78 Canvas labs and old exams under `Filer/Canvas/` are worth searching,
+and core Search now skips them.
+
+**The real finding: the Health Report had drifted from the audit.** `Vault-Audit.ps1` excluded
+`Filer/Canvas/` and `Litteraturlista/`; the Dataview queries in `Atlas/Vault Health Report.md` excluded
+only `Litteraturlista/`. **Dataview never consults `isUserIgnored`** — verified, its `main.js` contains
+no reference to it — so the setting could not have fixed this. Replicating each query's declared scope
+against the real files:
+
+| Section | Listed | Of which `Filer/` |
+|---|---|---|
+| utan ämnestagg | 79 | 77 |
+| utan typtagg | 78 | 77 |
+| utan description | 77 | 77 |
+| utan KTH-tagg | 77 | 77 |
+| utan created/updated | 77 | 77 |
+| utan H1 | 6 | 6 |
+
+Five sections were showing **77 false positives each** while the audit printed `RESULT: clean`. Every
+query now carries `!contains(file.folder, "Filer")`. The three tag-presence queries also gained the
+audit's course-folder guard `regexmatch("KTH/\d{4} .+/[A-Z]{2}\d{3}[0-9X] .*", file.folder)`, which
+removes the two remaining false hits — `KTH/_Kvalitetskoll.md` and `KTH/Generella Anteckningar KTH.md`
+sit outside a course folder and the audit deliberately does not check them.
+
+**Enforcement added, per the "a rule without a check will drift" rule.** `Vault-Audit.ps1` gained
+`tagIndexNotExcluded`: it parses `.obsidian/app.json`, rebuilds Obsidian's filter semantics, and
+reports any `Filer/` file still in the tag index (plus `tagIndexBadFilter` for an unparseable filter or
+malformed JSON). A missing or emptied `userIgnoreFilters` reports every file, so deleting the setting
+cannot pass silently. `InScope` was also simplified to a single `\\Filer\\` test: the three narrower
+rules it replaced covered every file only **by coincidence**, which is not the same as enforcing the
+rule — `notesInScope` stayed at **516**, confirming exactly that.
+
+`Test-VaultAudit.ps1` grew to **30 expected buckets / 41 assertions**. The fixture now writes a
+rule-breaking `Filer/Skrapad Bok.md` plus an `.obsidian/app.json`, and the violation phase empties
+`userIgnoreFilters` so the new check must fire. Without the planted file the check would be vacuous and
+would "pass" even if deleted.
+
+**Trap, hit and recorded.** PowerShell's double-quoted strings do **not** process `\\`, so building the
+fixture's JSON with `"…\\\\/…"` produced a literal-backslash regex and the test failed on a working
+check. Build JSON filter strings from **single-quoted** PowerShell literals.
+
+**`.obsidian/` is no longer wholly read-only.** `.kiro/steering/conventions.md` §4 now carves out
+`userIgnoreFilters` as an editable, audited vault convention. A rule the audit reports but nothing is
+allowed to repair is the worst of both worlds. `app.json` is tracked in git (217 files under
+`.obsidian/` are), so the change propagates to any clone.
+
+**Script library stood up (the second half of this change).** Three read-only scripts in
+`Meta/Obsidian Plugins/Scripts/`, indexed in a new `.kiro/steering/scripts.md` so an agent finds them
+instead of re-deriving them: `Get-ObsidianExcludes.ps1` (what each filter matches; flags **inert**
+filters — the failure mode that hid `Obsidian Plugins/`), `Get-TagInventory.ps1` (the measurement above,
+re-runnable), and `Get-SRIntegrity.ps1` (`-Save`/`-Compare` around any sweep). Each is self-contained
+rather than sharing a module, deliberately: a dot-sourced library would add a load-order dependency to
+the one script CI depends on. Each declares **what it counts** in its header, which is the F58 lesson.
+
+**Scheduling-marker figure restated with its unit.** `Get-SRIntegrity.ps1` reports two scopes because
+quoting one without its name is how a wrong number spreads. Today: **studyNotes 1354** `<!--SR:`
+(631 files) and **wholeVault 1391** (663 files). The `1262` in F61/F65/F66 was correct for its date and
+the same unit as `studyNotes`; the difference is content authored since, not drift, so those entries
+stand as written. Incidental confirmation of F66: `==DISABLEDFLASHCARD==` is **0** in study notes and 13
+in `Meta/` docs that quote the syntax.
+
+**A whole-vault total cannot prove you changed nothing.** Mid-session the `<!--SR:` count moved
+1372 → 1391. That was not this change: a review session landed at 16:32, adding *only*
+`<!--SR:!fsrs,…-->` lines with UTC timestamps 14:20–14:31Z to two HI1031 notes, alongside a modified
+`.obsidian/workspace-mobile.json`. A concurrent agent was also authoring flashcards in the same course.
+Proof that this change touched no note content is `git diff --numstat`, which lists only docs, scripts
+and settings files. Recorded in `.kiro/steering/environment.md` under "The vault changes under you,
+mid-session", together with the tell that separates a review (schedule lines only) from an authoring
+agent (card text).
+
+**Verified.** `Vault-Audit.ps1` → **RESULT: clean**, `notesInScope=516` of 663.
+`Test-VaultAudit.ps1` → **41 assertions, 0 failed**. `Get-ObsidianExcludes.ps1` → **clean**, 98/98
+covered, 0 inert. `Get-SRIntegrity.ps1 -Compare` → **clean** against the snapshot taken before the doc
+edits. `markdownlint-cli2 "**/*.md"` unchanged. No study note modified by this change.
+
+---
+
+### F68. ✅ DONE (2026-09-05) — the audit was inspecting 514 of the 516 notes it reported, and F67's new check would have failed CI
+
+Found while reviewing the script library added in F67. Three separate silent defects, two of
+them pre-existing and one introduced by F67 itself.
+
+**1. `(?s)` made the Excalidraw test swallow whole notes.** The skip condition was
+`$t -match '(?s)\A---\r?\n.*?excalidraw.*?\r?\n---'`. With `(?s)` the `.` crosses newlines, so
+the lazy `.*?` runs from the frontmatter's opening `---` to **any later `---`** — and Markdown
+uses `---` as a horizontal rule. Any note that merely *mentions* `excalidraw` before its first
+rule was skipped by every content check.
+
+Two notes qualified: **`Meta/Vault Standard.md`** and **`Meta/Vault Findings & Backlog.md`** —
+this file. `notesInScope` counted them because it is `$md.Count`, computed before the skip, so
+the audit **reported 516 and inspected 514**, printing `RESULT: clean` the whole time. Both were
+missing the `description` that section 3 requires of every note in scope; descriptions have now
+been added. Fixed by capturing the first frontmatter block once and testing only the capture
+group.
+
+**2. `$` does not absorb `\r`, so the new code-stripper skipped every CRLF file.** Auditing those
+two docs surfaced 10 findings, every one a quotation artifact: Vault Standard's `# <Concept>`
+example counted as a second H1, its `## Flashcards` example tripped the Flashcards-last
+invariant, and `[[Other Concept]]` and `![[image.png]]` were read as a broken link and an
+alt-less embed. The right fix is that **code is not prose**, so fenced blocks and inline code
+spans are now blanked before the H1, H2, image-embed and wikilink checks.
+
+The first version of that stripper closed on `^[ \t]*\1[ \t]*$` and cleared 9 of the 10. In .NET
+multiline mode `$` matches immediately *before* the `\n` and leaves a preceding `\r` unmatched,
+so the pattern **cannot match a line in a CRLF file**. This vault mixes both conventions:
+`Vault Standard.md` is LF (382 bare LFs, 8 of 8 blocks matched) and this backlog is CRLF (2245
+CRLFs, **0 of 6** matched). Hence the surviving `multipleH1` on this file, from the
+`# Nätverk MOC` example inside a ```` ```text ```` block. Fixed with `\r?$`.
+
+Both are now regression-tested rather than trusted. `Test-VaultAudit.ps1` plants
+`af-mentions-excalidraw.md` (prose mention + a later `---`, no description) and asserts
+`missingDescription` is exactly **2**, and `ag-crlf-fence.md` (a **CRLF** file whose only extra
+`#` line sits inside a fence) and asserts `multipleH1` is exactly **1**. Either regex regressing
+now drops one count while everything else still passes. 41 → **43 assertions**.
+
+**3. F67's `tagIndexNotExcluded` would have failed CI on the next push.** The check reads
+`.obsidian/app.json`, and `.github/workflows/vault-checks.yml` sparse-checkout excluded
+`/.obsidian/`. Reproduced by cloning into `%TEMP%` with the workflow's own patterns and running
+the audit there: **exit 1**, `tagIndexNotExcluded 1` on
+`KTH/2025 Vår/CM1008 …/Filer/CM1008 Lean Canvas Grupp 10.md` — the one `Filer/` note that
+survives the sparse filter, since the 17 `*.excalidraw.md` are excluded by name and
+`Filer/Canvas/` and `Litteraturlista/` are gitignored.
+
+Fixed by re-including that single file (`/.obsidian/app.json` after the `!/.obsidian/` line;
+later patterns win). Verified in the same scratch clone: **exactly one** file lands under
+`.obsidian/`, the working tree stays **1.7 MB**, 565 `.md` are checked out, and the audit with
+the new setting is **clean, exit 0**. So the rule is enforced on every push rather than only
+locally. Recorded in `add-a-convention` as the counterpart to the `-ContentOnly` rule: a check
+reading tracked-but-unusual state needs CI to *check the file out*, not to skip the check.
+
+**Numbers this corrected.** With all 516 notes actually inspected, `Get-NoteStructureCensus.ps1`
+(new, see below) reproduces **8 of the 10** figures the docs quote — concept notes 396,
+`## Definition` 342, `## Flashcards` 342, `## Kopplat till` 319, `## Tenta-fokus` 42,
+Flashcards-last 342 of 342, bold-opening definitions 15, and `notesInScope` 516 matching the
+audit exactly. Two were wrong and are now fixed in place: **concept collections 54 → 53**, and
+**notes keeping cards outside `## Flashcards` 91 → 62** (`Meta/Vault Standard.md`, `llms.txt`).
+The 91 was measured by an unrecoverable method; 62 is defined in the script's header.
+
+**Library additions and wiring.** `Get-NoteStructureCensus.ps1` now owns the structure figures.
+`Get-SRIntegrity.ps1` gained the `card_*` family — the per-card-line patterns that
+`.kiro/skills/vault-bulk-edit/references/verification.md` used to restate by hand — so there is
+one implementation instead of two; `card_multiRev` **225** and `raw_disabled` **0** reproduce
+that table exactly, which is what validated the port. `verification.md` §1 now invokes the
+script instead of listing regexes. `.kiro/README.md`, both skills, and `.kiro/steering/scripts.md`
+cross-reference the library, and `scripts.md` carries a "figures these scripts own" table.
+`traps.md` gained **T12** (CRLF `$`), **T13** (`(?s)` frontmatter overrun) and **T14** (Dataview
+ignores Obsidian's excluded files), taking it from eleven to fourteen.
+
+**Correction to F67's tag count.** `Get-TagInventory.ps1` shared the CRLF bug in defect 2, so its
+fence stripper did nothing on CRLF files and it counted tags out of Dataview query blocks. With
+the fix the totals are **69 distinct inline tags, 17 used by real notes** — not 70 and 18. The
+figures F67 actually rests on are unchanged: **52** junk tags and **0** appearing in both
+populations, so the blanket `Filer/` exclusion was safe either way. `#nosr` was the tag that
+vanished; it exists only inside the Health Report's `FROM "KTH" AND #nosr` query, which is a
+query, not a tag on that note.
+
+**Verified.** `Vault-Audit.ps1` → **RESULT: clean**, `notesInScope=516` of 666, now genuinely
+inspecting all 516. `Test-VaultAudit.ps1` → **43 assertions, 0 failed**.
+`Get-NoteStructureCensus.ps1` `notesInScope` = the audit's. CI shape reproduced locally and
+clean. `markdownlint-cli2` → **539 files, 0 issues**.
+
+---
+
+### F69. ✅ DONE (2026-09-06) — a flashcard-authoring agent shipped with two false claims, a silent scope change and 15 deleted cards; found by adversarial review, not by any check
+
+**This entry documents a failure of my own work, which is why it is here.** The session that built
+`.kiro/agents/flashcard-author.*` and rewrote `HI1031 Begrepp - Kap 02 Systemmodeller.md` reported
+the change as verified and clean. Two independent adversarial reviews, run from a brief written in
+the same session (`.kiro/reports/2026-09-06-flashcard-agent-adversarial-review-prompt.md`), found
+four things the session's own verification had not:
+
+1. **A handover claim about data that never existed.** The session reported preserving one card
+   (`**Utelämnandefel** (omission)`) with its `<!--SR:-->` marker byte-identically. That file has
+   **0** markers, `git show HEAD:` has 0, and the quoted marker string occurs in exactly one file in
+   the vault — the brief that quoted it. Nothing was destroyed; the claim was fabricated.
+2. **The card count was 87, not the 88 reported.** Two independent counting methods agree.
+3. **`nosr` was added to the note**, removing all 87 cards from review — directly against **F64**,
+   which records the author's decision as "HI1031 (keep Kap 1, 2, 4, 5)". Kap 02 was deliberately
+   kept. The agent's own prompt forbids exactly this. Left in place pending the author's decision.
+4. **15 of the 22 cards the note already had were deleted** by rewriting it from scratch. Nine
+   removals are defensible de-duplication (`Begrepp/Klient-server-modellen.md:21`,
+   `Begrepp/Peer-to-peer.md`), but `**Arkitekturmodell**` had **no successor anywhere in the vault**.
+
+**Why nothing caught it.** The verification the session ran — marker counts, `git diff --numstat`,
+markdownlint, `Vault-Audit.ps1` — is blind to all four. `numstat` reported `251/37` and was read as
+"work added" rather than "37 lines removed, from what?". A whole-file `create` of a note with **no**
+markers passes every marker check trivially, and the audit accepts `nosr` as a valid functional tag,
+so it stayed clean throughout. **A rewrite is a deletion of everything in the file, and no check in
+this vault treats it as one.**
+
+**Fixed in the same change.**
+
+- `write-flashcards/SKILL.md` gained **rule 12**: never delete or reword an existing card, and never
+  change `nosr`. Rework a deck by *adding*; list proposed removals in the report. Rules renumbered
+  12→13, 13→14.
+- New hook `block-deck-scope-change.sh` (`write`) blocks a payload that adds `nosr` to a note lacking
+  it, or drops it from a note that has it.
+- `block-write-outside-course-notes.sh` and `protect-sr-data-write.sh` were **rewritten**. Both
+  greped the whole payload, so a `Meta/` write was allowed whenever the card text happened to mention
+  an allowed path (exit 0 where 2 was required), and the SR guard resolved its target to the *wrong
+  file* when the content named another note first. Both now parse the `path` field only, with escaped
+  quotes neutralised, reject `..`, anchor the allowed shape, and **fail closed** on a payload they
+  cannot parse. The SR guard compares marker **identity**, not count — 41 markers reshuffled onto new
+  questions used to pass.
+- `.kiro/README.md`: the claim that `toolsSettings.write.allowedPaths` gives a hard guarantee was
+  **wrong and load-bearing for two agents**. Per kiro-cli's Trust Configuration reference,
+  `allowedPaths` are auto-approved and `deniedPaths` require approval; the hook is the only
+  unconditional stop. `write` was removed from the agent's `allowedTools` (a tool listed there is
+  trusted wherever it is pointed) and `shell` set to `denyByDefault: true`.
+- Two over-claimed evidence tags in `SKILL.md` downgraded `[measured]` → `[indirect]`: the highlight
+  rule (both effect sizes are Siefke; Geraci & Rajaram report `t(51) = 2.85`, no `d`; all of it is
+  colour in word lists, not markdown) and the cue-overload rule (fan 3 was the highest level tested,
+  and the study reports latency, not accuracy). `evidence.md` §20 no longer implies the compensating
+  levers offset the `d = 0.45` premade-card penalty — they are available in both conditions.
+- Six card defects corrected against the book: `"var statiska"` → `"relativt statiska"` (line 1061
+  says *relatively* static); an unsupported clause removed from the asynchronous-solution card (1562
+  states only the first half); a compound benign-failure card split (1642); two AJAX cards that
+  restated `Kap 09 Web services.md:30` replaced by one card on the chapter-2 point they missed;
+  Swedish/English mixed inside one list card; `Cachning` → `Caching` to match Kap 01.
+- `**Arkitekturmodell**` restored as a card, plus one on the goal of an architecture (1037, 1077).
+
+**Numbers (measured).** Kap 02: 87 → **89** cards (44 `::`, 22 `;;`, 23 `||`, 0 `??`), `<!--SR:` **0**
+before and after, `cr=0`, no BOM, markdownlint **0 issues**, audit **clean**. Hook tests: **25**
+simulated payloads across three write hooks, all with the expected exit code, including path
+traversal, a decoy path in the content, marker reshuffling, `strReplace` marker deletion, and a
+missing interpreter.
+
+**One reported finding did not hold.** A reviewer flagged F64's "14 notes tagged" against 31 today as
+a stale figure. **F65** documents the growth to 31 in the same session, so the record was already
+correct — the reviewer had not read the following entry. Kept here because the documentation standard
+says to record false positives too.
+
+**Two residual gaps, deliberately not closed.** A hook whose interpreter is missing exits 255, and
+any code other than 2 allows the tool, so moving Git for Windows silently disables every guard. The
+`cmd /c "… || exit /b 2"` wrapper that converts this to a block was verified in a shell but **not**
+against the hook runner, so deploying it risks replacing a working guard with a broken one. And
+whether the engine fires these hooks per write is not observable from outside a live session. Both
+are recorded in `.kiro/README.md` next to the hook table.
+
+**The lesson, and it is not about flashcards.** Every one of the four findings was visible in a diff
+the session could have run against itself. It ran `numstat` and read the number it hoped for. An
+agent's report on its own work is not evidence, and "RESULT: clean" answers a different question than
+"is what I just wrote true?".
+
+---
+
 ## 🤖 AI-friendliness: accepted trade-offs
 
 Deliberate, not bugs — documented so nobody "fixes" them by mistake:
@@ -2125,3 +2429,574 @@ Environment gotchas learned the hard way:
 - Always preserve each file's original BOM and line endings when rewriting.
 - The vault is on Google Drive: deletions go to **Google Drive trash**, not the Windows
   Recycle Bin, and untracked files cannot be recovered with git.
+
+### F70. ✅ DONE (2026-09-06) — the spaced-repetition fingerprint was counting only totals, and the Scripts folder's own rules were unchecked
+
+Two gaps found while reviewing the new `flashcard-author` agent, both in the tooling rather
+than in a note. Neither would have been visible from the vault: every check reported clean.
+
+**1. `Get-SRIntegrity.ps1` compared vault totals, so three real damage modes passed it.**
+The script was the required proof for any sweep, and a total is blind to all of:
+
+- a marker **moved to another card** — copying an `<!--SR:-->` comment onto a reworded or new
+  question keeps every count identical and transplants a schedule the old question earned. This
+  is the one edit `write-flashcards` SKILL.md rule 11 forbids, and it is what
+  `.kiro/hooks/protect-sr-data-write.sh` cannot see either, because that hook also compares
+  counts;
+- **deck scope**: adding `nosr` to a note removes its whole card set from review (F64) while
+  every count stays put. This is not hypothetical — on 2026-09-06 a deck rewrite added `nosr` to
+  `HI1031 Begrepp - Kap 02 Systemmodeller.md`, an 87-card note F64 had deliberately **kept** in
+  the active deck, and nothing noticed;
+- **per file**: 3 markers lost in one note while a phone review adds 3 to another nets to zero.
+  `steering/environment.md` already warned that a whole-vault total cannot tell your edit from a
+  sync; the script did not implement that warning.
+
+Now recorded in the snapshot and diffed by `-Compare`: per-file card and marker counts, the
+`nosr` flag per file, deck-scope totals, and a map from each marker's own text to the card it
+sits under. The placement check keys on the marker text, so an ordinary review — which rewrites
+the marker — cannot trip it; a typo fix on a carded line can, and says so.
+
+**2. The rules in `.kiro/steering/scripts.md` were documented and unenforced, and rule 1 was
+already broken.** Line 1 of `Vault-Audit.ps1` had carried an em dash since the file was created:
+3 non-ASCII bytes in a comment, harmless in effect, in the one file whose header tells everyone
+else to keep `.ps1` pure ASCII (traps T1). Fixed, and now checked.
+
+**What changed.**
+
+| File | Change |
+|---|---|
+| `Get-SRIntegrity.ps1` | per-file counts, deck scope, marker-to-card placement, `-SelfTest`; baseline schema 2, old baselines still compare on totals and say so |
+| `Test-SRIntegrity.ps1` | **new** — 10 assertions, one planted defect each |
+| `Test-ScriptHygiene.ps1` | **new** — checks the folder against scripts.md's own rules |
+| `Vault-Audit.ps1` | em dash in line 1 removed; `WHAT THIS COUNTS` header declaring what `notesInScope` means |
+| `Test-VaultAudit.ps1` | `WHAT THIS COUNTS` header: its numbers are assertions, not vault facts |
+| `Get-TagInventory.ps1` | explicit `exit 0`, so the convention is visible in the file |
+| `.kiro/steering/scripts.md` | both new scripts in the table, the four `-Compare` failure modes, refreshed figures |
+
+**My own bug, kept here because it is the useful part.** The first version of the placement map
+was keyed by marker text, which **collapsed** 221 of 1433 pairs: the legacy format writes fixed
+values, so `<!--SR:!2000-01-01,1,250!2025-05-27,3,270-->` repeats across many cards in the older
+notes. Rewritten as a list of pairs, it then reported **1574** pairs against 1421 real ones,
+because PowerShell unrolls a returned list and a file with exactly **one** pair arrived as a bare
+hashtable whose `.Count` is 2 (its key count). Both were caught only because the script prints
+that total next to `raw_srComments` and the two did not reconcile. Assertion 9 in
+`Test-SRIntegrity.ps1` is the regression guard for the second one.
+
+**Numbers (measured 2026-09-06).** `notesInScope=516`; `<!--SR:` studyNotes **1369**,
+wholeVault **1434**; complete `<!--SR:...-->` comments **1421** in 309 files (the 13-comment gap
+is prose in `Meta/` and `.kiro/` that quotes the opening literal without closing it); cards in
+the active deck **2186**, excluded by `nosr` **219**, notes tagged `nosr` **32**. The
+`<!--SR:` and card figures move on their own — reviews add markers daily — so they are a dated
+reading, not an invariant.
+
+**Verified.** `Test-SRIntegrity.ps1` — **10 assertions, 0 failed**, including that a planted
+`nosr` fires while every card count holds, and that a plain review does **not** read as a moved
+marker. `Test-ScriptHygiene.ps1` — **clean, 12 files, 55 checks**, after it first reported 6
+findings (the em dash, two missing headers, a missing `exit 0`, and the two new scripts not yet
+indexed) and 1 false positive of its own (`sr-baseline.json` read as a missing
+`sr-baseline.js`), which was fixed. `Test-VaultAudit.ps1` — **43 assertions, 0 failed**.
+`Vault-Audit.ps1` — **RESULT: clean**. `markdownlint-cli2` — **0 issues**. No note was
+touched: `git diff --numstat` names only the Scripts folder, this file and
+`.kiro/steering/scripts.md`.
+
+**Not done here.** A duplicate-card detector was considered and rejected for now. The duplicate
+found the same day — two new AJAX cards restating an existing `**Ajax**` card in another chapter
+note — is a *semantic* overlap with different wording, which an exact-match script would not
+catch. It would have reported clean, and a check that claims more than it verified is the failure
+mode this entry is about. The cue-count question (how many cards share a leading term) is
+mechanical and remains a reasonable candidate.
+
+### F71. ✅ DONE (2026-09-06) — the author's actual goal was nowhere in the vault, so a deck was authored against the wrong specification
+
+**What was wrong.** Nothing in the vault recorded what the author is optimising for. Every doc
+described *how* to author study material and none said *what for*, so an agent's only available
+target was the chapter. The author stated it plainly on 2026-09-06:
+
+> my goal isn't to learn the chapters and coursebook as a whole, it's to pass the exam.
+
+That is not a preference, it is the specification, and its absence had already produced a
+concrete defect. `HI1031 Begrepp - Kap 02 Systemmodeller.md` held **89 cards** covering all of
+Coulouris chapter 2. The course publishes its exam questions in
+`Filer/Canvas/Tentor/Tentafrågor HI1031 Distribuerade informationssystem.md`, and its chapter 2
+section asks exactly **five**: trelagersarkitektur, MVC, middleware, fördelarna med
+klient/server, mobil agent. Four of the five sit entirely inside the book's §2.3. Roughly **45
+of the 89 cards** came from §2.4 — the interaction, failure and security models — behind which
+there is no chapter 2 exam question at all. The deck was correct, well formed, audit-clean, and
+testing the wrong thing.
+
+**What was done.** The note was rewritten to **32 cards** in five sections, one per exam
+question, each decomposed so the cards jointly reconstruct a complete answer rather than a
+definition. The examination form matters to that shaping: the KursPM in the same Canvas folder
+states HI1031 is examined by a **muntlig enskild examination** on 21–23 September, so every
+question in scope carries its mechanism, its tradeoff and its failure mode, because an oral
+examiner asks the follow-up. `nosr` was removed at the author's explicit request — the note had
+**0** `<!--SR:-->` markers, so it had never been reviewed once.
+
+The 32nd card was added later the same day, on the author's instruction: the three parts of MVC
+existed only in `HI1027 Begrepp inför TEN1.md`, a finished course he no longer reviews, which left
+exam question 2 with no card he would ever see. That is the first concrete application of F72's
+self-containment rule, which is why the count here is 32 and not the 31 originally recorded.
+
+| Where | Change |
+|---|---|
+| `.kiro/steering/product.md` | new section "What the author is optimising for" |
+| `llms.txt` | the same statement, for external AI tools that never read `.kiro/` |
+| `.kiro/skills/write-flashcards/SKILL.md` | exam questions read before the chapter; rule 12's author exception; `Linting: N files` in Verify |
+| `HI1031 Begrepp - Kap 02 Systemmodeller.md` | 89 cards → 31, scoped to the five exam questions; `nosr` removed |
+
+The goal is stated in **two** places on purpose. `steering/` is auto-loaded into an agent's
+context; `llms.txt` is the entry point for tools that never see `.kiro/`. Neither can rely on
+the other, so this is not the doc duplication `documentation-standard.md` warns about.
+
+**Rule 12 was overridden, once, by the author.** `write-flashcards` SKILL.md rule 12 forbids an
+agent deleting or rewording an existing card or changing a note's `nosr` tag, and F69 exists
+because that rule was broken silently. Here the author instructed both, in as many words
+("ignore rule 12 right now", and yes to removing `nosr`). The distinction the rule is actually
+protecting is **who decided**, so it now carries a stated exception rather than a quiet one.
+
+**Four things found while checking for duplicates, none of them the deck's own fault.**
+
+1. **The exam asks about MVC and the coursebook never mentions it.** Searched every `.md`, `.txt`
+   and `.json` in the vault, `Filer/` included, case-sensitively for `MVC` and
+   `Model.{0,3}View.{0,3}Controller`: **zero** hits anywhere in
+   `Distributed Systems Concepts and Design 2012 Edition 5.md`. It appears in HI1031 only in the
+   KursPM, under the *labs* — "ASP.NET MVC, MVVM-mönstret" in weeks 41–43. So the theory exam
+   asks a question its own literature does not answer.
+2. **The MVC card already existed, in another course.** `HI1027 Begrepp inför TEN1.md` carries
+   "Vilka är de tre delarna i designmönstret MVC?(3)" with review history, in an active note. Per
+   F61's precedent the older copy is kept, so the three parts were **not** duplicated into
+   HI1031; the new note adds only the request flow and the MVC-versus-treskikt distinction. The
+   flow card is the one card in the deck not traceable to a source, is declared as such, and is
+   to be checked against the ASP.NET lab material. That HI1027 note also holds the **same MVC
+   card twice** (lines 75 and 201), an in-note duplicate F65 did not catch.
+3. **The AJAX duplicate F70 predicted is real, and is now gone.** F70 closed with a
+   duplicate-card detector rejected as unbuildable, naming "two new AJAX cards restating an
+   existing `**Ajax**` card in another chapter note" as the example. That card is in
+   `HI1031 Begrepp - Kap 09 Web services.md`; the Kap 02 AJAX card was dropped as out of scope,
+   which removes the overlap as a side effect rather than by a check.
+4. **`Skiktning` versus `**Protokollskiktning**` in HI1032.** Both are layering. The HI1031 card
+   is therefore framed as the layering-versus-tiering *distinction*, which is what the exam
+   question needs and is not a cross-course restatement.
+
+**A hook gap.** `.kiro/hooks/block-deck-scope-change.sh` blocks a `create` that drops an
+existing `nosr`, but its removal branch tests `CMD = "create"` only — a `strReplace` deleting
+`nosr` from the frontmatter passes it untouched. The add branch has no such hole. Not exercised
+here (the hooks are wired to the `flashcard-author` agent, and this work was done by the main
+agent, which they do not watch) but it is the same class of defect as F70's count-versus-identity
+gap: the guard checks one shape of a write and the damage has two.
+
+**Verified.** `Vault-Audit.ps1` — **RESULT: clean**, `notesInScope=516`. `markdownlint-cli2` —
+**Linting: 539 files, 0 issues** (the file count is the proof it ran; a scoped glob through
+`cmd /c` first reported `Linting: 0 files`, traps T11). Line endings and BOM unchanged: the note
+is **LF, no BOM**, 0 carriage returns before and after. Card counts in the new file: `::` 19,
+`;;` 2, `||` 11 = **32 cards**; `==` **42**, i.e. exactly one highlighted phrase in each of the
+21 single-answer cards and none in the 11 list cards, per SKILL.md rule 5. `<!--SR:` **0** before
+and after, so no schedule existed to damage. `git diff --numstat` named only the note and
+`llms.txt`.
+
+**Not done, deliberately.** The out-of-scope cards were not relocated to a second note. 45 cards
+of §2.4 material would be a deck nobody reviews, which is F64's problem again; they remain
+recoverable from git history, and the author can ask for any of them back individually.
+
+### F72. ✅ DONE (2026-09-06) — the skill told agents to skip a card another course already had, which is the opposite of how the author studies
+
+**What was wrong.** `write-flashcards` step 2 instructed an agent to grep the **whole vault** before
+adding a card and to skip it if any other note already carried it, and the anti-pattern table said so
+in as many words: *"A new card duplicating one in another chapter note or `Begrepp/` — do not add
+it."* That is exactly wrong for how the author actually works, which he stated on 2026-09-06:
+
+> i dont actually mind duplicate cards that much. i dont practice old decks at all, once i'm
+> done with a course then i drop that whole deck. therefore each deck for a course needs to be
+> self contained.
+
+The unit is the `Anteckningar/` flashcard notes — the `<CODE> Begrepp - Kap NN ...` decks he drills
+during exam prep. A card whose only copy lives in a finished course's deck is a card he will never
+see again, so the old rule quietly moved examinable material out of reach. F61's precedent pointed
+the same way: it consolidated four cross-course duplicate **concept notes** onto the older course's
+copy, which is right for `Begrepp/` reference material and wrong if applied to a deck.
+
+**The policy now recorded.** A course's `Anteckningar/` decks must, between them, answer that
+course's exam questions without depending on any other course's notes. Duplication **across**
+courses is acceptable and often required; duplication with a `Begrepp/` note is acceptable, because
+`Begrepp/` is shared reference material that happens to carry a card and counts toward
+self-containment in neither direction; duplication **within one course's** decks is still waste.
+Where two courses run in the same term — HI1031 and HI1032 both do in 2026 Höst — a cross-course
+duplicate genuinely is reviewed twice, and that cost is accepted rather than optimised away.
+
+| Where | Change |
+|---|---|
+| `.kiro/steering/product.md` | new paragraph: a finished course's deck is dropped, so each course's decks must be self-contained. The author's words quoted verbatim |
+| `.kiro/skills/write-flashcards/SKILL.md` | step 2 scopes the duplicate grep to the same course's `Anteckningar/` decks; the anti-pattern row narrowed to the same course and an inverse row added (a card omitted because another course has it is now the defect); rule 9's cue-overload limit stated to bind **within** one course |
+| `Meta/Vault Findings & Backlog.md` | dated notes on F61 and F63; F71's card count corrected 31 → 32; this entry |
+| `README.md`, `.kiro/steering/product.md` | stale backlog range F1–F69 → F1–F72 |
+| this file's frontmatter `description` | stale range F1–F67 → F1–F72 |
+
+**The three ranges were set to F1–F72, not the F1–F71 asked for.** This entry lands in the same
+change as the fix, so F1–F71 would have been stale the moment it was written — the failure mode
+`documentation-standard.md` describes, committed on purpose. The deviation is recorded here rather
+than left to be noticed.
+
+**Deliberately not in `Meta/Vault Standard.md`.** Per `.kiro/skills/add-a-convention/SKILL.md` a rule
+in the Standard needs a matching check in `Vault-Audit.ps1`, and semantic card duplication cannot be
+checked mechanically — F70 considered a duplicate-card detector and rejected it for exactly this
+reason: the duplicates that matter are the same fact in different words, which an exact-match script
+reports clean. A rule in the Standard with no check drifts, and a check that claims more than it
+verifies is worse than none. So this lives in steering (a fact about how the author works) and in the
+skill (the authoring consequence), and nobody should re-litigate moving it.
+
+**The author's words are quoted, not paraphrased.** F71 was caused by a goal nobody had written
+down; a paraphrase of a policy is the same failure one step later, because the next agent cannot tell
+a summary from the rule. Both quotes now sit in `steering/product.md`, dated.
+
+**F63's mechanism re-measured while annotating it.** **21** concept notes physically in
+`HE1033 Kommunikationsnät/Begrepp/` are tagged for HI1031 or HI1032 (ARP, BGP, DNS, HTTP,
+OSI-modellen, Subnätning och CIDR, Sliding Window, OSPF, TCP, UDP and eleven more). All **33**
+HE1033 and HI1027 notes are active and **none** carries `nosr`, so nothing is stranded today. Tag
+sharing stays the right mechanism for concept notes; it is not a substitute for the current course's
+own deck holding the card.
+
+**Verified.** `markdownlint-cli2` — **Linting: 539 files, 0 issues**, glob passed unquoted through
+`cmd /c` so the `Finding:` line resolved (traps T11). `Vault-Audit.ps1` — **RESULT: clean**,
+`notesInScope=516`. This file is **CRLF, no BOM**: every write was made by a script that counts CR
+and LF in the decoded text and aborts before writing if they differ, and each edit left them equal.
+`.kiro/**`, `README.md` and `llms.txt` are **LF, no BOM** and stayed so. `git diff --numstat` against
+a baseline taken before the work moved `.kiro/steering/product.md` from 38/2 to **55/2** and this
+file (whose own count this entry is part of, so it is not quoted here), and nothing else.
+`README.md`'s edit is two characters inside one line, so its numstat stays at 15/3 and the delta
+cannot show it; `.kiro/skills/write-flashcards/SKILL.md` is untracked, so numstat cannot show it
+either. Both were confirmed by grep instead — the range fix and the three skill edits were each read
+back from the file. **No note under `KTH/` was touched**: the Kap 02 deck stayed at `92/37`, the
+state the main agent left it in after adding the MVC card.
+
+`llms.txt` was checked for a stale F-range and carries none; its reference to the backlog is by name
+only, so it needed no edit.
+
+**Outstanding, deliberately not acted on.**
+
+- **Nothing is committed.** The whole of today's work is working-tree only: the Kap 02 deck,
+  `llms.txt`, `product.md`, the skill, F71 and this entry. The author decides when it lands.
+- `append-f70.ps1` sits untracked in the vault root, left over from F70's append. Deletions here go
+  to Google Drive's cloud trash rather than the Recycle Bin, so it stays until the author says.
+  **Superseded:** deleted on his instruction at 19:13 the same day, still 0 bytes. See F73.
+- `%TEMP%\kap02-backup.md`, the only copy of the pre-rewrite 89-card deck, is left to expire: its 45
+  §2.4 cards are the material F71 removed as waste, and `HEAD` still holds the older 22-card version.
+
+### F73. ✅ DONE (2026-09-06) — a documentation audit: one instruction survived F72, one state file was false, one safety rationale was inverted, and fifteen figures had rotted
+
+**Why this was done.** The author asked whether the docs were still accurate and whether any of
+them contradicted each other. Nothing in the vault verifies documentation against reality — that is
+the gap `documentation-standard.md` names and cannot close by itself — so every figure below was
+re-measured before it was judged. Method: all six reporting scripts run fresh, the authoritative
+docs read end to end, and two read-only subagents over the skills set and the `.kiro/` state files.
+
+**The rule content held.** No doc contradicted another about a *convention*. Every live figure in
+`product.md`, `README.md`, `write-flashcards/SKILL.md`, `vault-bulk-edit/references/verification.md`,
+`evidence.md`, `add-a-convention` and `query-notebooklm` matched measurement. Verified as correct,
+not assumed: 516 in scope, 396 concept notes, 342/342/319/42 sections, 53 collections, 62 notes with
+cards outside `## Flashcards`, 15 bold openings; `README.md`'s "43 assertions, 30 checks, ~9 s"
+(measured 43/0 in 8.8 s, all 30 buckets firing); `Test-SRIntegrity` 10/0; the `llms.txt` course
+catalog matching the folders course-for-course at six terms and 23 courses; "all ten MOCs" (7
+subject + 3 year); `flashcardTagsToIgnore` = `["#nosr"]`; Canvas folders for exactly the three
+courses named; **zero** Dataview inline fields; all 12 Health Report queries carrying the `Filer/`
+guard; all 8 hooks present; exactly 14 traps; and CI running what `README.md` says.
+
+**Five defects that were not just numbers.**
+
+1. **An instruction survived F72 by one file.** `write-flashcards/references/formulation.md`'s
+   per-card checklist still asked "Does a card for this fact already exist **anywhere in the
+   vault**?" — the exact rule F72 reversed four hours earlier. The parent SKILL.md was correct, the
+   reference file was not, and an agent runs the checklist. Its cue-overload item and its
+   `Caching` example had the same fault. This is the second time a policy landed in a SKILL.md
+   while its `references/` lagged; a skill is not updated until its references are.
+2. **`.kiro/current-state.md` asserted the opposite of the truth.** It read "nothing in flight.
+   Everything is committed, both remotes match" while the working tree held **31 modified and 20
+   untracked files** — all of F71 and F72. The commits did match (`cecab1d` both sides), which is
+   how the sentence stayed plausible. The file's own rule says a stale state file is worse than
+   none.
+3. **A safety rationale was inverted in two places.** `hooks/block-write-outside-reports.sh` and
+   `reports/README.md` both said the hard guarantee was `toolsSettings.write.allowedPaths` and the
+   hook merely a backstop. `.kiro/README.md`, the sibling hook and the 2026-09-06 adversarial
+   review all say the opposite: `allowedPaths` only auto-approves, `vault-auditor.json` has no
+   `deniedPaths`, and the hook's exit 2 is the only unconditional stop. The runtime block was
+   never broken — only the reasoning a future editor would rely on when weakening it.
+4. **The public landing page overstated the vault by 44 notes.** `index.md` said "Cirka 560"
+   where every other doc and the audit say 516.
+5. **`llms.txt` had drifted from `product.md`.** It carried the exam-goal section but not the
+   deck-self-containment policy, which F72 requires to exist in both because neither file can rely
+   on the other. It also still taught `==DISABLEDFLASHCARD==` as something a reader will meet,
+   while `Vault Standard.md` §4 already said the vault had stopped using it — measured **0**
+   occurrences in any study note, the 14 remaining all being `Meta/` and `.kiro/` prose about it.
+
+**Fifteen figures corrected.** Doc value → measured value.
+
+| Where | Was | Is |
+|---|---|---|
+| `Vault Standard.md` §6, `conventions.md` §4 | 98 of **663** `.md` | 98 of **673** |
+| `Vault Standard.md` §6, `Get-TagInventory.ps1` header | **70** distinct inline tags | **69** (`scripts.md` already said 69) |
+| `Vault Standard.md` §4 | bold definitions: 15 do, **341** do not | 15 of 342, so **327** do not |
+| `Vault Standard.md` intro | lint expectation "only the deviations listed in F52" | **0 issues**; F52 itself closed its last 12 |
+| `.markdownlint-cli2.jsonc` | inflated from **804** to 1673 | **767** → 1673, per F52, T4 and lessons-learned |
+| `traps.md` T5 | `-ContentOnly` covers **561** notes | **516** |
+| `traps.md` T11 | confirm `Linting:` says **538** | **539**, and the rule reworded to "non-zero and plausible" |
+| `traps.md` T12 | Standard **382** LF, backlog **2245** CRLF | **383** and **2681**, both labelled as growing |
+| `scripts.md` figures table | 112 of **670**; nosr **32**; deck **2186** / **219**; wholeVault **1433** | 112 of **673**; **31**; **2218** / **130**; **1441** |
+| `scripts.md` | `Test-SRIntegrity.ps1` ~**6** s | ~**9** s (8.9 measured) |
+| `documentation-standard.md` | **538** linted files; site 648 pages / 44 broken links | **539**; the 693 / 85 pair derived later in the same file now named as the current one |
+| `hooks/protect-sr-data.sh` | "~**1900** flashcards" | **2218** active cards, **1425** markers |
+| `agents/vault-auditor-prompt.md` | example "129 of **352** concept notes" | "77 of **396**" |
+| `llms.txt` | `## Tenta-fokus` "about 1 note in **8**" | 42 of 396, so roughly **1 in 10** |
+| `Vault Standard.md` §6, `llms.txt` | `*.opt.md` / `*.ai.md` conversions exist | **none exist**; rule kept as forward-looking |
+
+**Two config-versus-doc mismatches, fixed on the config side where the doc was right.**
+`vault-auditor-prompt.md` told the auditor to run markdownlint while `vault-auditor.json`'s
+`allowedCommands` had no pattern for it, so the instruction could only fail; the one read-only
+invocation is now allowed and the prompt gives the form that actually works here
+(`cmd /c` with the glob **unquoted**, T11) rather than the quoted PowerShell form. And
+`flashcard-author-prompt.md` claimed "those five commands are the only ones", while its JSON also
+permits read-only `git status` / `diff` / `log` / `ls-files` / `show` — the prompt now states the
+allowlist as it is.
+
+**A defect found only because the file was being edited: `scripts.md` was mojibake.** Eleven em
+dashes, eight arrows, two section signs and the three Swedish letters in its own "keep every `.ps1`
+pure ASCII" rule were stored as CP1252 mis-decodes of UTF-8 (`â€”`, `â†’`, `Ã¥`). It rendered as
+garbage in a file that is auto-loaded into every agent's context, and nothing flagged it: the audit
+does not read `.kiro/`, the linter excludes it, and Markdown does not care. Repaired by replacing
+the six sequences byte-exactly — 25 non-ASCII characters remain, all of them legitimate now, and
+no other doc in the vault has the problem (checked all 29 `.kiro/**` `.md` files plus `llms.txt`,
+`README.md`, `index.md` and the Standard). **A wrong character is as much a doc bug as a wrong
+number, and neither has a check.**
+
+**Verified.** `markdownlint-cli2` — **Linting: 539 files, 0 issues**, glob unquoted through
+`cmd /c`. `Vault-Audit.ps1` — **RESULT: clean**, `notesInScope=516`, run last.
+`Test-ScriptHygiene.ps1` — **clean, 12 files, 55 checks**, required because
+`Get-TagInventory.ps1`'s header changed. Every edited file kept its own line endings and BOM state:
+`.kiro/**`, `llms.txt`, `index.md`, `README.md`, `Meta/Vault Standard.md` and the two configs are
+**LF, no BOM** (CR=0 after); this file is **CRLF, no BOM** and its CR and LF counts were equal
+before and after, checked by the script that wrote it, which aborts on a mismatch. **No note under
+`KTH/` was touched** — the Kap 02 deck stayed at `92/37`.
+
+**Both gates went red four minutes later, and not because of this entry.** At 19:07 the same two
+commands reported `markdownlint` **57 issues in 1 file** and the audit `RESULT: deviations found`
+with `noFrontmatter 1` at `notesInScope=517`. Every one of the 58 findings names the same file:
+`nblm1.md`, a NotebookLM research dump the parallel agent wrote into the **vault root** at 19:00.
+It is in scope by construction — `Meta/Vault Standard.md` §6 exempts `index.md` and `README.md` by
+name, so any *other* root-level `.md` is audited like a note and fails on the frontmatter it does
+not have. Nothing was done about it here: it is another agent's in-flight file, and
+`.kiro/steering/environment.md` says not to touch one. The clean results above stand as measured at
+19:03; a re-run reproduces them only after that file is moved, renamed with a frontmatter block, or
+gitignored. Recorded rather than quietly re-run, because "the audit was clean when I looked" is the
+kind of claim this backlog exists to make checkable.
+
+**Outstanding, unchanged from F72.** Nothing is committed: the working tree now holds this audit's
+edits as well, and the author has decided to leave both that and `nblm1.md` as they are for now.
+`append-f70.ps1` is **deleted** (2026-09-06 19:13, on the author's instruction): it was **0 bytes**,
+created 13:02:19 and never written to — a `write` that made the file and never delivered its
+content, left over from F70's append, which itself landed fine. Untracked, never in history on any
+branch, matched by no `.gitignore` rule, and referenced nowhere but this backlog. Neither gate could
+see it, because the audit reads only `.md` and the linter globs `**/*.md` — the difference from
+`nblm1.md`, which is a root-level `.md` and so gets audited like a note. It was cleared because an
+untracked *and* unignored file is one `git add -A` away from being in a public repository for good,
+and because a one-off script in the vault root sits against `scripts.md` twice: vault scripts live
+in `Meta/Obsidian Plugins/Scripts/`, and exploration belongs in `%TEMP%` until it has been useful
+twice. Every script this session's work needed was written there for that reason. Deletion went to
+Google Drive's cloud trash rather than the Recycle Bin, and git cannot restore an untracked file —
+neither matters at 0 bytes, but the asymmetry is why the file waited for an instruction instead of
+being tidied away.
+
+**The vault moved while this was being written, which is the point.** A second agent was editing
+`.kiro/skills/query-notebooklm/` in parallel — it added `references/corpus-acquisition.md` at 18:35
+and `nblm1.md` in the vault root at 19:00 — and Obsidian rewrote its own plugin state. So the
+markdown total this entry quotes as **673** (measured 17:45) read **675** by 19:03, and `.gitignore`
+went the other way under an edit that was not mine. Nothing here is wrong because of it: the
+denominator is a dated reading, `notesInScope` held at **516** through both audits, and no file
+another agent was holding was touched. It is recorded because a figure rotting inside the very
+entry that fixes fifteen rotted figures is the cleanest possible demonstration of why prose copies
+are convenience and the script is the source. `Vault-Audit.ps1` prints the total; quote it, not this
+paragraph.
+
+**What this says about the doc system.** Every defect above was in a file that no tool reads:
+`.kiro/**` is outside both the audit and the linter, and `index.md` is in scope for neither's
+content checks. The vault's conventions are enforced; its documentation is not, and the only thing
+standing between a rotted doc and a wrong action is somebody re-measuring. That is now on record as
+the reason to re-run this audit rather than trust it — the figures above will rot the same way.
+
+### F74. ✅ DONE (2026-09-08) — the documentation gap F73 named was still open, and it corrupted a skill in nine places while both checks reported clean
+
+**Why this was done.** F73 closed by noting that `.kiro/**` sits outside both the audit and the linter,
+so nothing verifies it. That was recorded and left. On 2026-09-07 a bulk replacement across five files in
+`.kiro/skills/query-notebooklm/` corrupted **nine** passages, and the corruption survived a full working
+day because both tools were run and both reported success.
+
+**The damage.** `SKILL.md` read `across tiers — ––50**, so six to fifteen runs`. Everything from the
+start of each search string up to the number had been replaced by a dash. Three of the nine sat in the
+anti-pattern table, whose entire purpose is to state what a Deep Research run costs. Repaired by
+reconstructing each of the nine sentences and reading them back; verified afterwards as zero
+adjacent-dash sequences across all five files.
+
+**Two process failures caused it.** The replacement ran over five files with no dry run and no backup,
+against `conventions.md` section 3 and the `vault-bulk-edit` skill, and the result was never read back.
+
+**The check that reported clean was checking nothing.** `.markdownlint-cli2.jsonc` lists `.kiro/**` under
+`ignores`, commented "agent context, tooling". So linting that glob prints `Linting: 0 files` and then
+`Summary: 0 issues in 0 files`. Every such run in that session had been piped through a filter for the
+word Summary, which printed the second line and hid the first. A vacuous pass was reported as
+verification roughly a dozen times.
+
+**Fix: `Meta/Obsidian Plugins/Scripts/Test-DocHygiene.ps1`** — 10 198 B, pure ASCII, LF, no BOM,
+read-only, exit 0 clean / 1 findings. It is the first tool that reads `.kiro/`. Four checks in two
+scopes. *Authored* docs, meaning everything except `.kiro/research/`, are checked for a BOM, trailing
+whitespace, runs of three or more newlines, the **corruption signature of a botched bulk replacement**
+(adjacent en/em dashes, four mojibake byte sequences), and any doc naming a `Scripts` PowerShell file
+that does not exist. *Verbatim* research artifacts are kept byte-exact and checked only for BOM and
+corruption. CR characters and the skill navigation invariant are reported as **notes, not findings**,
+because neither is damage and a permanently red check gets switched off.
+
+It earned its place immediately, three times over. On first run it found a genuine **mojibake em dash**
+in `corpus-acquisition.md` at L314 (U+00E2 U+20AC U+201D) that an adversarial reviewer had reported the
+day before and I had dismissed as harmless; the file went 35 308 to 35 306 characters. Its dead-reference
+check exists because `environment.md` was edited to name `Test-DocHygiene.ps1` one minute before the file
+existed. And three of its eleven first-run findings were false positives — docs quoting the damage on
+purpose, and dated reports naming their own throwaway scripts — which is why inline code spans and
+`.kiro/reports/` are now exempt.
+
+**Registered in the same change:** the table and the "which one to reach for" list in
+`.kiro/steering/scripts.md`, per rule 5. `Test-ScriptHygiene.ps1` reports **61 checks, exit 0**.
+
+**Traps T16 to T18 added, taking `traps.md` from fifteen to eighteen.** All three break a *verification*
+rather than the work, which is worse: a false negative in a check makes you report a fix that never
+happened. T16, an unescaped pipe in a "literal" pattern is alternation, so an empty branch matches at
+every offset and a one-row search returned **31 372 matches** in a 31 KB file. T17, a phrase search fails
+on text that is present, in four ways — line wrapping, blockquote markers, digit grouping (8 290
+against 8,290) and unicode punctuation (U+2212 for minus) — which produced four wrong answers in one
+day. T18, a backtick inside a double-quoted string is an escape, so a six-backtick fence pattern becomes
+three, and a fence count appeared to move from 4 to 6 in an unchanged file. T18 then bit again while this
+very entry was being written.
+
+Four more went to `environment.md` as *related but not silent*, since each throws: a long inline command
+refused with `Access is denied. (os error 5)`; two variables differing only in case being one variable,
+which wiped a path and made four reads return null; a helper function losing to a built-in alias; and
+`if` not being an expression in 5.1. `environment.md` also gained a **What is not checked** section,
+because `traps.md` was already claiming that file documented these.
+
+**Three lessons recorded** in `.kiro/lessons-learned.md`, now thirteen dated entries. That a false
+negative in my own check is the most dangerous measurement I make, because absent is the one answer
+nobody questions. That quoting a table without its baseline row loses the only thing that made its
+numbers mean anything: a report had reproduced a benchmark table with a correct value column against
+labels shifted by one row, having silently dropped the human-versus-human baseline, so it presented that
+baseline as a model score and the worst configuration as the best available. And that a document
+bibliography should be measured before its conclusions are read — two outside documents were rejected
+on two numbers and one word-search (**46 and 35 unique domains, 19.6 % and 0 % academic, 35 uses of
+evasion, undetectable or bypass**), and an experiment found two days later that the central tactic one of
+them recommended has no significant effect after correction.
+
+**The skill was hardened, then audited by two independent reviewers.** `query-notebooklm` is now five
+files and about 103 KB: six tested prompt levers, an eleven-check list for distrusting an answer, and
+eleven measured ways a report or an answer has misled us. The reviewers examined about 35 claims and
+found the adversarial content sound — every fabrication trace reproduced against the local reports —
+while the skill own bookkeeping was wrong in eight places. Both **pasteable contracts were older than the
+versions actually tested**: the custom-instructions block was 704 characters and carried neither the title
+clause nor the echo clause the skill calls its highest-value line, and the acquisition skeleton lacked the
+title clause whose absence the skill documents as having caused four unfindable citations. Rebuilt to
+1 365 and 1 877 characters. Also corrected: a contract length stated as 952, which is the query skeleton
+number misapplied; a per-run range of 20 to 50 in ten live places after 18 to 50 had been established;
+"a third of the budget" for what is a sixth; an import-failure rate given as both 2 of 92 and 16 of 150
+when five runs give **24 of 185, 13.0 %**; a nine-check list that had become eleven two hours earlier;
+and "three" against "four" levers where there are six.
+
+**One unit error of the F58 kind.** The peer-reviewed share row counted runs 1 and 2 against sources
+*imported* and runs 3 to 5 against sources *cited*, so the row read as a trend and was not one: run 3
+at 13 of 23 cited is **72.2 %** on an imported basis, not 56.5 %. The denominator is now printed per
+column, with a warning against reading the row as a trend.
+
+**Research artifacts, none of them in git.** `.kiro/research/` holds five verbatim Deep Research reports
+and `2026-09-07-llm-style-what-survived-checking.md`, a 38 KB distillation sorting every figure into four
+tiers by how hard it was checked: asked of a primary source, stated by a primary source, resting only on
+one of our own reports, or checked and found wrong. The reports carry **three known fabrications** and the
+distillation is the only place that records which. It also lists six claims of mine that had to be
+corrected, each with the method that caught it.
+
+**Verified.** `Vault-Audit.ps1` clean, exit 0. `Test-ScriptHygiene.ps1` 61 checks, exit 0.
+`Test-DocHygiene.ps1` clean, exit 0, one note. All five skill files LF, no BOM, no trailing whitespace,
+no blank-line runs, zero adjacent-dash sequences. Note what this entry cannot claim: markdownlint still
+does not lint `.kiro/`, deliberately, so Markdown *syntax* there is checked by nothing — only encoding,
+whitespace, corruption and dead references are.
+
+### F75. ✅ DONE (2026-09-08) — a plugin that had done nothing for as long as it was installed, and a documented automation that never ran
+
+**Why this was looked at.** A survey of the community plugin registry — **7 407 plugins, 734
+themes**, read from `obsidianmd/obsidian-releases` — asking whether any were worth adding. The
+answer was none. Four filters remove almost everything: the vault publishes to Quartz, so any
+plugin with its own syntax renders as raw text on the site; it holds a live review schedule and a
+script-enforced standard, so anything that writes to notes is a hazard; `product.md` calls a second
+way of doing something a regression; and anything not aimed at an exam question is waste. The value
+of the survey was what it found in the plugins **already installed**.
+
+**Finding 1: the Linter plugin was inert, and unguarded for the day it was not.**
+`.obsidian/plugins/obsidian-linter/data.json` had `lintOnSave: false`, `lintOnFileChange: false`,
+`lintCommands: []` and every rule `"enabled": false`. It did nothing at all. What made it worth
+acting on was `foldersToIgnore: []` and `filesToIgnore: []` — the first enabled rule plus "lint all
+files" would have swept the Templater templates and every flashcard region with no exclusions,
+in-editor and with no dry run. That is the accident `conventions.md` §2 already records from
+markdownlint's MD034 breaking the course template, minus the safety net.
+
+**Removed rather than configured.** Its `filesToIgnore` entries are `{match, flags, label}` regexes
+— read out of `main.js`, same shape as `userIgnoreFilters` — so fencing it off was feasible: five
+regexes would have covered `Filer/`, `Litteraturlista/`, the templates, `*.excalidraw.md` and
+`.kiro/`. It was rejected on maintenance cost, not mechanism. Keeping it meant a second ignore list
+mirroring `.markdownlint-cli2.jsonc` with nothing checking that the two agreed, which by
+`documentation-standard.md` earns a rule in the standard and a check in the audit. Removing it needs
+none of that: `markdownlint-cli2` covers Markdown syntax, CI runs it on every push, and the plugin
+count goes **15 to 14**.
+
+**How it was removed.** Obsidian was confirmed **closed** first — a running instance rewrites plugin
+state from memory and would have restored the entry. `data.json` had uncommitted changes, so the
+folder was copied to `%TEMP%\linter-removal-backup-2026-09-08-112651` (four files, 918 KB) and then
+**moved** out rather than deleted, so nothing went to Drive's cloud trash and no git history was
+relied on. `community-plugins.json` went **15 to 14** entries and **358 to 337** characters,
+rewritten preserving its exact format: LF, no BOM, two-space indent, no trailing newline.
+`.obsidian/plugins/` now holds 14 folders, matching the 14 ids.
+
+**Finding 2: the standard documented an automation that was switched off.** `Meta/Vault Standard.md`
+§3 stated that "The Obsidian Linter plugin auto-updates `updated` on save". With every rule disabled
+that had not been happening for as long as the plugin was installed, so `updated` has been
+maintained **by hand** throughout. The bullet now says so. This is **not** a consequence of the
+removal — the removal changed nothing functional; it made a false sentence visible. Whether
+`updated` values across the vault have gone stale is open, and was not measured here.
+
+**Finding 3: Dataview is frozen, and the dependency is wider than it looked.** Last upstream release
+**0.5.70, 2025-04-07**; the vault runs **0.5.68**. The blast radius was first stated as two `Atlas/`
+notes and is actually **31 notes holding 147 `dataview` blocks** — including all 24 course
+`_index.md` files at five each, the three year MOCs, `_Kvalitetskoll.md`, `Tenta-prioritering.md`
+and `Kurs Index Template.md`, so every future course inherits it. No migration: Datacore is
+`0.1.29` and core Bases is `"bases": false` and cannot express these queries.
+
+The mitigation already existed and was written down nowhere: `.obsidian/` is **tracked** — 217
+files, plugin `main.js` included — so `git checkout -- .obsidian/plugins/dataview/` restores a
+working build. Verified by `git cat-file -s HEAD:.obsidian/plugins/dataview/main.js` and the file on
+disk being **1 302 069 bytes** each. Recorded in `.kiro/steering/environment.md` together with why
+the loss would be survivable: every figure the standard quotes is owned by `Vault-Audit.ps1` and the
+`Get-*` scripts, so Dataview powers navigation only, and losing it costs browsing comfort rather
+than correctness.
+
+**One of my own recommendations was worthless, and is recorded as such.** I proposed turning off
+Dataview's auto-update. Upstream has been dormant since April 2025, so there is no update to
+receive; the setting is also stored outside the vault — absent from every `.obsidian/*.json` and
+from `%APPDATA%\obsidian\obsidian.json` — so it is a UI toggle no script can set. The real risk is
+an Obsidian API change, which that toggle would not address.
+
+**Noticed in passing, deliberately not touched.**
+`.obsidian/plugins/obsidian-spaced-repetition/` holds an untracked
+`data (conflict 2026-09-07-10-27-11).json`, a Google Drive sync conflict copy of
+spaced-repetition state. Left alone under `conventions.md` §1: it needs the author's decision about
+which copy is authoritative, not an agent's guess.
+
+**Also corrected.** Three copies of the F-range read `F1-F73` while F74 already existed —
+`README.md`, this file's own `description`, and `.kiro/steering/product.md`. All now read `F1-F75`.
+
+**Verified.** `Vault-Audit.ps1` **clean, exit 0**, `notesInScope=517` of 690 markdown files.
+`Test-DocHygiene.ps1` **clean, exit 0**, 35 authored and 6 verbatim files, one pre-existing CRLF
+note. `markdownlint-cli2` **Linting: 540 files, 0 issues, exit 0**, with the `Finding:` line
+confirming the glob expanded (T11). Line endings were checked before editing and preserved: this
+file is CRLF (2 922) and `Vault Standard.md`, `README.md`, `product.md` and `environment.md` are all
+LF — the mixed convention T12 exists for. Nothing under `KTH/` was touched, so no flashcard or
+`<!--SR:-->` data was at risk and no `Get-SRIntegrity.ps1` baseline was needed.

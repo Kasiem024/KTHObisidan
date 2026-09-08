@@ -13,6 +13,7 @@
     "shell": {
       "allowedCommands": [
         "powershell -NoProfile -ExecutionPolicy Bypass -File .*Vault-Audit\\.ps1.*",
+        "cmd /c \"npx markdownlint-cli2 \\*\\*/\\*\\.md\"",
         "git -C .* status.*",
         "git -C .* log.*",
         "git -C .* diff.*",
@@ -53,7 +54,7 @@
     "file://.kiro/steering/product.md",
     "file://.kiro/steering/conventions.md",
     "file://.kiro/steering/environment.md",
-    "file://.kiro/traps.md",
+    "file://.kiro/steering/traps.md",
     "skill://.kiro/skills/vault-bulk-edit/SKILL.md",
     "file://Meta/Vault Standard.md"
   ]

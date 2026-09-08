@@ -18,7 +18,7 @@ vault-commit själv, så ingen extra åtgärd behövs.
 | --- | --- |
 | `llms.txt` | Ingång för AI-verktyg: struktur, taggar, kurskatalog och hur Obsidian-syntaxen ska tolkas |
 | `Meta/Vault Standard.md` | Reglerna: taggar, frontmatter, mappstruktur, namngivning, notstruktur |
-| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser ––F66) |
+| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F75) |
 | `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1` | Kontrollerar hela vaultet mot standarden |
 | `.markdownlint.json` | Vilka markdown-regler som gäller (`.markdownlint-cli2.jsonc` styr vilka filer) |
 | `Meta/Obsidian Plugins/Templates/` | Mallar som följer standarden automatiskt |
@@ -58,6 +58,18 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scrip
 ```
 
 Bygger ett litet kastvault under `%TEMP%`, bevisar att auditen rapporterar det rent, och
-planterar sedan ett avsiktligt regelbrott per check — alla 29 stycken — och kräver att
-varje check slår. Tar ~8 sekunder. Kör efter varje ändring av `Vault-Audit.ps1`.
+planterar sedan ett avsiktligt regelbrott per check — alla 30 stycken — och kräver att
+varje check slår. 43 assertions, tar ~9 sekunder. Kör efter varje ändring av `Vault-Audit.ps1`.
 CI kör det automatiskt vid varje push.
+
+## Övriga kontrollskript
+
+Utöver auditen finns fyra läsande skript i `Meta/Obsidian Plugins/Scripts/`. De ändrar
+ingenting, och `.kiro/steering/scripts.md` beskriver när man ska nå efter vilket:
+
+| Skript | Svarar på |
+| --- | --- |
+| `Get-ObsidianExcludes.ps1` | Vad matchar Obsidians "Excluded files" egentligen? Flaggar filter som matchar noll filer |
+| `Get-TagInventory.ps1` | Vilka taggar tror Obsidian finns, och vilken fil lade dit dem? |
+| `Get-SRIntegrity.ps1` | Ändrade en massredigering någon flashcard-markör? `-Save` före, `-Compare` efter |
+| `Get-NoteStructureCensus.ps1` | Hur många begreppsnoter har faktiskt varje avsnitt? Äger siffrorna som standarden citerar |

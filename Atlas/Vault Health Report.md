@@ -9,10 +9,22 @@ fixing — an empty section means healthy. Known open issues live in
 `Meta/Vault Findings & Backlog.md`.
 
 **Out of scope** (excluded from every query below, per the standard):
-`_index.md` (generated), `**/Litteraturlista/**` (course literature + conversions),
+`_index.md` (generated), **allt under `Filer/`** (`**/Filer/**` — ritningar, kurslitteratur
+och Canvas-material, inget av det egna anteckningar), `**/Litteraturlista/**`,
 `*.ai.md` / `*.opt.md` (book text dumps), **Excalidraw-ritningar** (`#excalidraw` —
 specialfiler som inte är egna anteckningar), and `Ericsson/` (work notes, not studies).
 
+> **Dataview läser inte Obsidians "Excluded files".** Verifierat 2026-09-05: `main.js` i
+> dataview-pluginet nämner aldrig `isUserIgnored`. Inställningen `userIgnoreFilters` håller
+> skräptaggar borta från taggpanelen, men den påverkar inte frågorna här — därför bär varje
+> fråga sin egen `!contains(file.folder, "Filer")`. Utan den rapporterade fem av avsnitten
+> nedan **77 falska träffar** var, medan auditen samtidigt sa `RESULT: clean` (F67).
+>
+> De tre taggkontrollerna har dessutom samma kursmappsvillkor som auditen
+> (`regexmatch("KTH/\d{4} .+/[A-Z]{2}\d{3}[0-9X] .*", file.folder)`). Utan det flaggades
+> `KTH/_Kvalitetskoll.md` och `KTH/Generella Anteckningar KTH.md`, som ligger utanför en
+> kursmapp och medvetet inte omfattas.
+>
 > Samma kontroller kan köras utanför Obsidian med
 > `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1`.
 
@@ -25,10 +37,12 @@ samhälle, säkerhet.
 LIST
 FROM "KTH" AND !#excalidraw
 WHERE file.name != "_index"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
   AND !contains(file.name, ".ai")
   AND !contains(file.name, ".opt")
   AND !contains(file.name, ".excalidraw")
+  AND regexmatch("KTH/\d{4} .+/[A-Z]{2}\d{3}[0-9X] .*", file.folder)
   AND !any(list("programmering", "nätverk", "matematik", "ekonomi", "hårdvara", "databaser", "samhälle", "säkerhet"), (s) => contains(tags, s))
 SORT file.folder ASC
 ```
@@ -42,10 +56,12 @@ tenta, övrigt.
 LIST
 FROM "KTH" AND !#excalidraw
 WHERE file.name != "_index"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
   AND !contains(file.name, ".ai")
   AND !contains(file.name, ".opt")
   AND !contains(file.name, ".excalidraw")
+  AND regexmatch("KTH/\d{4} .+/[A-Z]{2}\d{3}[0-9X] .*", file.folder)
   AND !any(list("begrepp", "föreläsning", "lektion", "övning", "labb", "seminarium", "studieguide", "tenta", "övrigt"), (t) => contains(tags, t))
 SORT file.folder ASC
 ```
@@ -56,6 +72,8 @@ SORT file.folder ASC
 LIST
 FROM "KTH" AND !#excalidraw
 WHERE !contains(tags, "KTH")
+  AND regexmatch("KTH/\d{4} .+/[A-Z]{2}\d{3}[0-9X] .*", file.folder)
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
   AND !contains(file.name, ".ai")
   AND !contains(file.name, ".opt")
@@ -72,6 +90,7 @@ LIST
 FROM "KTH" AND !#excalidraw
 WHERE (!created OR !updated)
   AND file.name != "_index"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
   AND !contains(file.name, ".ai")
   AND !contains(file.name, ".opt")
@@ -85,6 +104,7 @@ SORT file.folder ASC
 LIST
 FROM "KTH" AND !#excalidraw
 WHERE file.name != "_index"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
   AND !contains(file.name, ".ai")
   AND !contains(file.name, ".opt")
@@ -103,6 +123,7 @@ LIST
 FROM "KTH" AND !#excalidraw
 WHERE !description
   AND file.name != "_index"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
   AND !contains(file.name, ".ai")
   AND !contains(file.name, ".opt")
@@ -128,6 +149,7 @@ WHERE description
     OR contains(description, ";;")
     OR regexmatch("^\s*(-|\d+\.)\s.*", description)
     OR regexmatch(".*\?\s+[A-ZÅÄÖ].*", description))
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
 SORT file.folder ASC
 ```
@@ -147,6 +169,7 @@ LIST
 FROM "KTH" AND !#excalidraw
 WHERE contains(file.headings.heading, "Flashcards")
   AND filter(file.headings, (h) => h.level = 2)[length(filter(file.headings, (h) => h.level = 2)) - 1].heading != "Flashcards"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.name, ".excalidraw")
 SORT file.folder ASC
 ```
@@ -160,6 +183,7 @@ LIST
 FROM "KTH" AND !#excalidraw
 WHERE length(file.inlinks) = 0
   AND file.name != "_index"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.folder, "Litteraturlista")
   AND !contains(file.name, ".ai")
   AND !contains(file.name, ".opt")
@@ -174,6 +198,7 @@ LIMIT 50
 TABLE WITHOUT ID file.link AS "Anteckning", length(filter(file.outlinks, (l) => !l.file)) AS "Trasiga"
 FROM ("KTH" OR "Atlas") AND !#excalidraw
 WHERE any(file.outlinks, (l) => !l.file)
+  AND !contains(file.folder, "Filer")
   AND !contains(file.name, ".excalidraw")
 SORT file.folder ASC
 ```
@@ -184,6 +209,7 @@ SORT file.folder ASC
 TABLE WITHOUT ID Kurs, length(rows) AS "Antal"
 FROM "KTH" AND !#excalidraw
 WHERE file.name != "_index"
+  AND !contains(file.folder, "Filer")
   AND !contains(file.name, ".excalidraw")
 GROUP BY regexreplace(file.folder, "^KTH/[^/]+/([^/]+).*", "$1") AS Kurs
 SORT length(rows) DESC
@@ -199,5 +225,6 @@ fel (se F64).
 ```dataview
 LIST
 FROM "KTH" AND #nosr
+WHERE !contains(file.folder, "Filer")
 SORT file.folder ASC
 ```
