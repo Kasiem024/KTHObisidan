@@ -5,66 +5,50 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: two tasks in flight — the HI1031 exam-prep rewrite, and making the vault usable on the
-phone. The working tree is also a long way from committed.**
+**Status: one task in flight — making the vault usable on the phone. The HI1031 exam-prep rewrite is
+finished, and both repositories are committed and pushed with every check green.**
 
-## In flight: HI1031 exam-prep rewrite (started 2026-09-08)
+**The re-entry prompt is `.kiro/reentry.md`.** It is course-neutral and is the file to be pointed at
+after a compact. `.kiro/hi1031-tenta-reentry.md` is now the archive of the finished HI1031 project,
+not a live state file.
 
-Rewriting one exam-answer note plus one flashcard deck per chapter of HI1031's coursebook, in
-everyday Swedish and at 40–60 cards per deck. **All state for this task lives in one file:**
+## Done: HI1031 exam-prep rewrite (2026-09-08 to 2026-09-10, committed 2026-09-14)
 
-```text
-.kiro/hi1031-tenta-reentry.md
-```
+All ten chapters — 1, 2, 4, 5, 6, 9, 10, 11, 16 and 17 — have an exam-answer note plus a rebuilt
+flashcard deck, in everyday Swedish at 40–60 cards per deck. Each was reviewed by five adversarial
+reviewers and verified. Chapters 16 and 17 were written from scratch. The review pass over all ten is
+recorded in `.kiro/reports/hi1031-genomgang-2026-09-10.md`; the calibration knowledge, book line
+offsets and confirmed errata are in `.kiro/hi1031-tenta-reentry.md`. The oral exam is **21–23
+September 2026**. **Do not write more chapters.**
 
-That file is the re-entry prompt, rewritten at the end of every context window immediately before
-`/compact`, and it is the only thing a resuming session needs to be pointed at. It carries the
-targets, the five reviewer briefs, the verification chain, the book's line offsets, the confirmed
-book errata and the per-chapter progress. **Do not duplicate any of it here** — this section exists
-only to say where it is.
+The two `listStyleTags` and `nosr` questions this file previously flagged for the author's decision
+are **resolved**. All twelve affected notes were written back to inline tag form, keeping every tag
+including `nosr`, and `Vault-Audit.ps1` now reports clean. `Format-FrontmatterTags.ps1` exists so the
+repair does not have to be re-derived when it recurs.
 
-**Done as of 2026-09-10: ALL chapters — 1, 2, 4, 5, 6, 9, 10, 11, 16 and 17.** There is no next chapter.
-Chapter 11 was the heaviest (eight sub-questions, split across two context windows, 721 lines and 52
-cards). Chapters 16 and 17 had no note at all and were written from scratch: 526–600 lines and 43–50 cards
-each. Every chapter was reviewed by all five adversarial reviewers and verified.
-
-**Two things need the author's decision before anything else happens here:**
-
-1. **`Vault-Audit.ps1` is red** — **11** `listStyleTags` deviations: seven HI1032 decks (chapters 02, 18,
-   19, 23, 24, 25, 26), HI1032's concept note `TCP-IP-modellen.md`, and HI1031's decks for chapters 02, 04
-   and 05. All were modified between 08:12 and 08:19 on 2026-09-10 by another process while chapter 17 was
-   being written, so they were left alone. None was written by this task.
-
-   **This list was wrong here until 2026-09-10.** It previously said "12 deviations, in seven HI1032 decks,
-   two HE1033 concept notes and HI1031's decks for chapters 1, 2, 4 and 5" — but no HE1033 file is in the
-   audit's list at all, chapter 1's deck is not either, and the twelfth file was
-   `HI1031 .../Begrepp/Klient-server-modellen.md`, a concept note the description did not mention. That
-   mattered: it made the deviations look entirely unrelated to HI1031's concept notes when one of them was
-   a concept note. **The twelfth has since been fixed** — its tags were written back to inline form,
-   keeping `nosr`, taking the count 12 → 11. Read `-Detail` rather than this paragraph.
-2. **Four HI1031 decks gained `nosr` from that same process**, taking `notes tagged nosr` from 39 to 43 and
-   `cards in active deck` from 2346 to 2122. That removed **chapter 1's 68 cards — the only HI1031 deck
-   carrying review history** — from active review. The markers survive (1457 → 1463), so nothing is lost,
-   but HI1031 is now entirely outside review rotation. It may well be deliberate.
+**One question still open, and it is a small one.** An inspection of `HI1031 .../Begrepp/` found 14
+concept notes covering the course's early material, with nothing at all for chapters 9 or 11, all
+tagged `nosr` so they are never drilled. The recommendation was to leave the folder as reference and
+add one line recording what it is, rather than expanding it to match the exam — expanding it would
+duplicate verified material for no review benefit. The author has not replied.
 
 ## Nothing else partially finished
 
-No other partially-finished task. `main` and `origin/main` are still the same commit (`cecab1d`),
-while as of **2026-09-08 12:00** the working tree holds roughly **40 modified and 28 untracked**
-paths. Run `git status` rather than trusting that count — it has already aged wrong twice, and a
-second agent is editing this tree (the backlog gained F75 and `Meta/Vault Standard.md` gained 67
-lines that were not mine).
+No other partially-finished task, and **the working tree is clean** as of 2026-09-14 11:45. `main`
+and `origin/main` are both `80c9cc8`; the site repo's `v5` and `origin/v5` are both `7de1cbd`. Run
+`git status` rather than trusting that — a second agent has edited this tree before, and the figure
+here has aged wrong twice.
 
-Two untracked things are worth naming, because nothing else records them and a lost working tree would
-take them with it:
+One file is left untracked deliberately:
+`.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`, a Drive sync
+conflict artefact. It should be deleted, but that is the author's call.
 
-- **`.kiro/skills/query-notebooklm/`** — five files, ~103 KB. Six tested prompt levers, an
-  eleven-check list for distrusting an answer, and eleven measured ways a report has misled us.
-- **`.kiro/research/`** — five verbatim Deep Research reports plus a 38 KB distillation that sorts
-  every figure by how hard it was checked. The reports carry three known fabrications; the
-  distillation is the only place that says which.
-
-Neither has any version history. That is the single largest exposure in the repo right now.
+**The exposure this section used to name is closed.** It said `.kiro/skills/query-notebooklm/` and
+`.kiro/research/` had no version history and were "the single largest exposure in the repo right
+now". Both are committed: 5 tracked files and 7 tracked files respectively. What they contain is
+still worth knowing — six tested prompt levers and an eleven-check list for distrusting an answer in
+the skill, and five verbatim Deep Research reports plus a distillation in `research/`, where the
+reports carry three known fabrications and the distillation is the only place that says which.
 
 Settled 2026-09-06: the author's goal — pass the exam, not cover the book — and the deck
 self-containment policy are recorded in `product.md` and `llms.txt`, with the authoring consequence in

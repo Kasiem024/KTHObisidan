@@ -1,5 +1,11 @@
 # HI1031 tentaprojekt — återinträdesprompt
 
+> [!important] This is no longer the re-entry file
+> The HI1031 exam-prep project it describes is **finished**, and the current re-entry prompt lives
+> at **`.kiro/reentry.md`**. Go there first. Keep reading this file only if the task is HI1031
+> again — it is the archive of that project, and its calibration numbers, book line offsets,
+> confirmed errata and reviewer briefs are still accurate and still expensive to re-derive.
+
 **Detta är den enda filen du behöver få pekad på.** Den skrivs över i slutet av varje
 kontextfönster, precis före `/compact`, och innehåller allt som behövs för att fortsätta arbetet.
 Läs den hela innan du gör något.
