@@ -91,11 +91,29 @@ always-on files drifts.
 
 ## Always read and write UTF-8, preserving the BOM
 
+**Detect the BOM from the bytes.** The obvious pattern — read the text, test whether the first
+character is `U+FEFF` — **cannot work**, because `[System.IO.File]::ReadAllText($path)` detects the
+BOM and consumes it as a preamble. The string never starts with `U+FEFF`, so a `$hadBom` derived
+that way is always `$false`, and the write then strips a BOM that was there. Measured: a file whose
+first three bytes are `EF BB BF` followed by `hello` reads back with length 5 and `h` as its first
+character.
+
 ```powershell
-$raw = [System.IO.File]::ReadAllText($path)
-$hadBom = ($raw.Length -gt 0 -and [int][char]$raw[0] -eq 0xFEFF)
+$bytes  = [System.IO.File]::ReadAllBytes($path)
+$hadBom = ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF)
+$raw    = [System.IO.File]::ReadAllText($path)
+# ... transform $raw into $new ...
 [System.IO.File]::WriteAllText($path, $new, (New-Object System.Text.UTF8Encoding($hadBom)))
 ```
+
+Let the **encoding** emit the preamble. Do not also prepend `U+FEFF` to the string, or the BOM is
+written twice.
+
+**This has done no damage here, and that is luck rather than design:** `0 of 629` notes under
+`KTH/` carry a BOM, so a stripping bug had nothing to strip. `Test-DocHygiene.ps1` does check for a
+BOM under `.kiro/`. `traps.md` **T9** covers the related half of this — that once a BOM *is* in a
+string it is one character and not three bytes, so a regex written against the byte form never
+matches.
 
 ## git on Google Drive prints a benign error
 
@@ -140,6 +158,40 @@ Consequences for how you verify:
   to know before you report clean.
 - Never edit a note another agent is holding. Check `git status` for study notes you did not
   open before writing anything under `KTH/`.
+
+## The index is LF, this working tree mostly is, and a fresh clone here is not
+
+`core.autocrlf` is **`true`**, set at **system** level by the Git for Windows installer — not by
+this repository, and there is no `.gitattributes` at all. Measured with `git ls-files --eol`:
+
+| | LF | CRLF | mixed |
+|---|---|---|---|
+| index | 706 | 1 | 1 |
+| this working tree | 668 | 37 | 3 |
+
+So the stored repository is effectively all-LF, while the working tree is *mostly* LF for a
+reason that is easy to misread: these files were written by tools straight to disk, and git has
+not re-checked them out. That is what `git status` means by *"LF will be replaced by CRLF the next
+time Git touches it"*. The 37 CRLF files are the ones that have been through a checkout, which is
+why **`traps.md` T12 is right that this vault genuinely mixes both conventions.**
+
+**The consequence that bites: a fresh clone on this machine gets CRLF throughout, so the same
+commit is a different file on disk.** Verified on the site repo's `content` submodule, which is a
+clone of this vault: at the identical commit, HI1031's chapter 16 note is **580 CR / 580 LF**
+there and **0 CR / 580 LF** in this working tree.
+
+That cost real time. A Quartz build from the submodule crashed on that note while the same commit
+built cleanly from this working tree, and the failure was reported to the author as *the site is
+broken and the next deploy will fail*. It was not — CI checks out on Linux, where autocrlf does
+not apply, so it gets LF and builds. The forensics and the parser bug itself are in the site
+repo's `PROJECT-NOTES.md`.
+
+**So: never conclude anything about CI or the published site from a local build alone**, and
+treat a CR count as answering *"has this file been through a checkout here?"* rather than *"is
+this file damaged?"*. `Get-DeckPairCensus.ps1` reports CR characters per file for exactly the
+damage case, and on a fresh clone **every** file would report non-zero. This is the same shape as
+`traps.md` **T5**: a check that cannot pass on a fresh clone because the disk holds state the
+repository does not.
 
 ## Deletions go to Drive's cloud trash
 

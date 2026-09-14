@@ -10,7 +10,7 @@ wrong result here, and **every one is silent** — none throws, none fails a bui
 plausible wrong answer, which is worse. That is the entry criterion: if it throws, it belongs in
 `environment.md`.
 
-There are **twenty**. Do not add a twenty-first without reproducing it and recording the wrong result
+There are **twenty-one**. Do not add a twenty-second without reproducing it and recording the wrong result
 it produced. Each entry is the mechanism, the wrong answer it caused, and what to do instead; the
 forensics live in `Meta/Vault Findings & Backlog.md` and `.kiro/lessons-learned.md`.
 
@@ -117,8 +117,18 @@ character `U+FEFF`, so a regex written against the byte form never matches.
 
 **Produced:** a frontmatter matcher that failed on every file in the vault at once.
 
-**What to do:** detect with `[int][char]$raw[0] -eq 0xFEFF` and preserve it on write with
-`New-Object System.Text.UTF8Encoding($hadBom)`.
+**And the fix this entry used to recommend was itself wrong.** It said to detect with
+`[int][char]$raw[0] -eq 0xFEFF`. That only works on a string that still contains the BOM, and
+`[System.IO.File]::ReadAllText($path)` **consumes it as a preamble** — so the test never fires and
+a script that trusts it strips the BOM on write. Measured: a file whose first three bytes are
+`EF BB BF` followed by `hello` reads back with length 5 and `h` as its first character. Nothing was
+damaged only because `0 of 629` notes under `KTH/` carry a BOM.
+
+**What to do:** detect from the **bytes**, not the decoded string —
+`$b = [System.IO.File]::ReadAllBytes($p)` then
+`$b.Length -ge 3 -and $b[0] -eq 0xEF -and $b[1] -eq 0xBB -and $b[2] -eq 0xBF`. Preserve it on write
+with `New-Object System.Text.UTF8Encoding($hadBom)` and let the **encoding** emit the preamble; do
+not also prepend `U+FEFF`, or it is written twice. The working pattern is in `environment.md`.
 
 ## T10 — A Windows 8.3 short-name root path throws off `Substring` path math
 
@@ -294,6 +304,26 @@ reading the region back afterwards.
 **What to do:** when editing a card, put the **whole block** in the `oldStr` — front line through last
 body line — so a mismatch fails loudly instead of half-succeeding. Then read the block back. Card counts
 are evidence about quantity, never about structure.
+
+## T21 — `.Split("a string")` splits on every character in it, not on the string
+
+.NET Framework's `String.Split` has no overload taking a single `string`, so PowerShell 5.1
+coerces the argument to `char[]` and splits on **each character independently**. A separator like
+`" -> "` therefore splits on space, `-` and `>`, which shreds any value containing a hyphen. It
+also yields empty elements where the characters were adjacent, so the result *looks* like a
+parsing artifact rather than a wrong separator.
+
+**Produced:** an inbound-link count for HI1031's `Begrepp/` folder that reported **8 of 14 notes
+with zero inbound links**, when every one of the 14 had at least one. The edge list was built as
+`"$src -> $tgt"` and read back with `.Split(" -> ")`, so `Peer-to-peer -> Klient-server-modellen`
+became nine elements ending in `modellen`, and no target name ever matched a real note. The
+zeros were plausible for a small young folder, which is why the figure was nearly reported.
+
+**What to do:** use the PowerShell operator `-split ' -> '`, which is a regex and treats the
+whole string as one separator, or the explicit .NET overload
+`.Split([string[]]@(' -> '), [StringSplitOptions]::None)`. Better still, do not serialise a pair
+into a string and parse it back — keep the two values in a two-element array or a hashtable.
+Nothing throws in any of these cases, so the only tell is a count that is suspiciously round.
 
 ---
 

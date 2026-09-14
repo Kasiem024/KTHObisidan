@@ -32,6 +32,72 @@ result was still wrong.
 
 ---
 
+## 2026-09-14 — the documented way to preserve a BOM could never have worked
+
+**What happened:** `steering/environment.md` carried a three-line pattern that every writing script
+here was meant to copy: read the file with `[System.IO.File]::ReadAllText`, set `$hadBom` from
+whether the first character is `U+FEFF`, write back with `UTF8Encoding($hadBom)`. `traps.md` T9
+recommended the same test. It cannot work. `ReadAllText` detects the BOM and consumes it as a
+preamble, so the decoded string never begins with `U+FEFF`, `$hadBom` is always `$false`, and the
+write strips a BOM that was present. Found while writing `Format-FrontmatterTags.ps1` by testing a
+file with a real BOM rather than trusting the pattern: bytes `EF BB BF` then `hello` reads back
+with length 5 and `h` first.
+
+**Why the checks missed it:** nothing exercises it. `Test-ScriptHygiene.ps1` deliberately reports
+write calls rather than verifying rule 3, because static analysis cannot prove a write is safe.
+`Test-DocHygiene.ps1` checks for a BOM under `.kiro/` but never round-trips one through a script.
+And the population hid it: **0 of 629 notes under `KTH/` carry a BOM**, so a stripping bug had
+nothing to strip. The pattern was wrong for as long as it existed and could not have been noticed
+from the vault's own state — only from a planted fixture.
+
+**Rule added:** `environment.md` now detects the BOM from `ReadAllBytes` and says why the character
+test cannot fire, and `traps.md` T9 records that the fix it used to recommend was itself wrong.
+`Format-FrontmatterTags.ps1` uses the byte check and was verified across all four combinations of
+BOM and line ending, each round-tripping unchanged.
+
+**Lesson:** a documented code pattern is an untested assertion until something round-trips a
+fixture through it; "0 of 629 affected" is why a wrong rule can survive indefinitely, not evidence
+that it is right.
+
+---
+
+## 2026-09-14 — a check failed correctly and I drew the wrong conclusion from it
+
+**What happened:** after pushing the vault, a local Quartz build was run to confirm the site still
+built. It failed, fatally, on HI1031's chapter 16 note. That was reported to the author as *the
+vault push has broken the site and the hourly deploy will fail*. **It had not.** The crash needs
+CRLF line endings, and it only appeared because the site repo's `content` submodule is a separate
+clone on a machine where `core.autocrlf=true`, so the checkout converted the file. CI checks out
+on Linux, gets LF, and builds. A build pointed straight at the vault's own working tree processed
+560 files and exited 0. The underlying parser bug is real and now documented — a `==highlight==`
+spanning two or more CRLF line breaks kills Quartz's markdown parser — but the site was never at
+risk, and the alarm was raised before checking which of the two copies had been measured.
+
+**Why the checks missed it:** they did not. The build failed exactly as it should have, on the
+bytes it was given. Nothing was wrong with the check; the error was in the inference from it. The
+missing step was cheap and was skipped: comparing the file that failed against the same file in
+the working tree, which would have shown 580 CR against 0 CR immediately. `traps.md` T5 and the
+site repo's own T9 both already say that Windows and CI legitimately disagree about the same
+commit — the pattern was documented and I did not apply it.
+
+**Rule added:** `steering/environment.md` gains a section with the measured line-ending state of
+this repository — index all-LF, working tree 668 LF against 37 CRLF and 3 mixed, no
+`.gitattributes`, `core.autocrlf` set at system level — and the instruction never to conclude
+anything about CI or the published site from a local build alone. It also records that a CR count
+answers *"has this file been through a checkout here?"* rather than *"is this file damaged?"*,
+which corrects how `Get-DeckPairCensus.ps1`'s CR figure should be read.
+
+**Note against this file:** none of the four cases listed at the top covers this. All four are
+about a check being too permissive, a figure being wrong, a rule being incomplete, or a doc going
+stale. This was the inverse — a check that fired correctly and a conclusion that overreached it.
+That is worth adding as a fifth trigger: **a check failed and the failure was attributed to the
+wrong cause.**
+
+**Lesson:** a failure tells you about the bytes you handed the tool, not about production; before
+reporting a break, confirm which copy of the file you actually measured.
+
+---
+
 ## 2026-09-10 — a number written once and never re-derived propagated into ten rows
 
 **What happened:** the HI1031 exam-prep project kept a calibration table in

@@ -30,7 +30,8 @@ open this one, and therefore ignore `-Root`. The other two, `Test-DocHygiene.ps1
 | `Get-DeckPairCensus.ps1` | For one course chapter: how many cards of each kind are in the deck, how long is the note, and is either file silently damaged? | 0 measured / 1 file not resolvable |
 | `Test-DocHygiene.ps1` | Is the Markdown that nothing else checks still intact? | 0 clean / 1 findings |
 | `Test-ScriptHygiene.ps1` | Does this folder still follow the rules below? | 0 clean / 1 findings |
-| `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **The only script here that writes.** | 0 clean / 1 refused |
+| `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **One of the two scripts here that write.** | 0 clean / 1 refused |
+| `Format-FrontmatterTags.ps1` | Does any note declare its tags in YAML list form instead of this vault's inline form? Rewrites them. **The other writing script.** | 0 clean / 1 found or changed |
 
 `kursinfo.js`, `nastaNummer.js` and `nyKurs.js` in the same folder are **Templater user
 scripts**, called from the note templates. They are not run from a shell.
@@ -81,12 +82,22 @@ stale the moment it landed.
   so a single newline renders as a *visible* break, unlike the Markdown spec. A note hard-wrapped
   at 100 columns therefore reads as if every line ended a sentence. Turning the setting on would
   fix every such note at once and change the rendering of **354 of 541** others, which is why this
-  joins the lines instead. It is the **only writing script in this folder**: dry run by default,
+  joins the lines instead. It is the **first of two writing scripts in this folder**: dry run by default,
   `-Apply` to write, `-Filter` or `-All` required so a whole-vault reflow cannot happen by
   accident, and every file backed up first. Two guards, and only one of them is worth much — a
   structural count of headings, list rows, table rows, fences, quotes and blanks that must be
   unchanged, plus a token check that is weak by construction. Files with mixed line endings or
   flashcard-like syntax are skipped rather than guessed at. Read the header before trusting it.
+- **The audit reports `listStyleTags`** → `Format-FrontmatterTags.ps1`. It rewrites YAML list-form
+  tags back to this vault's inline form and touches nothing else. It exists because the audit
+  reported that deviation while nothing repaired it, which `conventions.md` §4 calls the worst of
+  both worlds, and because it **recurs**: twelve notes across HI1031 and HI1032 were rewritten to
+  list form on 2026-09-10 by something other than the audit, and the pre-push hook then refused the
+  push until they were fixed. It preserves tag order and every value — above all `nosr`, whose loss
+  would silently re-enter a deck's whole card set (F64), and whose *absence* on HI1031's chapter 2
+  deck is equally deliberate. Dry run by default, `-Apply` writes and backs each file up first.
+  Afterwards require `Get-SRIntegrity.ps1 -Compare` to show **every** figure unchanged: this edit
+  must not move a card, a marker or a deck's review scope.
 - **Junk in the tag pane**, or after editing `userIgnoreFilters` →
   `Get-ObsidianExcludes.ps1`. It reports what each filter matches and flags any filter
   matching **nothing**, which is the failure mode that hid a dead `Obsidian Plugins/` entry
