@@ -1,11 +1,5 @@
 ---
-tags:
-  - begrepp
-  - HI1031
-  - databaser
-  - programmering
-  - KTH
-  - year2026
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
 updated: 2026-09-09
 description: "Flashcards HI1031 kap 2, avgränsade till tentafrågorna om arkitektur: trelagersarkitektur, MVC, middleware, fördelarna med klient/server och mobila agenter."

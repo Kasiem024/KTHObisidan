@@ -1,12 +1,5 @@
 ---
-tags:
-  - begrepp
-  - HI1031
-  - databaser
-  - programmering
-  - KTH
-  - year2026
-  - nosr
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
 updated: 2026-09-09
 description: "Flashcards HI1031 kap 4, ordnade efter kursens sex tentafrågor: karakterisering av IPC-anrop, XML, UDP/TCP/multicast, portar och multicast, IPC mot distribuerade objekt, samt nätverks- och systemvirtualisering."

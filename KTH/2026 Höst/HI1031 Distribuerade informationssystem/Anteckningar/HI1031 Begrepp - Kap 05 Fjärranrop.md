@@ -1,12 +1,5 @@
 ---
-tags:
-  - begrepp
-  - HI1031
-  - databaser
-  - programmering
-  - KTH
-  - year2026
-  - nosr
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
 updated: 2026-09-09
 description: "Flashcards HI1031 kap 5, ordnade efter kursens fyra tentafrågor: hur distribuerade objekt och RMI fungerar, sockets mot distribuerade objekt, jämförelsen av sockets, RPC, RMI och webbtjänster, samt distribuerade objekt mot webbtjänster."

@@ -1,11 +1,5 @@
 ---
-tags:
-  - begrepp
-  - HI1032
-  - nätverk
-  - KTH
-  - year2026
-  - nosr
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
 updated: 2026-08-24
 description: "Flashcards HI1032 kap 2 – nätverksmodeller: protokollskiktning, TCP/IP (5 lager) och OSI (7 lager), inkapsling, PDU:er och adresser per lager."

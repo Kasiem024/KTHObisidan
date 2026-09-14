@@ -1,11 +1,5 @@
 ---
-tags:
-  - begrepp
-  - HI1032
-  - nätverk
-  - KTH
-  - year2026
-  - nosr
+tags: [begrepp, HI1032, nätverk, KTH, year2026, nosr]
 created: 2026-08-24
 updated: 2026-08-26
 description: "Flashcards HI1032 kap 25 – applikationslagret: klient-server- och P2P-paradigm, socket-gränssnitt och iterativ/samtidig server."
