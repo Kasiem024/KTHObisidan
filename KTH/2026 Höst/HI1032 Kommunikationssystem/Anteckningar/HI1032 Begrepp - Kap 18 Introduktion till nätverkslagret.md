@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags:
+  - begrepp
+  - HI1032
+  - nätverk
+  - KTH
+  - year2026
+  - nosr
 created: 2026-08-24
 updated: 2026-08-24
 description: "Flashcards HI1032 kap 18 – nätverkslagret: tjänster (packetizing, routing/forwarding), IPv4-adressering (classful/CIDR), subnätmask och NAT."

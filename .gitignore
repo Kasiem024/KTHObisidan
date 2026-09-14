@@ -7,6 +7,13 @@ litteraturlista/
 # files locally; the audit and the linter skip the folder.
 **/Filer/Canvas/
 
+# Saved copies of third-party web pages kept as course reference - articles, tutorials and
+# specifications read while studying. Same reasoning as Canvas above: the text belongs to
+# whoever wrote it, and this repository and the site built from it are public, so a verbatim
+# copy must not be committed. Keep the cleaned-up file locally and cite the URL in the note
+# that uses it. Filer/ is already outside Vault-Audit.ps1's scope and the linter's.
+**/Filer/Webbsidor/
+
 # Text-extractor plugin OCR cache: derived data regenerated on demand, not authored
 # content, and nothing a public repo should carry.
 .obsidian/plugins/text-extractor/cache/
@@ -24,3 +31,10 @@ Meta/Obsidian Plugins/Scripts/sr-baseline.json
 # the same exclusion they give .obsidian/: neither one matches .obsidian-mobile, because
 # both test for a path segment that ends exactly at ".obsidian". See F75 and current-state.
 .obsidian-mobile/
+
+# Obsidian's own trash. "Move to system trash" is off, so a deleted note lands here instead
+# of being removed, and the folder was untracked rather than ignored - so the next `git add .`
+# would have committed it. This repository and the site built from it are public, which makes
+# that worse than untidy: a note deleted on purpose would be republished. Deletions belong in
+# Google Drive's cloud trash, per steering/environment.md.
+.trash/

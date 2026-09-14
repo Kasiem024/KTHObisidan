@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, HI1032, nätverk, KTH, year2026]
+tags:
+  - begrepp
+  - HI1032
+  - nätverk
+  - KTH
+  - year2026
+  - nosr
 created: 2026-08-24
 updated: 2026-08-24
 description: "Flashcards HI1032 kap 23 – transportlagret: process-till-process, portnummer, förbindelse(lös), sliding window och Stop-and-Wait/Go-Back-N/Selective-Repeat."

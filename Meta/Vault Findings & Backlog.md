@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F75): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F79): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -3000,3 +3000,407 @@ confirming the glob expanded (T11). Line endings were checked before editing and
 file is CRLF (2 922) and `Vault Standard.md`, `README.md`, `product.md` and `environment.md` are all
 LF — the mixed convention T12 exists for. Nothing under `KTH/` was touched, so no flashcard or
 `<!--SR:-->` data was at risk and no `Get-SRIntegrity.ps1` baseline was needed.
+
+**Addendum, same day — the Git plugin went too, for the same reason.** `obsidian-git` was configured
+to do nothing automatic: `autoSaveInterval`, `autoPushInterval` and `autoPullInterval` all `0`,
+`autoPullOnBoot` and `autoBackupAfterFileChange` both `false`. The 75 uncommitted paths in the working
+tree were the visible consequence — nothing had been committing. **No document in the vault referenced
+it**, so removing it created no dead reference. The author's workflow is the git CLI or an agent, and
+on mobile the plugin had just been disabled along with twelve others.
+
+Its one active behaviour was `refreshSourceControlTimer: 7000`, polling git status every seven seconds
+against a 445.9 MB repository on Google Drive. Whether that runs with the source-control view closed
+was **not** established, so it is recorded as a cost of unknown size rather than a measured one.
+
+**Four footprints, all removed in one change**, Obsidian confirmed closed first and everything backed
+up to `%TEMP%\git-plugin-removal-2026-09-08-212048` before anything moved: the plugin folder (moved out,
+not deleted, so nothing entered Drive's cloud trash); `community-plugins.json` **14 to 13** entries,
+format preserved; `hotkeys.json` **64 to 62** keys, dropping the two deliberate bindings
+`obsidian-git:commit-specified-message` (Alt+Mod+C) and `obsidian-git:open-git-view` (Alt+Mod+V), with
+its zero CRLF count preserved; and the leftover `.obsidian/plugins/obsidian-git/obsidian_askpass.sh`
+line in `.git/info/exclude`. `.obsidian/plugins/` holds 13 folders matching the 13 ids.
+
+**Two references were left on purpose.** `workspace.json` and `workspace-mobile.json` still name the
+plugin's view. Both are app-generated layout state that Obsidian rewrites on launch, and hand-editing
+them risks the saved layout for no gain. `.git/index` also still lists the four tracked plugin files;
+that clears when the deletion is committed.
+
+**Verified.** `Vault-Audit.ps1` clean exit 0, `Test-DocHygiene.ps1` clean exit 0, `markdownlint-cli2`
+540 files 0 issues exit 0. A full-text scan of the vault for the string `obsidian-git`, excluding
+`.git/objects`, returns only those three expected files.
+
+**Second addendum, same evening — a plugin census, two more removals and one setting.** Every remaining
+plugin was checked for evidence of use rather than judged by name, which changed the answer twice.
+
+**LanguageTool removed, on privacy grounds rather than performance.** Its config was
+`serverUrl: https://api.languagetool.org` with `shouldAutoCheck: true` and `autoCheckDelay: 3000`, so
+note text was being sent to a third-party API three seconds after the author stopped typing, silently
+and by default. It was the only plugin in the vault that transmitted note content off the machine.
+Obsidian's native spellcheck is already on (`"spellcheck": true`) with a 150-entry Swedish custom
+dictionary, so nothing was lost. Three hotkeys went with it —
+`ltaccept-suggestion-1`, `-2` and `-3`.
+
+**Settings Search removed as superseded by core.** Obsidian 1.13.7's asar contains `Search settings`
+(4 occurrences) and `searchSettings` (8), and the plugin had **no `data.json`**, meaning it had never
+been configured. The asar strings are suggestive rather than conclusive; the removal is trivially
+reversible if the native search turns out not to cover it.
+
+**Omnisearch kept but fixed:** `useCache` **false to true**. It had been rebuilding its entire index at
+every launch, over the notes plus 17.6 MB of extracted PDF text. `PDFIndexing` stays `true` because
+core search cannot read PDF contents and the literature is the reason the plugin is there.
+`httpApiEnabled` stays `false`, and `DANGER_forceSaveCache` was deliberately left off.
+
+**Three plugins cleared by the census, against expectation.** *Style Settings* is not decoration: it
+holds 3 399 characters of configuration for the Prism theme, which `appearance.json` confirms is active
+(`"cssTheme": "Prism"`), so removing it would revert the theme to defaults. *Icon Folder* carries
+deliberate rules keyed to this vault's folder vocabulary — `Litteraturlista`, `Anteckningar`, `Begrepp`,
+`Excalidraw`, `Kurs Mapp Mall` — though it is worth knowing it costs about 60 MB of icon packs under
+`.obsidian/icons`, of which `tabler-icons.zip` is 29.6 MB. *Advanced Tables* earns its place on
+measurement: **85 of 537 study notes contain a table, 445 table rows in total**.
+
+**Still open, by the author's choice:** Excalidraw (5.1 MB, the largest remaining plugin, serving 17
+drawings that all belong to one finished 2024 course) and Tag Wrangler (131 KB, never configured).
+
+**Two references left untouched on purpose:** `.obsidian/plugins/obsidian-style-settings/main.js` and
+`.obsidian/themes/Prism/theme.css` both mention the removed plugins. Both are third-party files, and the
+CSS is inert once the plugin is gone.
+
+**Net effect across this entry and both addenda: 15 enabled plugins to 11.** Removed in order — Linter,
+Git, LanguageTool, Settings Search.
+
+**Verified.** `Vault-Audit.ps1` clean exit 0, `Test-DocHygiene.ps1` clean exit 0, `markdownlint-cli2`
+540 files 0 issues exit 0. `community-plugins.json` **13 to 11** with format preserved; `hotkeys.json`
+**62 to 59** keys; `.obsidian/plugins/` holds 11 folders matching the 11 ids; and a scan of every JSON
+file under `.obsidian/` for either plugin name returns nothing.
+
+### F76. ✅ DONE (2026-09-08) — a review of the theme and its settings, whose headline finding was wrong and whose four real defects were underneath it
+
+**Why this was done.** The author asked for a thorough review of the Prism theme, the Style Settings
+configuration and the hand-written CSS snippet, and explicitly asked that every claim be adversarially
+reviewed by subagents before anything was changed. Two independent reviewers were commissioned in
+parallel: one briefed to **refute** nine specific claims, one briefed to review the same files fresh
+without being shown them. Both were read-only and both had a stated length cap. That instruction is
+the reason this entry is not simply wrong.
+
+**The theme itself is healthy and stays.** `damiankorcz/Prism-Theme`, **503 stars, MIT, not archived**,
+and the installed **3.8.0 is the current release** (2026-01-01). `minAppVersion` 1.11.3 against the
+app's 1.13.7. Cadence is slowing — 3.5.x mid-2024, 3.6.0 Oct 2024, 3.7.0 Oct 2025, 3.8.0 Jan 2026 —
+with 11 open issues, so it is alive rather than actively developed. `theme.css` is **1 200 419 bytes**
+with **1 134 custom-property declarations of 365 distinct names** and one `@settings` block.
+
+**The headline finding was wrong, and is recorded in `.kiro/lessons-learned.md`.** I reported that
+`"monospaceFontFamily": "Inter"` was making every code block render proportionally, having traced
+Obsidian's cascade
+(`--font-monospace: var(--font-monospace-override), var(--font-monospace-theme), var(--font-monospace-default)`)
+and confirmed Prism sets only the theme layer, to `"JetBrains Mono"`. The mechanism was right; the
+conclusion was not. **Neither Inter nor JetBrains Mono is installed** — 378 entries in
+`HKLM:\...\CurrentVersion\Fonts`, zero matches for either, while Consolas (4), Courier New (6) and
+Lucida Console (1) are present. `font-family` is a fallback stack, so code was already monospaced.
+The adversarial reviewer flagged exactly this dependency.
+
+**A second claim was refuted outright.** I had written that the snippet "fights the theme" over
+highlights, caret and active line. `theme.css` contains **0** occurrences of `.cm-content` and **0** of
+`.cm-active.cm-line`, and its single `caret-color` rule targets a Quiet Outline input, not the editor
+caret — so the theme styles neither. On highlights the theme's rule is
+`body:not(.pt-disable-mark-highlight-styling) mark[class]`, which **outspecifies** the snippet's
+`.markdown-preview-view mark`; the snippet wins only for classless `<mark>`, which is what `==` produces.
+
+**Four defects were real and are fixed.**
+
+1. **`monospaceFontFamily` "Inter" to ""**. Currently inert, but it is a *latent* defect: the moment
+   Inter is installed — which the author evidently intends, since it is also the interface and text
+   font — code would silently become proportional. Cleared, so the cascade falls to Prism's
+   JetBrains Mono and then to Obsidian's default mono stack.
+2. **Style Settings held 21 orphaned keys of 54** — 17 prefixed `shimmering-focus`, 4 `TokyoNight`,
+   neither theme installed (`themes/` holds only Prism). Now **33 keys, all `obsidian-prism-theme`**.
+   One consequence had been invisible: the `active-line-highlight` configured for Shimmering Focus did
+   nothing, which is why the snippet was doing that job.
+3. **H1 and H2 were the same colour.** Both were `var(--interactive-accent-text)`, as was
+   `inline-title-color-dt`, while H3 to H6 were cyan, mint, green and yellow — a fully differentiated
+   scale except at the two levels that matter, made worse by this vault's rule of one H1 matching the
+   filename plus the inline title, so the same text appeared three times in one colour. H2 is now
+   `var(--color-orange-text)`, chosen from the theme's own `@settings` option list and avoiding every
+   hue already in use (red is bold, mint italic, purple external links).
+4. **The snippet styled headings in editing view only.** Its gradient underline targeted
+   `.HyperMD-header-1` to `-6`, which is source mode; `theme.css` has **0** `HyperMD-header` and **0**
+   `border-image`, so reading view had no equivalent. Reading-view selectors added, and the same was
+   done for `mark`. The snippet went **1 331 to 1 707 bytes**, braces balanced.
+
+**Two findings came from the fresh reviewer, not from me.** The snippet was styling
+`cm-formatting-highlight`, meaning the `==` delimiters themselves got a border and 2px padding, which
+shifts line height while typing — that selector is now dropped. And `app.json`'s
+`spellcheckDictionary` was corrupt: one entry contained an embedded newline so it could never match a
+token, alongside 22 exact duplicates. Repaired from **152 to 130 entries** with **zero distinct words
+lost**, by splicing only that array and leaving every other byte untouched.
+
+**`file-line-width` 700 to 950**, the one subjective change. At `baseFontSize: 27` a 700px measure
+gives roughly 40 to 50 characters per line; the reviewer's typographic estimate was the lower end. The
+font size itself was left alone as a deliberate choice.
+
+**Deliberately not changed.** `interfaceFontFamily` and `textFontFamily` remain `"Inter"` — inert
+today, correct the moment the font is installed, and changing them would alter the whole UI on a guess.
+Prism's `pt-file-explorer-folder-icon` overlaps the Icon Folder plugin, but the plugin's rules name
+specific folders (`KTH`, `Atlas`, `Meta`, `Anteckningar`, `Begrepp`, `Litteraturlista`) while the
+theme's icon is generic, so they are complementary rather than duplicated; the reviewer marked an
+on-screen collision as unverified and it needs the author's eyes, not a blind toggle. The external
+link value `var(--color-purple-text-hsl)` looks wrong and is correct — Prism wraps that variable in
+`hsl()`.
+
+**Verified.** `Vault-Audit.ps1` clean exit 0, `notesInScope=519` of 693. `Test-DocHygiene.ps1` clean
+exit 0. `markdownlint-cli2` 542 files, 0 issues, exit 0. `Get-ObsidianExcludes.ps1` exit 0, "every
+`Filer/` file is excluded and no filter is inert" — run because `app.json` was rewritten. That rewrite
+was proved safe by diffing against the backup: **10 of 10 keys present, key sets identical, zero
+non-dictionary keys changed, and all seven `userIgnoreFilters` byte-identical**, which matters because
+the audit's `tagIndexNotExcluded` check depends on them. All four edited files kept their original
+encoding and line endings. Every original is in `%TEMP%\style-fixes-2026-09-08-224155`, and
+`.obsidian/` is tracked, so `git checkout -- .obsidian/` reverts the lot.
+
+### F77. ✅ DONE (2026-09-09) — the one folder nothing checked, and the debris that had been accumulating in it
+
+**Why this was done.** After a session that removed four plugins and reworked the theme, the question
+was what of it should stay in the repository rather than in a transcript. The answer was one script,
+three documentation facts, and twelve dead hotkeys removed. The reasoning for what was **not** added is
+recorded below, because deciding against a doc is a decision that gets skipped.
+
+**The gap.** `.obsidian/` is **217 tracked files** that decide whether Obsidian works, and nothing
+looked at it. `Vault-Audit.ps1`'s `InScope` returns false for any path containing `\.obsidian\`,
+`.markdownlint-cli2.jsonc` lists `.obsidian/**` under `ignores`, and `Test-DocHygiene.ps1` reads
+`.kiro/` only. Removing four plugins the previous day left two classes of debris that had to be found
+by hand each time, because Obsidian ignores a hotkey whose command no longer exists and Style Settings
+ignores a key whose section is gone. Neither ever complains.
+
+**New: `Meta/Obsidian Plugins/Scripts/Get-ObsidianConfigAudit.ps1`** — pure ASCII, LF, no BOM,
+read-only, `-Root`, exit 0 clean / 1 findings. Five findings, all of them drift *inside* the
+repository and therefore reproducible anywhere: `enabledNoFolder`, `deadHotkey`, `orphanSetting`,
+`missingTheme`, `missingSnippet`. Everything machine-specific is a **note** that never touches the exit
+code — fonts named in `appearance.json` that are not installed, plugin sizes, which plugins load on
+mobile, and any `data.json` naming an http(s) endpoint. That split is deliberate and is what makes the
+script CI-safe: a font check would fire on every Linux runner, which is the F5 mistake in a new place.
+
+**It found twelve dead hotkeys on its first run, one of them mine.** `hotkeys.json` went **59 to 47**
+keys. Five owners: `darlal-switcher-plus` (2), `highlightr-plugin` (3), `quick-latex` (5),
+`obsidian-annotator` (1) — all removed long ago — and **`obsidian-linter:lint-file`**, left behind by
+the Linter removal in F75 the day before. I had checked `hotkeys.json` when removing Git and
+LanguageTool and never checked it for the Linter, so the debris was created and missed inside the same
+session that was auditing for debris. The removal was verified by asserting that no key outside the
+five dead owners disappeared: **0 unexpected removals**, JSON still parses, line endings unchanged.
+
+**Three of its first fifteen findings were false positives, and fixing that changed the design.**
+`markdown:toggle-preview`, `markdown:add-metadata-property` and `open-with-default-app:show` are
+**core** commands, and they are **not** keys in `core-plugins.json` — verified by finding each id in
+`obsidian-1.13.7.asar` while the five community ids appear there zero times. A hardcoded namespace list
+would rot, so the owner is now accepted if it is an installed plugin, a key in `core-plugins.json`, or
+one of a short built-in list; and where the app bundle is present it settles anything that list missed
+and **reports the gap as a note telling you to extend the list**. That mechanism immediately earned
+itself: it caught `window:zoom-in`, `zoom-out` and `reset-zoom`, which the list did not know. This
+matters more than the three false positives did — `Test-SRIntegrity.ps1` exists partly to assert that a
+guard does *not* fire on ordinary use, because a check that cries wolf gets switched off.
+
+**Self-tested, 7 of 7.** A throwaway vault was built under `%TEMP%` and the script pointed at it with
+`-Root`: a clean baseline must report clean and exit 0, one planted defect per check must fire and exit
+1, and a note-only defect must be reported while the exit code stays 0. The baseline control is the
+check that mattered — the first run of the harness had a bug that created no plugin folders at all, so
+every fixture failed for the wrong reason and five "passes" would have been meaningless without it.
+The bug was `@($text | ConvertFrom-Json)` returning one element that is itself the array, now recorded
+in `environment.md`.
+
+**Two facts added to `.kiro/steering/environment.md`.** PowerShell 5.1's `>` writes **UTF-16LE with a
+BOM**, so a captured file is not UTF-8 and a reader that expects it fails outright; `Get-Content`
+auto-detects and hides this, and decoding the file as ANSI yields interleaved nulls that count as zero
+non-ASCII characters and read as normal. It cost a step twice in one session. And a **What is not
+checked** paragraph recording that `.obsidian/` was covered by nothing until today, what the new script
+covers, and where it stops: consistency, not correctness.
+
+**Registered per `scripts.md` rule 5** in the same change — the table row, the "which one to reach for"
+entry, and a row in "Figures these scripts own" for the plugin, hotkey and Style Settings counts.
+`Test-ScriptHygiene.ps1` reports **clean, 14 files, 67 checks** (was 61), and the new script does not
+appear in its "files that write something" list, which is the evidence that it is read-only.
+
+**Deliberately not added, with reasons.**
+
+- **No nineteenth trap.** The font-that-is-not-installed mechanism is silent and did produce a wrong
+  answer, so it qualifies on `traps.md`'s own terms — but it is already in
+  `.kiro/lessons-learned.md`, and `traps.md` warns that a fact living in two always-on files drifts.
+  One home, not two.
+- **No `Test-ObsidianConfigAudit.ps1`.** The two existing harnesses guard the standard and the review
+  schedule. A harness for a one-day-old script is speculative; the self-test above is recorded here
+  instead, and it is reproducible from this entry. If the script grows a second reader, it earns one.
+- **No check in `Vault-Audit.ps1`.** Teaching the audit to read `.obsidian/` would change what
+  `notesInScope` means, and that figure is quoted in four documents. A separate `Get-*` script keeps
+  the audit's population intact.
+- **No new rule in `Meta/Vault Standard.md`.** Nothing here is a note-authoring convention, so
+  `add-a-convention` does not apply.
+
+**Found and deliberately not touched.** `Test-DocHygiene.ps1` now reports one finding:
+`.kiro/reports/rest.md`, 24 lines with trailing whitespace and 412 CR characters. It is untracked, 21 KB,
+and its content is a scraped web page — "Skip to content", "Menu", "Menu" — so it is a **verbatim
+artifact in the wrong folder**, not an authored report. `Test-DocHygiene.ps1` already exempts verbatim
+material under `.kiro/research/` from whitespace checks precisely so it can be kept byte-exact.
+Stripping its whitespace would defeat that; moving it to `.kiro/research/` would fix the finding and be
+correct. It was written 26 minutes before this entry by another agent working in this tree, so it is
+reported rather than moved. **Until it is dealt with, `Test-DocHygiene.ps1` exits 1**, and a
+permanently red check is one that gets ignored.
+
+**Verified.** `Vault-Audit.ps1` clean exit 0, `notesInScope=522` of 697. `Test-ScriptHygiene.ps1` clean
+exit 0, 67 checks. `markdownlint-cli2` 545 files, 0 issues, exit 0. `Get-ObsidianConfigAudit.ps1` exit
+0 against the live vault after the hotkey cleanup, and 7 of 7 on its self-test.
+`Test-DocHygiene.ps1` exits 1 on the pre-existing file above and on nothing that was edited here.
+
+### F78. ✅ DONE (2026-09-09) — notes that read as broken prose, a wrong diagnosis, and a safety check that could not fail
+
+**What was reported.** Seven HI1031 exam-answer notes showed line breaks in the middle of sentences
+**in reading view**, not just while editing.
+
+**My first diagnosis was wrong, and the correction is the whole finding.** I had said a single newline
+inside a paragraph renders as a space, so the hard wrapping could not be visible when reading. That is
+the Markdown spec and it is not what Obsidian does. From the defaults object in
+`obsidian-1.13.7.asar`:
+
+```text
+ME={alwaysUpdateLinks:!1, spellcheck:!0, readableLineLength:!0, strictLineBreaks:!1, ...}
+```
+
+`strictLineBreaks` is **`false`** by default, and it is **absent from `.obsidian/app.json`**, so this
+vault runs on that default — every single newline renders as a **visible** break. The author was right
+and the spec was irrelevant.
+
+**The one-setting fix was measured and rejected.** Turning `strictLineBreaks` on would have fixed all
+seven notes and changed the rendering of **354 of 541** other notes at the same time, since that many
+contain at least one paragraph of two or more consecutive prose lines. A targeted reflow was the
+smaller change.
+
+**New: `Meta/Obsidian Plugins/Scripts/Format-NoteWrapping.ps1`** — the **first writing script** in that
+folder, which is why `scripts.md` rule 3 existed before anything obeyed it. Dry run by default,
+`-Apply` to write, `-Filter` or `-All` **required** so a whole-vault reflow cannot happen by accident,
+every file backed up before it is touched, BOM and line endings preserved. It joins two kinds of break:
+consecutive unindented prose lines, and an indented continuation line under a list item. The second
+dominates — Kap 01 had 41 plain paragraphs against 148 list lines and 235 indented continuations, so a
+paragraph-only reflow would have fixed about a sixth of what the author was seeing.
+
+**An adversarial review found four bugs before it touched a note, and the headline one was mine.**
+
+1. **The token-identity check was vacuous.** Every join is `previous + ' ' + line`, so the
+   whitespace-split token sequence is identical *by construction* and the check can never fail on a
+   join. I had described it as what made the script safe to run over notes nobody had read. It is now
+   documented as weak, kept only to catch a coding error that drops text, and **replaced as the real
+   guard by a structural count** — headings, list items, table rows, delimiter rows, fence lines,
+   blockquote lines, horizontal rules and blank lines must all be unchanged or the file is refused.
+   That check would have caught bugs 2 and 3; the token check could not. **The rule this broke was
+   already on file** — `.kiro/lessons-learned.md` has carried `a check that cannot fail is not a check`
+   since 2026-08-19, and I had honoured it that same morning for `Get-ObsidianConfigAudit.ps1` with a
+   seven-assertion both-directions self-test. I applied it to the script and not to the guard inside it.
+2. **Tables without leading pipes were destroyed.** The block test was `^\s*\|`, so a GFM table
+   written `Kolumn A | Kolumn B` with a `--- | ---` delimiter was classed as prose and collapsed into
+   one line. Table regions are now found from the delimiter row outwards, which catches both forms.
+3. **Fence inversion.** Any `~~~` or ``` line toggled the in-fence flag, so a `~~~` inside a ```
+   block ended the block and the code lines after it were joined as prose. The opening marker is now
+   remembered and only a matching marker closes it.
+4. **Mixed line endings were normalised**, turning a 300-line reflow into a whole-file diff. Such
+   files are now **skipped and named** rather than rewritten.
+
+Two further limits were confirmed rather than fixed, because neither corrupts anything: a blockquote's
+lazy continuation line is left hard-wrapped, and a Dataview inline field (`key:: value`) is
+indistinguishable from a single-line flashcard, so it triggers the same skip. Both are stated in the
+script header. The reviewer's verdict was to apply by `-Filter` and **never** whole-vault.
+
+**Nine regression fixtures**, one per bug plus the scope guard, idempotency, and both join kinds:
+**9 passed, 0 failed**. Idempotency matters here — a second `-Apply` produces zero joins and a
+byte-identical file.
+
+**Applied to seven files, 2 354 joins.** Not six: `Kap 10 Peer-to-peer-system` appeared during the
+session, which is the vault-changes-under-you case `environment.md` documents. Line counts fell 751 to
+404, 315 to 218, 781 to 400, 593 to 254, 978 to 471, 740 to 358 and 658 to 357. Six of the seven were
+**untracked**, so git could not have restored them and the script's own backup was the only rollback —
+`%TEMP%\reflow-applied-2026-09-09-131838`, all seven originals.
+
+**Verified.** `Get-SRIntegrity.ps1 -Save` before and `-Compare` after: **clean, exit 0** — counts,
+per-file counts, deck scope and marker placement all match. `Vault-Audit.ps1` clean exit 0,
+`notesInScope=523` of 698. `markdownlint-cli2` 546 files, 0 issues. `Test-ScriptHygiene.ps1` clean exit
+0, **73 checks** — it caught the new script missing from `scripts.md` on the first run, which is rule 5
+working. Per file against its backup: token sequence identical, non-whitespace character count
+identical, and line endings preserved in the direction each file already had (four LF files stayed LF,
+three CRLF files stayed CRLF). The reflowed text was read back rather than assumed.
+
+**Expect very long lines in the editor.** Longest line per file after reflow runs from 394 to 1 052
+characters. That is the point — one line per paragraph — but it is a visible change if you edit these
+files by hand.
+
+### F79. DONE (2026-09-09) - the fonts the config had been asking for, a scraped article given a home, and my own audit reporting a font as missing while it rendered
+
+Three related pieces of cleanup, and one of them is a defect in a script written earlier the same
+day.
+
+**1. Inter and JetBrains Mono are now installed.** F76 recorded that `appearance.json` named
+`Inter` for both `interfaceFontFamily` and `textFontFamily` while the font was absent, so the
+`font-family` stack fell through and the setting was inert. Rather than clear the fields, the fonts
+were installed from their upstream releases:
+
+| Family | Source | Release | Faces installed |
+|---|---|---|---|
+| Inter | `rsms/inter` | v4.1, 2024-11-16 | 18 |
+| JetBrains Mono | `JetBrains/JetBrainsMono` | v2.304, 2023-01-14 | 16 |
+
+**The variable font would not have worked, and checking rather than assuming is what caught it.**
+Inter 4.x ships `InterVariable.ttf`, which declares its family as **`Inter Variable Text`**, not
+`Inter`. Installing it would have left `"interfaceFontFamily": "Inter"` matching nothing while
+appearing to be fixed. The static faces in `extras/ttf/` declare `Inter`, so those were installed.
+`InterDisplay-*.ttf` declares `Inter Display` and was skipped as a separate family. Family names
+were read from each file with `System.Drawing.Text.PrivateFontCollection` before anything was
+copied.
+
+Installed **per-user** - copied to `%LOCALAPPDATA%\Microsoft\Windows\Fonts` and registered under
+`HKCU:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts` - so no administrator rights were
+needed and the whole thing is reversible by deleting 34 registry values and 34 files.
+`AddFontResourceW` plus a `WM_FONTCHANGE` broadcast made them available without signing out.
+
+**A naming detail worth recording, because the first two attempts were wrong.** The registry value
+name is the name Windows shows in a font picker, and it must be unique per face. Deriving it from
+the family name GDI reports produces `Inter Black Black (TrueType)`, because GDI reports
+weight-specific families; worse, `Inter-Bold.ttf` and `Inter-Regular.ttf` both report family
+`Inter`, so **Bold and BoldItalic silently overwrote Regular and Italic and only 30 of 34 faces
+ended up registered**. The names are now built from the filename instead - `Inter Bold Italic
+(TrueType)` - giving 34 distinct entries for 34 files, verified by asserting that no font file
+lacks a registry entry. `monospaceFontFamily` was then set to `JetBrains Mono`, having been left
+empty by F76.
+
+**2. `Get-ObsidianConfigAudit.ps1` read only `HKLM` and therefore lied.** Immediately after the
+install it still reported `fontNotInstalled` for `Inter`, because a per-user install writes to
+`HKCU` and the check enumerated the machine key alone. The script now reads **both** scopes, and
+distinguishes them: a font found only in `HKCU` is reported as `fontPerUserOnly`, which is real
+information rather than noise - another Windows user or a fresh profile on this machine would fall
+through the stack exactly as before. Both remain **notes**, never findings, because a font is
+machine-specific state and must not change a CI exit code.
+
+Verified in **three** directions on throwaway copies of `.obsidian/`, because the failure mode this
+morning was a guard that could not fail: all three slots set to machine-wide fonts produces neither
+note; a font absent from both registries produces `fontNotInstalled` **naming that font**; and
+`Inter` plus `JetBrains Mono` produce `fontPerUserOnly` naming each. **7 assertions, 7 passed.**
+`Test-ScriptHygiene.ps1` clean afterwards, 15 files, 73 checks.
+
+**3. `.kiro/reports/rest.md` was a raw web scrape, and is now a proper reference note.** 413 lines
+of `restfulapi.net`'s *What is REST?* with **zero headings, zero links and no frontmatter** - the
+substance was interleaved with navigation, roughly twenty `What is this? / Report Ad` pairs, 28 blog
+comments, a footer, an author bio and a "DO NOT SELL OR SHARE MY PERSONAL INFORMATION" line. It had
+been failing `Test-DocHygiene.ps1` on 24 lines of trailing whitespace since it appeared.
+
+It is **21 068 bytes reduced to 10 899**, restructured under 19 headings with the JSON example in a
+fenced block, and moved to
+`KTH/2026 Host/HI1031 .../Filer/Webbsidor/REST - restfulapi.net.md`, carrying a provenance block
+that names the author, the URL and the date, and states plainly that the words are his. The
+original scrape is kept outside the vault at `%TEMP%\rest-original-scrape-2026-09-09-142531.md`.
+
+**Why that folder, and a new `.gitignore` rule.** `Filer/` is outside the audit's scope and the
+linter's, but it is **not** gitignored - only `**/Filer/Canvas/` and `litteraturlista/` are. A
+cleaned copy placed anywhere else under `Filer/` would have been committed to a public repository
+and published by the site built from it, which is not acceptable for someone else's article. So
+`**/Filer/Webbsidor/` was added to `.gitignore`, mirroring the Canvas rule and its reasoning, and
+`git check-ignore -v` confirms the new file is ignored by that line. The note links to
+`HI1031 Tentafragor och Svar - Kap 09 Web services` and `HI1031 Begrepp - Kap 09 Web services`,
+both confirmed to resolve, and says explicitly that the **book** is the exam source and the article
+is only a second explanation - REST already appears 48 times in the exam-answer note, 38 times in
+the deck and 311 times in the book's converted text, so this adds no study scope.
+
+**Verified.** `Test-DocHygiene.ps1` now exits **0** - `RESULT: clean - no encoding, whitespace,
+corruption or dead-reference findings` - closing a failure that had been outstanding all session.
+`Vault-Audit.ps1` clean, `notesInScope=523` of 698. `markdownlint-cli2` 546 files, 0 issues.
+`Get-ObsidianConfigAudit.ps1` exit 0. The new file is LF, no BOM, no trailing whitespace.

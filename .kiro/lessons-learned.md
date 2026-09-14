@@ -32,6 +32,58 @@ result was still wrong.
 
 ---
 
+## 2026-09-10 — a number written once and never re-derived propagated into ten rows
+
+**What happened:** the HI1031 exam-prep project kept a calibration table in
+`.kiro/hi1031-tenta-reentry.md` mapping each chapter to its number of exam questions, card count and note
+length. The chapter 1 row said **4 questions**. The exam file has **5** — the fifth asks what role IP and
+RFCs played in the development of distributed systems. The wrong figure survived every context window for
+the whole project and was used to derive that chapter's budget, its "lines per question" ratio, and by
+extension the formula calibrated against all ten rows. It was found only when a reviewer was asked, in
+passing, to confirm that question 5 was answered. It was: the note had covered all five all along. **The
+material was right and the measurement of it was wrong** — the least visible way for a figure to be false.
+
+**Why the checks missed it:** nothing checks a figure in a `.kiro/` doc against the source it summarises.
+`Vault-Audit.ps1` does not read `.kiro/`; `Test-DocHygiene.ps1` checks encoding, whitespace and dead
+script references there, not arithmetic. And the number was self-consistent: 4 questions × ~70 lines
+matched the note's actual length closely enough that no downstream figure looked absurd. A wrong number
+that produces plausible derived numbers has no symptom.
+
+**Rule added:** two, both in `.kiro/hi1031-tenta-reentry.md`. The calibration table's chapter 1 row is
+corrected to 5 questions. And more generally: **a count of things in an external file is re-derived from
+that file, not copied forward.** The exam questions are read verbatim at the start of each chapter anyway —
+the count must come from that reading, not from the table the reading is compared against.
+
+**Lesson:** a figure that summarises another file needs a stated source and a re-derivation, because
+self-consistency is not evidence — the surrounding numbers will happily agree with a wrong one.
+
+---
+
+## 2026-09-10 — the flashcard rule protected the data and blocked the owner
+
+**What happened:** `conventions.md` §1 said "never strip an `<!--SR:-->` comment" without qualification.
+During a review of all ten HI1031 chapters, seven cards in chapter 1's deck were found to serve no exam
+question — but that deck was the only one carrying review history, so the rule appeared to forbid removing
+them. The question was put to the author, who answered that history is not a reason to keep a card:
+*"bry dig inte om ett kort har historik, om den inte är nödvändig kastar du den."* The rule had been read
+as protecting the schedule from the author's own editorial decisions, which was never its purpose.
+
+**Why the checks missed it:** this is not a check failure — `Get-SRIntegrity.ps1` would have caught any
+*accidental* marker loss correctly. The failure was in the rule's wording. It described **what** must not
+happen (markers disappearing) without saying **why** (incidental loss from sweeps, `--fix` runs and
+regexes), so it read as an absolute prohibition and cost a round trip to the author.
+
+**Rule added:** `conventions.md` §1 now has a named carve-out separating **incidental** loss, still
+forbidden, from **authorised editorial removal**, allowed — with the three things that still apply:
+delete the whole card block including its marker, prove the arithmetic from the per-file `-Compare`
+lines, and require `raw_srComments` to fall by exactly the number of markers removed. It also says not to
+ask again.
+
+**Lesson:** a prohibition that does not say what it is protecting against will be over-applied; write the
+failure mode into the rule, not just the forbidden outcome.
+
+---
+
 ## 2026-09-07 — a document can be well-researched, confidently written and still unusable
 
 **What happened:** two long Markdown documents arrived in `Downloads` and were considered as a skill or a
@@ -302,3 +354,74 @@ convenience, not truth.
 
 **Lesson:** when a number in a doc disagrees with a fresh measurement, fix the doc — do not
 adjust the measurement to match.
+
+## 2026-09-08 - a config value is not a rendered result, and I asserted the consequence without checking the precondition
+
+**What happened:** reviewing this vault's theme, I found `"monospaceFontFamily": "Inter"` in
+`appearance.json` and reported, as the review's headline defect, that every code block was rendering
+in a proportional font. I traced Obsidian's cascade correctly
+(`--font-monospace: var(--font-monospace-override), var(--font-monospace-theme), ...`), confirmed the
+setting populates the override, and confirmed Prism only sets the theme layer. The reasoning was
+sound and the conclusion was wrong: **Inter is not installed.** The Windows font registry holds 378
+entries and contains no Inter and no JetBrains Mono. `font-family` is a *fallback stack*, so an
+absent font is skipped, and code was already rendering in a real monospace font.
+
+**Why the checks missed it:** nothing was checking. The claim rested on a config file agreeing with a
+CSS cascade, and both agreed. The missing step was the one fact outside both files - whether the
+named font exists on the machine. My first attempt to check it enumerated `C:\Windows\Fonts` with
+`Get-ChildItem` and returned **zero matches for every candidate including Consolas**, which was an
+obviously broken measurement I nearly accepted as "no mono fonts installed"; the registry key
+`HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts` is the reliable source.
+
+**What caught it:** an adversarial subagent, briefed to refute rather than confirm, and told which
+claim to attack hardest. It confirmed the mechanism and then wrote the sentence that mattered:
+"conclusion holds only given Inter present". The same review refuted a second claim outright - that
+the theme styled the caret and active line, when it styles neither - and overstated a third by 3x
+(1 134 custom-property *declarations* of only 365 distinct names).
+
+**Lesson:** when a finding is "setting X causes visible effect Y", the setting is only half the
+evidence. Name the precondition that turns a value into a result - is the font installed, is the
+plugin enabled, is the selector reachable in this view - and check that too. And when a measurement
+returns an implausible zero, the measurement is the suspect, not the world.
+
+## 2026-09-09 - the "test that a check fails" rule, obeyed for the script and skipped for its guards
+
+**This is a recurrence.** `## 2026-08-19 - a check that cannot fail is not a check` already records the
+rule: test that a check *fails*, not only that it passes. Three weeks later I broke it in a new place,
+and on the same day I had honoured it properly elsewhere.
+
+**What happened:** `Format-NoteWrapping.ps1` joins hard-wrapped lines in study notes. Its header
+described the property that made it safe as a token-identity check - build the whitespace-insensitive
+token sequence before and after, refuse to write if they differ. An adversarial subagent needed one
+line to dismantle it: every join is `previous + ' ' + line`, so the token sequence is identical **by
+construction**. The guard could not fail on a join. It only ever protected against a coding error that
+dropped text outright.
+
+**Why the existing rule did not save me:** I applied it at the wrong granularity. Earlier the same day
+I wrote `Get-ObsidianConfigAudit.ps1` and tested it in both directions properly - a clean fixture must
+exit 0, one planted defect per check must exit 1, seven assertions, all passing. So the habit was
+active. But I tested the *script's* behaviour, not each *guard inside it*. The token guard was never
+handed an input that should have made it fail, and if it had been, there was none to hand it.
+
+**What it cost, or would have:** three real bugs passed that guard untouched - a GFM table written
+without leading pipes collapsed into one line, a `~~~` inside a ``` block ended the fence so code was
+reflowed as prose, and files with mixed line endings were silently normalised into a whole-file diff.
+All three change the rendered document while preserving every token, so the script would have printed
+`RESULT: clean` while corrupting tables in any note using that style.
+
+**Fixed by a guard that can fail:** counts of headings, list items, table rows, delimiter rows, fence
+lines, blockquote lines, horizontal rules and blank lines, compared before and after, refusing the file
+if any moves. Plus nine regression fixtures, one per bug and one per join kind. The token check stayed,
+demoted in the header to what it actually is.
+
+**Rule, sharpened:** for every guard, name an input that must make it fire, and add that input as a
+fixture. If you cannot construct one, the guard is documentation and the header must say so.
+
+**A second, unrelated lesson from the same day, recorded because it also happened twice.** A claim about
+what the user sees is a claim about *configuration*, not about the specification. In F76 I traced
+Obsidian's font cascade correctly and concluded code was rendering in a proportional font, without
+checking whether that font was installed - it was not, so the cascade fell through and the conclusion
+was wrong. In F78 I said a single newline renders as a space because that is the Markdown spec, without
+checking `strictLineBreaks`, which Obsidian defaults to `false` precisely so that a newline renders as a
+visible break. Both times the mechanism was right and the outcome was wrong, because a mechanism only
+produces an outcome when its precondition holds. Find the setting and read it.

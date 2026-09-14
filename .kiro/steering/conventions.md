@@ -31,6 +31,35 @@ The vault holds a **live review schedule**. These are not formatting artifacts:
 "Normalising" `;;` to `::` would silently delete half the deck. Never rewrite a separator
 into another form, and never strip an `<!--SR:-->` comment.
 
+### The one carve-out: the author may authorise deleting a card
+
+The rule above forbids **incidental** loss — a bulk sweep, a separator "normalisation", a
+`markdownlint --fix` that splits a card, a regex that eats a marker. That is what destroys data
+without anyone deciding to.
+
+It does **not** forbid the author from deciding a card is not worth keeping. Stated on 2026-09-10,
+when a review pass found cards in HI1031's chapter 1 deck that served no exam question:
+
+> bry dig inte om ett kort har historik, om den inte är nödvändig kastar du den. du har också frihet
+> att omformulera kort med historik, det gör ingenting att ett kort har historik.
+
+So a card may be **deleted with its marker**, or **reworded while keeping its marker**, when the author
+has asked for that. Seven cards were removed from chapter 1 on that basis, taking seven markers with
+them. What still applies:
+
+- **Delete the whole card block**, marker included. A marker left behind attaches itself to the next
+  card, which is the one edit `write-flashcards` rule 11 forbids and the placement check exists to catch.
+- **Prove the arithmetic.** Run `Get-SRIntegrity.ps1 -Save` before and `-Compare` after, and read the
+  **per-file** lines: `cards 68 -> 61, markers 68 -> 61` is the evidence that exactly the intended cards
+  went and nothing else did. A vault total cannot show that.
+- **`raw_srComments` must fall by exactly the number of markers you removed.** If it falls by more, you
+  cut into a card you meant to keep; if by less, an orphaned marker is still in the file.
+- The rule against **rewriting a separator** is unchanged, and applies to marker-bearing cards too. `;;`
+  carries two schedules, so demoting it to `::` still throws one away.
+
+Do not ask again whether deleting a marker-bearing card is allowed — it is, when the author has asked
+for the deck to be narrowed. Ask only if you are about to delete cards they did not ask about.
+
 The published site renders cards as collapsible callouts **at build time**, in the Quartz
 repo's `plugins/flashcards/`. The vault is never modified for the site's benefit.
 

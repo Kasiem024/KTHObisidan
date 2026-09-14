@@ -34,5 +34,7 @@ updated: 2026-05-28
 ## Flashcards
 
 Varför är UDP bättre lämpat för VoIP (röstsamtal) än TCP?:: För att omsändningar i TCP skulle skapa störande fördröjningar; det är bättre att bara tappa det lilla ljudet.
+<!--SR:!fsrs,2026-09-13T07:17:48.560Z,1,1.07709473,8.39265542,2,3,0,0,2026-09-12T07:17:48.560Z-->
 
 Hur stor är en UDP header?:: 8 byte.
+<!--SR:!fsrs,2026-09-12T09:53:54.493Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-11T09:53:54.493Z-->

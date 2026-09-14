@@ -22,12 +22,15 @@ open this one, and therefore ignore `-Root`. The other two, `Test-DocHygiene.ps1
 | `Vault-Audit.ps1` | Does the vault follow `Meta/Vault Standard.md`? | 0 clean / 1 deviations |
 | `Test-VaultAudit.ps1` | Does the audit still fire on every rule it claims? | 0 all pass / 1 |
 | `Get-ObsidianExcludes.ps1` | What does Obsidian's "Excluded files" actually match? | 0 clean / 1 |
+| `Get-ObsidianConfigAudit.ps1` | Does `.obsidian/` contradict itself - dead hotkeys, orphaned settings, an enabled plugin with no folder? | 0 clean / 1 findings |
 | `Get-TagInventory.ps1` | What tags does Obsidian think exist, and who put them there? | always 0 |
 | `Get-SRIntegrity.ps1` | Did a bulk edit change any flashcard marker, move one to another card, or empty a deck? | 0 unchanged / 1 drift |
 | `Test-SRIntegrity.ps1` | Does `Get-SRIntegrity.ps1` still fire on every defect it claims? | 0 all pass / 1 |
 | `Get-NoteStructureCensus.ps1` | How many concept notes actually have each section? | always 0 |
+| `Get-DeckPairCensus.ps1` | For one course chapter: how many cards of each kind are in the deck, how long is the note, and is either file silently damaged? | 0 measured / 1 file not resolvable |
 | `Test-DocHygiene.ps1` | Is the Markdown that nothing else checks still intact? | 0 clean / 1 findings |
 | `Test-ScriptHygiene.ps1` | Does this folder still follow the rules below? | 0 clean / 1 findings |
+| `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **The only script here that writes.** | 0 clean / 1 refused |
 
 `kursinfo.js`, `nastaNummer.js` and `nyKurs.js` in the same folder are **Templater user
 scripts**, called from the note templates. They are not run from a shell.
@@ -73,10 +76,31 @@ stale the moment it landed.
   exit convention matching this file's table, and that the folder and this file still name the
   same set of scripts. It lists each file's write calls rather than claiming to verify rule 3 —
   static analysis cannot prove a write sits behind a switch.
+- **A note reads as broken prose, with sentences ending mid-line** → `Format-NoteWrapping.ps1`.
+  Obsidian's **"Strict line breaks" defaults to OFF** (`strictLineBreaks: !1` in the app bundle),
+  so a single newline renders as a *visible* break, unlike the Markdown spec. A note hard-wrapped
+  at 100 columns therefore reads as if every line ended a sentence. Turning the setting on would
+  fix every such note at once and change the rendering of **354 of 541** others, which is why this
+  joins the lines instead. It is the **only writing script in this folder**: dry run by default,
+  `-Apply` to write, `-Filter` or `-All` required so a whole-vault reflow cannot happen by
+  accident, and every file backed up first. Two guards, and only one of them is worth much — a
+  structural count of headings, list rows, table rows, fences, quotes and blanks that must be
+  unchanged, plus a token check that is weak by construction. Files with mixed line endings or
+  flashcard-like syntax are skipped rather than guessed at. Read the header before trusting it.
 - **Junk in the tag pane**, or after editing `userIgnoreFilters` →
   `Get-ObsidianExcludes.ps1`. It reports what each filter matches and flags any filter
   matching **nothing**, which is the failure mode that hid a dead `Obsidian Plugins/` entry
   for months.
+- **Removed, added or disabled a plugin, changed a theme, or edited anything under
+  `.obsidian/`** → `Get-ObsidianConfigAudit.ps1`. It is the only thing that reads `.obsidian/`:
+  the audit's `InScope` drops the folder, the linter ignores it, and `Test-DocHygiene.ps1` reads
+  `.kiro/` only, so 217 tracked files were checked by nothing. A plugin removal leaves debris
+  that is invisible in the app — Obsidian ignores a hotkey whose command no longer exists and
+  Style Settings ignores a key whose section is gone. Its first run found **12 dead hotkeys**
+  from five long-removed plugins, one of them left behind by the Linter removal earlier in the
+  same session. Findings are repo-internal drift, so they are CI-safe; anything
+  machine-specific — a font named in `appearance.json` that is not installed, plugin sizes,
+  which plugins load on mobile — is a **note** and never changes the exit code.
 - **Before widening or narrowing a scope exclusion** → `Get-TagInventory.ps1`. It separates
   tags that exist only in out-of-scope files from tags real notes use, and lists any tag
   appearing in both. A non-empty "in both" list means the exclusion you are about to add
@@ -87,6 +111,14 @@ stale the moment it landed.
   concept collections. Its `notesInScope` must equal the audit's; if it does not, its
   `Test-InScope` has drifted from the audit's `InScope` and every other figure it prints is
   measuring a different population.
+- **Writing or narrowing one chapter's exam material** → `Get-DeckPairCensus.ps1 -Course HI1031 -Chapter 06`.
+  It measures the two files that chapter owns and nothing else: cards split by separator, `<!--SR:` markers,
+  note length against the 150–250 target, plus the two signals that fail silently — a non-zero CR count
+  (the file turned CRLF) and a run of blank lines (the MD012 signature of an append gone wrong). It
+  **refuses to guess**: `-Course` is mandatory and more than one match is an error rather than a
+  `-First 1`, because a chapter filter without the course code matches a second course and once reported
+  10 cards for a deck holding 62 (**T19**). Read the two filenames it echoes — they are the proof you
+  measured what you meant to. It never judges; a 90-card deck exits 0.
 
 ## Figures these scripts own
 
@@ -99,8 +131,10 @@ Run the script.
 | notes in scope | `Vault-Audit.ps1`, `Get-NoteStructureCensus.ps1` — the two must agree |
 | concept notes, section coverage, concept collections, cards outside `## Flashcards` | `Get-NoteStructureCensus.ps1` |
 | `.md` excluded from the tag index | `Get-ObsidianExcludes.ps1` |
+| enabled plugins, plugin versions and sizes, which load on mobile, hotkey bindings, Style Settings keys | `Get-ObsidianConfigAudit.ps1` |
 | distinct inline tags, junk vs real | `Get-TagInventory.ps1` |
 | `<!--SR:` markers, cards per deck, notes tagged `nosr` | `Get-SRIntegrity.ps1` |
+| cards per separator and note length for one course chapter | `Get-DeckPairCensus.ps1` |
 
 **The spaced-repetition rows are a dated reading, not an invariant.** Every review adds markers and
 every authoring session adds cards, so a mismatch there is not a defect — re-run the script. The

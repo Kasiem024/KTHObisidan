@@ -51,11 +51,16 @@ updated: 2026-08-18
 ## Flashcards
 
 Vilket transportprotokoll och vilken port använder HTTP som standard?:: TCP, port 80 (HTTPS använder port 443).
+<!--SR:!fsrs,2026-09-13T06:30:39.852Z,2,2.3065,2.11121424,2,2,0,0,2026-09-11T06:30:39.852Z-->
 
 Vad innebär det att HTTP är tillståndslöst?(Definition):: Att servern inte sparar någon information om klienten mellan två förfrågningar — tillstånd måste lösas med t.ex. cookies.
+<!--SR:!fsrs,2026-09-12T09:50:22.221Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-11T09:50:22.221Z-->
 
 Vilken är den viktigaste skillnaden mellan HTTP/1.0 och HTTP/1.1?:: HTTP/1.1 använder persistenta kopplingar (keep-alive) och återanvänder samma TCP-koppling för flera objekt.
+<!--SR:!fsrs,2026-09-12T07:19:15.399Z,0,0.00938668,9.93638689,1,5,0,0,2026-09-12T07:18:15.399Z-->
 
 Vad betyder statuskoderna 200, 404 och 500?(3):: 200 = OK, 404 = Not Found (klientfel), 500 = Internal Server Error (serverfel).
+<!--SR:!fsrs,2026-09-13T09:51:58.975Z,2,2.3065,2.11121424,2,2,0,0,2026-09-11T09:51:58.975Z-->
 
 Vilket transportprotokoll använder HTTP/3?:: QUIC, som i sin tur körs över UDP.
+<!--SR:!fsrs,2026-09-12T09:52:03.116Z,1,0.1774331,8.39265542,2,3,0,0,2026-09-11T09:52:03.116Z-->

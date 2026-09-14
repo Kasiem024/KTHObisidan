@@ -245,6 +245,124 @@ Research supports entity and constraint filtering, so naming the domains that ma
 different kind of instruction from naming a quality bar. Until that is tested, assume the citation mix
 is roughly out of your control and lean on lever 2.
 
+### The whitelist was tested 2026-09-10, and it is unreliable in both directions
+
+Tested on a clinical-literature facet in a separate notebook, outside this vault's subject. The prompt
+carried both halves of the categorical form: a CITE list naming five specific sources, and a DO-NOT-CITE
+list naming categories **plus one domain by name**.
+
+**The exclusion list has no force.** It named ResearchGate explicitly. The report cited **seven
+ResearchGate pages**. It also cited ten sites squarely inside the excluded "health-content marketing" and
+"industry-sponsored symposium" categories — including a drug manufacturer's own promotional site, cited
+for the efficacy of the very drug the facet existed to evaluate. The seven ResearchGate citations all
+failed to import so they cost no slots, but the instruction plainly did not steer.
+
+**The inclusion list is only half honoured.** Of five sources named to cite, two were cited and three
+were not cited **at all** — zero mentions each. The named international guideline did arrive, from four
+mirrors, none of which was the one named.
+
+**Unit warning, per `documentation-standard.md`.** Of 76 unique URLs, 41 were guideline, journal,
+institutional-repository or national guidance: **54 %**. Do **not** compare that with the 57.5 % / 46.0 %
+/ 56.5 % above. Those counted official-or-arXiv on a product question and journal-or-arXiv on a research
+question; this counts four categories on a clinical question. Three units, one file.
+
+So the load-bearing claim below is still untested on a comparable topic, but a stronger and simpler
+statement can now be made: **naming a domain, in either list, does not reliably control whether it is
+cited.**
+
+### The lever that did work: demand a datum only the wanted source carries
+
+The contrast sits inside that one prompt. Everything asked for as **content** came back thoroughly — the
+requested assessment instrument appears 43 times, the drug under evaluation 49, the named alternative 16,
+and the "disagreements and disconfirming evidence" subsection was produced as specified. Everything asked
+for as a **source** was ignored or half-met.
+
+The inference: Deep Research selects sources to satisfy the **question**, not the bibliography
+instruction. So the way to reach a particular source is to demand a fact only that source publishes.
+
+| To force | Demand |
+|---|---|
+| A national drug monograph | the approved product name, the ATC code, and adverse-effect frequency bands **in the regulator's own category names**, with their percentage ranges |
+| A clinical guideline | the recommendation strength and evidence grade attached to each numbered step |
+| A systematic review | the pooled estimate with its 95 % CI and the GRADE certainty rating |
+| A regional formulary | whether each drug appears on the regional list for that indication, and in which position |
+| A primary trial | the randomisation unit, the comparator arm, and the per-arm n |
+
+The same mechanism is the real defence against junk, and it is the one a prohibition failed to provide:
+**a marketing page cannot supply a confidence interval, a GRADE rating or a per-arm n.** Demanding those
+per claim makes such a page useless for answering, which excludes it more reliably than forbidding it.
+
+#### Confirmed 2026-09-10 across three runs on one notebook
+
+The third run demanded each datum **in the source's own vocabulary** — a national ATC code, the
+regulator's own adverse-effect frequency category names, and a country-specific potency classification.
+Same notebook, same account, same subject area:
+
+| Datum demanded | Run 1 | Run 2 | Run 3 |
+|---|---|---|---|
+| National monograph site citations | 0 | 6 | **23** |
+| ATC codes present | 0 | 0 | **3 distinct** |
+| Regulator's frequency-category names | 0 | 0 | **14** |
+| Country-specific potency class | 0 | 0 | **10** |
+| Dose-quantity unit named in the guideline | not asked | not asked | **12** |
+| National formulary named | 0 | 2 | **4** |
+
+Run 1 named those sources in a CITE list and got none of them. Run 3 never named them and got the whole
+layer: **35 of 69 citations** were national or EU official, against 8 of 76 in run 1, plus three regional
+care programmes nobody asked for by name.
+
+**The exclusion half is confirmed by absence.** Run 2 pulled in a retail-pharmacy cluster — five
+consumer drug-information sites. Run 3 demanded ATC codes, frequency bands and a potency class, and
+**every one of those five is absent**. No prohibition achieved that in three attempts; one data demand
+did.
+
+**Two limits, recorded so the lever is not oversold.** Demanding sensitivity and specificity for four
+diagnostic tests produced almost nothing — one mention of each — so a data demand cannot conjure
+evidence that does not exist, and a null result here is ambiguous between "not asked well" and "not
+studied". And **the citation count stayed flat** at 76 / 60 / 69 despite run 3 being far more specific,
+so specificity does not buy slots back; only fewer sections do.
+
+#### Structure is obeyed; the copy path destroys it
+
+Run 3 asked for the source list as one pipe-delimited line per source. The **category labels appeared**
+— 14 of them, in the requested vocabulary — so the instruction was followed. But the archived file has
+**23 lines and a longest line of 8 680 characters**: the newlines were gone. Runs 1 and 2 looked like the
+format had been ignored, and it had not.
+
+So the ambiguity recorded above is settled: **Deep Research follows structure instructions, and the route
+out of the tool loses line breaks.** Do not spend another prompt clause on structure. Ask for delimiters
+that survive as text — a pipe or a marker token — and reconstruct the lines when parsing.
+
+#### A cumulative paste will silently contaminate a measurement
+
+Run 3's file arrived containing **run 2 in full, with run 3 appended** — 69 727 characters then 40 677.
+Measured whole, it reported junk domains as if run 3 had cited them. Before measuring any run, hash the
+file against every archived run and check whether it *starts with* an earlier one. On the previous
+attempt an unchanged file was measured twice and produced four confident false negatives — every lever
+reading zero — caught only because the byte count was identical to the run before.
+
+### Two recorded findings that together remove the deselection step
+
+Neither is stated where the other is, so the combination has been missed. Query-time exclusion wording is
+**tested and works** — it obeyed three times in one round (below). Custom instructions are **documented to
+govern every Studio output as well as chat** (`notebook-setup.md`). Putting the exclusion list into the
+custom instructions should therefore make it permanent and automatic, which is the only form that survives
+an author who does no per-source curation at all.
+
+**This is an inference from two measured facts, not itself a measurement.** Verify it by asking a round
+something only an excluded source can answer, and checking the answer says so rather than answering.
+
+### Ask for the inventory in a form that survives a paste
+
+That run's report reached the vault as 62 KB on **67 lines**, longest line **14 408 characters**, **zero
+markdown headings**, and every URL glued to the first word of its title (`...baylor_docsH1-antihistamines`).
+The requested section structure and source inventory did not survive, and the two possible causes — never
+produced, or destroyed in transit — are indistinguishable after the fact.
+
+So do not ask for a markdown table. Ask for **one line per source, pipe-delimited**:
+`CATEGORY | first author or organisation | year | title | URL`. A line list survives any copy path and
+parses without repair.
+
 ### Why it probably backfired, and what to say instead
 
 A query round against the meta-notebook (2026-09-06) turned up a mechanism that fits the result, and a
@@ -282,6 +400,170 @@ the report structure and the quality line — so the ten extra citations cannot 
 Asked directly whether output structure affects how many sources are browsed or cited, the corpus
 answers **not covered**. To de-confound, a third run would keep the structure and drop the quality line;
 whether that is worth 18–50 slots is a judgement about how much the answer would change future work.
+
+## Runs 4 to 7: four more levers, three of them failures
+
+Same notebook, 2026-09-10, seven runs total on one medical corpus. The content-demand lever above held
+every time it was applied to a **single** datum, and the four findings here are about the ways a prompt
+fails around it.
+
+| Datum demanded | Run 3 | Run 4 | Run 6 |
+|---|---|---|---|
+| National monograph site citations | 23 | 0 | **60** |
+| ATC codes | 3 | 0 | 5 |
+| National lab-nomenclature codes | not asked | **11 distinct** | not asked |
+| The patient's own laboratory cited | 0 | **5** | 0 |
+| National interaction database cited | 0 | 0 | **7** |
+| Share of citations from the target country | 51 % | 13 % | **97 %** |
+
+Run 4 demanded a national laboratory code system and got the codes **plus the two hospital laboratories
+that publish them** — an institution nobody named. Run 6 demanded a national interaction classification
+and pulled in the national interaction database itself. **Demand the identifier and the institution
+follows.**
+
+### A demand does not survive being bundled with other demands
+
+Run 5's worst section asked, in **one sentence**, for the ATC code, the national product name, the cure
+rate, the per-arm sample size, the comparator and the recurrence rate at two timepoints, for **three
+drugs**. It returned one mention of each drug and **zero ATC codes**, in a run that produced **no
+citations at all** from the target country — against 23 in run 3 and 60 in run 6, both of which gave
+each datum its own line.
+
+**Write one demand per numbered line.** Run 7 used fourteen one-line demands and returned ten distinct
+ATC codes, the most of any run.
+
+### A format slot gets filled with a constant; a datum does not
+
+After a generated source line was found to have dropped the study population (below), run 6 added a
+`POPULATION` field with four permitted values. All **41** entries came back `mixed`. The field was
+populated and discriminated nothing.
+
+Run 7 replaced it with `N-AND-WHO`, asking for the actual participants, and got **six distinct values
+across nine entries** — "235 non-pregnant women aged 18-50", "1585 women (684 cases, 901 controls)".
+
+**Never add a field whose values are a closed set you supplied.** Ask for a number and a description
+that must be read out of the source.
+
+### The literal token solves the structure problem the copy path creates
+
+The subsection above diagnosed newlines being lost in transit and recommended a marker token. Measured:
+asking for every source-list entry to begin with the literal `###SRC###` produced **24, 40, 41 and 9
+tokens** across runs 4 to 7, parsing 1:1 to distinct sources every time, with all pipe-delimited fields
+intact.
+
+**This is settled. Use a literal token, never a table and never line breaks.**
+
+### Demanding an explicit absence works, and it is the cheapest honesty lever found
+
+`If a source does not give the value asked for, write NOT FOUND rather than substituting a different
+value` produced **39** explicit NOT FOUNDs in run 6 and **17** in run 7. Before this clause, an
+unavailable value came back as a nearby value from a different source, indistinguishable from an answer.
+
+Cost: one sentence. It is the highest-yield clause measured in seven runs.
+
+### One prompt does one kind of work, and the crowding is symmetrical
+
+Run 6 saturated its prompt with regulatory vocabulary and returned 97 % national-official citations —
+and its two epidemiological questions came back empty (`vulvovaginal` 0, `candidiasis` 0). Run 7 asked
+the epidemiological questions and got them, but its regulatory clause underdelivered: **8** national
+monograph citations against run 6's 60.
+
+**Do not mix a regulatory-vocabulary demand with a clinical-evidence question in one run.** Split them,
+and expect the minority half to fail rather than merely thin out.
+
+### The generated source line omits the fact that decides relevance
+
+A source line read `OTHER PRIMARY STUDY | Utrecht University Repository | 2024 | WBC alterations
+following repeated dexamethasone administration`. On that basis it was defended as the
+corticosteroid-leucocytosis paper the corpus needed. The raw citation text for the **same URL** reads
+*the effect of intravenous dexamethasone on the white blood cell parameters in healthy **horses***.
+
+Three positions were taken on that one source in one day. Two of the three came from reading the
+generated title.
+
+**Never judge a source from the structured source line.** Cross-check the raw citation text, which
+carries the source's own phrasing. The same run also cited a canine surgical study and a veterinary
+clinical-pathology site; a veterinary cluster is a recognisable failure mode of a physiology question.
+
+### Failed imports are usually harmless, and sometimes are a real loss
+
+Stated too strongly three times before being corrected. What holds:
+
+- When the failure is an **aggregator mirror** of a paper that also exists on a repository, the report
+  cites the readable copy alongside it and nothing is lost. Verified for six papers across runs 4 and 6,
+  including two that were reported as losses and were not.
+- When the failure is the **publisher's own gated PDF**, there is no other route and the source is
+  genuinely absent. Run 7 lost two primary studies this way, and they carried the effect sizes for three
+  of its questions.
+
+**Check, per failure, whether another URL in the same report reaches the same document.** Do not
+generalise in either direction.
+
+### Prompt length is load-dependent, so a rejection is not a ceiling
+
+A 4 400-character prompt was rejected while 3 286, 3 298, 3 334 and 3 395 were accepted, which looked
+like a ceiling near 3 500. The recorded maximum is **5 000**, with the input field shrinking under load
+toward roughly 1 200 (`round-template.md`). So the rejection measured load, not a limit.
+
+**Aim at 3 300.** It has been accepted four times and leaves room for the field to shrink.
+
+### Exclusion instructions fail at query time exactly as they do at acquisition time
+
+A query round opened with *do not cite any source whose title begins "Djup researchrapport"*, naming the
+machine-written reports. **Four of five answers cited them anyway**, one relabelled as "Laboratory
+handbook summary". Same shape as five consecutive acquisition runs citing a domain named as forbidden.
+
+**Do not spend a clause on prohibition in either half.** Ask instead for the thing only an acceptable
+source can supply — here, a quotation with a section number from a named monograph, which is what
+exposed the four unverifiable claims.
+
+### How to tell a full paper from an abstract or a landing page
+
+Ask, for a named source: the per-group participant numbers as the table states them, one limitation the
+authors state about their own work quoted, and the funding or competing-interests statement quoted. All
+three are below-the-abstract content.
+
+Measured on six sources: one returned a provincial grant number (full text), one answered *"the notebook
+contains only the PubMed abstract snippet"* (abstract only, self-declared), one returned three "not
+covered" (landing page or gated). **A `PubMed` label in the title predicts nothing** — one PubMed-labelled
+entry held full text and another held only the abstract.
+
+The probe also caught a substitution: asked for one paper's funding statement, the answer quoted a
+different paper's. It was detectable only because the format requires naming the source actually used.
+
+### Pruning a corpus: three grounds, and the review that catches the rest
+
+Three prune rounds, 82 sources removed from a corpus that peaked at 232. Every list was reviewed by two
+adversarial subagents — one briefed to stop good sources being deleted, one to find junk missed — before
+the author saw it. **That review withdrew 15 proposals and added 11**, so roughly a third of every draft
+list was wrong.
+
+Only three grounds survived review:
+
+1. **Duplicate** — the same document is present in another entry being kept.
+2. **Superseded** — a newer edition of the same document is in the corpus.
+3. **Off-topic by content** — the subject matter touches no condition, medicine, result or decision in
+   the case.
+
+**Judging by host or document type does not survive.** Casualties of doing so: two academic-centre drug
+pages for drugs the patient takes, a university teaching resource dismissed as unidentifiable, a
+mechanism paper dismissed because its cohort had a rare syndrome, and a systematic-review protocol
+dismissed as containing "no results" whose introduction supplied the risk figure the corpus later quoted.
+
+Two specific traps in national drug corpora:
+
+- **A product's monograph, patient leaflet, summary view and full text are four different documents**,
+  not four views of one. Treating them as duplicates would have deleted two current-medicine sources.
+- **A national-source acquisition run floods the corpus with formulation and strength variants.** One run
+  produced 8, 7, 10 and 7 entries for four drugs. Prune these against **the strength and formulation the
+  record names** — and check first whether a retained entry still covers the sections that differ.
+
+And a machine-written report in the corpus is not merely low-value: it **wins retrieval**, because it is
+written in the shape a question asks for while a monograph buries the same fact in prose. Five of nine
+answers in one round took their primary answer from such a report. Removing them was argued down on the
+grounds that they surface facts the primaries bury — so the workable rule is to keep them, label them in
+the notebook's standing instructions as machine-written, and verify anything load-bearing against a
+primary source before acting on it. Of five such claims tested that way, **one verified**.
 
 ## The report is a source: specify how it is written
 
@@ -348,6 +630,12 @@ That is the pattern to expect for anything about a tool's behaviour rather than 
 | Untested claim | How to settle it |
 |---|---|
 | **Categorical steering beats evaluative** — "exclude marketing blogs, prefer official documentation" instead of "do not cite low-quality sources" | It has been *acted on* — two runs produced explicit discard logs of 42 and 84 sources naming those categories — but never measured against a comparable topic. A clean test needs it on a product question like runs 1 and 2, where the official share can be compared against 57.5 % and 46.0 % |
+
+**A 2026-09-10 run weakens this further without settling it.** The categorical form, applied to a clinical
+question with a named domain in the exclusion list, was **disobeyed seven times on that one domain** and
+cited ten sites from two excluded categories. It still needs the comparable-topic test, but do not assume
+the categorical form controls the mix — see *The whitelist was tested 2026-09-10* above, and prefer the
+content-demand lever recorded with it.
 
 **Query-time filtering: tested 2026-09-07, and it works.** A round opened with *"do NOT use fast.io,
 rewriteai.com, eyesift.com, gradpilot.com or proofreaderpro.ai as the basis for any answer. If a point

@@ -74,15 +74,6 @@
       "key": "Tab"
     }
   ],
-  "obsidian-git:commit-specified-message": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "C"
-    }
-  ],
   "obsidian-excalidraw-plugin:insert-link-to-element": [],
   "app:delete-file": [
     {
@@ -90,15 +81,6 @@
         "Shift"
       ],
       "key": "Delete"
-    }
-  ],
-  "obsidian-git:open-git-view": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "V"
     }
   ],
   "insert-template": [
@@ -135,80 +117,6 @@
         "Mod"
       ],
       "key": "D"
-    }
-  ],
-  "darlal-switcher-plus:switcher-plus:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Q"
-    }
-  ],
-  "darlal-switcher-plus:switcher-plus:open-headings": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "Q"
-    }
-  ],
-  "obsidian-annotator:toggle-annotation-mode": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "A"
-    }
-  ],
-  "obsidian-languagetool-plugin:ltaccept-suggestion-1": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "Numpad1"
-    },
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "1"
-    }
-  ],
-  "obsidian-languagetool-plugin:ltaccept-suggestion-2": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "Numpad2"
-    },
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "2"
-    }
-  ],
-  "obsidian-languagetool-plugin:ltaccept-suggestion-3": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "Numpad3"
-    },
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "3"
     }
   ],
   "app:go-back": [
@@ -370,7 +278,6 @@
       "key": "M"
     }
   ],
-  "obsidian-linter:lint-file": [],
   "obsidian-spaced-repetition:srs-cram-flashcards": [
     {
       "modifiers": [
@@ -380,38 +287,7 @@
       "key": "F"
     }
   ],
-  "highlightr-plugin:unhighlight": [
-    {
-      "modifiers": [
-        "Alt",
-        "Shift"
-      ],
-      "key": "H"
-    }
-  ],
-  "highlightr-plugin:Yellow": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "Y"
-    }
-  ],
   "editor:save-file": [],
-  "quick-latex:addInlineMath": [],
-  "quick-latex:addBlockMath": [],
-  "quick-latex:addCasesBlock": [],
-  "quick-latex:addMatrixBlock": [],
-  "quick-latex:addAlignBlock": [],
-  "highlightr-plugin:highlighter-plugin-menu": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "H"
-    }
-  ],
   "editor:toggle-highlight": [
     {
       "modifiers": [

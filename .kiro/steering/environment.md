@@ -44,10 +44,36 @@ All three throw, so they are not traps — but none of the error messages names 
 - **`if` is not an expression.** `("a" + (if ($x) {"y"} else {"z"}))` will not parse. Assign in a
   statement first.
 
+## `ConvertFrom-Json` can hand back a JSON array as one object
+
+`@($text | ConvertFrom-Json)` on a JSON array does not reliably give you N elements in 5.1 — it can
+give you **one** element which is itself the array. The next `foreach` then iterates once, and
+`'prefix' + $id` stringifies the whole array space-separated, so
+`community-plugins.json` produced a single directory named after all eleven plugin ids joined by
+spaces. It throws eventually (a path that long does not exist) but the message names the path, not
+the cause. Unroll explicitly:
+
+```powershell
+$ids = New-Object System.Collections.Generic.List[string]
+foreach ($x in ($text | ConvertFrom-Json)) {
+  if ($x -is [string]) { $ids.Add($x) } else { foreach ($y in $x) { $ids.Add([string]$y) } }
+}
+```
+
 ## Capture output to a file, not to stdout
 
 Shell stdout capture truncates on Swedish characters. Write results to a file under `%TEMP%`
 and read that file instead.
+
+**But not with `>`.** PowerShell 5.1's redirection operator writes **UTF-16LE with a BOM** — the
+first two bytes are `FF FE` — so the resulting file is not UTF-8 and a reader that expects UTF-8
+fails outright with `stream did not contain valid UTF-8`. `Get-Content` hides this by
+auto-detecting, so the same file reads fine from the shell and not from anything else. Decoding it
+as ANSI looks like it worked and yields a string full of interleaved nulls, which counts zero
+non-ASCII characters and reads as "nothing unusual here". Capture with
+`[System.IO.File]::WriteAllLines($path, $lines, (New-Object System.Text.UTF8Encoding($false)))`,
+or `Out-File -Encoding utf8`. To recover a file already written with `>`, decode it as
+`[System.Text.Encoding]::Unicode`.
 
 **And do not filter the output down to the line you expect.** Every `markdownlint-cli2` run against
 `.kiro/` was once piped through `Select-String "Summary"`, which printed `Summary: 0 issues in 0 files`
@@ -169,6 +195,15 @@ blank-line runs there. A green audit says nothing about `.kiro/`.
 
 **`Filer/`, `Litteraturlista/` and the Templater templates** are excluded for reasons recorded in the
 linter config itself. Read that file before assuming a folder is linted.
+
+**`.obsidian/` was checked by nothing at all until 2026-09-09**, and it is 217 tracked files that decide
+whether the app works. The audit's `InScope` drops any path containing `\.obsidian\`, the linter lists
+`.obsidian/**` under `ignores`, and `Test-DocHygiene.ps1` reads `.kiro/` only.
+`Meta\Obsidian Plugins\Scripts\Get-ObsidianConfigAudit.ps1` now covers the part that can rot silently —
+whether the JSON files agree with each other and with what is on disk. Know where it stops: it checks
+*consistency*, not correctness. It cannot tell you a setting is a bad idea, and it deliberately reports
+anything machine-specific as a note rather than a finding, so a font that is not installed or a plugin
+size never changes the exit code. See F77.
 
 ## npm needs `cmd /c`
 

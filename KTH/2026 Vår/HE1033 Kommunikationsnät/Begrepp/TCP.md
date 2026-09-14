@@ -35,5 +35,7 @@ updated: 2026-05-28
 ## Flashcards
 
 Vilka tre steg ingår i en TCP-handskakning?:: SYN, SYN-ACK, ACK.
+<!--SR:!fsrs,2026-09-13T07:18:02.717Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-12T07:18:02.717Z-->
 
 Nämn en fördel och en nackdel med TCP jämfört med UDP.:: Fördel: Garanterad leverans. Nackdel: Mer overhead och högre latens.
+<!--SR:!fsrs,2026-09-13T09:54:04.140Z,2,2.3065,2.11121424,2,2,0,0,2026-09-11T09:54:04.140Z-->

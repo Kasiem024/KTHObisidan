@@ -34,5 +34,7 @@ updated: 2026-08-27
 ## Flashcards
 
 Vilken port använder DNS normalt?:: Port 53.
+<!--SR:!fsrs,2026-09-13T07:17:10.227Z,1,1.07709473,8.39265542,2,3,0,0,2026-09-12T07:17:10.227Z-->
 
 Vad kallas processen att översätta ett namn till en IP-adress?:: Namnuppslagning (Resolution).
+<!--SR:!fsrs,2026-09-14T07:14:28.061Z,2,0.26673605,9.77242402,2,6,0,0,2026-09-12T07:14:28.061Z-->

@@ -1,314 +1,258 @@
 ---
 tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
-description: "Svar på kursens tentafrågor för kapitel 2 med bokens avsnitt angivna: trelagersarkitektur, MVC, middleware, klient/server och mobila agenter."
-created: 2026-09-08
-updated: 2026-09-08
+created: 2026-08-24
+updated: 2026-09-09
+description: "Svar på tentafrågorna för HI1031 kapitel 2: trelagersarkitektur, MVC, middleware, fördelarna med klient/server och mobila agenter, med muntliga svar och en lucka där boken inte täcker MVC."
 ---
 # HI1031 Tentafrågor och Svar - Kap 02 Systemmodeller
 
-Allt här är avgränsat till kursens fem tentafrågor för kapitel 2. Fakta kommer från
-*Distributed Systems: Concepts and Design* (5th ed) och avsnittsnumret står under varje fråga.
-Står något inte i boken sägs det uttryckligen.
+Fem frågor. Boken svarar på fyra. **MVC finns inte i boken alls** — se fråga 2.
 
-Examinationen är **muntlig och enskild**, så varje fråga har både faktapunkter att skriva av och
-en talordning att öva högt.
+## Fråga 1 — Beskriv hur en trelagersarkitektur är uppbyggd
 
----
+Bokens avsnitt: 2.3.2 (Tiered architecture)
 
-## 1. Beskriv hur en trelagersarkitektur är uppbyggd
+**Börja med de tre funktionsdelarna.** Boken delar en tillämpning i tre:
 
-Bokens avsnitt: **2.3.2**
+- **Presentationslogik** — samspelet med användaren, och vyn som visas.
+- **Applikationslogik** — den tillämpningsspecifika behandlingen. Kallas också **affärslogik**, men
+  boken påpekar att begreppet inte bara gäller affärssystem.
+- **Datalogik** — den varaktiga lagringen, normalt i ett databashanteringssystem.
 
-**Först: skiktning är inte samma sak som flerskikt.** Boken skiljer på två ord som låter lika:
+**Trelager betyder att varje del får en egen server** — en ==en-till-en-avbildning från logisk del till
+fysisk server==. Skikt 1 är klientens vy och kontroller, skikt 2 en applikationsserver med
+applikationslogiken, skikt 3 en databasserver med ett (ofta standardiserat) relationsgränssnitt.
 
-- **Skiktning** (*layering*) är en ==vertikal== uppdelning i abstraktionslager, där varje lager
-  använder tjänsterna i lagret under och är omedvetet om lagren nedanför.
-- **Flerskikt** (*tiering*) är en teknik för att organisera funktionen i *ett* lager och placera
-  den på lämpliga servrar, och i andra hand på fysiska noder.
+**Vinsterna:**
 
-De är komplementära. Trelagersarkitektur handlar om det andra.
+- Applikationslogiken ligger ==samlad på ett ställe==, så mjukvaran blir ==lättare att underhålla==.
+  Det är den vinst boken nämner först.
+- Varje skikt har en ==väldefinierad roll==.
+- Skikt 1 kan vara ==bara ett användargränssnitt==, vilket ger inbyggt stöd för **tunna klienter**.
 
-**Den funktionella uppdelningen** av en tillämpning görs i tre delar:
+**Kostnaderna:** ==tre servrar att hålla i drift== i stället för två, och ==mer nättrafik och högre
+fördröjning== för varje operation.
 
-1. **Presentationslogik** – hanterar användarens interaktion och uppdaterar den vy av
-   tillämpningen som visas för användaren.
-2. **Applikationslogik** – den detaljerade, tillämpningsspecifika behandlingen. Kallas också
-   affärslogik, men begreppet är inte begränsat till affärstillämpningar.
-3. **Datalogik** – den varaktiga lagringen, typiskt i ett databashanteringssystem.
+**Jämför med tvåskikt, det är där poängen syns.** Där måste de tre delarna klämmas in i två processer,
+normalt genom att ==applikationslogiken delas mellan klient och server==. Fördelen är ==låg
+fördröjning== — ett enda meddelandeutbyte räcker för en operation. Nackdelen är att logiken ==delas
+över en processgräns==, vilket begränsar vilka delar som kan anropas direkt från vilka andra.
 
-**Tvåskikt** (jämförelsen examinatorn väntar på): de tre delarna måste delas upp på *två*
-processer, klient och server. Det görs vanligen genom att ==applikationslogiken delas==, med en
-del hos klienten och resten hos servern.
+**Det generaliserar till n-skikt:** tillämpningsområdet delas i *n* logiska delar, var och en på en
+egen server. Bokens exempel är **Wikipedia**, som klarar ==upp till 60 000 sidförfrågningar per
+sekund==.
 
-- **Fördel:** låg fördröjning – det räcker med ett enda meddelandeutbyte för att utföra en
-  operation.
-- **Nackdel:** applikationslogiken delas över en processgräns, vilket begränsar vilka delar av
-  logiken som kan anropas direkt från vilka andra delar.
-
-**Treskikt:** det finns en ==en-till-en-avbildning från logisk del till fysisk server==.
-
-- Applikationslogiken ligger därmed **samlat på ett ställe**, vilket förbättrar
-  underhållbarheten.
-- Varje skikt har en väldefinierad roll. Tredje skiktet är helt enkelt en databas som erbjuder
-  ett (potentiellt standardiserat) relationsgränssnitt.
-- Första skiktet kan vara ett enkelt användargränssnitt, vilket ger inbyggt stöd för
-  **tunna klienter**.
-- **Nackdelar:** ökad komplexitet i att förvalta tre servrar, samt ökad nättrafik och
-  fördröjning för varje operation.
-
-**Generaliseringen:** samma resonemang ger *n*-skikt, där en tillämpningsdomän delas i *n*
-logiska delar som var och en avbildas på ett serverelement. Bokens exempel är **Wikipedia**, som
-använder flerskikt för att klara upp till **60 000 sidförfrågningar per sekund**.
-
-Kopplat till [[Middleware]]: bokens kategori *application servers* ger direkt stöd för
-treskiktsarkitektur, genom att strukturera upp separationen mellan applikationslogik och
-datalagring.
+**Skiktning är inte samma sak som flerskikt.** De kompletterar varandra. **Skiktning** (layering) är
+==vertikal==: systemet delas i abstraktionslager, och varje lager använder bara tjänsterna i lagret
+under. **Flerskikt** (tiering) ==fördelar ett enda lagers funktion== över lämpliga servrar, och i
+andra hand över fysiska noder.
 
 ### Muntligt svar
 
-1. Tre funktionsdelar: presentation, applikationslogik, datalogik.
-2. I treskikt avbildas varje del på sin egen server – klient, applikationsserver, databasserver.
-3. Vinsten är att applikationslogiken ligger på ett ställe, vilket ger underhållbarhet.
-4. Tredje skiktet är bara en databas med relationsgränssnitt; första skiktet kan vara ett tunt
-   gränssnitt, vilket ger stöd för tunna klienter.
-5. Priset är tre servrar att förvalta, mer nättrafik och högre fördröjning per operation.
-6. Jämför med tvåskikt: där måste applikationslogiken delas över en processgräns – snabbare,
-   men logiken hänger ihop sämre.
-7. Skalar man vidare får man *n*-skikt, som Wikipedia.
+1. Börja med **de tre funktionsdelarna**: presentationslogik, applikationslogik, datalogik.
+2. Säg att trelager är en **en-till-en-avbildning** — klient, applikationsserver, databasserver.
+3. Ge **huvudvinsten**: applikationslogiken på ett ställe, alltså lättare att underhålla. Och skikt 1
+   kan vara ett rent gränssnitt, vilket ger stöd för tunna klienter.
+4. Ge **priset**: tre servrar att sköta, mer nättrafik, högre fördröjning per operation.
+5. Jämför med **tvåskikt**: snabbare, ett meddelandeutbyte, men applikationslogiken hamnar på två
+   sidor av en processgräns. Avsluta med att det generaliserar till **n-skikt** — Wikipedia, 60 000
+   sidförfrågningar per sekund.
 
----
+## Fråga 2 — Beskriv hur en MVC-arkitektur är uppbyggd
 
-## 2. Beskriv hur en MVC-arkitektur är uppbyggd
+Bokens avsnitt: **inget. MVC finns inte i boken.**
 
-Bokens avsnitt: **finns inte**.
+Svaret nedan är ==allmän kunskap om mönstret, inte bokens text==. Säg det rakt ut om du blir pressad på
+var det står.
 
-**Säg detta först på tentan.** MVC beskrivs inte i kursboken. En sökning i hela boken ger noll
-träffar på *MVC*, *Model-View-Controller* och *Model/View*. Boken behandlar arkitektur i termer
-av skiktning, flerskikt och tunna klienter (2.3.2) — inte MVC.
+**De tre delarna:**
 
-**Var MVC hör hemma i kursen i stället:**
+- **Model** — datan, reglerna för den och systemets tillstånd. Modellen vet ==inget om gränssnittet==.
+- **View** — presentationen: läser ur modellen och visar den för användaren.
+- **Controller** — tar emot användarens inmatning och ==översätter den till operationer på modellen==.
 
-- Den **tillämpade delen** enligt KursPM, vecka 41–43: *ASP.NET MVC, MVVM-mönstret samt
-  Object-Relational Mapping med Entity Framework*. Det är där mönstret examineras.
-- REST-källan (restfulapi.net) är kurslitteratur för kapitel 9. Den nämns som möjlig plats där
-  MVC tas upp som exempel på ett *layered system* — **obekräftat**, den källan finns inte i det
-  här vaultet, så verifiera i notebooken eller på sajten innan du använder det som argument.
+**Flödet:** användaren gör något i vyn → controllern tolkar det → modellen uppdateras → modellen säger
+till att den ändrats → vyn läser om och ritar upp igen.
 
-**Mönstret, för att kunna svara ändå** (utanför boken, säg att det är det):
+**Poängen** är att presentationen skiljs från datan. Det ger två saker: ==flera vyer kan visa samma
+modell==, och modellen kan ==testas utan något gränssnitt alls==.
 
-- **Model** – data och den logik som verkar på datan.
-- **View** – presentationen av datan för användaren.
-- **Controller** – tar emot användarens indata, uppdaterar modellen och väljer vy.
-
-**Den distinktion som är värd poäng:** MVC är en uppdelning av *kod* inom en tillämpning, alltså
-logisk. Trelagersarkitektur är en uppdelning över *maskiner*, alltså fysisk placering. Med bokens
-ord är MVC närmast skiktning, inte flerskikt. Ett vanligt fel är att svara att MVC "är" en
-trelagersarkitektur — de tre rollerna avbildas inte på tre servrar.
+**Så kan du tänka.** MVC och trelager låter likt men svarar på olika frågor, och det är den enda
+jämförelsen du behöver: **MVC delar upp kod efter roll inne i en tillämpning**, **trelager fördelar
+funktion över servrar**. De krockar inte — View och Controller kan ligga i skikt 1, modellens logik i
+skikt 2, datan i skikt 3. Kopplingen är min, inte bokens.
 
 ### Muntligt svar
 
-1. Boken tar inte upp MVC – det ligger i kursens tillämpade del, ASP.NET MVC.
-2. Model är data och logik, View är presentationen, Controller tar emot indata och styr.
-3. Controllern uppdaterar modellen; vyn visar modellens tillstånd.
-4. Skillnaden mot treskikt: MVC delar upp kod inom en tillämpning, treskikt delar upp funktion
-   över servrar.
-5. Med bokens begrepp är MVC alltså skiktning snarare än flerskikt.
+1. Säg först att MVC är ett **designmönster för att strukturera en tillämpning**, och att boken inte
+   tar upp det — du svarar på allmän grund.
+2. **Model**: data, regler och tillstånd, utan kännedom om gränssnittet.
+3. **View**: läser ur modellen och visar den. **Controller**: tar inmatning och omvandlar den till
+   operationer på modellen.
+4. Beskriv **flödet**: användaren agerar i vyn, controllern tolkar, modellen uppdateras, vyn ritas om.
+5. Ge **poängen**: flera vyer kan visa samma modell, och modellen går att testa utan gränssnitt. Får du
+   följdfrågan om trelager: MVC delar upp **kod efter roll**, trelager fördelar **funktion över
+   servrar**.
 
----
+## Fråga 3 — Vad är Middleware?
 
-## 3. Vad är Middleware?
+Bokens avsnitt: 2.3.2 (definitionen i skiktningsavsnittet), 2.3.3, samt 1.5.1
 
-Bokens avsnitt: **1.5.1** (definitionen), **2.3.2** (placeringen i lagermodellen), **2.3.3**
-(kategorier och gränser)
+**Definitionen**, från 1.5.1 och upprepad i 2.3.2: ett ==lager av mjukvara vars syfte är att dölja
+heterogenitet och ge programmerarna en bekväm programmeringsmodell==.
 
-**Definitionen, bokens egen:** ett lager av mjukvara vars syfte är att ==maskera heterogenitet==
-och att erbjuda en bekväm programmeringsmodell för applikationsprogrammerare.
+**Konkret** är det ==processer eller objekt på en uppsättning datorer== som pratar med varandra för att
+åstadkomma kommunikation och resursdelning för distribuerade tillämpningar.
 
-**Var det ligger** (figur 2.7, nedifrån och upp): datorer och nätverkshårdvara → operativsystem →
-middleware → tillämpningar och tjänster. Lagret under middleware kallar boken *plattform*: de
-lägsta hård- och mjukvarulagren, till exempel Intel x86/Linux eller ARM/Symbian.
+**Var det sitter.** Fyra lager, nedifrån och upp: ==hårdvara → operativsystem → middleware →
+tillämpningar och tjänster==. Hårdvara plus operativsystem kallas **plattform**, och boken ger fem
+exempel — bland dem Intel x86/Windows, Intel x86/Linux och ARM/Symbian.
 
-**Hur det fungerar:** middleware representeras av processer eller objekt i en mängd datorer som
-interagerar med varandra. Den höjer nivån på programmens kommunikation genom abstraktioner som:
+**Vad det höjer nivån på**, i stället för råa meddelanden: **fjärranrop**, **gruppkommunikation**,
+**händelsenotifieringar**, **uppdelning, placering och hämtning** av delade dataobjekt,
+**replikering**, och **överföring av multimediadata i realtid**. **Uppgiften, som boken formulerar den
+i 2.3.3:** ge en ==högre programmeringsabstraktion==, och genom skiktning ==abstrahera bort
+heterogeniteten== för att främja **interoperabilitet** och **portabilitet**.
 
-- fjärrmetodanrop – se [[Fjärrmetodanrop (RMI)]]
-- kommunikation inom en grupp av processer
-- notifiering av händelser
-- partitionering, placering och hämtning av delade dataobjekt mellan samverkande datorer
-- replikering av delade dataobjekt
-- överföring av multimediadata i realtid
+**Sex kategorier**, med exempelsystem: **distribuerade objekt** (CORBA, Java RMI, standarden RM-ODP),
+**distribuerade komponenter** (Fractal, OpenCOM, EJB, JBoss), **publish-subscribe** (CORBA Event
+Service), **meddelandeköer** (Websphere MQ), **webbtjänster** (Apache Axis, Globus Toolkit),
+**peer-to-peer** (Pastry, Tapestry, Gnutella). Indelningen styrs av ==vilka enheter som kommunicerar
+och vilket kommunikationsmönster== de använder, och kategorierna är ==inte exakta== — moderna
+plattformar är hybrider. Middleware ger också **infrastrukturtjänster**: CORBA har tjänster för
+säkerhet och tillförlitlighet.
 
-**Kategorier** (figur 2.12) — indelningen styrs av valet av kommunicerande enheter och
-kommunikationsparadigm, och följer fem av arkitekturmodellerna plus peer-to-peer:
+**Gränsen för vad middleware kan lösa: end-to-end-argumentet.** Det är följdfrågan att vara beredd på.
+Saltzer, Reed och Clarke (1984), som boken skriver om med egna ord: vissa funktioner som rör
+kommunikation kan ==bara göras helt och tillförlitligt med hjälp från tillämpningen i ändpunkterna==, så
+att lägga en sådan funktion i själva kommunikationssystemet är ==inte alltid rimligt==. Bokens exempel är
+**e-post med stora bilagor**: TCP hittar och rättar en del fel men ==klarar inte större nätavbrott==, så
+posttjänsten lägger på egen feltolerans — den ==håller reda på hur långt överföringen kommit och
+fortsätter över en ny TCP-förbindelse== om den gamla bryts.
 
-| Kategori | Exempelsystem |
-| --- | --- |
-| Distribuerade objekt | CORBA, Java RMI |
-| Distribuerade komponenter | EJB, JBoss |
-| Publish-subscribe | CORBA Event Service |
-| Meddelandeköer | WebSphere MQ |
-| Webbtjänster | Apache Axis |
-| Peer-to-peer | Pastry, Tapestry |
-
-Två namn räcker per rad — CORBA och Java RMI är de enda du behöver kunna säkert. Boken understryker
-att indelningen **inte är exakt** och att moderna plattformar är hybrider.
-
-Middleware kan också erbjuda **infrastrukturtjänster**, inte bara programmeringsabstraktioner –
-CORBA har till exempel tjänster för säkerhet och tillförlitlighet.
-
-**Gränsen för vad middleware kan göra – *end-to-end*-argumentet** (Saltzer, Reed och Clarke 1984,
-återgivet i 2.3.3). Detta är fallgropen i frågan:
-
-- Vissa kommunikationsrelaterade funktioner kan bara implementeras fullständigt och tillförlitligt
-  ==med hjälp av tillämpningen i ändpunkterna==. Att lägga funktionen i kommunikationssystemet
-  självt är därför inte alltid vettigt.
-- Argumentet går rakt emot uppfattningen att all kommunikation kan abstraheras bort med
-  tillräckligt bra middleware.
-- Kärnan: korrekt beteende beror på kontroller, felkorrigering och säkerhetsåtgärder på många
-  nivåer, och vissa av dem kräver åtkomst till data inne i tillämpningens adressrum. Kontroller
-  bara i kommunikationssystemet garanterar därför **en del** av den önskade korrektheten, och
-  arbetet dubbleras troligen i tillämpningen.
+Slutsatsen: argumentet ==går emot idén att all kommunikation kan abstraheras bort== med tillräckligt
+bra middleware. Vissa kontroller behöver komma åt data ==inne i tillämpningens eget adressrum==; görs
+de bara i kommunikationssystemet blir de ofullständiga och arbetet dubbleras.
 
 ### Muntligt svar
 
-1. Ett mjukvarulager mellan operativsystemet och tillämpningarna.
-2. Två uppgifter: maskera heterogenitet, och ge programmeraren en bekväm programmeringsmodell.
-3. Konkret betyder det abstraktioner som fjärrmetodanrop, gruppkommunikation, händelser och
-   replikering – i stället för råa sockets.
-4. Exempel: CORBA och Java RMI för distribuerade objekt, EJB för komponenter, WebSphere MQ för
-   meddelandeköer.
-5. Men middleware kan inte ta över allt: *end-to-end*-argumentet säger att vissa kontroller bara
-   kan göras i ändpunkterna, eftersom de kräver data inne i tillämpningen.
-6. Därför gör man kontrollen i applikationslagret även om nätverket lovar tillförlitlighet.
+1. Ge **definitionen**: ett mjukvarulager som döljer heterogenitet och ger programmeraren en bekväm
+   programmeringsmodell.
+2. Placera det: **ovanpå operativsystemet, under tillämpningarna**. Hårdvara plus operativsystem är
+   plattformen.
+3. Säg **vad det ger**: fjärranrop, gruppkommunikation, händelsenotifieringar, replikering — i stället
+   för att man skickar råa meddelanden själv. Syftet i två ord: interoperabilitet och portabilitet.
+4. Ge **två eller tre kategorier med exempel**: distribuerade objekt med CORBA och Java RMI,
+   meddelandeköer med Websphere MQ, webbtjänster med Apache Axis.
+5. Avsluta med **gränsen**: end-to-end-argumentet. Vissa funktioner kan bara göras rätt i
+   ändpunkterna — e-post måste lägga på egen feltolerans ovanpå TCP, som inte klarar längre avbrott.
 
----
+## Fråga 4 — Vad är fördelarna med en klient/server-lösning?
 
-## 4. Vad är fördelarna med en klient/server-lösning?
+Bokens avsnitt: 2.3.1 (Roles and responsibilities, samt Placement)
 
-Bokens avsnitt: **1.4** (grundmodellen), **2.3.1** (rollerna och avvägningen)
+Boken har ==ingen punktlista över fördelar==. Den säger fördelen i en mening och ägnar resten åt
+svagheten.
 
-Se även [[Klient-server-modellen]].
+**Fördelen, med bokens ord:** ett ==direkt och relativt enkelt sätt att dela data och andra resurser==.
+Därför kallar boken den ==historiskt viktigaste==, ==mest citerade== och ==mest använda== arkitekturen.
+Rollerna är enkla att resonera om: klientprocesser vänder sig till enskilda serverprocesser, som kan
+ligga på andra datorer, för att komma åt de resurser servern sköter.
 
-**Grundmekanismen (1.4):** en **server** är en process på en nätverksansluten dator som tar emot
-förfrågningar från program på andra datorer, utför en tjänst och svarar. De begärande processerna
-kallas **klienter**. En komplett interaktion från förfrågan till svar kallas ett **fjärranrop**
-(*remote invocation*).
+**Den går att bygga i lager: en server kan själv vara klient.** Det ger flest följdfrågor, och boken
+har tre exempel — en **webbserver** är ofta klient hos en lokal filserver som lagrar sidorna;
+webbservrar är **klienter hos DNS**; en **söktjänst är både server och klient**, den svarar på frågor
+från webbläsare och kör samtidigt *web crawlers* som är klienter hos andra webbservrar.
 
-- **Klienter är aktiva** – de gör förfrågningar. **Servrar är passiva** – de vaknar bara när en
-  förfrågan kommer.
-- Servrar kör kontinuerligt; klienter lever bara så länge som tillämpningen de ingår i.
-- Rollerna gäller **bara för en enskild förfrågan** – samma process kan vara både klient och
-  server.
+**Den drar nytta av samtidighet.** I söktjänstexemplet är serveruppgiften och crawler-uppgiften ==helt
+oberoende==: de behöver knappt synkroniseras och kan köra samtidigt i egna trådar. **Och nämn
+transparensen:** RPC och RMI, de vanliga sätten att bygga klient/server, ger ==minst åtkomst- och
+lokaliseringstransparens== — programmeraren anropar som om operationen låg lokalt.
 
-**Fördelarna, i den ordning boken ger dem:**
+**Den går att förbättra med placering.** Fyra strategier, som i praktiken är fördelar eftersom de låter
+grundmodellen bära mer last. **Flera servrar**: objekten kan ==delas upp== eller ==replikeras== —
+webben delar upp, varje server sköter sina egna resurser, medan Sun NIS replikerar och varje server har
+en kopia av lösenordsfilen. **Caching**: ett ==lager av nyligen använda objekt närmare klienten==, och
+proxyservrar ger en delad cache som ==ökar tillgänglighet och prestanda genom att minska lasten== på
+nätet och webbservrarna. **Mobil kod**: körs lokalt hos klienten och ger ==bra svarstider==, eftersom
+man slipper nätets fördröjning och varierande bandbredd. **Mobila agenter**: se fråga 5.
 
-1. **Enkelhet.** Klient-server är "ett direkt och relativt enkelt sätt" att dela data och andra
-   resurser. Det är historiskt den viktigaste arkitekturen och fortfarande den mest använda.
-2. **Kontrollerad åtkomst.** En **tjänst** är en avgränsad del av systemet som förvaltar en
-   samling relaterade resurser och exponerar dem *endast* genom en väldefinierad mängd
-   operationer – en filtjänst har `read`, `write`, `delete`. Varje resurs måste förvaltas av ett
-   program som erbjuder ett kommunikationsgränssnitt, så att resursen kan nås och uppdateras
-   ==tillförlitligt och konsistent==.
-3. **Konsistens och förvaltning.** Bokens EVE Online-exempel (1.2.2): den centraliserade
-   arkitekturen hjälper avsevärt med att förvalta den virtuella världen, och den enda kopian av
-   tillståndet gör konsistensfrågorna enklare.
-4. **Sammansättbarhet.** Servrar kan i sin tur vara klienter hos andra servrar. En webbserver är
-   ofta klient hos en lokal filserver; de flesta internettjänster är klienter hos DNS. En sökmotor
-   är både server och klient – den svarar på frågor från webbläsare och kör *web crawlers* som är
-   klienter hos andra webbservrar.
-5. **Samtidighet.** En typisk sökmotor kör många samtidiga trådar, några som betjänar klienter och
-   andra som kör crawlers, utan att de behöver synkroniseras.
-
-**Nackdelen du måste nämna själv:** modellen ==skalar dåligt==. Centraliseringen av tjänsten på en
-enda adress skalar inte bortom kapaciteten hos den dator som är värd för tjänsten och bandbredden
-i dess nätverksanslutning. Se [[Skalbarhet]].
-
-- Placeringsstrategier som flera servrar och cachning mildrar problemet, men adresserar inte
-  grundfrågan: att delade resurser måste spridas mycket bredare.
-- Det är just den insikten som leder till [[Peer-to-peer]], där resurserna som är tillgängliga för
-  tjänsten *växer med antalet användare*.
+**Svagheten måste med.** Klient/server ==skalar dåligt==: en tjänst på en enda adress kan ==inte växa
+förbi kapaciteten hos värddatorn och bandbredden i dess nätanslutning==. Placeringsstrategierna hjälper
+men löser inte grundproblemet — det gör **peer-to-peer**, som hör till kapitel 10.
 
 ### Muntligt svar
 
-1. Servern förvaltar resursen och är passiv; klienten är aktiv och gör fjärranrop.
-2. Första fördelen är enkelhet – det är det direktaste sättet att dela en resurs, och det mest
-   använda.
-3. Andra fördelen är kontrollerad åtkomst: tjänsten exponerar bara en väldefinierad mängd
-   operationer, så resursen kan uppdateras tillförlitligt och konsistent.
-4. Tredje fördelen är konsistens och förvaltning – en enda kopia av tillståndet, som i EVE Online.
-5. Fjärde fördelen är att servrar kan vara klienter hos andra servrar, som en sökmotor som både
-   svarar och crawlar.
-6. Nackdelen är att den skalar dåligt: allt hänger på en adress, en dator och dess bandbredd.
-7. Det är därför peer-to-peer finns – där växer resurserna med antalet användare.
+1. Ge **kärnfördelen** med bokens formulering: ett direkt och relativt enkelt sätt att dela data och
+   resurser. Därför är den den mest använda arkitekturen.
+2. Säg att **rollerna är enkla**: klienten frågar, servern sköter resursen och svarar.
+3. Ge **komponerbarheten**: en server kan själv vara klient. Webbservern är klient hos filservern och
+   hos DNS, och en söktjänst är både server och klient.
+4. Ge **placeringsstrategierna** som gör den uthållig: flera servrar med uppdelning eller replikering,
+   caching i proxyservrar, mobil kod. Nämn att RPC och RMI ger åtkomst- och lokaliseringstransparens.
+5. Avsluta med **svagheten**: den skalar dåligt, eftersom en tjänst på en adress inte kan växa förbi
+   värddatorns kapacitet och bandbredd. Det är skälet till att peer-to-peer finns.
 
----
+## Fråga 5 — Vad är en mobil agent?
 
-## 5. Vad är en mobil agent?
+Bokens avsnitt: 2.3.1 (Placement, Mobile agents)
 
-Bokens avsnitt: **2.3.1**, under *Placement*
+**Definitionen:** ett ==körande program, både kod och data==, som ==reser från dator till dator i ett
+nät== och utför en uppgift ==för någons räkning== — till exempel samlar information — och ==till slut
+kommer tillbaka med resultatet==.
 
-**Sammanhanget:** boken tar upp fyra placeringsstrategier – avbildning av tjänster på flera
-servrar, cachning, mobil kod och mobila agenter. Agenten är den fjärde.
+**Mekanismen, och hela vinsten:** agenten gör ==många anrop mot lokala resurser på varje plats den
+besöker==, till exempel läser enskilda databasposter. Jämfört med en ==stillasittande klient som gör
+fjärranrop== och kanske flyttar stora mängder data blir vinsten ==lägre kommunikationskostnad och
+kortare tid, eftersom fjärranrop byts mot lokala anrop==.
 
-**Definitionen, bokens egen:** ett ==körande program, inklusive både kod och data==, som färdas
-från en dator till en annan i ett nätverk och utför en uppgift för någons räkning, till exempel
-att samla information, och till slut återvänder med resultatet.
+**Bokens två exempel:** att ==installera och underhålla mjukvara== på datorerna i en organisation, och
+att ==jämföra priser== hos flera leverantörer genom att besöka varje plats och köra databasoperationer.
 
-**Mekanismen och vinsten:** agenten kan göra många anrop till **lokala** resurser på varje plats
-den besöker, till exempel läsa enskilda databasposter. Jämför med en statisk klient som gör
-fjärranrop och möjligen överför stora datamängder: vinsten är ==minskad kommunikationskostnad och
-kortare tid==, genom att fjärranrop byts mot lokala anrop.
+**Två säkerhetsproblem, i olika riktningar. Ha båda.**
 
-**Bokens exempel på användning:**
+- **Agenten är ett hot mot värden**, precis som mobil kod. Miljön som tar emot den måste ==bestämma
+  vilka lokala resurser den får använda==, och det avgörs av ==vem agenten agerar för==. Därför måste
+  identiteten följa med ==säkert tillsammans med agentens kod och data==. (Hur begränsningen görs i
+  praktiken står i 11.1.1, utanför det här kapitlet.)
+- **Agenten är själv utsatt.** Den kan ==misslyckas med uppgiften om den nekas åtkomst== till
+  information den behöver.
 
-- installera och underhålla mjukvara på datorerna i en organisation
-- jämföra priser hos flera leverantörer genom att besöka varje leverantörs plats och utföra en
-  serie databasoperationer
-- en tidig variant av samma idé är *worm*-programmet från Xerox PARC (Shoch och Hupp 1982), som
-  skulle utnyttja lediga datorer för tunga beräkningar
+**Boken tvivlar på nyttan, och det är poängen som imponerar.** Uppgifterna kan göras på andra sätt:
+*web crawlers* som behöver komma åt resurser på webbservrar över hela internet fungerar ==bra med
+vanliga fjärranrop==. Bokens slutsats är att ==användbarheten hos mobila agenter kan vara begränsad==.
 
-**Skilj från mobil kod**, som är den tredje strategin: en applet vars kod ligger på en webbserver,
-laddas ner till webbläsaren och körs där. Fördelen är god interaktiv respons, eftersom den inte
-drabbas av nätets fördröjning eller varierande bandbredd. Mobil kod flyttas alltså *ut* till
-klienten; en mobil agent flyttar sig själv *vidare* mellan värdar.
-
-**Begränsningarna – detta är halva svaret:**
-
-- Mobila agenter är, precis som mobil kod, ett **säkerhetshot mot resurserna** i de datorer de
-  besöker. Den mottagande miljön måste avgöra vilka lokala resurser agenten får använda, baserat
-  på identiteten hos den användare agenten agerar för – och den identiteten måste följa med kod
-  och data på ett säkert sätt.
-- Agenten är också själv **sårbar**: den kanske inte kan slutföra sin uppgift om den nekas åtkomst
-  till den information den behöver.
-- Uppgifterna kan utföras på andra sätt. Webbcrawlers som behöver komma åt resurser på webbservrar
-  över hela internet fungerar utmärkt med vanliga fjärranrop.
-- Bokens slutsats: **användbarheten för mobila agenter kan därför vara begränsad.**
+**Skilj mobil agent från mobil kod.** Mobil kod ==laddas ned och körs hos mottagaren== — appleten är
+exemplet, och en variant är *push*-modellen där servern tar initiativet, som mäklaren vars applet visar
+aktiekurser. En mobil agent ==bär med sig sin data, flyttar sig vidare och arbetar för någons räkning==.
 
 ### Muntligt svar
 
-1. Ett körande program med både kod och data, som flyttar sig mellan datorer och utför en uppgift
-   för någons räkning.
-2. Den återvänder till slut med resultatet.
-3. Vinsten är att den gör sina anrop lokalt på varje värd i stället för över nätet, vilket sänker
-   kommunikationskostnaden och tiden.
-4. Exempel: underhålla mjukvara i en organisation, eller jämföra priser genom att besöka varje
-   leverantör.
-5. Skilj från mobil kod, en applet som laddas ner till klienten och körs där.
-6. Problemet är säkerhet i båda riktningarna: agenten hotar värdens resurser, och värden kan neka
-   agenten det den behöver.
-7. Och uppgiften kan oftast lösas med vanliga fjärranrop, som webbcrawlers gör – därför är
-   användningen begränsad.
-
----
+1. Ge **definitionen**: ett körande program med både kod och data, som reser mellan datorer, utför en
+   uppgift för någons räkning och kommer tillbaka med resultatet.
+2. Ge **mekanismen och vinsten**: på varje plats gör den många **lokala** anrop i stället för
+   fjärranrop, vilket ger lägre kommunikationskostnad och kortare tid.
+3. Ge ett **exempel**: jämföra priser hos flera leverantörer, eller installera mjukvara i en
+   organisation.
+4. Ge **båda säkerhetsproblemen**: agenten är ett hot mot värden, som måste veta vem den agerar för —
+   och agenten är själv utsatt, den kan nekas information den behöver.
+5. Avsluta med **bokens tvivel**: samma uppgifter går att lösa med vanliga fjärranrop, som web
+   crawlers gör, så nyttan kan vara begränsad.
 
 ## Luckor och källor
 
-- **Fråga 2 (MVC) är den enda luckan.** Mönstret finns inte i kursboken. Innehållet ovan kommer
-  från kursens tillämpade del enligt KursPM och är markerat som utanför boken. Att REST-källan
-  nämner MVC är **obekräftat** här.
-- Allt övrigt är hämtat ur boken, avsnitt 1.2.2, 1.4, 1.5.1, 2.3.1, 2.3.2 och 2.3.3.
-- Siffran 60 000 sidförfrågningar per sekund och årtalet 1982 står i boken. Inga andra tal
-  förekommer i svaren, och inga formler – boken ger inga formler för det här kapitlets frågor.
-- Utanför tentafrågorna, och därför medvetet utelämnat: fysiska modeller (2.2), fundamentala
-  modeller (2.4) med interaktions-, fel- och säkerhetsmodell, samt kommunikationsparadigm och
-  peer-to-peer i detalj. Kortformen av peer-to-peer finns bara som kontrast i fråga 4.
+**MVC finns inte i boken — den enda riktiga luckan i kapitel 2.** Verifierat med fyra olika sökningar.
+Svaret på fråga 2 är därför ==allmän kunskap, inte bokens==, och jämförelsen mellan MVC och trelager är
+min egen. Säg det om examinatorn frågar var du läst det.
+
+**Fråga 4 har inget listat svar i boken.** Fördelen står i en enda mening — "ett direkt och relativt
+enkelt sätt att dela data och andra resurser" — och sedan ägnas mer plats åt att modellen skalar
+dåligt. Allt annat i svaret är hämtat ur boken, men **sammanställningen till en fördelslista är min**.
+
+**Två följdfrågor materialet inte kan svara på.** Boken ger ==inget namngivet treskiktssystem== —
+Wikipedia nämns som n-skikt, inte som treskikt. Och ==hur middleware tekniskt döljer heterogeniteten==
+(stubbar, marshalling) hör till kapitel 5, inte hit.
+
+**Det som inte är utskrivet här** frågas inte av någon tentafråga: fysiska modeller och de tre
+generationerna, de fundamentala modellerna, peer-to-peer som hör till kapitel 10, virtual network
+computing, mönstren *proxy*, *brokerage* och *reflection*, samt Ajax-kodexemplet.

@@ -1,7 +1,7 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-09-10
 description: "Begrepp: klient-server-modellen (HI1031)."
 ---
 # Klient-server-modellen

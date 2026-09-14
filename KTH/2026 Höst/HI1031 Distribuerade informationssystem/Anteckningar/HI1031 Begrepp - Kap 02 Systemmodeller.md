@@ -1,143 +1,184 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
+tags:
+  - begrepp
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
 created: 2026-08-24
-updated: 2026-09-06
+updated: 2026-09-09
 description: "Flashcards HI1031 kap 2, avgränsade till tentafrågorna om arkitektur: trelagersarkitektur, MVC, middleware, fördelarna med klient/server och mobila agenter."
 ---
 # HI1031 Begrepp - Kap 02 Systemmodeller
 
 ## Trelagersarkitektur
 
-Vilka tre funktionsdelar delas en tillämpning upp i vid flerskiktsarkitektur? (3)
+Vilka tre funktionsdelar delar boken en tillämpning i? (3)
 ||
-- **Presentationslogik** – användarens interaktion och vyn som visas
+- **Presentationslogik** – samspelet med användaren och vyn som visas
 - **Applikationslogik** – den tillämpningsspecifika behandlingen, även kallad affärslogik
-- **Datalogik** – den varaktiga lagringen, normalt i ett databashanteringssystem
+- **Datalogik** – den varaktiga lagringen, normalt i en databas
 
-I en trelagerslösning finns en *en-till-en-avbildning* från logisk del till fysisk server – vilka är de tre skikten? (3)
+Vad betyder det att en arkitektur är trelagers?::Det finns en ==en-till-en-avbildning från logisk del till fysisk server==.
+<!--SR:!fsrs,2026-09-10T06:40:13.759Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:13.759Z-->
+
+Vilka är de tre skikten? (3)
 ||
-- **Skikt 1** – klientens användargränssnitt och kontroller
+- **Skikt 1** – klientens vy och kontroller
 - **Skikt 2** – en applikationsserver med applikationslogiken
-- **Skikt 3** – en databasserver som erbjuder ett relationsgränssnitt
+- **Skikt 3** – en databasserver med ett relationsgränssnitt
+<!--SR:!fsrs,2026-09-10T06:29:28.190Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:28:28.190Z-->
 
-Hur fördelas de tre funktionsdelarna i en tvåskiktslösning?::De måste delas upp på två processer, vilket normalt görs genom att ==applikationslogiken delas mellan klienten och servern==.
-
-Vad är fördelen med tvåskikt?::==Låg fördröjning== – det räcker med ett enda meddelandeutbyte för att utföra en operation.
-
-Vad är nackdelen med tvåskikt?::Applikationslogiken ==delas över en processgräns==, vilket begränsar vilka delar av logiken som kan anropas direkt från vilka andra delar.
-
-Vilken är den största vinsten med treskikt?::Applikationslogiken ligger ==samlad på ett enda ställe==, vilket gör mjukvaran lättare att underhålla.
+Vilken är den största vinsten med treskikt?::Applikationslogiken ligger ==samlad på ett ställe==, så mjukvaran blir lättare att underhålla.
 
 Vad kostar treskikt jämfört med tvåskikt? (2)
 ||
-- **Förvaltning** – tre servrar att hålla i drift i stället för två
-- **Prestanda** – mer nättrafik och högre fördröjning för varje operation
+- **Drift** – tre servrar att sköta i stället för två
+- **Prestanda** – mer nättrafik och högre fördröjning per operation
 
-Varför kan skikt 1 göras mycket enkelt i en trelagerslösning?::Det är ==bara ett användargränssnitt==, utan applikationslogik, vilket ger inbyggt stöd för tunna klienter.
+Varför kan skikt 1 göras enkelt?::Det är ==bara ett användargränssnitt==, utan applikationslogik, vilket ger inbyggt stöd för tunna klienter.
 
-Vad menas med n-skiktsarkitektur?::Att applikationsdomänen delas i ==n logiska delar, var och en avbildad på en egen server==.
+Hur fördelas de tre delarna i tvåskikt?::De kläms in i två processer, normalt genom att ==applikationslogiken delas mellan klient och server==.
 
-Varför använder Wikipedia en n-skiktsarkitektur?::För att klara den höga volymen webbförfrågningar – ==upp till 60 000 sidförfrågningar per sekund==.
+Vad är fördelen med tvåskikt?::==Låg fördröjning== – ett enda meddelandeutbyte räcker för en operation.
 
-Vad skiljer skiktning (layering) från flerskikt (tiering)? (2)
+Vad är nackdelen med tvåskikt?::Applikationslogiken ==delas över en processgräns==, vilket begränsar vilka delar som kan anropas direkt från vilka andra.
+
+Vad menas med n-skiktsarkitektur?::Tillämpningen delas i ==n logiska delar, var och en på en egen server==.
+
+Vilket exempel på n-skikt ger boken, och varför?::==Wikipedia==, som behöver klara upp till ==60 000 sidförfrågningar per sekund==.
+
+Vad skiljer skiktning från flerskikt? (2)
 ||
-- **Skiktning** – *vertikal* uppdelning i abstraktionslager, där varje lager bara använder tjänsterna i lagret under
-- **Flerskikt** – fördelar *ett* lagers funktion över lämpliga servrar och, i andra hand, fysiska noder
+- **Skiktning** – *vertikal* uppdelning i abstraktionslager, där varje lager bara använder lagret under
+- **Flerskikt** – fördelar *ett* lagers funktion över lämpliga servrar
 
-**Tunn klient** (thin client);;Ett mjukvarulager som ger ==fönstergränssnittet lokalt medan programmen körs på en fjärrdator==, så att även enkla enheter kan använda avancerade nättjänster.
-
-Var fungerar en tunn klient dåligt?::Vid ==högt interaktiv grafik== som CAD och bildbehandling, där bild- och vektordata måste överföras och fördröjningen blir oacceptabel.
-
-Vad gör en applikationsserver?::Den skiljer ==applikationslogiken från datalagringen==, och ger dessutom stöd för säkerhet och tillförlitlighet.
-
-Vilken arkitektur stöder en applikationsserver direkt?::==Treskiktsarkitekturen==.
+**Applikationsserver**;;Den kategori av middleware som ger direkt stöd för treskikt genom att ==skilja applikationslogiken från datalagringen==.
+<!--SR:!fsrs,2026-09-10T06:40:26.983Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:26.983Z!2000-01-01,1,250-->
 
 ## MVC-arkitektur
 
-Vilka tre delar består MVC-mönstret av? (3)
+Vad måste du säga om källan när du svarar på MVC-frågan?::Att ==MVC inte finns i boken== – svaret bygger på allmän kunskap om mönstret.
+<!--SR:!fsrs,2026-09-10T06:29:56.134Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:28:56.134Z-->
+
+**Model** (i MVC);;Datan, reglerna för den och systemets tillstånd. Den vet ==inget om gränssnittet==.
+<!--SR:!fsrs,2026-09-10T06:29:45.550Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:28:45.550Z!2000-01-01,1,250-->
+
+**View** (i MVC);;Delen som ==läser ur modellen och visar den== för användaren.
+
+**Controller** (i MVC);;Delen som tar emot användarens inmatning och ==översätter den till operationer på modellen==.
+<!--SR:!fsrs,2026-09-10T06:40:18.431Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:18.431Z!2000-01-01,1,250-->
+
+Hur går flödet i MVC?::Användaren agerar i vyn → ==controllern tolkar== → modellen uppdateras → modellen säger till → vyn ritas om.
+
+Vad vinner man på MVC:s uppdelning? (2)
 ||
-- **Model** – data, affärslogik och systemets tillstånd
-- **View** – presentationen av data för användaren, gränssnittet
-- **Controller** – tar emot användarens indata och styr Model och View
+- **Flera vyer** kan visa samma modell
+- **Modellen kan testas** utan något gränssnitt alls
+<!--SR:!fsrs,2026-09-10T06:40:30.607Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:30.607Z-->
 
-Hur går en förfrågan genom en MVC-applikation?::==Controllern tar emot användarens indata==, anropar Model för data och affärslogik, och väljer sedan den View som presenterar resultatet.
-
-Vad skiljer MVC från en trelagersarkitektur?::MVC delar upp ==ansvaret inuti ett program==, medan flerskikt fördelar funktionen på skilda servrar – MVC:s tre delar kan alla ligga i ett och samma skikt.
+Vad skiljer MVC från trelager? (egen slutsats)::MVC delar upp ==kod efter roll inne i en tillämpning==; trelager fördelar ==funktion över olika servrar==.
+<!--SR:!fsrs,2026-09-10T06:40:36.862Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:36.862Z-->
 
 ## Middleware
 
-Vilka lager har ett distribuerat system, underifrån och upp? (4)
+**Middleware**;;Ett lager av mjukvara vars syfte är att ==dölja heterogenitet och ge programmeraren en bekväm programmeringsmodell==.
+<!--SR:!fsrs,2026-09-10T06:40:51.658Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:51.658Z!2000-01-01,1,250-->
+
+Vad är middleware rent konkret?::==Processer eller objekt på flera datorer== som pratar med varandra för att åstadkomma kommunikation och resursdelning.
+
+Vilka fyra lager har boken, nedifrån och upp? (4)
 ||
-- **Dator- och nätverkshårdvara**
-- **Operativsystem** – tillsammans med hårdvaran utgör det *plattformen*
+- **Hårdvara**
+- **Operativsystem**
 - **Middleware**
-- **Applikationer och tjänster**
+- **Tillämpningar och tjänster**
 
-Vad menas med *plattform* i ett distribuerat system?::De ==lägsta hård- och mjukvarulagren==, t.ex. x86/Linux eller ARM/Symbian, som lyfter programmeringsgränssnittet till en nivå där processer kan samverka.
+**Plattform** (i bokens lagermodell);;De ==lägsta lagren: hårdvara plus operativsystem==. Boken ger fem exempel, bland dem Intel x86/Windows och ARM/Symbian.
 
-Vilka abstraktioner lyfter middleware upp till programmeraren? (4)
+Vad höjer middleware nivån på? (5)
 ||
-- **Fjärrmetodanrop**
-- **Gruppkommunikation** mellan en mängd processer
-- **Händelsenotifiering**
-- **Placering och replikering** av delade dataobjekt
+- **Fjärranrop**
+- **Gruppkommunikation** mellan processer
+- **Händelsenotifieringar**
+- **Uppdelning, placering och replikering** av delade dataobjekt
+- **Multimediadata i realtid**
 
-Vad styr indelningen av middleware i huvudklasser?::==Valet av kommunicerande enheter och kommunikationsparadigm==.
+Vad är syftet med middleware, i två ord?::==Interoperabilitet och portabilitet== – att olika system funkar ihop och att kod går att flytta.
 
-Vilka huvudklasser av middleware räknar boken upp, med exempel? (5)
-||
-- **Distribuerade objekt** – CORBA, Java RMI
-- **Distribuerade komponenter** – EJB, JBoss, övriga applikationsservrar
-- **Publish-subscribe** – CORBA Event Service
-- **Meddelandeköer** – Websphere MQ
-- **Web services** – Apache Axis, Globus Toolkit
+Vilka sex kategorier av middleware räknar boken upp?::==Distribuerade objekt, distribuerade komponenter, publish-subscribe, meddelandeköer, webbtjänster och peer-to-peer.==
+<!--SR:!fsrs,2026-09-10T06:29:36.902Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:28:36.902Z-->
 
-Vilken gräns har middleware enligt ände-till-ände-argumentet?::Vissa kommunikationsfunktioner kan ==bara implementeras fullständigt med hjälp av applikationen i ändpunkterna==.
+Vilka exempel ger boken på middleware för distribuerade objekt?::==CORBA== och ==Java RMI== som plattformar, ==RM-ODP== som standard.
+<!--SR:!fsrs,2026-09-10T06:40:47.666Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:47.666Z-->
 
-Varför räcker inte TCP för att överföra ett mycket stort mejl?::TCP rättar vissa fel men ==klarar inte större nätavbrott==; mejltjänsten håller själv reda på hur långt överföringen kommit.
+Vad ger middleware utöver programmeringsabstraktioner?::==Infrastrukturtjänster==, till exempel CORBA:s tjänster för säkerhet och tillförlitlighet.
+<!--SR:!fsrs,2026-09-10T06:40:08.607Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:08.607Z-->
 
-Vad ger middleware utöver programmeringsabstraktioner?::==Infrastrukturtjänster== för applikationer och andra tjänster – CORBA erbjuder t.ex. tjänster för säkerhet och tillförlitlighet.
+Vad säger end-to-end-argumentet?::Vissa saker blir pålitliga ==bara om tillämpningen i ändpunkterna sköter dem själv==, så det är inte alltid värt att bygga in dem i kommunikationssystemet.
+
+Vilket exempel ger boken på end-to-end-argumentet?::==E-post med stora bilagor==: TCP klarar inte större nätavbrott, så posttjänsten håller reda på hur långt den kommit och fortsätter över en ny TCP-förbindelse.
+
+Vad går end-to-end-argumentet emot?::Idén att ==all kommunikation kan abstraheras bort== med tillräckligt bra middleware.
 
 ## Fördelar med klient/server
 
-Vilka fördelar har en klient/server-lösning? (4)
+Vad är fördelen med klient/server, med bokens ord?::Ett ==direkt och relativt enkelt sätt att dela data och andra resurser==.
+
+Hur beskriver boken klient/servers ställning?::==Historiskt viktigast, mest citerad== när distribuerade system diskuteras, och ==fortfarande mest använd==.
+
+Hur ser rollerna ut i klient/server?::==Klientprocesser vänder sig till enskilda serverprocesser==, som kan ligga på andra datorer, för att komma åt resurserna servern sköter.
+
+Ge tre exempel på att en server själv är klient. (3)
 ||
-- **Enkelhet** – en direkt och förhållandevis enkel väg att dela data och andra resurser
-- **Samlad förvaltning** – servern äger och förvaltar de delade resurserna på ett ställe
-- **Tydliga roller** – klienten begär, servern utför och svarar
-- **Spridning** – den mest använda modellen; webben, FTP, e-post, DNS och web services bygger på den
+- En **webbserver** är ofta klient hos en lokal filserver som lagrar sidorna
+- Webbservrar är **klienter hos DNS**
+- En **söktjänst** svarar på frågor och kör samtidigt web crawlers mot andra webbservrar
 
-Varför skalar klient-server-modellen dåligt?::Tjänsten ligger på ==en enda adress==, så den begränsas av värddatorns kapacitet och bandbredden i dess nätanslutning.
+Vilken samtidighetsfördel visar söktjänstexemplet?::Server- och crawleruppgifterna är ==helt oberoende== – de behöver knappt synkroniseras och kan köra samtidigt i egna trådar.
 
-Vad är skillnaden mellan partitionering och replikering när en tjänst läggs på flera servrar? (2)
+Vilka fyra placeringsstrategier ger boken? (4)
 ||
-- **Partitionering** – varje server hanterar sin egen del av objekten, som webbens servrar
-- **Replikering** – varje server har en kopia av samma data, som Suns NIS med lösenordsfilen
+- **Flera servrar**
+- **Caching**
+- **Mobil kod**
+- **Mobila agenter**
 
-Vad gör en webbproxyserver för prestandan?::Den ger en ==delad cache av webbresurser== för flera klienter och sänker därmed lasten på fjärrnätet och webbservrarna; den kan också ge åtkomst genom en brandvägg.
+Vilka två sätt finns att använda flera servrar?::==Dela upp== objekten mellan dem, som webben gör, eller ==replikera== dem, som Sun NIS gör med lösenordsfilen.
 
-Hur kan en server samtidigt vara klient?::Servrar anropar andra servrar – ==en webbserver är klient hos filservern och hos DNS==.
+**Cache**;;Ett lager av ==nyligen använda dataobjekt som ligger närmare klienten== än objekten själva.
 
-Vilken ställning har klient/server-modellen enligt boken?::Den är den ==arkitektur som oftast nämns när distribuerade system diskuteras== – historiskt den viktigaste och fortfarande den mest använda.
+Vad vinner man på en proxyserver?::Den ger en ==delad cache== och ökar tillgänglighet och prestanda genom att ==minska lasten== på nätet och webbservrarna.
 
-Vilken grundläggande begränsning hos klient-server är det peer-to-peer svarar på?::Behovet av att ==sprida de delade resurserna mycket bredare==, så att lasten fördelas över många fler datorer och nätlänkar.
+Vad vinner man på mobil kod hos klienten?::==Bra svarstider==, eftersom man slipper nätets fördröjning och varierande bandbredd.
 
-Vad kostar peer-to-peer jämfört med klient-server?::Behovet av att ==placera och hitta enskilda objekt och hålla replikor aktuella över många datorer== gör arkitekturen väsentligt mer komplex.
+Vilken transparens ger RPC och RMI?::Minst ==åtkomst- och lokaliseringstransparens== – man anropar som om operationen låg lokalt.
+
+Vad är klient/servers svaghet?::Den ==skalar dåligt== – en tjänst på en enda adress kan inte växa förbi värddatorns kapacitet och bandbredden i dess nätanslutning.
 
 ## Mobila agenter
 
-**Mobil agent**;;Ett körande program – ==både kod och data== – som förflyttar sig mellan datorer i ett nät och utför en uppgift åt någon, t.ex. hämtar information och återvänder med resultatet.
+**Mobil agent**;;Ett ==körande program, både kod och data==, som reser från dator till dator, utför en uppgift ==för någons räkning== och till slut kommer tillbaka med resultatet.
+<!--SR:!2000-01-01,1,250!fsrs,2026-09-10T06:40:42.598Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:42.598Z-->
 
-Vad skiljer en mobil agent från mobil kod?::Mobil kod ==laddas ner och körs hos mottagaren== och stannar där, medan den mobila agenten reser vidare mellan flera datorer och bär med sig både sin kod och sitt data.
+Vad gör en mobil agent på varje plats den besöker?::==Många anrop mot lokala resurser==, till exempel läser enskilda databasposter.
 
-Vad vinner en mobil agent jämfört med en klient som gör fjärranrop?::==Fjärranropen byts mot lokala anrop== på varje besökt plats, vilket sänker både kommunikationskostnad och tid.
+Vad är vinsten med en mobil agent?::==Fjärranrop byts mot lokala anrop==, vilket ger lägre kommunikationskostnad och kortare tid.
+<!--SR:!fsrs,2026-09-10T06:40:22.463Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:22.463Z-->
 
-Varför är nyttan av mobila agenter ändå begränsad? (2)
+Ge bokens två användningsexempel för mobila agenter. (2)
 ||
-- De är ett **säkerhetshot** mot värden, som måste avgöra vilka lokala resurser agenten får använda utifrån vems uppdrag den utför
-- De är själva **sårbara** – nekas de åtkomst kan de inte slutföra uppgiften, och samma sak går ofta att göra med vanliga fjärranrop
+- **Installera och underhålla mjukvara** på datorerna i en organisation
+- **Jämföra priser** hos flera leverantörer genom att besöka varje plats och köra databasoperationer
 
-Vilka konkreta uppgifter kan en mobil agent utföra? (2)
-||
-- **Installera och underhålla programvara** på datorerna inom en organisation
-- **Jämföra priser** på produkter från flera leverantörer, genom att besöka varje leverantörs plats och utföra en serie databasoperationer
+Varför är en mobil agent ett hot mot värden?::Värden måste ==bestämma vilka lokala resurser agenten får använda==, och det avgörs av vem agenten agerar för.
+
+Vad måste följa med en mobil agents kod och data?::==Identiteten hos den agenten agerar för==, och den måste följa med på ett säkert sätt.
+
+Hur är en mobil agent själv utsatt?::Den kan ==misslyckas med sin uppgift om den nekas åtkomst== till information den behöver.
+
+Varför tvivlar boken på nyttan med mobila agenter?::Samma uppgifter går att lösa med vanliga fjärranrop – ==web crawlers fungerar bra== så – så användbarheten kan vara begränsad.
+<!--SR:!fsrs,2026-09-10T06:40:03.527Z,0,0.212,6.4133,1,1,0,0,2026-09-10T06:39:03.527Z-->
+
+Vad skiljer mobil kod från en mobil agent?::Mobil kod ==laddas ned och körs hos mottagaren==, som en applet. En mobil agent ==bär med sig sin data och flyttar sig vidare==.

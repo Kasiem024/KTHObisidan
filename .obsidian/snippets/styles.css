@@ -1,3 +1,4 @@
+/* Inline and block math rendered like code */
 .math {
   background-color: var(--code-background);
   border-radius: var(--code-radius);
@@ -10,12 +11,15 @@
 /* # if you want different styling for inline and block math
 .math.math-block { }
 
-.math.math-inline { } 
+.math.math-inline { }
 */
-/* Highlight EDITOR */
 
-.cm-s-obsidian span.cm-formatting-highlight,
-.cm-s-obsidian span.cm-highlight {
+/* Highlights: same treatment in editing and reading view.
+   The == delimiters are deliberately NOT styled - giving them a border
+   and padding shifted the line height while typing. */
+.cm-s-obsidian span.cm-highlight,
+.markdown-preview-view mark,
+.markdown-rendered mark {
   background-color: transparent;
   color: yellow;
   border: 1px solid yellow;
@@ -23,16 +27,7 @@
   padding: 2px;
 }
 
-/* Highlight PREVIEW */
-
-.markdown-preview-view mark {
-  background-color: transparent;
-  color: yellow;
-  border: 1px solid yellow;
-  border-radius: 5px;
-  padding: 2px;
-}
-
+/* Active line and caret (the theme styles neither) */
 .markdown-source-view.mod-cm6 .cm-active.cm-line {
   background-color: rgba(0, 183, 255, 0.1);
 }
@@ -41,12 +36,21 @@
   caret-color: red;
 }
 
+/* Heading underline: gradient fading out to the right.
+   Applied in BOTH views - .HyperMD-header is editing view only, so the
+   .markdown-rendered selectors are what make reading view match. */
 .HyperMD-header.HyperMD-header-1,
 .HyperMD-header.HyperMD-header-2,
 .HyperMD-header.HyperMD-header-3,
 .HyperMD-header.HyperMD-header-4,
 .HyperMD-header.HyperMD-header-5,
-.HyperMD-header.HyperMD-header-6 {
+.HyperMD-header.HyperMD-header-6,
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
   border-bottom: 5px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(

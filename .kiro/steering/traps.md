@@ -10,7 +10,7 @@ wrong result here, and **every one is silent** — none throws, none fails a bui
 plausible wrong answer, which is worse. That is the entry criterion: if it throws, it belongs in
 `environment.md`.
 
-There are **eighteen**. Do not add a nineteenth without reproducing it and recording the wrong result
+There are **twenty**. Do not add a twenty-first without reproducing it and recording the wrong result
 it produced. Each entry is the mechanism, the wrong answer it caused, and what to do instead; the
 forensics live in `Meta/Vault Findings & Backlog.md` and `.kiro/lessons-learned.md`.
 
@@ -258,6 +258,42 @@ It bit again the next day while a backlog entry *about this trap* was being writ
 escape processing. Where a double-quoted string is unavoidable, build the character with `[char]0x60`.
 For any string mixing quotes, backticks and unicode, use single-quoted text with `{TOKEN}` placeholders
 and `.Replace()` them afterwards.
+
+## T19 — `Get-ChildItem -Filter "*Kap NN*"` matches two courses, and `-First 1` picks the wrong one
+
+Two courses run in **2026 Höst** and both number their notes by chapter, so
+`-Filter "*Begrepp - Kap 02*.md"` matches `HI1031 Begrepp - Kap 02 Systemmodeller.md` **and**
+`HI1032 Begrepp - Kap 02 Nätverksmodeller.md`. Enumeration order is not alphabetical by course —
+HI1032 came first — so `Select-Object -First 1` silently measured the other course's deck.
+
+**Produced:** a card census reporting **10 cards** in a deck that held **62**. The figure was absurd
+enough to catch, which is the only reason it was caught; a closer pair of decks would have passed.
+
+**What to do:** put the course code in the filter — `-Filter "HI1031 Begrepp - Kap 02*.md"` — and assert
+the resolved filename in the output, so the file being measured is visible next to its numbers. Never
+combine a loose `-Filter` with `-First 1`.
+
+---
+
+## T20 — editing part of a multi-line card leaves a broken card that still counts as one
+
+A multi-line flashcard is three things: a front line, a separator line that is exactly `||` or `??`, and
+the body bullets. A `strReplace` that targets **only the body** replaces the bullets and leaves the front
+and the separator behind, where they silently adopt whatever text follows them. Nothing errors: the file
+is still valid Markdown, and the plugin renders a question whose answer belongs to a different card.
+
+**The census cannot see it either.** A card counter looks for lines that *are* `||`, so an orphaned
+separator still counts as one multi-line card. Delete one card and add one, and the total is unchanged —
+the arithmetic looks perfect while the deck holds a question with no answer.
+
+**Produced:** in HI1031's chapter 10 deck, replacing the two bullets under
+`Vilka tva legitima skal till anonymitet ger boken? (2)` left that front line and its `||` sitting
+directly above an unrelated `::` card. `TOTAL=58` was exactly the expected number. It was found only by
+reading the region back afterwards.
+
+**What to do:** when editing a card, put the **whole block** in the `oldStr` — front line through last
+body line — so a mismatch fails loudly instead of half-succeeding. Then read the block back. Card counts
+are evidence about quantity, never about structure.
 
 ---
 

@@ -73,13 +73,64 @@ cards for it must train speaking an answer, not recognising one.
 
 Two consequences worth stating, because both have already been got wrong:
 
-- **Narrow does not mean shallow.** A question worth real marks needs the mechanism, the
-  tradeoff and the failure mode, because an oral examiner asks the follow-up. Cutting scope is
-  cutting *topics*, not cutting depth within a topic.
+- **Narrow does not mean shallow — but short is the default.** A question worth real marks needs the
+  mechanism, the tradeoff and the failure mode, because an oral examiner asks the follow-up. Cutting
+  scope is cutting *topics*, not cutting depth within a topic. Read this together with the section
+  below, which the author added later and which sets the default to **short**: depth is for the
+  mechanism that answers the question, not for everything true about it.
 - **A gap is reported, never filled from memory.** When an exam question has no source in the
   course material, say so and name what is missing. Inventing a plausible answer to close the
   gap puts a possible falsehood into a deck that is then memorised on purpose. See
   `.kiro/skills/write-flashcards/SKILL.md`.
+
+### Everyday Swedish, fewer cards, shorter notes
+
+Stated by the author on 2026-09-09, after reading seven chapters of generated exam-prep material:
+
+> jag tycker att språket du använder är för komplicerat och vetenskapligt. jag vill att språket du
+> använder ska vara mer vardagligt. det är okej att använda facktermer. […] jag tycker både att det är
+> alldeles för många kort, jag föredrar ett litet antal kort och att varje kort ska vara kort och
+> formulerat vardagligt. det kan vara så att vårt scope är för brett.
+
+Four instructions, all binding on generated study material:
+
+1. **Everyday Swedish.** Short words, short sentences, the way you would say it out loud.
+   **Technical terms are fine** — they are the vocabulary of the exam. What is not fine is academic
+   register around them: prefer *skillnaden* over *distinktionen*, *bygger på* over *vilar på*, *så*
+   over *således*, *gör att* over *medför att*, *visar* over *påvisar*. If a plainer word exists, use
+   it. Do not write a sentence you would not say to a classmate.
+2. **Few cards.** A small deck the author actually drills beats a complete one he abandons. Card
+   count is a cost, not a coverage score.
+3. **Short cards, worded plainly.** One fact, one or two lines, everyday phrasing.
+4. **Narrower scope.** In his words: *"om det inte är direkt relaterat till [tentafrågorna] så är det
+   irrelevant."* Content that is correct, in the chapter, and not needed for an exam question is
+   **waste** — cut it, do not merely shorten it.
+
+For calibration on what counted as too much: the decks produced before this instruction reached **184**
+cards for chapter 9 and **144** for chapter 10, against 102 for chapter 5. Those are the numbers the
+author called "alldeles för många". Aim well below them.
+
+**The agreed targets, confirmed by the author on 2026-09-09:**
+
+| | Target | What it replaced |
+|---|---|---|
+| Cards per chapter deck | **40–60** | 100–184 |
+| Lines per exam-answer note | **150–250** | 600–750 |
+
+**Keep the note structure as it is: facts first, `### Muntligt svar` last.** This was queried and the
+author rejected changing it, and the reason is his study method, so do not "improve" it later:
+
+> gällande strukturen så tror jag att den nuvarande är bra, jag kommer ändå skriva ner faktan först,
+> det är hela poängen med hur jag lär mig jag skriver ner det du skriver och jag strukturerar det jag
+> skriver ner baserat på viktiga begrepp
+
+He copies the facts out by hand and organises **his own** notes around the key concepts as he goes. So
+the note is raw material for that pass, not a script to read aloud. Leading with talking points would
+break the thing that makes it work. The shortening therefore comes out of **scope and wording**, never
+out of the structure.
+
+The authoring consequences are in `.kiro/skills/write-flashcards/SKILL.md` — rule 15 and the
+anti-pattern table.
 
 ## What is in it
 
@@ -106,7 +157,7 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` runs F1–F75: all closed except F10 (parked). Both the audit and
+`Meta/Vault Findings & Backlog.md` runs F1–F79: all closed except F10 (parked). Both the audit and
 the linter run automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on

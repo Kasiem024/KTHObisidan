@@ -5,14 +5,55 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: one task in flight — making the vault usable on the phone. The working tree is also a long
-way from committed.**
+**Status: two tasks in flight — the HI1031 exam-prep rewrite, and making the vault usable on the
+phone. The working tree is also a long way from committed.**
 
-No partially-finished task. `main` and `origin/main` are still the same commit (`cecab1d`), while as
-of **2026-09-08 12:00** the working tree holds roughly **40 modified and 28 untracked** paths. Run
-`git status` rather than trusting that count — it has already aged wrong twice, and a second agent is
-editing this tree (the backlog gained F75 and `Meta/Vault Standard.md` gained 67 lines that were not
-mine).
+## In flight: HI1031 exam-prep rewrite (started 2026-09-08)
+
+Rewriting one exam-answer note plus one flashcard deck per chapter of HI1031's coursebook, in
+everyday Swedish and at 40–60 cards per deck. **All state for this task lives in one file:**
+
+```text
+.kiro/hi1031-tenta-reentry.md
+```
+
+That file is the re-entry prompt, rewritten at the end of every context window immediately before
+`/compact`, and it is the only thing a resuming session needs to be pointed at. It carries the
+targets, the five reviewer briefs, the verification chain, the book's line offsets, the confirmed
+book errata and the per-chapter progress. **Do not duplicate any of it here** — this section exists
+only to say where it is.
+
+**Done as of 2026-09-10: ALL chapters — 1, 2, 4, 5, 6, 9, 10, 11, 16 and 17.** There is no next chapter.
+Chapter 11 was the heaviest (eight sub-questions, split across two context windows, 721 lines and 52
+cards). Chapters 16 and 17 had no note at all and were written from scratch: 526–600 lines and 43–50 cards
+each. Every chapter was reviewed by all five adversarial reviewers and verified.
+
+**Two things need the author's decision before anything else happens here:**
+
+1. **`Vault-Audit.ps1` is red** — **11** `listStyleTags` deviations: seven HI1032 decks (chapters 02, 18,
+   19, 23, 24, 25, 26), HI1032's concept note `TCP-IP-modellen.md`, and HI1031's decks for chapters 02, 04
+   and 05. All were modified between 08:12 and 08:19 on 2026-09-10 by another process while chapter 17 was
+   being written, so they were left alone. None was written by this task.
+
+   **This list was wrong here until 2026-09-10.** It previously said "12 deviations, in seven HI1032 decks,
+   two HE1033 concept notes and HI1031's decks for chapters 1, 2, 4 and 5" — but no HE1033 file is in the
+   audit's list at all, chapter 1's deck is not either, and the twelfth file was
+   `HI1031 .../Begrepp/Klient-server-modellen.md`, a concept note the description did not mention. That
+   mattered: it made the deviations look entirely unrelated to HI1031's concept notes when one of them was
+   a concept note. **The twelfth has since been fixed** — its tags were written back to inline form,
+   keeping `nosr`, taking the count 12 → 11. Read `-Detail` rather than this paragraph.
+2. **Four HI1031 decks gained `nosr` from that same process**, taking `notes tagged nosr` from 39 to 43 and
+   `cards in active deck` from 2346 to 2122. That removed **chapter 1's 68 cards — the only HI1031 deck
+   carrying review history** — from active review. The markers survive (1457 → 1463), so nothing is lost,
+   but HI1031 is now entirely outside review rotation. It may well be deliberate.
+
+## Nothing else partially finished
+
+No other partially-finished task. `main` and `origin/main` are still the same commit (`cecab1d`),
+while as of **2026-09-08 12:00** the working tree holds roughly **40 modified and 28 untracked**
+paths. Run `git status` rather than trusting that count — it has already aged wrong twice, and a
+second agent is editing this tree (the backlog gained F75 and `Meta/Vault Standard.md` gained 67
+lines that were not mine).
 
 Two untracked things are worth naming, because nothing else records them and a lost working tree would
 take them with it:
@@ -35,7 +76,8 @@ Only spaced repetition is used on the phone, and it is slow. Measured: the phone
 **2 229 files / 1 751.9 MB** to review **421 notes / 1.4 MB**. Causes in order of cost —
 Omnisearch rebuilding its index at every launch (`useCache: false` with `PDFIndexing: true`, over the
 notes plus 17.6 MB of extracted PDF text in Text Extractor's 310-file cache); **all 14 plugins loading
-on mobile**, every manifest carrying `isDesktopOnly: false`; Dataview's 147 queries across 31 notes;
+on mobile** — 14 as measured, 11 after the removals recorded in F75 — every manifest carrying
+`isDesktopOnly: false`; Dataview's 147 queries across 31 notes;
 and the weight itself — `.git` 445.9 MB, PDFs 1 113 MB, `.obsidian` 93.4 MB, plus 30.1 MB of the
 39.5 MB of Markdown being 17 Excalidraw drawings.
 
@@ -52,10 +94,27 @@ devices, so the source is the evidence.
 `<!--SR:-->` markers are kept**. The 17 excluded files containing the literal `<!--SR:` are all
 documentation quoting the syntax — `Meta/Vault Standard.md`, the backlog, `.kiro/` docs — not decks.
 
-**Done:** vault side only. `.obsidian-mobile/` added to `.gitignore`, with the reason the audit and
-linter would not cover it recorded in the same comment. **Nothing done on the phone yet.**
+**Done on the phone (2026-09-08 evening).** One FolderSync exclude filter, `Folder name starts with`
+= `.`, which is the app's documented idiom for hidden folders and covers `.git`, `.obsidian`, `.kiro`,
+`.github` and `.trash` in one rule. Then the 13 unwanted plugins were disabled in Obsidian on the
+phone — safe only *because* `.obsidian` had stopped syncing, so it cannot propagate back. The author
+reports mobile is now much quicker and syncing looks correct.
 
-**Next:** on the phone, set the config folder override, then install *only* spaced repetition.
+**This made Part A unnecessary.** Once `.obsidian` is excluded the phone keeps its own copy, so the
+config-folder override is belt-and-braces rather than a requirement, and `.obsidian-mobile/` was never
+created. The `.gitignore` entry for it stays: it costs nothing and the reasoning is recorded there.
+
+**Still outstanding.**
+
+1. The `Folder name equals` = `Filer` exclude filter, which is **1 209 MB across 742 files** and by far
+   the largest remaining win. Add it, run FolderSync's `Analyze` (its dry run) before syncing, and only
+   then delete the `Filer` folders already on the phone.
+2. `.git` (445.9 MB) is excluded but still present on the phone; deleting it there reclaims the space.
+3. **The round trip is unverified.** `Get-SRIntegrity.ps1 -Save` was taken 2026-09-08 21:02 —
+   **1 429 marker placements across 311 files, 2 277 cards in the active deck, 130 excluded by
+   `nosr`**. After the next review on the phone, run `-Compare`: markers arriving with no change to
+   card or separator counts proves review data still flows back. Until that is done, nothing has
+   confirmed the phone can write.
 
 **The trap, before setting up the phone.** A fresh SR install uses defaults and this vault's settings
 are not default. Copy `.obsidian/plugins/obsidian-spaced-repetition/data.json` to the same path under
@@ -67,7 +126,7 @@ the markers are `!fsrs` format, so a mismatch writes the wrong one; `flashcardTa
 against a default of 36525.
 
 **Decisions.** Both parts, because they solve different problems — the override is the guarantee that a
-mis-set exclusion cannot re-enable 14 plugins, the exclusions are the bandwidth. Config folders are not
+mis-set exclusion cannot re-enable the desktop plugin set, the exclusions are the bandwidth. Config folders are not
 synced at all, which also removes the conflict class already visible as
 `.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`.
 `.obsidian-mobile/` is gitignored even though `.obsidian/` is tracked, because it is one device's
