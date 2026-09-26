@@ -23,21 +23,7 @@ Hur görs identifierare globalt unika i en distribuerad transaktion?::Ett ==TID=
 
 Vad menas med global serialiserbarhet?::Att det inte räcker att varje server serialiserar sina egna objekt — ligger T före U i en konflikt på ==en== server måste de ligga i ==samma ordning på alla servrar== som båda kommer åt i konflikt.
 
-Vad är det extra problemet med låsning i en distribuerad transaktion?::Den lokala låshanteraren kan bevilja lås själv, men får ==inte släppa något lås förrän transaktionen är commit:ad eller abort:ad på samtliga servrar==. Objekten är alltså låsta ==under hela commit-protokollet==.
-
-Vad är commitment deadlock?::Att regeln "bara en transaktion åt gången får validera" låser sig, eftersom ==tvåfas-commit tar tid== och andra transaktioner då hindras från att gå in i validering. Botas med ==parallell validering==.
-
 **Distribuerad deadlock**;;En cykel i den ==globala väntegrafen som inte finns i någon enda lokal graf==, och som därför ingen server kan upptäcka på egen hand.
-
-Varför duger inte central deadlock-detektering? (3)
-||
-- ==Dålig tillgänglighet och ingen feltolerans==, eftersom allt hänger på en server
-- ==Ingen skalbarhet==
-- ==Dyrt att skicka de lokala graferna ofta== – görs det sällan tar det längre tid att upptäcka deadlocks
-
-**Fantomdeadlock**;;En deadlock som ==upptäcks men inte finns i verkligheten==, eftersom informationen tog tid att flytta mellan servrarna.
-
-Vad är edge chasing?::Distribuerad deadlock-detektering där den globala grafen ==aldrig byggs==. Servrarna skickar ==probe-meddelanden== som följer grafens kanter; varje server ==lägger till en kant==, och innehåller proben en ==cykel== är deadlocken hittad.
 
 ## 2. Tvåfas-commit (2PC)
 

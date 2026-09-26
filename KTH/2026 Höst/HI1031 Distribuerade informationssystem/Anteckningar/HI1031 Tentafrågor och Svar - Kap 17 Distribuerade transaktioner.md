@@ -38,39 +38,16 @@ referens till koordinatorn==. När klienten anropar `closeTransaction` har koord
 ==referenser till alla deltagare==. En deltagare kan också själv anropa `abortTransaction` om den inte
 kan fortsätta.
 
-**Problem: TID måste vara globalt unikt.** Ett TID för en distribuerad transaktion måste vara unikt ==i
-hela det distribuerade systemet==. Bokens enkla lösning är att låta det bestå av ==två delar==: en
-identifierare för servern som skapade det, till exempel en ==IP-adress==, och ett ==nummer som är unikt
-inom den servern==.
+**Problem: identifierare måste vara globalt unika.** Ett TID för en distribuerad transaktion måste vara
+unikt ==i hela det distribuerade systemet==. Bokens enkla lösning är att låta det bestå av ==två delar==:
+en identifierare för servern som skapade det, till exempel en ==IP-adress==, och ett ==nummer som är
+unikt inom den servern==. Samma sak gäller tidsstämplar, som är par av ==tidsstämpel plus server-id== och
+delas ut av ==den första koordinatorn transaktionen når==.
 
 **Problem: global serialiserbarhet.** Varje server sköter samtidighetskontrollen för ==sina egna
 objekt==, vilket ger lokal serialisering. Men det räcker inte: ligger T före U i en konflikt på ==en==
 server måste de ligga i ==samma ordning på alla servrar== som båda kommer åt i konflikt. Servrarna är
 ==gemensamt ansvariga== för det.
-
-**Hur varje metod drabbas.** Boken går igenom de tre metoderna från kapitel 16:
-
-- **Låsning:** låsen hålls ==lokalt==, och den lokala låshanteraren kan bevilja dem själv — men den kan
-  ==inte släppa något lås förrän transaktionen är commit:ad eller abort:ad på samtliga servrar==.
-  Objekten är alltså ==låsta under hela commit-protokollet==. En abort:ad transaktion släpper dock sina
-  lås ==efter fas 1==.
-- **Tidsstämpelordning:** tidsstämplarna måste vara ==globalt unika==, och den första koordinatorn
-  transaktionen når delar ut den. En tidsstämpel är ett par ==tidsstämpel plus server-id==, där
-  ==server-id är den mindre signifikanta delen==. Samma ordning kan nås ==även om de lokala klockorna
-  inte är synkroniserade==, men av effektivitetsskäl bör de vara ==ungefär synkroniserade== — då blir
-  ordningen ==oftast== densamma som den transaktionerna faktiskt startade i.
-- **Optimistisk kontroll:** valideringen sker ==under fas 1 av tvåfas-commit==. Här uppstår
-  ==commitment deadlock==: regeln att bara en transaktion åt gången får validera fungerar när
-  valideringen är snabb, men ==tvåfas-commit kan ta tid==, så andra transaktioner hindras från att gå in
-  i validering. Boken lösning är ==parallell validering==, där flera får validera samtidigt — men då måste
-  man också kontrollera att ==den validerande transaktionens skrivmängd inte överlappar skrivmängderna hos
-  tidigare överlappande transaktioner==, inte bara mot deras läsmängder.
-
-**Problem: olika servrar kan serialisera olika.** Validerar servrarna ==oberoende av varandra== kan de
-råka serialisera ==samma mängd transaktioner i olika ordning==. Två sätt att hindra det: en ==global
-validering== efter den lokala, som kontrollerar att kombinationen är serialiserbar, eller att alla
-servrar använder ==samma globalt unika transaktionsnummer==, som koordinatorn skickar med i
-`canCommit?`-meddelandena.
 
 **Problem: distribuerad deadlock.** Med låsning kan deadlocks uppstå redan inom en server. En ==väntegraf==
 är en riktad graf där ==noderna är transaktioner== och ==en kant från T till U betyder att T väntar på att U
@@ -80,26 +57,6 @@ fall: ==en cykel i den globala grafen som inte finns i någon enda lokal graf==.
 deadlock==. Skälet är att låshanterarna ==sätter sina lås oberoende av varandra== och därför kan påtvinga
 ==olika ordningar==: T före U på en server och U före T på en annan. Eftersom den globala grafen ==bara
 finns delvis hos varje server== krävs ==kommunikation mellan servrarna== för att hitta cyklerna.
-
-**Att upptäcka den är svårare än lokalt.** Boken kallar det ==klumpigt== att lösa deadlocks med timeout,
-eftersom det är svårt att välja intervall och transaktioner ==kan abort:as i onödan==. Två distribuerade
-alternativ:
-
-- **Central deadlock-detektering:** en server samlar in de lokala graferna och letar cykler. Boken säger
-  rakt ut att det ==inte är en bra idé==, eftersom det ger de vanliga problemen med centrala lösningar —
-  ==dålig tillgänglighet, ingen feltolerans och ingen skalbarhet== — och för att det är ==dyrt att skicka
-  graferna ofta==. Samlas de in mer sällan ==tar det längre tid att upptäcka== deadlocks.
-- **Edge chasing** (kantjakt, även *path pushing*): den globala grafen ==byggs aldrig==. I stället skickar
-  servrarna ==probe-meddelanden== som följer grafens kanter. En probe är en ==väg i den globala
-  väntegrafen==, och varje server ==lägger till en kant== och skickar vidare. Innehåller proben en
-  ==cykel== är deadlocken hittad, och ==en transaktion i cykeln abort:as==.
-
-**Ett problem som är unikt för det distribuerade fallet: fantomdeadlock.** En deadlock som ==upptäcks men
-inte finns== kallas en ==fantomdeadlock==. Den uppstår för att informationen ==tar tid att flytta== mellan
-servrar, så ==en av transaktionerna kan ha släppt sitt lås== under tiden. En viktig nyans: ==använder
-transaktionerna tvåfaslåsning kan de inte släppa objekt och sedan ta nya==, så fantomcykler ==kan inte
-uppstå på det sättet==. Men de kan ändå uppstå om ==en väntande transaktion i cykeln abort:ar under
-detekteringen== — då är cykeln redan bruten.
 
 **Så kan du tänka.** De extra problemen har alla samma rot: ==varje server ser bara sin egen del==.
 Atomiciteten kräver ett gemensamt beslut fast ingen har hela bilden, serialiserbarheten kräver samma
@@ -437,11 +394,6 @@ statusen==:
 eftersom servern kan ==krascha igen under själva recoveryn==. Det är enkelt under antagandet att objekten
 återställs till flyktigt minne, men ==svårare för en databas== som håller objekten i permanent lagring.
 
-**En sak att inte städa bort vid omorganisering.** Recovery-filen komprimeras från tid till annan genom
-==checkpointing==, och tre regler gäller då för 2PC: ==coordinator-poster för transaktioner utan status
-done får inte tas bort== förrän alla deltagare bekräftat, ==poster med status done får kastas==, och
-==participant-poster med status uncertain måste behållas==.
-
 **Så kan du tänka.** Hela svaret bygger på en enda idé: ==en röst är ett löfte, och ett löfte måste
 överleva en krasch==. Därför skrivs prepared och uncertain till permanent lagring ==innan== rösten skickas,
 och därför är den sista statusposten i loggen tillräcklig för att veta vad man lovat. ==Recovery blir då
@@ -492,4 +444,4 @@ recovery-filen. Övriga figurer är kontrollerade och löptexten täcker dem. De
 **En rättelse mot det gamla decket.** Decket som fanns innan hade ett kort om skillnaden mellan ==platta
 och nästlade transaktioner==, vilket hör till fråga 1. Tentans fråga 3 handlar om något annat: skillnaden
 mellan ==hierarkiskt och flat tvåfas-commit==, alltså två sätt att köra *protokollet* för en nästlad
-transaktion. Båda distinktionerna finns nu i noten, under rätt fråga.
+transaktion. Båda skillnaderna finns nu i noten, under rätt fråga.

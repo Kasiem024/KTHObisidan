@@ -1,6 +1,6 @@
 ---
-tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026]
-description: "HTTP (HyperText Transfer Protocol) är applikationsprotokollet som webben bygger på, där klienten skickar en request och servern svarar med en response."
+tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026, nosr]
+description: HTTP (HyperText Transfer Protocol) är applikationsprotokollet som webben bygger på, där klienten skickar en request och servern svarar med en response.
 created: 2026-08-18
 updated: 2026-08-18
 ---
@@ -51,16 +51,16 @@ updated: 2026-08-18
 ## Flashcards
 
 Vilket transportprotokoll och vilken port använder HTTP som standard?:: TCP, port 80 (HTTPS använder port 443).
-<!--SR:!fsrs,2026-09-13T06:30:39.852Z,2,2.3065,2.11121424,2,2,0,0,2026-09-11T06:30:39.852Z-->
+<!--SR:!fsrs,2026-09-23T15:36:20.569Z,9,9.24024489,4.74828477,2,3,0,0,2026-09-14T15:36:20.569Z-->
 
 Vad innebär det att HTTP är tillståndslöst?(Definition):: Att servern inte sparar någon information om klienten mellan två förfrågningar — tillstånd måste lösas med t.ex. cookies.
-<!--SR:!fsrs,2026-09-12T09:50:22.221Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-11T09:50:22.221Z-->
+<!--SR:!fsrs,2026-10-05T16:34:44.781Z,14,13.95222167,6.79215857,2,4,0,0,2026-09-21T16:34:44.781Z-->
 
 Vilken är den viktigaste skillnaden mellan HTTP/1.0 och HTTP/1.1?:: HTTP/1.1 använder persistenta kopplingar (keep-alive) och återanvänder samma TCP-koppling för flera objekt.
-<!--SR:!fsrs,2026-09-12T07:19:15.399Z,0,0.00938668,9.93638689,1,5,0,0,2026-09-12T07:18:15.399Z-->
+<!--SR:!fsrs,2026-09-25T06:22:11.926Z,0,0.00348687,9.97751004,1,9,0,0,2026-09-25T06:21:11.926Z-->
 
 Vad betyder statuskoderna 200, 404 och 500?(3):: 200 = OK, 404 = Not Found (klientfel), 500 = Internal Server Error (serverfel).
-<!--SR:!fsrs,2026-09-13T09:51:58.975Z,2,2.3065,2.11121424,2,2,0,0,2026-09-11T09:51:58.975Z-->
+<!--SR:!fsrs,2026-09-23T15:12:24.608Z,9,9.24024489,4.74828477,2,3,0,0,2026-09-14T15:12:24.608Z-->
 
 Vilket transportprotokoll använder HTTP/3?:: QUIC, som i sin tur körs över UDP.
-<!--SR:!fsrs,2026-09-12T09:52:03.116Z,1,0.1774331,8.39265542,2,3,0,0,2026-09-11T09:52:03.116Z-->
+<!--SR:!fsrs,2026-09-26T07:33:43.457Z,1,0.34458002,9.93118296,2,8,1,0,2026-09-25T07:33:43.457Z-->

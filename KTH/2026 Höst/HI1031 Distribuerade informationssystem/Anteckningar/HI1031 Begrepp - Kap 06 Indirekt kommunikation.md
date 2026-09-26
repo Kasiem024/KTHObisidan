@@ -32,8 +32,6 @@ Vilka fem strategier för indirekt kommunikation tar boken upp? (5)
 
 Vilken grundläggande skillnad finns mellan de fem strategierna?::De tre första ==skickar meddelanden==. DSM och tuple spaces ger i stället en ==gemensam datayta man läser och skriver i==.
 
-Varför skalar DSM och tuple spaces sämre?::Alla måste hela tiden ==se samma data==, och det blir dyrt när många läser och skriver samtidigt.
-
 ## Fråga 2 – Gruppkommunikation och hur det kan implementeras
 
 **Gruppkommunikation**;;Ett meddelande skickas ==till en grupp== och levereras till ==alla medlemmar==, utan att sändaren känner deras identiteter.
@@ -73,10 +71,6 @@ Vilka tre delar består JGroups av? (3)
 
 **Publish-subscribe**;;Publishers publicerar strukturerade ==händelser==, subscribers anmäler intresse med ==subscriptions==, och systemet matchar och levererar ==notifieringar==.
 
-Vad kallar boken publish-subscribe-system också?::==Distribuerade händelsebaserade system.==
-
-Hur vanliga är publish-subscribe-system enligt boken?::De ==mest använda== av alla indirekta tekniker i kapitlet.
-
 Vilka två huvudegenskaper har publish-subscribe?::==Heterogenitet== – komponenter som inte byggts för att samverka kan fungera ihop – och ==asynkronitet==, så publishern inte behöver synkronisera med subscribern.
 
 Vilka fyra operationer har programmeringsmodellen? (4)
@@ -111,8 +105,6 @@ Vilka fem strategier för content-based routing tar boken upp? (5)
 - **Rendezvous** – dela händelserymden mellan ansvariga noder, kan mappas på en DHT
 - **Informed gossip** – utbyt händelser slumpvis med grannarna, med hänsyn till innehåll
 
-Hur fungerar **filtering-based routing**?::Mäklarna vidarebefordrar bara ==där det finns en väg till en giltig subscriber==. Varje nod håller grannlista, subskriptionslista och routingtabell.
-
 ## Fråga 4 – Message queuing och hur det implementeras bra
 
 **Message queue**;;En ==punkt-till-punkt-tjänst== där sändaren lägger meddelandet i en kö och det plockas bort av ==en enda process==.
@@ -140,8 +132,6 @@ Vad är en **message channel** i WebSphere MQ?::En ==enkelriktad förbindelse me
 Hur fungerar topologin **hub-and-spoke**?::En köhanterare utses till ==hub== och har tjänsterna. Klienterna kopplar mot ==spokes== nära sig, som vidarebefordrar meddelandena till hubbens kö.
 
 Varför är hub-and-spoke bra för latensen?::Klienten pratar ==RPC med en lokal spoke== och blockeras ==bara tills meddelandet ligger där==. Resten av vägen är asynkron men garanterat tillförlitlig.
-
-Vad förenar JMS, och hur väl?::==Publish-subscribe och message queues==, genom att stödja både topics och queues. Men bara ==ytligt== – man kan inte blanda de två stilarna i samma förbindelse.
 
 ## Fråga 5 – Jämför gruppkommunikation, publish-subscribe och message queuing
 

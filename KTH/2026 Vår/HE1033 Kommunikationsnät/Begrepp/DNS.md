@@ -1,6 +1,6 @@
 ---
-tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026]
-description: "DNS (Domain Name System) översätter domännamn (t.ex. kth.se) till IP-adresser."
+tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026, nosr]
+description: DNS (Domain Name System) översätter domännamn (t.ex. kth.se) till IP-adresser.
 created: 2026-05-28
 updated: 2026-08-27
 ---
@@ -34,7 +34,7 @@ updated: 2026-08-27
 ## Flashcards
 
 Vilken port använder DNS normalt?:: Port 53.
-<!--SR:!fsrs,2026-09-13T07:17:10.227Z,1,1.07709473,8.39265542,2,3,0,0,2026-09-12T07:17:10.227Z-->
+<!--SR:!fsrs,2026-09-23T07:44:55.055Z,0,1.02467239,9.2755088,3,5,1,0,2026-09-23T07:34:55.055Z-->
 
 Vad kallas processen att översätta ett namn till en IP-adress?:: Namnuppslagning (Resolution).
-<!--SR:!fsrs,2026-09-14T07:14:28.061Z,2,0.26673605,9.77242402,2,6,0,0,2026-09-12T07:14:28.061Z-->
+<!--SR:!fsrs,2026-09-24T07:26:57.801Z,1,0.86071087,9.89608872,2,9,1,0,2026-09-23T07:26:57.801Z-->

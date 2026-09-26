@@ -1,6 +1,6 @@
 ---
-tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026]
-description: "TCP (Transmission Control Protocol) säkerställer att data kommer fram felfritt och i rätt ordning."
+tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026, nosr]
+description: TCP (Transmission Control Protocol) säkerställer att data kommer fram felfritt och i rätt ordning.
 created: 2026-05-28
 updated: 2026-05-28
 ---
@@ -35,7 +35,7 @@ updated: 2026-05-28
 ## Flashcards
 
 Vilka tre steg ingår i en TCP-handskakning?:: SYN, SYN-ACK, ACK.
-<!--SR:!fsrs,2026-09-13T07:18:02.717Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-12T07:18:02.717Z-->
+<!--SR:!fsrs,2026-09-23T07:45:00.807Z,0,0.27407583,9.80203995,3,6,2,0,2026-09-23T07:35:00.807Z-->
 
 Nämn en fördel och en nackdel med TCP jämfört med UDP.:: Fördel: Garanterad leverans. Nackdel: Mer overhead och högre latens.
-<!--SR:!fsrs,2026-09-13T09:54:04.140Z,2,2.3065,2.11121424,2,2,0,0,2026-09-11T09:54:04.140Z-->
+<!--SR:!fsrs,2026-10-19T06:21:08.550Z,24,23.84081329,6.49889507,2,4,0,0,2026-09-25T06:21:08.550Z-->

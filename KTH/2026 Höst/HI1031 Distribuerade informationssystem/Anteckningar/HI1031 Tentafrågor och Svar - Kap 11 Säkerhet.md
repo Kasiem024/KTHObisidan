@@ -19,11 +19,12 @@ så resurserna måste skyddas mot ==obehörig åtkomst==. Och processerna pratar
 användare delar==, där en angripare kan ==kopiera eller läsa varje meddelande== och ==injicera egna
 meddelanden== som utger sig för att komma från vem som helst.
 
-**Skilj policy från mekanism.** En ==säkerhetspolicy== säger vad som får delas och av vem. En
-==säkerhetsmekanism== är det som ==ser till att policyn följs==. Boken säger att skillnaden är lika
-viktig i den digitala världen som i den fysiska, för ==utan den går det inte att avgöra om ett system är
-säkert==. Policyn är oberoende av tekniken — ett lås på en dörr ger ingen säkerhet om ingen har bestämt
-när det ska vara låst.
+**Två hot utanför kanalen.** Boken säger att kanalhoten är de enda som behöver övervägas för många
+system, men att det finns fler för system som ==kör inlästa program== eller är ==särskilt känsliga för
+informationsläckage==. **Hot från mobil kod:** laddas kod in i en process kan ==processens inre
+gränssnitt och objekt utsättas för angrepp==. Javas svar är ==sandlådemodellen== — varje tillämpning får
+en egen miljö med en ==säkerhetshanterare som bestämmer vilka resurser den får==, och när den satts
+==kan den inte bytas ut==.
 
 **De tre hotklasserna.** Boken delar säkerhetshoten i tre breda klasser:
 
@@ -70,7 +71,7 @@ lista examinatorn troligen letar efter. (egen strukturering, båda listorna är 
 5. Uppspelning fungerar även mot krypterade och autentiserade meddelanden, eftersom angriparen inte
    behöver nyckeln utan bara kopierar bitmönstret.
 6. Utöver kanalhoten finns mobil kod, där Javas sandlåda är svaret, och informationsläckage, där själva
-   existensen av trafik avslöjar något. Och skilj alltid policy från mekanism.
+   existensen av trafik avslöjar något.
 
 ## 2. Beskriv vilken roll kryptering har för säkerhet, förutom att dölja innehållet i ett meddelande (konfidentialitet, autentisering, integritet, oförnekbarhet)
 
@@ -119,20 +120,6 @@ oförändrad kopia av något som signeraren producerat. Bokens konkreta fall är
 ==en transaktion som är digitalt signerad av kontohavaren på ett sätt som en tredje part inte kan
 förfalska==.
 
-**Två problem som kryptering ensam inte löser.** Boken ställer dem uttryckligen efter sitt första
-scenario, där Alice och Bob delar en hemlig nyckel:
-
-- **Nyckeldistribution.** ==Hur skickar Alice den delade nyckeln till Bob säkert?==
-- **Uppspelning.** ==Hur vet Bob att meddelandet inte är en kopia av ett tidigare?== Mallory behöver
-  ingen nyckel för det.
-
-**Lösningen på uppspelning: utmaningar och sessionsnycklar.** En ==utmaning== (*challenge*) bygger på
-insikten att ==ett lösenord inte behöver skickas över nätet== varje gång det ska verifieras. I stället
-får Alice en biljett som är ==krypterad med hennes egen hemliga nyckel==. Det är en utmaning eftersom
-hon ==inte kan använda biljetten om hon inte kan dekryptera den==, och det kan hon bara om hon kan räkna
-fram nyckeln ur sitt lösenord. En bedragare som utger sig för att vara Alice ==stoppas där==. Nyckeln
-som delas ut för en följd av interaktioner kallas ==sessionsnyckel==.
-
 **Så kan du tänka.** Den enklaste sammanfattningen av frågan: kryptering döljer innehållet, men det är
 ==vem som kan dekryptera== som ger allt det andra. Kan bara du kryptera något blir det ett bevis på att
 du gjort det — och det är hela grunden för autentisering, signaturer och oförnekbarhet. (egen slutsats)
@@ -149,8 +136,8 @@ du gjort det — och det är hela grunden för autentisering, signaturer och of�
    avsändaren är. Det är själva mekanismen.
 5. Oförnekbarhet betyder att avsändaren inte kan förneka att han deltog. Mekanismen är den digitala
    signaturen, och bokens exempel är fantomuttag i en bankomat.
-6. Två problem återstår med bara en delad nyckel: hur nyckeln distribueras, och uppspelning av gamla
-   meddelanden. Svaren är hybridkryptering och utmaningar med sessionsnycklar.
+6. Sammanfattningsvis: kryptering döljer innehållet, men det är vem som *kan* dekryptera som ger allt
+   det andra — kan bara du kryptera något blir det ett bevis på att du gjort det.
 
 ## 3. Förklara hur symmetrisk, asymmetrisk respektive hybridkryptering fungerar. I vilka situationer används respektive typ? Prestanda?
 
@@ -176,13 +163,6 @@ beror styrkan på ==storleken på K==. Skälet är att den effektivaste allmänn
 en ==uttömmande sökning== (*brute force*) genom alla möjliga nyckelvärden. Har nyckeln *N* bitar krävs
 i snitt hälften av alla värden och som mest alla, så ==tiden att knäcka nyckeln växer exponentiellt
 med antalet bitar==.
-
-**Algoritmerna, kort.** ==DES== har bara ==56-bitars nyckel== och knäcktes redan 1997 genom att prova
-alla nycklar; boken skriver att den i sin grundform ==bör betraktas som obsolet== för allt utom
-lågvärdig information. ==Triple-DES== ger styrka motsvarande ==112 bitar== men har ==dålig prestanda==,
-eftersom en redan långsam algoritm körs tre gånger. ==AES== (Rijndael) valdes för sin ==kombination av
-styrka och effektivitet== och tar nycklar på 128, 192 eller 256 bitar. ==TEA== och ==IDEA== har båda
-128-bitars nyckel.
 
 ### Asymmetrisk kryptering
 
@@ -253,7 +233,7 @@ på resonemang om hur väl algoritmen döljer klartexten.
 1. Symmetrisk kryptering använder samma nyckel båda vägarna. Den bygger på envägsfunktioner, och
    styrkan sitter i nyckellängden eftersom den bästa attacken är uttömmande sökning.
 2. Asymmetrisk använder ett nyckelpar härlett ur en gemensam rot, och bygger på fälldörrsfunktioner.
-   För RSA är roten två stora primtal, och säkerheten vilar på att produkten inte går att faktorisera.
+   För RSA är roten två stora primtal, och säkerheten bygger på att produkten inte går att faktorisera.
 3. Därför är asymmetriska nycklar mycket längre, och därför kostar de typiskt 100 till 1000 gånger mer
    processorkraft.
 4. Hybridkryptering löser det: asymmetrisk kryptering autentiserar parterna och utbyter en hemlig
@@ -335,20 +315,15 @@ och risken att bli upptäckt är stor==. Boken skriver också att ett digitalt s
 vara== betydligt mer motståndskraftigt mot förfalskning än ett handskrivet — inte att det är det.
 
 **Vad mekanismen bygger på.** Precis som handskrivna signaturer bygger digitala på att ==binda ett
-unikt och hemligt attribut hos signeraren till ett dokument==. För handskrivna är hemligheten
-==signerarens handstilsmönster==. Digitala dokument är ==triviala att skapa, kopiera och ändra==, så att
-bara lägga till upphovsmannens namn, foto eller en inskannad namnteckning har ==inget värde för
-verifiering==. Det som behövs är ett sätt att ==oåterkalleligt binda signerarens identitet till hela
-bitföljden== som utgör dokumentet.
+unikt och hemligt attribut hos signeraren till ett dokument==. Digitala dokument är ==triviala att skapa,
+kopiera och ändra==, så att bara lägga till upphovsmannens namn eller en inskannad namnteckning har
+==inget värde för verifiering==. Det som behövs är ett sätt att ==oåterkalleligt binda signerarens
+identitet till hela bitföljden== som utgör dokumentet.
 
-**Så ser en signering ut i allmän form.** Ett dokument *M* signeras av *A* genom att ==en kopia av M
-krypteras med en nyckel== och fästs vid en klartextkopia av *M* plus *A*:s identifierare. Det signerade
-dokumentet blir alltså ==M, A, [M]KA==. Används en *hemlig* nyckel kan bara de som delar hemligheten
-verifiera. Används *publik* nyckel signerar man med sin privata, och ==vem som helst med den publika
-nyckeln kan verifiera==. Boken kallar det senare ==en bättre motsvarighet till vanliga signaturer==.
-
-**Varför publik nyckel passar så bra.** Den är ==relativt enkel== och kräver ==ingen kommunikation alls
-mellan mottagaren och signeraren eller någon tredje part==. Det är själva skälet att metoden dominerar.
+**Varför publik nyckel passar så bra.** Ett dokument *M* signeras av *A* genom att ==en kopia av M
+krypteras med A:s privata nyckel== och fästs vid en klartextkopia av *M*. Då kan ==vem som helst med den
+publika nyckeln verifiera==. Metoden är ==relativt enkel== och kräver ==ingen kommunikation alls mellan
+mottagaren och signeraren eller någon tredje part==. Det är själva skälet att den dominerar.
 
 ### Hur en signatur genereras och kontrolleras
 
@@ -371,17 +346,6 @@ signeraren känner==, men vara ==åtkomlig för alla att verifiera==. RSA passar
 **Varför signaturer använder publik nyckel.** Man *kan* signera med en symmetrisk algoritm, men då
 ==måste nyckeln avslöjas för att signaturen ska kunna verifieras== — och den som har nyckeln kan också
 förfalska. Därför är publik-nyckelmetoden ==den bekvämaste lösningen i de flesta situationer==.
-
-**Undantaget, kort.** Går meddelandena okrypterade över en säker kanal men äktheten måste ändå kunna
-kontrolleras, räcker en delad hemlig nyckel och en sammanfattning av meddelandet plus nyckeln. Sådana
-billiga signaturer kallas ==*message authentication codes* (MAC)== och ==autentiserar kommunikation
-mellan par av parter==. De ==innehåller ingen kryptering alls==, vilket är varför de är snabba.
-
-**Två gränser för vad en signatur kan göra.** ==Datumet garanteras inte==: mottagaren av ett signerat
-dokument vet ==bara att det signerades innan han fick det==. Och oförnekbarheten har ett hål som inte
-finns hos handskrivna signaturer — vad händer om signeraren ==avsiktligt avslöjar sin privata nyckel==
-och sedan förnekar, med argumentet att andra kunde ha signerat? Det finns protokoll för det under
-namnet *undeniable digital signatures*, men de ==ökar komplexiteten avsevärt==.
 
 **Så kan du tänka.** Signaturen krypterar aldrig meddelandet, bara dess sammanfattning. Det är därför
 den är billig och därför den inte ger någon sekretess — ==M skickas i klartext==. Signatur och kryptering
@@ -429,29 +393,19 @@ från *M* och fäster den på *M'*. Boken garderar att mängden meddelanden som 
 begränsad och att angriparen ==skulle ha svårt att få fram en meningsfull förfalskning==, men ==med
 tålamod går det==, så det måste skyddas mot.
 
-**Födelsedagsattacken, som gör det mycket lättare.** Bokens tre steg:
+**Vad det betyder för hashlängden.** Eftersom en angripare kan leta kollisioner genom att jämföra många
+små varianter av två dokument mot varandra — en ==födelsedagsattack== — måste hashvärden vara ==minst 128
+bitar==. Med 64 bitar räcker det i snitt med ==2^32 versioner== av vardera dokumentet, vilket boken
+kallar ==för litet för att vara bekvämt==.
 
-1. Alice förbereder ==två versioner av ett kontrakt==, *M* som är gynnsam för Bob och *M'* som inte är
-   det.
-2. Hon gör ==många små varianter av båda==, ==visuellt oskiljaktiga== från varandra, till exempel genom
-   att lägga till blanksteg i radsluten. Hon jämför alla hashar av *M* med alla hashar av *M'* till hon
-   ==hittar två som är lika==.
-3. Då ger hon Bob ==det gynnsamma dokumentet att signera==, och när han lämnar tillbaka det ==byter hon
-   till den ogynnsamma versionen och behåller signaturen==.
-
-**Vad det betyder för hashlängden.** Är hashvärdet 64 bitar krävs i snitt bara ==2^32 versioner== av
-vardera dokumentet. Boken kallar det ==för litet för att vara bekvämt==, och slutsatsen är att
-hashvärden måste vara ==minst 128 bitar== för att skydda mot denna attack.
-
-**De två som används i praktiken.** ==MD5== ger en ==128-bitars== sammanfattning, ==SHA-1== ger ==160
-bitar==. Den längre ger ==bättre skydd mot födelsedagsattacker==. Boken garderar att båda ==kan betraktas
-som tillräckligt säkra== för överskådlig tid, men att publicerade attacker ==antyder att SHA-1 är
-sårbar==, och att den skulle ersättas av de längre SHA-versionerna i amerikansk myndighetsprogramvara.
+**De två som används i praktiken.** ==MD5== ger ==128 bitar==, ==SHA-1== ger ==160==. Boken garderar att
+båda ==kan betraktas som tillräckligt säkra== för överskådlig tid, men att publicerade attacker
+==antyder att SHA-1 är sårbar==.
 
 ### Muntligt svar
 
 1. En digest-funktion, eller säker hashfunktion, gör ett meddelande av godtycklig längd till ett kort
-   värde av fast längd som karakteriserar det.
+   värde av fast längd som beskriver det, ett slags fingeravtryck.
 2. Tre egenskaper krävs: lätt att räkna fram hashen ur meddelandet, svårt att räkna fram meddelandet ur
    hashen, och svårt att hitta ett annat meddelande med samma hash. De två första ger namnet
    envägshashfunktion.
@@ -462,9 +416,8 @@ sårbar==, och att den skulle ersättas av de längre SHA-versionerna i amerikan
 5. Födelsedagsattacken gör det lättare än man tror — man jämför många varianter av två dokument mot
    varandra i stället för att jaga en given hash. Vid 64 bitar räcker ungefär 2^32 varianter, så
    hashvärden måste vara minst 128 bitar.
-6. I praktiken används MD5 med 128 bitar och SHA-1 med 160. SHA-1 är väsentligt långsammare men
-   säkrare, och NIST har beslutat fasa ut den för längre varianter efter attacker som antyder att den
-   är sårbar.
+6. I praktiken används MD5 med 128 bitar och SHA-1 med 160. Boken garderar att båda kan betraktas som
+   tillräckligt säkra för överskådlig tid, men att publicerade attacker antyder att SHA-1 är sårbar.
 
 ## 5.1 Vad är TLS/SSL respektive HTTPS? Förklara hur handskakningen i TLS går till
 
@@ -508,28 +461,20 @@ klient- och serverautentisering krävs.== Stegen:
 1. **ClientHello och ServerHello.** Etablerar ==protokollversion, sessions-id, cipher suite och
    komprimeringsmetod==, och parterna ==utbyter slumpvärden==. Servern erbjuder ==en lista av de cipher
    suites den har==, och klienten ==väljer en== — eller svarar med ett fel om ingen passar. Här kommer
-   man också överens om ett ==slumpmässigt startvärde för CBC==. (*CBC* är det blockchifferläge där
-   varje block XOR:as med det föregående krypterade blocket, så det allra första blocket behöver ett
-   startvärde utifrån.)
+   man också överens om ett ==slumpmässigt startvärde för CBC==.
 2. **Certifikat, valfritt.** Parterna ==autentiserar varandra genom att utbyta signerade
    publik-nyckelcertifikat i X.509-format==. Certifikaten kan komma från en certifikatutfärdare eller
    ==skapas tillfälligt för ändamålet==. ==Minst en publik nyckel måste finnas== för nästa steg.
 3. **Pre-master secret.** En part ==genererar en pre-master secret== och skickar den ==krypterad med den
    publika nyckeln==. Det är ==ett stort slumpvärde==, och båda parter använder det för att generera
-   ==de två sessionsnycklarna== (kallade *write*-nycklar), en per riktning, plus
-   ==MAC-hemligheterna==.
+   ==de två sessionsnycklarna==, en per riktning, plus ==MAC-hemligheterna==.
 4. **ChangeCipherSpec och Finished.** Sessionen ==triggas av ChangeCipherSpec-meddelanden==, följda av
    ==Finished-meddelanden==. När Finished utbytts är ==all vidare kommunikation krypterad och signerad==
    enligt den valda cipher suiten med de överenskomna nycklarna.
 
-**Vad en cipher suite består av.** Alla kryptografiska val samlas i en ==cipher suite==, och den
-innehåller ==ett val för var och en av tre delar== (figur 11.18):
-
-- **Nyckelutbytesmetod** — hur sessionsnyckeln ska utbytes. Bokens exempel: ==RSA med
-  publik-nyckelcertifikat==.
-- **Chiffer för dataöverföring** — det block- eller strömchiffer som används för datan. Exempel:
-  ==IDEA==.
-- **Digest-funktion** — för att skapa ==MAC:ar==. Exempel: ==SHA-1==.
+**Vad en cipher suite är.** Alla kryptografiska val samlas i en ==cipher suite==, som innehåller ==ett
+val för var och en av tre delar==: ==nyckelutbytesmetod==, ==chiffer för dataöverföringen== och
+==digest-funktion== för MAC:arna.
 
 **Sårbarheten, med bokens gardering.** Den inledande handskakningen är ==*potentiellt* sårbar för
 man-in-the-middle==. Skyddet är att den publika nyckel som verifierar ==det första certifikatet== kommer
@@ -605,16 +550,10 @@ helst:
 1. ==Hämta utfärdarens publik-nyckelcertifikat== från en ==pålitlig källa==.
 2. ==Validera signaturen.==
 
-**Tre problem boken tar upp.** Att ==välja den betrodda myndighet== kedjan ska börja i, eftersom
-==tillit sällan är absolut== — valet måste bero på ==vad certifikatet ska användas till==. Risken att
-==privata nycklar röjs==. Och ==kedjans tillåtna längd==: ==desto längre kedja, desto större risk för en
-svag länk==.
-
-**Återkallning, och varför utgångsdatum finns.** Ibland måste ett certifikat ==dras tillbaka== — men
-kopior finns kvar hos alla som fått det, och boken skriver att det vore ==dyrt, om inte omöjligt, att
-spåra upp och radera dem alla==. Att ogiltigförklara ett certifikat kräver att ==alla möjliga mottagare
-underrättas==. Den vanliga lösningen är därför att ==lägga in ett utgångsdatum==: den som får ett
-utgånget certifikat ska ==avvisa det==, och innehavaren måste ==begära förnyelse==.
+**Tre problem, kort.** Att ==välja var kedjan börjar==, eftersom tillit sällan är absolut. Risken att
+==privata nycklar röjs==. Och ==kedjans längd==: desto längre kedja, desto större risk för en svag länk.
+Ett certifikat kan också behöva ==dras tillbaka==, men kopior finns kvar hos alla som fått det — därför
+läggs ett ==utgångsdatum== in i stället.
 
 **Så kan du tänka.** Ett certifikat flyttar inte tilliten någonstans, det ==kedjar== den. Du måste
 fortfarande lita på någon till slut, och den enda riktiga frågan är ==var kedjan börjar== och hur du
@@ -643,22 +582,19 @@ fick den första nyckeln. Allt annat är signaturkontroller. (egen slutsats)
 ## Luckor och källor
 
 **Allt i denna fil kommer ur kursboken**, Coulouris m.fl., *Distributed Systems: Concepts and Design*,
-5:e upplagan, kapitel 11 (rad 9224–10422 i vaultets textversion). Inga andra källor har använts, och
-inget svar är hämtat utanför boken.
+5:e upplagan, kapitel 11. Inga andra källor har använts.
 
-**Inga luckor mot tentafrågorna.** Alla åtta delfrågor har svar i boken, vilket skiljer kapitel 11 från
-kapitel 2 (där MVC saknas helt) och kapitel 9 (där REST-principerna kräver en extern artikel). Tentan
-numrerar fem frågor, men fråga 5 är bara en rubrik över 5.1 och 5.2, så det blir åtta delfrågor att
-svara på.
+**Inga luckor mot tentafrågorna.** Alla åtta delfrågor har svar i boken. Tentan numrerar fem frågor, men
+fråga 5 är bara en rubrik över 5.1 och 5.2, så det blir åtta delfrågor att svara på.
 
 **Två ställen där boken säger mindre än man kunde vilja.** Den anger ==inte== hur lång en
-certifieringskedja får vara, bara att risken växer med längden. Och den ==namnger ingen konkret
-tidsgräns== för hur länge MD5 eller SHA-1 kan anses säkra — formuleringen är "för överskådlig tid".
+certifieringskedja får vara, och den ==namnger ingen konkret tidsgräns== för hur länge MD5 eller SHA-1
+kan anses säkra — formuleringen är "för överskådlig tid".
 
 **Egna tillägg, tydligt märkta.** Fem stycken är märkta "Så kan du tänka" — ett vardera i fråga 1, 2,
-3.1, 4 och 5.2 — och innehåller min strukturering eller slutsats, inte bokens ord. Fråga 3, 4.1 och 5.1
-har inga. Bokens egna listor och garderingar är återgivna som de står.
+3.1, 4 och 5.2. Fråga 3, 4.1 och 5.1 har inga.
 
-**Där bokens figur var trasig.** Cipher suite-innehållet i fråga 5.1 är hämtat ur PDF:en, eftersom
-figur 11.18 saknas i textversionen. Övriga figurer är kontrollerade. Detaljerna står i
-`.kiro/reports/hi1031-genomgang-2026-09-10.md` — de rör kontrollen av noten, inte plugget.
+**Medvetet utanför noten**, eftersom ingen av de åtta delfrågorna rör det: chiffrens inre konstruktion
+och bitlängder, Needham–Schroeder och Kerberos, nyckeldistributionsprotokollen, *undeniable signatures*,
+samt fallstudierna Millicent och NetBill. Några saker står kvar i **kort form** därför att en muntlig
+följdfråga är trolig: MAC, födelsedagsattacken, certifikatåterkallning och cipher suitens tre delar.

@@ -1,43 +1,34 @@
 ---
 tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-09-09
-updated: 2026-09-09
+updated: 2026-09-15
 description: "Svar på tentafrågorna för kapitel 10 om peer-to-peer-system: skillnaden mot klient-server med för- och nackdelar, vilka situationer och datatyper som passar, kopplingen till upphovsrätt via Napster, de sex icke-funktionella kraven, hur en resurs hittas med routing overlay, strukturerat mot ostrukturerat, samt jämförelsen mellan IP och routing på applikationsnivå."
 ---
 
 # HI1031 Tentafrågor och Svar - Kap 10 Peer-to-peer-system
 
-Fem tentafrågor, och allt finns i boken. Två av svaren bygger på tabeller som var **trasiga** i
-vaultets textversion och som är hämtade ur original-PDF:en — det står sist i `## Luckor och källor`.
+Fem tentafrågor, och allt finns i boken. Tabellerna i fråga 4 och 5 är hämtade ur original-PDF:en
+eftersom de var stympade i textversionen — se `## Luckor och källor`.
 
 ## 1. Vad skiljer P2P från klient/server-modellen? Vilka är de viktigaste fördelarna respektive nackdelarna med ett P2P-system?
 
 Bokens avsnitt: §10.1 och §10.7.
 
 **Målet förklarar hela skillnaden.** P2P ska göra det möjligt att dela data och resurser i ==mycket stor
-skala genom att avskaffa varje krav på separat administrerade servrar== och deras infrastruktur.
-Säg den meningen först — resten följer ur den.
+skala, genom att slippa servrar som måste skötas för sig== och all infrastruktur runt dem. Säg den
+meningen först — resten följer ur den.
 
 **Så här ser klient-server ut.** Resurserna ligger på ==en serverdator eller ett litet, tätt kopplat
-kluster==. Fördelen är att ==få beslut behövs== om var resurser ska placeras och hur serverns hårdvara
-ska skötas. Nackdelen är att ==tjänstens skala begränsas av serverns kapacitet och nätanslutning==.
-
-**Varför det inte räcker att köpa fler servrar.** Boken ger två skäl i löptexten:
-
-- **Kostnaderna.** Ska alla värdar ägas och skötas av tjänsteleverantören ==brukar kostnaderna för
-  administration och felåterställning ta över==.
-- **Bandbredden.** Hur mycket nätbandbredd en enda serverplats kan få över tillgängliga fysiska
-  länkar är också en ==stor begränsning==.
-
-Boken nämner **Google**, **Amazon** och **eBay** som exempel: de skalar redan över många maskiner, men
-maskinerna är fortfarande ==separat ägda och administrerade av leverantören==, vilket är precis den
-kostnaden P2P vill bli av med.
+kluster==. Fördelen är att ==få beslut behövs== om var resurser ska placeras och hur hårdvaran ska
+skötas. Nackdelen är att ==tjänstens skala begränsas av serverns kapacitet och nätanslutning==. Att bara
+köpa fler servrar löser det inte: om leverantören äger och sköter alla datorer ==går det mesta åt till
+drift och att laga fel==, och hur mycket bandbredd en enda serverplats kan få är också en ==stor
+begränsning==.
 
 **Så här ser P2P ut.** Resurserna ligger på datorer ==spridda över ett nätverk==, och algoritmerna för
-att placera och sedan hitta objekten är en ==nyckeldel av designen==. Målet är en tjänst som är
-==helt decentraliserad och självorganiserande== — alltså att den ==själv ordnar om sig== när datorer
-ansluter och lämnar, utan att någon konfigurerar den — och som dynamiskt balanserar lagring och
-beräkning mellan alla deltagande datorer.
+att placera och sedan hitta objekten är en ==nyckeldel av designen==. Målet är en tjänst som är ==helt
+decentraliserad och självorganiserande== — alltså att den ==själv ordnar om sig== när datorer ansluter
+och lämnar, utan att någon konfigurerar den.
 
 **Bokens fem kännetecken för ett P2P-system:**
 
@@ -45,34 +36,29 @@ beräkning mellan alla deltagande datorer.
 2. Noderna kan bidra med olika mycket, men ==alla noder har samma funktionella förmåga och samma
    ansvar==.
 3. Att systemet fungerar rätt ==beror inte på något centralt administrerat system==.
-4. De kan byggas så att de ger en ==begränsad grad av anonymitet== till både de som tillhandahåller
-   och de som använder resurser.
+4. De kan byggas så att de ger en ==begränsad grad av anonymitet== till både de som tillhandahåller och
+   de som använder resurser.
 5. Nyckelfrågan för effektiv drift är ==valet av algoritm för att placera data över många värdar== och
-   komma åt det igen, på ett sätt som balanserar lasten och ger tillgänglighet utan för stora omkostnader.
+   komma åt det igen, balanserat och tillgängligt utan för stora omkostnader.
 
 **Fördelarna, bokens egen lista i §10.7:**
 
-- De kan ==utnyttja oanvända resurser== (lagring, beräkning) i värddatorerna.
+- De kan ==utnyttja oanvända resurser== — lagring och beräkning — i värddatorerna.
 - De ==skalar== till stora antal klienter och värdar, med ==utmärkt balansering== av lasten på både
   nätlänkar och värdarnas beräkningsresurser.
 - Mellanprogrammets ==självorganiserande egenskaper== gör att ==supportkostnaderna i stort sett är
   oberoende av== hur många klienter och värdar som satts in.
 
-**Nackdelarna, också bokens egen lista:**
-
-- Att lagra ==föränderlig data är relativt dyrt== jämfört med en betrodd, central tjänst.
-- Den lovande grunden för anonymitet ==har ännu inte gett starka garantier==.
+**Nackdelarna, också bokens egen lista:** att lagra ==föränderlig data är relativt dyrt== jämfört med en
+betrodd, central tjänst, och den lovande grunden för anonymitet ==har ännu inte gett starka garantier==.
 
 **Nackdelen som väger tyngst i praktiken: volatilitet.** Datorer och nätanslutningar som ägs och sköts
-av en mängd olika användare är ==nödvändigtvis volatila resurser== — ägarna garanterar inte att hålla
-dem påslagna, anslutna och felfria. Tillgängligheten hos processerna och datorerna är alltså
-==oförutsägbar==, och tjänsten kan inte förlita sig på garanterad åtkomst till en enskild resurs. Den
-kan däremot byggas så att ==sannolikheten att misslyckas nå någon kopia av ett replikerat objekt blir
-hur liten som helst==.
+av en mängd olika användare är ==nödvändigtvis volatila resurser== — ägarna garanterar inte att hålla dem
+påslagna, anslutna och felfria, så tillgängligheten är ==oförutsägbar==. Tjänsten kan däremot byggas så
+att ==chansen att man inte når en enda kopia== av ett replikerat objekt kan göras hur liten som helst.
 
-**Så kan du tänka.** Svagheten går att vända till en styrka, och boken säger det själv: replikeringen
-som volatiliteten kräver kan ==utnyttjas för att stå emot manipulation== från illvilliga noder.
-Du får alltså motståndskraft på köpet av något du var tvungen att göra ändå.
+**Så kan du tänka.** Svagheten går att vända till en styrka, och boken säger det själv: replikeringen som
+volatiliteten kräver kan ==utnyttjas för att stå emot manipulation== från illvilliga noder.
 
 ### Muntligt svar
 
@@ -97,62 +83,48 @@ Du får alltså motståndskraft på köpet av något du var tvungen att göra ä
 Bokens avsnitt: §10.1 och §10.2.
 
 **Datatypen är svaret, och skälet är tekniskt.** Resurser identifieras av ==GUID:er== (globalt unika
-identifierare), som normalt räknas ut som en ==säker hash== av hela eller delar av resursens tillstånd.
-En *hash* är en funktion som gör om data av valfri storlek till ett kort värde, och att den är *säker*
-betyder att det i praktiken är ==omöjligt att hitta två olika data som ger samma värde== — så värdet
-fungerar som ett fingeravtryck av innehållet.
+identifierare), som **normalt** räknas ut som en ==säker hash== av hela eller delar av resursens
+tillstånd. Att hashen är *säker* betyder att det i praktiken är ==omöjligt att hitta två olika data som
+ger samma värde==, så värdet fungerar som ett fingeravtryck av innehållet.
 
 Det gör resursen ==självcertifierande==: en klient som får resursen kan ==räkna om hashen och se att den
 stämmer==, vilket skyddar mot manipulation från de obetrodda noder den kan ha lagrats på.
 
 **Men det kräver att tillståndet är oföränderligt**, eftersom en ändring skulle ge ett ==annat
-hashvärde==. Därför är P2P-lagringssystem ==i grunden bäst lämpade för oföränderliga objekt==, som
-musik- och videofiler.
-
-**Föränderlig data går, men är svårare.** Boken skriver att användning för objekt med ==föränderliga
-värden är mer utmanande==, men att det kan hanteras genom att lägga till ==betrodda servrar== som
-sköter en versionsföljd och pekar ut den aktuella versionen. Så gör **OceanStore** och **Ivy**.
+hashvärde==. Därför är P2P-lagringssystem ==i grunden bäst lämpade för oföränderliga objekt==, som musik-
+och videofiler. Föränderlig data går, men boken kallar det ==mer utmanande== och säger att det kan
+hanteras genom ==betrodda servrar== som sköter en versionsföljd och pekar ut den aktuella versionen —
+så gör **OceanStore** och **Ivy**.
 
 **Vad Napster kunde utnyttja i sin tillämpning** — detta är svaret på "i vilka situationer":
 
 - **Musikfiler uppdateras aldrig**, så man slipper hålla replikerna konsistenta efter ändringar.
 - **Inga garantier krävs om enskilda filers tillgänglighet.** Är en fil tillfälligt onåbar kan den
-  ==laddas ner senare==. Det sänker kraven på de enskilda datorernas och anslutningarnas driftsäkerhet.
+  ==laddas ner senare==, vilket sänker kraven på de enskilda datorernas driftsäkerhet.
 
 **Så kan du tänka.** Vänd det till en regel du kan säga högt: P2P passar när datat är **stort,
-oföränderligt och inte kritiskt just nu**. Det passar sämre när ==integritet och tillgänglighet måste
-garanteras== — boken säger just detta i sammanfattningen, att de tekniska nackdelarna begränsade
-Napster-generationen till tillämpningar där sådana garantier var oviktiga.
+oföränderligt och inte kritiskt just nu**, och passar sämre när ==integritet och tillgänglighet måste
+garanteras==. Boken säger just det i sammanfattningen.
 
 ### Kopplingen till upphovsrätt
 
-**Napster kort.** Startade 1999 och blev snabbt mycket populärt för musikutbyte. Som mest var
-==flera miljoner användare registrerade== och tusentals bytte filer samtidigt. Arkitekturen hade
-==centraliserade index==, men ==användarna tillhandahöll filerna==, som lagrades och lästes på deras
-egna datorer. Klienterna förväntades ==själva lägga till sina filer== i den delade poolen genom att
-skicka en länk till indextjänsten.
-
-**Napster stängdes** efter en rättsprocess som upphovsrättsinnehavarna till en del av materialet
-drev mot tjänstens operatörer.
+**Napster kort.** Startade 1999 och blev snabbt mycket populärt för musikutbyte. Arkitekturen hade
+==centraliserade index==, men ==användarna tillhandahöll filerna==, som lagrades och lästes på deras egna
+datorer. Tjänsten stängdes efter en rättsprocess som upphovsrättsinnehavarna drev mot operatörerna.
 
 **Argumentet och varför det föll** — det här är kärnan i frågan:
 
 - Utvecklarna hävdade att de ==inte var ansvariga== för intrånget, eftersom de ==inte deltog i
   kopieringen==: den skedde helt och hållet mellan användarnas maskiner.
 - Argumentet föll eftersom ==indexservrarna bedömdes vara en väsentlig del av processen==.
-- Och eftersom indexservrarna låg på ==välkända adresser== kunde deras operatörer ==inte vara
-  anonyma==, så de kunde ==pekas ut i stämningar==.
+- Och eftersom indexservrarna låg på ==välkända adresser== kunde deras operatörer ==inte vara anonyma==,
+  så de kunde ==pekas ut i stämningar==.
 
 **Slutsatsen som förklarar hela teknikens rykte.** Boken skriver att en ==mer fullständigt distribuerad==
-fildelningstjänst hade kunnat uppnå en bättre uppdelning av det juridiska ansvaret, genom att
-==sprida ansvaret över alla användare== och därmed göra rättsliga åtgärder ==mycket svåra, om inte
-omöjliga==. Det är därför utvecklingen efter Napster gick mot att ta bort varje central punkt — och
-därmed också mot något som är svårare att stämma.
-
-**Boken tar inte ställning, och det bör inte du heller.** Den skriver uttryckligen "vilken uppfattning
-man än har om det legitima i filkopiering" och pekar sedan på att anonymitet har ==legitima sociala och
-politiska skäl== — det starkaste är att ==övervinna censur== och bevara yttrandefriheten för individer i
-==repressiva samhällen==.
+fildelningstjänst hade kunnat uppnå en bättre uppdelning av det juridiska ansvaret, genom att ==sprida
+ansvaret över alla användare== och därmed göra rättsliga åtgärder ==mycket svåra, om inte omöjliga==. Det
+är därför utvecklingen efter Napster gick mot att ta bort varje central punkt — och därmed också mot
+något som är svårare att stämma.
 
 ### Muntligt svar
 
@@ -167,56 +139,47 @@ politiska skäl== — det starkaste är att ==övervinna censur== och bevara ytt
 5. Upphovsrättskopplingen kommer från Napster. Utvecklarna hävdade att de inte deltog i kopieringen,
    men indexservrarna bedömdes vara en väsentlig del av processen.
 6. Och eftersom indexservrarna låg på välkända adresser kunde operatörerna inte vara anonyma och kunde
-   stämmas. Boken påpekar att en helt distribuerad tjänst hade spritt ansvaret över alla användare —
-   och att anonymitet också har legitima skäl, som att stå emot censur och skydda whistle-blowers.
+   stämmas. Boken påpekar att en helt distribuerad tjänst hade spritt ansvaret över alla användare, och
+   därmed gjort rättsliga åtgärder mycket svåra.
 
 ## 3. Vilka icke-funktionella krav ställs på ett P2P-system?
 
-Bokens avsnitt: §10.3.
-
-**Sätt frågan i sitt sammanhang först.** Kraven gäller ==mellanprogrammet==. Det **funktionella** kravet
-är att klienter ska kunna ==hitta och kommunicera med varje enskild resurs== fast de är spridda, och att
-resurser och värdar ska kunna ==läggas till och tas bort fritt==. De sex nedan är de
-**icke-funktionella** — alltså krav på *hur väl* det görs, inte på *vad* som görs.
+Bokens avsnitt: §10.3. Kraven gäller ==mellanprogrammet==.
 
 **1. Global skalbarhet.** Mellanprogrammet måste stödja tillämpningar som når ==miljoner objekt på tio-
 eller hundratusentals värdar==.
 
-**2. Lastbalansering.** Prestandan hos varje system som utnyttjar många datorer beror på en
-==balanserad fördelning av arbetslasten==. Här uppnås det genom ==slumpmässig placering== av resurser
-plus ==repliker av hårt använda== resurser.
+**2. Lastbalansering.** Prestandan beror på en ==balanserad fördelning av arbetslasten==, och här uppnås
+det genom ==slumpmässig placering== av resurser plus ==repliker av hårt använda== resurser.
 
 **3. Optimering för lokala interaktioner mellan närliggande peers.** "Nätavståndet" mellan noder som
-interagerar påverkar ==latensen== märkbart, och även belastningen på nättrafiken. Mellanprogrammet ska
-sträva efter att ==placera resurser nära de noder som använder dem mest==.
+interagerar påverkar ==latensen== märkbart. Mellanprogrammet ska sträva efter att ==placera resurser nära
+de noder som använder dem mest==.
 
-**4. Anpassning till mycket dynamisk värdtillgänglighet.** De flesta P2P-system byggs av datorer som
-är ==fria att ansluta eller lämna när som helst==. Värdarna och nätsegmenten ==ägs inte och sköts inte
-av någon enskild instans==; varken deras driftsäkerhet eller deras fortsatta deltagande är garanterat.
-Kravet går åt båda hållen:
+**4. Anpassning till mycket dynamisk värdtillgänglighet.** De flesta P2P-system byggs av datorer som är
+==fria att ansluta eller lämna när som helst==, och värdarna ==ägs inte och sköts inte av någon enskild
+instans==. Kravet går åt båda hållen: när en värd ansluter måste den ==integreras och lasten omfördelas==
+så att dess resurser utnyttjas, och när den lämnar måste systemet ==upptäcka avhoppet och fördela om==
+dess last och resurser.
 
-- När en värd ansluter måste den ==integreras och lasten omfördelas== så att dess resurser utnyttjas.
-- När den lämnar, frivilligt eller ofrivilligt, måste systemet ==upptäcka avhoppet och fördela om==
-  dess last och resurser.
-
-**5. Säkerhet för data i en miljö med heterogen tillit.** I system i global skala där de deltagande
-värdarna har ==olika ägare== måste tillit byggas upp med ==autentisering och kryptering==, så att ingen
-kan ändra eller läsa informationen i smyg.
+**5. Säkerhet för data i en miljö med heterogen tillit.** När de deltagande värdarna har ==olika ägare==
+måste tillit byggas upp med ==autentisering och kryptering==, så att ingen kan ändra eller läsa
+informationen i smyg.
 
 **6. Anonymitet, förnekbarhet och motstånd mot censur.** Anonymitet för den som håller och den som tar
-emot data är ett ==legitimt intresse i många situationer== där censurmotstånd krävs. Ett närliggande
-krav är att värdarna som håller data ska kunna ==rimligt förneka ansvar== för att hålla eller lämna ut
-det. Att P2P-system använder ==många värdar== hjälper till att uppnå dessa egenskaper.
+emot data är ett ==legitimt intresse i många situationer==. Ett närliggande krav är att värdarna ska
+kunna ==rimligt förneka ansvar== för att hålla eller lämna ut data. Att P2P-system använder ==många
+värdar== hjälper till att uppnå det.
 
-**Så kan du tänka.** Kraven är inte en önskelista utan följer ur två fakta: att systemet är **stort**
-(krav 1, 2 och 3) och att det består av **datorer du inte äger och inte kan lita på** (krav 4, 5 och 6).
-Kan du den uppdelningen kan du härleda listan i stället för att memorera den.
+**Så kan du tänka.** Kraven följer ur två fakta: att systemet är **stort** (krav 1, 2 och 3) och att det
+består av **datorer du inte äger och inte kan lita på** (krav 4, 5 och 6). Kan du uppdelningen kan du
+härleda listan i stället för att memorera den.
 
 **Konsekvensen boken drar direkt efteråt.** Kraven gör det ==omöjligt att hålla en databas hos alla
 klientnoder== över var alla objekt finns. Kunskapen måste ==partitioneras och distribueras==: varje nod
 ansvarar för en ==del av namnrymden== — alltså av mängden möjliga identifierare — plus allmän kunskap om
-hur ==namnrymdens topologi==, dess kopplingsmönster, ser ut. Kunskapen replikeras dessutom hårt: boken
-skriver att replikeringsfaktorer ==så höga som 16 typiskt används==.
+hur ==namnrymdens topologi==, dess kopplingsmönster, ser ut. Kunskapen replikeras dessutom hårt: man
+använder ofta ==så höga replikeringsfaktorer som 16==.
 
 ### Muntligt svar
 
@@ -225,8 +188,7 @@ skriver att replikeringsfaktorer ==så höga som 16 typiskt används==.
 3. Lastbalansering, som uppnås med slumpmässig placering plus repliker av det som används mest, och
    optimering för lokala interaktioner, alltså att lägga resurser nära dem som använder dem.
 4. Anpassning till mycket dynamisk värdtillgänglighet: noder kommer och går fritt, så lasten måste
-   omfördelas i båda riktningarna. Overnet hade en snittsession på 135 minuter mot 37,7 timmar i
-   Microsofts företagsnät.
+   omfördelas i båda riktningarna — både när en värd ansluter och när den lämnar.
 5. Säkerhet i en miljö med heterogen tillit, som kräver autentisering och kryptering, plus anonymitet,
    förnekbarhet och censurmotstånd.
 6. Ett sätt att minnas dem: tre krav följer av att systemet är stort, tre av att datorerna varken ägs
@@ -239,78 +201,53 @@ Bokens avsnitt: §10.4 och §10.5, särskilt §10.5.3.
 
 ### Vad en routing overlay är
 
-**Definitionen.** I P2P-system tar en distribuerad algoritm som kallas ==routing overlay== ansvar för
-att ==lokalisera noder och objekt==. Namnet kommer av att mellanprogrammet utgör ett ==lager som ruter
-förfrågningar från en klient till en värd som håller objektet== förfrågan gäller. Objekten kan ligga
-på, och flyttas till, ==vilken nod som helst utan att klienten är inblandad==.
-
-**Varför "overlay", alltså överlägg.** Därför att den ==ruter i applikationslagret==, ==helt skilt från
-andra rutningsmekanismer== på nätnivå som IP-rutning.
+**Definitionen.** I P2P-system tar en distribuerad algoritm som kallas ==routing overlay== ansvar för att
+==lokalisera noder och objekt==. Namnet kommer av att mellanprogrammet utgör ett ==lager som ruter
+förfrågningar från en klient till en värd som håller objektet== förfrågan gäller. Objekten kan ligga på,
+och flyttas till, ==vilken nod som helst utan att klienten är inblandad==. Den kallas *överlägg* därför
+att den ==ruter i applikationslagret==, helt skilt från rutningsmekanismer på nätnivå som IP-rutning.
 
 **Hur den hittar rätt.** Överlägget ser till att ==varje nod kan komma åt varje objekt== genom att ruta
 förfrågan genom en ==följd av noder==, och utnyttja kunskapen hos var och en för att lokalisera
 målobjektet. P2P-system lagrar oftast ==flera repliker==; då håller överlägget reda på var alla
 tillgängliga repliker finns och levererar till den ==närmaste "levande" noden== som har en kopia.
 
-**Överläggets uppgifter — huvuduppgiften plus tre till:**
+**Överläggets fyra uppgifter.** Huvuduppgiften är att **ruta förfrågningar till objekt**: klienten
+skickar objektets ==GUID== till överlägget, som ruter förfrågan till en nod där en replik finns. Utöver
+den ska överlägget **sätta in objekt** — en nod räknar ut ett GUID och anmäler det, varefter objektet är
+nåbart för alla — **ta bort objekt**, och **hantera att noder ansluter och lämnar**, där en ny nod tar
+över en del av andra noders ansvar och en nod som lämnar får sitt ansvar fördelat bland de övriga.
 
-1. **Ruta förfrågningar till objekt.** En klient som vill anropa en operation skickar en förfrågan med
-   objektets ==GUID== till överlägget, som ruter den till en nod där en replik finns. Detta är
-   huvuduppgiften.
-2. **Sätta in objekt.** En nod som vill göra ett nytt objekt tillgängligt ==räknar ut ett GUID== och
-   anmäler det till överlägget, som sedan ser till att objektet är ==nåbart för alla andra klienter==.
-3. **Ta bort objekt.** Ber klienter att objekt tas bort måste överlägget ==göra dem otillgängliga==.
-4. **Lägga till och ta bort noder.** Ansluter en nod ordnar överlägget så att den ==tar över en del av
-   andra noders ansvar==. Lämnar en nod, frivilligt eller genom fel, ==fördelas dess ansvar ut== bland
-   de andra.
-
-**Om GUID:er.** De är exempel på =="rena" namn==, också kallade ==opaka identifierare==, eftersom de
-==inte avslöjar något om var== objekten finns.
-
-**Ett praktiskt problem: GUID:er går inte att läsa för människor.** Klienttillämpningar måste därför få
-tag på GUID:et via ==någon form av indextjänst== med läsbara namn eller sökningar. Helst lagras även
-de indexen på P2P-sätt, för att slippa svagheterna hos centrala index som Napster visade — men i enkla
-fall ==räcker en webbsida==, som **BitTorrents** stubbfil med GUID och en URL till en ==tracker==.
-
-### Strukturerade system: DHT och DOLR
+### Strukturerade system
 
 **Distribuerad hashtabell (DHT).** Eftersom de slumpmässigt fördelade identifierarna används för att
 ==bestämma var objekt placeras== och för att hämta dem, kallas överlägg ibland distribuerade
-hashtabeller. Gränssnittet är ==`put(GUID, data)`==, ==`get(GUID)`== och ==`remove(GUID)`==. I
-DHT-modellen lagras ett objekt med GUID *X* på ==den nod vars GUID är numeriskt närmast *X*==, plus på
-de *r* värdar vars GUID:er är näst närmast, där *r* är en ==replikeringsfaktor==.
+hashtabeller. Gränssnittet är ==`put(GUID, data)`==, ==`get(GUID)`== och ==`remove(GUID)`==. Ett objekt
+med GUID *X* lagras på ==den nod vars GUID är numeriskt närmast *X*==, plus på de *r* värdar vars
+GUID:er är näst närmast, där *r* är en ==replikeringsfaktor==.
 
-**DOLR är den flexiblare varianten.** Skillnaden i en mening: ==DHT bestämmer var objektet ska ligga,
-medan DOLR får veta var det redan ligger== och håller en avbildning från GUID till nodadresserna. Där
-bestäms platserna alltså ==utanför rutningslagret==, som får veta varje replik genom `publish(GUID)`.
-
-**Prefixrutning svarar på hur man faktiskt hittar rätt.** Både **Pastry** och **Tapestry** använder
-==prefixrutning==: sökningen efter nästa nod ==smalnas av genom att en binär mask väljer ut ett ökande
-antal hexadecimala siffror== ur mål-GUID:et efter varje hopp. Så för varje hopp matchar man ==en siffra
-mer== av målet, vilket är själva mekanismen som gör sökningen snabb.
-
-- Alla noder och objekt får ==128-bitars GUID:er==, för noder en säker hash av nodens publika nyckel.
-- I ett nät med *N* noder ruter Pastry till vilket GUID som helst i ==*O(log N)* steg==. Det betyder att
-  antalet hopp växer ==mycket långsammare än nätet==: tiodubblas antalet noder ökar hoppen bara med en
-  konstant — det är därför metoden alls fungerar i global skala.
-- Finns målnoden inte aktiv levereras meddelandet till den ==aktiva nod vars GUID är numeriskt
-  närmast==. Aktiva noder tar ansvar för alla objekt i sin numeriska omgivning.
+**Hur sökningen faktiskt går.** Både **Pastry** och **Tapestry** använder ==prefixrutning==: för varje
+hopp matchar man ==en siffra mer== av mål-GUID:et, så sökningen smalnar av stegvis och antalet hopp växer
+==mycket långsammare än nätet==. Det är mekanismen som gör att metoden alls fungerar i global skala.
 
 ### Ostrukturerade system
 
 **Motivet är underhållskostnaden.** De strukturerade algoritmerna är effektiva och ger ==tidsgränser==
 för att lokalisera objekt, men ==till priset av att underhålla de underliggande strukturerna==, ofta i
-mycket dynamiska miljöer. Det är därför ostrukturerade metoder också utvecklats.
+mycket dynamiska miljöer.
 
 **Hur de fungerar.** Det finns ==ingen övergripande kontroll== över topologin eller över var objekten
-placeras. Överlägget skapas ==ad hoc==: varje nod som ansluter följer ==enkla, lokala regler== för att
-få kontakt. En ansluten nod tar kontakt med en ==uppsättning grannar==, i vetskap om att grannarna i
-sin tur är kopplade till fler grannar, och så vidare — nätet blir ==i grunden decentraliserat och
-självorganiserande== och därmed ==tåligt mot nodfel==.
+placeras. Överlägget skapas ==ad hoc==: varje nod som ansluter följer ==enkla, lokala regler==, tar
+kontakt med en ==uppsättning grannar== som i sin tur är kopplade till fler grannar, och nätet blir
+==i grunden decentraliserat och självorganiserande== och därmed ==tåligt mot nodfel==.
 
-**Priset.** För att hitta ett objekt måste man ==söka igenom topologin==. Den metoden kan
-==inte ge några garantier== att objektet hittas, prestandan blir ==oförutsägbar==, och det finns en
-==verklig risk för överdriven meddelandetrafik==.
+**Priset.** För att hitta ett objekt måste man ==söka igenom topologin==, alltså fråga sig fram genom
+grannarna. Görs det naivt flödar man nätet med förfrågningar, så tre strategier används: ==expanded ring
+search==, alltså en följd av sökningar med växande tak för antalet hopp; ==random walks==, där ett antal
+vandrare följer egna slumpmässiga vägar; och ==gossiping==, där förfrågan skickas vidare till en granne med
+en viss sannolikhet och sprids som ett virus. Metoden kan ändå ==inte ge några garantier== att objektet
+hittas, prestandan blir ==oförutsägbar==, och det finns en ==verklig risk för överdriven
+meddelandetrafik==.
 
 **Figur 10.11, ordagrant om styrkor och svagheter:**
 
@@ -323,26 +260,6 @@ självorganiserande== och därmed ==tåligt mot nodfel==.
 ==ostrukturerade angreppssättet det dominerande på Internet==, särskilt för fildelning — **Gnutella**,
 **FreeNet** och **BitTorrent** använder alla ostrukturerade metoder.
 
-**Tre sökstrategier som gör ostrukturerad sökning uthärdlig.** Görs sökningen naivt ==flödar man nätet
-med förfrågningar==, vilket var precis vad Gnutella 0.4 gjorde:
-
-- **Expanded ring search** — en ==följd av sökningar med växande time-to-live==, alltså med ett växande
-  tak för hur många hopp förfrågan får ta, i insikt om att många möts lokalt.
-- **Random walks** — noden skickar ut ==vandrare== som följer sina egna ==slumpmässiga vägar==.
-- **Gossiping** — förfrågan skickas till en granne ==med en viss sannolikhet== och sprids ==som ett
-  virus genom en befolkning==; kallas därför också ==epidemiska protokoll==.
-
-Strategierna stöds ofta av ==replikering==: sprids innehållet över flera peers ökar chansen att hitta
-det. Både ==hela filer== och ==fragment== replikeras, vilket BitTorrent använder.
-
-**Gnutellas två versioner visar problemet och lösningen.** Gnutella 0.4 lät varje nod
-==vidarebefordra förfrågan till varje granne==, bara begränsat av ett ==time-to-live-fält==. Enkelt,
-men det ==skalar inte== och flödar snabbt nätet. Gnutella 0.6 gick därför från att alla noder är lika
-till att noder med ==extra resurser väljs till ultrapeers== och bildar nätets hjärta, medan övriga blir
-==löv== som kopplar sig till ett fåtal ultrapeers. Ultrapeers är tungt kopplade till varandra, vilket
-==minskar dramatiskt== det största antalet hopp en fullständig sökning kräver. Stilen kallas
-==hybridarkitektur== och används också i **Skype**.
-
 ### Muntligt svar
 
 1. Grundproblemet: det går inte att hålla en databas hos varje klient över var allt finns, så kunskapen
@@ -353,23 +270,22 @@ till att noder med ==extra resurser väljs till ultrapeers== och bildar nätets 
 3. Dess huvuduppgift är att ruta förfrågningar till objekt utifrån deras GUID. Den ska också sätta in
    objekt, ta bort objekt, och hantera att noder ansluter och lämnar.
 4. I strukturerade system är GUID:et en säker hash och avgör placeringen. I en DHT lagras objektet på
-   noden vars GUID är numeriskt närmast, och man kommer åt det med put och get. Pastry ruter i O(log N)
-   steg med prefixrutning.
+   noden vars GUID är numeriskt närmast, och man kommer åt det med put och get. Sökningen sker med
+   prefixrutning: för varje hopp matchas en siffra mer av målet.
 5. I ostrukturerade system finns ingen kontroll över topologi eller placering — överlägget byggs ad hoc
-   av lokala regler, och man hittar objekt genom att söka i nätet.
+   av lokala regler, och man hittar objekt genom att fråga sig fram genom grannarna, med expanded ring
+   search, random walks eller gossiping.
 6. Avvägningen: strukturerat garanterar att objektet hittas och ger tidsgränser, men strukturen måste
    underhållas. Ostrukturerat är självorganiserande och tåligt, men bara sannolikhetsbaserat och kan
-   flöda nätet. Ändå är det ostrukturerade dominerande på Internet, och sökstrategier som expanded ring
-   search, random walks och gossiping plus Gnutellas ultrapeers är det som gör det praktiskt.
+   flöda nätet. Ändå är det ostrukturerade dominerande på Internet — Gnutella, FreeNet och BitTorrent.
 
 ## 5. Vad är skillnaden mellan IP och P2P på applikationsnivå?
 
 Bokens avsnitt: §10.1, underrubriken "Overlay routing versus IP routing", med figur 10.1.
 
 **Varför frågan alls ställs.** Boken konstaterar att routing overlays ==till att börja med ser ut att dela
-många egenskaper== med den IP-paketrutning som är Internets primära kommunikationsmekanism, och att det
-därför är ==rimligt att fråga== varför en ytterligare mekanism på applikationsnivå behövs. Svaret
-ligger i skillnaderna i figur 10.1.
+många egenskaper== med IP-paketrutningen, och att det därför är ==rimligt att fråga== varför en
+ytterligare mekanism på applikationsnivå behövs. Svaret ligger i skillnaderna i figur 10.1.
 
 **Figur 10.1, alla sex rader:**
 
@@ -384,22 +300,19 @@ ligger i skillnaderna i figur 10.1.
 
 **Bokens egen gardering, ta med den.** Boken skriver att det ==kan hävdas== att några av skillnaderna
 ==uppstår ur IP:s "legacy"-natur== som Internets primära protokoll — men att arvet ==sitter för hårt för
-att gå att ändra== så att det stödjer P2P-tillämpningar mer direkt. Alltså: skillnaderna är
-inte alla principiella, men de går i praktiken inte att komma runt.
+att gå att ändra== så att det stödjer P2P-tillämpningar mer direkt. Skillnaderna är alltså inte alla
+principiella, men de går i praktiken inte att komma runt.
 
-**Två ord i tabellen som är värda att kunna förklara.** ==Topologi== är hur noderna är kopplade till
-varandra, alltså nätets form. ==Best-effort== betyder att nätet försöker leverera men ==inte lovar
-något== — inga garantier om att uppdateringen kommer fram eller när.
-
-**Så kan du tänka.** Två skillnader är de mest talande, om du bara får tid till några. **Målidentifiering**
+**Så kan du tänka.** Två skillnader är de mest talande om du bara får tid till några. **Målidentifiering**
 är den skarpaste: IP pekar ut ==en maskin==, överlägget pekar ut ==ett objekt== och får därmed friheten
 att välja närmaste kopia. **Nätdynamik** är den mest praktiska: en timme mot bråkdelar av en sekund är
-skillnaden mellan ett nät som antas ligga still och ett som antas ändras hela tiden — och det är just
-därför överlägget behövs för volatila värdar.
+skillnaden mellan ett nät som antas ligga still och ett som antas ändras hela tiden. (*Best-effort* i
+tabellen betyder att nätet försöker leverera men inte lovar något — varken att uppdateringen kommer fram
+eller när.)
 
 **Kom ihåg vad "applikationsnivå" betyder här.** Överlägget ==ersätter inte IP==. Det ligger ovanpå:
-varje hopp i överlägget genomförs med ett underliggande transportprotokoll, ==normalt UDP==, och ett
-enda överläggshopp kan kräva ==ett stort antal IP-hopp==.
+varje hopp i överlägget genomförs med ett underliggande transportprotokoll, ==normalt UDP==, och ett enda
+överläggshopp kan kräva ==ett stort antal IP-hopp==.
 
 ### Muntligt svar
 
@@ -423,15 +336,12 @@ enda överläggshopp kan kräva ==ett stort antal IP-hopp==.
 ## Luckor och källor
 
 **Inga luckor mot tentafrågorna.** Alla fem besvaras ur boken. Tabellerna i fråga 4 och 5 är hämtade ur
-PDF:en, eftersom de var stympade i textversionen, och är översatta — inte citerade. Detaljerna står i
-`.kiro/reports/hi1031-genomgang-2026-09-10.md` och rör kontrollen av noten, inte plugget.
+PDF:en eftersom de var stympade i textversionen, och är översatta — inte citerade.
 
 **KursPM markerar §10.5–10.6 som kursivt läsande**, men fråga 4 frågar uttryckligen om routing overlay
-och om skillnaden mellan strukturerade och ostrukturerade system. Skillnaden och Gnutella står i
-**§10.5.3**, alltså i det kursiva avsnittet. Det är läst och använt ändå, eftersom tentafrågan kräver det.
+och om skillnaden mellan strukturerade och ostrukturerade system, som står i **§10.5.3**. Det är läst och
+använt ändå, eftersom tentafrågan kräver det.
 
-**Tre saker i kapitlet som inte är svar på någon tentafråga** och därför inte är utskrivna här:
-Pastrys och Tapestrys fullständiga rutningsalgoritmer, tillämpningarna i §10.6 (Squirrel, OceanStore och
-Ivy), och SETI@home — det senare påpekar boken själv är ==ovanligt==, eftersom datorerna ==inte samordnar
-sig alls== och fördelningen sköts av en enda central server. Nämn dem gärna med namn som exempel, men lär
-dig dem inte.
+**Medvetet utanför noten**, eftersom ingen tentafråga rör det: Pastrys och Tapestrys fullständiga
+rutningsalgoritmer med 128-bitars GUID och *O(log N)*, DOLR, Gnutellas versioner och ultrapeers,
+tillämpningarna i §10.6 (Squirrel, OceanStore, Ivy) samt SETI@home.

@@ -6,9 +6,8 @@ description: "Svar på kursens fem tentafrågor om indirekt kommunikation: poän
 ---
 # HI1031 Tentafrågor och Svar - Kap 06 Indirekt kommunikation
 
-Noten täcker de fem tentafrågorna för kapitel 6 och ingenting annat. Varje fråga har först fakta ur
-boken och sist ett **Muntligt svar** med talpunkter i den ordning du ska säga dem. Där jag lagt till
-en egen förklaring står det **Så kan du tänka** — det är mina ord, inte bokens.
+Noten täcker de fem tentafrågorna för kapitel 6 och ingenting annat. Där jag lagt till en egen
+förklaring står det **Så kan du tänka** — det är mina ord, inte bokens.
 
 ## Fråga 1 – Poängen med indirekt kommunikation, och strategierna
 
@@ -233,8 +232,8 @@ Bokens avsnitt: §6.4, §6.4.1, §6.4.2 och §6.4.3.
 ==punkt-till-punkt-tjänst== med ==kön som indirektion==: sändaren lägger meddelandet i kön och det
 ==plockas bort av en enda process==.
 
-**Vad det används till.** Kallas också ==Message-Oriented Middleware==, och är en stor kommersiell klass
-— IBM WebSphere MQ, Microsofts MSMQ, Oracles Streams AQ. Huvudanvändningen är
+**Vad det används till.** Kallas också ==Message-Oriented Middleware==, och är en stor kommersiell klass.
+Huvudanvändningen är
 ==Enterprise Application Integration== (EAI), att integrera tillämpningar inom ett och samma företag,
 vilket möjliggörs av köernas ==inbyggda lösa koppling==. De används också mycket som grund för
 ==kommersiella transaktionssystem==, tack vare det inbyggda transaktionsstödet.
@@ -377,14 +376,12 @@ nedan är därför **min**, men varje enskild uppgift i den är bokens.
 
 **Inga luckor mot tentafrågorna.** Alla fem besvaras ur boken. Tabellen i fråga 5 är översatt ur
 PDF-versionen av figur 6.27, eftersom textversionen var stympad, och varje värde är dubbelkontrollerat mot
-löptexten i §6.6. Detaljerna om vilka figurer som var trasiga står i
-`.kiro/reports/hi1031-genomgang-2026-09-10.md` — de rör kontrollen av noten, inte plugget.
+löptexten i §6.6.
 
 **Fråga 5:s uppdelning är min.** Boken jämför de fem stilarna på sju axlar, men aldrig ur sändarens,
 mottagarens och implementatörens perspektiv. Bokens tabell står därför först, och omgrupperingen är
-märkt **Så kan du tänka**. Nästan varje uppgift i den kommer ur §6.2–§6.4; ett fåtal är mina egna
-slutsatser, som att kökonsumenter konkurrerar om samma kö och att bara kön har alla tre receive-lägen.
+märkt **Så kan du tänka**.
 
-**Det som inte är utskrivet här** frågas inte av någon tentafråga: §6.5 om distribuerat delat minne och
+**Medvetet utanför noten**, eftersom ingen tentafråga rör det: §6.5 om distribuerat delat minne och
 tuple spaces utöver att de namnges i fråga 1, kodexemplen med brandlarmet, process- mot objektgrupper,
 Electra och de andra CORBA-systemen, och de exakta algoritmerna.

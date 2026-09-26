@@ -35,10 +35,6 @@ abort:ar==. Låsen hindrar då andra transaktioner från att läsa eller skriva 
 commit:ar måste låsen dessutom hållas ==till alla objekt den uppdaterat har skrivits till permanent
 lagring==, för att det ska gå att återhämta sig.
 
-**Ett lås som släpps för tidigt gör låsningen meningslös.** Boken gör poängen med ett exempel: om T
-släppte låset på B ==mellan sina getBalance och setBalance==, kunde U:s getBalance på B ==flätas in
-mellan dem== — precis det som ger förlorade uppdateringar.
-
 **Två låstyper, inte en.** Ett enkelt exklusivt lås för både läsning och skrivning ==minskar
 samtidigheten mer än nödvändigt==, eftersom två läsningar inte krockar. Boken föredrar därför ==många
 läsare, en skrivare==: ett ==läslås== före varje läsning, ett ==skrivlås== före varje skrivning.
@@ -55,14 +51,9 @@ program==, eftersom en transaktion då kan pågå ==länge==. Många objekt blir
 hindrar andra klienter.
 
 **Väntegrafen (wait-for graph).** Noder är ==transaktioner==, bågar är ==väntar-på-relationer== — det
-går en båge från T till U när ==T väntar på att U ska släppa ett lås==. Beroendet mellan transaktioner
-är ==indirekt, via ett beroende på objekt==, men eftersom ==varje transaktion bara kan vänta på ett
-objekt== kan objekten utelämnas ur grafen.
-
-**Cykeln är deadlocken.** Finns en cykel T till U till … till V till T väntar varje transaktion på
-nästa. Alla är blockerade och ==inget av låsen kan någonsin släppas==. ==Abort:as en av transaktionerna
-i cykeln släpps dess lås och cykeln bryts.== En transaktion kan vara med i ==flera cykler samtidigt==,
-även om den bara väntar på ett objekt i taget — då bryter en enda abort flera cykler på en gång.
+går en båge från T till U när ==T väntar på att U ska släppa ett lås==. Finns en ==cykel== väntar varje
+transaktion på nästa, alla är blockerade och ==inget av låsen kan någonsin släppas==. ==Abort:as en av
+transaktionerna i cykeln släpps dess lås och cykeln bryts.==
 
 ### Tre saker man kan göra
 
@@ -79,11 +70,8 @@ minskad samtidighet==.
 **2. Upptäcka (deadlock detection).** Deadlocks ==kan== upptäckas genom att ==leta cykler i
 väntegrafen==. Har man hittat en måste ==en transaktion väljas ut för abort== för att bryta cykeln.
 Koden kan ligga ==i låshanteraren==, som måste hålla en bild av väntegrafen och ==kontrollera den för
-cykler med jämna mellanrum==. Bågarna läggs till och tas bort av låshanterarens `setLock` och `unLock`:
-en båge från T till U läggs till ==när låshanteraren blockerar T:s begäran== om ett objekt som redan är
-låst för U, och tas bort ==när U släpper det lås T väntade på==. Är låset delat kan ==flera bågar==
-läggas till samtidigt. Kontrollen kan göras ==varje gång en båge läggs till, eller mer sällan för att
-slippa onödig overhead==.
+cykler med jämna mellanrum== — antingen varje gång en båge läggs till, eller mer sällan för att slippa
+onödig overhead.
 
 **Att välja offer är inte trivialt.** Boken säger uttryckligen att ==valet av vilken transaktion som
 ska abort:as inte är enkelt==. Två faktorer ==kan== vägas in: ==transaktionens ålder== och ==hur många
@@ -102,18 +90,11 @@ tid kan bli straffade==. Dessutom är det ==svårt att bestämma en lämplig tim
 kontrasterar: med deadlockdetektering abort:as transaktioner ==för att en deadlock faktiskt har
 inträffat==, och då ==kan man välja== vilken som ska ryka.
 
-**En sak som minskar risken utan att vara ett botemedel.** Att låsa ==delar av strukturerade objekt== i
-stället för hela kan hjälpa — bokens exempel är en dag i en kalender som ==en mängd tidsluckor som kan
-låsas var för sig==. Finare granularitet ger färre krockar och därmed färre deadlocks.
-
 **Så kan du tänka.** De tre svaren skiljer sig i ==när== man betalar. Förebyggande betalar i förväg, med
 sämre samtidighet för alla, även när ingen deadlock skulle uppstått. Detektering betalar löpande, med
 overhead för att underhålla och söka i grafen, men abort:ar bara när det behövs. Timeout betalar i
 ==felaktiga abort:er==, för den gissar. Det är därför boken ställer just timeout mot detektering: båda
 löser problemet efteråt, men bara detektering vet att det finns ett problem.
-
-**Ett avslut värt att nämna.** Ligger objekten på ==flera olika servrar== uppstår ==distribuerade
-deadlocks==, där väntegrafen sträcker sig över flera platser. Det hör till kapitel 17.
 
 ### Muntligt svar
 
@@ -174,12 +155,8 @@ transaktioner som tidigare skrivit det objektet har commit:at eller abort:at==. 
 strikta körningen är det som ger den önskade egenskapen isolering==.
 
 **Det andra problemet, för tidiga skrivningar.** Det handlar om ==samspelet mellan skrivoperationer på
-samma objekt i olika transaktioner==. Vissa databassystem genomför abort genom att återställa
-==förebilder== (before images) av transaktionens skrivningar. Med A på 100 från början, T som sätter 105
-och U som sätter 110, blir 100 förebilden för T:s skrivning och 105 förebilden för U:s. Abort:ar U får
-man rätt svar 105. Men ==commit:ar U och T sedan abort:ar== blir svaret 100, medan det borde varit 110 —
-för T:s förebild var 100. Slutsatsen: ==skrivoperationer måste skjutas upp tills tidigare transaktioner
-som uppdaterat samma objekt har commit:at eller abort:at==.
+samma objekt i olika transaktioner==, och slutsatsen är densamma: ==skrivoperationer måste skjutas upp
+tills tidigare transaktioner som uppdaterat samma objekt har commit:at eller abort:at==.
 
 **Hur det byggs: tentativa versioner.** För att en servers uppdateringar ska kunna ==tas bort om en
 transaktion abort:ar== görs alla uppdateringar i ==tentativa versioner av objekten i flyktigt minne==.
@@ -208,7 +185,7 @@ skjuter upp, desto mer samtidighet betalar man — men desto mindre kan gå fel.
 ### Muntligt svar
 
 1. Ja. En dirty read är när en transaktion läser ett värde som en annan har skrivit men inte
-   commit:at än. Abort:ar skrivaren sedan har läsaren sett ett värde som aldrig existerat.
+   commit:at än. Om skrivaren abort:ar sen har läsaren sett ett värde som aldrig funnits.
 2. Det som gör det allvarligt är att det inte går att laga i efterhand. Har läsaren redan
    commit:at kan det inte ångras.
 3. Serialiserbarhet räcker inte som skydd. Boken visar att en dirty read uppstår även i en
@@ -268,9 +245,7 @@ kan commit:a ==när de tentativa versionerna har skrivits till permanent lagring
 
 Valideringen använder konfliktreglerna för läs och skriv för att säkra att transaktionen är
 serialiserbar mot alla ==överlappande== transaktioner, alltså de som ==ännu inte commit:at när den här
-transaktionen startade==. Varje transaktion får ett ==transaktionsnummer när den går in i
-valideringsfasen== — inte när den startar. Numren är ==heltal i stigande följd== och ==definierar
-transaktionens plats i tiden==. Abort:as den, eller är den en ren läsning, ==återlämnas numret==.
+transaktionen startade==.
 
 De tre reglerna, för en transaktion Tv som valideras mot en överlappande Ti:
 
@@ -284,16 +259,9 @@ uppstå ==ger det strikta körningar==. Faserna kan genomföras som en ==kritisk
 kodavsnitt som bara en transaktion i taget får köra.
 
 **Två former av validering.** ==Bakåtvalidering== jämför transaktionen med ==tidigare överlappande
-transaktioner==, alltså de som gick in i valideringsfasen före den: man kontrollerar om ==Tv:s läsmängd
-överlappar skrivmängderna== hos de tidigare. ==Framåtvalidering== jämför i stället ==Tv:s skrivmängd mot
-läsmängderna hos alla överlappande aktiva transaktioner==, de som fortfarande är i arbetsfasen.
-
-**Varför skillnaden spelar roll.** Vid bakåtvalidering har de andra ==redan commit:at==, så ==den enda
-utvägen är att abort:a den transaktion som valideras==. Vid framåtvalidering är de andra ==fortfarande
-aktiva==, så man ==har ett val==. Boken ger tre alternativ efter Härder: ==skjut upp valideringen== tills
-de konfliktande är klara (men ==ingen garanti att det går bättre sedan==), ==abort:a alla konfliktande
-aktiva== och commit:a den som valideras, eller ==abort:a den som valideras== — det ==enklaste==, med
-nackdelen att de framtida konfliktande kanske ändå skulle abort:a, så att man abort:ade i onödan.
+transaktioner==, som redan commit:at — då är ==enda utvägen att abort:a den som valideras==.
+==Framåtvalidering== jämför i stället mot de transaktioner som ==fortfarande är aktiva==, och då ==har man
+ett val==: skjuta upp valideringen, abort:a de konfliktande, eller abort:a den som valideras.
 
 ### Nackdelen
 
@@ -310,20 +278,10 @@ gång på gång==. Kung och Robinson ==föreslår== att servern upptäcker en tr
 gånger och då ger den ==exklusiv åtkomst==, alltså låter den köra ensam en stund så att den garanterat
 kommer igenom.
 
-### Att metoden vunnit utanför databaserna
-
-Boken skriver att mekanismerna i kapitlet ==inte alltid räcker== för tjugohundratalets tillämpningar där
-användare delar dokument över internet, och att ==många av dem använder optimistiska former av
-samtidighetskontroll följt av konfliktlösning== i stället för att abort:a någon av operationerna. I
-==Dropbox== accepteras ==första skrivningen och den andra avslås==, men versionshistoriken låter
-användaren slå samman manuellt. I ==Wikipedia== accepteras också den första, och den som skriver efter
-får en ==redigeringskonflikt== att lösa. Boken nämner även Google Docs och Amazons Dynamo.
-
 **Så kan du tänka.** Låsning betalar ==alltid==, i väntan och underhåll, för att aldrig behöva göra om
 något. Optimistisk kontroll betalar ==aldrig i förväg==, men riskerar att göra om allt. Vilken som är
 billigare avgörs helt av ==hur ofta konflikter faktiskt inträffar==, och bokens 1-på-n-räkning är
-argumentet för att det ofta är sällan. De moderna exemplen är samma logik: när användare redigerar olika
-delar av samma dokument är krockarna sällsynta nog att det lönar sig att städa upp i efterhand.
+argumentet för att det ofta är sällan.
 
 ### Muntligt svar
 
@@ -353,19 +311,8 @@ objektet senast lästs och skrivits av tidigare transaktioner==. En begäran att
 giltig ==bara om objektet senast skrivits av en tidigare transaktion==.
 
 **Vad servern håller reda på.** Varje objekt har ==en skrivtidsstämpel==, ==en mängd tentativa
-versioner== som var och en har sin egen skrivtidsstämpel, och ==en mängd lästidsstämplar== som kan
-representeras av ==sin största medlem==. Det commit:ade objektets skrivtidsstämpel är ==tidigare än
-alla dess tentativa versioners==. Accepteras en skrivning skapas ==en ny tentativ version med
-transaktionens tidsstämpel==. En läsning styrs till ==den version som har den största skrivtidsstämpeln
-som är mindre än transaktionens tidsstämpel==. Accepteras en läsning ==läggs transaktionens tidsstämpel
-till objektets lästidsstämplar==. Vid commit ==blir de tentativa versionernas värden objektens värden==.
-Tidsstämplarna kan komma ==från serverns klocka== eller vara en ==pseudotid== från en räknare som stegas
-varje gång en tidsstämpel delas ut.
-
-**De tre konfliktreglerna.** Med Tc som den aktuella transaktionen och Ti som en transaktion vars
-tidsstämpel är senare: Tc får inte ==skriva ett objekt som lästs av en senare Ti==; Tc får inte ==skriva
-ett objekt som skrivits av en senare Ti==; Tc får inte ==läsa ett objekt som skrivits av en senare Ti==.
-De två sista kräver att ==Tc är större än skrivtidsstämpeln på den commit:ade versionen==.
+versioner== med sina egna skrivtidsstämplar, och ==en mängd lästidsstämplar==. Vid commit ==blir de
+tentativa versionernas värden objektens värden==.
 
 **Skrivregeln, och vad "för sent" betyder.** Går skrivningen igenom utförs den på en tentativ version.
 Annars gäller att ==varje skrivning som kommer för sent abort:as== — för sent i den meningen att ==en
@@ -407,24 +354,15 @@ abort:ar transaktionen omedelbart, medan låsning låter transaktionen vänta �
 straff i form av abort för att undvika deadlock==. Med lås kan man alltså både vänta ==och== abort:as.
 
 **Flerversions-tidsstämpelordning tar det längre.** I den varianten hålls ==en lista av gamla commit:ade
-versioner== för varje objekt, alltså ==objektets värdehistoria==. Vinsten är att ==läsningar som kommer
-för sent inte behöver avslås== — de får läsa en gammal commit:ad version. ==Läsoperationer tillåts
-alltid==, även om de kan behöva ==vänta== på tidigare transaktioner, vilket gör körningarna
-återhämtningsbara. Eftersom varje transaktion skriver sin egen version finns ==ingen konflikt mellan
-skrivningar==, så ==regel 2 faller bort==. Boken sammanfattar: trots ==overheaden i lagringsutrymme==
-ger den ==avsevärd samtidighet, drabbas inte av deadlocks och tillåter alltid läsningar==.
+versioner== för varje objekt, så ==läsningar som kommer för sent inte behöver avslås== — de får läsa en
+gammal version. Boken sammanfattar: den ger ==avsevärd samtidighet, drabbas inte av deadlocks och
+tillåter alltid läsningar==.
 
 ### Vad som talar emot, för det ska med
 
-**Omstarter.** Boken skriver att metoden ==visserligen undviker deadlocks, men är ganska trolig att
-orsaka omstarter==. En förbättring är regeln ==ignorera föråldrad skrivning==: kommer en skrivning för
-sent ==kan den ignoreras i stället för att transaktionen abort:as==, eftersom dess effekt ändå skulle ha
-skrivits över. Men har någon annan ==läst== objektet faller transaktionen ändå, på lästidsstämpeln.
-
-**Praktiken går åt andra hållet.** Boken är tydlig: ==historiskt är låsning den dominerande metoden== för
-samtidighetskontroll i distribuerade system. CORBA:s Concurrency Control Service bygger ==helt på lås==,
-och erbjuder ==hierarkisk låsning== för blandad granularitet. Tidsstämpelordning har använts i
-databassystemet SDD-1.
+**Omstarter, och att praktiken går åt andra hållet.** Boken skriver att metoden ==visserligen undviker
+deadlocks, men är ganska trolig att orsaka omstarter==. Och den är tydlig med att ==historiskt är låsning
+den dominerande metoden== för samtidighetskontroll i distribuerade system.
 
 **Så kan du tänka.** Frågan har ett rakt svar och ett djupare. Det raka är arbetslasten: ==läser du mest,
 välj tidsstämplar; skriver du mest, välj lås.== Det djupare är att de två metoderna hanterar
@@ -457,13 +395,6 @@ en och en i någon ordning==. Att två körningar har ==samma effekt== betyder i
 ==läsoperationerna returnerar samma värden==, och ==objektens variabler har samma värden till slut==.
 Målet för en server är att ==maximera samtidigheten==, så transaktioner får köra samtidigt just när det
 ger samma effekt som en seriell körning.
-
-**De två problemen serialiserbarhet löser.** ==Förlorad uppdatering== (lost update): två transaktioner
-läser det gamla värdet och räknar fram det nya ur det, så den enas uppdatering skrivs över. Bokens
-exempel höjer ett saldo på 200 med 10 procent två gånger — rätt svar är 242, men samtidig körning ger
-==220==, eftersom ==båda läste det gamla värdet innan någon skrev det nya==. ==Inkonsistent hämtning==
-(inconsistent retrievals): en transaktion summerar alla konton medan en annan hunnit göra ==bara
-uttagsdelen av en överföring==, så summan blir fel.
 
 **Konfliktande operationer, som är själva verktyget.** Två operationer ==krockar om deras samlade effekt
 beror på i vilken ordning de utförs==. Bokens regler:
@@ -513,12 +444,6 @@ möjligheten till samtidighet==. Ingen av dem är gratis.
 transaktioner efter att konflikter upptäckts, eller genom en kombination av de två==. Låsning är
 väntandet, tidsstämplar och optimistisk kontroll är omstarterna.
 
-**En sak de har gemensamt som är lätt att missa.** Boken säger om ==varje== metod för sig att den ger
-strikta körningar — strikt 2PL genom att hålla låsen, tidsstämpelordning genom att läsregeln får vänta,
-optimistisk kontroll genom att bara läsa commit:ade versioner. ==Att slå ihop det till "alla tre skyddar
-mot dirty reads" är min gruppering, inte en mening boken skriver== — men de tre påståendena står där var
-för sig.
-
 ### Muntligt svar
 
 1. Alla tre försöker uppnå samma sak, serialiserbarhet, och alla tre kostar tid och plats och
@@ -563,16 +488,11 @@ och skriv i fråga 5 är hämtade ur PDF:en, eftersom den kolumnen var kapad. Ö
 kontrollerade och löptexten täcker dem; detaljerna står i
 `.kiro/reports/hi1031-genomgang-2026-09-10.md` och rör kontrollen av noten, inte plugget.
 
-**En sak boken gör som är värd att känna till.** Den tar ==medvetet inte upp konsistens== i sin egen lista
-över transaktioners egenskaper, med motiveringen att det ==i regel är programmerarnas ansvar== att
-transaktioner lämnar databasen konsistent — trots att C i ACID står för just consistency. ACID-minnesregeln
-kommer från Härder och Reuter (1983).
-
 **Om upplägget mellan fråga 3, 4 och 5.** De tre frågorna handlar om samma tre metoder, så materialet är
 medvetet fördelat i stället för upprepat: fråga 3 äger detaljerna om optimistisk kontroll, fråga 4 äger
 detaljerna om tidsstämpelordning och den direkta jämförelsen mot låsning, och fråga 5 äger ==den
-gemensamma grunden== (serialiserbarhet och konfliktreglerna) plus ==jämförelsen mellan alla tre==.
-Låsningens mekanism står under fråga 1, eftersom deadlocks är det den frågan handlar om. Läser du en
+gemensamma grunden== plus ==jämförelsen mellan alla tre==. Låsningens mekanism står under fråga 1,
+eftersom deadlocks är det den frågan handlar om, och dirty-read-skyddet under fråga 2. Läser du en
 fråga och saknar en mekanism finns den alltså under en annan.
 
 **Grundbegreppen står först under fråga 1.** Boken definierar transaktion, commit, abort och isolering i

@@ -105,8 +105,7 @@ heterogenitet och ge programmerarna en bekväm programmeringsmodell==.
 åstadkomma kommunikation och resursdelning för distribuerade tillämpningar.
 
 **Var det sitter.** Fyra lager, nedifrån och upp: ==hårdvara → operativsystem → middleware →
-tillämpningar och tjänster==. Hårdvara plus operativsystem kallas **plattform**, och boken ger fem
-exempel — bland dem Intel x86/Windows, Intel x86/Linux och ARM/Symbian.
+tillämpningar och tjänster==. Hårdvara plus operativsystem kallas **plattform**.
 
 **Vad det höjer nivån på**, i stället för råa meddelanden: **fjärranrop**, **gruppkommunikation**,
 **händelsenotifieringar**, **uppdelning, placering och hämtning** av delade dataobjekt,
@@ -253,6 +252,7 @@ dåligt. Allt annat i svaret är hämtat ur boken, men **sammanställningen till
 Wikipedia nämns som n-skikt, inte som treskikt. Och ==hur middleware tekniskt döljer heterogeniteten==
 (stubbar, marshalling) hör till kapitel 5, inte hit.
 
-**Det som inte är utskrivet här** frågas inte av någon tentafråga: fysiska modeller och de tre
-generationerna, de fundamentala modellerna, peer-to-peer som hör till kapitel 10, virtual network
-computing, mönstren *proxy*, *brokerage* och *reflection*, samt Ajax-kodexemplet.
+**Medvetet utanför noten**, eftersom ingen tentafråga rör det: fysiska modeller och de tre
+generationerna, de fundamentala modellerna, virtual network computing, mönstren *proxy*, *brokerage* och
+*reflection*, samt Ajax-kodexemplet. Peer-to-peer nämns här bara som middleware-kategori och som svaret
+på klient/servers svaghet — som egen arkitektur hör den till kapitel 10.

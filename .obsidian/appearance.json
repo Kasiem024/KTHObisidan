@@ -10,5 +10,7 @@
   "theme": "obsidian",
   "interfaceFontFamily": "Inter",
   "textFontFamily": "Inter",
-  "monospaceFontFamily": "JetBrains Mono"
+  "monospaceFontFamily": "JetBrains Mono",
+  "showRibbon": true,
+  "nativeMenus": false
 }

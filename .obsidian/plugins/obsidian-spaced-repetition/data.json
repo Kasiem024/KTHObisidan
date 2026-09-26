@@ -51,7 +51,7 @@
     "showContextInCards": true,
     "showIntervalInReviewButtons": true,
     "flashcardHeightPercentage": 74.90310077519379,
-    "flashcardWidthPercentage": 85.26041666666667,
+    "flashcardWidthPercentage": 85.3125,
     "flashcardHeightPercentageMobile": 100,
     "flashcardWidthPercentageMobile": 100,
     "flashcardAgainText": "Again",
@@ -82,7 +82,7 @@
     "preferredDateFormatForNoteReviewQueue": "MMM DD YYYY",
     "preferredLocale": "-"
   },
-  "buryDate": "2026-09-14",
+  "buryDate": "2026-09-26",
   "buryList": [],
   "historyDeck": null,
   "scheduleData": {

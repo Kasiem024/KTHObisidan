@@ -154,5 +154,7 @@
     "downscalePercent": 50
   },
   "showUnsupportedFiles": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "readableLineLength": true,
+  "showInlineTitle": true
 }
