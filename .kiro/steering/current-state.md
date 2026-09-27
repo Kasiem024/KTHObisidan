@@ -5,50 +5,54 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: one task in flight — making the vault usable on the phone. The HI1031 exam-prep rewrite is
-finished, and both repositories are committed and pushed with every check green.**
+**Status: one task in flight — making the vault usable on the phone. HI1031's ten flashcard decks were
+narrowed to the exam questions on 2026-09-26 and every check is green; that work is finished and
+recorded as F80.**
 
 **The re-entry prompt is `.kiro/reentry.md`.** It is course-neutral and is the file to be pointed at
-after a compact. `.kiro/hi1031-tenta-reentry.md` is now the archive of the finished HI1031 project,
+after a compact. `.kiro/hi1031-tenta-reentry.md` is the archive of the earlier HI1031 writing project,
 not a live state file.
 
-## Done: HI1031 exam-prep rewrite (2026-09-08 to 2026-09-10, committed 2026-09-14)
+## Done: HI1031 deck narrowing (2026-09-26, F80)
 
-All ten chapters — 1, 2, 4, 5, 6, 9, 10, 11, 16 and 17 — have an exam-answer note plus a rebuilt
-flashcard deck, in everyday Swedish at 40–60 cards per deck. Each was reviewed by five adversarial
-reviewers and verified. Chapters 16 and 17 were written from scratch. The review pass over all ten is
-recorded in `.kiro/reports/hi1031-genomgang-2026-09-10.md`; the calibration knowledge, book line
-offsets and confirmed errata are in `.kiro/hi1031-tenta-reentry.md`. The oral exam is **21–23
-September 2026**. **Do not write more chapters.**
+All ten chapter decks — 1, 2, 4, 5, 6, 9, 10, 11, 16 and 17 — were cut from **401 cards to 219**, with
+every remaining card traceable to a named exam question. 69 markers were removed with the 69 cards that
+carried them, and hidden multi-fact prose cards went from 98 to 0. `nosr` was not touched on any deck.
 
-The two `listStyleTags` and `nosr` questions this file previously flagged for the author's decision
-are **resolved**. All twelve affected notes were written back to inline tag form, keeping every tag
-including `nosr`, and `Vault-Audit.ps1` now reports clean. `Format-FrontmatterTags.ps1` exists so the
-repair does not have to be re-derived when it recurs.
+**Read `product.md` before writing any more cards:** the 40–60 target is superseded. The rule is now "as
+few as possible, as concentrated on the exam questions as possible", and 40 is not a floor.
 
-**One question still open, and it is a small one.** An inspection of `HI1031 .../Begrepp/` found 14
-concept notes covering the course's early material, with nothing at all for chapters 9 or 11, all
-tagged `nosr` so they are never drilled. The recommendation was to leave the folder as reference and
-add one line recording what it is, rather than expanding it to match the exam — expanding it would
-duplicate verified material for no review benefit. The author has not replied.
+`Test-DeckHygiene.ps1` now checks the countable half of `write-flashcards` mechanically. Run it with
+`-SelfTest` before trusting a zero from it.
+
+**Two things left for the author to decide, neither blocking:**
+
+1. **Chapter 9's exam question 2 asks about hypermedia, and the 2012 book does not cover it.** The cards
+   that previously answered it came from restfulapi.net. They were removed and nothing was invented in
+   their place. Closing that gap means accepting a non-book source, which is his call.
+2. **HI1032's twelve chapter decks have 65 form findings** — 36 highlights inside list bodies, 21 missing
+   `(N)` cues, 5 lists longer than four rows, 3 wrong highlight counts. Run
+   `Test-DeckHygiene.ps1` with no `-Course` to see them. Those decks predate these conventions and were
+   out of scope; HI1031's ten are clean.
+
+**The exam has been moved.** The date in the earlier archive — 21–23 September 2026 — is past and wrong.
+The author confirmed the move on 2026-09-26 but did not give a new date, so do not quote one.
 
 ## Nothing else partially finished
 
-No other partially-finished task, and **the working tree is clean** as of 2026-09-14 11:45. `main`
-and `origin/main` are both `80c9cc8`; the site repo's `v5` and `origin/v5` are both `7de1cbd`. Run
-`git status` rather than trusting that — a second agent has edited this tree before, and the figure
-here has aged wrong twice.
+`main` and `origin/main` were both `e545c4a` after the restore-point commit taken before the deck work;
+the deck rework and its documentation are committed after it. **Run `git status` rather than trusting
+that** — a second agent has edited this tree before, and the figure here has aged wrong twice.
 
 One file is left untracked deliberately:
 `.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`, a Drive sync
 conflict artefact. It should be deleted, but that is the author's call.
 
-**The exposure this section used to name is closed.** It said `.kiro/skills/query-notebooklm/` and
-`.kiro/research/` had no version history and were "the single largest exposure in the repo right
-now". Both are committed: 5 tracked files and 7 tracked files respectively. What they contain is
-still worth knowing — six tested prompt levers and an eleven-check list for distrusting an answer in
-the skill, and five verbatim Deep Research reports plus a distillation in `research/`, where the
-reports carry three known fabrications and the distillation is the only place that says which.
+**`core.quotepath` is set to `false` in this repository's local git config**, deliberately, because
+`traps.md` T2 recommends it for reading repository facts and nearly every path here contains `å ä ö`.
+It was set on 2026-09-26 and recorded here so it is not mistaken for drift. Note that it is **only half
+the fix** — PowerShell still decodes git's stdout using the console code page, so `[Console]::OutputEncoding`
+has to be set to UTF-8 as well. That half cost three false measurements in one session; see T2.
 
 Settled 2026-09-06: the author's goal — pass the exam, not cover the book — and the deck
 self-containment policy are recorded in `product.md` and `llms.txt`, with the authoring consequence in
@@ -96,9 +100,10 @@ created. The `.gitignore` entry for it stays: it costs nothing and the reasoning
 2. `.git` (445.9 MB) is excluded but still present on the phone; deleting it there reclaims the space.
 3. **The round trip is unverified.** `Get-SRIntegrity.ps1 -Save` was taken 2026-09-08 21:02 —
    **1 429 marker placements across 311 files, 2 277 cards in the active deck, 130 excluded by
-   `nosr`**. After the next review on the phone, run `-Compare`: markers arriving with no change to
-   card or separator counts proves review data still flows back. Until that is done, nothing has
-   confirmed the phone can write.
+   `nosr`**. Those figures are now superseded by the deck narrowing; re-take a baseline before using
+   `-Compare` for this. After the next review on the phone, markers arriving with no change to card or
+   separator counts proves review data still flows back. Until that is done, nothing has confirmed the
+   phone can write.
 
 **The trap, before setting up the phone.** A fresh SR install uses defaults and this vault's settings
 are not default. Copy `.obsidian/plugins/obsidian-spaced-repetition/data.json` to the same path under

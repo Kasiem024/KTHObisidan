@@ -18,7 +18,7 @@ vault-commit själv, så ingen extra åtgärd behövs.
 | --- | --- |
 | `llms.txt` | Ingång för AI-verktyg: struktur, taggar, kurskatalog och hur Obsidian-syntaxen ska tolkas |
 | `Meta/Vault Standard.md` | Reglerna: taggar, frontmatter, mappstruktur, namngivning, notstruktur |
-| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F79) |
+| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F80) |
 | `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1` | Kontrollerar hela vaultet mot standarden |
 | `.markdownlint.json` | Vilka markdown-regler som gäller (`.markdownlint-cli2.jsonc` styr vilka filer) |
 | `Meta/Obsidian Plugins/Templates/` | Mallar som följer standarden automatiskt |
@@ -64,12 +64,15 @@ CI kör det automatiskt vid varje push.
 
 ## Övriga kontrollskript
 
-Utöver auditen finns fyra läsande skript i `Meta/Obsidian Plugins/Scripts/`. De ändrar
-ingenting, och `.kiro/steering/scripts.md` beskriver när man ska nå efter vilket:
+Utöver auditen finns ett dussin läsande skript i `Meta/Obsidian Plugins/Scripts/`, plus två som
+skriver bakom en explicit flagga. `.kiro/steering/scripts.md` har hela listan och beskriver när man
+ska nå efter vilket — den filen är källan, så den här tabellen nämner bara de vanligaste:
 
 | Skript | Svarar på |
 | --- | --- |
-| `Get-ObsidianExcludes.ps1` | Vad matchar Obsidians "Excluded files" egentligen? Flaggar filter som matchar noll filer |
-| `Get-TagInventory.ps1` | Vilka taggar tror Obsidian finns, och vilken fil lade dit dem? |
 | `Get-SRIntegrity.ps1` | Ändrade en massredigering någon flashcard-markör? `-Save` före, `-Compare` efter |
+| `Test-DeckHygiene.ps1` | Har varje flashcard en frågerad, ett svar och exakt ett inlärningsmål? Kör `-SelfTest` innan du litar på en nolla |
+| `Get-DeckPairCensus.ps1` | Hur många kort av varje slag har ett kapitels deck, och är någon av filerna tyst skadad? |
 | `Get-NoteStructureCensus.ps1` | Hur många begreppsnoter har faktiskt varje avsnitt? Äger siffrorna som standarden citerar |
+| `Get-TagInventory.ps1` | Vilka taggar tror Obsidian finns, och vilken fil lade dit dem? |
+| `Get-ObsidianExcludes.ps1` | Vad matchar Obsidians "Excluded files" egentligen? Flaggar filter som matchar noll filer |

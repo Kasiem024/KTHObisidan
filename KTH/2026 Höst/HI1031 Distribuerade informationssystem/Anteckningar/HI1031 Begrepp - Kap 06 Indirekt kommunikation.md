@@ -8,147 +8,101 @@ description: "Flashcards HI1031 kap 6, ordnade efter kursens fem tentafrågor: p
 
 ## Fråga 1 – Poängen med indirekt kommunikation, och strategierna
 
-**Indirekt kommunikation**;;Kommunikation mellan entiteter ==genom en mellanhand==, utan direkt koppling mellan sändaren och mottagaren.
+**Indirekt kommunikation**;;Kommunikation mellan två parter ==via en mellanhand==, utan direkt koppling mellan sändaren och mottagaren.
 
-Vad gör direkt koppling till ett problem?::Systemet blir ==stelt inför förändring== – svårt att byta ut servern, och fallerar den drabbas klienten direkt och måste hantera felet själv.
+Vad är problemet med direkt koppling mellan sändare och mottagare?::Systemet blir ==stelt==. Servern är svår att byta ut, och kraschar den måste klienten själv märka det och laga felet.
 
-**Rumslig frikoppling**;;Sändaren ==vet inte och behöver inte veta== vilka mottagarna är, och omvänt.
+**Rumslig frikoppling**;;Sändaren ==vet inte vilka mottagarna är==, och behöver inte veta det – och tvärtom.
 
-**Tidsmässig frikoppling**;;Sändare och mottagare kan ha ==oberoende livstider== – de behöver inte finnas samtidigt för att kommunicera.
+**Tidsmässig frikoppling**;;Sändare och mottagare ==behöver inte finnas samtidigt== – de kan ha oberoende livslängder.
 
-Vad krävs för att få tidsmässig frikoppling?::==Persistens== – mellanhanden måste lagra meddelandet så att det kan levereras när mottagaren är redo.
+Vad är nackdelarna med indirekt kommunikation? (2)
+||
+- **Kostar prestanda** – den extra mellanhanden gör det långsammare
+- **Svårare att förvalta** – ingen direkt koppling att följa när man felsöker
 
-Varför är IP-multicast rumsligt frikopplat men inte tidsmässigt?::Meddelandet riktas mot gruppen, men ==alla mottagare måste finnas när det skickas==, eftersom IP-multicast inte lagrar något.
-
-Vad är nackdelen med indirekt kommunikation?::En ==oundviklig prestandakostnad== för indirektionen, och systemen blir svårare att förvalta eftersom det inte finns någon direkt koppling att följa.
-
-Vilka fem strategier för indirekt kommunikation tar boken upp? (5)
+Vilka tre strategier för indirekt kommunikation tar kursen upp? (3)
 ||
 - Gruppkommunikation
 - Publish-subscribe
-- Message queues
-- Distribuerat delat minne (DSM)
-- Tuple spaces
-
-Vilken grundläggande skillnad finns mellan de fem strategierna?::De tre första ==skickar meddelanden==. DSM och tuple spaces ger i stället en ==gemensam datayta man läser och skriver i==.
+- Message queues (meddelandeköer)
 
 ## Fråga 2 – Gruppkommunikation och hur det kan implementeras
 
-**Gruppkommunikation**;;Ett meddelande skickas ==till en grupp== och levereras till ==alla medlemmar==, utan att sändaren känner deras identiteter.
+**Gruppkommunikation**;;Ett meddelande skickas till en grupp och ==levereras till alla medlemmar==, utan att sändaren vet vilka de är.
 
-Vad lägger gruppkommunikation till ovanpå ren multicast?::==Hantering av gruppmedlemskap, feldetektering, samt garantier om tillförlitlighet och ordning.==
-
-Vilken liknelse använder boken om gruppkommunikation och IP-multicast?::Gruppkommunikation är till IP-multicast ==vad TCP är till IP:s punkt-till-punkt-tjänst==.
-
-Varför ett enda multicast-anrop i stället för många separata send?::Framför allt för ==garantierna==: med många send kan sändaren krascha halvvägs så att bara några får meddelandet, och ordningen mellan två meddelanden blir odefinierad.
-
-Vilka tre egenskaper bygger tillförlitlig multicast på? (3)
+Vad lägger gruppkommunikation till ovanpå enkel IP-multicast? (3)
 ||
-- **Integritet** – meddelandet som tas emot är detsamma som skickades, och levereras högst en gång
-- **Giltighet** – ett skickat meddelande levereras så småningom
-- **Överenskommelse** – levereras det till en process i gruppen levereras det till alla
+- **Tillförlitlighet** – garantier att medlemmarna får meddelandet
+- **Ordning** – meddelanden levereras i en bestämd ordning
+- **Medlemshantering** – håller reda på vilka som är med och upptäcker krascher
 
-Vad ger **FIFO-ordning**?::Skickar en process ett meddelande före ett annat ==levereras de i den ordningen hos alla== i gruppen. Kallas också källordning.
-
-Vad ger **kausal ordning**?::Händer ett meddelande före ett annat i systemet ==bevaras det sambandet== när meddelandena levereras hos alla processer.
-
-Vad ger **total ordning**?::Levereras ett meddelande före ett annat ==hos en process== gäller ==samma ordning hos alla== processer.
-
-Vilka fyra uppgifter har en gruppmedlemskapstjänst? (4)
+Vad menar man med tillförlitlig (reliable) multicast? (3)
 ||
-- Ge ett gränssnitt för medlemskapsändringar
-- Feldetektering – både krasch och oåtkomlighet
-- Notifiera medlemmarna om ändringar
-- Gruppadressexpansion – utöka gruppidentifieraren till aktuellt medlemskap
+- **Integritet** – meddelandet kommer fram oförändrat och bara en gång
+- **Giltighet** – ett skickat meddelande kommer fram till slut
+- **Överenskommelse** – får en i gruppen meddelandet, får alla det
 
-Vilka tre delar består JGroups av? (3)
+Vilka tre sorters ordning kan gruppkommunikation garantera? (3)
 ||
-- **Channels** – det primitiva gränssnittet: connect, disconnect, send, receive
-- **Building blocks** – högre abstraktioner, t.ex. `MessageDispatcher` som väntar in n svar
-- **Protokollstacken** – ihopsättbara lager, och alla i gruppen måste ha samma stack
+- **FIFO** – skickar en process A före B, så får alla dem i den ordningen
+- **Kausal** – hänger ett meddelande ihop med ett tidigare, så bevaras den ordningen
+- **Total** – alla processer får meddelandena i exakt samma ordning
+
+Vilka tre delar består verktyget JGroups av? (3)
+||
+- **Channels** – det enklaste gränssnittet: gå med, lämna, skicka, ta emot
+- **Building blocks** – färdiga byggblock på högre nivå
+- **Protokollstacken** – ihopsättbara lager, och alla i gruppen måste ha samma
 
 ## Fråga 3 – Publish-subscribe och hur det kan implementeras
 
-**Publish-subscribe**;;Publishers publicerar strukturerade ==händelser==, subscribers anmäler intresse med ==subscriptions==, och systemet matchar och levererar ==notifieringar==.
+Hur fungerar publish-subscribe?::Utgivare (publishers) skickar ut händelser, prenumeranter (subscribers) anmäler vad de vill ha, och systemet ==matchar och levererar bara det som passar==.
 
-Vilka två huvudegenskaper har publish-subscribe?::==Heterogenitet== – komponenter som inte byggts för att samverka kan fungera ihop – och ==asynkronitet==, så publishern inte behöver synkronisera med subscribern.
-
-Vilka fyra operationer har programmeringsmodellen? (4)
+Vilka fyra sätt kan man uttrycka en prenumeration på? (4)
 ||
-- `publish(e)` – sprid en händelse
-- `subscribe(f)` – anmäl intresse, där `f` är ett filter
-- `unsubscribe(f)` – återkalla intresset
-- `notify(e)` – så levereras händelser till subscribern
+- **Kanalbaserad** – prenumerera på en namngiven kanal
+- **Topic-baserad** – ett fält i meddelandet anger ämnet (topic)
+- **Innehållsbaserad** – villkor på värdena i händelsen
+- **Typbaserad** – matchar på händelsens typ
 
-Vad är ett **advertisement** i publish-subscribe?::Publishern ==deklarerar i förväg vilka slags händelser den kommer att generera==.
-
-Vilka fyra subskriptionsmodeller finns, i ökande uttryckskraft? (4)
+Var kan man placera händelsemäklaren i publish-subscribe? (3)
 ||
-- **Kanalbaserad** – publicera till namngivna kanaler
-- **Topic-baserad** – ett fält i notifieringen anger topic
-- **Innehållsbaserad** – villkor över värdena i händelsens attribut
-- **Typbaserad** – matchning på händelsens typ eller subtyp
-
-Vilka tre sätt kan man placera mäklaren på? (3)
-||
-- **Centraliserat** – en nod med en händelsemäklare
-- **Nätverk av mäklare** – flera som samarbetar
+- **Centralt** – en enda nod är mäklare
+- **Nät av mäklare** – flera mäklare samarbetar
 - **Peer-to-peer** – alla noder är mäklare
 
-Vad är problemet med en enda central händelsemäklare?::Den är en ==möjlig enda felpunkt== och en ==prestandaflaskhals==, så designen saknar motståndskraft och skalbarhet.
-
-Vilka fem strategier för content-based routing tar boken upp? (5)
+Varför räcker det inte med en enda central mäklare? (2)
 ||
-- **Flooding** – skicka till alla och matcha hos mottagaren
-- **Filtering** – vidarebefordra bara där en subscriber finns
-- **Advertisements** – sprid publisherns förhandsbesked framåt
-- **Rendezvous** – dela händelserymden mellan ansvariga noder, kan mappas på en DHT
-- **Informed gossip** – utbyt händelser slumpvis med grannarna, med hänsyn till innehåll
+- **Enda felpunkt** – går den ner slutar allt fungera
+- **Flaskhals** – all trafik måste passera en nod
 
 ## Fråga 4 – Message queuing och hur det implementeras bra
 
-**Message queue**;;En ==punkt-till-punkt-tjänst== där sändaren lägger meddelandet i en kö och det plockas bort av ==en enda process==.
+**Message queue** (meddelandekö);;En punkt-till-punkt-tjänst där sändaren lägger meddelandet i en kö och ==en enda process plockar bort det==.
 
-Vad kallas message queues också?::==Message-Oriented Middleware.==
+Vad är den avgörande egenskapen hos message queues?::Att meddelandena är ==persistenta== – kön lagrar dem tills någon hämtar dem.
 
-Vad används message queues mest till?::==Enterprise Application Integration== (EAI) – att integrera tillämpningar inom ett företag – och som grund för ==kommersiella transaktionssystem==.
+Vad innebär persistensen för leveransen?::Meddelandet ==levereras garanterat till slut==, men man vet inte när.
 
-Vilka tre sorters receive stöds normalt? (3)
-||
-- **Blockerande** – väntar tills ett lämpligt meddelande finns
-- **Icke-blockerande** – en pollning som returnerar ett meddelande eller ett besked om att inget finns
-- **Notify** – ger en händelsenotifiering när ett meddelande dyker upp
-
-Vad är den avgörande egenskapen hos message queues?::Meddelanden är ==persistenta== – kön lagrar dem tills de konsumeras och skriver dem till disk.
-
-Vad garanterar persistensen, och vad garanterar den inte?::Den ger ==giltighet och integritet==, men systemet kan ==inte säga något om när== leveransen sker.
-
-Vilken ordning har kön normalt, och vad stöds oftast dessutom?::Normalt ==FIFO==, men de flesta implementationer stöder också ==prioritet==, så högre prioritet levereras först.
-
-Vad är problemet med en central köhanterare?::Den kan bli en ==tungviktig komponent==, en ==flaskhals== och en ==enda felpunkt==.
-
-Vad är en **message channel** i WebSphere MQ?::En ==enkelriktad förbindelse mellan två köhanterare== som vidarebefordrar meddelanden ==asynkront== från en kö till en annan.
-
-Hur fungerar topologin **hub-and-spoke**?::En köhanterare utses till ==hub== och har tjänsterna. Klienterna kopplar mot ==spokes== nära sig, som vidarebefordrar meddelandena till hubbens kö.
-
-Varför är hub-and-spoke bra för latensen?::Klienten pratar ==RPC med en lokal spoke== och blockeras ==bara tills meddelandet ligger där==. Resten av vägen är asynkron men garanterat tillförlitlig.
+Hur implementerar man message queues på ett bra sätt?::Man sprider ut köhanterarna, t.ex. hub-and-spoke: klienten kopplar mot en ==lokal spoke== och väntar tills meddelandet ligger där. Sedan går det vidare till hubben.
 
 ## Fråga 5 – Jämför gruppkommunikation, publish-subscribe och message queuing
 
-Vilken av de tre är säkert tidsmässigt frikopplad, och varför?::==Message queues==, eftersom bara de garanterar persistens. För de andra två står ==möjligt== i figur 6.27 och beror på implementationen.
-
-Vilken av de tre har begränsad skalbarhet, och varför?::==Gruppkommunikation==, eftersom gruppmedlemskapet måste underhållas. Boken tillägger att algoritmerna för tillförlitlighet och särskilt ordning också drar ner skalbarheten.
-
-Var finns associativ adressering enligt figur 6.27?::Bara i ==innehållsbaserad publish-subscribe==. Gruppkommunikation och message queues har det inte.
-
-Vad anger figur 6.27 som huvudsyfte för de tre? (3)
+Hur skiljer sig sändaren mellan de tre metoderna? (3)
 ||
-- **Grupper** – tillförlitlig distribuerad beräkning
-- **Publish-subscribe** – informationsspridning eller EAI; mobila och ubikvitära system
-- **Message queues** – informationsspridning eller EAI; kommersiell transaktionsbehandling
+- **Grupp** – skickar till alla i gruppen, utan att veta vilka de är
+- **Publish-subscribe** – skickar ut händelser, utan att veta om någon lyssnar
+- **Message queue** – lägger meddelandet i en kö; exakt en mottagare tar det
 
-Vad skiljer de tre ur **sändarens** perspektiv? (egen slutsats)::Gruppen ==multicastar blint==, publishern ==vet inte om någon lyssnar==, och köproducenten vet att ==exakt en konsument== tar meddelandet och kan lägga sändningen i en transaktion.
+Hur skiljer sig mottagaren mellan de tre metoderna? (3)
+||
+- **Grupp** – får allt som skickas till gruppen, utan filter
+- **Publish-subscribe** – väljer själv vad man vill ha med ett filter
+- **Message queue** – konkurrerar med andra om kön, men kan hämta långt efteråt
 
-Vad skiljer de tre ur **mottagarens** perspektiv? (egen slutsats)::Gruppmedlemmen får ==allt utan filtrering==, subscribern ==väljer själv med ett filter==, och kökonsumenten ==konkurrerar med andra== om samma kö men kan hämta långt efteråt.
-
-Vad skiljer de tre ur **implementatörens** perspektiv? (egen slutsats)::Gruppkommunikation kämpar med ==medlemskap och ordning==, publish-subscribe med ==matchning och routing==, och message queuing med ==persistens och topologi==.
+Vad är svårast att bygga i de tre metoderna? (3)
+||
+- **Grupp** – medlemshantering och ordning
+- **Publish-subscribe** – matchning och routing av händelser
+- **Message queue** – persistens och att välja rätt topologi

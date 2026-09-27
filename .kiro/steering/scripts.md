@@ -14,8 +14,9 @@ were both correct counts of different things (F58). A script is a measurement wh
 All of them live in `Meta/Obsidian Plugins/Scripts/`, find the vault root themselves, and take
 `-Root <path>` to run against a different vault. Two of the four `Test-*` scripts are **harnesses**:
 `Test-VaultAudit.ps1` and `Test-SRIntegrity.ps1` build their own throwaway vault under `%TEMP%`, never
-open this one, and therefore ignore `-Root`. The other two, `Test-DocHygiene.ps1` and
-`Test-ScriptHygiene.ps1`, read the real repository like the `Get-*` scripts do.
+open this one, and therefore ignore `-Root`. The other three, `Test-DocHygiene.ps1`,
+`Test-ScriptHygiene.ps1` and `Test-DeckHygiene.ps1`, read the real repository like the `Get-*` scripts
+do — and `Test-DeckHygiene.ps1` carries its own harness behind `-SelfTest` rather than in a second file.
 
 | Script | Answers | Exit code |
 |---|---|---|
@@ -28,6 +29,7 @@ open this one, and therefore ignore `-Root`. The other two, `Test-DocHygiene.ps1
 | `Test-SRIntegrity.ps1` | Does `Get-SRIntegrity.ps1` still fire on every defect it claims? | 0 all pass / 1 |
 | `Get-NoteStructureCensus.ps1` | How many concept notes actually have each section? | always 0 |
 | `Get-DeckPairCensus.ps1` | For one course chapter: how many cards of each kind are in the deck, how long is the note, and is either file silently damaged? | 0 measured / 1 file not resolvable |
+| `Test-DeckHygiene.ps1` | Does every flashcard still have a front line, a body, and exactly one recall target? | 0 clean / 1 findings / 2 empty scope |
 | `Test-DocHygiene.ps1` | Is the Markdown that nothing else checks still intact? | 0 clean / 1 findings |
 | `Test-ScriptHygiene.ps1` | Does this folder still follow the rules below? | 0 clean / 1 findings |
 | `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **One of the two scripts here that write.** | 0 clean / 1 refused |
@@ -130,6 +132,30 @@ stale the moment it landed.
   `-First 1`, because a chapter filter without the course code matches a second course and once reported
   10 cards for a deck holding 62 (**T19**). Read the two filenames it echoes — they are the proof you
   measured what you meant to. It never judges; a 90-card deck exits 0.
+- **After editing any flashcard, and after any sweep that touched a deck** → `Test-DeckHygiene.ps1`.
+  It is the only thing that looks at a card's **shape**, and the three tools that read these files all
+  miss it: the audit checks conventions and calls a note with a broken card clean, the linter checks
+  syntax and an orphaned `||` on its own line is valid Markdown, and `Get-DeckPairCensus.ps1` counts
+  cards — which is exactly the measurement that cannot see this, because a counter looks for lines that
+  *are* `||`, so an orphaned separator still counts as one card. Delete one card and add one and the
+  total is unchanged while the deck holds a question with no answer (**T20**). Eight checks, each naming
+  the file, line and text: orphaned separator, a list with fewer than 2 or more than 4 rows, a
+  `==highlight==` inside a list body, a missing `(N)` cue, a marker not sitting under a complete card,
+  an answer without exactly one highlight, and an unclosed `==`. `emptyHeading` and the count of `;;`
+  cards are **notes** and never change the exit code, because both are sometimes deliberate.
+  Default scope is the chapter decks; `-Course HI1031` narrows, `-All` widens to every note holding a
+  card and is a **survey, not a gate** — several hundred legacy cards predate these rules. A scope that
+  resolves to nothing exits **2**, not 0, because a mistyped `-Course` returning "clean" is the worst
+  possible answer. Frontmatter and fenced code blocks are skipped: without that, a `cpp` block
+  containing `std::cout` parsed as three cards with wrong highlight counts.
+  **Run `-SelfTest` when you start trusting it**: it plants one instance of every defect plus six
+  negative controls — a correct card, a code fence, a `(8)` cue at the end of a front line, a
+  mid-sentence `(8)` that must *not* exempt a long list, and the same fixture in CRLF and with a BOM —
+  and requires every check to fire and every control to stay silent. That switch earned itself twice:
+  the first run revealed that `missingCue` never fired, because the only card without a cue in the
+  fixture was the orphaned one, whose front line is empty and therefore skipped; an adversarial review
+  then found that code fences were parsed as cards and that `(8)` anywhere in a prompt exempted a list
+  of any length. A zero from a blind check is not a pass.
 
 ## Figures these scripts own
 
@@ -146,6 +172,7 @@ Run the script.
 | distinct inline tags, junk vs real | `Get-TagInventory.ps1` |
 | `<!--SR:` markers, cards per deck, notes tagged `nosr` | `Get-SRIntegrity.ps1` |
 | cards per separator and note length for one course chapter | `Get-DeckPairCensus.ps1` |
+| card form defects — orphaned separators, list length, highlight count, stray markers | `Test-DeckHygiene.ps1` |
 
 **The spaced-repetition rows are a dated reading, not an invariant.** Every review adds markers and
 every authoring session adds cards, so a mismatch there is not a defect — re-run the script. The

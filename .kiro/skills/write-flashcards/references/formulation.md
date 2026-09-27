@@ -96,12 +96,70 @@ Observed in this vault on 2026-09-05, in
 eight-item list cards (`huvudutmaningarna (8)`, `former av transparens (8)`), plus `Öppenhet`
 (both directions) and `Replikeringstransparens` (one direction).
 
-How that was read, so it can be re-derived: a card in relearning has a `due` timestamp minutes
-after its `lastReview` timestamp inside `<!--SR:!fsrs,…-->`, instead of the next day. The field
-positions are inferred from the data, not from plugin documentation, so re-check the pattern
-rather than trusting the field order. **This is weak evidence** — those cards were days old and
-each had one or two reviews. It is consistent with the anti-enumeration heuristic, not proof of
-it.
+**The marker's field order is no longer inferred.** It was read out of the plugin's own source on
+2026-09-26 — the serialisation in `.obsidian/plugins/obsidian-spaced-repetition/main.js`
+(`RepItemScheduleInfoFsrs.formatScheduleAsSRHtmlComment`) emits, after `!fsrs,`:
+
+| Field | Meaning |
+|---|---|
+| 0 | `due`, ISO timestamp, UTC |
+| 1 | `interval`, set from `scheduled_days` |
+| 2 | `stability`, in days |
+| 3 | `difficulty`, clamped to **1–10, higher is harder** |
+| 4 | `state` — `0` New, `1` Learning, `2` Review, `3` Relearning |
+| 5 | `reps` — **every** showing, not only the successful ones |
+| 6 | `lapses` |
+| 7 | `learning_steps` |
+| 8 | `last_review`, ISO timestamp, UTC |
+
+A card being re-shown in the same session has a `due` minutes after `last_review` and a `state` of 1
+or 3. The old note here said field 7 was unknown; it is the FSRS learning-step index.
+
+**The anti-enumeration claim is no longer weak evidence.** The 2026-09-05 reading above rested on four
+days-old cards and was labelled as such. On 2026-09-26 the same question was asked of every deck that
+had review data, comparing card forms **within** each deck so that deck age could not explain the
+result:
+
+| Deck | 3+ list rows | single fact |
+|---|---|---|
+| HI1031 kap 11 | 9.7 | 6.8 |
+| HI1031 kap 16 | 8.4 | 3.5 |
+| HI1031 kap 01 | 9.8 | 8.6 |
+| HI1032 lab 1 | 9.9 | 8.6 |
+
+**Four decks of four, same direction**, and five-row lists scored worst of all (9.88 in chapter 1,
+against 9.02 for single-fact cards in the same deck). HI1031 chapter 2 points the same way — its list
+cards scored 9.92 against 8.81 for prose — but on a list group of **n = 2**, which is too thin to quote
+as a fifth case. The four cards left unlearned in chapter 11 were its four largest list cards.
+
+**And the first pooled version of that measurement was wrong, which is worth more than the result.**
+Comparing prose-multi-fact cards against list cards across all decks at once gave difficulty 5.2
+against 9.6 — prose looking *easier*. That figure is an artifact: 29 of the 59 prose-multi-fact cards
+lived in the chapter 16 deck, first drilled the previous evening, so FSRS had not raised their
+difficulty yet. Pooling decks of different ages lets deck age masquerade as card form. **Compare within
+a deck, always.**
+
+### A prose card that hides two facts is the quiet case
+
+The author named it on 2026-09-26, pointing at one of his own cards:
+
+> Exempelvis kortet "vad är problemet med att låsa alla objekt när transaktionen startar" den borde
+> vara ett list kort med 2 rader, men den är inte det.
+
+That card said *"Två saker."* and then put both in one sentence, with three highlights and a third fact
+on the end. **98 of HI1031's 401 cards had that shape**, concentrated in the technical chapters: 29 in
+chapter 16, 26 in chapter 11, 18 in chapter 17, and none at all in chapter 5.
+
+Their measured difficulty was *low*, and that is the point. A card that hides two facts is easy to pass
+on half the answer: you recall one, feel right, grade it Good. So the scheduler is told the card is
+learned while it is teaching one of two things — and unlike a five-row list, nothing in the numbers
+complains. Turning the two facts into two visible rows removes the false pass.
+
+Be honest about the standing of that reasoning: it is a **hypothesis the review data cannot settle**,
+because no pair of cards exists in this vault carrying the same content in both forms. What the data
+does say is that explicit list cards score *harder* than prose cards in every deck — which is expected,
+since an existing list card demands all N items where a prose card demands a gist. The argument for
+converting is about honest grading, not about the difficulty number.
 
 ### Interference is a matter of how many answers share a cue
 
@@ -187,9 +245,10 @@ Then a separate card per item, so a slip on one does not re-review the other.
 
 Run this over each new card before saving:
 
-1. Does it test exactly one fact?
+1. Does it test exactly one fact? If the answer contains the words *två*, *tre* or a semicolon, it
+   probably does not — see the hidden-multi-fact section above.
 2. Does the prompt admit exactly one correct answer?
-3. Is the recall target highlighted with `==…==`?
+3. Is the recall target highlighted with `==…==`, exactly once, and nowhere inside a `||` body?
 4. Is the answer at most two sentences?
 5. Is the separator the weakest one that does the job (`::` unless the reverse is needed)?
 6. Does a card for this fact already exist in **this course's own** `Anteckningar/` decks? A hit in
@@ -201,3 +260,8 @@ Run this over each new card before saving:
    cue is overloaded. Cross-course cue sharing is accepted where self-containment requires the card
    in both decks (SKILL.md rule 9).
 8. Is every claim in it traceable to the course material, with nothing invented?
+9. Can you name the exam question it serves? If not, the card does not go in.
+
+Steps 3 and part of 1 are checked mechanically by `Test-DeckHygiene.ps1`. **Step 4 is not** — nothing
+counts sentences, so answer length is still yours to judge. Steps 6, 8 and 9 are judgement and no
+script will ever cover them.

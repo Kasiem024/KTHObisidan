@@ -3404,3 +3404,108 @@ the deck and 311 times in the book's converted text, so this adds no study scope
 corruption or dead-reference findings` - closing a failure that had been outstanding all session.
 `Vault-Audit.ps1` clean, `notesInScope=523` of 698. `markdownlint-cli2` 546 files, 0 issues.
 `Get-ObsidianConfigAudit.ps1` exit 0. The new file is LF, no BOM, no trailing whitespace.
+
+### F80. ✅ DONE (2026-09-26) — HI1031's ten flashcard decks cut from 401 cards to 219, and the card-form rules made mechanical
+
+**What was wrong.** The author drilled his decks and reported the problem himself: cards too long, language
+too academic, and — the part that mattered most — *"jag är osäker på om jag ens behöver veta den info inför
+tentan. jag har svårt att komma ihåg djupa detaljer och termer, men det är enklare att komma ihåg om det är
+mer översiktligt."* His review data agreed. Of the 60 hardest cards across the four decks he had actually
+drilled, **32 answered no exam question at all**. His worst card in the vault — cipher suite's three
+components with an example each, so six facts graded as one — had been shown **21 times without being
+learned**, and the four cards left unlearned in chapter 11 were its four largest list cards.
+
+**What the measurement showed, and the confound that nearly hid it.** Comparing card forms **within** each
+deck, so deck age could not explain the result, cards with three or more list rows scored higher FSRS
+difficulty than single-fact cards in the same deck: chapter 11 9.7 against 6.8, chapter 16 8.4 against 3.5,
+chapter 1 9.8 against 8.6, HI1032's lab deck 9.9 against 8.6. Four decks of four, same direction. Five-row
+lists are the worst form anywhere in the vault, 9.88 in chapter 1.
+
+**The first version of that comparison was wrong and would have been reported.** Pooling all decks gave
+prose-multi-fact cards 5.2 against list cards 9.6 — prose looking *easier*. The reason: 29 of the 59
+prose-multi-fact cards lived in the chapter 16 deck, first drilled the evening before, so FSRS had not
+raised their difficulty yet. Deck age was masquerading as card form. **Compare within a deck, always.**
+
+**The author then named a second, quieter defect**: *"kort som kan omvandlas till listkort men som inte är
+det. Exempelvis kortet 'vad är problemet med att låsa alla objekt när transaktionen startar' den borde vara
+ett list kort med 2 rader, men den är inte det."* That card announced *"Två saker."* and buried both in one
+sentence with three highlights and a third fact appended. **98 of the 401 cards had that shape** — 29 in
+chapter 16, 26 in chapter 11, 18 in chapter 17, none in chapter 5. Their measured difficulty was *low*,
+which is the trap: a hidden multi-fact card is easy to pass on half the answer, so the scheduler is told it
+is learned while it teaches one of two things. Unlike a five-row list, nothing in the numbers complains.
+
+**What was done.** Ten chapter decks reworked, each by an authoring agent paired with an adversarial
+reviewer that could send the work back, then a cross-cutting final pass of four reviewers looking for what
+a per-chapter reviewer cannot see. The selection rule was applied in a fixed order: cut if no exam question
+needs the card; if two facts are both needed, make an explicit `||` list card with `(N)`; if only one is
+needed, cut the other; never more than four rows.
+
+| Deck | Cards before | Cards after | Markers before | Markers after |
+|---|---|---|---|---|
+| Kap 01 | 43 | 24 | 42 | 18 |
+| Kap 02 | 41 | 15 | 12 | 7 |
+| Kap 04 | 41 | 25 | 0 | 0 |
+| Kap 05 | 32 | 23 | 0 | 0 |
+| Kap 06 | 45 | 22 | 0 | 0 |
+| Kap 09 | 38 | 18 | 0 | 0 |
+| Kap 10 | 35 | 22 | 0 | 0 |
+| Kap 11 | 44 | 29 | 44 | 23 |
+| Kap 16 | 44 | 25 | 44 | 25 |
+| Kap 17 | 38 | 16 | 0 | 0 |
+| **Total** | **401** | **219** | **142** | **73** |
+
+**The arithmetic that had to hold, and did.** 69 markers removed, against 69 deleted cards that carried a
+marker: 24 in chapter 1, 5 in chapter 2, 21 in chapter 11, 19 in chapter 16. Hidden multi-fact cards went
+from 98 to **0**. No deck's `nosr` scope was touched — `notes tagged nosr` stayed at 46 — because deck scope
+is the author's rotation control and he said so explicitly.
+
+**A gap reported rather than filled.** Chapter 9's exam question 2 asks *"Vilken roll har hypermedia?"* The
+2012 course book does not cover hypermedia or HATEOAS; three reviewers confirmed it independently, and the
+cards that previously answered it came from restfulapi.net, not the book. They were removed and **no
+replacement was invented**, because a plausible falsehood in a deck is memorised on purpose. This is
+consistent with F79, which records that the book is the exam source and that article only a second
+explanation. The gap is the author's to close if he wants the formal REST principles.
+
+**Two claims in the steering docs turned out to be false and were corrected.** `product.md` asserted that
+HI1031 had an old exam to practise against, at `Filer/Canvas/AI-optimerad Markdown/Tentor/HI1031-20192.md`.
+That file is the **kursplan** from HT19 — its own frontmatter says `Born-digital official kursplan`. It is
+filed under `Tentor/` and named like an exam, which is how the claim survived. The course has no past
+paper. The same folder's `Tentafrågor_ HI1031 HT26 ... (10321).md` is a **truncated duplicate** of the
+question list, stopping mid-way through chapter 4 question 2 while claiming *"Body text checked complete
+against the PDF text layer"*.
+
+**What was made mechanical.** `Meta/Obsidian Plugins/Scripts/Test-DeckHygiene.ps1` — the countable half of
+`write-flashcards`, which until now was enforced only by review. Eight checks, each naming file, line and
+text: orphaned separator, a list with fewer than 2 or more than 4 rows, a `==highlight==` inside a list
+body, a missing `(N)` cue, a marker not under a complete card, an answer without exactly one highlight, an
+unclosed `==`. `emptyHeading` and the `;;` count are notes and never change the exit code.
+
+**Its `-SelfTest` switch earned itself on the first run.** It plants one instance of every defect plus two
+negative controls and requires every check to fire — and the first run reported `missingCue` as **BLIND**.
+The reason: the only card without a `(N)` cue in the fixture was the orphaned one, whose front line is
+empty and therefore skipped. A separate fixture card fixed it. **A zero from a check that has never been
+shown to fire is not a pass**, which is why the switch exists.
+
+**Verified.**
+
+- `Test-DeckHygiene.ps1 -Course HI1031` → **exit 0**, 219 cards, 73 markers, no findings.
+- `Test-DeckHygiene.ps1 -SelfTest` → all eight checks fire, both negative controls hold.
+- `Get-DeckPairCensus.ps1` for all ten chapters → **0 CR characters and 0 double blank lines** in every
+  deck, and the per-separator counts match the table above.
+- `Vault-Audit.ps1` → `RESULT: clean`, `notesInScope=528` of 709.
+- `markdownlint-cli2` → `Linting: 551 files`, `Summary: 0 issues`.
+- `Test-ScriptHygiene.ps1` → clean, 18 files, 91 checks.
+- Backups of all 20 HI1031 notes before the first edit, at
+  `%TEMP%\hi1031-deck-backup-20260926-214322`, plus a per-file fingerprint of bytes, cards per separator
+  and marker count.
+
+**A side finding, not acted on.** Run without `-Course`, the new checker reports **65 findings across
+HI1032's twelve chapter decks** — 36 highlights inside list bodies, 21 missing `(N)` cues, 5 lists longer
+than four rows, 3 wrong highlight counts. Those decks predate these conventions and HI1032 was not in
+scope. HI1031's ten are clean.
+
+**Three new traps came out of this session**, all silent: the console-decoding half of **T2**, which made a
+classifier report `REVIEW DATA ONLY - safe` for 23 files whose real diff was 1035 insertions and 1605
+deletions; **T22**, a parallel agent re-saving the shared `sr-baseline.json` mid-run so that `-Compare`
+measured the last twenty minutes of a four-hour edit; and **T23**, `Write-Host` output being invisible to
+`| Out-String`, which produced a captured report holding only its own exit codes.

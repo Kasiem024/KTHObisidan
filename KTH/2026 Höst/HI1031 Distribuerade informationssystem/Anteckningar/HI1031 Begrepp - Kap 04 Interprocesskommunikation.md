@@ -8,127 +8,101 @@ description: "Flashcards HI1031 kap 4, ordnade efter kursens sex tentafrågor: k
 
 ## Fråga 1 – Karakterisera ett IPC-anrop
 
-Vilka fyra sätt karakteriserar ett IPC-anrop enligt boken? (4)
+På vilka fyra sätt kan man karakterisera ett IPC-anrop? (4)
 ||
 - **Synkront eller asynkront**
-- **Meddelandets destination**
+- **Hur destinationen anges**
 - **Tillförlitlighet**
 - **Ordning**
 
-Vad gäller vid **synkron** kommunikation?::==Både send och receive blockerar.== `send` väntar på motsvarande `receive`, `receive` väntar på ett meddelande.
+Vad gäller vid synkron kommunikation?::Både send och receive ==blockerar== – send väntar på receive, och receive väntar på ett meddelande.
 
-Vad gäller vid **asynkron** kommunikation?::`send` är ==icke-blockerande== – sändaren fortsätter så snart meddelandet kopierats till en lokal buffert.
+Vad gäller vid asynkron kommunikation?::send ==blockerar inte== – sändaren kör vidare så fort meddelandet lagts i en lokal buffert.
 
-Varför erbjuder dagens system i regel inte icke-blockerande `receive`?::Med trådar har blockerande `receive` ==inga nackdelar==, och den icke-blockerande lägger bara komplexitet på mottagaren.
+Hur anges destinationen för ett meddelande i IPC?::Med paret ==(internetadress, port)==.
 
-Hur anges en meddelandedestination, och hur många parter kan den ha?::Med paret ==(internetadress, lokal port)==. En port har exakt en mottagare men många sändare.
-
-Hur definierar boken tillförlitlighet?::Med ==giltighet== – att meddelanden kommer fram trots ett "rimligt" antal tappade paket – och integritet, att de kommer fram oskadade och utan dubbletter.
+Vad menas med att ett meddelande är tillförlitligt? (2)
+||
+- **Giltighet** – meddelandet kommer fram
+- **Integritet** – det kommer fram helt och utan dubbletter
 
 ## Fråga 2 – XML
 
-Vad är ett **märkspråk**?;;Text där ==taggar visar både innehållet och dess struktur eller utseende==.
+Vad är XML för slags språk?::Ett ==märkspråk== – text där taggar visar innehållet och hur det är strukturerat.
 
-Vad är skillnaden mellan XML:s och HTML:s taggar?::XML:s taggar beskriver ==den logiska strukturen==, HTML:s säger hur webbläsaren ska visa texten. XML låter dig dessutom definiera egna taggar.
+Vad skiljer XML:s taggar från HTML:s?::XML:s taggar beskriver ==strukturen== på innehållet, medan HTML:s säger hur det ska visas.
 
-Varför behöver XML vara självbeskrivande, när CORBA CDR inte behöver det?::CORBA CDR:s parter ==känner redan ordningen och typerna==. XML skulle användas av flera tillämpningar för olika syften.
-
-Vad är en XML-**namnrymd**?;;En uppsättning namn ==refererad med en URL==, som låter en tillämpning använda flera uppsättningar definitioner utan namnkollisioner.
-
-Vad används XML till enligt boken? (4)
+Vad kan man använda XML till? (4)
 ||
-- **Webbtjänster** – klienter pratar med dem i XML via SOAP, och XML definierar tjänsternas gränssnitt
-- **Arkivering och återsökning**
-- **Specifikation av användargränssnitt**
-- **Kodning av konfigurationsfiler**
-
-Vad är priset för att XML är text med taggar, och vad gör man åt det?::==Stora meddelanden==, alltså längre tider och mer lagring. Motmedlet är komprimering – HTTP 1.1 tillåter det.
+- **Webbtjänster** – klienter och tjänster pratar i XML
+- **Arkivering** av data
+- **Användargränssnitt**
+- **Konfigurationsfiler**
 
 ## Fråga 3 – Tre typer av IPC
 
-Vad skickas ett UDP-datagram utan, och vad blir följden?::==Bekräftelse och omsändning==, så felmodellen är utelämnandefel och leverans i fel ordning.
+Vilka tre typer av IPC tar boken upp? (3)
+||
+- **Datagram** (UDP)
+- **Ström** (TCP)
+- **Multicast**
 
-Vilka tjänster nämner boken som exempel på UDP respektive TCP?::UDP: ==DNS och Voice over IP==, för att slippa omkostnaderna för garanterad leverans. TCP: HTTP, FTP, Telnet och SMTP.
+Vad är typiskt för ett UDP-datagram?::Det skickas ==utan bekräftelse och omsändning==, så meddelandet kan tappas.
 
-Vad ger en TCP-ström för abstraktion?::En ==tvåvägsström av bytes utan meddelandegränser==.
+Vilken abstraktion ger en TCP-ström?::En ==tvåvägs ström av bytes== utan meddelandegränser.
 
-Vad döljer TCP-strömmen? (4)
+Vad döljer TCP-strömmen för programmeraren? (4)
 ||
 - **Meddelandestorlekar**
-- **Tappade meddelanden**, via bekräftelser och omsändning
-- **Flödeskontroll**, som bromsar en skrivare snabbare än läsaren
+- **Tappade meddelanden** – skickas om
+- **Flödeskontroll** – bromsar en för snabb sändare
 - **Dubbletter och ordning**
 
-Varför är TCP **inte** tillförlitlig kommunikation?::Passerar paketförlusten en gräns, eller kapas eller överbelastas nätet, ==förklarar TCP förbindelsen bruten==.
-
-Vilka två saker kan en process inte avgöra när TCP förklarar förbindelsen bruten? (2)
-||
-- Om felet var **nätet** eller att **processen i andra änden dog**
-- Om de meddelanden den **nyligen skickade kom fram**
-
-Vad gör en **multicast-operation**?;;Skickar ==ett enda meddelande från en process till varje medlem i en grupp==, normalt så att medlemskapet är transparent för sändaren.
-
-Hur anges en multicast-grupp, och hur nås IP multicast från ett program?::Med en ==klass D-adress==, och på programmeringsnivå bara via UDP.
+Vad gör en multicast-operation?::Skickar ==ett enda meddelande till alla medlemmar i en grupp==.
 
 ## Fråga 4 – Portar med flera mottagare
 
-Hur får en port flera mottagare, när den normalt bara har en?::Genom ==IP multicast== – bara de processerna delar portar. Kopior går till alla lokala sockets som gått med i adressen och är bundna till portnummret.
+Hur kan en port få flera mottagare, när den normalt bara har en?::Genom ==IP multicast== – flera processer går med i en grupp och delar då porten.
 
-Vad möjliggör multicast enligt boken? (4)
+Vad är multicast (en port med flera mottagare) bra för? (4)
 ||
-- **Feltolerans med replikerade tjänster** – en grupp servrar gör samma operation, så klienterna betjänas även när några går ner
-- **Att hitta tjänster i spontana nät**
-- **Bättre prestanda med replikerad data**
-- **Spridning av händelsenotifieringar**
+- **Feltolerans** – flera servrar gör samma sak
+- **Hitta tjänster** i nätet
+- **Bättre prestanda** med kopierad data
+- **Sprida notiser** till många
 
-Vad händer om ett datagram tappas mellan två multicast-routrar?::==Ingen mottagare bortom den routern== får meddelandet.
+Vad kostar det att låta en port ha flera mottagare via IP multicast?::Det är ==otillförlitligt== – ett meddelande kan tappas så att bara några i gruppen får det.
 
 Vilka två ordningsproblem har multicast? (2)
 ||
-- Samma sändares datagram kan nå **olika medlemmar i olika ordning**
-- Meddelanden från **två sändare** kommer inte nödvändigtvis i samma ordning hos alla
-
-Varför är replikerade tjänster det hårda fallet för multicast?::Servrarna måste göra ==samma operationer i samma ordning==, så missar en enda medlem en förfrågan blir den inkonsistent.
-
-Vilka två starkare garantier behövs ovanpå IP multicast? (2)
-||
-- **Tillförlitlig multicast** – ett skickat meddelande tas emot av alla medlemmar eller av ingen
-- **Totalt ordnad multicast** – den strängaste: alla meddelanden når alla medlemmar i samma ordning
+- Samma sändares meddelanden kan nå **olika medlemmar i olika ordning**
+- Meddelanden från **två sändare** kommer inte i samma ordning hos alla
 
 ## Fråga 5 – IPC mot distribuerade objekt
 
-Vilken relation har IPC och distribuerade objekt?::De är ==lager, inte alternativ== – IPC är det undre middleware-lagret och distribuerade objekt byggs ovanpå det.
+Vilken relation har IPC och distribuerade objekt?::De är ==lager, inte alternativ== – IPC är det undre lagret och distribuerade objekt byggs ovanpå.
 
-Vad är **marshalling**?;;Att ==platta datastrukturer till en sekvens av bytes== för överföring, och bygga upp dem igen vid ankomsten.
+Vad är skillnaden i abstraktion mellan IPC och distribuerade objekt?::IPC skickar ==meddelanden== (send och receive på bytes); distribuerade objekt gör metodanrop där detaljerna göms.
 
-Vad är skillnaden i abstraktion mellan IPC och distribuerade objekt?::IPC är ==meddelandeöverföring== med `send` och `receive` på bytes; distribuerade objekt ger metodanrop där detaljerna döljs.
+Hur skiljer sig adresseringen mellan IPC och distribuerade objekt?::IPC använder (internetadress, port); ett distribuerat objekt använder en ==unik objektreferens==.
 
-Hur skiljer sig destinationen i IPC och distribuerade objekt?::IPC använder (internetadress, port); ett distribuerat objekt använder en ==fjärrobjektreferens som är unik i tid och rum== och aldrig återanvänds.
-
-Hur tvingar distribuerade objekt fram inkapsling?::Klient och server ligger i ==olika processer==, så tillståndet nås bara via objektets metoder och obehöriga metoder kan inte röra det.
-
-Varför får olika platser använda olika dataformat med distribuerade objekt?::Objekten nås ==bara via sina metoder==, så klienterna märker inte formatskillnaden.
-
-Vad kan skickas som parameter i ett fjärranrop, utöver värden?::En ==objektreferens==. Det är vinsten när parametern är stor – mottagaren kan nå objektet med ett nytt anrop i stället för att hela värdet skickas.
+Vad ger distribuerade objekt som ren meddelandeöverföring inte ger?::==Inkapsling== – tillståndet nås bara via objektets metoder.
 
 ## Fråga 6 – Virtualisering
 
-Vad är **nätverksvirtualisering**?;;Att bygga ==många virtuella nät ovanpå ett enda befintligt nät==, ett per tillämpning, vart och ett med eget adresseringssätt, egna protokoll och egen routing.
+Vad är nätverksvirtualisering?::Att bygga ==flera virtuella nät ovanpå ett enda riktigt nät==, ett anpassat per tillämpning.
 
-Varför kan man inte i stället ändra internetprotokollen?::Det vore ==opraktiskt== med så många olika tillämpningar – det som förbättrar den ena kan skada den andra.
-
-Hur förhåller sig nätverksvirtualisering till Saltzers end-to-end-argument?::Den ==antyder ett svar på dilemmat== – man kan optimera ett virtuellt nät för en bestämd tillämpning utan att ändra nätet under. Boken säger "suggests", inte "solves".
-
-Vad är ett **overlay-nät**?;;Den konkreta formen av ett virtuellt nät: ==noder och virtuella länkar== ovanpå ett underliggande nät, som ger något det underliggande nätet inte ger.
-
-Vilka tre fördelar har overlay-nät? (3)
+Vad vinner man på nätverksvirtualisering (overlay-nät)? (3)
 ||
-- **Nya nättjänster** utan att ändra det underliggande nätet
-- De **uppmuntrar experiment** och anpassning till särskilda tillämpningsklasser
-- **Flera overlays kan samexistera**, vilket ger en öppnare och mer utbyggbar arkitektur
+- **Nya nättjänster** utan att ändra nätet under
+- **Uppmuntrar experiment** och anpassning
+- **Flera nät kan samsas** – öppnare arkitektur
 
-Vad är **systemvirtualisering**?;;Att köra ==flera virtuella maskiner på en fysisk dator==, där varje virtuell maskin har sitt eget operativsystem.
+Vad är systemvirtualisering?::Att köra ==flera virtuella maskiner på en fysisk dator==, var och en med eget operativsystem.
 
-Vad vinner systemvirtualisering, jämfört med processer?::==Säkerhet, renare uppdelning och exaktare debitering== – och en virtuell maskin kan migreras ganska enkelt, vilket enligt boken har potential att minska investeringen i serverdatorer och sänka energiförbrukningen.
-
-**Hypervisor**;;Det tunna lagret mjukvara ovanpå den fysiska arkitekturen som gör systemvirtualisering. Kallas även ==virtual machine monitor==.
+Vad vinner man på systemvirtualisering, jämfört med processer? (4)
+||
+- **Säkerhet**
+- **Renare uppdelning** av uppgifter
+- **Exaktare debitering** per användare
+- **Lätt att flytta VM:er** – färre servrar och mindre energi

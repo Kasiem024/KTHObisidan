@@ -15,9 +15,12 @@
 #     lines           physical line count, for the 150-250 line target on notes
 #     double blanks   runs of two or more consecutive blank lines (the MD012 signature)
 #
-#   The card counts are deliberately the SAME arithmetic the authoring workflow uses, so they can be
-#   compared directly against a target of 40-60 cards per deck. They are counted per LINE, so one line
-#   is one card - that is intentional for this vault's syntax.
+#   The card counts are deliberately the SAME arithmetic the authoring workflow uses. They are counted
+#   per LINE, so one line is one card - that is intentional for this vault's syntax.
+#   This script does NOT judge the count against a target. The 40-60 cards per deck agreed on
+#   2026-09-09 was superseded on 2026-09-26: the rule is now "as few as possible, as concentrated on
+#   the exam questions as possible", and 40 is not a floor. See .kiro/steering/product.md. The 150-250
+#   line target for the exam-answer NOTE still stands.
 #
 #   IN SCOPE: exactly two files, both named in the output. Everything else in the vault is ignored.
 #   This answers "are these two files in the shape I think they are", not "is the vault healthy".

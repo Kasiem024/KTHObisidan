@@ -10,7 +10,7 @@ wrong result here, and **every one is silent** — none throws, none fails a bui
 plausible wrong answer, which is worse. That is the entry criterion: if it throws, it belongs in
 `environment.md`.
 
-There are **twenty-one**. Do not add a twenty-second without reproducing it and recording the wrong result
+There are **twenty-three**. Do not add a twenty-fourth without reproducing it and recording the wrong result
 it produced. Each entry is the mechanism, the wrong answer it caused, and what to do instead; the
 forensics live in `Meta/Vault Findings & Backlog.md` and `.kiro/lessons-learned.md`.
 
@@ -45,6 +45,30 @@ silently.
 `Get-ChildItem -Filter` on the ASCII part of the name. For repository facts use git itself
 (`git ls-tree -r -l HEAD`) after `git config core.quotepath false`, and read sizes from git's own
 output rather than the filesystem.
+
+**`core.quotepath false` is only half the fix, and the other half bit three times in one session.**
+That setting stops *git* from octal-escaping the bytes; it does nothing about **PowerShell decoding
+git's stdout using the console code page**. So `git ls-files` and `git diff --name-only` hand back
+`H|-+st` where the tree holds `Höst`, and feeding that string to the next git command matches
+nothing — `git diff -- <path>` prints no hunks, `git show HEAD:<path>` returns empty, both exit 0.
+
+**Produced, on 2026-09-26:** a classifier that read the diff of 23 changed notes and reported
+`REVIEW DATA ONLY - safe` for **every one**, because each per-file `git diff` returned zero lines.
+The real diff was 1035 insertions and 1605 deletions. The same session then read `srMarkers at HEAD
+= 0` for three decks that HEAD holds 61, 15 and 0 markers for, and nearly concluded the committed
+history had no review data at all.
+
+**What to do:** set the console encoding before invoking git, and restore it afterwards:
+
+```powershell
+$prev = [Console]::OutputEncoding
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+try { $paths = @(& git ls-files 'KTH/*') ; ... } finally { [Console]::OutputEncoding = $prev }
+```
+
+Verify the round trip before trusting it — `git cat-file -e HEAD:<path>` exits 0 only if the path
+resolved. And prefer a form that never sends a path back to git: `git diff --numstat` reports counts
+per file in one call, which is how the 1035/1605 figure was finally obtained.
 
 ## T3 — `-match` is case-insensitive
 
@@ -327,7 +351,45 @@ Nothing throws in any of these cases, so the only tell is a count that is suspic
 
 ---
 
-## Related but not silent
+## T22 — `sr-baseline.json` is one global file, so a parallel agent silently redates your baseline
+
+`Get-SRIntegrity.ps1 -Save` writes to a **single fixed path**, and `-Compare` reads whatever is there.
+The protocol assumes one editor. Run several agents against the same vault and any one of them calling
+`-Save` replaces the snapshot the others are measuring against — with no warning, because a baseline
+file with a newer timestamp is indistinguishable from the one you took.
+
+**Produced, on 2026-09-26:** a baseline was taken at 22:56 before a rework of ten decks. One of the
+agents re-saved it at 23:53, mid-run. The `-Compare` afterwards reported HI1031 chapter 1 as
+`cards 27 -> 25` and listed no change at all for chapters 2, 11 and 16 — all three already rewritten
+before the new snapshot. The real figures were 43 → 24 cards and 142 → 73 markers across the ten
+decks. The comparison looked clean and precise, and was measuring the last twenty minutes of a
+four-hour edit.
+
+**What to do:** read the `baseline taken at <timestamp>` line the script prints and check it is
+**yours**. If several agents will touch decks, do not rely on the shared baseline at all: take your
+own per-file fingerprint first — bytes, cards per separator, `<!--SR:` count — and check the
+arithmetic against that. The claim that must hold is *markers removed equals cards deleted that had
+markers*, per file, and a vault total can never show it.
+
+## T23 — `Write-Host` output is invisible to `| Out-String`, so a captured report can arrive empty
+
+Every script in `Meta/Obsidian Plugins/Scripts/` reports with `Write-Host`, which writes to the
+**information stream**, not to stdout. So `& $script | Out-String` captures *nothing* while the text
+scrolls past in the terminal, and a file written from that pipeline contains only whatever the script
+happened to emit on the success stream.
+
+**Produced, on 2026-09-26:** a capture of `Test-DeckHygiene.ps1` across two scopes wrote a file
+holding four lines — two headers and two `EXITCODE=` lines — with every finding missing. Read on its
+own, that file says the run found nothing.
+
+**What to do:** redirect stream 6 (`& $script -Detail 6> $path`) or call the script through
+`powershell -File` and let the shell show stdout. **But `6>` writes UTF-16LE with a BOM**, so anything
+that expects UTF-8 then fails with `stream did not contain valid UTF-8`; recover it with
+`[System.IO.File]::ReadAllText($p, [System.Text.Encoding]::Unicode)`. That half is in
+`environment.md` under *Capture output to a file, not to stdout*. Cross-check an exit code against a
+report that actually contains lines — an `EXITCODE=0` next to an empty body proves nothing.
+
+---
 
 Things that announce themselves are **not** traps and live in `environment.md`: the benign
 `geometric repack` error from git on Google Drive, `npm` needing `cmd /c`, stdout truncating on Swedish

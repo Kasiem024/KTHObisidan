@@ -1,108 +1,76 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-09-15
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 5, ordnade efter kursens fyra tentafrågor: hur distribuerade objekt och RMI fungerar, sockets mot distribuerade objekt, jämförelsen av sockets, RPC, RMI och webbtjänster, samt distribuerade objekt mot webbtjänster."
 ---
 # HI1031 Begrepp - Kap 05 Fjärranrop
 
 ## Fråga 1 – Hur distribuerade objekt och RMI fungerar
 
-**Fjärrobjektreferens**;;Ett id som ==funkar i hela det distribuerade systemet== och pekar ut ett bestämt fjärrobjekt. Kan skickas som parameter.
+Vad är ett fjärrobjekt (remote object)?::Ett objekt vars metoder ==går att anropa från en annan process==, inte bara lokalt.
 
-**Fjärrgränssnitt**;;Det som anger ==vilka av ett fjärrobjekts metoder som får anropas på distans==. Lokala objekt kan anropa alla.
+Vad är RMI (fjärrmetodanrop)?::Att ==anropa en metod på ett objekt i en annan process== som om det vore ett vanligt lokalt anrop.
 
-Varför behövs fabriksmetoder i den distribuerade objektmodellen?::Ett gränssnitt har ==inga konstruktorer==, så man kan inte skapa ett objekt med ett fjärranrop.
+**Fjärrobjektreferens** (remote object reference);;Ett id som ==pekar ut ett bestämt fjärrobjekt i hela systemet==. Kan skickas som parameter.
 
-Vilka fyra delar ligger i RMI:s anropskedja, och vad gör var och en? (4)
+**Fjärrgränssnitt** (remote interface);;Talar om ==vilka av ett fjärrobjekts metoder som får anropas på distans==. Lokala objekt kan anropa alla.
+
+Vilka fyra delar sköter ett RMI-anrop, och vad gör de? (4)
 ||
-- **Proxy** hos klienten – beter sig som ett lokalt objekt och packar anropet i ett meddelande
-- **Dispatcher** hos servern – väljer rätt metod i skelettet med hjälp av `operationId`
-- **Skelett** hos servern – packar upp argumenten och anropar servanten
-- **Servant** – objektet som innehåller fjärrobjektets kod och tillstånd
+- **Proxy** (hos klienten) – ser ut som ett lokalt objekt och packar ihop anropet till ett meddelande
+- **Dispatcher** (hos servern) – väljer rätt metod i skelettet
+- **Skelett** (hos servern) – packar upp anropet och anropar servanten
+- **Servant** – själva objektet med koden som körs
 
-Vilka tre delar av RMI genereras automatiskt, och av vad?::==Proxy, dispatcher och skelett==, av en gränssnittskompilator.
-
-Vad är kommunikationsmodulerna tillsammans ansvariga för?::==Anropssemantiken==, till exempel at-most-once. Den ena ligger hos klienten och den andra hos servern, och de kör request-reply mellan sig.
-
-Hur vet man i Java RMI att ett anrop går på distans?::Anroparen måste hantera ==`RemoteException`==, och fjärrobjektets klass måste implementera `Remote`.
-
-Hur skickas parametrar i Java RMI?::Fjärrobjekt skickas som ==fjärrobjektreferens==, alla andra objekt kopieras och skickas som värde.
+Hur skickas parametrar vid ett fjärranrop (RMI)?::==Fjärrobjekt skickas som referens==, allt annat kopieras och skickas som värde.
 
 ## Fråga 2 – Sockets mot distribuerade objekt
 
-Vad säger boken om när man ska välja lågnivå request-reply?::Det är ==lättviktigt och minimalt==, och används ofta där kommunikationens omkostnader måste minimeras – boken nämner inbyggda system.
+När kan enkel request-reply (sockets) vara bättre än distribuerade objekt?::När man vill ha något ==lättviktigt och minimalt== och slippa onödiga omkostnader – boken nämner inbyggda system.
 
-Vilka tre TCP-omkostnader är onödiga vid ett request-reply? (3)
-||
-- **Bekräftelser**, eftersom svaret i sig bekräftar förfrågan
-- **Förbindelseuppsättning**, som kostar två extra par meddelanden
-- **Flödeskontroll**, onödig för de flesta anrop som skickar små argument och resultat
+När är distribuerade objekt bättre än rena sockets?::När programmet är stort och krångligt – då kan man ==skicka en referens till ett objekt== i stället för att koda och skicka allt själv.
 
-Varför klarar Sun NFS ett eget protokoll över UDP?::Det skickar ==filblock av fast storlek== och har idempotenta operationer, så det behöver ingen historik.
+Varför är ett fjärranrop alltid känsligare för fel än ett lokalt anrop?::Ett nätverk och en annan dator är inblandade, och man kan ==inte skilja ett nätverksfel från att servern har kraschat==.
 
-**Idempotent operation**;;En operation som kan ==utföras flera gånger med samma effekt som en enda gång==.
-
-Vad ger distribuerade objekt enligt boken?::Det blir ==lättare att skriva stora, krångliga distribuerade program== – och man kan skicka objektreferens i stället för ett stort värde.
-
-Vad kan man aldrig komma ifrån med fjärranrop, hur bra middleware man än har?::De är ==känsligare för fel än lokala anrop==, och man kan inte skilja ett nätfel från att serverprocessen dött.
-
-Hur mycket högre är latensen för ett fjärranrop, och vad antyder boken om följden?::==Flera storleksordningar== högre. Boken garderar: det antyder att program behöver ta hänsyn till det, kanske genom att minimera antalet fjärranrop.
+Hur mycket långsammare är ett fjärranrop än ett lokalt?::==Flera storleksordningar== långsammare, så man bör göra så få fjärranrop som möjligt.
 
 ## Fråga 3 – Sockets, RPC, RMI och webbtjänster
 
-Hur förhåller sig sockets, RPC, RMI och webbtjänster till varandra?::De är ==lager, inte alternativ==. RPC och RMI byggs med sockets över request-reply, webbtjänster ovanpå HTTP.
+Hur förhåller sig sockets, RPC, RMI och webbtjänster till varandra?::De är ==lager, inte alternativ==. RPC och RMI byggs ovanpå sockets, webbtjänster ovanpå HTTP.
 
 Vilken abstraktion ger de fyra? (4)
 ||
-- **Sockets** – byte-sekvenser
-- **RPC** – ett anrop av en procedur, som om den var lokal
+- **Sockets** – strömmar av bytes
+- **RPC** – ett anrop av en procedur, som om den vore lokal
 - **RMI** – ett anrop av en metod på ett objekt
-- **Webbtjänst** – operationer på en resurs som pekas ut av en URI
+- **Webbtjänst** – en operation på en resurs (en URI)
 
-Hur namnges målet i de fyra? (4)
+Hur pekas målet ut i de fyra? (4)
 ||
-- **Sockets** – (internetadress, port)
-- **RPC** – program- och versionsnummer, som en port mapper översätter till port
-- **RMI** – en fjärrobjektreferens, som dessutom kan skickas som parameter
-- **Webbtjänst** – en URI, oftast en URL, som boken kallar en endpoint
+- **Sockets** – adress och port
+- **RPC** – ett programnummer
+- **RMI** – en fjärrobjektreferens
+- **Webbtjänst** – en URI (oftast en URL)
 
-Hur beskrivs gränssnittet i de fyra? (4)
-||
-- **Sockets** – inte alls, parterna kommer överens själva
-- **RPC** – ett IDL, i Sun RPC språket XDR
-- **RMI** – ett IDL som CORBA IDL, eller själva språket i Java RMI
-- **Webbtjänst** – WSDL
+Vad menas med att en operation är idempotent?::Att den kan ==köras flera gånger med samma resultat som en enda gång==.
 
-Hur representeras data i de fyra? (4)
-||
-- **Sockets** – du marshallar själv
-- **RPC** – binärt, med XDR
-- **RMI** – binärt, med CORBA CDR eller Javas serialisering
-- **Webbtjänst** – XML, paketerat med SOAP
+Vad ger **maybe**-semantik?::Anropet körs ==en gång eller inte alls==. Inga åtgärder mot fel, så det duger bara när enstaka missade anrop är okej.
 
-Vad ger **maybe**-semantik?::Anropet körs ==en gång eller inte alls==. Ingen feltolerans, så det duger bara där enstaka misslyckade anrop är acceptabla.
+Vad ger **at-least-once**-semantik?::Man får ett svar eller ett fel, men proceduren kan ha ==körts mer än en gång==. Kräver därför idempotenta operationer.
 
-Vad ger **at-least-once**-semantik?::Anroparen får ett resultat eller ett undantag, men proceduren kan ha ==körts mer än en gång==. Kräver därför idempotenta operationer.
+Vad ger **at-most-once**-semantik?::Ett svar betyder att proceduren körts ==exakt en gång==; ett fel betyder en gång eller inte alls.
 
-Vad ger **at-most-once**-semantik?::Ett resultat betyder att proceduren körts ==exakt en gång==, ett undantag att den körts en gång eller inte alls.
-
-Vad är den praktiska skillnaden mellan RMI och webbtjänster?::==Brandväggar.== RMI:s och CORBAs transportprotokoll kommer normalt inte igenom, men HTTP och SMTP gör det.
+Vad är den stora praktiska skillnaden mellan RMI och webbtjänster?::==Brandväggar.== RMI:s protokoll kommer oftast inte igenom, men webbtjänsternas HTTP gör det.
 
 ## Fråga 4 – Distribuerade objekt mot webbtjänster
 
-Hur beskriver boken likheten mellan en webbtjänst och RMI?::Som ==ytlig== – interaktionen mellan klient och server är "på ett ytligt plan mycket lik RMI".
+Vad har distribuerade objekt och webbtjänster gemensamt?::Båda ==programmerar mot gränssnitt==, så klienten slipper veta vilket språk eller vilken plattform servern använder.
 
-Vad använder en webbtjänstklient i stället för en fjärrobjektreferens?::En ==URI==, för att anropa en operation i den resurs URI:n pekar ut.
+På vilket sätt liknar en webbtjänst ett RMI-anrop?::Klienten anropar en operation via en ==URI==, ungefär som RMI anropar ett objekt via en fjärrobjektreferens.
 
-Vad delar distribuerade objekt och webbtjänster faktiskt?::==Programmering mot gränssnitt==, vilket ger lös koppling och gör att klienten slipper veta språk och plattform.
+Vad är den stora skillnaden mellan distribuerade objekt och webbtjänster?::En webbtjänst ==kan inte skapa nya fjärrobjekt== och lämna tillbaka referenser – den är i praktiken ett enda objekt.
 
-Vilken är kärnskillnaden mellan distribuerade objekt och webbtjänster?::En webbtjänst ==kan inte skapa fjärrobjekt== och returnera referenser till dem.
+Hur skiljer sig de två i synen på programmering?::En webbtjänst ==bryr sig inte om hur du programmerar==, medan distribuerade objekt vill att du gör det på ett ganska bestämt sätt.
 
-Vilken slutsats drar boken av att webbtjänster inte kan skapa fjärrobjekt?::Att en webbtjänst i praktiken är ==ett enda fjärrobjekt==, så både skräpsamling och fjärrobjektreferenser är irrelevanta.
-
-Hur ändras `newShape` när skrivtavlan görs till en webbtjänst?::Den returnerar ==ett heltal== som säger var objektet ligger i en vektor, i stället för en fjärrobjektreferens, och är då inte längre en fabriksmetod.
-
-Hur skiljer sig de två i paradigm?::Webbtjänster ==struntar i hur du programmerar==, medan distribuerade objekt vill att du gör på ett ganska bestämt sätt.
-
-Vad ger webbtjänster inte av sig själva, som middleware annars har som huvuduppgift?::==Transparens.== I enklaste fallet läser och skriver klient och server direkt i SOAP och XML.
+Vad ger en webbtjänst inte, som annan middleware brukar ge?::==Transparens.== I enklaste fallet läser och skriver klienten och servern direkt i SOAP och XML.

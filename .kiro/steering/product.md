@@ -64,7 +64,21 @@ Where the exam questions live, per course, when they exist at all:
 
 | Course | Exam questions |
 |---|---|
-| HI1031 | `KTH/2026 Höst/HI1031 .../Filer/Canvas/Tentor/Tentafrågor HI1031 Distribuerade informationssystem.md` (per chapter), plus an old exam, `HI1031-20192.pdf` in the same folder and converted to Markdown under `Filer/Canvas/AI-optimerad Markdown/Tentor/HI1031-20192.md` |
+| HI1031 | `KTH/2026 Höst/HI1031 .../Filer/Canvas/Tentor/Tentafrågor HI1031 Distribuerade informationssystem.md` (per chapter). That file is the complete one, and it is the specification. |
+
+**Two files in that folder look like more exam material and are not.** Checked on 2026-09-26 because
+this table used to claim an old exam existed:
+
+- `Filer/Canvas/AI-optimerad Markdown/Tentor/HI1031-20192.md` is the **kursplan** from HT19 — the
+  syllabus, with `Lärandemål`, `Kursinnehåll` and the examination form. Its own frontmatter says
+  `Born-digital official kursplan`. It is filed under `Tentor/` and named like an exam, which is why
+  this doc asserted for weeks that the course had a past paper to practise against. **It has none.**
+  The file is still worth reading: one of its learning objectives is *"Kunna kritiskt analysera,
+  diskutera och jämföra olika distribuerade metoder och modeller"*, so comparison is examinable in its
+  own right, which is why the decks carry comparison cards and not only definitions.
+- `Filer/Canvas/AI-optimerad Markdown/Tentor/Tentafrågor_ HI1031 HT26 ... (10321).md` is a **truncated
+  duplicate** of the question list. It stops mid-way through chapter 4 question 2 while its own
+  frontmatter claims *"Body text checked complete against the PDF text layer"*. Use the other file.
 
 That folder is `Filer/Canvas/` — third-party Canvas downloads, gitignored and out of the
 audit's scope (`Meta/Vault Standard.md` §4). **Read it; never edit it.** It also holds the
@@ -117,6 +131,31 @@ author called "alldeles för många". Aim well below them.
 | Cards per chapter deck | **40–60** | 100–184 |
 | Lines per exam-answer note | **150–250** | 600–750 |
 
+**The card figure was superseded on 2026-09-26.** The author narrowed it further, and the new rule is
+not a range:
+
+> min prioritet är att lära mig det som finns i tentafrågorna. jag har inte tid att lära mig saker som
+> är orelaterade och väldigt komplicerade koncept. därför är det viktigt att du försöker hålla antalet
+> kort så lågt som möjligt och så koncenterat till tentafrågorna som möjligt.
+
+So **40 is not a floor to fill up to.** Cut every card no exam question needs, then report the number.
+HI1031's ten decks were reworked on that basis and landed at 219 cards against 401 — between 15 and 29
+per chapter, all ten below the old range, and every remaining card traceable to a named exam question.
+Do not pad a deck to reach 40; do not quote 40–60 as a requirement.
+
+**And the author's own diagnosis of what makes a card hard, same day:**
+
+> jag har svårt att komma ihåg djupa detaljer och termer, men det är enklare att komma ihåg om det är
+> mer översiktligt.
+
+Measured against his review data and confirmed within every deck that had enough of one, a card carrying
+several facts is the hard form: HI1031 chapter 11 scored FSRS difficulty 9.7 on cards with three or more
+list rows against 6.8 on single-fact cards, chapter 16 scored 8.4 against 3.5, and the same direction
+held in four decks of four. His worst card in the vault — cipher suite's three components with an example
+each, so six facts — had been shown **21 times without being learned**. The authoring consequence is in
+`.kiro/skills/write-flashcards/SKILL.md` rule 8 and rule 15, and `Test-DeckHygiene.ps1` now checks the
+countable part.
+
 **Keep the note structure as it is: facts first, `### Muntligt svar` last.** This was queried and the
 author rejected changing it, and the reason is his study method, so do not "improve" it later:
 
@@ -157,7 +196,7 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` runs F1–F79: all closed except F10 (parked). Both the audit and
+`Meta/Vault Findings & Backlog.md` runs F1–F80: all closed except F10 (parked). Both the audit and
 the linter run automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on

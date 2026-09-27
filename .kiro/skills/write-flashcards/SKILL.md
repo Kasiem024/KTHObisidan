@@ -128,10 +128,40 @@ Rule 1 is the only one with strong direct backing, and it is the one most often 
    grading is what the whole mechanism rests on — the testing effect vanished entirely in a
    low-engagement population (Sigayret et al. 2026).
 7. `[heuristic]` **No yes/no or binary prompts** — a 50 % guess rate teaches nothing.
-8. `[heuristic]` **Avoid big enumerations.** "Nämn alla åtta former av X" is eight facts, an ordering
-   and a completeness check graded as one item. Where a list is genuinely the unit of knowledge, keep
-   it to 2–4 items with `(N)` in the prompt, and add separate cards for the individual items.
-   Rearranged stimulus–response sets showed no transfer at all, which argues for per-item cards.
+8. `[measured]` **Avoid big enumerations, and never hide several facts in prose.** "Nämn alla åtta
+   former av X" is eight facts, an ordering and a completeness check graded as one item. Where a list
+   is genuinely the unit of knowledge, keep it to 2–4 items with `(N)` in the prompt, and add separate
+   cards for the individual items. Rearranged stimulus–response sets showed no transfer at all, which
+   argues for per-item cards.
+
+   **This rule moved from `[heuristic]` to `[measured]` on 2026-09-26**, against the author's own review
+   data. Within each deck — so deck age cannot explain it — cards with three or more list rows scored
+   higher FSRS difficulty than single-fact cards in the same deck: HI1031 chapter 11 9.7 against 6.8,
+   chapter 16 8.4 against 3.5, chapter 1 9.8 against 8.6, and HI1032's lab deck 9.9 against 8.6. Four
+   decks of four, same direction, with chapter 2 pointing the same way on a sample too small to quote.
+   Five-row lists are the worst form measured anywhere in the vault (chapter 1: 9.88). The four cards
+   left unlearned in chapter 11 were its four largest list cards, one of them shown **21 times**.
+
+   **The subtler case is a prose card that hides two facts**, and the author named it himself:
+
+   > Kolla också på kort som kan omvandlas till listkort men som inte är det. Exempelvis kortet "vad är
+   > problemet med att låsa alla objekt när transaktionen startar" den borde vara ett list kort med 2
+   > rader, men den är inte det.
+
+   That card announced *"Två saker."* and then buried both in a sentence. **98 of HI1031's 401 cards had
+   that shape.** Their difficulty was *low*, which is the trap: a hidden multi-fact card is easy to pass
+   on half the answer — you recall one fact, feel right, press Good — so the number says healthy while
+   the card teaches one of two things. Making the two facts two visible rows removes the false pass.
+   That reading is a hypothesis the data cannot settle, and it is the reason to follow the instruction
+   anyway.
+
+   **So apply this order, and the first step comes first:**
+   1. No exam question needs the card → delete it. Most hidden multi-fact cards die here.
+   2. Both facts are needed → one `||` list card, `(N)` in the prompt, a bold label per row, no
+      `==highlight==` anywhere in the body.
+   3. Only one fact is needed → cut the other and leave a single-fact `::` card with one highlight.
+   4. Never more than four rows. `Test-DeckHygiene.ps1` checks 1 through 4 mechanically except the
+      judgement in step 1.
 9. `[indirect]` **Count how many cards share a cue.** There is no threshold for how *similar* two
    prompts may be — the mechanism is cue overload: the more answers hang off one cue, the slower
    retrieval gets, measured as latency rising by fan level (1367 → 1465 → 1501 ms, Radvansky &
@@ -190,7 +220,11 @@ Rule 1 is the only one with strong direct backing, and it is the one most often 
       that both help a bit are worse than one that helps.
     - **Calibration.** Chapter 9 reached 184 cards and chapter 10 144 before this instruction; those
       are the numbers he objected to. Chapter 5's 102 was accepted earlier but is not a target
-      either. **The agreed target is 40–60 cards per chapter deck**, confirmed 2026-09-09.
+      either. The target agreed on 2026-09-09 was **40–60 cards per chapter deck**, and it was
+      **superseded on 2026-09-26** — see `product.md`. The rule is now "as few as possible, as
+      concentrated on the exam questions as possible", and **40 is not a floor**. HI1031's ten decks
+      were reworked on that basis and landed at 15 to 29 cards each, 219 in total against 401. Cut
+      every card no exam question needs and then report the number; do not pad to reach a range.
 
     This rule and rule 8 point the same way, and this one is stronger: where they conflict, cut.
 
@@ -235,6 +269,8 @@ Wording is only half of it. These four are the highest-value findings in
 | A card stating something the source does not say | Delete it. Plausibility is not grounding, and a wrong card gets memorised on purpose |
 | A card that teaches a calculation procedure | Not a card — see "What cards are for" |
 | A card worded in academic register — *distinktionen*, *vilar på*, *medför att*, *således* | Rewrite it the way you would say it out loud. Keep the technical term, drop the register (rule 15) |
+| A prose card that announces "två saker" and then buries both in a sentence | Make it a `\|\|` list card with `(2)` and one bold label per row — or cut the fact no exam question needs. 98 of HI1031's 401 cards had this shape (rule 8) |
+| A list card with five or more rows | Split it or cut rows to four. Five-row lists are the hardest form measured in this vault, FSRS difficulty 9.88 (rule 8) |
 | A card that is true and in the chapter but serves no exam question | Cut it. Not shorten it — cut it. Card count is a cost the author pays in review time (rule 15) |
 | A deck that grew past ~100 cards for one chapter | Name the exam question behind every card and delete the ones with no answer. 184 and 144 were both rejected by the author |
 | Cards generated by NotebookLM's Studio pasted into a note | They follow none of this vault's conventions — separator choice, one `==…==`, exam-shaped prompts — and cannot be exported anyway. Use them as a *coverage check*: generate questions from the chapter and see which ones the deck cannot answer |
@@ -253,9 +289,16 @@ foreach($m in '<!--SR:', '::', ';;', '\|\|', '\?\?'){ "$m = " + ([regex]::Matche
 
 Then, in order:
 
+- `Test-DeckHygiene.ps1 -Course <CODE>` → `RESULT: clean`. This is the only check that looks at a
+  card's **shape**: an orphaned separator, a list with fewer than 2 or more than 4 rows, a
+  `==highlight==` inside a list body, a missing `(N)` cue, a marker not sitting under a complete card,
+  an answer without exactly one highlight. A card count cannot see any of them — delete one card and
+  add one and the total is unchanged while the deck holds a question with no answer. Run `-SelfTest`
+  once if you have not seen it fire; a zero from a blind check is not a pass.
 - `git diff --numstat -- "<file>"` — proves you touched only what you meant to. A whole-vault
   total cannot: another agent or a phone review changes this vault mid-session
-  (`.kiro/steering/environment.md`).
+  (`.kiro/steering/environment.md`). **Set `[Console]::OutputEncoding` to UTF-8 first** or the path
+  comes back mis-decoded and the diff reports nothing at all (traps T2).
 - Line endings and BOM unchanged. Editing tools may introduce a stray `CRLF` into an LF file;
   count carriage returns in the decoded text before and after:
 

@@ -491,3 +491,91 @@ was wrong. In F78 I said a single newline renders as a space because that is the
 checking `strictLineBreaks`, which Obsidian defaults to `false` precisely so that a newline renders as a
 visible break. Both times the mechanism was right and the outcome was wrong, because a mechanism only
 produces an outcome when its precondition holds. Find the setting and read it.
+
+---
+
+## 2026-09-26 — four green measurements about the same edit, three of them false
+
+**What happened:** a rework of HI1031's ten flashcard decks (F80) was measured four times, and three of
+the four readings were wrong in a way that read as precise.
+
+1. **A diff classifier reported `REVIEW DATA ONLY - safe` for all 23 changed notes.** It ran
+   `git diff --name-only`, then `git diff -- <each path>` and counted marker lines against other lines.
+   Every file came back with 0 added and 0 removed lines of both kinds, so every file was declared safe
+   to edit. The real diff was **1035 insertions and 1605 deletions**. `core.quotepath false` was set, so
+   git was not escaping anything — but PowerShell decoded git's stdout using the console code page, so
+   `Höst` came back as `H|-+st` and every per-file `git diff` matched nothing and exited 0.
+2. **The same session then read `srMarkers at HEAD = 0`** for three decks that HEAD holds 61, 15 and 0
+   markers for, by the same mechanism, and nearly concluded the committed history contained no review
+   data at all.
+3. **A form comparison reported that prose cards were easier than list cards**, 5.2 against 9.6 FSRS
+   difficulty, which would have argued against the author's own instruction to convert hidden
+   multi-fact prose into list cards. The figure pooled all decks, and 29 of the 59 prose-multi-fact
+   cards lived in the deck first drilled the previous evening, where FSRS had not raised difficulty yet.
+   Deck age was masquerading as card form; within each deck the ordering is the opposite in all five.
+4. **`Get-SRIntegrity.ps1 -Compare` printed a clean, precise per-file report of the wrong window.** A
+   parallel agent had called `-Save` mid-run, replacing the 22:56 baseline with a 23:53 one, so the
+   comparison showed chapter 1 as `cards 27 -> 25` and no change at all for chapters 2, 11 and 16. The
+   real movement was 401 → 219 cards and 142 → 73 markers.
+
+A fifth near-miss the same night: the new `Test-DeckHygiene.ps1` returned **zero findings** on the ten
+reworked decks, and its `-SelfTest` then showed that one of its eight checks, `missingCue`, could not
+fire at all — the only card without a cue in the fixture was the orphaned one, whose front line is empty
+and therefore skipped.
+
+**Why the checks missed it:** every one of these *is* a check, and each failed by returning a plausible
+number instead of an error. The shared structure is that **absence was read as evidence**: zero diff
+lines as "nothing changed", zero markers as "no history", zero findings as "clean". None of the four had
+a positive control — nothing established that the measurement was capable of producing a non-zero answer
+on input that deserved one. `Test-ScriptHygiene.ps1` cannot help, because these were session scripts in
+`%TEMP%`, and the trap entries that existed (T2 on mis-decoded paths, the deck-age confound implied by
+earlier `nosr` findings) described the mechanism without saying that the resulting figure looks normal.
+
+**Rule added:**
+
+- `traps.md` **T2** now carries the console-decoding half explicitly, with the 1035/1605 figure, the
+  `[Console]::OutputEncoding` fix, and `git cat-file -e` as the round-trip test. It also says to prefer
+  `git diff --numstat`, which never sends a path back to git.
+- `traps.md` **T22** records the shared `sr-baseline.json`: read the `baseline taken at` line and check
+  it is yours, and with several agents running, keep your own per-file fingerprint instead.
+- `traps.md` **T23** records that `Write-Host` output is invisible to `| Out-String`, which produced a
+  captured report containing only its own exit codes.
+- `references/formulation.md` records the pooled-versus-within-deck confound as a worked example, and
+  now states the field order of an FSRS marker as **read from the plugin source** rather than inferred.
+- `Test-DeckHygiene.ps1` ships a `-SelfTest` that plants one instance of every defect plus two negative
+  controls, and `scripts.md` says to run it before trusting a zero.
+
+**Lesson:** a measurement that can only return zero is indistinguishable from a clean result, so every
+check needs a positive control before its zero is worth anything — and when comparing groups in this
+vault, hold the deck constant, because deck age moves every FSRS figure more than card quality does.
+
+---
+
+## 2026-09-26 — a steering doc named the course's past exam, and the file was the syllabus
+
+**What happened:** `steering/product.md` stated that HI1031 publishes its exam questions *"plus an old
+exam, `HI1031-20192.pdf` in the same folder and converted to Markdown under `Filer/Canvas/AI-optimerad
+Markdown/Tentor/HI1031-20192.md`"*. A reviewer was pointed at that file to check deck coverage against a
+real past paper. It is the **kursplan** from HT19 — the syllabus. Its own frontmatter says
+`Born-digital official kursplan (HT19, utgava 2)`, and its contents are `Lärandemål`, `Kursinnehåll`,
+`Kurslitteratur` and the examination form. The course has **no** past paper. The claim had been in the
+doc for weeks and had been read as a fact about what practice material existed.
+
+The same folder holds a second trap of the same kind: `Tentafrågor_ HI1031 HT26 ... (10321).md` stops
+mid-way through chapter 4 question 2 while its own frontmatter asserts *"Body text checked complete
+against the PDF text layer"*. Both files are named and filed as exam material, and only one of the three
+in that folder is.
+
+**Why the checks missed it:** nothing reads `Filer/`. It is outside `Vault-Audit.ps1`'s scope, in the
+linter's ignore list, and `Test-DocHygiene.ps1` reads `.kiro/` only — deliberately, because the contents
+are third-party downloads the author must not edit. So a claim in a steering doc *about* a file in
+`Filer/` has no mechanical backstop at all, and the filename agreed with the claim, which is what made it
+survive: `Tentor/HI1031-20192.md` looks exactly like an old exam.
+
+**Rule added:** `product.md` now says the course has no past paper, names both misleading files and what
+they actually are, and keeps the useful part of the syllabus — the learning objective *"Kunna kritiskt
+analysera, diskutera och jämföra olika distribuerade metoder och modeller"*, which is why the decks carry
+comparison cards and not only definitions.
+
+**Lesson:** a filename is not a claim about contents, and for the folders no script reads, a doc's
+assertion is only as good as the last time somebody opened the file — so open it before citing it.

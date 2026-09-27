@@ -8,114 +8,84 @@ description: "Flashcards HI1031 kap 10 – peer-to-peer: skillnaden mot klient-s
 
 ## 1. P2P mot klient-server, fördelar och nackdelar
 
-Vad är målet med peer-to-peer-system?::Att dela data och resurser i ==mycket stor skala== genom att avskaffa varje krav på separat administrerade servrar och deras infrastruktur.
-
-Var ligger resurserna i klient-server-modellen?::På ==en serverdator eller ett litet, tätt kopplat kluster==.
-
-Vad begränsar skalan i klient-server, och vad är fördelen?::Skalan begränsas av ==serverns kapacitet och nätanslutning==. Fördelen är att få beslut behövs om var resurser placeras och hur hårdvaran sköts.
-
-Vilka fem kännetecken har ett P2P-system enligt boken? (5)
+Vad skiljer P2P från klient-server? (2)
 ||
-- Varje användare **bidrar med resurser** till systemet
-- Alla noder har **samma funktionella förmåga och samma ansvar**, även om de bidrar med olika mycket
-- Korrekt drift **beror inte på något centralt administrerat system**
-- De kan ge en **begränsad grad av anonymitet** till både utgivare och användare
-- Nyckelfrågan är **algoritmen för att placera data** över många värdar och nå det igen
+- **Klient-server:** resurserna ligger på en server, och skalan begränsas av den datorn
+- **P2P:** alla datorer bidrar med resurser och är likvärdiga, utan central server
 
-Vilka tre fördelar med P2P listar boken i sammanfattningen? (3)
+Vilka är P2P:s viktigaste fördelar? (3)
 ||
-- De **utnyttjar oanvända resurser** – lagring och beräkning – i värddatorerna
-- De **skalar** till många klienter och värdar med utmärkt lastbalansering
-- Mellanprogrammet är **självorganiserande**, så supportkostnaden är i stort oberoende av antalet deltagare
+- **Utnyttjar oanvänd kapacitet** – lagring och beräkning i vanliga datorer
+- **Skalar bra** – klarar många användare med jämn lastbalansering
+- **Självorganiserande** – driftskostnaden växer knappt med antalet deltagare
 
-Vilka två svagheter med P2P listar boken i sammanfattningen? (2)
+Vilka är P2P:s viktigaste svagheter? (2)
 ||
-- Att lagra **föränderlig data är relativt dyrt** jämfört med en betrodd, central tjänst
-- Grunden för anonymitet har **ännu inte gett starka garantier**
+- **Föränderlig data är dyr** att lagra jämfört med en betrodd central tjänst
+- **Svag anonymitet** – tekniken ger ännu inga starka garantier
 
-Varför är P2P-värdar oundvikligen volatila, och vad kan tjänsten då inte lova?::Datorerna ==ägs och sköts av en mängd olika användare==, som inte garanterar att hålla dem påslagna och felfria. Tjänsten kan därför inte lova åtkomst till en enskild resurs, bara göra sannolikheten att missa varje kopia hur liten som helst.
+Varför kan ett P2P-system inte lova att en viss resurs alltid går att nå?::Datorerna ägs av vanliga användare och kan ==stängas av när som helst==. Systemet kan bara göra chansen att missa alla kopior mycket liten.
 
 ## 2. Situationer, datatyper och upphovsrätten
 
-**Självcertifierande** resurs;;Att en klient som får resursen kan ==räkna om hashen och se att den stämmer==, vilket skyddar mot manipulation från de obetrodda noder resursen legat på.
+Vilken typ av data passar P2P bäst, och varför?::==Oföränderliga filer== som musik och video. Objektets id (GUID) är en hash av innehållet, så minsta ändring skulle ge ett nytt id.
 
-Vilken typ av data passar P2P-lagring bäst, och varför?::==Oföränderliga objekt== som musik- och videofiler. GUID:et är en hash av tillståndet, så en ändring skulle ge ett annat hashvärde.
-
-Hur kan föränderlig data hanteras trots hashproblemet?::Genom att lägga till ==betrodda servrar== som sköter en versionsföljd och pekar ut den aktuella versionen. Så gör OceanStore och Ivy.
-
-Vilka två egenskaper hos musikdelning kunde Napster utnyttja? (2)
+Vilka två egenskaper hos musikdelning passade P2P? (2)
 ||
-- **Musikfiler uppdateras aldrig**, så replikerna behöver inte hållas konsistenta
-- **Inga tillgänglighetsgarantier krävs** – är en fil onåbar kan den hämtas senare
+- **Musikfiler ändras aldrig** – kopiorna behöver aldrig hållas i synk
+- **Ingen tillgänglighetsgaranti krävs** – är en fil onåbar hämtar man den senare
 
-När passar P2P sämre?::När ==integritet och tillgänglighet måste garanteras==. Boken säger att de tekniska nackdelarna begränsade Napster-generationen till tillämpningar där sådana garantier var oviktiga.
+När passar P2P dåligt?::När man måste ==garantera integritet och tillgänglighet==.
 
-Hur såg Napsters arkitektur ut?::Med ==centraliserade index==, men användarna tillhandahöll filerna, som lagrades och lästes på deras egna datorer.
+Hur såg Napsters arkitektur ut?::==Centraliserat index==, men själva filerna låg och hämtades på användarnas egna datorer.
 
-Vad hävdade Napsters utvecklare, och varför föll argumentet?::Att de ==inte deltog i kopieringen==, som skedde helt mellan användarnas maskiner. Det föll eftersom indexservrarna bedömdes vara en väsentlig del av processen, och låg på välkända adresser så att operatörerna inte kunde vara anonyma.
+Varför kunde Napster stängas ner juridiskt?::De hävdade att de inte deltog i kopieringen, men de ==centrala indexservrarna var en väsentlig del== av det och låg på kända adresser – så operatörerna kunde pekas ut och stämmas.
 
-Vad skriver boken att en mer fullständigt distribuerad tjänst hade uppnått?::Att ==ansvaret spritts över alla användare==, så att det blivit mycket svårt, om inte omöjligt, att driva rättsliga åtgärder.
+Varför är helt distribuerad fildelning svår att stoppa juridiskt?::Ansvaret ==sprids ut över alla användare==, så det blir mycket svårt, kanske omöjligt, att rikta rättsliga åtgärder mot någon.
 
 ## 3. Icke-funktionella krav
 
-Vilka tre icke-funktionella krav följer av att ett P2P-system är stort? (3)
+Vilka tre krav följer av att P2P-systemet är stort? (3)
 ||
 - **Global skalbarhet**
-- **Lastbalansering** – slumpmässig placering plus repliker av hårt använda resurser
-- **Optimering för lokala interaktioner** mellan närliggande peers, eftersom nätavståndet påverkar latensen
+- **Lastbalansering**
+- **Optimering för närliggande noder** – korta nätavstånd ger lägre fördröjning
 
-Vilka tre icke-funktionella krav följer av att datorerna varken ägs eller kan litas på? (3)
+Vilka tre krav följer av att datorerna varken ägs eller kan litas på? (3)
 ||
-- Anpassning till **mycket dynamisk värdtillgänglighet**
-- **Säkerhet för data** i en miljö med heterogen tillit, via autentisering och kryptering
-- **Anonymitet, förnekbarhet och motstånd mot censur**
-
-Vad innebär kravet på global skalbarhet konkret?::Att stödja tillämpningar som når ==miljoner objekt på tio- eller hundratusentals värdar==.
-
-Vad kräver dynamisk värdtillgänglighet åt båda hållen?::Att en ==anslutande värd integreras och lasten omfördelas== till den, och att systemet upptäcker ett avhopp och fördelar om värdens last och resurser.
-
-Vilken konsekvens drar boken direkt ur kraven?::Att det är ==omöjligt att hålla en databas hos alla klientnoder== över var objekten finns – kunskapen måste partitioneras, distribueras och replikeras, med faktorer så höga som 16.
+- **Klarar att noder kommer och går** (dynamisk tillgänglighet)
+- **Säkerhet** – autentisering och kryptering vid blandad tillit
+- **Anonymitet och motstånd mot censur**
 
 ## 4. Att hitta resurser, routing overlay, strukturerat mot ostrukturerat
 
-**Routing overlay**;;En ==distribuerad algoritm som ruter förfrågningar från klient till en värd som håller objektet==. Kallas överlägg för att den ruter i applikationslagret, skilt från IP-rutningen.
+**Routing overlay**;;En ==algoritm som ruter en förfrågan till den dator som har objektet==. Kallas överlägg för att den ruter i applikationslagret, ovanpå IP.
 
-**GUID**;;En ==globalt unik identifierare== för en nod eller ett objekt, normalt en säker hash av tillståndet. Ett *rent* eller *opakt* namn – det avslöjar ingenting om var objektet finns.
+**GUID**;;En ==globalt unik identifierare== för en nod eller ett objekt, oftast en hash av innehållet. Säger ingenting om var objektet finns.
 
-Vilka fyra uppgifter har en routing overlay? (4)
+I ett strukturerat P2P-nät (DHT), var hamnar ett objekt och var hittar man det?::På ==den nod vars GUID ligger närmast objektets GUID== (plus några grannar som håller kopior).
+
+Hur hittar man en resurs i ett ostrukturerat P2P-nät?::Man ==söker genom nätet genom att fråga grannarna== (flooding). Ingen garanti att objektet hittas.
+
+Strukturerat mot ostrukturerat P2P – för- och nackdelar? (4)
 ||
-- **Ruta förfrågningar till objekt** utifrån deras GUID – huvuduppgiften
-- **Sätta in objekt**: noden räknar ut ett GUID och anmäler det, så objektet blir nåbart för alla
-- **Ta bort objekt**, alltså göra dem otillgängliga
-- Hantera att **noder ansluter och lämnar**, genom att flytta ansvar mellan dem
+- **Strukturerat, fördel:** hittar garanterat objektet, med gränser för tid och trafik
+- **Strukturerat, nackdel:** måste underhålla en komplex struktur, dyrt när noder kommer och går
+- **Ostrukturerat, fördel:** självorganiserande och tåligt mot nodfel
+- **Ostrukturerat, nackdel:** ingen garanti att hitta objektet, kan ge mycket söktrafik
 
-Vad heter de tre operationerna i en distribuerad hashtabell?::==`put(GUID, data)`, `get(GUID)` och `remove(GUID)`==.
-
-Var lagras ett objekt i DHT-modellen?::På ==den nod vars GUID är numeriskt närmast objektets GUID==, plus på de *r* värdar vars GUID:er är näst närmast, där *r* är replikeringsfaktorn.
-
-Vad är prefixrutning?::Att man för varje hopp ==matchar en siffra mer av mål-GUID:et==, så sökningen smalnar av stegvis och antalet hopp växer mycket långsammare än nätet. Används av Pastry och Tapestry.
-
-Hur byggs ett ostrukturerat överlägg, och vad kostar det?::==Ad hoc==, utan övergripande kontroll över topologi eller placering – varje ny nod följer enkla, lokala regler och tar kontakt med grannar. Priset är att man måste söka igenom topologin, utan garanti att objektet hittas.
-
-Vad säger figur 10.11 om strukturerat mot ostrukturerat? (4)
+P2P:s tre generationer? (3)
 ||
-- **Strukturerat, fördel:** garanterat att hitta objekt om de finns, kan ge gränser för tid och komplexitet, relativt låg meddelandeomkostnad
-- **Strukturerat, nackdel:** måste underhålla ofta komplexa överläggsstrukturer, svårt och kostsamt i dynamiska miljöer
-- **Ostrukturerat, fördel:** självorganiserande och naturligt tåligt mot nodfel
-- **Ostrukturerat, nackdel:** sannolikhetsbaserat utan absoluta garantier, och benäget till överdriven meddelandeomkostnad
+- **Napster** – centralt index, filerna hos användarna
+- **Gnutella/Freenet** – ostrukturerat, mer skalbart och anonymt
+- **DHT-mellanprogram** (Pastry m.fl.) – strukturerat, med garanterad leverans
 
 ## 5. IP mot routning på applikationsnivå
 
-Hur skiljer sig namnrymderna i skala?::IPv4 har 2³² adresser och IPv6 2¹²⁸, men adresserna är ==hierarkiskt strukturerade och mycket av rymden förallokerad==. GUID-rymden är mycket stor och platt (>2¹²⁸) och kan fyllas mycket mer fullständigt.
+Vilken relation har rutningsöverlägget till IP?::Det ==ersätter inte IP utan ligger ovanpå==. Varje överläggshopp skickas med ett transportprotokoll (oftast UDP) och kan i sin tur kräva många IP-hopp.
 
-Hur snabbt uppdateras rutningstabellerna i IP jämfört med i ett överlägg?::IP asynkront på best-effort med tidskonstanter i storleksordningen ==en timme==; överlägget synkront eller asynkront med bråkdelar av en sekund.
+Vad är den skarpaste skillnaden mellan IP och överlägget i hur man pekar ut ett mål?::En ==IP-adress pekar på exakt en dator==, medan överlägget kan ruta till den närmaste kopian av ett objekt.
 
-Hur skiljer sig feltoleransen?::IP:s redundans ==byggs in av nätets förvaltare== och tål fel i en router eller koppling, medan *n*-faldig replikering är kostsam. I överlägget kan rutter och objektreferenser replikeras *n*-faldigt.
+Hur skiljer sig IP och överlägget i feltolerans?::IP:s redundans är ==inbyggd i nätet== och tål att en router eller länk går ner. Överlägget klarar fel genom att replikera objekt och rutter på flera noder.
 
-Vad är den skarpaste skillnaden i målidentifiering?::En ==IP-adress avbildas på exakt en målnod==, medan överlägget kan ruta till den närmaste repliken av ett målobjekt.
-
-Hur skiljer sig säkerhet och anonymitet?::IP-adressering är ==bara säker när alla noder är betrodda==, och anonymitet för adressägarna är inte uppnåelig. Överlägget kan ge säkerhet även med begränsad tillit och en begränsad grad av anonymitet.
-
-Vilken reservation gör boken om skillnaderna mellan IP och överlägget?::Att det ==kan hävdas== att flera av dem uppstår ur IP:s legacy-natur – men att arvets genomslag är för starkt att övervinna.
-
-Vilken relation har rutningsöverlägget till IP?::Det ==ersätter inte IP utan ligger ovanpå==. Varje överläggshopp genomförs med ett underliggande transportprotokoll, normalt UDP, och kan kräva många IP-hopp.
+Hur skiljer sig IP och överlägget i skala?::IP:s adressrymd är ==begränsad (IPv4: 2³²)==, medan överläggets GUID-rymd är mycket större (2¹²⁸).

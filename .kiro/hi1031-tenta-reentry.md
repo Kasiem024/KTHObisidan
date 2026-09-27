@@ -5,6 +5,12 @@
 > at **`.kiro/reentry.md`**. Go there first. Keep reading this file only if the task is HI1031
 > again — it is the archive of that project, and its calibration numbers, book line offsets,
 > confirmed errata and reviewer briefs are still accurate and still expensive to re-derive.
+>
+> **Two figures in here are superseded.** The card target of **40–60 per deck** was replaced on
+> 2026-09-26 by "as few as possible, as concentrated on the exam questions as possible" — 40 is not
+> a floor, and the ten decks now hold 15 to 29 cards each, 219 in total. The **exam date** of
+> 21–23 September 2026 is past; the exam was moved and no new date has been given. See
+> `.kiro/steering/product.md` and `.kiro/steering/current-state.md`, which are the live files.
 
 **Detta är den enda filen du behöver få pekad på.** Den skrivs över i slutet av varje
 kontextfönster, precis före `/compact`, och innehåller allt som behövs för att fortsätta arbetet.
