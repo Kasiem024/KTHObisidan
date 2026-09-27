@@ -266,6 +266,8 @@ Wording is only half of it. These four are the highest-value findings in
 | A card this course's exam needs, left out because another course's deck already has it | Add it. That deck is dropped when its course ends, so the only copy would be one the author never reviews again |
 | A card that keeps failing is left as it is | It is producing no transfer at all — split it, add a distinguishing cue, or rewrite it as a new card |
 | A topic covered only by definition cards | Add at least one card that asks what happens / what breaks, so the practised response matches the exam's |
+| Every exam question has a card, so the deck looks finished | Coverage is not readiness. Put three follow-up questions to each written question — *why does it work, what breaks, when would you choose the other thing* — and see whether the deck answers them. On HI1031's ten decks that test found 26 thin and 11 unanswerable out of 147, all of them **tradeoffs and downsides**, while every written question had a card (F81) |
+| A card states the mechanism but never its cost | Add the downside as its own short card. Cutting a deck removes *tradeoff* cards first without anyone noticing, because they are the ones no written question names directly |
 | A card stating something the source does not say | Delete it. Plausibility is not grounding, and a wrong card gets memorised on purpose |
 | A card that teaches a calculation procedure | Not a card — see "What cards are for" |
 | A card worded in academic register — *distinktionen*, *vilar på*, *medför att*, *således* | Rewrite it the way you would say it out loud. Keep the technical term, drop the register (rule 15) |

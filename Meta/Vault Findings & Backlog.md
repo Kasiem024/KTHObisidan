@@ -3509,3 +3509,91 @@ classifier report `REVIEW DATA ONLY - safe` for 23 files whose real diff was 103
 deletions; **T22**, a parallel agent re-saving the shared `sr-baseline.json` mid-run so that `-Compare`
 measured the last twenty minutes of a four-hour edit; and **T23**, `Write-Host` output being invisible to
 `| Out-String`, which produced a captured report holding only its own exit codes.
+
+### F81. ✅ DONE (2026-09-27) — the narrowed HI1031 decks were stress-tested against an oral examiner, and the gap was tradeoffs rather than depth
+
+**Why this was checked.** Immediately after F80 cut the decks from 401 cards to 219, the author asked the
+right question: *"om jag övade bara på de kommer jag verkligen klara av tentan? det finns en chans att
+examinatorn går lite ur banan från den riktiga frågan."* He suspected two failures at once — too narrow,
+and too simple.
+
+**How it was tested.** Four reviewers played examiner on a muntlig enskild examination and put **147
+follow-up questions** to the ten decks, each grounded in the book and inside the topic the written
+question names. Result: **110 answerable, 26 thin, 11 unanswerable.** A fifth reviewer did a depth
+calibration instead, comparing the cards whose answers were shortened most against their pre-rework
+versions held in the backup.
+
+**The depth worry was unfounded, and that is a measured statement.** Of the 20 most-shortened cards
+across the four chapters that lost the most text, **0 had lost the mechanism**. What the shortening
+removed was padding, figures no exam question needs, and second facts that became their own cards. No
+circular cards — no answer that merely restates its question. No card where the `==highlight==` stands
+without context. The median answer did fall 15–30 % (chapter 16 from 181 to 126 characters, chapter 4
+from 116 to 88), but shorter turned out not to mean shallower.
+
+**The real gap was one specific kind of breadth: tradeoffs and downsides.** The same pattern appeared in
+all four examiner reports — he can say *what* and usually *why*, but not what it costs or when you would
+choose the alternative. That is exactly where an examiner probes, and it is invisible to a coverage check,
+because every written exam question still had cards.
+
+A second measurement pointed the same way. Counting cards whose prompt asks for a mechanism
+(*varför*, *hur*, *vad händer*) against cards asking for a definition (*vad är*, *vad kallas*), the
+mechanism cards had been cut **proportionally harder** in five chapters: chapter 2 from 14 to 3 (−79 %)
+against definitions 15 to 9 (−40 %), chapter 6 −64 % against −31 %, chapter 16 −62 % against −33 %,
+chapter 4 −53 % against −30 %, chapter 1 −50 % against −27 %. Backwards for an oral exam. Chapter 2 was
+worst on both counts and also the thinnest deck in the course — 15 cards for 5 questions, with four
+follow-ups unanswerable: the client/server downside, two tiers versus three, and a concrete middleware
+example.
+
+**What was done.** 22 cards added and 2 removed, 219 → **239**. Not a restoration: 37 gaps were found and
+**15 were left open deliberately**, because the author's constraint to keep the count as low as possible
+still holds. Every addition answers a follow-up a reviewer actually asked, and every claim was verified
+against a named book line before the card was written.
+
+| Chapter | Added | Removed | Cards |
+|---|---|---|---|
+| 01 | 2 | – | 26 |
+| 02 | 4 | – | 19 |
+| 04 | 4 | – | 29 |
+| 05 | 1 | – | 24 |
+| 06 | 3 | – | 25 |
+| 09 | 2 | 2 | 18 |
+| 10 | – | – | 22 |
+| 11 | 1 | – | 30 |
+| 16 | 3 | – | 28 |
+| 17 | 2 | – | 18 |
+
+Chapter 10 received nothing — the examiner found no gaps in it, the strongest of the ten.
+
+**Two proposed cards were wrong and were caught before they landed.** The chapter 16 card was to say the
+deadlock victim is *"ofta den yngsta"*. The book says only that **age and the number of cycles** are
+weighed and calls the choice *"not simple"*; the word *youngest* appears nowhere in it, confirmed with a
+second differently-shaped search. And the PUT/POST claim sits in **chapter 5**, not chapter 4 as the
+examiner's note had it — verbatim at *"PUT and DELETE are idempotent, but POST is not necessarily so"*.
+Both were found by an adversarial reviewer re-deriving the line numbers instead of trusting them, which
+is the reason the authoring brief told every agent to do exactly that.
+
+**The hypermedia gap stays open on purpose.** Chapter 9's exam question asks about it; the 2012 book does
+not cover hypermedia or HATEOAS, now confirmed independently by four reviewers. Inventing an answer would
+put a probable falsehood into a deck that is memorised deliberately. Closing it means accepting a
+non-book source, which is the author's decision.
+
+**A uniformity fix found on the way.** All ten decks had just been rewritten but carried four different
+frontmatter `updated` dates — 2026-09-09, 09-10, 09-15 and 09-27. The audit only checks that the field
+*exists*, so nothing would ever have caught it. All ten now read 2026-09-27, and the edit was verified to
+leave card counts, marker counts and CR counts byte-identical per file.
+
+**Verified.**
+
+- `Test-DeckHygiene.ps1 -Course HI1031` → **exit 0**, 239 cards, 73 markers, no findings.
+- `Get-SRIntegrity.ps1 -Compare` → card counts up in the eight intended files, **zero marker changes,
+  no moved markers**, `notes tagged nosr` unchanged at 46.
+- Marker counts compared **HEAD against disk, file by file**: identical in all ten decks. This was the
+  decisive check, because a vault-wide total cannot isolate one editor's work.
+- `Vault-Audit.ps1` clean, `notesInScope=528` of 709. `markdownlint-cli2` 551 files, 0 issues.
+  `Get-DeckPairCensus.ps1` across all ten: 0 CR characters, 0 double blank lines.
+
+**One figure moved that this work did not cause.** The vault-wide marker total fell by 2 comments between
+two readings 90 minutes apart, in files not touched here. Obsidian was running with the spaced-repetition
+plugin active — `data.json` is modified and its `buryDate` rolled over to the new day — which is the
+documented way this vault changes under an editor (`environment.md`). Recorded rather than explained away:
+the per-file HEAD-versus-disk check is what proves this session's work clean, not the total.

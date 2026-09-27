@@ -13,11 +13,21 @@ recorded as F80.**
 after a compact. `.kiro/hi1031-tenta-reentry.md` is the archive of the earlier HI1031 writing project,
 not a live state file.
 
-## Done: HI1031 deck narrowing (2026-09-26, F80)
+## Done: HI1031 deck narrowing (2026-09-26, F80) and its follow-up stress test (2026-09-27, F81)
 
 All ten chapter decks — 1, 2, 4, 5, 6, 9, 10, 11, 16 and 17 — were cut from **401 cards to 219**, with
 every remaining card traceable to a named exam question. 69 markers were removed with the 69 cards that
 carried them, and hidden multi-fact prose cards went from 98 to 0. `nosr` was not touched on any deck.
+
+**Then the narrowed decks were stress-tested against an oral examiner (F81)**, because the author asked
+whether they were still enough. Four reviewers put **147 follow-up questions** to them: 110 answerable,
+26 thin, 11 unanswerable. A depth calibration found **0 of 20** shortened cards had lost their mechanism,
+so the cards were not too shallow — the gap was one specific kind of breadth, **tradeoffs and downsides**,
+which a coverage check cannot see because every written question still had a card. 22 cards were added and
+2 removed, landing at **239**. 15 of the 37 gaps were left open deliberately, to keep the count low.
+
+Current counts per chapter: 01 26, 02 19, 04 29, 05 24, 06 25, 09 18, 10 22, 11 30, 16 28, 17 18.
+Markers: 18, 7, 0, 0, 0, 0, 0, 23, 25, 0 — 73 in total.
 
 **Read `product.md` before writing any more cards:** the 40–60 target is superseded. The rule is now "as
 few as possible, as concentrated on the exam questions as possible", and 40 is not a floor.
@@ -27,9 +37,10 @@ few as possible, as concentrated on the exam questions as possible", and 40 is n
 
 **Two things left for the author to decide, neither blocking:**
 
-1. **Chapter 9's exam question 2 asks about hypermedia, and the 2012 book does not cover it.** The cards
-   that previously answered it came from restfulapi.net. They were removed and nothing was invented in
-   their place. Closing that gap means accepting a non-book source, which is his call.
+1. **Chapter 9's exam question 2 asks about hypermedia, and the 2012 book does not cover it.** Confirmed
+   independently by four reviewers. The cards that previously answered it came from restfulapi.net. They
+   were removed and nothing was invented in their place. Closing that gap means accepting a non-book
+   source, which is his call.
 2. **HI1032's twelve chapter decks have 65 form findings** — 36 highlights inside list bodies, 21 missing
    `(N)` cues, 5 lists longer than four rows, 3 wrong highlight counts. Run
    `Test-DeckHygiene.ps1` with no `-Course` to see them. Those decks predate these conventions and were
