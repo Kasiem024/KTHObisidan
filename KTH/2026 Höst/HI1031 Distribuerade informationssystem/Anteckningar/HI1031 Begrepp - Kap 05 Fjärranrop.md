@@ -25,6 +25,8 @@ Vilka fyra delar sköter ett RMI-anrop, och vad gör de? (4)
 
 Hur skickas parametrar vid ett fjärranrop (RMI)?::==Fjärrobjekt skickas som referens==, allt annat kopieras och skickas som värde.
 
+Hur skapar en server nya fjärrobjekt?::Med en ==factory-metod== som skapar objektet och skickar tillbaka en referens – en konstruktor går inte att anropa på distans.
+
 ## Fråga 2 – Sockets mot distribuerade objekt
 
 När kan enkel request-reply (sockets) vara bättre än distribuerade objekt?::När man vill ha något ==lättviktigt och minimalt== och slippa onödiga omkostnader – boken nämner inbyggda system.

@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-09-09
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 2, avgränsade till tentafrågorna om arkitektur: trelagersarkitektur, MVC, middleware, fördelarna med klient/server och mobila agenter."
 ---
 # HI1031 Begrepp - Kap 02 Systemmodeller
@@ -17,6 +17,11 @@ Vilka tre skikt har en trelagersarkitektur? (3)
 - **Applikationsservern** – kör logiken
 - **Databasservern** – lagrar datan
 <!--SR:!fsrs,2026-09-21T16:19:49.541Z,0,0.15703249,9.91521101,3,6,1,0,2026-09-21T16:09:49.541Z-->
+
+Vad kostar tre lager jämfört med två? (2)
+||
+- **Mer att sköta** – tre servrar i stället för två
+- **Långsammare** – varje anrop går ett steg längre
 
 ## MVC-arkitektur
 
@@ -46,11 +51,15 @@ Vilka fyra lager har boken, nedifrån och upp? (4)
 - **Middleware**
 - **Tillämpningar och tjänster**
 
+Ge exempel på middleware.::==CORBA, Java RMI och Sun RPC== – lager som låter program på olika datorer anropa varandra.
+
 ## Fördelar med klient/server
 
 Vad är fördelen med en klient/server-lösning?::Ett ==enkelt och direkt sätt att dela på data och resurser==.
 
 Hur ser rollerna ut i klient/server?::==Klienter ber servrar== om de resurser som servern håller i, ofta på en annan dator.
+
+Vad är nackdelen med klient/server?::Den ==skalar dåligt== – all last hamnar på en server som blir flaskhals när användarna blir många.
 
 ## Mobila agenter
 
@@ -66,3 +75,5 @@ Ge bokens två användningsexempel för mobila agenter. (2)
 - **Jämföra priser** hos flera leverantörer genom att besöka varje plats och köra databasoperationer
 
 Varför är en mobil agent en säkerhetsrisk för datorn den besöker?::Datorn måste ==bestämma vilka resurser agenten får använda==, beroende på vem den jobbar åt.
+
+Vilken begränsning har en mobil agent?::Den ==får sällan komma åt det den behöver== – värden misstror kod utifrån och stänger av det mesta.

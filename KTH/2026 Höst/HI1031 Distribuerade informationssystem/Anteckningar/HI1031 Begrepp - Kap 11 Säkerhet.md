@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, säkerhet, KTH, year2026]
 created: 2026-08-24
-updated: 2026-09-09
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 11 – säkerhet: hot och attacker, kryptografins roller, symmetrisk, asymmetrisk och hybridkryptering, digitala signaturer, certifikat och TLS."
 ---
 # HI1031 Begrepp - Kap 11 Säkerhet
@@ -91,6 +91,8 @@ Hur skapas och kontrolleras en digital signatur? (2)
 - **Skapas** – hasha meddelandet och kryptera hashen med din privata nyckel
 - **Kontrolleras** – dekryptera med avsändarens publika nyckel och jämför med en egen hash
 <!--SR:!fsrs,2026-09-27T20:27:33.418Z,1,0.04575401,9.95716975,2,9,1,0,2026-09-26T20:27:33.418Z-->
+
+Varför hashar man meddelandet innan man signerar det?::Asymmetrisk kryptering är långsam, så man signerar ==en kort sammanfattning== i stället för hela dokumentet.
 
 ## 4.1 Säkra sammanfattningsfunktioner
 

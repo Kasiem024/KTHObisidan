@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-09-15
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 10 – peer-to-peer: skillnaden mot klient-server med för- och nackdelar, passande situationer och datatyper, Napster och upphovsrätten, de sex icke-funktionella kraven, routing overlay och DHT, strukturerat mot ostrukturerat, samt IP jämfört med routning på applikationsnivå."
 ---
 # HI1031 Begrepp - Kap 10 Peer-to-peer-system

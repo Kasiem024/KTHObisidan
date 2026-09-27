@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026]
 created: 2026-08-24
-updated: 2026-09-10
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 16, byggda mot tentafrågorna: deadlocks, dirty reads, optimistisk samtidighetskontroll, tidsstämpelordning och jämförelsen mellan de tre metoderna."
 ---
 # HI1031 Begrepp - Kap 16 Transaktioner och samtidighetskontroll
@@ -39,6 +39,8 @@ Vad är problemet med att låsa alla objekt när transaktionen startar? (2)
 Vad är det värsta problemet med timeout?::Att en transaktion ==kan abort:as fast det inte fanns någon deadlock== – bara för att låset blev sårbart medan någon väntade.
 <!--SR:!fsrs,2026-09-27T18:13:03.017Z,2,2.29815136,3.4641143,2,2,0,0,2026-09-25T18:13:03.017Z-->
 
+Vilken transaktion avbryter man vid en deadlock?::Valet är inte enkelt – man väger in ==transaktionens ålder och hur många cykler den sitter i==.
+
 ## 2. Dirty reads
 
 **Dirty read** (smutsig läsning);;När en transaktion ==läser ett värde som en annan skrivit men inte commit:at==. Abort:ar den andra har man läst ett värde som aldrig fanns.
@@ -52,6 +54,8 @@ Vad är återhämtningsbarhet (recoverability) mot dirty reads?::Att ==skjuta up
 
 **Strikt körning** (strict execution);;När läsning och skrivning på ett objekt ==skjuts upp tills alla som tidigare skrivit det har commit:at eller abort:at==. Det är detta som ger isolering och stoppar dirty reads.
 <!--SR:!fsrs,2026-09-26T20:46:30.301Z,0,0.08641389,9.45690513,3,4,1,0,2026-09-26T20:36:30.301Z!fsrs,2026-09-27T20:46:51.271Z,1,0.20347043,8.39432857,2,4,1,0,2026-09-26T20:46:51.271Z-->
+
+Vad är en kaskadabort?::Avbryter man en transaktion måste ==alla som läst dess osparade värden också avbrytas==.
 
 ## 3. Optimistisk samtidighetskontroll
 
@@ -74,6 +78,8 @@ Vilka tre faser har en optimistisk transaktion? (3)
 
 Vad är den stora nackdelen med optimistisk kontroll?::Att ==mycket arbete kan behöva göras om när en transaktion abort:as==. Den lönar sig bara när krockarna är få.
 <!--SR:!fsrs,2026-09-27T18:29:07.326Z,2,2.29815136,3.4641143,2,2,0,0,2026-09-25T18:29:07.326Z-->
+
+Hur ser valideringen att två transaktioner krockat?::Den jämför transaktionens ==lästa och skrivna objekt mot de andra som kört samtidigt==.
 
 ## 4. Tidsstämpelordning mot tvåfaslåsning
 

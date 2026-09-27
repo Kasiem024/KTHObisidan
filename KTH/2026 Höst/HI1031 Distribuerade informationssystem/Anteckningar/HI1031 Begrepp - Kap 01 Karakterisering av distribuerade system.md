@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-09-09
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 1, avgränsade till tentafrågorna: exempel på distribuerade system, resursdelning, de åtta utmaningarna, arvet från IP, HTTP och HTML samt internetprotokollens och RFC-seriens roll."
 ---
 # HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system
@@ -9,6 +9,12 @@ description: "Flashcards HI1031 kap 1, avgränsade till tentafrågorna: exempel 
 ## Vad ett distribuerat system är
 
 Vad är ett distribuerat system?::Delar på olika datorer i ett nät som samordnar sig ==bara genom att skicka meddelanden==.
+
+Vilka tre saker följer av att datorerna bara pratar via nätet? (3)
+||
+- **Samtidighet** – allt händer parallellt, utan turordning
+- **Ingen gemensam klocka** – datorerna kan inte enas om exakt tid
+- **Fel drabbar en del i taget** – resten fortsätter utan att veta om det
 
 ## Exempel på distribuerade system
 
@@ -73,6 +79,8 @@ Vilka två säkerhetsutmaningar är ännu inte lösta? (2)
 
 Vilket krav ställer boken på resursbehovet i ett skalbart system?::Hårdvaran för *n* användare ska vara ==högst O(n)== – klarar en filserver 20 användare ska två klara 40.
 <!--SR:!fsrs,2026-10-10T16:20:33.398Z,19,18.86782,7.09510771,2,4,0,0,2026-09-21T16:20:33.398Z-->
+
+Hur får man ett system att skala i praktiken?::Man ==lägger till fler servrar och kopior== och cachar det som efterfrågas ofta, så lasten sprids.
 
 ## Felhantering
 

@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-09-09
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 6, ordnade efter kursens fem tentafrågor: poängen med indirekt kommunikation, gruppkommunikation, publish-subscribe, message queuing och jämförelsen mellan de tre."
 ---
 # HI1031 Begrepp - Kap 06 Indirekt kommunikation
@@ -55,6 +55,8 @@ Vilka tre delar består verktyget JGroups av? (3)
 - **Building blocks** – färdiga byggblock på högre nivå
 - **Protokollstacken** – ihopsättbara lager, och alla i gruppen måste ha samma
 
+Hur når ett meddelande alla när avsändaren bara anger ett grupp-id?::==Medlemstjänsten översätter grupp-id till en aktuell medlemslista== vid leveransen.
+
 ## Fråga 3 – Publish-subscribe och hur det kan implementeras
 
 Hur fungerar publish-subscribe?::Utgivare (publishers) skickar ut händelser, prenumeranter (subscribers) anmäler vad de vill ha, och systemet ==matchar och levererar bara det som passar==.
@@ -76,6 +78,8 @@ Varför räcker det inte med en enda central mäklare? (2)
 ||
 - **Enda felpunkt** – går den ner slutar allt fungera
 - **Flaskhals** – all trafik måste passera en nod
+
+Hur hittar en händelse rätt prenumerant i ett nät av mäklare?::==Prenumerationerna sprids ut mot utgivarna==, så varje mäklare skickar bara vidare dit det finns någon som vill ha den.
 
 ## Fråga 4 – Message queuing och hur det implementeras bra
 
@@ -106,3 +110,5 @@ Vad är svårast att bygga i de tre metoderna? (3)
 - **Grupp** – medlemshantering och ordning
 - **Publish-subscribe** – matchning och routing av händelser
 - **Message queue** – persistens och att välja rätt topologi
+
+Vilken av de tre skalar sämst, och varför?::==Gruppkommunikation== – alla medlemmar måste hållas reda på, så det blir tyngre för varje ny medlem.

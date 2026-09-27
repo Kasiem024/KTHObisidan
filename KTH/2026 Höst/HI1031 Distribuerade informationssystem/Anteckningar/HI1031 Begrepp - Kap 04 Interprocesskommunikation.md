@@ -1,7 +1,7 @@
 ---
 tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-08-24
-updated: 2026-09-15
+updated: 2026-09-27
 description: "Flashcards HI1031 kap 4, ordnade efter kursens sex tentafrågor: karakterisering av IPC-anrop, XML, UDP/TCP/multicast, portar och multicast, IPC mot distribuerade objekt, samt nätverks- och systemvirtualisering."
 ---
 # HI1031 Begrepp - Kap 04 Interprocesskommunikation
@@ -39,6 +39,8 @@ Vad kan man använda XML till? (4)
 - **Användargränssnitt**
 - **Konfigurationsfiler**
 
+Vad kostar det att XML är text med taggar?::Meddelandena blir ==större och långsammare att tolka== än binära format.
+
 ## Fråga 3 – Tre typer av IPC
 
 Vilka tre typer av IPC tar boken upp? (3)
@@ -59,6 +61,13 @@ Vad döljer TCP-strömmen för programmeraren? (4)
 - **Dubbletter och ordning**
 
 Vad gör en multicast-operation?::Skickar ==ett enda meddelande till alla medlemmar i en grupp==.
+
+När väljer man UDP framför TCP? (2)
+||
+- **UDP** – när snabbhet väger mer än att allt kommer fram
+- **TCP** – när allt måste komma fram i rätt ordning
+
+Garanterar TCP att allt kommer fram?::Nej – ==bryts anslutningen ger TCP upp==, och programmet vet inte hur mycket som hann fram.
 
 ## Fråga 4 – Portar med flera mottagare
 
@@ -106,3 +115,5 @@ Vad vinner man på systemvirtualisering, jämfört med processer? (4)
 - **Renare uppdelning** av uppgifter
 - **Exaktare debitering** per användare
 - **Lätt att flytta VM:er** – färre servrar och mindre energi
+
+Vad kostar ett overlay-nät?::Ett ==extra lager att gå igenom==, så det blir långsammare än att prata direkt över nätet.

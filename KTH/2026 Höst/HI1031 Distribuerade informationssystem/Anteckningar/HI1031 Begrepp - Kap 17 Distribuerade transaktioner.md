@@ -14,6 +14,11 @@ Vilka extra problem får en distribuerad transaktion jämfört med en lokal? (3)
 - **Global ordning** – varje server ordnar sina egna objekt, men samma ordning måste gälla på alla servrar
 - **Distribuerad deadlock** – en väntecykel som ligger utspridd över servrar och som ingen ser ensam
 
+Hur hittar man en deadlock som ligger över flera servrar? (2)
+||
+- **Central detektor** – en server slår ihop allas väntegrafer och letar cykel
+- **Edge chasing** – ett sökmeddelande följer väntekanterna tills det kommer tillbaka
+
 ## 2. Tvåfas-commit (2PC)
 
 Varför räcker inte ett enfas-protokoll för commit?::Ett enfas-protokoll låter ingen server säga nej. Men det kan en server behöva, t.ex. efter en ==deadlock eller krasch==.
@@ -29,6 +34,8 @@ Vad händer i fas 2 av 2PC, genomförandefasen? (2)
 - Deltagarna gör som de blir tillsagda och **bekräftar** att de commit:at
 
 Vad är problemet för en deltagare som röstat Yes men inte fått veta utfallet?::Den måste ==vänta och hålla kvar sina lås== tills koordinatorn svarar. Har koordinatorn kraschat kan väntan bli lång.
+
+Varför sparar deltagaren allt innan den röstar Yes?::För att ett Yes är ==ett löfte den måste kunna hålla efter en krasch==, så ändringarna måste finnas kvar.
 
 ## 3. Hierarkiskt kontra flat 2PC
 

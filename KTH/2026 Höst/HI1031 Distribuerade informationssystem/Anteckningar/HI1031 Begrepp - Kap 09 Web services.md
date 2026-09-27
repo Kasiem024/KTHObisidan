@@ -20,6 +20,8 @@ Ge exempel på protokoll eller arkitekturer för webbtjänster. (2)
 - **SOAP** – XML-meddelanden, oftast skickade över HTTP
 - **REST** – enkla anrop mot resurser med vanliga HTTP-operationer
 
+Hur får man låg koppling i praktiken?::Man programmerar mot ==ett enkelt och allmänt gränssnitt== i stället för mot den andra sidans kod.
+
 ## 2. REST, principerna, resurser och hypermedia
 
 Vad är REST?::Ett ==mycket begränsat arbetssätt== där klienten använder URL:er och de vanliga HTTP-operationerna GET, PUT, POST och DELETE för att hantera resurser.
@@ -31,7 +33,7 @@ Vilka principer bygger REST på? (4)
 - **Fokus på data**, inte på gränssnitt
 - **Klienten får hela resursens tillstånd** på en gång
 
-Hur accessas resurser i en REST-arkitektur?::Varje resurs pekas ut av sin ==URL==, och man agerar på den med GET, PUT, POST eller DELETE.
+Vad skiljer PUT från POST?::==PUT ger samma resultat hur många gånger den körs==; POST gör en ny sak varje gång.
 
 ## 3. Distribuerade objekt mot webbtjänster
 
@@ -56,7 +58,5 @@ Hur byggs SOA oftast, och varför?::Med ==webbtjänster==, mest tack vare deras 
 ## 5. Ajax och webbtjänster
 
 Vad är Ajax?::Ett sätt att låta ett JavaScript-program i webbläsaren ==prata i småbitar med servern==, utan att ladda om sidan.
-
-Vad gör Ajax som en vanlig webbsida inte kan?::Den kan ==uppdatera en liten del av sidan== med ny data från servern utan att ladda om hela sidan, och gör det asynkront.
 
 Vad är relationen mellan Ajax och webbtjänster?::Båda ==skickar data som XML över HTTP==, inte bara färdiga webbsidor. Skillnaden: Ajax kopplar webbläsaren till sin egen server, medan webbtjänster kopplar ihop skilda program över internet.
