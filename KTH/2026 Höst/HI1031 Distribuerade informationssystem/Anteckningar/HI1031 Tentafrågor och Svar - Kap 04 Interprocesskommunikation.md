@@ -17,8 +17,7 @@ IPC görs med två operationer, **send** och **receive**. En process skickar ett
 av bytes== — till en destination, och en process där tar emot det. Boken karakteriserar ett anrop på
 **fyra sätt**.
 
-**1. Synkront eller asynkront.** Varje destination har en **kö**: sändaren lägger i en ==fjärrkö==,
-mottagaren plockar ur sin ==lokala kö==.
+**1. Synkront eller asynkront.** Varje destination har en **kö**.
 
 - **Synkront:** ==både send och receive blockerar==. `send` blockerar till motsvarande `receive` görs,
   `receive` till ett meddelande kommer.
@@ -55,9 +54,8 @@ fel==.
 Bokens avsnitt: 4.3.3, plus 4.3
 
 **Vad det är.** XML, *Extensible Markup Language*, är ett **märkspråk** definierat av **W3C** — alltså en
-==textbaserad kodning som representerar både en text och dess struktur eller utseende==. Både XML och HTML
-kommer från **SGML**, men HTML gjordes för ==hur en webbsida ser ut== och XML för ==strukturerade
-dokument==.
+==textbaserad kodning som representerar både en text och dess struktur eller utseende==. HTML gjordes för
+==hur en webbsida ser ut== och XML för ==strukturerade dokument==.
 
 **Skillnaden mot HTML:** XML:s taggar beskriver ==den logiska strukturen== hos det de omsluter, HTML:s
 säger ==hur webbläsaren ska visa== texten. Och XML är **extensible** — ==du får definiera egna taggar==,
@@ -66,12 +64,10 @@ vara överenskomna==, och därför är **SOAP** ett XML-format vars taggar är =
 
 **Det är självbeskrivande, och det är poängen.** CORBA CDR behöver inte vara det, eftersom sändare och
 mottagare redan känner ordningen och typerna. XML skulle användas av ==flera tillämpningar för olika
-syften==, och taggarna plus **namnrymder** gör det möjligt — en namnrymd är en uppsättning namn
-==refererad med en URL==, så en tillämpning kan använda ==flera uppsättningar definitioner utan
-namnkollisioner==. Taggarna ger en andra vinst: en tillämpning kan ==välja bara de delar den behöver== och
-==påverkas inte om någon lägger till information för en annan tillämpning==. Ett **schema** anger vilka
-element och attribut som får finnas, i vilken ordning och av vilken typ, och en SOAP-mottagare
-==validerar med samma schema som avsändaren kodade med==.
+syften==, och taggarna plus **namnrymder** gör det möjligt — en tillämpning kan använda ==flera
+uppsättningar definitioner utan namnkollisioner==. Taggarna ger en andra vinst: en tillämpning kan
+==välja bara de delar den behöver== och ==påverkas inte om någon lägger till information för en annan
+tillämpning==.
 
 **Vad det används till, enligt boken:** **webbtjänster** i första hand — klienter pratar med dem i XML
 (SOAP), och XML ==definierar deras gränssnitt och andra egenskaper==. Dessutom **arkivering och
@@ -84,7 +80,7 @@ komprimering==.
 
 ### Muntligt svar
 
-1. **Definiera**: ett märkspråk från W3C för strukturerade dokument, ur SGML precis som HTML.
+1. **Definiera**: ett märkspråk från W3C för strukturerade dokument.
 2. Ge **skillnaden mot HTML**: XML:s taggar beskriver strukturen, HTML:s utseendet. Och du får hitta på
    egna taggar.
 3. Säg att det är **självbeskrivande**, och varför: det ska kunna användas av flera tillämpningar som inte
@@ -92,7 +88,6 @@ komprimering==.
 4. Ge **användningarna**: webbtjänster och SOAP först, sedan arkivering, gränssnitt och
    konfigurationsfiler.
 5. Ge **priset**: text plus taggar ger stora meddelanden och längre tider – men HTTP 1.1 kan komprimera.
-6. Har du tid: nämn **schema**, och att avsändare och mottagare av ett SOAP-meddelande använder samma.
 
 ## Fråga 3 – Beskriv tre olika typer av IPC
 
@@ -119,7 +114,7 @@ leverans.
 - **Men TCP är inte tillförlitlig kommunikation.** Passerar paketförlusten en gräns, eller kapas eller
   överbelastas nätet, ==förklarar TCP förbindelsen bruten==. Två följder: processerna kan ==inte skilja
   ett nätfel från att processen i andra änden dött==, och de kan ==inte veta om det de nyligen skickade
-  kom fram==. ==HTTP, FTP, Telnet och SMTP== använder TCP.
+  kom fram==.
 
 **3. Multicast — ett meddelande till en grupp.** En **multicast-operation** skickar ==ett enda meddelande
 från en process till varje medlem i en grupp==, normalt så att ==medlemskapet är transparent för
@@ -261,10 +256,9 @@ nät==, som internet. Varje virtuellt nät kan utformas för ==en bestämd distr
 
 **Den stora vinsten, och den knyter ihop kursen:** det ==ger en idé om hur man kommer runt problemet i
 Saltzers end-to-end-argument== — boken hedgar med "suggests an answer", så säg inte att det löser det.
-Argumentet säger att ==vissa funktioner bara kan göras helt och tillförlitligt med hjälp från tillämpningen
-i ändpunkterna==, så man bör inte bygga in dem i nätet. Virtualiseringen kringgår det: man bygger ett
-==tillämpningsspecifikt virtuellt nät ovanpå ett befintligt== och ==optimerar det för just den
-tillämpningen, utan att ändra det underliggande nätets egenskaper==.
+Virtualiseringen kringgår det: man bygger ett ==tillämpningsspecifikt virtuellt nät ovanpå ett
+befintligt== och ==optimerar det för just den tillämpningen, utan att ändra det underliggande nätets
+egenskaper==.
 
 Ett **overlay-nät** är ett virtuellt nät av ==noder och virtuella länkar== ovanpå ett underliggande nät,
 som ger ==något som annars inte finns==: en tjänst anpassad för en klass av tillämpningar, ==effektivare
@@ -278,9 +272,9 @@ drift== i en viss miljö, eller en ==extra funktion== som multicast eller säker
   än TCP/IP:s relativt enkla arkitektur.
 
 **Systemvirtualisering (7.7.1)** ger ==flera virtuella maskiner ovanpå en fysisk maskinarkitektur==, där
-==varje virtuell maskin kör en egen instans av ett operativsystem== och ett tunt lager mjukvara — en
-**hypervisor** — fördelar de fysiska resurserna mellan dem. Vinsten mot processer, som historiskt gjorde
-samma jobb, är ==säkerhet, renare uppdelning av uppgifter och exaktare debitering== per användare. De
+==varje virtuell maskin kör en egen instans av ett operativsystem==, styrda av en **hypervisor**. Vinsten
+mot processer, som historiskt gjorde samma jobb, är ==säkerhet, renare uppdelning av uppgifter och
+exaktare debitering== per användare. De
 konkreta vinsterna boken pekar på: virtuella maskiner kan ==migreras ganska enkelt==, vilket ger
 flexibilitet i driften och kan ==minska investeringen i serverdatorer och sänka energiförbrukningen==, och
 det ==möjliggör direkt infrastructure as a service==.

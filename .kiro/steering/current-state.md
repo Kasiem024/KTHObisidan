@@ -48,9 +48,14 @@ running it.
 
 **Two things left for the author to decide, neither blocking:**
 
-1. **Chapter 9's exam question 2 asks about hypermedia, and the 2012 book does not cover it.** Confirmed
-   independently by four reviewers. The cards that previously answered it came from restfulapi.net and
-   were removed; nothing was invented in their place. Closing the gap means accepting a non-book source.
+1. **Chapter 9's deck has no card for the hypermedia part of exam question 2, and that is now a plain
+   gap rather than a judgement call.** It was reported on 2026-09-26 as needing his decision because
+   closing it "means accepting a non-book source". **That premise was wrong, corrected 2026-10-01:**
+   KursPM line 58 requires `restfulapi.net` — *What is REST*, *REST Constraints*, *Naming REST
+   resources* — as course literature alongside chapter 9, and the vault holds a saved copy at
+   `REST - restfulapi.net.md`. The 2012 book genuinely never uses the word *hypermedia*, which is why
+   four reviewers found no coverage; but the second required source does, so HATEOAS is examinable
+   material from the reading list and the cards removed in F80 should come back.
 2. **HI1032's twelve chapter decks and its Labb 1 deck carry form findings** — run
    `Test-DeckHygiene.ps1` with no `-Course` to see them. Those decks predate these conventions. HI1031's
    ten and HI1032's Labb 5 are clean. `-All` widens the scan to every note holding a card and reports

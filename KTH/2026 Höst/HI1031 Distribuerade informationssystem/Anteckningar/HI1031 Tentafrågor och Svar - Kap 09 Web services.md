@@ -35,9 +35,6 @@ vanlig webbserver, som bara ger en grundläggande HTTP-tjänst.
 - **När HTTP är enda vägen in.** De flesta organisationer har ==brandvägg==, och transportprotokollen
   som Java RMI och CORBA använder släpps **normalt inte** igenom, medan HTTP och SMTP släpps **normalt**
   igenom.
-- **Riktiga exempel:** Amazon, Yahoo, Google och eBay erbjuder alla webbtjänstgränssnitt, och Amazons
-  ==kan nås både med SOAP och med REST==. Ett annat är ==*sniping* på eBay== — att lägga ett bud under
-  sista sekunderna, vilket en människa inte hinner göra lika snabbt.
 
 **Låg koppling — vad det betyder.** Boken varnar först: begreppet är ==ofta luddigt och oprecist
 använt==. I webbtjänstsammanhang betyder det att ==hålla beroendena mellan tjänster så små som möjligt==,
@@ -48,9 +45,8 @@ de är tänkta att vara oberoende och kombinerbara.
 implementationen== ger en nivå av låg koppling och hanterar heterogenitet i språk och plattform. **Enkla,
 generella gränssnitt** — trenden går mot minimala gränssnitt, där webben själv och REST är exemplen, och
 det minskar beroendet av ==specifika operationsnamn== så att data blir viktigare än operation. **Valet av
-kommunikationsparadigm** — i request-reply är parterna i grunden kopplade, asynkrona meddelanden ger
-==synkroniseringsfrikoppling== så avsändaren inte behöver vänta, och indirekt kommunikation ger dessutom
-frikoppling i tid och rum (kapitel 6).
+kommunikationsparadigm** — i request-reply är parterna i grunden kopplade, medan asynkrona meddelanden ger
+==synkroniseringsfrikoppling== så avsändaren inte behöver vänta.
 
 **Så kan du tänka:** låg koppling är inte en egenskap man har eller inte har, utan flera axlar samtidigt.
 
@@ -59,9 +55,7 @@ frikoppling i tid och rum (kapitel 6).
 - **XML** — textformatet för extern datarepresentation och ==marshalling==. Skrymmande och långsammare
   att parsa än binära format, men valt för ==läsbarheten och därmed enklare felsökning==.
 - **SOAP** — reglerna för hur XML används för att ==packa meddelanden==, hur ett par enkelriktade
-  meddelanden bildar ==request-reply==, och hur HTTP och SMTP används för att skicka dem. Meddelandet
-  ligger i en ==envelope== med en valfri ==header== och en ==body==, och kuvertet bär ingen
-  destinationsadress — det är transportprotokollets sak.
+  meddelanden bildar ==request-reply==, och hur HTTP och SMTP används för att skicka dem.
 - **REST** — alternativet till SOAP, se fråga 2.
 - **WSDL** — språket tjänstebeskrivningar normalt skrivs i. Beskrivningen bär gränssnittet, hur
   meddelanden ska skickas och tjänstens URI, vilket ==gör en separat binder eller namntjänst onödig==.
@@ -73,7 +67,7 @@ frikoppling i tid och rum (kapitel 6).
 2. Poängen är att gå tillbaka till specialiserade klienter: en webbläsare är för allmän för att bygga
    riktiga tillämpningar på.
 3. Den används mellan organisationer utan människa i loopen, och för att kombinera flera tjänster till
-   en ny — resebyråexemplet. Amazon, Google och eBay har alla sådana gränssnitt.
+   en ny — resebyråexemplet.
 4. Praktiskt skäl: brandväggar släpper igenom HTTP och SMTP men normalt inte RMI:s eller CORBA:s
    transport.
 5. Låg koppling betyder att minimera beroendena mellan tjänster så att en ändring inte fortplantar sig.
@@ -83,9 +77,9 @@ frikoppling i tid och rum (kapitel 6).
 
 ## 2. Vad är REST och vilka principer ska en RESTful webbtjänst uppfylla? Hur accessas resurser i en REST-arkitektur? Vilken roll har hypermedia
 
-Bokens avsnitt: rutan i §9.2. **Övrig källa:** restfulapi.net "What is REST?", som KursPM kräver.
-**Läs varningen sist i frågan** — de två källorna säger delvis olika saker, och det är avsiktligt
-återgivet.
+Bokens avsnitt: rutan i §9.2. **Kurslitteratur jämte boken:** restfulapi.net "What is REST?", som
+KursPM kräver. **Läs varningen sist i frågan** — de två källorna säger delvis olika saker, och det är
+avsiktligt återgivet.
 
 **Bokens beskrivning.** REST (Representational State Transfer, Fielding 2000) är enligt boken ett
 ==mycket hårt begränsat sätt att arbeta==: klienten använder ==URL:er och HTTP-operationerna GET, PUT,
@@ -95,7 +89,7 @@ får ==hela resursens tillstånd== i stället för att anropa en operation för 
 Fieldings argument, som boken återger: på internet är ==en enkel minimal och likformig uppsättning
 operationer== mer användbar än en flodvåg av olika tjänstegränssnitt.
 
-**De sex principerna — källa: restfulapi.net, inte kursboken.** Boken listar inga namngivna principer
+**De sex principerna — källa: restfulapi.net, kurslitteratur enligt KursPM.** Boken listar inga namngivna principer
 alls. Sidan är tydlig med att principerna ==måste uppfyllas== för att ett gränssnitt ska få kallas
 **RESTful**, och att REST är ==varken ett protokoll eller en standard== utan en arkitekturstil.
 
@@ -114,10 +108,9 @@ av resursens tillstånd vid ett givet tillfälle, bestående av tre delar: ==dat
 datat, och hypermedialänkarna== som tar klienten till nästa tillstånd. Ett REST-API är därmed en samling
 sammanlänkade resurser.
 
-**Resurs och representation är skilda saker**, och därför kan samma resurs levereras i olika format — HTML,
-XML, ren text, PDF, JPEG, JSON. Representationens format kallas dess ==media type==, som pekar på
-specifikationen för hur den ska behandlas. **Resource methods** utför ==övergången mellan två tillstånd==
-hos resursen.
+**Resurs och representation är skilda saker**, och därför kan samma resurs levereras i olika format.
+Representationens format kallas dess ==media type==, som pekar på specifikationen för hur den ska
+behandlas. **Resource methods** utför ==övergången mellan två tillstånd== hos resursen.
 
 **Hypermedias roll — det som gör REST till REST.** Principen heter ==HATEOAS==, *Hypermedia as the engine
 of application state*: klienten ska ==bara ha resursens första URI== och sedan ==driva alla andra resurser
@@ -192,9 +185,7 @@ stort== som motsvarande i CORBA och tog i genomsnitt ==882 gånger så lång tid
 ==CORBA CDR är binärt, XML är text==. **Siffrorna gäller SOAP mot CORBA**, inte REST mot RMI, och boken
 garderar att resultatet ==beror på språk och implementation== och bara ger ==en indikation==.
 
-**Räckvidd.** En CORBA-referens (IOR) bär en typidentifierare som ==bara förstås av det
-gränssnittsregister== som lagrar typdefinitionen, vilket kräver att klient och server delar register. En
-webbtjänst identifieras av en URL, så ==DNS är den enda tjänst som behövs==.
+**Räckvidd.** En webbtjänst identifieras av en URL, så ==DNS är den enda tjänst som behövs==.
 
 **Så kan du tänka:** välj efter var gränsen går. Inom en organisation, med komplexa samspel och behov av
 transaktioner och säkerhetstjänster, är den distribuerade objektmodellen stark — det är också bokens
@@ -242,8 +233,7 @@ annan .NET==, medan båda exponerar gränssnitt som webbtjänster. Egenskapen ka
 
 **Mashup.** SOA uppmuntrar också en ==mashup-kultur==: en mashup är en ==ny tjänst som en
 tredjepartsutvecklare skapar genom att kombinera två eller flera== befintliga tjänster. Det kräver
-==lättillgängliga tjänster med väldefinierade gränssnitt== och en ==öppen innovationsgemenskap==. Bokens
-exempel är ==JBidwatcher==, som kopplar upp mot eBay och lägger bud i sista stund.
+==lättillgängliga tjänster med väldefinierade gränssnitt== och en ==öppen innovationsgemenskap==.
 
 ### Muntligt svar
 
@@ -255,8 +245,7 @@ exempel är ==JBidwatcher==, som kopplar upp mot eBay och lägger bud i sista st
    internet i stort.
 4. Resultatet är B2B-integration: en organisation kan köra CORBA internt och en annan .NET, och båda
    exponerar webbtjänstgränssnitt utåt.
-5. Det öppnar också för mashups — en tredje part kombinerar två eller fler tjänster till en ny, som
-   JBidwatcher mot eBay.
+5. Det öppnar också för mashups — en tredje part kombinerar två eller fler tjänster till en ny.
 6. Kopplingen till fråga 1 är direkt: låg koppling är förutsättningen som gör SOA möjligt.
 
 ## 5. Förklara relationen mellan Ajax och webbtjänster
@@ -268,19 +257,13 @@ klient-serversamspel==, för att skicka ==små databitar== mellan ett ==Javascri
 och ett ==backend-program på servern== som håller tillämpningens tillstånd.
 
 **Problemet det löser: tre begränsningar i det vanliga samspelet.** Normalt ber webbläsaren om en sida och
-får ==en hel sida== tillbaka. Det ger tre problem:
-
-1. När webbläsaren skickat sin förfrågan ==kan användaren inte interagera== med sidan förrän det nya
-   innehållet kommit — och den tiden är ==obestämd==, för den beror på nät och server.
-2. För att uppdatera ==även en liten del== av sidan måste en ==hel ny sida== hämtas, vilket ger fördröjt
-   svar, extra arbete i klient och server och ==onödig nättrafik==.
-3. Innehållet i en visad sida ==kan inte uppdateras== när applikationsdatat på servern ändras.
+får ==en hel sida== tillbaka. Det ger tre problem: användaren ==kan inte interagera== med sidan under en
+==obestämd== väntetid; för att uppdatera ==även en liten del== måste en ==hel ny sida== hämtas, vilket ger
+==onödig nättrafik==; och en visad sida ==kan inte uppdateras== när applikationsdatat på servern ändras.
 
 **Hur det görs.** Ajax låter frontend ==begära ny data direkt från serverprogram== och ==uppdatera bara de
-delar av sidan== som berörs. Anropet går genom Javascript-objektet ==`XmlHttpRequest`==, och den
-==asynkrona varianten används nästan alltid==, eftersom fördröjda serversvar annars blir oacceptabla i
-gränssnittet. Google Maps är bokens paradexempel: rutorna flyttas av Javascript i webbläsaren och nya
-hämtas med Ajax-anrop, medan webbläsaren hela tiden fortsätter svara på användaren.
+delar av sidan== som berörs. Den ==asynkrona varianten används nästan alltid==, eftersom fördröjda
+serversvar annars blir oacceptabla i gränssnittet.
 
 **Så kan du tänka — bryggan till webbtjänster (egen slutsats, boken drar den aldrig).** Det som förenar
 dem är att båda ==tar sig runt begränsningen i webbläsarens vanliga samspel==, och båda gör det ==över
@@ -303,8 +286,7 @@ HTTP med XML==:
    serverprogram.
 2. Det löser tre begränsningar: användaren blockeras under okänd tid, en hel sida måste hämtas för att
    uppdatera en liten del, och sidan kan inte följa ändringar i serverns data.
-3. Mekanismen är `XmlHttpRequest`, nästan alltid asynkront, och bara de berörda delarna av sidan
-   uppdateras. Google Maps är exemplet.
+3. Anropet görs nästan alltid asynkront, och bara de berörda delarna av sidan uppdateras.
 4. Relationen: båda tar sig runt webbläsarens begränsningar över HTTP med XML — Ajax för att
    webbläsaren är för klumpig, webbtjänster för att den är för allmän.
 5. De kompletterar varandra i skikt: Ajax går mellan skikt 1 och 2, och backend som svarar kan själv
@@ -314,14 +296,14 @@ HTTP med XML==:
 
 ## Luckor och källor
 
-**Fråga 2 kan inte besvaras ur kursboken.** Boken listar ==inga namngivna REST-principer== alls, och ordet
-==hypermedia förekommer inte någonstans i hela boken==. De sex principerna och hela hypermedia-avsnittet
-kommer därför från **restfulapi.net "What is REST?"**, som KursPM kräver.
+**Fråga 2 besvaras ur två kurslitteraturkällor, inte boken ensam.** KursPM kräver ==restfulapi.net== som
+kurslitteratur jämte kapitel 9. Boken listar ==inga namngivna REST-principer== alls, och ordet
+==hypermedia förekommer inte någonstans i hela boken==; de sex principerna och hela hypermedia-avsnittet
+kommer därför från **restfulapi.net "What is REST?"**. Det gör dem till fullt examinerbart material, inte
+en lucka.
 
-**Konflikten mellan källorna är verklig, inte ett fel i noten.** Boken beskriver REST **som** HTTP med
-fyra metoder; restfulapi.net säger rakt ut **REST != HTTP** och att Fielding aldrig rekommenderade vilken
-HTTP-metod som ska användas när. Noten ger **båda**, och "Varningen" i fråga 2 säger vilken källa som
-säger vad.
+**Konflikten mellan källorna** är verklig, inte ett fel i noten — se "Varningen" i fråga 2 för vilken
+källa som säger vad.
 
 **Fråga 5 kräver egen syntes.** Ordet **Ajax finns inte i kapitel 9** — Ajax beskrivs i **§2.3.2** och
 nämns i §1.6. Boken kopplar **aldrig** Ajax till webbtjänster. Faktan om båda är bokens; själva bryggan

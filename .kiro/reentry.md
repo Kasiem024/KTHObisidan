@@ -25,10 +25,13 @@ previous version came to assert a figure three commits behind. Run `git log -1` 
 
 **Two things are waiting on his decision, not on work.** Put them to him and let him choose:
 
-1. **Chapter 9's exam question 2 asks what role hypermedia plays, and the 2012 course book does not
-   cover hypermedia or HATEOAS.** Four reviewers confirmed that independently. The cards that used to
-   answer it came from restfulapi.net and were removed, and nothing was invented in their place.
-   Closing the gap means accepting a non-book source. **Do not quietly write the card from memory.**
+1. **Chapter 9's deck has no card for the hypermedia part of exam question 2.** The 2012 book never
+   uses the word, which is why four reviewers found no coverage — but **`restfulapi.net` is required
+   course literature**, named on line 58 of KursPM (*What is REST*, *REST Constraints*, *Naming REST
+   resources*), and the vault holds a saved copy at `REST - restfulapi.net.md`. So this is a plain
+   coverage gap against a named exam question, not a question of accepting an outside source. An
+   earlier report framed it as the latter and was wrong. Still never fill it from memory — use the
+   saved article.
 2. **HI1032's twelve chapter decks and its Labb 1 deck carry card-form findings** — run
    `Test-DeckHygiene.ps1` with no `-Course`. Those decks predate these conventions. HI1031's ten and
    HI1032's Labb 5 are clean.

@@ -35,11 +35,9 @@ och lämnar, utan att någon konfigurerar den.
 1. Designen ser till att ==varje användare bidrar med resurser== till systemet.
 2. Noderna kan bidra med olika mycket, men ==alla noder har samma funktionella förmåga och samma
    ansvar==.
-3. Att systemet fungerar rätt ==beror inte på något centralt administrerat system==.
-4. De kan byggas så att de ger en ==begränsad grad av anonymitet== till både de som tillhandahåller och
-   de som använder resurser.
-5. Nyckelfrågan för effektiv drift är ==valet av algoritm för att placera data över många värdar== och
-   komma åt det igen, balanserat och tillgängligt utan för stora omkostnader.
+3. Övriga tre kännetecken, kort: driften ==beror inte på något centralt administrerat system==,
+   systemet kan ge en ==begränsad grad av anonymitet==, och nyckelfrågan är ==valet av algoritm för att
+   placera data över många värdar== och komma åt det igen balanserat och tillgängligt.
 
 **Fördelarna, bokens egen lista i §10.7:**
 
@@ -108,9 +106,9 @@ garanteras==. Boken säger just det i sammanfattningen.
 
 ### Kopplingen till upphovsrätt
 
-**Napster kort.** Startade 1999 och blev snabbt mycket populärt för musikutbyte. Arkitekturen hade
-==centraliserade index==, men ==användarna tillhandahöll filerna==, som lagrades och lästes på deras egna
-datorer. Tjänsten stängdes efter en rättsprocess som upphovsrättsinnehavarna drev mot operatörerna.
+**Napster kort.** Arkitekturen hade ==centraliserade index==, men ==användarna tillhandahöll filerna==,
+som lagrades och lästes på deras egna datorer. Tjänsten stängdes efter en rättsprocess som
+upphovsrättsinnehavarna drev mot operatörerna.
 
 **Argumentet och varför det föll** — det här är kärnan i frågan:
 
@@ -214,9 +212,9 @@ tillgängliga repliker finns och levererar till den ==närmaste "levande" noden=
 
 **Överläggets fyra uppgifter.** Huvuduppgiften är att **ruta förfrågningar till objekt**: klienten
 skickar objektets ==GUID== till överlägget, som ruter förfrågan till en nod där en replik finns. Utöver
-den ska överlägget **sätta in objekt** — en nod räknar ut ett GUID och anmäler det, varefter objektet är
-nåbart för alla — **ta bort objekt**, och **hantera att noder ansluter och lämnar**, där en ny nod tar
-över en del av andra noders ansvar och en nod som lämnar får sitt ansvar fördelat bland de övriga.
+den ska överlägget **lägga in och ta bort objekt**, och **hantera att noder ansluter och lämnar**, där en
+ny nod tar över en del av andra noders ansvar och en nod som lämnar får sitt ansvar fördelat bland de
+övriga.
 
 ### Strukturerade system
 
@@ -226,8 +224,8 @@ hashtabeller. Gränssnittet är ==`put(GUID, data)`==, ==`get(GUID)`== och ==`re
 med GUID *X* lagras på ==den nod vars GUID är numeriskt närmast *X*==, plus på de *r* värdar vars
 GUID:er är näst närmast, där *r* är en ==replikeringsfaktor==.
 
-**Hur sökningen faktiskt går.** Både **Pastry** och **Tapestry** använder ==prefixrutning==: för varje
-hopp matchar man ==en siffra mer== av mål-GUID:et, så sökningen smalnar av stegvis och antalet hopp växer
+**Hur sökningen faktiskt går.** Metoden är ==prefixrutning==: för varje hopp matchar man
+==en siffra mer== av mål-GUID:et, så sökningen smalnar av stegvis och antalet hopp växer
 ==mycket långsammare än nätet==. Det är mekanismen som gör att metoden alls fungerar i global skala.
 
 ### Ostrukturerade system
@@ -242,12 +240,10 @@ kontakt med en ==uppsättning grannar== som i sin tur är kopplade till fler gra
 ==i grunden decentraliserat och självorganiserande== och därmed ==tåligt mot nodfel==.
 
 **Priset.** För att hitta ett objekt måste man ==söka igenom topologin==, alltså fråga sig fram genom
-grannarna. Görs det naivt flödar man nätet med förfrågningar, så tre strategier används: ==expanded ring
-search==, alltså en följd av sökningar med växande tak för antalet hopp; ==random walks==, där ett antal
-vandrare följer egna slumpmässiga vägar; och ==gossiping==, där förfrågan skickas vidare till en granne med
-en viss sannolikhet och sprids som ett virus. Metoden kan ändå ==inte ge några garantier== att objektet
-hittas, prestandan blir ==oförutsägbar==, och det finns en ==verklig risk för överdriven
-meddelandetrafik==.
+grannarna. Görs det naivt flödar man nätet med förfrågningar, så man söker sannolikhetsbaserat med tre
+strategier: ==expanded ring search==, ==random walks== och ==gossiping==. Metoden kan ändå ==inte ge
+några garantier== att objektet hittas, prestandan blir ==oförutsägbar==, och det finns en ==verklig risk
+för överdriven meddelandetrafik==.
 
 **Figur 10.11, ordagrant om styrkor och svagheter:**
 
@@ -257,8 +253,8 @@ meddelandetrafik==.
 | **Nackdelar** | Måste underhålla ofta komplexa överläggsstrukturer, vilket kan vara svårt och kostsamt, särskilt i mycket dynamiska miljöer | Sannolikhetsbaserat och kan därför inte ge absoluta garantier om att objekt hittas; benäget att ge överdriven meddelandeomkostnad, vilket kan påverka skalbarheten |
 
 **Poängen som förvånar, och som är värd att säga högt.** Trots de skenbara nackdelarna är det
-==ostrukturerade angreppssättet det dominerande på Internet==, särskilt för fildelning — **Gnutella**,
-**FreeNet** och **BitTorrent** använder alla ostrukturerade metoder.
+==ostrukturerade angreppssättet det dominerande på Internet==, särskilt för fildelning — **BitTorrent**
+använder ostrukturerade metoder.
 
 ### Muntligt svar
 
@@ -273,11 +269,11 @@ meddelandetrafik==.
    noden vars GUID är numeriskt närmast, och man kommer åt det med put och get. Sökningen sker med
    prefixrutning: för varje hopp matchas en siffra mer av målet.
 5. I ostrukturerade system finns ingen kontroll över topologi eller placering — överlägget byggs ad hoc
-   av lokala regler, och man hittar objekt genom att fråga sig fram genom grannarna, med expanded ring
-   search, random walks eller gossiping.
+   av lokala regler. Man hittar objekt genom att fråga sig fram genom grannarna, sannolikhetsbaserat och
+   utan garantier — med söksätt som expanded ring search, random walks och gossiping.
 6. Avvägningen: strukturerat garanterar att objektet hittas och ger tidsgränser, men strukturen måste
    underhållas. Ostrukturerat är självorganiserande och tåligt, men bara sannolikhetsbaserat och kan
-   flöda nätet. Ändå är det ostrukturerade dominerande på Internet — Gnutella, FreeNet och BitTorrent.
+   flöda nätet. Ändå är det ostrukturerade dominerande på Internet — till exempel BitTorrent.
 
 ## 5. Vad är skillnaden mellan IP och P2P på applikationsnivå?
 

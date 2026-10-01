@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F83): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F84): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -3799,3 +3799,112 @@ is wider than the audit's `listStyleTags`: it normalised a third note the audit 
 - The frontmatter repair ran with `-BaselinePath` pointed at its own snapshot — the first real use of
   the T22 escape hatch — and `-Compare` afterwards reported clean on counts, per-file counts, deck
   scope and marker placement.
+
+## F84. HI1031's five exam-answer notes narrowed to the exam questions, and the line target shown to be unreachable
+
+**Date:** 2026-10-01
+**Status:** Closed, with one item handed back to the author
+**Scope:** `HI1031 Tentafrågor och Svar - Kap 04, 05, 06, 09, 10`, plus a corrected figure in
+`.kiro/steering/product.md` and a corrected claim in `current-state.md` and `.kiro/reentry.md`
+
+### What was asked
+
+The author asked for the same treatment the flashcards got in F80: confirm the five notes really are
+about the published exam questions, and cut what strays outside them. He added that they already do
+answer the questions — the concern was breadth, not correctness.
+
+### What was done
+
+All five notes were read in full, then reviewed by eight agents in a pipeline: one analyst per
+chapter, two adversarial reviewers pulling in **opposite** directions, and a synthesis stage that
+judged between them. The opposed pair was the point. One reviewer was briefed that the analysts cut
+too much and had to reject any cut that would leave an oral follow-up unanswerable; the other was
+briefed that they cut too little and had to find what they left in. Ten disputes went to the
+synthesis, and the "cut too much" reviewer won **all** of them on evidence — twice because the other
+reviewer had misread a source.
+
+The cuts that survived were uniformly one kind of thing: **names, not mechanisms.** Protocol stack
+layer names (JGroups' `FRAG`, `MERGE`, `GMS`, `CAUSAL`), API names (`XmlHttpRequest`, `MQPUT`,
+`RemoteException`, `JAX-RPC`), product names (Pastry, Tapestry, Google Maps, JBidwatcher), company
+lists (Amazon, Yahoo, Google, eBay), format enumerations, and historical asides (Napster "started in
+1999", XML descending from SGML). Every mechanism, tradeoff, failure mode and book hedge stayed.
+
+Then each `### Muntligt svar` was re-read point by point against its own question's facts, because a
+talking point that cites deleted text is the silent failure a line count cannot see. Nine points
+across four notes were rewritten.
+
+### The measurement that mattered more than the cuts
+
+| Kap | Before | After | Per exam question | Per separate ask |
+|---|---|---|---|---|
+| 04 | 314 | **308** | 51 | 44 |
+| 05 | 237 | **232** | 58 | 46 |
+| 06 | 387 | **375** | 75 | 47 |
+| 09 | 335 | **317** | 63 | 29 |
+| 10 | 347 | **343** | 69 | 29 |
+| | 1620 | **1575** | 63 avg | 37 avg |
+
+**Only 45 lines went, 2.8 %** — against a cut list the synthesis had estimated at 232. The estimate
+was wrong by a factor of five, and the reason is worth recording: these notes are hard-wrapped prose,
+so deleting a clause from inside a paragraph shortens a line rather than removing one, and roughly
+half the decided items were *compressions* rather than deletions. **A cut list that estimates lines
+is estimating the wrong unit.** Count what is removed in facts, not in rows.
+
+The second column is the finding. **The agreed 150–250 line target cannot be met by a chapter with
+five or six exam questions.** An earlier project measured ~52 lines as the stable minimum for a
+single-part question; chapter 4 now sits at **51** — below that floor — and six questions times 52 is
+312 lines before any padding. Chapters 9 and 10 are the leanest of the five per actual ask, at 29
+lines each, precisely because their questions are three- and four-part. Chapter 6 looks like the
+outlier at 75 lines per question, but its questions are all two-part ("beskriv X **och** hur det kan
+implementeras"), so per ask it is 47 — in line with chapter 4's 44 and chapter 5's 46.
+
+So there is **no measurable slack left**, and a sixth cutting pass would be cutting to reach a number.
+`product.md` now carries the measurement next to the agreed range, with the instruction to quote
+lines per exam *ask* and to treat a note over 250 as a finding only when some paragraph cannot be tied
+to a named exam question. The remainder is three protected things: `### Muntligt svar` at a measured
+**24 % of every note** (376 of 1575 lines, locked by the author's own decision about how he studies),
+the book's comparison figures (which *are* the answers to the "jämför" and "skillnad" questions), and
+mechanism and tradeoff, which the oral examination requires.
+
+### A wrong conclusion corrected
+
+Chapter 9's note claimed in two places that exam question 2 "cannot be answered from the course book",
+treating `restfulapi.net` as a source outside the course. **KursPM line 58 requires it:** *"WebServices:
+Kap 9 (9.2.1–9.2.4, 9.3–9.5 kursivt) samt restfulapi.net (What is REST, REST Constraints, Naming REST
+resources)"*. It is course literature standing beside the book, and the vault already holds a saved
+copy at `REST - restfulapi.net.md`.
+
+This matters beyond the wording, because **F80 removed chapter 9's hypermedia cards on the strength of
+the same mistake**, and the gap was then reported to the author as needing his decision since closing
+it "means accepting a non-book source". That framing was wrong and has been corrected in
+`current-state.md` and `.kiro/reentry.md`. The book genuinely never uses the word *hypermedia* — four
+reviewers were right about that — but the second required source does, so HATEOAS is examinable
+material and the cards should come back. Left for the author because it is a deck change he has not
+asked for.
+
+### Verified
+
+- `Vault-Audit.ps1` clean, `notesInScope=529` of 710.
+- `markdownlint-cli2` 552 files, 0 issues.
+- `Get-NoteStructureCensus.ps1` `notesInScope=529`, matching the audit — the two must agree or one of
+  them is measuring a different population.
+- `Get-SRIntegrity.ps1 -Compare` against a private baseline: clean on counts, per-file counts, deck
+  scope **and marker placement**. The five notes hold **zero** scheduling markers and **zero** card
+  separators, measured before the edit, so this was a text-only change with no schedule at risk — but
+  the compare was run anyway, because "there was nothing to break" is a claim and not a measurement.
+- Structure asserted mechanically per note: level-2 headings equal the chapter's exam-question count
+  plus one for `## Luckor och källor`, and `### Muntligt svar` occurrences equal the question count.
+  All five pass. Zero double blank lines, zero CR characters.
+- An adversarial reviewer re-read all five files afterwards against six named failure modes and
+  confirmed no dangling talking point, no protected material removed, and no exam question answered
+  worse. It flagged two cosmetic points, both accepted.
+
+### What this changes for next time
+
+Three things, all cheap to get wrong again:
+
+1. **Estimate cuts in facts, not lines.** Wrapped prose hides deletions.
+2. **Quote lines per exam ask.** A note's length is a function of how many questions the chapter has
+   and how many parts each one has, and nothing else.
+3. **When a note says a question cannot be answered from the course material, check the reading list
+   before believing it.** This one cost real cards.

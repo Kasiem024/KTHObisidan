@@ -77,12 +77,10 @@ replikerad data och högtillgängliga servrar — samt tillförlitlig informatio
 
 **Programmeringsmodellen.** Det centrala är en **grupp** med **gruppmedlemskap**: processer kan
 ==join== eller ==leave==. En process skickar sedan ==ett enda multicast-anrop== i stället för många
-separata send. **Multicast** går till alla i gruppen, **broadcast** till alla processer i systemet,
-**unicast** till en enda. En grupp är **sluten** om bara medlemmar får multicasta till den, **öppen** om
-processer utanför får skicka.
+separata send. **Multicast** går till alla i gruppen. En grupp är **sluten** om bara medlemmar får
+multicasta till den, **öppen** om processer utanför får skicka.
 
-**Varför ett anrop och inte många.** Bandbredden blir bättre, eftersom implementationen kan skicka
-meddelandet ==högst en gång över varje länk== via ett distributionsträd. Men det viktigaste är
+**Varför ett anrop och inte många.** Även om bandbredden blir bättre är det viktigaste
 ==garantierna==: med många oberoende send går det inte att garantera något för gruppen som helhet —
 kraschar sändaren halvvägs får några medlemmar meddelandet och andra inte, och ordningen mellan två
 meddelanden är odefinierad.
@@ -107,8 +105,8 @@ gruppkommunikation erbjuder **ordnad multicast** i tre varianter, som också kan
 
 1. **Ett gränssnitt för medlemskapsändringar** — skapa och förstöra grupper, lägga till och ta bort
    processer.
-2. **Feldetektering** — övervaka medlemmarna för både krasch och ==oåtkomlighet==. Detektorn märker dem
-   `Suspected` eller `Unsuspected`, och tjänsten ==utesluter== den som misstänks.
+2. **Feldetektering** — övervaka medlemmarna för både krasch och ==oåtkomlighet==. Tjänsten
+   ==utesluter== den som misstänks.
 3. **Notifiera medlemmarna** när en process läggs till eller utesluts.
 4. **Gruppadressexpansion** — sändaren anger bara ==gruppidentifieraren==, och tjänsten expanderar den
    till det aktuella medlemskapet.
@@ -119,10 +117,8 @@ IP-multicast är för övrigt bara ett ==svagt fall== av en medlemskapstjänst: 
 ger inte medlemmarna information om aktuellt medlemskap.
 
 **JGroups som exempel** (§6.2.3) har tre delar: **channels**, det primitiva gränssnittet med connect,
-disconnect, send och receive; **building blocks** ovanpå kanalerna, där `MessageDispatcher` skickar till
-gruppen och ==blockerar tills ett angivet antal svar== kommit; och **protokollstacken** av ihopsättbara
-lager — UDP som transport, FRAG för paketering, MERGE för nätdelning, GMS för gruppmedlemskap och CAUSAL
-för kausal ordning. Lagren har samma gränssnitt så de kan kombineras fritt, och ==alla i gruppen måste
+disconnect, send och receive; **building blocks** ovanpå kanalerna; och **protokollstacken** av
+ihopsättbara lager. Lagren har samma gränssnitt så de kan kombineras fritt, och ==alla i gruppen måste
 ha samma stack==.
 
 ### Muntligt svar
@@ -164,20 +160,16 @@ live-flöden som RSS, samarbete och övervakning.
 
 **Programmeringsmodellen** är fyra operationer: `publish(e)` sprider en händelse, `subscribe(f)` anmäler
 intresse där `f` är ett ==filter== — ett mönster över alla möjliga händelser — `unsubscribe(f)` återkallar
-det, och `notify(e)` är hur händelser levereras. Vissa system har dessutom **advertisements**, där
-publishern med `advertise(f)` ==deklarerar i förväg vilka slags händelser den kommer att generera==.
+det, och `notify(e)` är hur händelser levereras.
 
 **Subskriptionsmodellen bestämmer uttryckskraften.** Fyra modeller, från enklast till mest kraftfull:
 
 - **Kanalbaserad:** publishers publicerar till ==namngivna kanaler== och subscribers får allt som skickas
   dit. Primitivt, och den ==enda modellen som definierar en fysisk kanal==.
-- **Topic-baserad** (ämnesbaserad): ==ett fält i notifieringen anger topic==. Likvärdig med kanalbaserad,
-  men topics ==deklareras explicit== medan kanaler är implicita. Kan göras mer uttrycksfull med
-  ==hierarkiska topics==.
+- **Topic-baserad** (ämnesbaserad): ==ett fält i notifieringen anger topic==. Likvärdig med kanalbaserad.
 - **Innehållsbaserad:** filtret är en ==fråga uttryckt som villkor över värdena i händelsens attribut==,
   över flera fält. Klart mer uttrycksfullt, men ==betydligt svårare att implementera==.
 - **Typbaserad:** hör samman med objektbaserade ansatser, och matchning sker på ==typ eller subtyp==.
-  Fördelen är att ==typriktigheten hos subscriptions kan kontrolleras==.
 
 **Implementation, del 1: var mäklaren sitter.**
 
@@ -216,7 +208,7 @@ Innehållsbaserade är svårare, och problemet kallas ==content-based routing== 
    RSS-flöden, samarbete och övervakning.
 3. Två egenskaper bär modellen: heterogenitet, så komponenter som inte byggts för varandra kan
    samverka, och asynkronitet, så publishern aldrig behöver vänta in subscribern.
-4. Operationerna är publish, subscribe, unsubscribe och notify, plus advertise i vissa system.
+4. Operationerna är publish, subscribe, unsubscribe och notify.
 5. Uttryckskraften bestäms av subskriptionsmodellen: kanalbaserad, topic-baserad, innehållsbaserad och
    typbaserad, i den ordningen mer uttrycksfulla och svårare att implementera.
 6. Implementationen kan vara en central mäklare, som är enkel men blir flaskhals och enda felpunkt, ett
@@ -239,12 +231,10 @@ vilket möjliggörs av köernas ==inbyggda lösa koppling==. De används också 
 ==kommersiella transaktionssystem==, tack vare det inbyggda transaktionsstödet.
 
 **Programmeringsmodellen.** Producenter `send` till en bestämd kö och konsumenter `receive` från den.
-Det finns **normalt** ==tre sorters receive==: **blockerande** som ==väntar tills ett lämpligt meddelande
-finns==, **icke-blockerande** som är en ==pollning== och returnerar antingen ett meddelande eller ett
-besked om att inget finns, och **notify** som ger en ==händelsenotifiering== när ett meddelande dyker
-upp. Kön är **normalt** ==FIFO==, men de flesta implementationer stöder också ==prioritet==. Eftersom
-meddelandets kropp **normalt** är ==opak och orörd== av kösystemet uttrycks urval som ==predikat över
-metadata==.
+Det finns **normalt** ==tre sorters receive==: **blockerande**, **icke-blockerande** pollning och
+**notify**. Kön är **normalt** ==FIFO==, men de flesta implementationer stöder också ==prioritet==.
+Eftersom meddelandets kropp **normalt** är ==opak och orörd== av kösystemet uttrycks urval som
+==predikat över metadata==.
 
 **Den avgörande egenskapen: meddelanden är persistenta.** Kön ==lagrar dem obestämt== tills de
 konsumeras och ==skriver dem till disk== för att möjliggöra tillförlitlig leverans. Det ger
@@ -269,7 +259,7 @@ alternativet är **WebSphere MQ**:
 - I praktiken är det **vanligare** att köhanterarna länkas ihop i en ==federerad struktur==, precis som
   publish-subscribe använder nätverk av mäklare. Det görs med **message channels** — en ==enkelriktad
   förbindelse mellan två köhanterare== som vidarebefordrar meddelanden ==asynkront==. Med routingtabeller
-  i varje köhanterare går det att bygga ==godtyckliga topologier==: träd, mesh eller buss.
+  i varje köhanterare går det att bygga ==godtyckliga topologier==.
 
 **Hub-and-spoke, den topologi boken lyfter fram som mycket använd.** En köhanterare utses till ==hub==
 och har tjänsterna. Klienterna kopplar ==inte upp direkt mot hubben== utan mot köhanterare som utsetts
@@ -291,7 +281,7 @@ stund lokalt, och låt mellanprogrammet ta det långa hoppet asynkront men garan
 2. De kallas Message-Oriented Middleware och används mest till Enterprise Application Integration och
    som grund för kommersiella transaktionssystem.
 3. Modellen är send till en kö och receive från den, i tre varianter: blockerande, icke-blockerande
-   pollning, eller notify. Kön är normalt FIFO men stöder oftast prioritet.
+   pollning och notify. Kön är normalt FIFO men stöder oftast prioritet.
 4. Det avgörande är att meddelanden är persistenta — de skrivs till disk och lagras tills de
    konsumeras. Det ger giltighet och integritet, men ingenting om när leveransen sker. Ovanpå det finns
    transaktioner, meddelandetransformation och säkerhet.
@@ -310,9 +300,7 @@ Bokens avsnitt: §6.6, figur 6.27.
 
 | Vad som jämförs | Gruppkommunikation | Publish-subscribe | Message queues |
 |---|---|---|---|
-| Rumsligt frikopplat | Ja | Ja | Ja |
 | Tidsmässigt frikopplat | Möjligt | Möjligt | **Ja** |
-| Typ av tjänst | Kommunikationsbaserad | Kommunikationsbaserad | Kommunikationsbaserad |
 | Kommunikationsmönster | 1-till-många | 1-till-många | **1-till-1** |
 | Huvudsyfte | Tillförlitlig distribuerad beräkning | Informationsspridning eller EAI; mobila och ubikvitära system | Informationsspridning eller EAI; kommersiell transaktionsbehandling |
 | Skalbarhet | Begränsad | Möjlig | Möjlig |

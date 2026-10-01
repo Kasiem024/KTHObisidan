@@ -43,12 +43,10 @@ av en gränssnittskompilator==:
 - **Fjärrreferensmodul** — översätter ==mellan lokala och fjärrobjektreferenser==.
 
 **Java RMI (§5.5).** Samma syntax och typkontroll som lokala anrop, men anroparen ==vet== att målet är
-på distans: den måste hantera `RemoteException`, och fjärrobjektets klass måste ==implementera
-`Remote`==. Det är ett enda språk, så gränssnitten skrivs i vanlig Java — med ett flerspråkssystem som
-CORBA måste man i stället ==lära sig ett IDL==. Allt **serialiserbart** kan skickas, alltså allt som går
-att ==skriva ut som en byte-ström och läsa tillbaka==: **fjärrobjekt skickas som referens, övriga objekt
-kopieras och skickas som värde**, så mottagaren får ett ==nytt objekt vars tillstånd kan avvika== från
-originalets.
+på distans. Det är ett enda språk, så gränssnitten skrivs i vanlig Java. Allt **serialiserbart** kan
+skickas, alltså allt som går att ==skriva ut som en byte-ström och läsa tillbaka==: **fjärrobjekt
+skickas som referens, övriga objekt kopieras och skickas som värde**, så mottagaren får ett
+==nytt objekt vars tillstånd kan avvika== från originalets.
 
 ### Muntligt svar
 
@@ -61,8 +59,8 @@ originalets.
    hos servern väljer metod, skelettet packar upp och anropar servanten, svaret går tillbaka samma väg.
 4. **Säg att proxy, dispatcher och skelett genereras automatiskt** av en gränssnittskompilator, och att
    kommunikationsmodulerna är de som ger anropssemantiken.
-5. **Avsluta med Java RMI:** samma syntax som lokalt, men `RemoteException` och `Remote` avslöjar att
-   anropet är distribuerat. Fjärrobjekt skickas som referens, andra objekt som kopia.
+5. **Avsluta med Java RMI:** samma syntax som lokalt, men anroparen vet att anropet är distribuerat.
+   Fjärrobjekt skickas som referens, andra objekt som kopia.
 
 ## Fråga 2 – När kan ren socket-kommunikation vara bättre än distribuerade objekt och tvärtom
 
@@ -126,15 +124,14 @@ ligger ovanpå HTTP, som självt är request-reply.
 
 - **Abstraktion.** Sockets: ==byte-sekvenser==. RPC: ==en procedur== som om den var lokal. RMI: ==en
   metod på ett objekt==. Webbtjänst: ==operationer på en resurs som pekas ut av en URI==.
-- **Namngivning.** Sockets: ==(internetadress, port)==. RPC: ==program- och versionsnummer==, som en
-  lokal **port mapper** översätter till portnummer. RMI: ==fjärrobjektreferens==, som kan skickas som
-  parameter. Webbtjänst: en ==URI==, oftast en URL, som boken kallar en **endpoint**.
-- **Gränssnittsbeskrivning.** Sockets: ==inte alls==, parterna kommer överens själva. RPC: ett **IDL**,
-  i Sun RPC språket ==XDR== med `rpcgen`. RMI: ett IDL som ==CORBA IDL==, eller språket självt i Java
-  RMI. Webbtjänst: ==WSDL==, som boken kallar ett IDL för ett internetomfattande RPC.
-- **Datarepresentation.** Sockets: du ==marshallar själv==. RPC och RMI: ==binärt==, med XDR, CORBA CDR
-  eller Javas serialisering. Webbtjänst: ==XML== paketerat med **SOAP** — skrymmande och långsammare att
-  tolka, men läsbart.
+- **Namngivning.** Sockets: ==(internetadress, port)==. RMI: ==fjärrobjektreferens==, som kan skickas
+  som parameter. Webbtjänst: en ==URI==, oftast en URL, som boken kallar en **endpoint**.
+- **Gränssnittsbeskrivning.** Sockets: ==inte alls==, parterna kommer överens själva. RPC: ett **IDL**.
+  RMI: ett IDL som ==CORBA IDL==, eller språket självt i Java RMI. Webbtjänst: ==WSDL==, som boken kallar
+  ett IDL för ett internetomfattande RPC.
+- **Datarepresentation.** Sockets: du ==marshallar själv==. RPC och RMI: ==binärt==, med Javas
+  serialisering. Webbtjänst: ==XML== paketerat med **SOAP** — skrymmande och långsammare att tolka, men
+  läsbart.
 
 **Anropssemantiken är RPC:s och RMI:s egen axel (figur 5.9).** Lokala anrop har ==exactly once==. På
 distans väljer man mellan tre, beroende på hur mycket feltolerans man lägger in:
@@ -162,9 +159,8 @@ och CORBA inte gör det.
    request-reply, webbtjänster ovanpå HTTP.
 2. **Gå uppåt i abstraktion:** byte-sekvens, procedur, metod på ett objekt, operation på en resurs med
    en URI.
-3. **Ta namngivningen:** adress och port, program- och versionsnummer via en port mapper,
-   fjärrobjektreferens som kan skickas vidare, URI.
-4. **Ta gränssnitt och dataformat ihop:** inget alls och egen marshalling, XDR och binärt, CORBA IDL
+3. **Ta namngivningen:** adress och port, fjärrobjektreferens som kan skickas vidare, URI.
+4. **Ta gränssnitt och dataformat ihop:** inget alls och egen marshalling, IDL och binärt, CORBA IDL
    eller Java, WSDL och XML via SOAP — text kostar plats och tid men går att läsa.
 5. **Ge anropssemantiken**, eftersom den är RPC:s och RMI:s egen: lokalt exactly once, på distans maybe,
    at-least-once eller at-most-once, och at-least-once kräver idempotenta operationer.
@@ -193,13 +189,12 @@ irrelevanta==.
 
 **Tre följder, med bokens eget exempel den delade skrivtavlan:**
 
-- `newShape` är en **fabriksmetod** i objektversionen, men returnerar i webbtjänstversionen ==ett heltal==
-  som säger var objektet ligger i en vektor — den är då ==inte längre en fabriksmetod==.
+- `newShape` är en **fabriksmetod** i objektversionen, men den är i webbtjänstversionen
+  ==inte längre en fabriksmetod==.
 - **Inga servanter.** Servern modelleras ==normalt== som en samling servanter, en per resurs.
-  Webbtjänster ==stöder inte servanter==, och för att tvinga fram det får implementationen varken ha
-  konstruktor eller `main`.
-- **Inga fjärrreferenser som parametrar.** JAX-RPC ==tillåter inte== att de skickas som argument eller
-  returneras som resultat.
+  Webbtjänster ==stöder inte servanter==.
+- **Inga fjärrreferenser som parametrar.** Webbtjänster ==tillåter inte== att de skickas som argument
+  eller returneras som resultat.
 
 **Två skillnader till.** Webbtjänster är gjorda för att vara ==oberoende av varje
 programmeringsparadigm==, eftersom många språk och paradigm ==finns sida vid sida== på internet — boken
@@ -217,8 +212,8 @@ XML==, och bekvämligheten läggs på i ett API ovanpå.
 3. **Ge kärnskillnaden:** en webbtjänst kan inte skapa fjärrobjekt och returnera referenser till dem.
 4. **Dra bokens slutsats:** en webbtjänst är i praktiken ett enda fjärrobjekt, så skräpsamling och
    fjärrobjektreferenser är irrelevanta.
-5. **Visa följderna med skrivtavlan:** `newShape` returnerar ett heltal i stället för att vara
-   fabriksmetod, det finns inga servanter, och implementationen får varken ha konstruktor eller `main`.
+5. **Visa följderna med skrivtavlan:** `newShape` är inte längre en fabriksmetod, och det finns inga
+   servanter.
 6. **Avsluta med paradigm och transparens:** webbtjänster är paradigmoberoende, och ger ingen transparens
    av sig själva — utan ett API läser man SOAP och XML direkt.
 

@@ -131,6 +131,22 @@ author called "alldeles för många". Aim well below them.
 | Cards per chapter deck | **40–60** | 100–184 |
 | Lines per exam-answer note | **150–250** | 600–750 |
 
+**The line figure is not reachable for a chapter with five or six exam questions, measured
+2026-10-01.** It is kept above because it is what was agreed, but do not cut mechanism to reach it.
+HI1031's five reviewed notes were cleaned of everything no exam question needed — product names, API
+names, company lists, case-study internals, cross-chapter side-tracks — and still landed at 308, 232,
+375, 317 and 343 lines. Expressed per exam question that is **51 to 75 lines**, and per separate
+*ask* within a question **29 to 47**. Chapter 4 sits at 51 lines per question, below the ~52 that an
+earlier project measured as the stable minimum for a single-part question, so it is already as tight
+as a question can be answered. Six questions times that minimum is 312 lines before a word of
+padding.
+
+So **quote lines per exam ask, not lines per note**, and treat a note above 250 as a finding only if
+some paragraph in it cannot be tied to a named exam question. The three things that make up the
+remainder are all protected: `### Muntligt svar` is a quarter of every note and its structure is the
+author's own decision; the book's comparison figures *are* the answers to the "jämför" and "skillnad"
+questions; and mechanism, tradeoff and failure mode have to survive because the examination is oral.
+
 **The card figure was superseded on 2026-09-26.** The author narrowed it further, and the new rule is
 not a range:
 
@@ -196,7 +212,7 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` runs F1–F83: all closed except F10 (parked). Both the audit and
+`Meta/Vault Findings & Backlog.md` runs F1–F84: all closed except F10 (parked). Both the audit and
 the linter run automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on
