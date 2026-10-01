@@ -13,7 +13,7 @@ Vilka tre breda klasser delar boken säkerhetshoten i? (3)
 - **Läckage** – obehöriga får tag på information.
 - **Manipulation** – obehörig ändring av information.
 - **Vandalisering** – störa systemets funktion utan vinst för angriparen.
-<!--SR:!fsrs,2026-09-30T15:22:35.135Z,1,1.10617571,9.79461141,2,8,1,0,2026-09-29T15:22:35.135Z-->
+<!--SR:!fsrs,2026-10-02T21:13:53.532Z,1,0.39884904,9.90302919,2,10,2,0,2026-10-01T21:13:53.532Z-->
 
 Vilka sätt kan man angripa en kanal på? Nämn fyra. (4)
 ||
@@ -21,10 +21,10 @@ Vilka sätt kan man angripa en kanal på? Nämn fyra. (4)
 - **Maskering** – utge sig för någon annan
 - **Uppspelning** – spara ett meddelande och skicka det igen senare
 - **Överbelastning** – dränka en resurs så ingen annan kommer åt den
-<!--SR:!fsrs,2026-10-01T14:08:02.344Z,1,0.51654835,9.64172306,2,8,2,0,2026-09-30T14:08:02.344Z-->
+<!--SR:!fsrs,2026-10-02T21:03:26.430Z,1,0.90860847,9.74738744,2,9,2,0,2026-10-01T21:03:26.430Z-->
 
 Vad är en man-in-the-middle-attack?::Angriparen ställer sig ==mitt emellan== två parter i ett nyckelutbyte och byter deras nycklar mot sina egna. Sedan kan han läsa och ändra allt utan att de märker det.
-<!--SR:!fsrs,2026-10-01T15:20:31.920Z,2,1.57655201,9.42414393,2,7,1,0,2026-09-29T15:20:31.920Z-->
+<!--SR:!fsrs,2026-10-04T20:53:17.855Z,3,3.0403125,9.40994816,2,8,1,0,2026-10-01T20:53:17.855Z-->
 
 Varför fungerar en uppspelningsattack även mot krypterade meddelanden?::För att angriparen ==inte behöver nyckeln== – han kopierar bara bitmönstret och skickar det igen. En betalning kan då göras två gånger.
 <!--SR:!fsrs,2026-10-12T10:09:26.721Z,12,12.09526369,6.79215857,2,4,0,0,2026-09-30T10:09:26.721Z-->
@@ -36,10 +36,10 @@ Vilka tre huvudroller har kryptografi enligt boken? (3)
 - **Sekretess och integritet**
 - **Autentisering**
 - **Digitala signaturer**
-<!--SR:!fsrs,2026-10-01T15:21:21.463Z,2,1.88791143,9.72327539,2,7,0,0,2026-09-29T15:21:21.463Z-->
+<!--SR:!fsrs,2026-10-04T21:02:50.214Z,3,2.61980031,9.80152568,2,8,0,0,2026-10-01T21:02:50.214Z-->
 
 Hur ger kryptering integritet?::Bara om man ==lägger till en kontrollsumma== som mottagaren räknar om och jämför – integritet får man inte gratis bara för att man krypterar.
-<!--SR:!fsrs,2026-10-01T10:10:37.430Z,1,1.07165169,9.72980591,2,7,1,0,2026-09-30T10:10:37.430Z-->
+<!--SR:!fsrs,2026-10-03T20:59:44.951Z,2,1.76135845,9.71530447,2,8,1,0,2026-10-01T20:59:44.951Z-->
 
 Hur ger kryptering autentisering?::Om nyckeln ==bara två parter känner== och meddelandet går att dekryptera till något vettigt, måste det komma från den andra parten.
 <!--SR:!fsrs,2026-10-04T20:39:07.860Z,8,8.10051142,6.79877821,2,3,0,0,2026-09-26T20:39:07.860Z-->
@@ -62,7 +62,7 @@ Varför är asymmetriska nycklar mycket längre än symmetriska?::För att produ
 <!--SR:!fsrs,2026-10-02T15:18:56.593Z,3,2.63309256,9.23260597,2,7,1,0,2026-09-29T15:18:56.593Z-->
 
 Hur mycket långsammare är asymmetrisk kryptering än symmetrisk?::Ungefär ==100 till 1000 gånger== långsammare. Därför används den bara i början, inte för all data.
-<!--SR:!fsrs,2026-10-01T10:43:00.448Z,7,7.49448566,3.58131923,2,3,0,0,2026-09-24T10:43:00.448Z-->
+<!--SR:!fsrs,2026-10-21T20:45:30.233Z,20,19.75603038,5.72420896,2,4,0,0,2026-10-01T20:45:30.233Z-->
 
 Hur fungerar hybridkryptering?::Man byter en hemlig nyckel med ==asymmetrisk kryptering i början==, och krypterar sedan all data med snabb symmetrisk kryptering. Så gör TLS.
 <!--SR:!fsrs,2026-10-04T20:19:54.078Z,8,8.10051142,6.79877821,2,3,0,0,2026-09-26T20:19:54.078Z-->
@@ -91,7 +91,7 @@ Hur skapas och kontrolleras en digital signatur? (2)
 ||
 - **Skapas** – hasha meddelandet och kryptera hashen med din privata nyckel
 - **Kontrolleras** – dekryptera med avsändarens publika nyckel och jämför med en egen hash
-<!--SR:!fsrs,2026-10-01T13:57:01.935Z,1,0.00681592,9.96316625,2,15,2,0,2026-09-30T13:57:01.935Z-->
+<!--SR:!fsrs,2026-10-02T21:03:58.583Z,1,0.0082322,9.95837662,2,17,3,0,2026-10-01T21:03:58.583Z-->
 
 Varför hashar man meddelandet innan man signerar det?::Asymmetrisk kryptering är långsam, så man signerar ==en kort sammanfattning== i stället för hela dokumentet.
 <!--SR:!fsrs,2026-10-03T10:10:20.150Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:10:20.150Z-->
@@ -106,7 +106,7 @@ Vilka tre egenskaper ska en säker hashfunktion ha? (3)
 - **Lätt framåt** – lätt att räkna ut hashen från meddelandet
 - **Svår bakåt** – går inte att räkna ut meddelandet från hashen
 - **Krockfri** – svårt att hitta två meddelanden med samma hash
-<!--SR:!fsrs,2026-10-01T11:54:00.338Z,3,2.87058469,8.38116261,2,5,1,0,2026-09-28T11:54:00.338Z-->
+<!--SR:!fsrs,2026-10-07T20:50:39.136Z,6,6.37646667,8.36800982,2,6,1,0,2026-10-01T20:50:39.136Z-->
 
 ## 5.1 TLS, SSL och HTTPS
 
@@ -128,7 +128,7 @@ Hur går TLS-handskakningen till? (4)
 - **Certifikat** – servern visar sitt certifikat så klienten vet vem den pratar med
 - **Nyckel** – de skapar en gemensam hemlig nyckel, skyddad med publik nyckel
 - **Klart** – de slår om till krypterad trafik
-<!--SR:!fsrs,2026-10-01T14:09:41.927Z,1,0.00253103,9.95839293,2,19,2,0,2026-09-30T14:09:41.927Z-->
+<!--SR:!fsrs,2026-10-02T20:54:58.960Z,1,0.01966489,9.95760766,2,20,2,0,2026-10-01T20:54:58.960Z-->
 
 ## 5.2 Certifikat
 
@@ -136,17 +136,17 @@ Vad är ett digitalt certifikat?::Ett ==signerat intyg== som man kan lita på, e
 <!--SR:!fsrs,2026-10-03T09:52:21.628Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T09:52:21.628Z-->
 
 Vad ska ett certifikat säkerställa?::Att en ==publik nyckel verkligen hör till den ägare som står på certifikatet==. Utfärdarens signatur går i god för att kopplingen mellan nyckel och namn stämmer.
-<!--SR:!fsrs,2026-10-01T10:19:08.158Z,1,0.87439376,8.91819814,2,4,0,0,2026-09-30T10:19:08.158Z-->
+<!--SR:!fsrs,2026-10-04T20:53:30.608Z,3,1.9766116,8.90450831,2,5,0,0,2026-10-01T20:53:30.608Z-->
 
 Vad innehåller ett certifikat? (3)
 ||
 - **Vem det gäller** – personens namn och publika nyckel
 - **Vem som skrivit under** – utfärdaren och dess signatur
 - **Hur länge det gäller** – start- och slutdatum
-<!--SR:!fsrs,2026-10-01T10:17:41.697Z,1,0.00420146,9.95598121,2,27,1,0,2026-09-30T10:17:41.697Z-->
+<!--SR:!fsrs,2026-10-02T20:57:04.407Z,1,0.02865228,9.95600664,2,28,1,0,2026-10-01T20:57:04.407Z-->
 
 Vad är en certifikatutfärdare (CA)?::En ==betrodd organisation== som ger ut certifikat och intygar att en publik nyckel hör till rätt ägare.
 <!--SR:!fsrs,2026-10-03T10:12:19.841Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:12:19.841Z-->
 
 Hur vet man att man kan lita på ett certifikat?::Man ==följer kedjan av signaturer bakåt== tills man når någon man redan litar på, till exempel en känd certifikatutfärdare.
-<!--SR:!fsrs,2026-10-01T15:19:53.304Z,2,0.13504676,9.9460558,2,14,1,0,2026-09-29T15:19:53.304Z-->
+<!--SR:!fsrs,2026-10-03T20:51:25.192Z,2,0.54308206,9.93133811,2,15,1,0,2026-10-01T20:51:25.192Z-->

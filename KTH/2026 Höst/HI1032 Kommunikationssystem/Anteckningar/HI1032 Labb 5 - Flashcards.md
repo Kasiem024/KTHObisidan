@@ -9,7 +9,7 @@ updated: 2026-09-29
 ## Modul 1: Grundläggande Nätverksdesign & Adressering
 
 **Subnetting** (undernätuppdelning);;Metod för att dela upp ett större IP-nätverk i mindre undernät för att ==begränsa broadcast-domäner, höja säkerheten och effektivisera vägval==.
-<!--SR:!fsrs,2026-09-30T23:38:47.807Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:38:47.807Z!fsrs,2026-09-30T23:33:54.419Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:33:54.419Z-->
+<!--SR:!fsrs,2026-10-01T18:43:19.047Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-01T18:33:19.047Z!fsrs,2026-09-30T23:33:54.419Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:33:54.419Z-->
 
 Vad är syftet med att dela upp `192.168.0.0/24` i två `/25`-nät i Labb 5?::Att skapa en ==strikt logisk separation mellan Lärare och Studenter== samt routergränssnitt, vilket gör det möjligt att tillämpa olika säkerhetspolicyer (ACL:er).
 <!--SR:!fsrs,2026-10-01T10:44:06.137Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:44:06.137Z-->
@@ -17,25 +17,13 @@ Vad är syftet med att dela upp `192.168.0.0/24` i två `/25`-nät i Labb 5?::At
 Hur beräknas antalet användbara host-IP-adresser i ett undernät?::Via formeln $2^{32-n} - 2$, där $n$ är prefixlängden och 2 dras av för ==nätverks-ID (första adressen) och broadcast-adressen (sista adressen)==.
 <!--SR:!fsrs,2026-09-30T23:35:17.861Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:35:17.861Z-->
 
-Hur är nätverksblocket `192.168.0.0/25` uppdelat i Labb 5? (2)
-||
-- **Lärarnät & Routrar** – IP-intervall `192.168.0.0 – 192.168.0.127/25` med mask `255.255.255.128`
-- **Studentnät** – IP-intervall `192.168.0.128 – 192.168.0.255/25` med mask `255.255.255.128`
-<!--SR:!fsrs,2026-09-30T23:34:11.651Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:34:11.651Z-->
-
-Vilka är nätverks-ID och broadcast-adress för Lärarnätet i Labb 5?::Nätverks-ID är `192.168.0.0` och broadcast-adressen är `192.168.0.127`, vilket ger ==användbara värdadresser från 192.168.0.1 till 192.168.0.126==.
-<!--SR:!fsrs,2026-10-01T14:33:32.736Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:33:32.736Z-->
-
-Vilka är nätverks-ID och broadcast-adress för Studentnätet i Labb 5?::Nätverks-ID är `192.168.0.128` och broadcast-adressen är `192.168.0.255`, vilket ger ==användbara värdadresser från 192.168.0.129 till 192.168.0.254==.
-<!--SR:!fsrs,2026-10-01T14:58:10.768Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:58:10.768Z-->
-
 Vad innebär en Point-to-Point WAN-länk med `/30`-mask (`255.255.255.252`)?::Ett undernät med totalt 4 IP-adresser som reserverar ==exakt 2 användbara IP-adresser== för att direktkoppla två routergränssnitt utan adress-slöseri.
-<!--SR:!fsrs,2026-09-30T23:39:20.039Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:39:20.039Z-->
+<!--SR:!fsrs,2026-10-01T18:43:04.103Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-01T18:33:04.103Z-->
 
-Vilka två WAN-länkar är konfigurerade i Labb 5? (2)
+Hur är de två gatewayarna kopplade upp till kantroutern Campus-V, och vad ger det? (2)
 ||
-- **Campus-V till Flempan-GW1** – Nätverk `10.10.10.0/30` (IP: `.1` och `.2`)
-- **Campus-V till Flempan-GW2** – Nätverk `10.10.10.4/30` (IP: `.5` och `.6`)
+- **Egen länk per gateway** – var och en av Flempan-GW1 och Flempan-GW2 har en egen seriell punkt-till-punkt-länk upp till Campus-V
+- **Följden** – campus får två skilda vägar upp mot kantroutern, alltså redundans om en länk eller gateway faller
 <!--SR:!fsrs,2026-10-01T14:34:53.119Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:34:53.119Z-->
 
 Vad innebär rollerna DTE och DCE vid seriell WAN-kommunikation? (2)
@@ -45,7 +33,7 @@ Vad innebär rollerna DTE och DCE vid seriell WAN-kommunikation? (2)
 <!--SR:!fsrs,2026-10-01T10:25:15.269Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:25:15.269Z-->
 
 Varför måste kommandot `clock rate 64000` ställas in på seriella gränssnitt i Labb 5?::För att tvinga DCE-gränssnittet att generera en klocksignal på 64 kbps så att ==dataöverföringen på det fysiska lagret kan synkroniseras korrekt==.
-<!--SR:!fsrs,2026-09-30T23:40:11.234Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:40:11.234Z-->
+<!--SR:!fsrs,2026-10-01T18:38:56.652Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-01T18:28:56.652Z-->
 
 Vad gör kommandot `ip route 0.0.0.0 0.0.0.0 G0/1` på kantroutern Campus-V?::Skapar en statisk default route (`0.0.0.0/0`) som pekar ut via gränssnitt G0/1 för att ==skicka all trafik med okänd destination vidare mot internet==.
 <!--SR:!fsrs,2026-09-30T23:37:30.571Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:37:30.571Z-->
@@ -56,7 +44,7 @@ Vad gör kommandot `ip route 0.0.0.0 0.0.0.0 G0/1` på kantroutern Campus-V?::Sk
 Varför ger Cisco IOS en varning när du sätter en static default route till ett utgående gränssnitt istället för en nästa-hopp IP?::Eftersom routern tvingas göra en ==ARP-uppslagning för varje enskild destinations-IP== på ett broadcast-medium (Ethernet), vilket kan belasta routerns minne och CPU.
 <!--SR:!fsrs,2026-09-30T14:41:48.371Z,0,0.00720941,9.93638689,1,5,0,0,2026-09-30T14:40:48.371Z-->
 
-Vilka fysiska IP-adresser har Flempan-GW1 och Flempan-GW2 på sitt gemensamma LAN-gränssnitt G0/0?::Flempan-GW1 har `192.168.0.1/25` och Flempan-GW2 har `192.168.0.2/25` ==(båda ligger inom Lärar/Router-intervallet)==.
+Varför sitter Flempan-GW1:s och Flempan-GW2:s G0/0 på samma LAN-segment i Labb 5?::För att båda gatewayarna ska dela samma nät med var sin egen adress — det är ==förutsättningen för att HSRP ska kunna ge dem en gemensam virtuell gateway==.
 <!--SR:!fsrs,2026-10-01T14:22:45.086Z,1,0.00773286,9.94987373,2,8,0,0,2026-09-30T14:22:45.086Z-->
 
 Vad skiljer ett nätverks-ID från en broadcast-adress? (2)
@@ -65,21 +53,43 @@ Vad skiljer ett nätverks-ID från en broadcast-adress? (2)
 - **Broadcast-adress** – Sista IP-adressen i undernätet (alla host-bitar är 1), används för att nå alla värdar i undernätet samtidigt
 <!--SR:!fsrs,2026-10-01T14:39:07.364Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:39:07.364Z-->
 
+Vilka delar består topologin i Labb 5 av, och vilken roll har de? (4)
+||
+- **Kantrouter** – Campus-V kopplar campus mot internet och WEB-servern
+- **Gatewayroutrar** – Flempan-GW1 och GW2 är klienternas väg ut, med HSRP-redundans
+- **Switchar** – Switch0 och Switch1 binder ihop klienter och gatewayar i samma LAN
+- **Klienter & servrar** – PC10 (lärare) och PC200 (student); WEB-server och internet-server
+
+Vad vänder Campus-V:s fyra gränssnitt mot i Labb 5? (4)
+||
+- **S0/0/0 (seriell)** – länk ner till Flempan-GW1
+- **S0/0/1 (seriell)** – länk ner till Flempan-GW2
+- **G0/0 (Ethernet)** – mot WEB-servern
+- **G0/1 (Ethernet)** – mot internet
+
+Varför sätts klockan (clock rate) på Campus-V och inte på gatewayarna i Labb 5?::För att ==båda Campus-V:s seriella gränssnitt är DCE-änden==, och det är DCE-sidan som genererar klocksignalen.
+
+Vad får korskopplingen mellan Switch0 och Switch1 för följd i Labb 5?::Att ==båda PC:erna och båda gatewayarna hamnar i samma broadcast-domän==, vilket är förutsättningen för att HSRP ska fungera.
+
+Varför har campus två gatewayroutrar (Flempan-GW1 och GW2) i Labb 5?::För att ge ==redundans om en gateway faller==; både OSPF och HSRP finns i labben för att utnyttja den dubbla vägen.
+
+Vad kan du bara göra i Labb 5:s del 1, innan vägvalet (routing) är igång?::Bara ==pinga enheter som sitter direkt kopplade till varandra==, eftersom ingen router ännu kan nå andra nät.
+
 ---
 
 ## Modul 2: Vägvalsprotokollet OSPFv2
 
 **OSPFv2** (Open Shortest Path First v2);;Ett öppet, länkbaserat (Link-State) dynamiskt vägvalsprotokoll för IPv4 som använder ==Dijkstras SPF-algoritm för snabb konvergens och slingfria vägar==.
-<!--SR:!fsrs,2026-10-01T14:39:42.740Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:39:42.740Z!fsrs,2026-10-01T14:40:46.331Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:40:46.331Z-->
+<!--SR:!fsrs,2026-10-01T18:42:49.240Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:32:49.240Z!fsrs,2026-10-01T18:39:38.221Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:29:38.221Z-->
 
 Hur fungerar ett Link-State routingprotokoll som OSPF?::Alla routrar utbyter länkstatusar (Link-State) via LSA-paket, bygger upp en exakt likadan kartbild i sin databas (LSDB) och ==kör Dijkstras algoritm för att självständigt beräkna kortaste vägen==.
-<!--SR:!fsrs,2026-10-01T14:10:13.446Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:10:13.446Z-->
+<!--SR:!fsrs,2026-10-01T18:43:37.151Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:33:37.151Z-->
 
 Vad kallas den gemensamma databasen där OSPF sparar alla LSA-paket?::**LSDB** (Link-State Database) – en komplett topologisk karta som ==måste vara identisk på alla routrar inom samma area==.
 <!--SR:!fsrs,2026-10-01T14:12:54.181Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:12:54.181Z-->
 
 Hur beräknas OSPF Cost (metric) för ett gränssnitt?::Via formeln $\text{Cost} = \frac{\text{Reference Bandwidth}}{\text{Interface Bandwidth}} = \frac{10^8 \text{ bps}}{\text{Bandbredd i bps}}$, där ==lägre totalkostnad ger den bästa vägen==.
-<!--SR:!fsrs,2026-10-01T14:38:13.484Z,1,0.1774331,8.39265542,2,3,0,0,2026-09-30T14:38:13.484Z-->
+<!--SR:!fsrs,2026-10-02T18:32:37.016Z,1,0.71149248,8.91819814,2,4,0,0,2026-10-01T18:32:37.016Z-->
 
 Vad blir OSPF-kostnaden för en FastEthernet-länk respektive en 64 kbps seriell länk? (2)
 ||
@@ -90,12 +100,6 @@ Vad blir OSPF-kostnaden för en FastEthernet-länk respektive en 64 kbps seriell
 Vad är en Wildcard-mask (invers subnätmask) och hur beräknas den för OSPF?::En schablonmask där 0 kräver exakt matchning och 1 tillåter vilket värde som helst. Beräknas som ==$255.255.255.255 - \text{subnätmask}$==.
 <!--SR:!fsrs,2026-10-01T14:38:24.108Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:38:24.108Z-->
 
-Vilka Wildcard-masker används för Lärarnätet (/25) och WAN-länkarna (/30) i Labb 5? (2)
-||
-- **Lärarnät (/25)** – Wildcard-mask `0.0.0.127` (beräknat som $255.255.255.255 - 255.255.255.128$)
-- **WAN-länkar (/30)** – Wildcard-mask `0.0.0.3` (beräknat som $255.255.255.255 - 255.255.255.252$)
-<!--SR:!fsrs,2026-10-01T14:39:37.148Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:39:37.148Z-->
-
 I vilken ordning väljer OSPF sitt Router ID (RID)? (3)
 ||
 - **1. Manuellt konfigurerat** – Kommandot `router-id <IP>` (högst prioritet)
@@ -104,7 +108,7 @@ I vilken ordning väljer OSPF sitt Router ID (RID)? (3)
 <!--SR:!fsrs,2026-10-01T14:40:33.835Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:40:33.835Z-->
 
 Varför sätter vi ett manuellt Router ID (t.ex. `10.10.10.10`) på routrarna i Labb 5?::För att garantera en ==förutsägbar och stabil identifiering i OSPF-domänen== som inte ändras om ett fysiskt gränssnitt går ned.
-<!--SR:!fsrs,2026-10-01T14:38:48.748Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:38:48.748Z-->
+<!--SR:!fsrs,2026-10-01T18:45:44.861Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:35:44.861Z-->
 
 Vad måste du göra om du ändrar OSPF Router ID på en redan aktiv router?::Köra kommandot ==`clear ip ospf process`== i privileged EXEC mode för att starta om OSPF och aktivera det nya ID:t.
 <!--SR:!fsrs,2026-10-01T14:39:56.515Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:39:56.515Z-->
@@ -122,31 +126,35 @@ Vilka två multicast-adresser används för kommunikation inom OSPF? (2)
 <!--SR:!fsrs,2026-10-01T14:11:13.990Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:11:13.990Z-->
 
 Varför konfigureras `passive-interface G0/0` på LAN-gränssnitten i Labb 5?::Det stoppar sändning och mottagning av OSPF Hello-paket mot klientdatorer, vilket ==sparar bandbredd, skyddar mot skadliga OSPF-routrar och annonserar ändå ut nätverket==.
-<!--SR:!fsrs,2026-10-01T14:34:35.839Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:34:35.839Z-->
+<!--SR:!fsrs,2026-10-01T18:44:02.422Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:34:02.422Z-->
 
 Vad gör kommandot `default-information originate` under `router ospf 1` på Campus-V?::Genererar och sprider en dynamisk OSPF default route (`O*E2`) till GW1 och GW2 så att de ==automatiskt hittar vägen ut mot internet via Campus-V==.
-<!--SR:!fsrs,2026-10-01T14:38:33.396Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:38:33.396Z-->
+<!--SR:!fsrs,2026-10-01T18:39:56.163Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:29:56.163Z-->
 
 Vad innebär OSPF-konvergens?::Det tillstånd då ==alla routrar i nätverket har uppdaterat sina routingtabeller== och kommit överens om den aktuella topologin efter en ändring.
 <!--SR:!fsrs,2026-09-30T23:39:55.618Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:39:55.618Z-->
+
+Vilket nät får du uttryckligen inte annonsera i OSPF i Labb 5?::==Campus-V:s Lo0-nät (loopback)== ska inte annonseras ut i OSPF.
+
+Vilka gränssnitt gör du passiva (passive-interface) i OSPF i Labb 5?::De där det ==inte sitter någon annan OSPF-router på andra sidan==, till exempel mot klienter och servrar.
 
 ---
 
 ## Modul 3: Redundans med HSRP
 
 **HSRP** (Hot Standby Router Protocol);;Ett Cisco-proprietärt First Hop Redundancy Protocol (FHRP) som grupperar flera fysiska routrar till en virtuell router för att ==eliminera Single Point of Failure för klienternas Default Gateway==.
-<!--SR:!fsrs,2026-10-01T10:24:06.808Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:24:06.808Z!fsrs,2026-10-01T10:48:46.846Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:48:46.846Z-->
+<!--SR:!fsrs,2026-10-02T18:34:23.910Z,1,0.78469259,8.91819814,2,4,0,0,2026-10-01T18:34:23.910Z!fsrs,2026-10-01T10:48:46.846Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:48:46.846Z-->
 
 Vad är problemet med att konfigurera en statisk Default Gateway IP på klientdatorer?::Klienter kan bara ha en gateway-IP inställd om den routern kraschar eller tappar sin länk ==förlorar klienterna all kontakt med andra nätverk==, även om det finns alternativa routrar.
-<!--SR:!fsrs,2026-10-01T10:22:01.310Z,1,1.07709473,8.39265542,2,3,0,0,2026-09-30T10:22:01.310Z-->
+<!--SR:!fsrs,2026-10-01T18:39:18.444Z,0,0.32258104,9.45690513,3,4,1,0,2026-10-01T18:29:18.444Z-->
 
 Hur löser HSRP problemet med Single Point of Failure?::Genom att låta två fysiska routrar samarbeta kring en gemensam ==virtuell IP-adress och virtuell MAC-adress== som klienterna pekar mot (där Active routern svarar på ARP med den virtuella MAC-adressen).
 <!--SR:!fsrs,2026-10-01T10:42:43.138Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:42:43.138Z-->
 
-Vilka är den virtuella IP-adressen och MAC-adressen i Labb 5? (2)
+Vad måste du ställa in på PC10 och PC200 i Labb 5, och vad händer om du ställer fel? (2)
 ||
-- **Virtuell IP** – `192.168.0.254` (inställd som Default Gateway på PC-10 och PC-200)
-- **Virtuell MAC (HSRPv2 Group 1)** – `0000.0c9f.f001` (genereras automatiskt utifrån gruppnumret)
+- **Default gateway ska vara den virtuella adressen** – ett eget steg i labben, efter att HSRP är konfigurerat på båda gatewayarna
+- **Fällan** – pekar du i stället på en av routrarnas egna adresser fungerar nätet som vanligt, ända till just den routern faller, och då tappar klienten allt
 <!--SR:!fsrs,2026-10-01T14:13:03.309Z,1,0.10421247,9.44205284,2,4,0,0,2026-09-30T14:13:03.309Z-->
 
 Vilka två huvudroller finns i en HSRP-grupp? (2)
@@ -186,18 +194,20 @@ Vilka är de två sista stegen i HSRP:s tillståndsmaskin (FSM)? (2)
 Vad är skillnaden mellan HSRP och VRRP?::HSRP är ett Cisco-proprietärt protokoll medan **VRRP (Virtual Router Redundancy Protocol)** är en ==öppen IETF-standard med liknande funktionalitet==.
 <!--SR:!fsrs,2026-10-01T10:48:04.647Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:48:04.647Z-->
 
+Hur verifierar du HSRP i Labb 5, och vad ska du se?::Med kommandot ==`show standby`==: Flempan-GW1 ska stå i active och Flempan-GW2 i standby.
+
 ---
 
 ## Modul 4: Trafikstyrning & Utökade ACL:er
 
 **ACL** (Access Control List);;En sekventiell regellista på en router som utvärderar inkommande eller utgående datapaket för att ==tillåta (permit) eller stoppa (deny) trafik==.
-<!--SR:!fsrs,2026-10-01T10:44:30.385Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:44:30.385Z!fsrs,2026-10-01T14:37:05.365Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:37:05.365Z-->
+<!--SR:!fsrs,2026-10-01T10:44:30.385Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:44:30.385Z!fsrs,2026-10-01T18:43:43.463Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:33:43.463Z-->
 
 Vad är den huvudsakliga skillnaden mellan en Standard ACL och en Utökad (Extended) ACL?::En Standard ACL kan enbart filtrera på käll-IP, medan en Utökad ACL kan filtrera på ==käll-IP, destinations-IP, Layer 4-protokoll (TCP/UDP/ICMP/OSPF) och portnummer==.
-<!--SR:!fsrs,2026-10-01T10:23:50.200Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:23:50.200Z-->
+<!--SR:!fsrs,2026-10-02T18:32:18.472Z,1,0.78469259,8.91819814,2,4,0,0,2026-10-01T18:32:18.472Z-->
 
 Vad innebär First-match principle när en router utvärderar en ACL?::Routorn läser regellistan ovanifrån och ned – så fort ett paket matchar en regel ==utförs åtgärden (permit/deny) omedelbart och utvärderingen avslutas==.
-<!--SR:!fsrs,2026-10-01T10:48:43.998Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:48:43.998Z-->
+<!--SR:!fsrs,2026-10-01T18:42:03.312Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:32:03.312Z-->
 
 Vad innebär osynlig Implicit Deny i slutet av en ACL?::Att all trafik som inte uttryckligen tillåtits av en tidigare regel ==stoppas automatiskt av den osynliga sista regeln `deny ip any any`==.
 <!--SR:!fsrs,2026-10-01T10:47:56.374Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:47:56.374Z-->
@@ -211,21 +221,14 @@ Var ska Utökade respektive Standard ACL:er placeras i nätverket? (2)
 På vilket gränssnitt och i vilken riktning placeras ACL:en i Labb 5?::På LAN-gränssnittet **G0/0** på Flempan-GW1 och Flempan-GW2 i **inkommande riktning (`in`)** med kommandot ==`ip access-group SLUTUPPGIFT_ACL in`==.
 <!--SR:!fsrs,2026-10-01T14:37:44.557Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:37:44.557Z-->
 
-Vilka regler gäller för Lärarnätet (`192.168.0.0/25`) mot webbservern (`172.16.0.10`) i Labb 5? (3)
+Vad skiljer lärarnas och studenternas policy mot WEB-servern i Labb 5? (2)
 ||
-- **HTTP (Port 80)** – `permit tcp 192.168.0.0 0.0.0.127 host 172.16.0.10 eq 80`
-- **FTP (Port 21)** – `permit tcp 192.168.0.0 0.0.0.127 host 172.16.0.10 eq 21`
-- **ICMP (Ping)** – `permit icmp 192.168.0.0 0.0.0.127 host 172.16.0.10`
+- **Lika för båda** – både lärar- och studenthalvan får webb (HTTP) och ping (ICMP) mot WEB-servern
+- **Enda skillnaden** – bara lärarhalvan får dessutom FTP
 <!--SR:!fsrs,2026-10-01T14:37:20.853Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:37:20.853Z-->
 
-Vilka regler gäller för Studentnätet (`192.168.0.128/25`) mot webbservern i Labb 5? (2)
-||
-- **HTTP (Port 80)** – `permit tcp 192.168.0.128 0.0.0.127 host 172.16.0.10 eq 80`
-- **ICMP (Ping)** – `permit icmp 192.168.0.128 0.0.0.127 host 172.16.0.10` *(FTP är spärrat via Implicit Deny)*
-<!--SR:!fsrs,2026-10-01T14:12:31.629Z,1,0.10421247,9.44205284,2,4,0,0,2026-09-30T14:12:31.629Z-->
-
 Vad händer om du glömmer att lägga till undantagsregler för OSPF och HSRP i din ACL?::Det osynliga `deny ip any any` kraschar nätverket genom att ==stoppa OSPF (IP-protokoll 89) och HSRP (UDP port 1985)==, vilket bryter vägvalet och redundansen.
-<!--SR:!fsrs,2026-09-30T23:34:42.853Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:34:42.853Z-->
+<!--SR:!fsrs,2026-10-01T18:39:29.636Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-01T18:29:29.636Z-->
 
 Vilka två explicita undantagsregler måste finnas i ACL:en för infrastruktur? (2)
 ||
@@ -233,7 +236,7 @@ Vilka två explicita undantagsregler måste finnas i ACL:en för infrastruktur? 
 - **HSRP-trafik** – `permit udp any host 224.0.0.102 eq 1985` (tillåter HSRPv2 Hello-paket på UDP-port 1985)
 <!--SR:!fsrs,2026-09-30T23:36:30.905Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:36:30.905Z-->
 
-Vilken regel tillåter alla användare (`192.168.0.0/24`) att surfa på webben mot internet?::`permit tcp 192.168.0.0 0.0.0.255 any eq 80` ==(tillåter utgående HTTP-trafik till valfri destination)==.
+Vad säger utgående-policyn för campusnätet mot resten av nätet i Labb 5?::Bara ==webbtrafik (HTTP)== släpps vidare ut mot internet; allt annat fångas av den implicita neka-regeln.
 <!--SR:!fsrs,2026-10-01T14:40:41.899Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:40:41.899Z-->
 
 Hur kan du verifiera vilka regler i din ACL som har matchats av paket på routern?::Med privileged EXEC-kommandot ==`show access-lists`==, som visar regellistan och antalet träffar (*match counters*) per rad.
@@ -252,3 +255,9 @@ Vilka är portnumren och protokollen för HTTP, FTP, ICMP och OSPF? (4)
 - **ICMP** – Protokoll på Nätverkslagret (saknar Layer 4-port)
 - **OSPF** – IP-protokollnummer 89
 <!--SR:!fsrs,2026-10-01T10:43:51.537Z,1,0.10421247,9.44205284,2,4,0,0,2026-10-01T10:43:51.537Z-->
+
+Alla PDU-tester lyckas före ACL:en – vilka tre ska misslyckas efter den, och varför? (3)
+||
+- **Lärar-PC pingar internet** – faller, för bara webbtrafik släpps ut mot internet
+- **Student-PC pingar internet** – faller av samma skäl, ping ut tillåts inte
+- **Student-PC kör FTP mot WEB** – faller, studenter får bara webb och ping, inte FTP

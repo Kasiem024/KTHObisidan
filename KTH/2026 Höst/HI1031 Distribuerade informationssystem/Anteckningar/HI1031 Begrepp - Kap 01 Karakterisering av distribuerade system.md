@@ -25,13 +25,13 @@ Ge exempel på distribuerade system. (3)
 - **Internet** och webben
 - **Ett intranät** i en organisation
 - **Mobila och trådlösa** system
-<!--SR:!fsrs,2026-10-01T10:16:49.660Z,1,0.29293889,9.95122883,2,11,2,0,2026-09-30T10:16:49.660Z-->
+<!--SR:!fsrs,2026-10-02T21:13:42.900Z,1,0.26051467,9.94413327,2,13,3,0,2026-10-01T21:13:42.900Z-->
 
 Varför är webbsök ett svårt distribuerat problem?::Hela webbens innehåll ska indexeras – boken säger ==över 63 miljarder sidor== – och sedan sökas igenom.
 <!--SR:!fsrs,2026-10-10T16:18:36.735Z,19,18.86782,7.09510771,2,4,0,0,2026-09-21T16:18:36.735Z-->
 
 **Molntjänster** (cloud computing);;Att ==hyra datorkraft som el eller vatten== i stället för att äga den.
-<!--SR:!fsrs,2026-10-12T12:06:06.270Z,14,13.87001142,8.56466845,2,5,0,0,2026-09-28T12:06:06.270Z!fsrs,2026-09-30T15:29:20.553Z,16,15.9366778,4.01060897,2,3,0,0,2026-09-14T15:29:20.553Z-->
+<!--SR:!fsrs,2026-10-12T12:06:06.270Z,14,13.87001142,8.56466845,2,5,0,0,2026-09-28T12:06:06.270Z!fsrs,2026-10-31T20:47:44.240Z,30,39.7586713,6.0091915,2,4,0,0,2026-10-01T20:47:44.240Z-->
 
 ## Resurser som är värda att dela
 
@@ -53,20 +53,20 @@ Vilka åtta utmaningar räknar boken upp? (8)
 - **Samtidighet**
 - **Transparens**
 - **Tjänstekvalitet**
-<!--SR:!fsrs,2026-10-01T10:11:38.917Z,3,3.47768359,9.11018088,2,6,2,0,2026-09-28T10:11:38.917Z-->
+<!--SR:!fsrs,2026-10-06T20:55:51.183Z,5,5.03169791,9.39452497,2,7,2,0,2026-10-01T20:55:51.183Z-->
 
 ## Heterogenitet
 
 **Heterogenitet** (heterogeneity);;Att delarna är ==olika och ändå måste jobba ihop== – skillnader i nät, hårdvara, operativsystem och språk.
-<!--SR:!fsrs,2026-10-01T10:15:27.612Z,16,15.9366778,4.01060897,2,3,0,0,2026-09-15T10:15:27.612Z!fsrs,2026-09-30T15:28:49.120Z,16,15.9366778,4.01060897,2,3,0,0,2026-09-14T15:28:49.120Z-->
+<!--SR:!fsrs,2026-10-31T20:59:35.231Z,30,38.75639122,6.0091915,2,4,0,0,2026-10-01T20:59:35.231Z!fsrs,2026-10-31T20:45:52.640Z,30,39.7586713,6.0091915,2,4,0,0,2026-10-01T20:45:52.640Z-->
 
 Hur kan internet koppla ihop många olika sorters nät?::Varje dator kör ==internetprotokollet== ovanpå sitt eget nät, så programmen märker inte skillnaden.
-<!--SR:!fsrs,2026-10-01T10:08:16.671Z,1,0.30123455,9.94839535,2,12,3,0,2026-09-30T10:08:16.671Z-->
+<!--SR:!fsrs,2026-10-02T21:14:18.172Z,1,0.26570245,9.94289071,2,14,4,0,2026-10-01T21:14:18.172Z-->
 
 ## Öppenhet
 
 Vad krävs för att ett system ska vara öppet?::Att de ==viktiga gränssnitten publiceras== så andra kan bygga vidare.
-<!--SR:!fsrs,2026-09-30T16:06:59.487Z,9,9.2662958,9.02387245,2,6,0,0,2026-09-21T16:06:59.487Z-->
+<!--SR:!fsrs,2026-10-15T20:50:52.840Z,14,13.58785025,9.33722942,2,7,0,0,2026-10-01T20:50:52.840Z-->
 
 ## Säkerhet
 
@@ -85,7 +85,7 @@ Vilket krav ställer boken på resursbehovet i ett skalbart system?::Hårdvaran 
 <!--SR:!fsrs,2026-10-10T16:20:33.398Z,19,18.86782,7.09510771,2,4,0,0,2026-09-21T16:20:33.398Z-->
 
 Hur får man ett system att skala i praktiken?::Man ==lägger till fler servrar och kopior== och cachar det som efterfrågas ofta, så lasten sprids.
-<!--SR:!fsrs,2026-10-01T10:10:49.982Z,1,0.11836996,9.44267659,2,5,1,0,2026-09-30T10:10:49.982Z-->
+<!--SR:!fsrs,2026-10-03T20:49:16.008Z,2,0.56381019,9.42846228,2,6,1,0,2026-10-01T20:49:16.008Z-->
 
 ## Felhantering
 
@@ -110,7 +110,7 @@ Vad menas med utmaningen tjänstekvalitet (QoS)?::Att tjänsten ska ==hålla det
 ## Arvet från HTML
 
 Vilket arv från HTML måste man tänka på?::HTML har ==fasta taggar gjorda för att visas för människor==, inte för program att läsa.
-<!--SR:!fsrs,2026-10-01T15:19:11.161Z,2,0.89675638,9.91342239,2,11,1,0,2026-09-29T15:19:11.161Z-->
+<!--SR:!fsrs,2026-10-03T20:55:18.751Z,2,1.79442346,9.89873734,2,12,1,0,2026-10-01T20:55:18.751Z-->
 
 ## Arvet från HTTP
 

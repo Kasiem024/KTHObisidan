@@ -16,13 +16,13 @@ Vilka tre skikt har en trelagersarkitektur? (3)
 - **Klienten** – visar gränssnittet
 - **Applikationsservern** – kör logiken
 - **Databasservern** – lagrar datan
-<!--SR:!fsrs,2026-10-01T15:20:13.744Z,2,0.44035178,9.92791556,2,9,1,0,2026-09-29T15:20:13.744Z-->
+<!--SR:!fsrs,2026-10-02T21:01:38.599Z,1,0.86584905,9.93737536,2,10,1,0,2026-10-01T21:01:38.599Z-->
 
 Vad kostar tre lager jämfört med två? (2)
 ||
 - **Mer att sköta** – tre servrar i stället för två
 - **Långsammare** – varje anrop går ett steg längre
-<!--SR:!fsrs,2026-10-01T14:09:50.214Z,1,0.22495104,8.39432857,2,4,1,0,2026-09-30T14:09:50.214Z-->
+<!--SR:!fsrs,2026-10-02T21:02:36.527Z,1,0.1266823,9.443226,2,6,2,0,2026-10-01T21:02:36.527Z-->
 
 ## MVC-arkitektur
 
@@ -43,7 +43,7 @@ Hur går flödet i MVC?::Användaren gör något i vyn, ==controllern tolkar det
 ## Middleware
 
 **Middleware**;;Ett lager av mjukvara vars syfte är att ==dölja heterogenitet och ge programmeraren en bekväm programmeringsmodell==.
-<!--SR:!fsrs,2026-09-30T17:25:53.825Z,2,1.72609419,8.91819814,2,4,0,0,2026-09-28T17:25:53.825Z!fsrs,2026-10-04T10:10:04.537Z,4,4.19933095,5.19004872,2,3,0,0,2026-09-30T10:10:04.537Z-->
+<!--SR:!fsrs,2026-10-04T20:51:45.080Z,3,3.26379175,9.26707788,2,5,0,0,2026-10-01T20:51:45.080Z!fsrs,2026-10-04T10:10:04.537Z,4,4.19933095,5.19004872,2,3,0,0,2026-09-30T10:10:04.537Z-->
 
 Vad är middleware rent konkret?::==Processer eller objekt på flera datorer== som pratar med varandra för att sköta kommunikation och resursdelning.
 <!--SR:!fsrs,2026-10-03T09:52:38.740Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T09:52:38.740Z-->
@@ -54,7 +54,7 @@ Vilka fyra lager har boken, nedifrån och upp? (4)
 - **Operativsystem**
 - **Middleware**
 - **Tillämpningar och tjänster**
-<!--SR:!fsrs,2026-10-01T10:11:57.411Z,1,0.22495104,8.39432857,2,4,1,0,2026-09-30T10:11:57.411Z-->
+<!--SR:!fsrs,2026-10-03T20:57:15.543Z,2,1.19769966,8.38116261,2,5,1,0,2026-10-01T20:57:15.543Z-->
 
 Ge exempel på middleware.::==CORBA, Java RMI och Sun RPC== – lager som låter program på olika datorer anropa varandra.
 <!--SR:!fsrs,2026-10-03T10:11:35.363Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:11:35.363Z-->
@@ -62,7 +62,7 @@ Ge exempel på middleware.::==CORBA, Java RMI och Sun RPC== – lager som låter
 ## Fördelar med klient/server
 
 Vad är fördelen med en klient/server-lösning?::Ett ==enkelt och direkt sätt att dela på data och resurser==.
-<!--SR:!fsrs,2026-10-01T14:07:50.936Z,1,0.11836996,9.44267659,2,5,1,0,2026-09-30T14:07:50.936Z-->
+<!--SR:!fsrs,2026-10-03T20:49:02.848Z,2,0.56381019,9.42846228,2,6,1,0,2026-10-01T20:49:02.848Z-->
 
 Hur ser rollerna ut i klient/server?::==Klienter ber servrar== om de resurser som servern håller i, ofta på en annan dator.
 <!--SR:!fsrs,2026-10-04T10:17:53.273Z,4,4.19933095,5.19004872,2,3,0,0,2026-09-30T10:17:53.273Z-->
@@ -76,13 +76,13 @@ Vad är nackdelen med klient/server?::Den ==skalar dåligt== – all last hamnar
 <!--SR:!fsrs,2026-10-04T10:09:38.337Z,4,4.19933095,5.19004872,2,3,0,0,2026-09-30T10:09:38.337Z!fsrs,2026-10-04T11:57:14.153Z,6,5.73070012,8.90945907,2,5,0,0,2026-09-28T11:57:14.153Z-->
 
 Vad är vinsten med en mobil agent?::==Fjärranrop byts mot lokala anrop==, vilket ger lägre kommunikationskostnad och kortare tid.
-<!--SR:!fsrs,2026-10-01T15:21:45.887Z,2,0.43915744,9.77270258,2,7,1,0,2026-09-29T15:21:45.887Z-->
+<!--SR:!fsrs,2026-10-03T21:01:14.111Z,2,1.2482807,9.75815825,2,8,1,0,2026-10-01T21:01:14.111Z-->
 
 Ge bokens två användningsexempel för mobila agenter. (2)
 ||
 - **Installera och underhålla mjukvara** på datorerna i en organisation
 - **Jämföra priser** hos flera leverantörer genom att besöka varje plats och köra databasoperationer
-<!--SR:!fsrs,2026-10-01T14:08:09.592Z,1,0.11836996,9.44267659,2,5,1,0,2026-09-30T14:08:09.592Z-->
+<!--SR:!fsrs,2026-10-03T20:52:02.024Z,2,0.56381019,9.42846228,2,6,1,0,2026-10-01T20:52:02.024Z-->
 
 Varför är en mobil agent en säkerhetsrisk för datorn den besöker?::Datorn måste ==bestämma vilka resurser agenten får använda==, beroende på vem den jobbar åt.
 <!--SR:!fsrs,2026-10-03T09:58:26.741Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T09:58:26.741Z-->

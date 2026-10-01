@@ -34,7 +34,7 @@ Vad är problemet med att låsa alla objekt när transaktionen startar? (2)
 ||
 - **Låser för mycket** – blockerar delade resurser i onödan
 - **Går inte alltid** – man vet inte i förväg vilka objekt som behövs
-<!--SR:!fsrs,2026-10-01T13:56:10.623Z,1,0.78203289,8.39105423,2,5,1,0,2026-09-30T13:56:10.623Z-->
+<!--SR:!fsrs,2026-10-04T20:45:45.000Z,3,2.14031285,8.37789155,2,6,1,0,2026-10-01T20:45:45.000Z-->
 
 Vad är det värsta problemet med timeout?::Att en transaktion ==kan abort:as fast det inte fanns någon deadlock== – bara för att låset blev sårbart medan någon väntade.
 <!--SR:!fsrs,2026-10-06T10:10:48.518Z,8,8.17307705,5.64640287,2,3,0,0,2026-09-28T10:10:48.518Z-->
@@ -45,7 +45,7 @@ Vilken transaktion avbryter man vid en deadlock?::Valet är inte enkelt – man 
 ## 2. Dirty reads
 
 **Dirty read** (smutsig läsning);;När en transaktion ==läser ett värde som en annan skrivit men inte commit:at==. Abort:ar den andra har man läst ett värde som aldrig fanns.
-<!--SR:!fsrs,2026-10-01T20:10:33.516Z,5,5.38885005,3.58131923,2,3,0,0,2026-09-26T20:10:33.516Z!fsrs,2026-10-06T17:31:39.261Z,8,8.17307705,5.64640287,2,3,0,0,2026-09-28T17:31:39.261Z-->
+<!--SR:!fsrs,2026-10-16T20:48:27.936Z,15,14.65864851,5.72420896,2,4,0,0,2026-10-01T20:48:27.936Z!fsrs,2026-10-06T17:31:39.261Z,8,8.17307705,5.64640287,2,3,0,0,2026-09-28T17:31:39.261Z-->
 
 Varför är en dirty read ett problem man inte kan laga?::För att läsaren ==kan ha commit:at redan==, på ett värde som sedan försvinner – och en commit går inte att göra ogjord.
 <!--SR:!fsrs,2026-10-06T10:10:35.126Z,8,8.17307705,5.64640287,2,3,0,0,2026-09-28T10:10:35.126Z-->
@@ -54,7 +54,7 @@ Vad är återhämtningsbarhet (recoverability) mot dirty reads?::Att ==skjuta up
 <!--SR:!fsrs,2026-10-09T10:14:46.650Z,9,8.83497632,6.79215857,2,4,0,0,2026-09-30T10:14:46.650Z-->
 
 **Strikt körning** (strict execution);;När läsning och skrivning på ett objekt ==skjuts upp tills alla som tidigare skrivit det har commit:at eller abort:at==. Det är detta som ger isolering och stoppar dirty reads.
-<!--SR:!fsrs,2026-10-01T15:18:45.913Z,2,0.33295487,9.77757466,2,7,1,0,2026-09-29T15:18:45.913Z!fsrs,2026-10-03T14:08:38.871Z,3,2.88206713,8.91056867,2,6,1,0,2026-09-30T14:08:38.871Z-->
+<!--SR:!fsrs,2026-10-03T20:48:52.768Z,2,1.05576655,9.76302545,2,8,1,0,2026-10-01T20:48:52.768Z!fsrs,2026-10-03T14:08:38.871Z,3,2.88206713,8.91056867,2,6,1,0,2026-09-30T14:08:38.871Z-->
 
 Vad är en kaskadabort?::Avbryter man en transaktion måste ==alla som läst dess osparade värden också avbrytas==.
 <!--SR:!fsrs,2026-10-04T10:01:22.154Z,4,4.19933095,5.19004872,2,3,0,0,2026-09-30T10:01:22.154Z-->
@@ -107,10 +107,10 @@ När bestäms ordningen mellan transaktioner? (2)
 ## 5. Jämförelse av de tre metoderna
 
 **Serialiserbarhet** (serial equivalence);;Att en flätad körning av transaktioner ger ==samma resultat som om de körts en och en i någon ordning==.
-<!--SR:!fsrs,2026-10-01T14:08:27.328Z,1,0.50974539,9.72980591,2,7,1,0,2026-09-30T14:08:27.328Z!fsrs,2026-10-04T15:20:00.664Z,5,5.22024091,7.86010817,2,4,0,0,2026-09-29T15:20:00.664Z-->
+<!--SR:!fsrs,2026-10-03T21:04:21.486Z,2,1.11749905,9.71530447,2,8,1,0,2026-10-01T21:04:21.486Z!fsrs,2026-10-04T15:20:00.664Z,5,5.22024091,7.86010817,2,4,0,0,2026-09-29T15:20:00.664Z-->
 
 **Tvåfaslåsning** (two-phase locking);;Att en transaktion ==först bara skaffar lås (växande fas) och sedan bara släpper dem (krympande fas)== – inga nya lås efter det första släppta.
-<!--SR:!fsrs,2026-10-01T10:17:21.028Z,1,0.78203289,8.39105423,2,5,1,0,2026-09-30T10:17:21.028Z!fsrs,2026-10-01T20:11:25.563Z,5,5.38885005,3.58131923,2,3,0,0,2026-09-26T20:11:25.563Z-->
+<!--SR:!fsrs,2026-10-03T21:00:07.471Z,2,1.59890246,8.91713519,2,6,1,0,2026-10-01T21:00:07.471Z!fsrs,2026-10-16T21:00:14.287Z,15,14.65864851,5.72420896,2,4,0,0,2026-10-01T21:00:14.287Z-->
 
 Vad gör strikt tvåfaslåsning "strikt"?::Att ==alla lås hålls kvar tills transaktionen commit:ar eller abort:ar==, i stället för att släppas direkt. Det skyddar mot dirty reads.
 <!--SR:!fsrs,2026-10-06T10:11:05.502Z,8,8.17307705,5.64640287,2,3,0,0,2026-09-28T10:11:05.502Z-->

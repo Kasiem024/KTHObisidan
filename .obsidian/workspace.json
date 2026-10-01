@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 17 Distribuerade transaktioner.md",
+                "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 17 Distribuerade transaktioner.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HI1031 Begrepp - Kap 17 Distribuerade transaktioner"
+              "title": "HI1031 Tentafrågor och Svar - Kap 17 Distribuerade transaktioner"
             }
           }
         ]
@@ -81,8 +81,7 @@
               "title": "Tags"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -204,10 +203,12 @@
   },
   "active": "8f43112a808f4267",
   "lastOpenFiles": [
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 17 Distribuerade transaktioner.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 16 Transaktioner och samtidighetskontroll.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 11 Säkerhet.md",
     "KTH/2025 Höst/SF1686 Flervariabelanalys/_index.md",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Labb 1 - Flashcards.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 17 Distribuerade transaktioner.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 17 Distribuerade transaktioner.md",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Labb 5 - Flashcards.md",
     "Obekräftade 228348.crdownload",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Labb 5 - Flashcards.md",
@@ -220,7 +221,6 @@
     "Obsidian Plugins/Excalidraw/Drawing 2026-09-30 12.20.01.excalidraw.md",
     "Obsidian Plugins/Excalidraw",
     "Obsidian Plugins",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 16 Transaktioner och samtidighetskontroll.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 10 Peer-to-peer-system.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 06 Indirekt kommunikation.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 09 Web services.md",
@@ -228,7 +228,6 @@
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 04 Interprocesskommunikation.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 02 Systemmodeller.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 01 Karakterisering av distribuerade system.md",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Begrepp - Kap 11 Säkerhet.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 16 Transaktioner och samtidighetskontroll.md",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Begrepp/HTTP.md",
     "KTH/2026 Vår/HE1033 Kommunikationsnät/Begrepp/DNS.md",
