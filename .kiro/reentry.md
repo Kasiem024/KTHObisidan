@@ -14,11 +14,16 @@ Last updated **2026-10-01, 15:30**. Course-neutral by design; the live course is
 
 ## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him
 
-The work of 2026-09-26 to 10-01 is **finished, verified, committed and pushed** as `ab5b9a7`.
-Everything is recorded in `Meta/Vault Findings & Backlog.md` as **F80 to F83**; nothing is in flight.
-`steering/current-state.md` says the same and is accurate as of this commit.
+The work of 2026-09-26 to 10-01 is **finished, verified, committed and pushed**. Everything is
+recorded in `Meta/Vault Findings & Backlog.md` as **F80 to F83**; nothing is in flight.
+`steering/current-state.md` says the same.
 
-**Three things are waiting on his decision, not on work.** Put them to him and let him choose:
+**No commit id is quoted here on purpose.** This file is rewritten *before* the commit that contains
+it, so any id it named would be one commit stale the moment it was written — which is exactly how the
+previous version came to assert a figure three commits behind. Run `git log -1` and
+`git ls-remote origin refs/heads/main` and compare them yourself; that takes one call and cannot rot.
+
+**Two things are waiting on his decision, not on work.** Put them to him and let him choose:
 
 1. **Chapter 9's exam question 2 asks what role hypermedia plays, and the 2012 course book does not
    cover hypermedia or HATEOAS.** Four reviewers confirmed that independently. The cards that used to
@@ -27,10 +32,6 @@ Everything is recorded in `Meta/Vault Findings & Backlog.md` as **F80 to F83**; 
 2. **HI1032's twelve chapter decks and its Labb 1 deck carry card-form findings** — run
    `Test-DeckHygiene.ps1` with no `-Course`. Those decks predate these conventions. HI1031's ten and
    HI1032's Labb 5 are clean.
-3. **HI1032 Labb 5 carries eight `##` headings in two parallel series** over the same four topics —
-   `## Modul 1`–`4` with 14, 15, 10 and 12 cards, then `## 1.`–`4.` with one or two each. Headings do
-   not affect review at all, so the cost is readability, not drilling. Folding them together moves
-   marker-bearing cards, so it is his call.
 
 ---
 
@@ -87,13 +88,13 @@ other twelve use `Write-Output`, where `6>` captures nothing instead (T23).
 
 ## STATE OF THE REPOSITORY
 
-**Clean and pushed.** `ab5b9a7` on `main`, `origin/main` identical, verified by comparing refs rather
-than by reading the push output — git on Drive prints a benign `failed to perform geometric repack`
-either way.
+**Clean and pushed at the time of writing.** Verify by comparing `git rev-parse HEAD` with
+`git ls-remote origin refs/heads/main` rather than by reading push output — git on Drive prints a
+benign `failed to perform geometric repack` whether the push succeeded or not.
 
-**Run `git status` rather than trusting any commit id written here.** This file and
-`current-state.md` have each carried a stale one; a reviewer caught `current-state.md` three commits
-behind on 2026-10-01, the third such catch.
+**Never trust a commit id written in a doc**, including this one. `current-state.md` has carried a
+stale id three times and a reviewer caught it again on 2026-10-01; this file asserted one that was
+stale before it was even committed, because it is written before the commit containing it.
 
 Expect the working tree to be dirty again by the time you read this: **he reviews on his phone and in
 Obsidian, and both write to the vault.** A review adds or rewrites `<!--SR:-->` lines and touches no

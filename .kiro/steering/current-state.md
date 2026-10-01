@@ -29,6 +29,9 @@ not a live state file, and two of its figures are superseded — see the banner 
   carried no highlight.
 - **F83, 2026-09-27 to 10-01** — HI1032's new Labb 5 deck brought to the form rules, **15 cards added
   to chapter 17** at the author's request, and three defects found in the checks F82 had just added.
+  Labb 5's duplicated heading taxonomy was then folded on request: its two parallel `##` series became
+  the four `## Modul N` sections, 57 cards and 56 markers unchanged, every marker still under its own
+  front line.
 
 **Card counts now**, per chapter: 01 26, 02 19, 04 29, 05 24, 06 25, 09 18, 10 22, 11 30, 16 28,
 17 **33**. That is 254 cards and 115 markers across the ten decks — markers rose from 73 because the

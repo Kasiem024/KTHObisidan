@@ -59,6 +59,12 @@ Varför ger Cisco IOS en varning när du sätter en static default route till et
 Vilka fysiska IP-adresser har Flempan-GW1 och Flempan-GW2 på sitt gemensamma LAN-gränssnitt G0/0?::Flempan-GW1 har `192.168.0.1/25` och Flempan-GW2 har `192.168.0.2/25` ==(båda ligger inom Lärar/Router-intervallet)==.
 <!--SR:!fsrs,2026-10-01T14:22:45.086Z,1,0.00773286,9.94987373,2,8,0,0,2026-09-30T14:22:45.086Z-->
 
+Vad skiljer ett nätverks-ID från en broadcast-adress? (2)
+||
+- **Nätverks-ID** – Första IP-adressen i undernätet (alla host-bitar är 0), identifierar själva undernätet
+- **Broadcast-adress** – Sista IP-adressen i undernätet (alla host-bitar är 1), används för att nå alla värdar i undernätet samtidigt
+<!--SR:!fsrs,2026-10-01T14:39:07.364Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:39:07.364Z-->
+
 ---
 
 ## Modul 2: Vägvalsprotokollet OSPFv2
@@ -121,6 +127,9 @@ Varför konfigureras `passive-interface G0/0` på LAN-gränssnitten i Labb 5?::D
 Vad gör kommandot `default-information originate` under `router ospf 1` på Campus-V?::Genererar och sprider en dynamisk OSPF default route (`O*E2`) till GW1 och GW2 så att de ==automatiskt hittar vägen ut mot internet via Campus-V==.
 <!--SR:!fsrs,2026-10-01T14:38:33.396Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:38:33.396Z-->
 
+Vad innebär OSPF-konvergens?::Det tillstånd då ==alla routrar i nätverket har uppdaterat sina routingtabeller== och kommit överens om den aktuella topologin efter en ändring.
+<!--SR:!fsrs,2026-09-30T23:39:55.618Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:39:55.618Z-->
+
 ---
 
 ## Modul 3: Redundans med HSRP
@@ -174,6 +183,9 @@ Vilka är de två sista stegen i HSRP:s tillståndsmaskin (FSM)? (2)
 - **Standby** – Reservrouter som kontinuerligt övervakar den aktiva routern
 - **Active** – Huvudrouter som hanterar all trafik skickad till den virtuella gatewayen
 
+Vad är skillnaden mellan HSRP och VRRP?::HSRP är ett Cisco-proprietärt protokoll medan **VRRP (Virtual Router Redundancy Protocol)** är en ==öppen IETF-standard med liknande funktionalitet==.
+<!--SR:!fsrs,2026-10-01T10:48:04.647Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:48:04.647Z-->
+
 ---
 
 ## Modul 4: Trafikstyrning & Utökade ACL:er
@@ -226,28 +238,6 @@ Vilken regel tillåter alla användare (`192.168.0.0/24`) att surfa på webben m
 
 Hur kan du verifiera vilka regler i din ACL som har matchats av paket på routern?::Med privileged EXEC-kommandot ==`show access-lists`==, som visar regellistan och antalet träffar (*match counters*) per rad.
 <!--SR:!fsrs,2026-09-30T23:39:10.351Z,1,0.1774331,8.39265542,2,3,0,0,2026-09-29T23:39:10.351Z-->
-
----
-
-## 1. Nätverksdesign, IP & Subnetting
-
-Vad skiljer ett nätverks-ID från en broadcast-adress? (2)
-||
-- **Nätverks-ID** – Första IP-adressen i undernätet (alla host-bitar är 0), identifierar själva undernätet
-- **Broadcast-adress** – Sista IP-adressen i undernätet (alla host-bitar är 1), används för att nå alla värdar i undernätet samtidigt
-<!--SR:!fsrs,2026-10-01T14:39:07.364Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:39:07.364Z-->
-
-## 2. OSPFv2 – Vägvalsprotokoll & Teori
-
-Vad innebär OSPF-konvergens?::Det tillstånd då ==alla routrar i nätverket har uppdaterat sina routingtabeller== och kommit överens om den aktuella topologin efter en ändring.
-<!--SR:!fsrs,2026-09-30T23:39:55.618Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:39:55.618Z-->
-
-## 3. HSRP & FHRP – Redundans på Djupet
-
-Vad är skillnaden mellan HSRP och VRRP?::HSRP är ett Cisco-proprietärt protokoll medan **VRRP (Virtual Router Redundancy Protocol)** är en ==öppen IETF-standard med liknande funktionalitet==.
-<!--SR:!fsrs,2026-10-01T10:48:04.647Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:48:04.647Z-->
-
-## 4. ACL:er & Trafikstyrning
 
 Vad är skillnaden på inkommande (`in`) och utgående (`out`) riktning för en ACL? (2)
 ||
