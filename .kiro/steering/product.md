@@ -172,6 +172,27 @@ each, so six facts — had been shown **21 times without being learned**. The au
 `.kiro/skills/write-flashcards/SKILL.md` rule 8 and rule 15, and `Test-DeckHygiene.ps1` now checks the
 countable part.
 
+### No card whose answer is an address, a mask or an ID
+
+Stated on 2026-10-01, when asked for more cards about HI1032's lab 5 topology:
+
+> jag är inte intresserad av att memorisera specifika adresser
+
+This is the previous instruction made specific, and it is binding on every deck. **A card whose answer
+is an IP address, a subnet mask, a wildcard mask, a router ID or an interface address should not exist.**
+Protocol constants are fine — a well-known port, HSRP's multicast address, OSPF's protocol number — they
+are vocabulary, not lab trivia.
+
+What to write instead is the **shape and the consequence**: which devices exist and what role each plays,
+what an interface faces rather than what it is numbered, why two gateways share one segment, what breaks
+if a client points at the wrong gateway. For a lab, the richest material is usually the lab's own
+acceptance criterion — which tests must fail, and why.
+
+This is not only a rule for new cards. Applying it to HI1032's lab 5 deck on the day it was stated
+**removed five existing cards and reworded five more**, because the deck predated the instruction. Expect
+the same in any deck written earlier, and check whether a removal orphans a concept: the method for
+calculating a wildcard mask has to survive even when that lab's particular masks go.
+
 **Keep the note structure as it is: facts first, `### Muntligt svar` last.** This was queried and the
 author rejected changing it, and the reason is his study method, so do not "improve" it later:
 
@@ -212,7 +233,7 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` runs F1–F84: all closed except F10 (parked). Both the audit and
+`Meta/Vault Findings & Backlog.md` runs F1–F85: all closed except F10 (parked). Both the audit and
 the linter run automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on

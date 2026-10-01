@@ -8,80 +8,87 @@ your context — the hard rules, the environment traps, the script library, the 
 re-read them looking for basics, and do not restate them here.** This file carries only what is
 task-specific plus the handful of things that have actually bitten.
 
-Last updated **2026-10-01, 15:30**. Course-neutral by design; the live course is HI1031.
+Last updated **2026-10-01, 23:40**. Course-neutral by design; the live courses are HI1031 and HI1032.
 
 ---
 
 ## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him
 
-The work of 2026-09-26 to 10-01 is **finished, verified, committed and pushed**. Everything is
-recorded in `Meta/Vault Findings & Backlog.md` as **F80 to F83**; nothing is in flight.
-`steering/current-state.md` says the same.
+The work of 2026-09-26 to 10-01 is **finished, verified, committed and pushed**, recorded in
+`Meta/Vault Findings & Backlog.md` as **F80 to F85**. `steering/current-state.md` says the same.
 
 **No commit id is quoted here on purpose.** This file is rewritten *before* the commit that contains
-it, so any id it named would be one commit stale the moment it was written — which is exactly how the
-previous version came to assert a figure three commits behind. Run `git log -1` and
-`git ls-remote origin refs/heads/main` and compare them yourself; that takes one call and cannot rot.
+it, so any id it named would be stale the moment it was written. Run `git log -1` and
+`git ls-remote origin refs/heads/main` and compare them yourself.
 
-**Two things are waiting on his decision, not on work.** Put them to him and let him choose:
+**Three things wait on his decision, not on work.** Put them to him and let him choose:
 
-1. **Chapter 9's deck has no card for the hypermedia part of exam question 2.** The 2012 book never
-   uses the word, which is why four reviewers found no coverage — but **`restfulapi.net` is required
-   course literature**, named on line 58 of KursPM (*What is REST*, *REST Constraints*, *Naming REST
-   resources*), and the vault holds a saved copy at `REST - restfulapi.net.md`. So this is a plain
-   coverage gap against a named exam question, not a question of accepting an outside source. An
-   earlier report framed it as the latter and was wrong. Still never fill it from memory — use the
-   saved article.
-2. **HI1032's twelve chapter decks and its Labb 1 deck carry card-form findings** — run
-   `Test-DeckHygiene.ps1` with no `-Course`. Those decks predate these conventions. HI1031's ten and
-   HI1032's Labb 5 are clean.
+1. **Chapter 9's HI1031 deck has no card for the hypermedia part of exam question 2, and the cards
+   that answered it should come back.** The 2012 book never uses the word, which is why four reviewers
+   found no coverage — but **`restfulapi.net` is required course literature**, named on line 58 of
+   KursPM (*What is REST*, *REST Constraints*, *Naming REST resources*), with a saved copy in the vault
+   at `REST - restfulapi.net.md`. An earlier report of mine framed this as "accepting a non-book
+   source" and was wrong. Still never fill the gap from memory — use the saved article.
+2. **HI1032's twelve chapter decks and its Labb 1 deck carry card-form findings** from before these
+   conventions. HI1031's ten and HI1032's Labb 5 are clean.
+3. **Two untracked files are not mine and not attributable** —
+   `.kiro/skills/write-flashcards/SYNTHESIS.md` and `.kiro/skills/query-notebooklm/SYNTHESIS.md`,
+   created 19:35 and 19:38 on 2026-10-01, after that evening's commit and before the next instruction.
+   Both are substantial. Left uncommitted deliberately; they are his to keep or discard.
 
 ---
 
-## THE SHAPE OF THE COURSE WORK, so you do not re-derive it
+## THE TWO AUTHORING RULES THAT ARE NEWEST AND EASIEST TO BREAK
 
-**His goal is to pass the exam, not to cover the book** (`steering/product.md`). Where a course
-publishes exam questions, those questions are the specification and the book is the source of
-grounded answers. HI1031's are at
-`KTH/2026 Höst/HI1031 .../Filer/Canvas/Tentor/Tentafrågor HI1031 Distribuerade informationssystem.md`
-— read-only, and the complete one. **Two files in that folder look like exam material and are not;**
-`product.md` names both. The examination is a **muntlig enskild examination**.
+Both are in `product.md` in full. They are repeated here because each was discovered by getting it
+wrong first.
 
-**Card counts now**, per chapter: 01 26, 02 19, 04 29, 05 24, 06 25, 09 18, 10 22, 11 30, 16 28,
-17 **33** — 254 cards and 115 markers across the ten decks. HI1032's Labb 5 holds 57 and 56.
+- **No card whose answer is an address, a mask or an ID.** Stated 2026-10-01: *"jag är inte
+  intresserad av att memorisera specifika adresser"*. Protocol constants are vocabulary and stay — a
+  well-known port, HSRP's multicast address. Lab addresses, subnet masks, wildcard masks and router IDs
+  do not. Write the **shape and the consequence** instead: what an interface faces rather than its
+  number, why two gateways share a segment, what breaks if a client points at the wrong one. Applying
+  this to a deck written earlier means **removals and rewordings**, not just new cards — it took five
+  and five out of Labb 5.
+- **The 40–60 cards per deck target is superseded.** "As few as possible, as concentrated on the exam
+  questions as possible." 40 is **not a floor**. HI1031 chapter 17 is the one deliberate exception.
 
-**The 40–60 cards per deck target is superseded.** The rule is "as few as possible, as concentrated on
-the exam questions as possible", and **40 is not a floor**. Chapter 17 is the one deliberate exception,
-widened from 18 to 33 on his explicit request on 2026-10-01.
+And the one that governs the exam-answer notes:
+
+- **The 150–250 line target cannot be met by a chapter with five or six exam questions.** Measured
+  2026-10-01. Quote **lines per exam ask** (29 to 47 across HI1031's five notes) and treat a note over
+  250 as a finding only when some paragraph cannot be tied to a named exam question. `### Muntligt
+  svar` is a measured 24 % of every note and its structure is the author's own decision — do not
+  shorten it to reach a number.
 
 ### Four things that must not be re-litigated
 
-- **`nosr` is his rotation and is not an agent's to change.** He has said so twice. Chapters 01, 02 and
-  17 had it removed between 09-27 and 10-01. `Format-FrontmatterTags.ps1` preserves whatever is there
-  and **does not restore a missing `nosr`** — check deliberately before running it.
-- **Chapter 5 question 4 and chapter 9 question 3 teach the same comparison, and that is correct.**
-  The exam asks it twice. Removing it from either chapter makes one question unanswerable from its own
-  chapter.
-- **Shorter cards did not make them shallower.** A depth calibration on the twenty most-shortened
-  cards found **0 of 20** had lost their mechanism (F81). The gap that mattered was **tradeoffs and
-  downsides**, which a coverage check cannot see because every written question still had cards.
-- **Multi-fact cards are the hard form, measured in his own review data** within each deck, five decks
-  of five (F80). A prose card that hides two facts is worse still, because it is easy to pass on half
-  the answer. `write-flashcards/SKILL.md` rule 8 has the figures.
+- **`nosr` is his rotation.** He has said so twice. `Format-FrontmatterTags.ps1` preserves what is
+  there and **does not restore a missing `nosr`**.
+- **HI1031 chapter 5 question 4 and chapter 9 question 3 teach the same comparison, and that is
+  correct.** The exam asks it twice.
+- **Shorter cards did not make them shallower.** 0 of 20 of the most-shortened cards had lost their
+  mechanism (F81). The gap that mattered was **tradeoffs and downsides**.
+- **Multi-fact cards are the hard form**, measured in his own review data, five decks of five (F80).
 
 ---
 
-## WHAT TO RUN, AND IN WHAT ORDER
+## WHAT TO RUN, AND THE TWO THAT ARE EASY TO GET WRONG
 
-`steering/scripts.md` is the full list and is already loaded. The only things worth repeating here are
-the two that are easy to get wrong:
+`steering/scripts.md` is the full list and is already loaded.
 
 - **`Test-DeckHygiene.ps1` is the only check that sees a card's *shape*.** Its default scope is the
-  `* Begrepp - Kap *` decks, so a lab deck like `HI1032 Labb 5` needs **`-All`**. Run `-SelfTest`
-  before trusting a zero from it. A scope that resolves to nothing exits **2**, not 0.
-- **`Get-SRIntegrity.ps1 -Save` writes one global file.** Pass **`-BaselinePath`** with your own path
-  if anything else might touch the vault while you work, and read the `baseline taken at` line it
-  prints to check the snapshot is yours (T22).
+  `* Begrepp - Kap *` decks, so a lab deck like `HI1032 Labb 5` needs **`-All`** — which is a survey,
+  not a gate, and prints thousands of legacy findings. Filter its output to the file you care about.
+  Run `-SelfTest` before trusting a zero. A scope resolving to nothing exits **2**, not 0.
+- **`Get-SRIntegrity.ps1 -Save` writes one global file.** Pass **`-BaselinePath`** with your own path,
+  and read the `baseline taken at` line to check the snapshot is yours (T22).
+
+**When you reword a card and keep its marker, `-Compare` reports the marker as *moved*.** That is the
+placement check doing its job, not a defect — but you must then show that each old front line maps
+**one-to-one** to its new one, or you cannot tell a deliberate rewording from a transplanted schedule.
+The claim that has to hold for deletions is *markers removed equals cards deleted that had markers*,
+per file.
 
 **Two scripts report on the information stream** — `Test-DeckHygiene.ps1` and `Test-DocHygiene.ps1` —
 so `| Out-String` captures nothing from them; redirect stream 6 and decode the file as UTF-16LE. The
@@ -92,33 +99,34 @@ other twelve use `Write-Output`, where `6>` captures nothing instead (T23).
 ## STATE OF THE REPOSITORY
 
 **Clean and pushed at the time of writing.** Verify by comparing `git rev-parse HEAD` with
-`git ls-remote origin refs/heads/main` rather than by reading push output — git on Drive prints a
-benign `failed to perform geometric repack` whether the push succeeded or not.
+`git ls-remote origin refs/heads/main`, not by reading push output — git on Drive prints a benign
+`failed to perform geometric repack` either way.
 
-**Never trust a commit id written in a doc**, including this one. `current-state.md` has carried a
-stale id three times and a reviewer caught it again on 2026-10-01; this file asserted one that was
-stale before it was even committed, because it is written before the commit containing it.
+**Never trust a commit id written in a doc**, including this one.
 
-Expect the working tree to be dirty again by the time you read this: **he reviews on his phone and in
-Obsidian, and both write to the vault.** A review adds or rewrites `<!--SR:-->` lines and touches no
-card text. **Editing a note's tags in Obsidian's own UI rewrites the frontmatter into YAML list form**,
-which the audit reports as `listStyleTags` — that is the identified cause of the recurring drift, and
-`Format-FrontmatterTags.ps1` is the repair.
+Expect the working tree to be dirty: **he reviews daily, on his phone and in Obsidian, and both write
+to the vault.** A review changes only a card's scheduling-marker line and no card text. **Editing a
+note's tags in Obsidian's own UI rewrites the frontmatter into YAML list form**, which the audit
+reports as `listStyleTags`; `Format-FrontmatterTags.ps1` is the repair.
+
+**To prove a file holds only review data, never pass its path to git.** `git diff --numstat -- '<path
+with å ä ö>'` is a pathspec, matches nothing and exits 0, and the empty result reads as "nothing
+changed". It produced a false clean reading on 2026-10-01. Take the whole diff in one call and split it
+per file in PowerShell (T2).
 
 One file stays untracked deliberately:
-`.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`, a Drive sync
-artefact. Deleting it is his call.
+`.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`.
 
 **Before any push:** a local `pre-push` hook runs markdownlint and `Vault-Audit.ps1 -ContentOnly` and
 blocks the push if either fails. It is untracked, so it exists only in this clone. **Do not bypass it
-with `--no-verify`** — fix what it found.
+with `--no-verify`.**
 
 ---
 
 ## THE EXAM DATE IS UNKNOWN
 
-The old archive file says 21–23 September 2026. That is past and wrong. He confirmed on 2026-09-26
-that the exam was moved and **gave no new date**. Do not quote one, and do not plan against one.
+The old archive says 21–23 September 2026. That is past and wrong. He confirmed on 2026-09-26 that the
+exam was moved and **gave no new date**. Do not quote one, and do not plan against one.
 
 ---
 

@@ -70,6 +70,13 @@ Verify the round trip before trusting it — `git cat-file -e HEAD:<path>` exits
 resolved. And prefer a form that never sends a path back to git: `git diff --numstat` reports counts
 per file in one call, which is how the 1035/1605 figure was finally obtained.
 
+**That form stops being safe the moment you scope it, and that bit again on 2026-10-01.** The whole
+point is to send git *no path*; `git diff --numstat -- '<path with å ä ö>'` is a pathspec, so it
+matches nothing and prints nothing while exiting 0. It was used to prove that five decks held only
+review data, returned zero changed lines, and would have read as *"nothing changed"* on files that
+had in fact changed. Take the whole diff in one call and split it per file **in PowerShell**, never by
+asking git for a subset.
+
 ## T3 — `-match` is case-insensitive
 
 PowerShell's `-match` ignores case by default, so a search for an acronym matches ordinary words

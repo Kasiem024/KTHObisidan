@@ -45,7 +45,7 @@ Varför ger Cisco IOS en varning när du sätter en static default route till et
 <!--SR:!fsrs,2026-09-30T14:41:48.371Z,0,0.00720941,9.93638689,1,5,0,0,2026-09-30T14:40:48.371Z-->
 
 Varför sitter Flempan-GW1:s och Flempan-GW2:s G0/0 på samma LAN-segment i Labb 5?::För att båda gatewayarna ska dela samma nät med var sin egen adress — det är ==förutsättningen för att HSRP ska kunna ge dem en gemensam virtuell gateway==.
-<!--SR:!fsrs,2026-10-01T14:22:45.086Z,1,0.00773286,9.94987373,2,8,0,0,2026-09-30T14:22:45.086Z-->
+<!--SR:!fsrs,2026-10-01T21:44:54.397Z,0,0.00622182,9.9687522,3,9,1,0,2026-10-01T21:34:54.397Z-->
 
 Vad skiljer ett nätverks-ID från en broadcast-adress? (2)
 ||
@@ -86,7 +86,7 @@ Hur fungerar ett Link-State routingprotokoll som OSPF?::Alla routrar utbyter lä
 <!--SR:!fsrs,2026-10-01T18:43:37.151Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:33:37.151Z-->
 
 Vad kallas den gemensamma databasen där OSPF sparar alla LSA-paket?::**LSDB** (Link-State Database) – en komplett topologisk karta som ==måste vara identisk på alla routrar inom samma area==.
-<!--SR:!fsrs,2026-10-01T14:12:54.181Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:12:54.181Z-->
+<!--SR:!fsrs,2026-10-01T21:44:30.477Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T21:34:30.477Z-->
 
 Hur beräknas OSPF Cost (metric) för ett gränssnitt?::Via formeln $\text{Cost} = \frac{\text{Reference Bandwidth}}{\text{Interface Bandwidth}} = \frac{10^8 \text{ bps}}{\text{Bandbredd i bps}}$, där ==lägre totalkostnad ger den bästa vägen==.
 <!--SR:!fsrs,2026-10-02T18:32:37.016Z,1,0.71149248,8.91819814,2,4,0,0,2026-10-01T18:32:37.016Z-->
@@ -98,7 +98,7 @@ Vad blir OSPF-kostnaden för en FastEthernet-länk respektive en 64 kbps seriell
 <!--SR:!fsrs,2026-10-01T14:58:01.072Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:58:01.072Z-->
 
 Vad är en Wildcard-mask (invers subnätmask) och hur beräknas den för OSPF?::En schablonmask där 0 kräver exakt matchning och 1 tillåter vilket värde som helst. Beräknas som ==$255.255.255.255 - \text{subnätmask}$==.
-<!--SR:!fsrs,2026-10-01T14:38:24.108Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:38:24.108Z-->
+<!--SR:!fsrs,2026-10-01T21:46:17.700Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T21:36:17.700Z-->
 
 I vilken ordning väljer OSPF sitt Router ID (RID)? (3)
 ||
@@ -114,7 +114,7 @@ Vad måste du göra om du ändrar OSPF Router ID på en redan aktiv router?::Kö
 <!--SR:!fsrs,2026-10-01T14:39:56.515Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:39:56.515Z-->
 
 Vad är syftet med DR (Designated Router) och BDR på ett multiaccess-nätverk (Ethernet)?::Att minska mängden LSA-trafik genom att låta alla routrar enbart ==bilda fullständigt grannskap (adjacency) med DR och BDR== istället för med alla enheter.
-<!--SR:!fsrs,2026-10-01T14:22:00.935Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:22:00.935Z-->
+<!--SR:!fsrs,2026-10-01T21:46:36.140Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T21:36:36.140Z-->
 
 Hur väljs DR på ett Ethernet-nätverk och hur tvingade vi Flempan-GW1 att bli DR?::Först jämförs OSPF-prioritet (högst vinner, 0–255), därefter högst Router ID. På Flempan-GW1 satte vi ==`ip ospf priority 255` på G0/0== för att garantera att den blir DR.
 <!--SR:!fsrs,2026-10-01T14:12:21.789Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:12:21.789Z-->
@@ -164,7 +164,7 @@ Vilka två huvudroller finns i en HSRP-grupp? (2)
 <!--SR:!fsrs,2026-10-01T10:43:06.153Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:43:06.153Z-->
 
 Hur väljs Active Router i HSRP och hur tvingade vi Flempan-GW1 att bli Active?::Routrarna jämför prioritet (standard 100, högst vinner). På Flempan-GW1 satte vi ==`standby 1 priority 150` på G0/0== för att garantera att den vinner valet över GW2.
-<!--SR:!fsrs,2026-09-30T23:51:12.824Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:51:12.824Z-->
+<!--SR:!fsrs,2026-10-01T21:45:31.356Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-01T21:35:31.356Z-->
 
 Vad gör kommandot `standby 1 preempt` på Flempan-GW1?::Tillåter routern att ==omedelbart ta tillbaka Active-rollen== från en router med lägre prioritet när den startar om eller kommer tillbaka online.
 <!--SR:!fsrs,2026-09-30T23:33:28.339Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:33:28.339Z-->
@@ -192,7 +192,7 @@ Vilka är de två sista stegen i HSRP:s tillståndsmaskin (FSM)? (2)
 - **Active** – Huvudrouter som hanterar all trafik skickad till den virtuella gatewayen
 
 Vad är skillnaden mellan HSRP och VRRP?::HSRP är ett Cisco-proprietärt protokoll medan **VRRP (Virtual Router Redundancy Protocol)** är en ==öppen IETF-standard med liknande funktionalitet==.
-<!--SR:!fsrs,2026-10-01T10:48:04.647Z,1,0.21206544,8.39265542,2,3,0,0,2026-09-30T10:48:04.647Z-->
+<!--SR:!fsrs,2026-10-02T21:34:10.429Z,1,0.78469259,8.91819814,2,4,0,0,2026-10-01T21:34:10.429Z-->
 
 Hur verifierar du HSRP i Labb 5, och vad ska du se?::Med kommandot ==`show standby`==: Flempan-GW1 ska stå i active och Flempan-GW2 i standby.
 
@@ -210,7 +210,7 @@ Vad innebär First-match principle när en router utvärderar en ACL?::Routorn l
 <!--SR:!fsrs,2026-10-01T18:42:03.312Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T18:32:03.312Z-->
 
 Vad innebär osynlig Implicit Deny i slutet av en ACL?::Att all trafik som inte uttryckligen tillåtits av en tidigare regel ==stoppas automatiskt av den osynliga sista regeln `deny ip any any`==.
-<!--SR:!fsrs,2026-10-01T10:47:56.374Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T10:47:56.374Z-->
+<!--SR:!fsrs,2026-10-01T21:44:23.389Z,0,0.17250245,8.40750771,3,3,1,0,2026-10-01T21:34:23.389Z-->
 
 Var ska Utökade respektive Standard ACL:er placeras i nätverket? (2)
 ||
@@ -228,13 +228,13 @@ Vad skiljer lärarnas och studenternas policy mot WEB-servern i Labb 5? (2)
 <!--SR:!fsrs,2026-10-01T14:37:20.853Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:37:20.853Z-->
 
 Vad händer om du glömmer att lägga till undantagsregler för OSPF och HSRP i din ACL?::Det osynliga `deny ip any any` kraschar nätverket genom att ==stoppa OSPF (IP-protokoll 89) och HSRP (UDP port 1985)==, vilket bryter vägvalet och redundansen.
-<!--SR:!fsrs,2026-10-01T18:39:29.636Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-01T18:29:29.636Z-->
+<!--SR:!fsrs,2026-10-02T21:35:46.340Z,1,0.22495104,8.39432857,2,4,1,0,2026-10-01T21:35:46.340Z-->
 
 Vilka två explicita undantagsregler måste finnas i ACL:en för infrastruktur? (2)
 ||
 - **OSPF-trafik** – `permit ospf any any` (tillåter OSPF IP-protokoll 89)
 - **HSRP-trafik** – `permit udp any host 224.0.0.102 eq 1985` (tillåter HSRPv2 Hello-paket på UDP-port 1985)
-<!--SR:!fsrs,2026-09-30T23:36:30.905Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-29T23:36:30.905Z-->
+<!--SR:!fsrs,2026-10-01T21:45:13.732Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-01T21:35:13.732Z-->
 
 Vad säger utgående-policyn för campusnätet mot resten av nätet i Labb 5?::Bara ==webbtrafik (HTTP)== släpps vidare ut mot internet; allt annat fångas av den implicita neka-regeln.
 <!--SR:!fsrs,2026-10-01T14:40:41.899Z,1,0.42437996,5.20002037,2,2,0,0,2026-09-30T14:40:41.899Z-->

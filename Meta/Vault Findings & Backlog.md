@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F84): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F85): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -3908,3 +3908,107 @@ Three things, all cheap to get wrong again:
    and how many parts each one has, and nothing else.
 3. **When a note says a question cannot be answered from the course material, check the reading list
    before believing it.** This one cost real cards.
+
+## F85. HI1032 lab 5's deck turned from addresses to topology, and a new authoring rule recorded
+
+**Date:** 2026-10-01
+**Status:** Closed
+**Scope:** `HI1032 Labb 5 - Flashcards.md`, plus a new section in `.kiro/steering/product.md` and a
+refinement to `traps.md` T2
+
+### What was asked, and how the second sentence changed it
+
+The author asked for more cards about lab 5's specific situation and topology rather than theory. He
+then narrowed it, and the narrowing is the part that mattered:
+
+> jag är inte intresserad av att memorisera specifika adresser
+
+That reshaped the work from *adding* to *replacing*, because a census showed the deck already held
+exactly what he had just ruled out. Of 57 cards, 23 named something only this lab contains and 34 were
+theory — but **eight of the 23 were address recall**: network ID and broadcast per half, the two WAN
+links, the gateways' own interface addresses, the wildcard masks, the virtual IP and MAC pair, and two
+ACL cards carrying full rule syntax.
+
+A first proposal of 16 new cards was written before that instruction arrived, and **seven of the 16
+were address recall** — Campus-V's four interface addresses, the two servers' addresses, the clients'
+addresses, and all three router IDs. They were dropped rather than written. The proposal survived at
+ten cards.
+
+### Read the sources, not the existing deck
+
+Lab 5 is the **network half of the final assignment**, built on labs 2 and 3, presented individually
+and remotely by sharing a Packet Tracer screen. Two load-bearing facts came only from the topology
+**diagram** and are absent from the addressing table:
+
+- **Both** of Campus-V's serial interfaces are the **DCE** end. That is the reason the clock rate is
+  set on Campus-V and not on either gateway — which the deck's existing clock-rate card asserted
+  without ever saying which end was DCE in this lab.
+- **Switch0 and Switch1 are cross-connected.** So the teacher PC behind one switch and the student PC
+  behind the other sit in a single broadcast domain together with both gateways' LAN interfaces. That
+  is the precondition for HSRP working at all, and nothing in the deck had said so.
+
+### What changed
+
+**Five cards deleted with their markers.** All were address recall. One carried two further defects:
+its front line said the `/25` block was subdivided when it is the `/24` that splits into two `/25`,
+and it duplicated the card about the *purpose* of the split, which stays. No concept was orphaned —
+the meaning of network ID and broadcast, and the method for calculating a wildcard mask, each keep a
+theory card.
+
+**Five cards reworded, each keeping its marker**, which the author authorised explicitly. Every one
+became the consequence instead of the number:
+
+| Was | Became |
+|---|---|
+| the two WAN links' addresses | how each gateway attaches to the edge router, and what two separate paths give |
+| the gateways' own G0/0 addresses | why both gateways sit on one LAN segment |
+| the virtual IP and MAC pair | what must be set on the PCs, and what breaks if it points at a router's own address |
+| the teacher ACL rule syntax | the one policy difference between teachers and students, which is FTP |
+| the outbound permit rule | that only web traffic leaves the campus network |
+
+**Ten cards added, none with an address as its answer.** Four on the topology's parts and roles and on
+what each Campus-V interface faces; one each on the DCE end, the cross-connected switches, why there
+are two gateways, and what is reachable before routing is up; two on the lab's own OSPF instructions
+(Campus-V's Lo0 must not be advertised, and the rule for which interfaces go passive); one on
+verifying HSRP; and one on the lab's **acceptance criterion** — that exactly three PDU tests must fail
+once the ACL is in place — expressed as what each test does rather than its number.
+
+### Verified
+
+- cards **57 → 62**, markers **56 → 51**. The claim that had to hold is *markers removed equals cards
+  deleted that had markers*: five cards went, all five carried a marker, and the count fell by five.
+- `Get-SRIntegrity.ps1 -Compare` against a private baseline reported five markers as *moved*. That is
+  the placement check firing on the five deliberate rewordings, and each old front line maps
+  **one-to-one** to its new one, so no marker landed on a card that was not its own.
+- `Test-DeckHygiene.ps1 -All` — the file is absent from the findings. Zero stray markers, zero
+  orphaned separators, the four module headings intact.
+- `Vault-Audit.ps1` clean at `notesInScope=529`; markdownlint 552 files, 0 issues.
+
+An adversarial reviewer checked all ten new cards against the lab instruction and the diagram: **zero
+fabricated claims, zero addresses in any answer.** It also caught a real duplicate — the reworded
+virtual-address card restated the existing theory card on how HSRP removes a single point of failure
+almost verbatim. It was sharpened to the lab's own configuration step and its trap instead.
+
+### Two process findings
+
+**T2 bit again, in the form the entry recommends.** T2 says to prefer `git diff --numstat` because it
+"never sends a path back to git". Proving that five HI1031 decks held only review data was done with
+`git diff --numstat -- '<path with å ä ö>'` — which *is* a pathspec. It matched nothing, printed
+nothing, exited 0, and the classifier concluded *review data only* from an empty diff. Re-done by
+taking the whole diff in one call and splitting per file in PowerShell, the answer held — every
+changed line outside lab 5 is a marker — but the first run was a false negative that happened to agree
+with the truth. T2 now records that the safe form stops being safe the moment it is scoped.
+
+**Two untracked files appeared mid-session and were left alone.**
+`.kiro/skills/write-flashcards/SYNTHESIS.md` and `.kiro/skills/query-notebooklm/SYNTHESIS.md`, created
+19:35 and 19:38, after that evening's commit and before the next instruction arrived — so not this
+session's pipelines, and not attributable. They are substantial and look deliberate. Reported to the
+author and deliberately not committed, per the rule that one does not commit another writer's work.
+
+### The durable output
+
+`product.md` gained a section, **No card whose answer is an address, a mask or an ID**, because the
+instruction is an authoring rule like "everyday Swedish" and "few cards" and will otherwise be
+rediscovered by the next agent. It records what to write instead — shape and consequence — notes that
+protocol constants are still fine, and warns that applying it to an older deck means removals and
+rewordings, with a check for orphaned concepts.
