@@ -579,3 +579,60 @@ comparison cards and not only definitions.
 
 **Lesson:** a filename is not a claim about contents, and for the folders no script reads, a doc's
 assertion is only as good as the last time somebody opened the file — so open it before citing it.
+
+---
+
+## 2026-10-01 — a trap entry generalised from one script, and was wrong within four days
+
+**What happened:** on 2026-09-26, after `| Out-String` captured nothing from `Test-DeckHygiene.ps1`,
+I wrote `traps.md` **T23** stating that *"every script in `Meta/Obsidian Plugins/Scripts/` reports
+with `Write-Host`"*. Four days later I used that entry's advice on `Vault-Audit.ps1` — redirecting
+stream 6 to a file — and got a file containing one blank line and `AUDIT_EXIT=1`, while the two
+offending filenames scrolled past in the terminal unread. Measured across all 14 scripts afterwards:
+**two** use `Write-Host` and **twelve** use `Write-Output`. The folder was already mixed when I wrote
+the entry, and one of the two `Write-Host` scripts was the one I had just written myself.
+
+**Why the checks missed it:** nothing checks a claim *about* the scripts. `Test-ScriptHygiene.ps1`
+verifies the folder's own rules — ASCII, headers, exit codes, that the folder and `scripts.md` name
+the same files — but has no notion of which output stream a script uses, and no reason to. The claim
+was also self-confirming in the moment: the one script I had tested did behave that way, so the
+generalisation produced a correct prediction on its only sample.
+
+**Rule added:** T23 now carries the measured table of which family each script belongs to, both
+failures that resulted, and the instruction to check the family before capturing output. The wider
+rule is the one worth keeping:
+
+> A trap entry generalises. Measure the whole population before writing the general sentence, or
+> write the entry about the single case you actually observed.
+
+**Lesson:** the sample that produced a trap is never evidence about the population it is written
+about — and a trap that overstates its scope is worse than one that understates it, because the
+reader stops looking.
+
+---
+
+## 2026-10-01 — a check I wrote had a false positive of exactly the class it was built to avoid, twice
+
+**What happened:** `staleFRange` was added to `Vault-Audit.ps1` to catch documents quoting an
+out-of-date `F1–F<n>` backlog range. Its first run flagged `Meta/Vault Findings & Backlog.md` itself,
+for a line in a 2026 repair table that correctly records what *earlier* docs used to say. I fixed
+that by checking only the backlog's frontmatter. Four days later an adversarial reviewer found the
+same shape again: a stale range quoted inside a fenced code block or behind a `>` blockquote was
+still flagged, in any file. No real document hit it — but that is luck, not design.
+
+**Why the checks missed it:** `Test-VaultAudit.ps1` plants one violation per rule and requires each
+to fire. It proves a check *can* detect, never that it *declines* to. The fixture had no negative
+control for the check, so a check that flagged everything containing the pattern would have passed
+the harness exactly as a correct one does.
+
+**Rule added:** the fixture now keeps an old range in the backlog's body as a standing negative
+control, and the fence and blockquote cases were proved both ways — silent when the stale range is
+quoted, firing when it is asserted in running text. The general form is already in
+`steering/scripts.md` for `Test-DeckHygiene.ps1`'s `-SelfTest` and was simply not applied here:
+
+> A harness that only plants violations measures half the check. Plant a legitimate near-miss too,
+> and require silence.
+
+**Lesson:** for any check, the question "what would make this fire when it should not" has to be
+answered in the same change as the check — a false positive is what gets a check switched off, and a
+switched-off check protects nothing.

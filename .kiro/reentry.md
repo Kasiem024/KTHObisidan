@@ -1,143 +1,124 @@
 # Re-entry prompt
 
-**This is the only file you need to be pointed at.** It is rewritten at the end of every context
-window, immediately before `/compact`. Read it fully before doing anything.
+**This is the only file you need to be pointed at.** It is rewritten immediately before `/compact`.
+Read it fully before doing anything.
 
-It is deliberately short. Everything under `.kiro/steering/` is `inclusion: auto` and has already
-been loaded into your context — the hard rules, the environment traps, the script library, the
-output style. **Do not re-read them looking for basics, and do not restate them here.** This file
-carries only what is task-specific plus the handful of things that have actually bitten.
+It is deliberately short. Everything under `.kiro/steering/` is `inclusion: auto` and is already in
+your context — the hard rules, the environment traps, the script library, the output style. **Do not
+re-read them looking for basics, and do not restate them here.** This file carries only what is
+task-specific plus the handful of things that have actually bitten.
 
-Last updated **2026-09-15, 20:45**. Course-neutral by design; right now the live work is HI1031.
+Last updated **2026-10-01, 15:30**. Course-neutral by design; the live course is HI1031.
 
 ---
-
-## THE CLOCK THAT GOVERNS EVERYTHING
-
-**HI1031's oral exam is 21–23 September 2026.** Today is the 15th. Six days. Every decision about
-that course is now a study-time decision, not a completeness decision. Do not start work that
-cannot be finished and verified in one context window.
 
 ## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him
 
-The task he gave on 2026-09-15 is **finished and reviewed**. There is no queued instruction. Four
-things are waiting on *his* decision, not on work. Put them to him and let him choose:
+The work of 2026-09-26 to 10-01 is **finished, verified, committed and pushed** as `ab5b9a7`.
+Everything is recorded in `Meta/Vault Findings & Backlog.md` as **F80 to F83**; nothing is in flight.
+`steering/current-state.md` says the same and is accurate as of this commit.
 
-1. **Fifteen undefined terms** across the four concentrated chapters — marshalling, middleware,
-   socket, IDL, `operationId`, CDR, proxy, CORBA, mellanprogram, *separation of concerns* and more.
-   Ten adversarial reviewers named them as the single most valuable remaining fix. **The catch:**
-   glossing them adds roughly 15 lines, which pulls against the concentration he just asked for.
-   Three of the most load-bearing are already glossed. His call, not yours.
-2. **Ten remaining language spots** the language reviewer named. The five worst are fixed.
-3. **Nothing is committed.** The working tree holds all eight edited files plus one new report. He
-   has not asked for a commit. Do not commit unprompted, and never push to `main` unasked.
-4. **The `Begrepp/` folder question from an earlier session is still unanswered:** 14 concept notes
-   covering only the course's early material, nothing for chapters 9 or 11. The recommendation given
-   was to leave the folder as reference and add one line saying what it is, rather than expanding it.
+**Three things are waiting on his decision, not on work.** Put them to him and let him choose:
 
-**Parked, not cancelled:** the previous re-entry file's task was *"get familiar with HI1032 lab 3,
-ACL and HSRP"*. He pivoted to HI1031 before it started. If he returns to it, the material is at
-`KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/Laborationer/Labb 3 ACL HSRP.md` plus the
-student and instructor manuals under `Filer/Canvas/AI-optimerad Markdown/Laborationer/`. The
-established output pattern for a lab is a deck named `HI1032 Labb N - Flashcards (<topic>).md` in
-`Anteckningar/`. The required reading is NetAcad CCNA3 8.1, 9 and 10.1, which is **not in the
-vault** — do not silently substitute Forouzan for it.
+1. **Chapter 9's exam question 2 asks what role hypermedia plays, and the 2012 course book does not
+   cover hypermedia or HATEOAS.** Four reviewers confirmed that independently. The cards that used to
+   answer it came from restfulapi.net and were removed, and nothing was invented in their place.
+   Closing the gap means accepting a non-book source. **Do not quietly write the card from memory.**
+2. **HI1032's twelve chapter decks and its Labb 1 deck carry card-form findings** — run
+   `Test-DeckHygiene.ps1` with no `-Course`. Those decks predate these conventions. HI1031's ten and
+   HI1032's Labb 5 are clean.
+3. **HI1032 Labb 5 carries eight `##` headings in two parallel series** over the same four topics —
+   `## Modul 1`–`4` with 14, 15, 10 and 12 cards, then `## 1.`–`4.` with one or two each. Headings do
+   not affect review at all, so the cost is readability, not drilling. Folding them together moves
+   marker-bearing cards, so it is his call.
 
 ---
 
-## WHAT WAS DONE 2026-09-15, and the state it left
+## THE SHAPE OF THE COURSE WORK, so you do not re-derive it
 
-His teacher named **chapters 6, 11, 16 and 17 as the most important to practise**, so those stay
-untouched. Chapters **1 and 2** also stay untouched because he has already started learning them.
-The remaining four — **04, 05, 09 and 10** — were concentrated down to the direct exam questions,
-both the `Tentafrågor och Svar` note and the `Begrepp` deck per chapter.
+**His goal is to pass the exam, not to cover the book** (`steering/product.md`). Where a course
+publishes exam questions, those questions are the specification and the book is the source of
+grounded answers. HI1031's are at
+`KTH/2026 Höst/HI1031 .../Filer/Canvas/Tentor/Tentafrågor HI1031 Distribuerade informationssystem.md`
+— read-only, and the complete one. **Two files in that folder look like exam material and are not;**
+`product.md` names both. The examination is a **muntlig enskild examination**.
 
-| Kapitel | Not | Deck |
-|---|---|---|
-| 04 Interprocesskommunikation | 361 → **314** | 58 → **41** |
-| 05 Fjärranrop | 285 → **237** | 42 → **32** |
-| 09 Web services | 392 → **335** | 50 → **38** |
-| 10 Peer-to-peer-system | 437 → **347** | 58 → **35** |
-| **Summa** | **1475 → 1233 (−16 %)** | **208 → 146 (−30 %)** |
+**Card counts now**, per chapter: 01 26, 02 19, 04 29, 05 24, 06 25, 09 18, 10 22, 11 30, 16 28,
+17 **33** — 254 cards and 115 markers across the ten decks. HI1032's Labb 5 holds 57 and 56.
 
-**The full record — plan, cut lists, decisions, the ten reviewers' findings and every fix — is in
-`.kiro/reports/hi1031-koncentrering-2026-09-15.md`.** Read that before touching these four chapters
-again. It is the only place the reasoning survives.
+**The 40–60 cards per deck target is superseded.** The rule is "as few as possible, as concentrated on
+the exam questions as possible", and **40 is not a floor**. Chapter 17 is the one deliberate exception,
+widened from 18 to 33 on his explicit request on 2026-10-01.
 
-**Verified at the end:** `Get-SRIntegrity.ps1 -Compare` named exactly those four decks and no others;
-`excludedCards` 533 → 471, which is −62 and equals 208 − 146 exactly; `markers placed on cards`
-**1477** unchanged and no marker moved; CR 0 and no double blank lines in any of the eight files;
-`Vault-Audit.ps1` clean; markdownlint **549 files, 0 issues**; `Test-DocHygiene.ps1` clean.
+### Four things that must not be re-litigated
 
-### The mandate that made this different, and its boundary
-
-He said on 2026-09-15: *"jag tror inte att jag behöver lära mig väldigt mycket utanför de direkta
-tentafrågorna för de kapitlen."* That **cancelled the "an oral examiner might ask a follow-up"
-argument** which had protected a lot of material in the September review — **but only for chapters
-04, 05, 09 and 10.** For 01, 02, 06, 11, 16 and 17 the old decisions stand. Do not generalise it.
-
-### Two things that must not be re-litigated
-
-- **Chapter 5 fråga 4 and chapter 9 fråga 3 teach the same comparison, and that is correct.** Two
-  reviewers found five duplicate card pairs and called it waste within one course. They are right
-  about the observation and wrong about the cause: **the exam asks the same comparison twice.**
-  Removing it from either chapter makes one exam question unanswerable from its own chapter.
-- **`nosr` has already been raised with him and he said he has it under control.** Do not bring it
-  up again, and do not change the tag.
+- **`nosr` is his rotation and is not an agent's to change.** He has said so twice. Chapters 01, 02 and
+  17 had it removed between 09-27 and 10-01. `Format-FrontmatterTags.ps1` preserves whatever is there
+  and **does not restore a missing `nosr`** — check deliberately before running it.
+- **Chapter 5 question 4 and chapter 9 question 3 teach the same comparison, and that is correct.**
+  The exam asks it twice. Removing it from either chapter makes one question unanswerable from its own
+  chapter.
+- **Shorter cards did not make them shallower.** A depth calibration on the twenty most-shortened
+  cards found **0 of 20** had lost their mechanism (F81). The gap that mattered was **tradeoffs and
+  downsides**, which a coverage check cannot see because every written question still had cards.
+- **Multi-fact cards are the hard form, measured in his own review data** within each deck, five decks
+  of five (F80). A prose card that hides two facts is worse still, because it is easy to pass on half
+  the answer. `write-flashcards/SKILL.md` rule 8 has the figures.
 
 ---
 
-## FIVE THINGS THIS SESSION LEARNED THAT NO DOC PREDICTED
+## WHAT TO RUN, AND IN WHAT ORDER
 
-**These have no durable home yet. Giving them one is a legitimate small task if he wants it** —
-`documentation-standard.md` says a finding that fits none of the five homes is a finding against
-that file. Suggested homes in brackets.
+`steering/scripts.md` is the full list and is already loaded. The only things worth repeating here are
+the two that are easy to get wrong:
 
-1. **A hedge check on the note is not enough — run it on the deck too.** Two of the book's hedges
-   were flattened in chapter 4's *deck* (`usually` → dropped, `has the potential to reduce` →
-   "sparar") while the note kept both. I grepped only the notes, so both survived my verification
-   and were caught by a reviewer. [`write-flashcards/SKILL.md`]
-2. **Merging cards is where overload appears.** Three of my five deliberate merges were judged
-   overloaded by the card reviewer. Read a merged card back and count the facts on it, as if it were
-   newly written. [`write-flashcards/SKILL.md` — it already says this about *fixes*, not merges]
-3. **Nothing in the script library checks the highlight rules.** Neither the audit, the linter,
-   `Get-DeckPairCensus.ps1` nor `Get-SRIntegrity.ps1` can see a card carrying two `==…==` pairs or a
-   highlight inside a `||` body. I wrote a throwaway check in `%TEMP%` and deleted it. It found four
-   real violations. **If this is needed a second time, promote it into a script** — that is rule 6 in
-   `steering/scripts.md`, and it would be the first checker for card *formatting* rather than card
-   *counts*. [a new script in `Meta/Obsidian Plugins/Scripts/`, listed in `steering/scripts.md`]
-4. **My estimates of note length were 20–35 % low four times in a row.** 175→236, 255→312, 275→334,
-   285→347. A ×1.2 correction written into the plan after the first miss did not stop the next three.
-   **Stop estimating totals. The stable unit is lines per exam question:** ~52 when the questions are
-   single-part, ~68 when they have three or four parts. Multiply by the question count.
-   [`hi1031-koncentrering-2026-09-15.md` already records this]
-5. **A locked `### Muntligt svar` is the thing that breaks when you cut facts.** Eleven talking
-   points across the four chapters referenced material that had been deleted — nine found while
-   cutting, one by a reviewer, one pre-existing. **Whenever a fact paragraph goes, read the talking
-   points under the same question before moving on.** [`hi1031-tenta-reentry.md` states the rule;
-   what is new is that it fails silently and needs an explicit per-question check]
+- **`Test-DeckHygiene.ps1` is the only check that sees a card's *shape*.** Its default scope is the
+  `* Begrepp - Kap *` decks, so a lab deck like `HI1032 Labb 5` needs **`-All`**. Run `-SelfTest`
+  before trusting a zero from it. A scope that resolves to nothing exits **2**, not 0.
+- **`Get-SRIntegrity.ps1 -Save` writes one global file.** Pass **`-BaselinePath`** with your own path
+  if anything else might touch the vault while you work, and read the `baseline taken at` line it
+  prints to check the snapshot is yours (T22).
+
+**Two scripts report on the information stream** — `Test-DeckHygiene.ps1` and `Test-DocHygiene.ps1` —
+so `| Out-String` captures nothing from them; redirect stream 6 and decode the file as UTF-16LE. The
+other twelve use `Write-Output`, where `6>` captures nothing instead (T23).
 
 ---
 
-## STATE OF THE REPOSITORIES
+## STATE OF THE REPOSITORY
 
-**The working tree is dirty and that is expected.** `git status` at 20:45 showed, besides the eight
-files above and the new report:
+**Clean and pushed.** `ab5b9a7` on `main`, `origin/main` identical, verified by comparing refs rather
+than by reading the push output — git on Drive prints a benign `failed to perform geometric repack`
+either way.
 
-- **`HI1031 Begrepp - Kap 01` (56 changed lines) and `Kap 02` (15)** — these numbers equal those
-  decks' marker counts exactly, so they are **his own reviews landing**, not damage. Leave them.
-- **Four HE1033 concept notes** (DNS, HTTP, TCP, UDP), changed by something that was not this
-  session. Leave them; ask before touching.
-- `.obsidian/workspace.json`, normal app state.
-- One deliberately untracked file: `.obsidian/plugins/obsidian-spaced-repetition/data (conflict
-  2026-09-07-10-27-11).json`, a Drive sync artefact. Deleting it is his call.
+**Run `git status` rather than trusting any commit id written here.** This file and
+`current-state.md` have each carried a stale one; a reviewer caught `current-state.md` three commits
+behind on 2026-10-01, the third such catch.
 
-**Before any push:** there is a local `pre-push` hook that runs markdownlint and
-`Vault-Audit.ps1 -ContentOnly` and blocks the push if either fails. It is untracked, so it exists
-only in this clone. **Do not bypass it with `--no-verify`** — fix what it found.
+Expect the working tree to be dirty again by the time you read this: **he reviews on his phone and in
+Obsidian, and both write to the vault.** A review adds or rewrites `<!--SR:-->` lines and touches no
+card text. **Editing a note's tags in Obsidian's own UI rewrites the frontmatter into YAML list form**,
+which the audit reports as `listStyleTags` — that is the identified cause of the recurring drift, and
+`Format-FrontmatterTags.ps1` is the repair.
+
+One file stays untracked deliberately:
+`.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`, a Drive sync
+artefact. Deleting it is his call.
+
+**Before any push:** a local `pre-push` hook runs markdownlint and `Vault-Audit.ps1 -ContentOnly` and
+blocks the push if either fails. It is untracked, so it exists only in this clone. **Do not bypass it
+with `--no-verify`** — fix what it found.
 
 ---
 
-**How to use this file:** rewrite `FIRST TASK` and `STATE` before saying "run compact", and leave
-the rest unless something new was learned. The table of where every durable fact belongs is in
-`.kiro/README.md` and `steering/documentation-standard.md`.
+## THE EXAM DATE IS UNKNOWN
+
+The old archive file says 21–23 September 2026. That is past and wrong. He confirmed on 2026-09-26
+that the exam was moved and **gave no new date**. Do not quote one, and do not plan against one.
+
+---
+
+**How to use this file:** rewrite `FIRST TASK` and `STATE OF THE REPOSITORY` before saying "run
+compact", and leave the rest unless something new was learned. The table of where every durable fact
+belongs is in `.kiro/README.md` and `steering/documentation-standard.md`. Finished work goes in the
+backlog, not here.

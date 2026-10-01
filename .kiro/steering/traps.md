@@ -10,7 +10,7 @@ wrong result here, and **every one is silent** — none throws, none fails a bui
 plausible wrong answer, which is worse. That is the entry criterion: if it throws, it belongs in
 `environment.md`.
 
-There are **twenty-three**. Do not add a twenty-fourth without reproducing it and recording the wrong result
+There are **twenty-four**. Do not add a twenty-fifth without reproducing it and recording the wrong result
 it produced. Each entry is the mechanism, the wrong answer it caused, and what to do instead; the
 forensics live in `Meta/Vault Findings & Backlog.md` and `.kiro/lessons-learned.md`.
 
@@ -399,9 +399,24 @@ BOM**, so a reader expecting UTF-8 then fails with `stream did not contain valid
 under *Capture output to a file, not to stdout*. Cross-check an exit code against a report that
 actually contains lines — an `EXITCODE=0` next to an empty body proves nothing.
 
----
+## T24 — a function parameter named `$args` silently swallows every argument you pass
 
-Things that announce themselves are **not** traps and live in `environment.md`: the benign
+`$args` is one of PowerShell's automatic variables. Declare it as your own parameter —
+`function Invoke-Gate([string]$file, [string[]]$args)` — and the splat `@args` inside that function
+no longer refers to what the caller passed. The call binds nothing, the wrapped script runs with
+**no arguments at all**, and nothing warns: the script has defaults, so it does something plausible.
+
+**Produced, on 2026-10-01, twice in one session.** A gate runner invoked
+`Test-DeckHygiene.ps1 -Course HI1031` and `-SelfTest` through such a wrapper. Both ran with no
+arguments, so both reported the **whole-vault survey** instead: `exit 1`, `cardsInScope=355`,
+`65 finding(s)`. The truth for that scope was `exit 0`, 254 cards, clean. A false failure on a clean
+deck, and it was caught only because the same figure appeared three times for three different scopes.
+
+**What to do:** never name a parameter `$args`. Use `$argList`, `$extra`, `$switches`. The same
+applies to the other automatics that are easy to reach for — `$input`, `$error`, `$host`, `$matches`.
+And when a wrapper runs the same script under several scopes, assert that the scope line in the
+output differs between runs; identical figures from different arguments mean the arguments never
+arrived.
 `geometric repack` error from git on Google Drive, `npm` needing `cmd /c`, stdout truncating on Swedish
 characters, long inline commands refused with `Access is denied. (os error 5)`, and three PowerShell
 5.1 parsing details (case-insensitive variable names, a built-in alias beating a function you define,
