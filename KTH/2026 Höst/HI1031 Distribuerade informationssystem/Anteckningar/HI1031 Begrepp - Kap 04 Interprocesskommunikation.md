@@ -91,6 +91,8 @@ Vilka två ordningsproblem har multicast? (2)
 
 Vilken relation har IPC och distribuerade objekt?::De är ==lager, inte alternativ== – IPC är det undre lagret och distribuerade objekt byggs ovanpå.
 
+Vad har IPC och distribuerade objekt gemensamt?::Båda låter ==processer på skilda datorer samarbeta== över nätet, och ett anrop på ett distribuerat objekt blir meddelanden i botten.
+
 Vad är skillnaden i abstraktion mellan IPC och distribuerade objekt?::IPC skickar ==meddelanden== (send och receive på bytes); distribuerade objekt gör metodanrop där detaljerna göms.
 
 Hur skiljer sig adresseringen mellan IPC och distribuerade objekt?::IPC använder (internetadress, port); ett distribuerat objekt använder en ==unik objektreferens==.

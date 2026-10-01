@@ -38,6 +38,8 @@ Vilka tre huvudroller har kryptografi enligt boken? (3)
 - **Digitala signaturer**
 <!--SR:!fsrs,2026-10-04T21:02:50.214Z,3,2.61980031,9.80152568,2,8,0,0,2026-10-01T21:02:50.214Z-->
 
+Hur ger kryptering sekretess (konfidentialitet)?::Bara den som har ==rätt nyckel== kan läsa innehållet, så en angripare som snappar upp meddelandet får bara obegriplig text.
+
 Hur ger kryptering integritet?::Bara om man ==lägger till en kontrollsumma== som mottagaren räknar om och jämför – integritet får man inte gratis bara för att man krypterar.
 <!--SR:!fsrs,2026-10-03T20:59:44.951Z,2,1.76135845,9.71530447,2,8,1,0,2026-10-01T20:59:44.951Z-->
 

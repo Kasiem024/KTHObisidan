@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F85): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F86): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4012,3 +4012,103 @@ instruction is an authoring rule like "everyday Swedish" and "few cards" and wil
 rediscovered by the next agent. It records what to write instead — shape and consequence — notes that
 protocol constants are still fine, and warns that applying it to an older deck means removals and
 rewordings, with a check for orphaned concepts.
+
+## F86. HI1031's ten decks audited against every exam question, and the three gaps closed
+
+**Date:** 2026-10-02
+**Status:** Closed
+**Scope:** `HI1031 Begrepp - Kap 04/09/11`, three cards added
+
+### The question
+
+The author asked a narrower question than F81 had answered: *if I practised only these flashcards and
+had no other information, could I answer each exam question?* Explicitly **not** about an examiner's
+follow-ups — strictly each question as written. F81 had measured robustness against 147 invented
+follow-ups and found 110 answerable; that figure does not answer this, so the audit started from zero.
+
+### Method, and why it was built this way
+
+The failure mode is not under-reading the decks, it is **generosity**: a reader who already knows what
+2PL or TLS is fills a silent gap from their own knowledge, judges the question covered, and produces a
+report that looks careful and is worthless. Three guards against it:
+
+1. Every judge was briefed that the test is whether the **card's own text** produces the answer for
+   someone who knows nothing else, with a worked example of the forbidden inference.
+2. Each judge could read **exactly one file** — its own deck. The `Tentafrågor och Svar` notes are
+   answer keys and were forbidden by name, as were the book, the `Begrepp/` notes, and other chapters'
+   decks.
+3. Measured **per ask, not per question.** "Beskriv X, jämför med Y och ge exempel" is three
+   requirements; reported per question, a deck answering two of three reads as a pass.
+
+I also did not judge first-hand: I wrote and cut these decks in F80 and F81, so I am the worst available
+reviewer of whether my own cuts went too far.
+
+**A blind control made the result checkable.** I already knew of one real gap — the hypermedia part of
+chapter 9 question 2 — and told no judge. An independent judge in the second run reported it as SAKNAS
+unprompted, which is the evidence that the briefing against bridging actually held.
+
+**Two independent runs.** Run one was ten judges plus two adversarial reviewers briefed only to find
+over-generosity; it returned two overestimates. Run two was ten fresh judges plus a synthesis. Both
+runs converged on the same three gaps, and the one case they graded differently is recorded below.
+
+### Result
+
+**117 asks across 10 chapters, 114 covered.** Seven chapters — 01, 02, 05, 06, 10, 16, 17 — were
+complete, every ask covered. Three gaps, one per chapter in 04, 09 and 11:
+
+| Chapter | Ask | What the deck held |
+|---|---|---|
+| 09 F2 | hypermedia's role in REST | **nothing.** No card contained the word, while the section heading read `## 2. REST, principerna, resurser och hypermedia` |
+| 04 F5 | the *likheter* half of "skillnaderna och likheterna" | three difference cards and one that says they are *"lager, inte alternativ"* — a statement that they differ |
+| 11 F2 | confidentiality, one of four named roles of encryption | the word *sekretess* as two words in a list, while integrity, authentication and non-repudiation each had a dedicated `Hur ger kryptering ...?` card |
+
+**The pattern is the finding.** None of the three is a thin chapter. All three are **multi-part questions
+where one enumerated part was dropped while its siblings got their own card** — one of four REST asks,
+one of four encryption roles, one of two halves of a comparison. A chapter with that defect reads as
+well filled, which is why it survived F80, F81 and four reviewers.
+
+Chapter 04's omission is an inconsistency rather than a choice: the same "what do these two have in
+common" ask **is** answered in chapters 05 and 09, each of which carries an explicit similarity card.
+
+Run one's reviewer graded chapter 04 as SAKNAS where run two said DELVIS, arguing that deriving a
+similarity from the layering card requires the student to reason — the forbidden bridge. On reading the
+card text, the stricter reading is right: the deck answered one half of the question and not the other.
+
+### Fixed
+
+Three cards, one per gap, each a single fact with one highlight:
+
+- **Kap 09** — hypermedia's role, grounded in `restfulapi.net`, not in memory. **KursPM line 58 was
+  re-verified before writing it**: it names `restfulapi.net` (*What is REST*, *REST Constraints*,
+  *Naming REST resources*) as required literature for chapter 9. The article's §1.1 states HATEOAS as
+  *"the client should have only the initial URI of the application"*, which is the card's content. The
+  acronym sits in the front line as vocabulary rather than as a second recall target.
+- **Kap 04** — what IPC and distributed objects have in common, derived from the layering fact the deck
+  already held: a call on a distributed object becomes messages underneath.
+- **Kap 11** — how encryption gives confidentiality, placed before its three sibling cards.
+
+The four-row REST principles card was **left alone** deliberately. Adding hypermedia to it would make
+five rows, which `Test-DeckHygiene.ps1` rejects and which `product.md` identifies as the hard card form.
+
+### Verified
+
+Read each new card's block back from disk rather than trusting the diff (**T20**): each new card carries
+no marker and no marker immediately follows it, so nothing was transplanted.
+
+- `Get-SRIntegrity.ps1 -Compare` against a private baseline: cards 29→30, 18→19 and 30→31 in the three
+  files. **Markers unchanged in all three** — chapter 11's 30 live markers intact, 04 and 09 hold none.
+  No marker reported as moved.
+- `Test-DeckHygiene.ps1 -Course HI1031` — exit 0, clean, 257 cards in scope.
+- `Vault-Audit.ps1` clean, `notesInScope=529`.
+
+### Two things left for the author
+
+**Five of the ten decks are outside review rotation.** Chapters 04, 05, 06, 09 and 10 carry `nosr` and
+hold zero markers — they have never been drilled. The audit above measures the cards as written; which
+decks are active is the author's rotation and not an agent's to change.
+
+**A note contradicts KursPM and is out of scope to edit.** `Filer/Webbsidor/REST - restfulapi.net.md`
+tells the reader in its own *Koppling till kursen* section that it is *"ett komplement ... inte en källa
+att svara ur"* and that *"tentasvaren ska stå på kursboken"*. KursPM line 58 requires the article, so
+that caveat is wrong and would steer a future reader away from required literature. It sits under
+`Filer/`, which `conventions.md` §4 places out of scope, so it was reported rather than corrected.

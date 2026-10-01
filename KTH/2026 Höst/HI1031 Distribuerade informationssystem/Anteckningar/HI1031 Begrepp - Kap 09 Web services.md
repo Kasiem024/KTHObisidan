@@ -35,6 +35,8 @@ Vilka principer bygger REST på? (4)
 
 Vad skiljer PUT från POST?::==PUT ger samma resultat hur många gånger den körs==; POST gör en ny sak varje gång.
 
+Vilken roll har hypermedia (HATEOAS) i REST?::Svaret innehåller ==länkar till vad klienten kan göra härnäst==, så klienten behöver bara start-URL:en och hittar resten genom att följa länkarna.
+
 ## 3. Distribuerade objekt mot webbtjänster
 
 Hur liknar RMI och webbtjänster varandra?::Bara ==ytligt==: i båda anropar klienten en operation – i RMI med en fjärrobjektreferens, i en webbtjänst med en URI.
