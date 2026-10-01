@@ -6,6 +6,7 @@
 #   ... -Save        write the current counts to Meta\Obsidian Plugins\Scripts\sr-baseline.json
 #   ... -Compare     diff the current counts against that file and exit 1 on any change
 #   ... -Detail      per-file breakdown for files that carry any marker
+#   ... -BaselinePath <file>   use this snapshot instead of the shared sr-baseline.json
 #   ... -Root <path>
 #
 # WHAT THIS COUNTS
@@ -66,7 +67,26 @@
 #   regex is one copy too many: the single-line patterns were once too strict to see a third
 #   of the deck, reporting ";;" as 269 both before and after 292 new cards appeared.
 #
-# READ-ONLY unless -Save is passed, and -Save only ever writes sr-baseline.json.
+# READ-ONLY unless -Save is passed, and -Save only ever writes the baseline file.
+#
+# THE BASELINE IS SHARED STATE, AND -BaselinePath IS THE WAY OUT OF THAT
+#   Without -BaselinePath, -Save and -Compare both use one fixed file:
+#   Meta\Obsidian Plugins\Scripts\sr-baseline.json. That assumes a single editor. Run several
+#   agents against this vault and any one of them calling -Save replaces the snapshot the others
+#   are measuring against, with no warning, because a baseline with a newer timestamp is
+#   indistinguishable from the one you took.
+#
+#   This is traps.md T22, and it is not hypothetical: on 2026-09-26 a baseline taken at 22:56
+#   before a rework of ten decks was re-saved by a parallel agent at 23:53, and the -Compare
+#   afterwards reported chapter 1 as "cards 27 -> 25" and no change at all for chapters 2, 11 and
+#   16. The real movement was 401 -> 219 cards and 142 -> 73 markers. The comparison looked clean
+#   and precise and was measuring the last twenty minutes of a four-hour edit.
+#
+#   So: if anything else might touch this vault while you work, pass your own path.
+#     -Save    -BaselinePath "$env:TEMP\my-sr-baseline.json"
+#     -Compare -BaselinePath "$env:TEMP\my-sr-baseline.json"
+#   -Compare prints which file it read and when that file was written, so the snapshot being
+#   compared against is always visible next to the numbers.
 #
 # -SelfTest proves the card patterns still fire on both line endings. 104 of this vault's .md
 # files are CRLF and 51 of those carry cards, and an anchored pattern that forgets `\r` matches
@@ -80,7 +100,8 @@ param(
   [switch]$Save,
   [switch]$Compare,
   [switch]$Detail,
-  [switch]$SelfTest
+  [switch]$SelfTest,
+  [string]$BaselinePath
 )
 $ErrorActionPreference = 'Stop'
 
@@ -93,7 +114,23 @@ if (-not $Root -or -not (Test-Path -LiteralPath (Join-Path $Root 'KTH'))) {
   throw "Vault root (folder containing KTH) not found - pass -Root explicitly"
 }
 $Root = (Get-Item -LiteralPath $Root).FullName
-$baselineFile = Join-Path $PSScriptRoot 'sr-baseline.json'
+# The baseline is shared state unless the caller names its own file - see the header and traps T22.
+if ($BaselinePath) {
+  # Always resolve to an absolute path. A relative path would be left for .NET's file APIs to
+  # resolve, and those resolve against the PROCESS working directory, which Set-Location does not
+  # change (traps T7) - so "-BaselinePath sub\mine.json" could read and write different files
+  # depending on how the script was launched.
+  if (-not [System.IO.Path]::IsPathRooted($BaselinePath)) {
+    $BaselinePath = [System.IO.Path]::GetFullPath((Join-Path (Get-Location).Path $BaselinePath))
+  }
+  $baselineDir = Split-Path -Parent $BaselinePath
+  if ($baselineDir -and -not (Test-Path -LiteralPath $baselineDir)) {
+    throw "Baseline folder does not exist: $baselineDir"
+  }
+  $baselineFile = $BaselinePath
+} else {
+  $baselineFile = Join-Path $PSScriptRoot 'sr-baseline.json'
+}
 $enc = New-Object System.Text.UTF8Encoding($false)
 
 function Read-VaultText($path) {
@@ -374,7 +411,31 @@ if ($Compare) {
     exit 1
   }
   $old = [System.IO.File]::ReadAllText($baselineFile, [System.Text.Encoding]::UTF8) | ConvertFrom-Json
-  Write-Output ("baseline taken at {0}" -f $old.takenAt)
+  # An empty or structureless baseline is an operator error, not drift. Without this it fell through
+  # to the schema check and reported "legacy schema-1, re-take the baseline", which sends the reader
+  # looking for a version problem that does not exist. The membership test is written with @() and
+  # -contains because a '{}' document yields a property collection whose .Name is $null, and calling
+  # .Contains() on that throws instead of answering.
+  $oldNames = @()
+  if ($null -ne $old) { $oldNames = @($old.PSObject.Properties.Name) }
+  if ($oldNames -notcontains 'studyNotes') {
+    Write-Output "Baseline at $baselineFile is empty or not a baseline file - re-run with -Save."
+    exit 1
+  }
+  # Name the file and its age, not just the timestamp inside it. A baseline re-saved by a parallel
+  # agent is indistinguishable from your own unless you can see which file was read and when
+  # (traps T22) - so print both, and say plainly when the snapshot is the shared one.
+  $baselineAge = ''
+  try {
+    $written = (Get-Item -LiteralPath $baselineFile).LastWriteTime
+    $mins = [math]::Round(((Get-Date) - $written).TotalMinutes, 0)
+    $baselineAge = " (file written {0}, {1} min ago)" -f $written.ToString('HH:mm:ss'), $mins
+  } catch { $baselineAge = '' }
+  Write-Output ("baseline taken at {0}{1}" -f $old.takenAt, $baselineAge)
+  Write-Output ("  read from: {0}" -f $baselineFile)
+  if (-not $BaselinePath) {
+    Write-Output "  this is the SHARED baseline - if anything else touched the vault, that timestamp may not be yours (traps T22)"
+  }
   $drift = 0
   foreach ($s in @('studyNotes', 'wholeVault')) {
     foreach ($k in $markers.Keys) {

@@ -10,7 +10,7 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `steering/environment.md` | Windows / PowerShell / Google Drive / encoding pitfalls |
 | `steering/documentation-standard.md` | Which docs to update, and where each fact belongs |
 | `steering/scripts.md` | The reusable measurement scripts — read **before** writing a new one, or quoting a number |
-| `steering/traps.md` | The eighteen things that fail **silently**. Read before trusting a measurement |
+| `steering/traps.md` | The twenty-three things that fail **silently**. Read before trusting a measurement |
 | `steering/current-state.md` | What is unfinished right now. Empty when nothing is in flight |
 | `lessons-learned.md` | Where a miss became a new rule. **Not** auto-loaded: it explains *why* the rules exist, and the rules live in `steering/` |
 | `skills/` | **Procedures** for the recurring jobs, loaded on demand |

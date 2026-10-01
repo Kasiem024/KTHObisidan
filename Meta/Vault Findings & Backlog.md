@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F79): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F83): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -3597,3 +3597,205 @@ two readings 90 minutes apart, in files not touched here. Obsidian was running w
 plugin active — `data.json` is modified and its `buryDate` rolled over to the new day — which is the
 documented way this vault changes under an editor (`environment.md`). Recorded rather than explained away:
 the per-file HEAD-versus-disk check is what proves this session's work clean, not the total.
+
+### F82. ✅ DONE (2026-09-27) — the T22 baseline trap removed rather than documented, and doc-figure drift made mechanical
+
+**Why this exists.** F80 and F81 left three lessons that were written down but not *enforced*, and one
+of them had already caused a wrong measurement in this very vault. A plan was drafted and put to three
+reviewers — one checking for duplication, one re-deriving every claim, one judging risk and scope. They
+rejected two of the seven proposals, amended four, and added one the plan had missed. All eight factual
+claims in the plan were independently verified as true.
+
+**What the reviewers stopped, and why that mattered.**
+
+- **A proposed `Get-DeckDepthCensus.ps1` was dropped.** It would have promoted the
+  mechanism-against-definition ratio from F81 into a standing script figure. A reviewer hand-checked
+  the keyword classifier behind it and found it blind on **10 of 30 cards in chapter 11 and 17 of 26 in
+  chapter 1** — a card asking for a mechanism without using the word *varför* or *hur* is invisible to
+  it, and a `;;` term card is never counted as a definition. It worked as a directional signal for a
+  one-off diagnosis; as a permanent figure it would have been a heuristic wearing the costume of a
+  measurement, which is the failure class this vault fears most.
+- **A proposed chapter-deck template was dropped.** No Templater mechanism can trigger on the filename
+  form `<CODE> Begrepp - Kap NN`: `_Auto (mappstyrd)` selects a template by **folder**, so a deck
+  template could never have fired. It would have been unused, unlinted debris.
+- **The proposed template fix was replaced by a better one.** The plan was to change the seed card in
+  `Begrepp Template.md` to `::==?==`. A reviewer pointed out that this produces a card whose answer is
+  literally `?` and which *passes* the one-highlight check — a green tick on broken content. Measured
+  instead: **1114 of 1184 cards using that seed shape carry no highlight at all**, only 37 carry
+  exactly one. So the shape has been teaching the wrong habit at scale. The seed line was **removed**,
+  leaving `## Flashcards` empty like the sections above it; nothing that looks like a valid card now
+  ships unfilled. The 1114 existing cards were deliberately left alone — they are in finished courses
+  outside `flashcardTags`, and the author's policy is that a completed deck is dropped.
+
+**What the reviewers added, and it outranked everything else in the plan.** `Get-SRIntegrity.ps1`
+wrote to a single global `sr-baseline.json`. T22 documented the danger; this session had *reproduced*
+it, with a parallel agent redating the snapshot mid-run so that `-Compare` produced a clean, precise
+report of the wrong twenty minutes. Documenting a trap is weaker than removing it.
+
+- `-BaselinePath <file>` now overrides the shared snapshot for both `-Save` and `-Compare`.
+- `-Compare` prints the file it read, how long ago that file was written, and says outright when the
+  snapshot is the shared one — so a borrowed timestamp cannot pass unnoticed.
+- `Test-SRIntegrity.ps1` gained three assertions: the named file is written, the **shared** baseline is
+  left byte-identical, and `-Compare` names the file it read. **10 → 13 assertions, 0 failed.**
+- It was used in earnest within the hour, for the tag repair below.
+
+**Doc-figure drift is now checked.** `documentation-standard.md` has an entire section headed *"A stale
+number is a finding against the doc"*, and the drift had still recurred: the backlog's **own frontmatter**
+said `F1–F79` while the file held F81, `.kiro/README.md` called `traps.md` *"the eighteen things"* when
+there are 23, `.kiro/hi1031-tenta-reentry.md` stated the superseded 40–60 card target as live
+instruction in two places, and an earlier entry records the same repair being made across three files at
+once. The rule existed; only the check was missing.
+
+`Vault-Audit.ps1` gained **`staleFRange`**: it takes the highest `F<n>.` heading in the backlog as the
+authority and reports any document quoting a different `F1–F<m>` range. Dated artifacts under
+`.kiro/reports/` and `.kiro/research/` are exempt, because they correctly preserve the range of their own
+day. **The backlog itself is checked on its frontmatter only** — its body legitimately quotes the ranges
+earlier docs used to carry, and the first run proved it: the check flagged `F1–F50` from a 2026 repair
+table. A check with false positives gets switched off, so that was fixed before the check was kept.
+
+`Test-VaultAudit.ps1` plants a backlog holding F7 next to a README claiming F1–F4, and keeps an old
+range in the fixture backlog's body as a negative control. **43 → 44 assertions, 0 failed.**
+
+**The harness caught the author of this entry damaging it.** A careless replacement joined two lines in
+`Test-VaultAudit.ps1`, so the fixture file for `frontmatterWithoutTags` was never written and that check
+silently stopped firing. The harness reported it on the next run — `NOT REPORTED - this check no longer
+fires` — which is precisely the job it exists for, applied to itself.
+
+**A frontmatter repair, and a finding about its cause.** The audit reported `listStyleTags 2` on HI1031's
+chapters 1 and 2. `Format-FrontmatterTags.ps1 -Apply` returned them to inline form, guarded by
+`-BaselinePath` so the shared snapshot was untouched, and `-Compare` then reported **clean** on counts,
+per-file counts, deck scope and marker placement.
+
+The cause is now better understood than in F80, which guessed at review-time writes. Both affected notes
+had also **lost their `nosr` tag** — present in all four of today's commits, absent on disk — and the
+count of `nosr` notes fell 46 → 44 while `cards excluded by nosr` fell 325 → 280, exactly the 26 + 19
+cards those two decks hold. The window in which it happened contains no script that touches a note. So:
+**editing tags in Obsidian's own UI is what rewrites frontmatter into YAML list form**, and the author
+un-parked those two decks himself, which is his rotation and was left untouched. That explains why
+HI1032's decks carry review data yet never drift: their tags have not been edited.
+
+**Where the remaining lessons landed.** Not in `steering/`, which is read in every session and was
+judged too expensive for a rarely-needed workflow:
+
+- `write-flashcards/SKILL.md` step 1 — **a line number handed to you by another agent is a lead, not a
+  citation.** Two of F81's 22 additions arrived with wrong line references and were caught only because
+  the brief required re-deriving them.
+- `write-flashcards/SKILL.md` step 6 — a one-line pointer to the readiness test, with no figures
+  repeated, because the procedure itself was already in the anti-pattern table and a second copy is
+  what drifts.
+- `vault-bulk-edit/references/verification.md` — the `-BaselinePath` protocol, and a new section
+  **"Commissioning a reviewer"**: tell the reviewer the figures in its own brief are unverified, give it
+  authority to contradict the brief, name the traps that apply, and require a single-word verdict and a
+  length cap.
+
+**Verified.**
+
+- `Test-VaultAudit.ps1` → **44 assertions, 0 failed**; `staleFRange` fires on the planted violation and
+  the clean fixture stays clean.
+- `Test-SRIntegrity.ps1` → **13 assertions, 0 failed**.
+- `-BaselinePath` proved in isolation: the shared `sr-baseline.json` hash was byte-identical before and
+  after a `-Save` to a named file.
+- `Vault-Audit.ps1` → `RESULT: clean`, `notesInScope=528` of 709.
+- `Get-SRIntegrity.ps1 -Compare` after the tag repair → clean on every figure.
+- `Begrepp Template.md`: one line removed, no `<% %>` expression touched.
+
+### F83. ✅ DONE (2026-10-01) — HI1032's new lab deck brought to the card-form rules, 15 cards added to HI1031 chapter 17, and three defects found in the checks added four days earlier
+
+**Context.** F82's work sat uncommitted for four days while the author reviewed. Resuming it meant
+re-establishing state rather than trusting it: `git status` showed five HI1031 decks modified, a new
+untracked HI1032 note, and a tracked file missing from disk. Every figure below was re-measured.
+
+**What the author had done in the meantime, established before touching anything.** A per-file
+classification of the diff — marker lines against tag lines against everything else, cross-checked
+against `git diff --numstat` so a mis-decoded path could not produce a silent zero (T2) — showed
+**no card content changed in any deck**. The movement was review data: chapter 17 gained markers for
+the first time, chapters 01, 02, 11 and 16 gained more, and chapters 01, 02 and 17 had their `nosr`
+tag removed. That last is the author's own rotation, stated explicitly as his to manage, and it was
+left untouched; it put 45 cards back into review scope.
+
+`HI1032 Labb 1 - Flashcards (TCP).md` appeared as a 316-line deletion, which looked alarming until
+the marker counts were compared: **66 at HEAD, 66 on disk** under the new name
+`HI1032 Labb 1 - Flashcards.md`. The author renamed it; git shows a rename as a delete plus an
+untracked file. No review data was lost.
+
+**HI1032 Labb 5, the new deck.** 56 cards, 56 markers, written by the author on 2026-09-29.
+`Test-DeckHygiene.ps1 -All` found three form defects — `-All` was required because the file is not
+named `* Begrepp - Kap *` and so falls outside the default scope:
+
+- two `==highlight==` marks inside `||` bodies, on the DTE/DCE card and the ACL-placement card. Every
+  row of a list card is a recall target, so the bold label already does that job and marking one row
+  suppresses the others. The `==` characters were removed and the wording left alone.
+- a five-row list card on HSRP's state machine, against the four-row cap. It was **split** into a
+  `(3)` and a `(2)` card rather than compressed, because all five states are distinct and merging
+  would have meant rewriting the author's own text. The original card keeps its marker byte-identical;
+  the new one is markerless. 56 → 57 cards, markers unchanged at 56.
+
+Verified: the note no longer appears among `-All`'s findings, and a reviewer read every marker line to
+confirm each still sits under its own complete card. **Reported but not changed**, because it is the
+author's organisation to decide: the file carries eight `##` headings in two parallel series over the
+same four topics — `## Modul 1`–`4` holding 14, 15, 10 and 12 cards, then `## 1.`–`4.` holding one or
+two each. Headings do not affect review at all, so the cost is readability, not drilling.
+
+**HI1031 chapter 17, 15 cards added on request.** The author asked for "10-20 ungefär, de ska
+fortfarande vara baserade på tentafrågorna". 18 → **33 cards**, spread 4/4/4/3 across the chapter's
+four exam questions, markers unchanged at 12. This reverses part of F80's narrowing for one chapter,
+deliberately and at his request: the material added is depth *within* the four questions — what a
+distributed transaction is, flat against nested, `join`, globally unique TIDs, the 3N message cost,
+`haveCommitted`, the two timeout cases, parent and child abort semantics, orphans, `getStatus`, the
+comparison of the two 2PC shapes, intentions lists, the Coordinator and Participant log records, and
+the `done` status.
+
+A reviewer verified **all 15 against the book independently**, re-deriving every line reference rather
+than trusting the authoring agent's — the rule added in F82 after two wrong references nearly landed.
+**50 claims checked, 0 fabricated.** The 3N cost and three rounds, `haveCommitted`'s purpose, `done`,
+orphan, `getStatus`, `join`, flat against nested, the two record types and the intentions list were all
+confirmed verbatim in §17.1–17.6.
+
+**Three defects in the checks added four days earlier**, all found by adversarial review rather than by
+the checks themselves:
+
+1. **`staleFRange` flagged an old F-range quoted inside a code fence or behind a blockquote.** No real
+   file hit it, but that is the false-positive class that gets a check switched off — and this check
+   had already been corrected once for exactly that reason, when it flagged the backlog's own history
+   table. It now scans line by line, skipping fences and quoted lines. Proved both ways in a throwaway
+   vault: silent when the stale range appears only in a fence or a quote, firing when it appears in
+   running text, silent when the range is correct.
+2. **`-BaselinePath` left a relative subdirectory path relative.** `.NET`'s file APIs resolve a
+   relative path against the *process* working directory, which `Set-Location` does not change (T7),
+   so `-BaselinePath sub\mine.json` could read and write different files depending on how the script
+   was launched. It is now always resolved to an absolute path.
+3. **`-Compare` against an empty baseline blamed a legacy schema.** A `{}` file fell through to the
+   version check and reported "legacy schema-1, re-take the baseline", sending the reader after a
+   version problem that does not exist. It now says the baseline is empty or not a baseline file. The
+   first attempt at that fix threw `InvokeMethodOnNull`, because a `{}` document yields a property
+   collection whose `.Name` is `$null` and `.Contains()` on `$null` throws rather than answering; the
+   test is now written with `@()` and `-contains`.
+
+**And T23 was wrong, in the entry I had written myself.** It claimed *every* script in
+`Meta/Obsidian Plugins/Scripts/` reports with `Write-Host`. Measured across all 14 files: **two do**
+— `Test-DeckHygiene.ps1` and `Test-DocHygiene.ps1` — and the other twelve use `Write-Output`. The
+generalisation came from the one script I had just been fighting with. It cost a real measurement the
+same day: `Vault-Audit.ps1 -Detail 6> $path` produced a file holding one blank line and an exit code
+while the two offending filenames scrolled past in the terminal. T23 now carries the table and both
+failures, and says to check which family a script belongs to before capturing it.
+
+**A doc contradiction corrected.** `scripts.md` stated that `nosr`'s *absence* on HI1031's chapter 2
+deck was "equally deliberate". HEAD had `nosr` on that deck; the absence is four days old and is the
+author's current rotation, not a standing fact. The entry now records the identified cause of the
+recurring list-form drift instead — **editing tags in Obsidian's own UI rewrites frontmatter into YAML
+list form** — which explains why the affected set is always the recently-touched notes, and why
+HI1032's chapter decks carry review data yet never drift. It also notes that the repair script's scope
+is wider than the audit's `listStyleTags`: it normalised a third note the audit had not flagged.
+
+**Verified.**
+
+- `Vault-Audit.ps1` → `RESULT: clean`, `notesInScope=529` of 710.
+- `Test-VaultAudit.ps1` → **44 assertions, 0 failed**, `staleFRange` firing on its planted violation.
+- `Test-SRIntegrity.ps1` → **13 assertions, 0 failed**, including the three `-BaselinePath` ones.
+- `Test-DeckHygiene.ps1 -SelfTest` → all 8 checks fire, all 6 negative controls hold.
+- `Test-DeckHygiene.ps1 -Course HI1031` → **exit 0**, 254 cards, 115 markers, no findings.
+- `Test-ScriptHygiene.ps1` → clean, 18 files, 91 checks. `Test-DocHygiene.ps1` → clean.
+- `markdownlint-cli2` → `Linting: 552 files`, 0 issues.
+- The frontmatter repair ran with `-BaselinePath` pointed at its own snapshot — the first real use of
+  the T22 escape hatch — and `-Compare` afterwards reported clean on counts, per-file counts, deck
+  scope and marker placement.

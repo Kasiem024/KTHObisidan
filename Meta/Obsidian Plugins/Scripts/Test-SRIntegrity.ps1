@@ -136,6 +136,30 @@ Set-Note $base
 $r = Invoke-SR @('-SelfTest')
 Assert 'Get-SRIntegrity -SelfTest passes' (($r.code -eq 0) -and ($r.text -match 'self-test clean')) ("exit=" + $r.code)
 
+# 8 - -BaselinePath must isolate the snapshot. The shared sr-baseline.json is one global file, so a
+#     parallel agent calling -Save silently redates the snapshot everyone else is comparing against
+#     (traps T22, reproduced on 2026-09-26). These three assertions are what make the escape hatch
+#     trustworthy: the named file is written, the SHARED file is not touched, and -Compare says
+#     which file it read so a borrowed timestamp cannot pass unnoticed.
+Set-Note $base
+$sharedBaseline = Join-Path (Split-Path -Parent $script) 'sr-baseline.json'
+$sharedHashBefore = ''
+if (Test-Path -LiteralPath $sharedBaseline) {
+  $sharedHashBefore = (Get-FileHash -LiteralPath $sharedBaseline -Algorithm SHA256).Hash
+}
+$ownBaseline = Join-Path $work 'own-baseline.json'
+$r = Invoke-SR @('-Save', '-BaselinePath', $ownBaseline)
+Assert '-BaselinePath -Save writes the named file' ((Test-Path -LiteralPath $ownBaseline) -and ($r.code -eq 0)) ("exit=" + $r.code)
+
+$sharedHashAfter = ''
+if (Test-Path -LiteralPath $sharedBaseline) {
+  $sharedHashAfter = (Get-FileHash -LiteralPath $sharedBaseline -Algorithm SHA256).Hash
+}
+Assert '  and leaves the SHARED baseline untouched' ($sharedHashBefore -eq $sharedHashAfter) 'this is the T22 escape hatch'
+
+$r = Invoke-SR @('-Compare', '-BaselinePath', $ownBaseline)
+Assert '-BaselinePath -Compare reads it and names the file' (($r.code -eq 0) -and ($r.text -match 'read from:') -and ($r.text -match [regex]::Escape('own-baseline.json'))) ("exit=" + $r.code)
+
 foreach ($l in $rows) { Write-Output $l }
 Write-Output ""
 Write-Output ("-" * 88)

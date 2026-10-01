@@ -5,65 +5,74 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: one task in flight — making the vault usable on the phone. HI1031's ten flashcard decks were
-narrowed to the exam questions on 2026-09-26 and every check is green; that work is finished and
-recorded as F80.**
+**Status: nothing in flight.** The HI1031 deck work is finished and recorded as F80, F81, F82 and F83;
+every gate is green. The one task still open is the phone sync below, which has been parked since
+2026-09-08 and is waiting on the author, not on an agent.
 
 **The re-entry prompt is `.kiro/reentry.md`.** It is course-neutral and is the file to be pointed at
 after a compact. `.kiro/hi1031-tenta-reentry.md` is the archive of the earlier HI1031 writing project,
-not a live state file.
+not a live state file, and two of its figures are superseded — see the banner inside it.
 
-## Done: HI1031 deck narrowing (2026-09-26, F80) and its follow-up stress test (2026-09-27, F81)
+## Done: the HI1031 deck programme (F80 to F83)
 
-All ten chapter decks — 1, 2, 4, 5, 6, 9, 10, 11, 16 and 17 — were cut from **401 cards to 219**, with
-every remaining card traceable to a named exam question. 69 markers were removed with the 69 cards that
-carried them, and hidden multi-fact prose cards went from 98 to 0. `nosr` was not touched on any deck.
+- **F80, 2026-09-26** — all ten chapter decks cut from **401 cards to 219** against the published exam
+  questions. 69 markers removed with the 69 cards that carried them; hidden multi-fact prose cards went
+  from 98 to 0. `Test-DeckHygiene.ps1` was written in the same change to make the countable half of
+  `write-flashcards` mechanical.
+- **F81, 2026-09-27** — the narrowed decks were stress-tested against a simulated oral examiner. 147
+  follow-up questions: 110 answerable, 26 thin, 11 not. A depth calibration found **0 of 20** shortened
+  cards had lost their mechanism, so the gap was not depth but **tradeoffs and downsides** — which a
+  coverage check cannot see, because every written question still had cards. 22 cards added, 2 removed.
+- **F82, 2026-09-27** — the T22 baseline trap removed rather than documented (`-BaselinePath` on
+  `Get-SRIntegrity.ps1`), doc-figure drift made mechanical (`staleFRange` in the audit), and the seed
+  card removed from `Begrepp Template.md` after measuring that **1114 of 1184** cards using its shape
+  carried no highlight.
+- **F83, 2026-09-27 to 10-01** — HI1032's new Labb 5 deck brought to the form rules, **15 cards added
+  to chapter 17** at the author's request, and three defects found in the checks F82 had just added.
 
-**Then the narrowed decks were stress-tested against an oral examiner (F81)**, because the author asked
-whether they were still enough. Four reviewers put **147 follow-up questions** to them: 110 answerable,
-26 thin, 11 unanswerable. A depth calibration found **0 of 20** shortened cards had lost their mechanism,
-so the cards were not too shallow — the gap was one specific kind of breadth, **tradeoffs and downsides**,
-which a coverage check cannot see because every written question still had a card. 22 cards were added and
-2 removed, landing at **239**. 15 of the 37 gaps were left open deliberately, to keep the count low.
+**Card counts now**, per chapter: 01 26, 02 19, 04 29, 05 24, 06 25, 09 18, 10 22, 11 30, 16 28,
+17 **33**. That is 254 cards and 115 markers across the ten decks — markers rose from 73 because the
+author has been reviewing. HI1032's Labb 5 holds 57 cards and 56 markers.
 
-Current counts per chapter: 01 26, 02 19, 04 29, 05 24, 06 25, 09 18, 10 22, 11 30, 16 28, 17 18.
-Markers: 18, 7, 0, 0, 0, 0, 0, 23, 25, 0 — 73 in total.
+**Read `product.md` before writing any more cards:** the 40–60 target is superseded. The rule is "as
+few as possible, as concentrated on the exam questions as possible", and 40 is not a floor. Chapter 17
+is the one deliberate exception, widened on request.
 
-**Read `product.md` before writing any more cards:** the 40–60 target is superseded. The rule is now "as
-few as possible, as concentrated on the exam questions as possible", and 40 is not a floor.
-
-`Test-DeckHygiene.ps1` now checks the countable half of `write-flashcards` mechanically. Run it with
-`-SelfTest` before trusting a zero from it.
+**`nosr` is the author's rotation and is not an agent's to change.** Chapters 01, 02 and 17 had it
+removed between 2026-09-27 and 10-01, putting 45 cards back into review. `Format-FrontmatterTags.ps1`
+preserves whatever is there and **does not restore a missing `nosr`**, so check deliberately before
+running it.
 
 **Two things left for the author to decide, neither blocking:**
 
 1. **Chapter 9's exam question 2 asks about hypermedia, and the 2012 book does not cover it.** Confirmed
-   independently by four reviewers. The cards that previously answered it came from restfulapi.net. They
-   were removed and nothing was invented in their place. Closing that gap means accepting a non-book
-   source, which is his call.
-2. **HI1032's twelve chapter decks have 65 form findings** — 36 highlights inside list bodies, 21 missing
-   `(N)` cues, 5 lists longer than four rows, 3 wrong highlight counts. Run
-   `Test-DeckHygiene.ps1` with no `-Course` to see them. Those decks predate these conventions and were
-   out of scope; HI1031's ten are clean.
+   independently by four reviewers. The cards that previously answered it came from restfulapi.net and
+   were removed; nothing was invented in their place. Closing the gap means accepting a non-book source.
+2. **HI1032's twelve chapter decks and its Labb 1 deck carry form findings** — run
+   `Test-DeckHygiene.ps1` with no `-Course` to see them. Those decks predate these conventions. HI1031's
+   ten and HI1032's Labb 5 are clean. `-All` widens the scan to every note holding a card and reports
+   over two thousand findings across finished courses; that is a **survey, not a gate**.
 
 **The exam has been moved.** The date in the earlier archive — 21–23 September 2026 — is past and wrong.
-The author confirmed the move on 2026-09-26 but did not give a new date, so do not quote one.
+The author confirmed the move on 2026-09-26 but gave no new date, so do not quote one.
 
 ## Nothing else partially finished
 
-`main` and `origin/main` were both `e545c4a` after the restore-point commit taken before the deck work;
-the deck rework and its documentation are committed after it. **Run `git status` rather than trusting
-that** — a second agent has edited this tree before, and the figure here has aged wrong twice.
+**Run `git status` rather than trusting a commit id written here** — this file has carried a stale one
+twice, and a reviewer caught it again on 2026-10-01.
 
 One file is left untracked deliberately:
 `.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`, a Drive sync
 conflict artefact. It should be deleted, but that is the author's call.
 
+`HI1032 Labb 1 - Flashcards (TCP).md` was **renamed** by the author to drop the `(TCP)` suffix. Git shows
+a rename as a delete plus an untracked file; the marker count is 66 on both sides, so nothing was lost.
+
 **`core.quotepath` is set to `false` in this repository's local git config**, deliberately, because
 `traps.md` T2 recommends it for reading repository facts and nearly every path here contains `å ä ö`.
-It was set on 2026-09-26 and recorded here so it is not mistaken for drift. Note that it is **only half
-the fix** — PowerShell still decodes git's stdout using the console code page, so `[Console]::OutputEncoding`
-has to be set to UTF-8 as well. That half cost three false measurements in one session; see T2.
+It is **only half the fix** — PowerShell still decodes git's stdout using the console code page, so
+`[Console]::OutputEncoding` has to be set to UTF-8 as well. That half cost three false measurements in
+one session; see T2.
 
 Settled 2026-09-06: the author's goal — pass the exam, not cover the book — and the deck
 self-containment policy are recorded in `product.md` and `llms.txt`, with the authoring consequence in

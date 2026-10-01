@@ -278,15 +278,6 @@
       "key": "M"
     }
   ],
-  "obsidian-spaced-repetition:srs-cram-flashcards": [
-    {
-      "modifiers": [
-        "Alt",
-        "Shift"
-      ],
-      "key": "F"
-    }
-  ],
   "editor:save-file": [],
   "editor:toggle-highlight": [
     {
@@ -348,7 +339,7 @@
         "Alt",
         "Shift"
       ],
-      "key": "E"
+      "key": "R"
     }
   ]
 }

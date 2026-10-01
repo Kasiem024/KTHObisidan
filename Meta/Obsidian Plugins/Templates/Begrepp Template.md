@@ -20,4 +20,3 @@ updated: <% datum %>
 
 ## Flashcards
 
-<% tp.file.title %> (Definition)::

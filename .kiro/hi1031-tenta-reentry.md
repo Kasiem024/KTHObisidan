@@ -126,7 +126,8 @@ många" och att scopet nog var "för brett". Inskrivet i `.kiro/steering/product
 4. **Smalare scope.** Är något inte direkt relaterat till en tentafråga är det irrelevant. **Ta bort
    det — korta det inte.**
 
-**Måtten:** **40–60 kort** per deck, **150–250 rader** per teorifil.
+**Måtten:** ~~**40–60 kort** per deck~~ — **ersatt 2026-09-26**, se bannern högst upp: så få kort som
+möjligt, 40 är inget golv. **150–250 rader** per teorifil gäller fortfarande.
 
 ### Räkna budgeten per fråga INNAN du skriver
 
@@ -445,7 +446,8 @@ avsnitt: X" under rubriken; faktapunkter med fet etikett för mekanism, fördel,
 "Så kan du tänka" för egna förklaringar; `### Muntligt svar` sist per fråga med 5–6 numrerade
 talpunkter; `## Luckor och källor` sist i filen.
 
-**B.** Bygg om decket `HI1031 Begrepp - Kap NN …`: en H2 per tentafråga, 40–60 kort.
+**B.** Bygg om decket `HI1031 Begrepp - Kap NN …`: en H2 per tentafråga, ~~40–60 kort~~ **så få kort
+som möjligt** (målet ersattes 2026-09-26; de tio decken ligger på 16–30 kort vardera).
 
 **Separatorer:** `::` enradigt enkelriktat, `;;` enradigt **omvänt**, `||` flerradigt enkelriktat,
 `??` flerradigt omvänt. Byt aldrig separator på ett kort som bär en markör. Undvik ja/nej-kort och

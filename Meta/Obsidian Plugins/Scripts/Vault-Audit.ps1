@@ -293,6 +293,73 @@ if($filerMd.Count -gt 0){
     if(-not $covered){ (Bucket 'tagIndexNotExcluded').Add($relFwd) }
   }
 }
+
+# ---------------- staleFRange ----------------
+# Several docs quote the backlog's range as "F1-F<n>", and nothing kept them in step with the backlog
+# itself. The drift has recurred three times: an earlier entry records repairing it in three files at
+# once, and on 2026-09-27 the backlog's OWN frontmatter description still said F1-F79 while the file
+# held F81. documentation-standard.md has a whole section on this ("A stale number is a finding
+# against the doc"), so the rule existed and only the check was missing.
+#
+# The authority is the highest "### F<n>." heading in Meta/Vault Findings & Backlog.md. Any file whose
+# text contains an F1-F<m> range with a different m is reported. The dash may be ASCII or an en dash,
+# which is why the pattern accepts both; it is built from char codes because this file is pure ASCII.
+$dash = '[-' + [char]0x2013 + ']'
+$backlogFile = Join-Path $Root 'Meta\Vault Findings & Backlog.md'
+if(Test-Path -LiteralPath $backlogFile){
+  $blText = RT $backlogFile
+  $maxF = 0
+  foreach($m in [regex]::Matches($blText, '(?m)^#{1,4}\s*F(\d+)\.')){
+    $n = [int]$m.Groups[1].Value
+    if($n -gt $maxF){ $maxF = $n }
+  }
+  if($maxF -gt 0){
+    # Scan the docs that actually quote the range, wherever they live. Excluded: .kiro/reports/ and
+    # .kiro/research/, which are dated artifacts that correctly preserve the range of their own day.
+    $rangeCandidates = @(Get-ChildItem -LiteralPath $Root -Recurse -File -Filter '*.md' -ErrorAction SilentlyContinue |
+      Where-Object {
+        $p = $_.FullName
+        (-not $p.Contains('\.git\')) -and (-not $p.Contains('\node_modules\')) -and
+        (-not $p.Contains('\.kiro\reports\')) -and (-not $p.Contains('\.kiro\research\')) -and
+        (-not $p.Contains('\.trash\'))
+      })
+    foreach($f in $rangeCandidates){
+      $txt = RT $f.FullName
+      # The backlog is the authority and also a history: its body legitimately quotes the ranges that
+      # earlier docs used to carry, so scanning its whole text flags "F1-F50" from a 2026 repair table
+      # as a defect. Only its own frontmatter description is a live claim. Getting this wrong is how a
+      # check earns a false positive and then gets switched off.
+      if($f.FullName -eq $backlogFile){
+        $fm = [regex]::Match($txt, '(?s)\A---\r?\n(.*?)\r?\n---')
+        if(-not $fm.Success){ continue }
+        $txt = $fm.Groups[1].Value
+      }
+      if($txt -notmatch ('F1' + $dash + 'F\d+')){ continue }
+      # Scan line by line and skip fenced code blocks and blockquotes. A doc that quotes an older
+      # range inside a fence or behind "> " is showing history on purpose, and flagging that is the
+      # false-positive class that gets a check switched off. The fence marker is built from a char
+      # code because this file is pure ASCII and a backtick in a double-quoted string is an escape
+      # (traps T1, T18).
+      $tick3 = ([string][char]0x60) * 3
+      $inFence = $false
+      $claimed = 0
+      foreach($line in ($txt -split "`r?`n")){
+        $tl = $line.Trim()
+        if($tl.StartsWith($tick3) -or $tl.StartsWith('~~~')){ $inFence = -not $inFence; continue }
+        if($inFence){ continue }
+        if($tl.StartsWith('>')){ continue }
+        $mm = [regex]::Match($line, ('F1' + $dash + 'F(\d+)'))
+        if(-not $mm.Success){ continue }
+        $n = [int]$mm.Groups[1].Value
+        if($n -ne $maxF){ $claimed = $n; break }
+      }
+      if($claimed -ne 0){
+        $rel = $f.FullName.Substring($Root.Length+1)
+        (Bucket 'staleFRange').Add(("{0}  claims F1-F{1}, backlog holds F{2}" -f $rel, $claimed, $maxF))
+      }
+    }
+  }
+}
 # ---------------- report ----------------
 Write-Output "=== VAULT AUDIT  $(Get-Date -Format 'yyyy-MM-dd HH:mm') ==="
 Write-Output ("root={0}" -f $Root)

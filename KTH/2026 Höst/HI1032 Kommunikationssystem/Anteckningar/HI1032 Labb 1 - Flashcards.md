@@ -1,10 +1,10 @@
 ---
-tags: [studieguide, HI1032, nätverk, KTH, year2026]
+tags: [studieguide, HI1032, nätverk, KTH, year2026, nosr]
 description: "Samlade flashcards för HI1032 Labb 1 (TCP och Wireshark) – teori inför redovisningen: skiktning och portar, TCP-headern och flaggorna, handskakning och nedkoppling, sekvens- och ACK-nummer, flödes- och trängselkontroll, ICMP, ARP, HTTP, FTP samt tcpdump, tcptrace och xplot."
 created: 2026-09-01
 updated: 2026-09-01
 ---
-# HI1032 Labb 1 - Flashcards (TCP)
+# HI1032 Labb 1 - Flashcards
 
 *Teori-deck inför redovisningen av Labb 1 (TCP + Wireshark). Empiriska mätvärden (dina egna IP/MAC, throughput, antal paket) ingår inte – dem läser du av i labben.*
 

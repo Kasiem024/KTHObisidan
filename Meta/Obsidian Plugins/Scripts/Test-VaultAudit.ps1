@@ -92,6 +92,23 @@ function New-Fixture {
   # that is easiest to get wrong, not a simplified one.
   $filterJson = '{' + "`n" + '  "userIgnoreFilters": [' + "`n" + '    "/(^|\\/)Filer\\//"' + "`n" + '  ]' + "`n" + '}' + "`n"
   Write-Utf8 (Join-Path $fx '.obsidian\app.json') $filterJson
+
+  # staleFRange needs two files: the backlog, which is the authority for the highest F-number,
+  # and a doc quoting a range that disagrees with it. The backlog's own BODY also quotes an old
+  # range here on purpose - a real backlog records what earlier docs used to say, and a check that
+  # flags its own history is a check that gets switched off. Only its frontmatter is a live claim.
+  $backlogText = "---`n" +
+    'tags: [meta]' + "`n" +
+    'description: "Backlog for the fixture (F1-F7)."' + "`n" +
+    $dates + "`n---`n" +
+    "# Backlog`n`n" +
+    "### F7. DONE - the newest entry`n`n" +
+    "### F6. DONE - an older one`n`n" +
+    "An earlier repair set three docs to F1-F3, which this line records on purpose.`n"
+  Write-Utf8 (Join-Path $fx 'Meta\Vault Findings & Backlog.md') $backlogText
+  # README agrees with the backlog here, so the CLEAN fixture stays clean. The disagreement is
+  # planted later, with the other violations.
+  Write-Utf8 (Join-Path $fx 'README.md') "---`ntags: [meta]`ndescription: `"Fixture readme.`"`n$dates`n---`n# README`n`nSee the backlog (F1-F7).`n"
 }
 
 function Invoke-Audit([switch]$ContentOnly) {
@@ -139,6 +156,10 @@ if ($base.Code -ne 0) {
 # one course is missing a folder, another is missing its _index.md.
 $b = @{}
 function Bad($file, $text) { Write-Utf8 (Join-Path $begrepp $file) $text; }
+
+# staleFRange: rewrite README to claim a range the backlog contradicts. Not under Begrepp/, because
+# the check deliberately reads the whole vault - a stale range in the root README is the real case.
+Write-Utf8 (Join-Path $fx 'README.md') "---`ntags: [meta]`ndescription: `"Fixture readme.`"`n$dates`n---`n# README`n`nSee the backlog (F1-F4).`n"
 
 Bad 'a-nofm.md'        "# Trasig`n`nIngen frontmatter alls.`n"
 Bad 'b-notags.md'      "---`n$goodDesc`n$dates`n---`n# Trasig`n"
@@ -233,7 +254,7 @@ $expect = @(
   'imageEmbedWithoutAlt', 'inlineDataviewExpression', 'oldDataviewDates',
   'brokenWikilinks', 'courseMissingFolder', 'courseMissingIndex', 'nonConformingFolder',
   'litWrongEditionFormat', 'litBadSpacing', 'litHasCourseCode',
-  'tagIndexNotExcluded'
+  'tagIndexNotExcluded', 'staleFRange'
 )
 foreach ($e in $expect) {
   $fired = Reports $full.Text $e

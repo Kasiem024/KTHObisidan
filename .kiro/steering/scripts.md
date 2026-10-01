@@ -50,7 +50,11 @@ stale the moment it landed.
   throwaway vault under `%TEMP%`, proves the audit calls it clean, then plants one
   deliberate violation per check and requires every check to fire. ~9 seconds.
 - **About to run a sweep over many notes**, or any `markdownlint --fix`, or about to rewrite a
-  deck → `Get-SRIntegrity.ps1 -Save` **before**, `-Compare` **after**. Non-zero exit means one
+  deck → `Get-SRIntegrity.ps1 -Save` **before**, `-Compare` **after**. **Pass `-BaselinePath` with
+  your own file** if anything else might touch the vault while you work: the default snapshot is one
+  global path, so a parallel agent calling `-Save` silently redates what you are measuring against,
+  and that happened on 2026-09-26 (T22). `-Compare` now prints which file it read, how long ago it
+  was written, and says outright when the snapshot is the shared one. Non-zero exit means one
   of four things, and only the first was checked before F70:
   1. a card separator or an `<!--SR:-->` comment changed **count**;
   2. a **named file** gained or lost cards or markers — a vault total cannot tell your edit
@@ -61,9 +65,10 @@ stale the moment it landed.
      question, which is the one edit `write-flashcards` rule 11 forbids. An ordinary review
      never trips this, because a review rewrites the marker.
   See `conventions.md` §1 for why the four separators are not interchangeable.
-- **Changed `Get-SRIntegrity.ps1`** → `Test-SRIntegrity.ps1`, in the same change. Ten
-  assertions, ~9 seconds, one planted defect each; it also asserts that a plain review does
-  **not** fire the placement check, because a guard with false positives gets switched off.
+- **Changed `Get-SRIntegrity.ps1`** → `Test-SRIntegrity.ps1`, in the same change. Thirteen
+  assertions, ~10 seconds, one planted defect each; it also asserts that a plain review does
+  **not** fire the placement check, because a guard with false positives gets switched off, and
+  that `-BaselinePath` writes the file it is given while leaving the shared snapshot byte-identical.
 - **Added or edited anything under `.kiro/`** → `Test-DocHygiene.ps1`. Nothing else looks there:
   `.kiro/**` is in the linter's ignore list and outside the audit's scope, so
   `npx markdownlint-cli2 ".kiro/**/*.md"` prints `Linting: 0 files` and then `Summary: 0 issues in
@@ -95,9 +100,16 @@ stale the moment it landed.
   reported that deviation while nothing repaired it, which `conventions.md` §4 calls the worst of
   both worlds, and because it **recurs**: twelve notes across HI1031 and HI1032 were rewritten to
   list form on 2026-09-10 by something other than the audit, and the pre-push hook then refused the
-  push until they were fixed. It preserves tag order and every value — above all `nosr`, whose loss
-  would silently re-enter a deck's whole card set (F64), and whose *absence* on HI1031's chapter 2
-  deck is equally deliberate. Dry run by default, `-Apply` writes and backs each file up first.
+  push until they were fixed. **The cause was identified on 2026-09-27: editing a note's tags in
+  Obsidian's own UI rewrites the frontmatter into YAML list form.** That is why the affected set is
+  always "the notes whose tags were touched recently", and why HI1032's chapter decks carry review
+  data yet never drift. Expect this after any session where the author changes a deck's `nosr` state.
+  Note also that this script's scope is **wider than the audit's `listStyleTags`**: on 2026-10-01 it
+  normalised a third note the audit had not flagged, so `CHANGED n` can exceed the audit's count.
+  It preserves tag order and every value — above all `nosr`, whose loss would silently re-enter a
+  deck's whole card set (F64). **It does not restore a `nosr` that is already gone**, so decide
+  deliberately before running it whether a missing `nosr` was intended.
+  Dry run by default, `-Apply` writes and backs each file up first.
   Afterwards require `Get-SRIntegrity.ps1 -Compare` to show **every** figure unchanged: this edit
   must not move a card, a marker or a deck's review scope.
 - **Junk in the tag pane**, or after editing `userIgnoreFilters` →

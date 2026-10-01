@@ -371,23 +371,33 @@ own per-file fingerprint first — bytes, cards per separator, `<!--SR:` count �
 arithmetic against that. The claim that must hold is *markers removed equals cards deleted that had
 markers*, per file, and a vault total can never show it.
 
-## T23 — `Write-Host` output is invisible to `| Out-String`, so a captured report can arrive empty
+## T23 — two scripts report on the information stream and twelve on stdout, so one capture idiom silently fails
 
-Every script in `Meta/Obsidian Plugins/Scripts/` reports with `Write-Host`, which writes to the
-**information stream**, not to stdout. So `& $script | Out-String` captures *nothing* while the text
-scrolls past in the terminal, and a file written from that pipeline contains only whatever the script
-happened to emit on the success stream.
+`Write-Host` writes to the **information stream**, not to stdout. So `& $script | Out-String` captures
+*nothing* while the text scrolls past in the terminal, and a file written from that pipeline contains
+only whatever the script emitted on the success stream. `Write-Output` is the opposite: `Out-String`
+works and `6> $path` captures nothing.
 
-**Produced, on 2026-09-26:** a capture of `Test-DeckHygiene.ps1` across two scopes wrote a file
-holding four lines — two headers and two `EXITCODE=` lines — with every finding missing. Read on its
-own, that file says the run found nothing.
+**The folder is mixed, and that is the trap.** Measured 2026-10-01 across all 14 `.ps1` files:
 
-**What to do:** redirect stream 6 (`& $script -Detail 6> $path`) or call the script through
-`powershell -File` and let the shell show stdout. **But `6>` writes UTF-16LE with a BOM**, so anything
-that expects UTF-8 then fails with `stream did not contain valid UTF-8`; recover it with
-`[System.IO.File]::ReadAllText($p, [System.Text.Encoding]::Unicode)`. That half is in
-`environment.md` under *Capture output to a file, not to stdout*. Cross-check an exit code against a
-report that actually contains lines — an `EXITCODE=0` next to an empty body proves nothing.
+| Reports on | Scripts |
+|---|---|
+| information stream, needs `6>` | `Test-DeckHygiene.ps1`, `Test-DocHygiene.ps1` |
+| stdout, needs `\| Out-String` | the other **twelve**, including `Vault-Audit.ps1`, `Test-VaultAudit.ps1`, `Get-SRIntegrity.ps1` |
+
+**Produced, on 2026-09-26:** a capture of `Test-DeckHygiene.ps1` across two scopes wrote a file holding
+four lines — two headers and two `EXITCODE=` lines — with every finding missing. Read on its own, that
+file says the run found nothing. **Then the opposite, on 2026-10-01:** `Vault-Audit.ps1 -Detail 6> $path`
+produced a file containing one blank line and `AUDIT_EXIT=1`, while the two offending filenames went to
+the terminal. The same session had just written this entry claiming *every* script used `Write-Host`,
+which is how the second failure happened.
+
+**What to do:** check which family the script belongs to before capturing it, or sidestep the question
+with `powershell -NoProfile -File <script>` and read the terminal. **And `6>` writes UTF-16LE with a
+BOM**, so a reader expecting UTF-8 then fails with `stream did not contain valid UTF-8`; recover it with
+`[System.IO.File]::ReadAllText($p, [System.Text.Encoding]::Unicode)`. That half is in `environment.md`
+under *Capture output to a file, not to stdout*. Cross-check an exit code against a report that
+actually contains lines — an `EXITCODE=0` next to an empty body proves nothing.
 
 ---
 

@@ -41,6 +41,10 @@ best practice.
    editable. Every card must be traceable to a specific passage: if you cannot point at the sentence
    it came from, it does not go in. Nothing from your own memory of the subject, no matter how
    confident — that is how a plausible falsehood enters a deck that is then memorised on purpose.
+   **A line number handed to you by another agent is not a citation, it is a lead.** Re-derive it
+   before writing the card. On 2026-09-27 two of the 22 additions arrived with line references from a
+   reviewer's report and both were wrong: one would have claimed the book says a deadlock victim is
+   "often the youngest" — the word appears nowhere in it — and the other pointed at the wrong chapter.
    Never invent exam guidance (`conventions.md` §5). Where the book and your recollection disagree,
    the book wins; where the book is silent, the card does not exist.
 2. **Check for duplicates in this course's own decks before writing.** Grep the course's
@@ -60,7 +64,10 @@ best practice.
 5. **Place the cards** in the section they belong to, or add a new `##` section if the topic is
    new. Cards go after the existing cards of that section. If the note has a `## Flashcards`
    heading it must stay **last** — the audit checks this (`flashcardsNotLastSection`).
-6. **Verify.** Counts before and after, then the audit. Commands at the bottom.
+6. **Verify.** Counts before and after, then the audit. Commands at the bottom. When a deck is
+   *finished* rather than merely edited, also run the readiness test: put follow-up questions to each
+   exam question and see whether the deck answers them. Coverage is not readiness — see the
+   anti-pattern table.
 7. **Report what each card came from.** Not in the note — the vault's cards carry no citations — but
    in the summary to the author: which chapter sections are now covered, which are deliberately not,
    and any place the source was ambiguous. That report is the only thing standing between a wrong card
