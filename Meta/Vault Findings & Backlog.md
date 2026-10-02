@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F88): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F89): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4305,3 +4305,127 @@ now sit beside the answers they compress.
 choice before — they simply had no cards. A `nosr` on any one of them now switches off that chapter's
 agenda drill, which is a finer-grained control than the single switch the Snabbsvar note gave, and is
 the practical upside of the copy he chose.
+
+## F89. HI1032's twelve chapter decks deleted and replaced by 79 cards driven by the exam analysis
+
+**Date:** 2026-10-02
+**Status:** Closed
+**Scope:** twelve `HI1032 Begrepp - Kap NN` decks deleted; two new notes
+`HI1032 Tentaplugg - Del A Transportnivan.md` and `... Del B Applikationsnivan.md`; one
+`listStyleTags` repair on `HI1032 Labb 5`
+
+### What was asked
+
+The author moved to HI1032 and asked for three things: delete the chapter flashcard files, leave the
+two lab decks alone, and build new cards from his own exam-pattern analysis so he studies what is most
+likely to be examined. His goal is **E, not a high grade.**
+
+### The deletion was safe, and that was worth measuring rather than assuming
+
+Twelve files, **101 cards, and zero `<!--SR:` markers on every one of them.** All twelve carried
+`nosr`, so they had never been drilled and **no review schedule was destroyed.** The deletion script
+**refuses to run if any target holds a single marker**, and separately asserts that no file matching
+`Labb` is in the target list — the two lab decks were the thing that must not be touched.
+
+Verified after: 0 chapter decks on disk, and both lab decks intact with **66 and 62 markers**. Files
+backed up under `%TEMP%` and removed with `git rm`, so history holds them.
+
+This also closes an item that had been open since F83: those twelve decks were the ones carrying card
+form findings from before the current conventions.
+
+### The source is the best specification in this vault
+
+`HI1032 Tentaanalys - Ranking och poangstrategi.md` and its self-contained twin
+`HI1032 Tentaanalys - AI-kontext.md`, both written by the author from **four past exams with the
+examiner's own solutions**. Unlike HI1031, which has no past paper at all, HI1032 has four plus answer
+keys — so `product.md`'s claim that HI1031 is the only course with published exam material understates
+what HI1032 has.
+
+What makes it usable is that it is not a topic list. It contains **two ready-made question pools with
+the answers that scored points**: 21 rows for Del A question 1 and 23 rows for Del B question 5. The
+analysis states that every sub-question in those two slots fell inside the pools in **all four** exams,
+and that they are worth 13 to 15 of the exam's 44 points. Those 44 cards are the cheapest in the vault:
+real exam questions with verified answers.
+
+### The constraint that would otherwise have produced twenty wasted cards
+
+The analysis says it outright:
+
+> du ska kunna **anvanda** ACK-reglerna, huvudena och tillstandsmaskinerna, inte kunna dem utantill
+
+The exam **prints** the TCP header, the six ACK rules and at least one state machine in the question
+text. So no card memorises them. This is the same rule as *no card whose answer is an address* in the
+lab decks, generalised: **do not memorise what is printed in front of you.** The ACK cards train
+applying the rules — what the ACK number becomes, what to do on out-of-order and on a duplicate, when
+an ACK may be delayed — and the header card trains reading hex, not recalling the string.
+
+Nothing was written for what the analysis says to skip: Huffman trees, Quoted-Printable and Base64 by
+hand, and drawing a congestion graph from scratch.
+
+### Result: 79 cards, and three judgements that are the actual work
+
+**Del A, 36 cards:** the 21-row pool, reading the UDP header from hex, six on applying the ACK rules,
+three on the RTO table, two on congestion control, three on the handshake numbers.
+**Del B, 43 cards:** the 23-row pool, then SNMP, then **FTP before DNS** — the analysis is explicit
+that DNS scored 0 points beyond question 5 in October 2024 while FTP scored 5 — then DNS, then image
+compression.
+
+Three things did not come from the subagents that drafted the cards:
+
+1. **A subagent refused to write five congestion-control cards and was right to.** The sources give
+   only the examiner's corrections to one graph and the event lists, never the general mechanics
+   (`ssthresh = cwnd/2` and so on). It reported five gaps rather than filling them from a model's own
+   knowledge of TCP, which is exactly the behaviour the no-fabrication rule asks for.
+2. **Its three replacement cards were still wrong, and I rewrote them.** They asked things like *"which
+   recurring error does the examiner point out at t=3 and t=11"* — memorising one past paper's answer
+   key rather than anything transferable. The same anti-pattern as a lab address. Two cards survive, in
+   the form the source actually supports: **cwnd is never 0, it restarts at 1**, and **drawing the
+   congestion-avoidance transition one step late is the easy mistake**.
+3. **Active close got no card.** December 2024 asks to draw it, but the answer key records only
+   *"rita med alla segment och tillstand"* with no content, so there is nothing to ground a card on.
+
+### A repair that was not mine
+
+The audit came back **exit 1** after the work, on `listStyleTags` for `HI1032 Labb 5 - Flashcards.md` —
+its frontmatter had been rewritten into YAML list form. That is the known recurrence: **editing a
+note's tags in Obsidian's own UI does this**, identified 2026-09-27. Repaired with
+`Format-FrontmatterTags.ps1 -Apply`.
+
+**`nosr` was checked first and deliberately**, because that script preserves what is there and **does
+not restore a tag that is already gone**. It was present in the list form, so it survived into the
+inline form. `Get-SRIntegrity.ps1 -Compare` afterwards: **clean on counts, per-file counts, deck scope
+and marker placement.**
+
+### Verified
+
+- **Structural check of all 79 cards: zero problems.** Every `(N)` cue matches its row count, no body
+  under two or over four rows, no `==highlight==` in any list body, every single-line card has exactly
+  one, no orphaned separators, 0 markers, no BOM, 0 CR.
+- `Test-DeckHygiene.ps1 -All` — **no line names either new note.**
+- `Vault-Audit.ps1` clean, `notesInScope` 530 -> 520. `markdownlint-cli2` **543 files**, 0 issues —
+  down exactly 10 from 553, which is twelve deleted minus two added and is the arithmetic that proves
+  the glob saw the change.
+- **Per-note `nosr` state listed for every card-bearing note in both live courses**, rather than
+  trusting a vault total: HI1032's active deck is now **exactly the 79 new cards**, with both lab decks
+  and all eight concept notes excluded.
+- The plugin settings that decide what `nosr` means are intact: `flashcardTags` is `#HI1031, #HI1032`,
+  `flashcardTagsToIgnore` is `#nosr`, algorithm FSRS, `maximumInterval` 30. The one changed line in
+  `data.json` is `buryDate` rolling to today, which is the plugin's own daily state.
+
+**One figure did not close, and it is recorded rather than smoothed over.** The whole-vault
+`nosrNotes` count went 45 to 34 across the session while the deletions account for 12. No note outside
+`HI1032 Labb 5` changed in the working tree, and that one kept its `nosr`, so nothing is wrong in the
+state that matters — but a one-unit gap in a vault total remains unexplained. `environment.md` is
+right that such a total cannot distinguish one editor's change from another's; the per-note listing is
+the evidence, and it is complete.
+
+### Two things for the author
+
+**HI1032's gaps, reported rather than invented:** no card for the five general congestion-control
+rules, none for the active-close sequence, none for SNMP's `INTEGER` type beyond Counter versus Gauge,
+none for a textual definition of recursive DNS lookup, and none for `CNAME` and `TXT` record purposes.
+Each is absent from the two analysis files. They can be closed from the four past exams or the
+course book, but not from memory.
+
+**FCAPS has cards for C and A only**, because those are the two letters the past exams asked about and
+the analysis records no answer for F, P or S.

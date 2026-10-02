@@ -1,5 +1,5 @@
 ---
-tags: [övrigt, HI1032, nätverk, KTH, year2026]
+tags: [övrigt, HI1032, nätverk, KTH, year2026, nosr]
 description: HI1032 Kommunikationssystem – HI1032 Labb 5 - Flashcards
 created: 2026-09-29
 updated: 2026-09-29
