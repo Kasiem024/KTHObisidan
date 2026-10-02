@@ -21,8 +21,10 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `agents/vault-auditor.*` | Conformance inspector; writes reports, never edits notes |
 | `agents/flashcard-author.*` | Card author; writes course notes only, grounded in the course literature |
 
-**Eight skills for the Gemini web app were built from this vault's material and live outside it**, under
-`Jag/Gemini/Skills/` on the author's Drive. They are **not in git and not in Drive's version history**,
+**A set of skills for the Gemini web app was built from this vault's material and lives outside it**,
+under `Jag/Gemini/Skills/` on the author's Drive. **No count is given here on purpose** — the author
+adds and deletes them, and two were deleted on 2026-10-02 within hours of this paragraph first
+quoting a number. List the folder. They are **not in git and not in Drive's version history**,
 so treat that path as machine-specific: it may be absent on a fresh clone, on CI, or on another machine,
 and a stale path here is a finding against this file. Two of them hold method rather than subject
 matter — `author-gemini-skills` carries the platform constraints and a catalogue of defects that look

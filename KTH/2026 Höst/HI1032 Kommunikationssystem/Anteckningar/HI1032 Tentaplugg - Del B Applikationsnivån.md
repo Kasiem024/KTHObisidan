@@ -136,3 +136,25 @@ Vilka bildformat är lossy? (2)
 ||
 - **JPEG**
 - **HEIC**
+
+## RTP och SIP
+
+Varför går RTP över UDP och inte TCP?::TCP:s ==omsändningar tar för lång tid== och stör allt som kommer efter
+
+Vad gör SIP? (3)
+||
+- **Etablerar och avslutar** sessionen
+- **Hittar motparten**
+- **Förhandlar kodningen** med SDP
+
+## E-post, MIME och Base64
+
+Hur avslutar SMTP ett meddelande?::Med en ==punkt på egen rad==
+
+Vad tillför S/MIME utöver MIME?::==Kryptering==
+
+Hur mycket större blir datat av Base64?::==33 procent== — tre byte blir fyra ASCII-tecken
+
+## HTTP
+
+Hur anger HTTP/1.1 hur långt svaret är?::Med fältet ==Content-Length== i huvudet

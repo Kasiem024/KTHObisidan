@@ -54,6 +54,11 @@ has the detail. Two entries were added to `lessons-learned.md`; `environment.md`
 `$variable`-stripping mechanism; `traps.md` gained `\b` on T3 and `-File` on T19;
 `documentation-standard.md` gained four rules; `README.md` lost a stale trap count.
 
+**Six of those eight remain.** The author deleted `cite-network-protocol-rfcs` and
+`write-toon-format` on 2026-10-02, saying he did not need them; they are in Drive's cloud trash, not
+in git, so recovery is via drive.google.com within 30 days. The docs that quoted "eight" were
+corrected in the same change — **list the folder rather than trusting any count.**
+
 **A wrong attribution was corrected in three places** — see the section below. That correction is the
 part most worth knowing, because the vault had repeated it.
 

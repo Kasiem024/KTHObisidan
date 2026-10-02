@@ -58,15 +58,19 @@ After the commit, **nothing is assigned.** The work of 2026-09-26 to 10-02 is fi
 
 ---
 
-## EIGHT SKILLS FOR THE GEMINI WEB APP LIVE OUTSIDE THIS VAULT
+## SKILLS FOR THE GEMINI WEB APP LIVE OUTSIDE THIS VAULT
 
 Built 2026-10-01 to 10-02 at `Jag/Gemini/Skills/` on the author's Drive, from this vault's material
 plus two of his other repositories. **They are outside git and outside Drive's version history**, so
 treat that path as machine-specific: it may simply be absent on another machine, and a stale path is a
 finding against the doc that names it.
 
-Two of the eight are method rather than subject matter and are the ones worth knowing about:
-`author-gemini-skills` carries the platform constraints and a catalogue of eight defects that look
+**List the folder rather than trusting a count anywhere.** Eight were built; the author deleted
+`cite-network-protocol-rfcs` and `write-toon-format` on 2026-10-02, saying he did not need them. The
+set is his to change.
+
+Two of them are method rather than subject matter and are the ones worth knowing about:
+`author-gemini-skills` carries the platform constraints and a catalogue of defects that look
 like success, and `review-adversarially` carries the review method. **Do not copy their content into
 this repo** — `.kiro/README.md` records where they are, deliberately not what they say.
 

@@ -107,3 +107,7 @@ Vilka nummer bär det första SYN-segmentet i trevägshandskakningen?::seq är k
 Vilka nummer bär serverns SYN+ACK?::seq är serverns eget ISN, ACK är ==klientens ISN plus 1==
 
 Vilka nummer bär klientens avslutande ACK i handskakningen?::seq är klientens ISN plus 1, ACK är ==serverns ISN plus 1==
+
+## MTU och MSS
+
+Vad gör MSS-optionen med första segmentets datamängd?::Den krymper den — ==1460 byte i stället för 1480==

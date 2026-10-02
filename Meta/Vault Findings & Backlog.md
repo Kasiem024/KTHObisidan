@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F90): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F91): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4499,9 +4499,18 @@ rules verbatim.
 **`.kiro/README.md`**: the row for `traps.md` claimed *"the twenty-three things that fail silently"*
 while the file states twenty-four and runs T1-T24. The count was **removed** rather than re-pinned, so
 `traps.md` owns its own figure — re-pinning it would have re-armed the staleness that the entry about
-exact numbers going stale already warns about. The README also now points at the eight external Gemini
+exact numbers going stale already warns about. The README also now points at the external Gemini
 skills, flagged as machine-specific and outside both git and Drive's version history, with the content
 deliberately not copied in.
+
+**Corrected 2026-10-02, later the same day.** This paragraph originally said the README pointed at
+*"the eight"* external skills, and the pointer itself quoted that number. The author then deleted
+`cite-network-protocol-rfcs` and `write-toon-format`, leaving six. **The lesson is the one this very
+paragraph had just recorded about the trap count, re-broken four hours later in the same file:** a
+hardcoded count was written into the README while removing a different hardcoded count from the row
+above it. The pointer now gives no number and says to list the folder; `.kiro/reentry.md` and
+`steering/current-state.md` were corrected in the same change. The deleted folders went to Drive's
+cloud trash and were never in git, so recovery is via drive.google.com within 30 days.
 
 **Deliberately not done**, each for a stated reason: no new trap, because the one candidate threw
 rather than failing silently and `traps.md` forbids a new entry without a reproduced silent wrong
@@ -4572,3 +4581,66 @@ rows, no `==highlight==` in any list body, each single-line card exactly one, no
 **0 markers**, no BOM, 0 CR. `Test-DeckHygiene.ps1 -All` names neither note. `Vault-Audit.ps1` clean at
 `notesInScope=520`; `markdownlint-cli2` 543 files, 0 issues — both unchanged from F89, which is the
 check that ten added cards created no new file and broke nothing.
+
+## F91. Seven cheap one-point items the card scope had left on the table
+
+**Date:** 2026-10-02
+**Status:** Closed
+**Scope:** 7 cards added to the two `HI1032 Tentaplugg` notes, 89 -> 96
+
+### How these were found, and why that matters more than the cards
+
+The author asked for a coverage report: per exam topic, what the cards cover, what they do not, the
+points each topic is worth and how many of the four past exams it appeared in. Producing it surfaced
+something neither F89 nor F90 had noticed.
+
+**F89's and F90's gaps were gaps in the *source* — things the examiner's solutions never state. These
+are gaps in *my scope*.** The cards were written to the analysis's headline strategy, which is the
+question pools plus three topics per part. The analysis also contains a **complete sub-question
+inventory with answers**, and several one-point items in it fall outside that strategy. They had
+answers sitting ready in the author's own file and no card.
+
+That is worth recording as a method note: **scoping to a plan's summary leaves the plan's own evidence
+unused.** The inventory is the richer artefact, and a coverage pass against it found in minutes what
+three rounds of adversarial review on the cards themselves could not, because every reviewer was
+checking the cards against the scope rather than the scope against the source.
+
+### What was added
+
+| Card | Points | Exam |
+|---|---|---|
+| Why RTP runs over UDP | 1 | Oct 2024 7b |
+| What SIP does - the whole concept was absent | 2 | Oct 2024 7c |
+| SMTP ends a message with a dot on its own line | 1 | Oct 2025 8a |
+| S/MIME adds encryption | part of 2 | Dec 2024 8d |
+| Base64 grows data by 33 percent | 1 | Oct 2025 8e |
+| HTTP/1.1 states Content-Length | 1 | Oct 2025 8c |
+| The MSS option makes the first segment 1460 rather than 1480 | 1 | Dec 2024 4b |
+
+**SIP was the real find.** It is worth 2 points, it is part of a topic ranked 5th at 9 points across
+three exams, and **no card mentioned it at all.**
+
+**An eighth candidate was dropped as already covered.** *"Multiple attachments are solved with MIME"*
+(Oct 2025 8d) is answered by the existing pool card, which states that MIME gives other character sets,
+file types **and attachments**. Checking before adding is the whole point; the alternative is a
+duplicate inside one course, which `product.md` calls waste.
+
+### Honest limits of the coverage report itself
+
+The analysis ranks by **topic**, but its question pools are not topic-tagged. So the distribution of the
+44 pool cards across topics in that report is **my classification, not the file's** — it was stated as
+such when delivered.
+
+The report also separated three kinds of non-coverage, which is the distinction that makes it useful:
+deliberate skips the analysis itself recommends (Huffman, Quoted-Printable and Base64 by hand, active
+close, drawing a full congestion graph, the area-under-graph calculation - roughly 17 points, each
+appearing in a single year); **skills a card cannot carry** at all, because drawing a figure or filling
+a table is practice rather than recall; and this third category, which was the only actionable one.
+
+### Verified
+
+96 cards, **zero structural problems**: every `(N)` cue matches its row count, nothing under two or over
+four rows, no `==highlight==` in any list body, each single-line card exactly one, no orphaned
+separators, **0 markers**, no BOM, 0 CR. `Test-DeckHygiene.ps1 -All` names neither note.
+`Vault-Audit.ps1` clean at `notesInScope=520`; `markdownlint-cli2` 543 files, 0 issues. Both lab decks
+untouched at 66 and 62 markers.
