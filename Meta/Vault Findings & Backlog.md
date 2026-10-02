@@ -4644,3 +4644,22 @@ four rows, no `==highlight==` in any list body, each single-line card exactly on
 separators, **0 markers**, no BOM, 0 CR. `Test-DeckHygiene.ps1 -All` names neither note.
 `Vault-Audit.ps1` clean at `notesInScope=520`; `markdownlint-cli2` 543 files, 0 issues. Both lab decks
 untouched at 66 and 62 markers.
+
+### Correction: this entry's own commit swept in another session's work
+
+**`fa17fde` contains more than its message says.** Alongside the seven cards it carries documentation
+corrections to `.kiro/README.md`, `.kiro/reentry.md` and `.kiro/steering/current-state.md` that were
+written by a concurrent session, not by this one. Their content is benign and coherent - they replace a
+hard count of Gemini skills with an instruction to list the folder, after the author deleted two of
+them - but the commit message describes only the card work, so history misattributes them.
+
+**The cause was the staging pattern, and it was a known one.** The commit script used
+`git add -u -- '.kiro' 'Meta' 'README.md'`, which sweeps every modified file in those trees.
+`current-state.md` says in as many words: *"Stage by name, never `git add -A`"* - because the other
+session may write at any moment - and a directory-level `-u` has exactly the same blast radius as `-A`
+within that directory. Reading `git status` immediately before staging would have shown three files
+nobody had touched in this session.
+
+Nothing is lost and nothing needs reverting. What is wrong is the record, which is why it is written
+here rather than quietly left: a future reader of `fa17fde` would otherwise see doc edits inside a
+flashcard commit and have no way to learn where they came from.
