@@ -19,6 +19,7 @@ it makes both the author and any future agent act on something that is no longer
 | Live conformance queries | `Atlas/Vault Health Report.md` |
 | A reusable measurement, and what it counts | a script in `Meta/Obsidian Plugins/Scripts/`, listed in `.kiro/steering/scripts.md` |
 | How the *website* is built | `PROJECT-NOTES.md` in the Quartz repo |
+| A reusable artifact built **for a tool outside this vault** | the artifact's own folder, with a pointer from `.kiro/README.md` — never a copy of its content here |
 | Which chat transcript still holds something undistilled | `.kiro/sessions.md`, and how to reopen one |
 
 Link to these rather than restating them. Duplicated rules drift apart.
@@ -128,3 +129,47 @@ the vault.
 
 There are none in this vault today, and it should stay that way. Do not add API keys, tokens
 or credentials — the repository is public, and so is the site built from it.
+
+### And "secret" is wider than a credential, because the author has an employer
+
+This repository is public, and it **can become** the destination for material that starts in a **work**
+repository — rules, examples and procedures worth reusing. No work-origin content is in the vault
+today; this is a guard on a channel that now exists, not a description of a present problem.
+
+Credentials are the obvious hazard. The quiet one is **identifiers**: internal hostnames and
+addresses, product and device codenames, customer names, internal tool and system names, employee
+names or signums, and repository paths. None of them looks like a password, and they arrive
+**embedded inside a rule or an example you wanted to reuse** — which is exactly where a reader stops
+looking.
+
+So when anything is carried in from a work repository: **enumerate the forbidden strings first, then
+check the draft against that list, then read it through by eye.** Keep the shape of a rule or an
+example and drop its identity.
+
+**This rule has no check, and that is a known gap.** `block-secrets.sh` matches credential patterns
+only; nothing scans a write against a list of work identifiers. By this file's own standard — *a rule
+without a check will drift* — that is a weakness, so the rule depends on review rather than
+enforcement. The same is true of the two rules below and of the outside-artifact row above.
+
+### Third-party material carries obligations, and splitting it loses them
+
+`.kiro/research/` already holds verbatim third-party reports, and anything copied in from outside
+brings two duties:
+
+- **Attribution and licence travel with the content.** A licence or status notice is part of the
+  document, not packaging. Only material whose licence permits redistribution belongs here at all.
+- **When a source is split into pieces, enumerate what the source held and diff it against what the
+  result holds.** The licence, status and copyright sections are the ones that vanish, because they
+  answer no question. The enumeration is also the general guard against a restructure losing content.
+
+## Review the plan, not just the work
+
+For anything that produces several artifacts, have the **plan** reviewed adversarially before
+implementing. A defect caught in a plan costs a paragraph; the same defect caught afterwards costs
+everything built on it — and a fidelity check cannot catch a wrong premise, because it compares the
+work to the plan.
+
+One rule decides whether such a review is worth reading: **hand the reviewer the authoritative rules
+verbatim.** A reviewer given the rules reports conformance; a reviewer left to infer them reports
+opinion. The worked reasoning is in `lessons-learned.md` under *the fact was wrong in the plan*; the
+full method is in the external `review-adversarially` skill.

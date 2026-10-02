@@ -85,8 +85,11 @@ containing it.
 **Produced:** `NaN` matched "nan" inside fi**nan**siering and reported **243 corrupted pages**; the
 true count was zero. `WHERE` matched "where the competition isn't".
 
-**What to do:** use `-cmatch` or `[regex]::Matches` when case matters. Treat any surprisingly large
-count as a suspect measurement, not a discovery.
+**What to do:** use `-cmatch` or `[regex]::Matches` when case matters. **For a scan over a list of
+identifiers — forbidden strings, codenames, tool names — anchor each one with `\b`**, or the same
+substring bug reappears as a false *positive*: a scan for `ncu` flagged the word `concurrency` and a
+correct passage was reworded for nothing. Treat any surprisingly large count as a suspect measurement,
+not a discovery.
 
 ## T4 — `.markdownlintignore` is inert
 
@@ -312,7 +315,8 @@ enough to catch, which is the only reason it was caught; a closer pair of decks 
 
 **What to do:** put the course code in the filter — `-Filter "HI1031 Begrepp - Kap 02*.md"` — and assert
 the resolved filename in the output, so the file being measured is visible next to its numbers. Never
-combine a loose `-Filter` with `-First 1`.
+combine a loose `-Filter` with `-First 1`. Add **`-File`** while you are there: a `-Filter` also matches
+*directories* whose names share the pattern, and `-First 1` will happily hand you one.
 
 ---
 

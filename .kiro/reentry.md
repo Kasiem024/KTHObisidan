@@ -8,20 +8,32 @@ your context — the hard rules, the environment traps, the script library, the 
 re-read them looking for basics, and do not restate them here.** This file carries only what is
 task-specific plus the handful of things that have actually bitten.
 
-Last updated **2026-10-01, 23:40**. Course-neutral by design; the live courses are HI1031 and HI1032.
+Last updated **2026-10-02, 14:15**. Course-neutral by design; the live courses are HI1031 and HI1032.
 
 ---
 
-## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him
+## FIRST TASK AFTER RE-ENTRY: commit this session's work, then ask him
 
-The work of 2026-09-26 to 10-01 is **finished, verified, committed and pushed**, recorded in
-`Meta/Vault Findings & Backlog.md` as **F80 to F85**. `steering/current-state.md` says the same.
+**Ten modified files and two untracked files are written, verified and NOT COMMITTED.**
+`steering/current-state.md` lists them by name and carries the verification figures. Read it first —
+nothing is half-finished, the only open action is the commit.
 
-**No commit id is quoted here on purpose.** This file is rewritten *before* the commit that contains
-it, so any id it named would be stale the moment it was written. Run `git log -1` and
+Three things make the commit safe but need care:
+
+- **`HEAD` is `236bf1f`, the concurrent flashcard session's F89 commit.** F85 through F89 are already
+  committed, so a commit cannot sweep up another session's backlog entries. This was verified, not
+  assumed.
+- **Stage by name, never `git add -A`.** A second session works on flashcards and may write at any
+  moment. Re-read `git status` immediately before staging.
+- **Do not commit** `.obsidian/plugins/obsidian-spaced-repetition/data (conflict …).json`. It is a
+  Drive sync artefact; removing it is his call.
+
+**No commit id for the new commit is quoted here on purpose.** This file is rewritten *before* the
+commit that contains it, so any id it named would be stale. Run `git log -1` and
 `git ls-remote origin refs/heads/main` and compare them yourself.
 
-**Three things wait on his decision, not on work.** Put them to him and let him choose:
+After the commit, **nothing is assigned.** The work of 2026-09-26 to 10-02 is finished and recorded as
+**F80 to F90**. Four things wait on his decision, not on work — put them to him and let him choose:
 
 1. **Chapter 9's HI1031 deck has no card for the hypermedia part of exam question 2, and the cards
    that answered it should come back.** The 2012 book never uses the word, which is why four reviewers
@@ -31,10 +43,32 @@ it, so any id it named would be stale the moment it was written. Run `git log -1
    source" and was wrong. Still never fill the gap from memory — use the saved article.
 2. **HI1032's twelve chapter decks and its Labb 1 deck carry card-form findings** from before these
    conventions. HI1031's ten and HI1032's Labb 5 are clean.
-3. **Two untracked files are not mine and not attributable** —
-   `.kiro/skills/write-flashcards/SYNTHESIS.md` and `.kiro/skills/query-notebooklm/SYNTHESIS.md`,
-   created 19:35 and 19:38 on 2026-10-01, after that evening's commit and before the next instruction.
-   Both are substantial. Left uncommitted deliberately; they are his to keep or discard.
+3. **Two untracked files are the author's and are awaiting commit** —
+   `.kiro/skills/write-flashcards/SYNTHESIS.md` and `.kiro/skills/query-notebooklm/SYNTHESIS.md`.
+   This file, `current-state.md` and backlog F85 all called them "not mine and not attributable";
+   that was wrong. They were written by the 2026-10-01 evening session, which was asked to synthesise
+   those two skills for use outside this vault, and the author confirmed on 2026-10-02 that they are
+   his and should be committed next time. A timestamp shows when a file appeared, never who wrote it.
+4. **The identifier-leak rule has no check**, which breaches `documentation-standard.md`'s own law
+   that a rule without a check will drift. The rule says material carried in from a work repository
+   must be scanned for internal identifiers — hostnames, codenames, customer and tool names, repo
+   paths — before it reaches this public repo. `.kiro/hooks/block-secrets.sh` matches credential
+   patterns only. Extending it needs an author-maintained list of forbidden strings and a write-time
+   scan; it is a change to a **security hook**, so **ask before implementing it.**
+
+---
+
+## EIGHT SKILLS FOR THE GEMINI WEB APP LIVE OUTSIDE THIS VAULT
+
+Built 2026-10-01 to 10-02 at `Jag/Gemini/Skills/` on the author's Drive, from this vault's material
+plus two of his other repositories. **They are outside git and outside Drive's version history**, so
+treat that path as machine-specific: it may simply be absent on another machine, and a stale path is a
+finding against the doc that names it.
+
+Two of the eight are method rather than subject matter and are the ones worth knowing about:
+`author-gemini-skills` carries the platform constraints and a catalogue of eight defects that look
+like success, and `review-adversarially` carries the review method. **Do not copy their content into
+this repo** — `.kiro/README.md` records where they are, deliberately not what they say.
 
 ---
 

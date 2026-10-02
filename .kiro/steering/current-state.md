@@ -5,13 +5,74 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: nothing in flight.** The HI1031 deck work is finished and recorded as F80 through F85; every
-gate is green. The one task still open is the phone sync below, which has been parked since 2026-09-08
-and is waiting on the author, not on an agent.
+**Status: in flight — ten modified files and two untracked files are written, verified and NOT
+COMMITTED.** Written 2026-10-02, 14:15, immediately before a compact.
 
-**The re-entry prompt is `.kiro/reentry.md`.** It is course-neutral and is the file to be pointed at
-after a compact. `.kiro/hi1031-tenta-reentry.md` is the archive of the earlier HI1031 writing project,
-not a live state file, and two of its figures are superseded — see the banner inside it.
+Nothing is half-written: every edit is complete and both gates are green. The only open action is the
+commit.
+
+## The commit that is pending
+
+`HEAD` is `236bf1f` (2026-10-02 12:44), the concurrent flashcard session's F89 commit. **Everything
+uncommitted below is this session's work; F85–F89 are already in `HEAD`, so a commit cannot sweep up
+another session's entries.** Verified with `git show HEAD:` against the file on disk, and with a
+`git diff` that adds exactly one F-heading (F90) and removes none.
+
+Ten modified, all this session's:
+
+```text
+.kiro/README.md                          .kiro/steering/documentation-standard.md
+.kiro/lessons-learned.md                 .kiro/steering/environment.md
+.kiro/reentry.md                         .kiro/steering/product.md
+.kiro/steering/current-state.md          .kiro/steering/traps.md
+README.md                                Meta/Vault Findings & Backlog.md
+```
+
+Two untracked, **to be committed with them** — the author asked for this explicitly on 2026-10-02:
+
+```text
+.kiro/skills/write-flashcards/SYNTHESIS.md
+.kiro/skills/query-notebooklm/SYNTHESIS.md
+```
+
+**Do not commit** `.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`.
+It is a Drive sync artefact and its removal is the author's call.
+
+**Stage by name, never `git add -A`** — the flashcard session may write at any time, and `git status`
+must be re-read immediately before staging.
+
+Already verified, so a commit needs no further gate run unless files changed after 14:15:
+`Vault-Audit.ps1` → `RESULT: clean` (520 notes in scope); `Test-DocHygiene.ps1` → `RESULT: clean`;
+`markdownlint-cli2` → `Linting: 4 files`, 0 issues. Line endings and encoding were checked per file:
+the backlog stayed CRLF, the other nine stayed LF, no BOM introduced anywhere.
+
+## What this session did, recorded as F90
+
+Eight skills for the **Gemini web app** were built at `Jag/Gemini/Skills/` — outside this vault and
+outside git — and then this session's learnings were folded back into the vault's own agent docs. F90
+has the detail. Two entries were added to `lessons-learned.md`; `environment.md` gained the
+`$variable`-stripping mechanism; `traps.md` gained `\b` on T3 and `-File` on T19;
+`documentation-standard.md` gained four rules; `README.md` lost a stale trap count.
+
+**A wrong attribution was corrected in three places** — see the section below. That correction is the
+part most worth knowing, because the vault had repeated it.
+
+## One open follow-up, not started
+
+**The identifier-leak rule has no check, and that breaches `documentation-standard.md`'s own law that
+a rule without a check will drift.** The rule says material carried in from a work repository must be
+scanned for internal identifiers — hostnames, codenames, customer and tool names, repo paths — before
+it reaches this public repo. `.kiro/hooks/block-secrets.sh` matches credential patterns only.
+
+Extending it means an author-maintained list of forbidden identifiers and a write-time scan. Not done
+deliberately: it is a change to a security hook, so it needs the author's go-ahead, and the gap is
+recorded in the doc rather than left silent. **Ask before implementing it.**
+
+## The re-entry prompt
+
+**`.kiro/reentry.md`** is the file to be pointed at after a compact. It is course-neutral.
+`.kiro/hi1031-tenta-reentry.md` is the archive of the earlier HI1031 writing project, not a live state
+file, and two of its figures are superseded — see the banner inside it.
 
 ## Done: the HI1031 and HI1032 exam-prep programme (F80 to F85)
 
@@ -72,13 +133,20 @@ Labb 5 are clean. `-All` is a **survey, not a gate**.
 **The exam has been moved.** The date in the earlier archive — 21–23 September 2026 — is past and wrong.
 The author confirmed the move on 2026-09-26 but gave no new date, so do not quote one.
 
-## Two untracked files that are not mine
+## Two untracked files, awaiting commit
 
-`.kiro/skills/write-flashcards/SYNTHESIS.md` and `.kiro/skills/query-notebooklm/SYNTHESIS.md` appeared
-at 19:35 and 19:38 on 2026-10-01 — after that evening's commit and before the next instruction, so not
-from any pipeline of mine and not attributable. Both are substantial and look deliberate. Reported to
-the author and deliberately **not committed**: one does not commit another writer's work. They are his
-to keep or discard.
+`.kiro/skills/write-flashcards/SYNTHESIS.md` and `.kiro/skills/query-notebooklm/SYNTHESIS.md` were
+recorded here, in `.kiro/reentry.md` and in backlog F85 as *"not mine and not attributable"*. **That
+was wrong.** They were written by the session that ran on the evening of 2026-10-01 — it was asked to
+synthesise those two skills into standalone files for use outside this vault — and on 2026-10-02 the
+author confirmed they are his and asked for them to be **committed next time**.
+
+So the open question is not provenance, it is a pending commit. Both are still untracked and absent
+from `HEAD`; nothing has been lost.
+
+The correction rests on the author's instruction and that session's own knowledge of what it wrote —
+**a timestamp and a byte size establish when a file appeared, never who wrote it.** F90 records the
+mechanism.
 
 ## Nothing else partially finished
 

@@ -636,3 +636,53 @@ quoted, firing when it is asserted in running text. The general form is already 
 **Lesson:** for any check, the question "what would make this fire when it should not" has to be
 answered in the same change as the check — a false positive is what gets a check switched off, and a
 switched-off check protects nothing.
+
+---
+
+## 2026-10-02 — a rule was broken by the same document that stated it
+
+**What happened:** a plan for eight skills built from this vault's material stated the rule *"the
+entry file must not duplicate what the reference files hold"*, and then, further down the same
+document, prescribed condensed copies of three reference files inside the entry file. Adversarial
+reviewers flagged that defect **three separate times** across three different artifacts before it was
+fixed. The same shape applies here: `.kiro/skills/` is `SKILL.md` plus `references/`, and
+`documentation-standard.md` already warns that duplicated rules drift apart.
+
+**Why the checks missed it:** there is no mechanical check for duplication, and there probably cannot
+be a cheap one — the duplicate is a *paraphrase*, not a copy, so no string comparison finds it. Worse,
+the rule reads as **satisfied** by "short form here, full form there", which is exactly the defect.
+Condensing for a reader feels like editing rather than duplicating, so the author of the duplication
+is the last person able to see it.
+
+**Rule added:** where reference material is small, the entry file is its **single** home; splitting it
+creates the duplicate. A mirrored table is the defect; a pointer plus the essentials is not. Stated in
+the external `author-gemini-skills` skill, and the reason it is recorded here is that the vault's own
+`SKILL.md` + `references/` pairs carry the same exposure.
+
+**Lesson:** a rule written in a document does not protect that document — only a reader who does not
+share the author's intent catches a self-violation.
+
+---
+
+## 2026-10-02 — the fact was wrong in the plan, so every check of the work passed
+
+**What happened:** while planning an artifact whose single job was quoting specifications verbatim and
+citing them, the plan asserted that a particular standard comprised `RFC 3410–3418`. It is
+**`RFC 3411–3418`**; `RFC 3410` is an Informational roadmap and not part of the standard. The source
+material did not contain this error — the plan introduced it while summarising, and the summary is what
+would have shipped into an artifact whose entire value was being citable. A review of the plan caught
+it before any file existed.
+
+**Why the checks missed it:** nothing here checks a claim about the outside world, which is expected.
+The subtler part is that **every verification available compared the output to the plan.** Fidelity
+checks, diffs and conformance reviews all answer "does the work match what was decided", so an error
+in what was decided passes all of them unanimously. The vault has the same structure: `Vault-Audit.ps1`
+proves conformance to `Meta/Vault Standard.md` and can say nothing about whether the standard is right.
+
+**Rule added:** `documentation-standard.md` now says to review the **plan** adversarially before
+implementing, and to hand the reviewer the authoritative rules verbatim. The facts to audit are the
+plan's own, not just the implementation's fidelity to them — and the more authoritative an artifact
+claims to be, the harder its own claims need checking.
+
+**Lesson:** a fidelity check cannot catch a wrong premise, so something has to audit the premise
+separately — and the cheapest moment is while the premise is still only a paragraph.

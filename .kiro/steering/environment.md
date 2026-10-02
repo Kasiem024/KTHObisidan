@@ -31,6 +31,21 @@ Failed to spawn command '<the whole script>': Access is denied. (os error 5)
 Nothing about the message names length as the cause, and the same text runs fine from a file.
 Treat any `os error 5` on a long command as "write it to `%TEMP%` and use `-File`".
 
+**Length is not the only cause, and blaming it costs time.** In an inline `-Command "..."` string the
+invoking shell expands `$variable` references **before** PowerShell parses the command, so the command
+arrives with its variables missing. Reproduced and independently re-reproduced:
+`-Command "foreach ($i in 1..2){ Write-Output $i }"` arrives as `foreach ( in 1..2){ Write-Output }`
+and throws `Missing variable name after foreach`.
+
+The tell is **a parse error naming a variable, a missing value, or a ScriptBlock** on a command that is
+plainly well-formed — also seen as `ScriptBlock should only be specified as a value of the Command
+parameter` and `You must provide a value expression following the '+' operator`, depending on where the
+stripped variable sat. Worse, a command can arrive *mangled but runnable* and quietly do the wrong
+thing: `"$x='HI';($x+'1031')"` arrives as `='HI';(+'1031')`, prints `1031`, and only then errors.
+
+The fix is the same as above — write a `.ps1` and run it with `-File`, which bypasses the interpolation
+entirely — but do not go looking for a length problem first.
+
 ## Three PowerShell 5.1 details that cost a run each
 
 All three throw, so they are not traps — but none of the error messages names its cause.

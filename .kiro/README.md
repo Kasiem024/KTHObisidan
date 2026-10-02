@@ -10,7 +10,7 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `steering/environment.md` | Windows / PowerShell / Google Drive / encoding pitfalls |
 | `steering/documentation-standard.md` | Which docs to update, and where each fact belongs |
 | `steering/scripts.md` | The reusable measurement scripts — read **before** writing a new one, or quoting a number |
-| `steering/traps.md` | The twenty-three things that fail **silently**. Read before trusting a measurement |
+| `steering/traps.md` | Everything that fails **silently** — it states its own count. Read before trusting a measurement |
 | `steering/current-state.md` | What is unfinished right now. Empty when nothing is in flight |
 | `lessons-learned.md` | Where a miss became a new rule. **Not** auto-loaded: it explains *why* the rules exist, and the rules live in `steering/` |
 | `skills/` | **Procedures** for the recurring jobs, loaded on demand |
@@ -20,6 +20,14 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `hooks/*.sh` | `preToolUse` guards — read stdin, `exit 2` blocks |
 | `agents/vault-auditor.*` | Conformance inspector; writes reports, never edits notes |
 | `agents/flashcard-author.*` | Card author; writes course notes only, grounded in the course literature |
+
+**Eight skills for the Gemini web app were built from this vault's material and live outside it**, under
+`Jag/Gemini/Skills/` on the author's Drive. They are **not in git and not in Drive's version history**,
+so treat that path as machine-specific: it may be absent on a fresh clone, on CI, or on another machine,
+and a stale path here is a finding against this file. Two of them hold method rather than subject
+matter — `author-gemini-skills` carries the platform constraints and a catalogue of defects that look
+like success, and `review-adversarially` carries the review method. **Do not copy their content into
+this repo**; the copy is the liability, so record where they are, not what they say.
 
 ## The four kinds of knowledge here
 
@@ -52,6 +60,7 @@ already permanent:
 | What a script measures, and what it counts | `.kiro/steering/scripts.md` |
 | What is unfinished right now | `.kiro/steering/current-state.md` |
 | Which transcript still holds undistilled state | `.kiro/sessions.md` |
+| Where a reusable artifact built for an **outside** tool lives | the artifact's own folder, pointed at from this file — never copied in |
 
 ### Writing the state file
 

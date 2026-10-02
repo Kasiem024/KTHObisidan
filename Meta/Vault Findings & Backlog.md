@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F89): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F90): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4001,9 +4001,16 @@ with the truth. T2 now records that the safe form stops being safe the moment it
 
 **Two untracked files appeared mid-session and were left alone.**
 `.kiro/skills/write-flashcards/SYNTHESIS.md` and `.kiro/skills/query-notebooklm/SYNTHESIS.md`, created
-19:35 and 19:38, after that evening's commit and before the next instruction arrived — so not this
-session's pipelines, and not attributable. They are substantial and look deliberate. Reported to the
-author and deliberately not committed, per the rule that one does not commit another writer's work.
+19:35 and 19:38, after that evening's commit and before the next instruction arrived — so recorded here
+as not this session's pipelines and not attributable, reported to the author, and deliberately not
+committed.
+
+**Corrected 2026-10-02 (see F90):** that attribution was wrong. The files were written by this same
+evening's session, which had been asked to synthesise the two skills into standalone files for use
+outside the vault; the author confirmed they are his and asked for them to be committed. The error was
+treating creation timestamps and byte sizes as evidence of authorship — they establish when a file
+appeared and how big it is, and nothing about who wrote it. Nothing was lost: both files stayed
+untracked throughout.
 
 ### The durable output
 
@@ -4429,3 +4436,77 @@ course book, but not from memory.
 
 **FCAPS has cards for C and A only**, because those are the two letters the past exams asked about and
 the analysis records no answer for F, P or S.
+
+## F90. This session's learnings folded into the agent docs, and a wrong attribution corrected in three files
+
+**2026-10-02.** A session spent building eight skills for the Gemini web app — from this vault's
+material plus two other repositories — produced learnings that lived only in its transcript. This
+entry records folding them into the docs, and correcting an error the vault had repeated in three
+places.
+
+**The correction, which matters more than the additions.** `current-state.md`, `.kiro/reentry.md` and
+F85 all stated that `.kiro/skills/write-flashcards/SYNTHESIS.md` and
+`.kiro/skills/query-notebooklm/SYNTHESIS.md` were *"not mine and not attributable"*, and that they were
+left uncommitted because one does not commit another writer's work. **They were written by the
+2026-10-01 evening session itself**, which had been asked to synthesise those two skills into
+standalone files for use outside the vault; the author confirmed on 2026-10-02 that they are his and
+asked for them to be committed.
+
+The mechanism of the error is the reusable part: **creation timestamps and byte sizes were treated as
+evidence of authorship.** They establish when a file appeared and how big it is, and nothing about who
+wrote it. Both readings — the original "not mine" and this correction — rest on something other than
+the filesystem; the correction rests on the author's instruction and the session's own knowledge of
+what it wrote, and the files' evidential status is now stated in `current-state.md` so the next agent
+does not re-derive it from timestamps again. Nothing was lost: both files stayed untracked throughout,
+and both remain so, pending commit.
+
+**Verified, not assumed:** `git status --porcelain` shows both as `??`; `git cat-file -e HEAD:<path>`
+fails for both, so neither has ever been committed.
+
+**Two entries added to `.kiro/lessons-learned.md`**, both meeting the file's documented triggers. The
+reasoning lives there and is deliberately not repeated here:
+
+- *a rule was broken by the same document that stated it* — a duplication rule violated further down
+  the document that stated it, caught three times by outside reviewers and never by the author.
+- *the fact was wrong in the plan, so every check of the work passed* — a wrong standard number
+  introduced while summarising correct sources, caught by a review of the plan before any file
+  existed.
+
+A third candidate was **dropped** rather than written: a checker that matched identifier tokens as
+substrings, flagging `concurrency` for containing `ncu`. Two reviewers independently showed it is the
+same mechanism as **T3**, where `NaN` matched inside *finansiering*. Only the new half survives, as a
+`\b` clause on T3 — a near-duplicate entry would have made the lessons file longer and less useful.
+
+**Steering sharpened in two places.** `environment.md`'s *"Long inline commands get mangled"* section
+attributed the failure to **length**, which sent this session looking in the wrong place three times.
+The actual mechanism is that the invoking shell expands `$variable` references before PowerShell parses
+an inline `-Command`, so the command arrives with its variables missing and throws a parse error naming
+neither length nor `$`. Reproduced three times here and independently re-reproduced by a reviewer.
+`traps.md` T19 gained **`-File`**, after a `-Filter` matched a *directory* sharing the pattern and
+`-First 1` selected it.
+
+**`documentation-standard.md` gained the rules this session needed and did not have.** A row for a
+reusable artifact built for a tool outside this vault — required by the file's own rule that a fact
+with no home is a finding against the file. A broadening of *"Never commit secrets"*: this repository
+is public and is also the destination for material that starts in a **work** repository, where the
+hazard is not credentials but **identifiers** — hostnames, codenames, customer and tool names, repo
+paths — which arrive embedded inside a rule or example someone wanted to reuse. A note that
+attribution and licence travel with third-party content, and that **splitting a source drops the
+licence and status sections first**, because they answer no question. And the practice that caught the
+`RFC` error: review the plan adversarially before implementing, handing the reviewer the authoritative
+rules verbatim.
+
+**`.kiro/README.md`**: the row for `traps.md` claimed *"the twenty-three things that fail silently"*
+while the file states twenty-four and runs T1-T24. The count was **removed** rather than re-pinned, so
+`traps.md` owns its own figure — re-pinning it would have re-armed the staleness that the entry about
+exact numbers going stale already warns about. The README also now points at the eight external Gemini
+skills, flagged as machine-specific and outside both git and Drive's version history, with the content
+deliberately not copied in.
+
+**Deliberately not done**, each for a stated reason: no new trap, because the one candidate threw
+rather than failing silently and `traps.md` forbids a new entry without a reproduced silent wrong
+result; no script promoted, because the verification scripts written here measure external skill
+folders rather than this vault and `scripts.md` requires two uses first; no new vault skill, because
+the review method now lives in the external `review-adversarially` and duplicating it here is the
+defect the first lessons entry is about; no template change, because no note was created; and no row in
+`.kiro/sessions.md`, because nothing is left undistilled.
