@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F86): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F87): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4112,3 +4112,111 @@ tells the reader in its own *Koppling till kursen* section that it is *"ett komp
 att svara ur"* and that *"tentasvaren ska stå på kursboken"*. KursPM line 58 requires the article, so
 that caveat is wrong and would steer a future reader away from required literature. It sits under
 `Filer/`, which `conventions.md` §4 places out of scope, so it was reported rather than corrected.
+
+## F87. A third card set for HI1031: the exam question as the stimulus, the answer as an agenda
+
+**Date:** 2026-10-02
+**Status:** Closed
+**Scope:** new note `HI1031 Tentafragor - Snabbsvar.md`, 73 cards
+
+### What was asked
+
+> de nya korten ska vara i princip varje tentafraga och ett valdigt kortfattat svar till det, det kan
+> vara korta meningar eller en lista med nyckelord
+
+A third drill alongside the ten concept decks and the ten exam-answer notes. He asked for the work to
+be planned, reviewed adversarially, implemented, reviewed again, and iterated until done. It was, and
+**every round found real defects** — the plan was rejected twice over, and the first implementation was
+rejected too.
+
+### The design changed because of the review, and that is the entry's point
+
+**Plan v1 said "the exam question with a very brief answer". A reviewer showed that collapses.** Either
+the brief answer restates the concept deck, or it becomes a six-row list — which `product.md` records,
+from the author's own FSRS data, as his hardest card form (difficulty 9.7 for three or more rows against
+6.8 for single-fact). There is no version of "a short answer to a broad question" that escapes both.
+
+**The resolution was to change what the answer is.** The answer is an **agenda**: each row names *a part
+of the answer he must cover*, with only enough text to trigger the concept card that holds the detail.
+The facts stay where they are. These cards drill **assembly and order** — which pieces make a complete
+answer — which is what fails in an oral exam even when every individual fact is known. A pointer row is
+not a fact, so a three-row agenda is not a three-fact card, and the hardest-form problem dissolves
+rather than being traded off.
+
+### Eight defects the plan review caught, all verified against source
+
+| Defect in plan v1 | What the source actually said |
+|---|---|
+| cards under any heading but `## Flashcards` publish as raw `::` | **False.** `Meta/Vault Standard.md` section 4: *"It converts cards anywhere in a note, not only under this heading, so the 62 notes that keep their cards elsewhere still publish correctly."* The ten chapter decks have no such heading and are clean |
+| `-Compare` should come back clean | A new file is `cards 0 -> N`, increments drift and **exits 1 by design**. v1 would have had me either panic or rubber-stamp |
+| headings without surrounding blank lines | MD022 is on; the layout as drawn would have failed the linter and blocked the push |
+| `description` just needs to be prose | `malformedDescription` also fires on `?` followed by a capital and on any `$` — and a note *about exam questions* invites exactly that |
+| "`Test-DeckHygiene -All` filtered to the new file" | There is no filename filter, and `-Course` would not see the file at all: the default scope is `* Begrepp - Kap *` |
+| list bodies "2 to 4 rows" | True, but `fatList`'s only exemption is a front line ending `(8)`; the plan had to forbid relying on it |
+| `markdownlint` clean | Needs the glob and a check that `Linting: N files` is non-zero, or `0 files` reads as a pass (T11) |
+| one file prevents drilling both sets together | **False.** FSRS schedules per card. The real benefit is one `nosr` switch, which is what v2 claims instead |
+
+The structure therefore **follows the ten existing decks exactly** — `## Kapitel N` sections, no
+`## Flashcards` heading. v1 would have invented a hybrid format on a false premise, which `product.md`
+calls a regression even when locally reasonable.
+
+### The implementation review was the one that mattered
+
+Four implementers wrote card text as chat output only; **no subagent wrote to the file**, because
+concurrent writes to one target corrupt it and assembling once keeps encoding and block integrity in
+one place. The file was written in a single pass.
+
+**Zero fabrications across all 75 cards** — every claim traced to the author's own exam-answer notes,
+checked by two reviewers against the facit. But the agenda premise had **collapsed in 122 rows**: the
+recurring shape was `**perfect pointer** – the answer spelled out`, where everything after the dash was
+the concept card's content.
+
+**Two cards were structural duplicates and were deleted**, not trimmed: chapter 4's *"Beskriv tre olika
+typer av IPC"* and chapter 11's *"Hur gar handskakningen i TLS till"*. The latter had the **same front
+line, the same four labels and the same order** as an existing concept card, differing only in
+substituting jargon for plain language. A final check confirmed both exam questions remain answerable
+from the concept deck.
+
+**The trims were not applied mechanically, and that judgement is the substance of the work.** Where a
+reviewer cited the concept card holding the fact, the row was cut to a pointer. Where a reviewer noted
+the fact is **absent** from the deck, the content stayed — a pointer to nothing is worse than a fat row.
+That exception kept the six REST principles (the deck holds four different ones), the fifth attack
+method, `GET`/`POST` and MIME, DNS/VoIP, IaaS, one-way and trapdoor functions, and starvation.
+
+**A third review was run on exactly the risk the trimming created**, and found one: chapter 6's
+*"Strategierna – fem stycken; tre skickar meddelanden, tva delar en datayta"* pointed at two strategies
+the deck does not contain and explicitly excludes — its card reads *"Vilka tre strategier for indirekt
+kommunikation tar kursen upp?"*. Fixed by aiming the row at the three the course covers rather than
+widening scope to shared-memory approaches the deck deliberately omits.
+
+**One content fix from the fabrication review.** Chapter 1's hardware-resources card presented the
+agent's own filler — memory, bandwidth — as the book's list, and dropped the caveat the facit note makes
+step one of the oral answer. The book names **two**, and offers a camera's video stream and a mobile
+call's audio connection as further examples. The card now says that, and says to tell the examiner it is
+a division of the book's examples rather than a list of five.
+
+### Result and verification
+
+**73 cards** — 70 list cards, 3 single-line — across ten `## Kapitel N` sections. The count was never
+targeted: plan v1's estimate of 60-75 was deleted after a reviewer showed it collided with the four-row
+cap, and the number is simply what the split rule produced.
+
+- Structural read-back of the written file: **every `(N)` cue matches its row count**, no body exceeds
+  four rows or falls below two, **zero `==highlight==` in any list body**, each single-line card has
+  exactly one, no orphaned separators, **0 markers**, 10 H2 sections, 0 CR, no BOM.
+- `Test-DeckHygiene.ps1 -All` — **no line names this file.** `-Course HI1031` would not have seen it.
+- `Vault-Audit.ps1` clean, `notesInScope` 529 -> 530.
+- `markdownlint-cli2` — `Linting: 553 files`, 0 issues. The file count rose by exactly one, which is the
+  check that the glob matched (T11).
+- `Get-SRIntegrity.ps1 -Compare` exit 1 **as predicted**: the only new per-file line is this file at
+  `cards 0 -> 73`. No existing file changed in cards, markers or `nosr`; no marker reported as moved.
+
+### Two things the author decides
+
+**No `nosr`, so 73 cards enter the active deck at once.** That is his rotation to set, and five of the
+ten concept decks already carry the tag.
+
+**This duplicates the concept decks by design**, which `product.md` calls waste within a single course.
+The exception is justified by the stimulus — the front line is the question he will hear rather than a
+concept — and by the oral format. He agreed to it explicitly. If the drill does not earn its keep, the
+whole set is one file to delete, which is the other reason it is one file.
