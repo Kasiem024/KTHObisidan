@@ -76,6 +76,19 @@ volatiliteten kräver kan ==utnyttjas för att stå emot manipulation== från il
    aldrig blivit starka garantier, och värdarna är volatila — men just den replikering volatiliteten
    tvingar fram ger också motstånd mot manipulation.
 
+Vad skiljer P2P från klient-server? (3)
+||
+- **Målet** – dela i stor skala utan separat skötta servrar
+- **Klient-server** – var resurserna ligger och vad som sätter gränsen
+- **P2P** – hur resurserna och noderna förhåller sig
+
+Vilka är P2P:s viktigaste fördelar och nackdelar? (4)
+||
+- **Fördelarna** – de tre styckena
+- **Nackdel: data** – de två svagheterna
+- **Nackdel: volatilitet** – vad ägarna inte kan lova
+- **Vändningen** – replikeringen som volatiliteten kräver ger manipulationsmotstånd
+
 ## 2. I vilka situationer och för vilken typ av data passar P2P-system? Varför har P2P-tekniken kopplats samman med piratkopiering och upphovsrätt?
 
 Bokens avsnitt: §10.1 och §10.2.
@@ -140,6 +153,18 @@ något som är svårare att stämma.
    stämmas. Boken påpekar att en helt distribuerad tjänst hade spritt ansvaret över alla användare, och
    därmed gjort rättsliga åtgärder mycket svåra.
 
+I vilka situationer och för vilken data passar P2P? (3)
+||
+- **Datatypen** – vilken sorts fil, och kopplingen till GUID:et
+- **Varför det funkar** – hashen gör filen självcertifierande mot manipulation
+- **Situationen** – stor skala där ingen enskild fil är kritisk just nu
+
+Varför har P2P kopplats samman med piratkopiering och upphovsrätt? (3)
+||
+- **Napster** – dess arkitektur, indexet kontra filerna
+- **Argumentet som föll** – vad de hävdade, och varför det inte höll
+- **Följden** – vad de kända adresserna ledde till
+
 ## 3. Vilka icke-funktionella krav ställs på ett P2P-system?
 
 Bokens avsnitt: §10.3. Kraven gäller ==mellanprogrammet==.
@@ -192,6 +217,8 @@ använder ofta ==så höga replikeringsfaktorer som 16==.
 6. Ett sätt att minnas dem: tre krav följer av att systemet är stort, tre av att datorerna varken ägs
    eller kan litas på. Och konsekvensen är att kunskapen om var objekt ligger måste partitioneras och
    replikeras, med faktorer så höga som 16.
+
+Vilka icke-funktionella krav ställs på ett P2P-system?::Sex krav i två grupper: ==tre för att systemet är stort, tre för att datorerna varken ägs eller litas på==.
 
 ## 4. Hur hittar man en specifik resurs i ett P2P-nätverk? Vad är en "routing overlay"? Vad är skillnaden mellan strukturerade och ostrukturerade P2P-system?
 
@@ -275,6 +302,19 @@ använder ostrukturerade metoder.
    underhållas. Ostrukturerat är självorganiserande och tåligt, men bara sannolikhetsbaserat och kan
    flöda nätet. Ändå är det ostrukturerade dominerande på Internet — till exempel BitTorrent.
 
+Vad är en routing overlay och hur hittar den en resurs? (3)
+||
+- **Grundproblemet** – ingen kan hålla hela katalogen; kunskapen partitioneras och replikeras
+- **Vad den är** – i vilket lager den rutar, och i förhållande till IP
+- **Hur den hittar** – vad klienten skickar, och vart det rutas
+
+Vad är skillnaden mellan strukturerade och ostrukturerade P2P-system? (4)
+||
+- **Strukturerat** – DHT: GUID bestämmer placeringen, prefixrutning hittar objektet
+- **Ostrukturerat** – ingen kontroll, byggs ad hoc, man frågar sig fram genom grannarna
+- **Avvägningen** – strukturerat garanterar men kostar underhåll; ostrukturerat är tåligt men utan garantier
+- **Det som förvånar** – ostrukturerat dominerar ändå på Internet, t.ex. BitTorrent
+
 ## 5. Vad är skillnaden mellan IP och P2P på applikationsnivå?
 
 Bokens avsnitt: §10.1, underrubriken "Overlay routing versus IP routing", med figur 10.1.
@@ -328,6 +368,13 @@ varje hopp i överlägget genomförs med ett underliggande transportprotokoll, =
 6. Boken garderar att flera skillnader kommer ur IP:s legacy-natur, men att arvet är för starkt att
    övervinna. Och överlägget ersätter inte IP — varje överläggshopp går normalt över UDP och kan kräva
    många IP-hopp.
+
+Vad är skillnaden mellan IP och P2P-routning på applikationsnivå? (4)
+||
+- **Ramen** – överlägget ersätter inte IP; det ligger ovanpå, oftast över UDP
+- **Skarpaste skillnaden** – IP pekar ut en maskin, överlägget närmaste repliken av ett objekt
+- **Mest praktiska** – nätdynamik: IP uppdateras på timskala, överlägget på bråkdelar av en sekund
+- **Övriga axlar** – skala, lastbalansering, feltolerans, säkerhet och anonymitet
 
 ## Luckor och källor
 

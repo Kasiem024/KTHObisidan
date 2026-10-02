@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F87): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F88): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4220,3 +4220,88 @@ ten concept decks already carry the tag.
 The exception is justified by the stimulus — the front line is the question he will hear rather than a
 concept — and by the oral format. He agreed to it explicitly. If the drill does not earn its keep, the
 whole set is one file to delete, which is the other reason it is one file.
+
+## F88. The agenda cards copied into the ten exam-answer notes, and the source note taken out of review
+
+**Date:** 2026-10-02
+**Status:** Closed
+**Scope:** the ten `HI1031 Tentafragor och Svar - Kap NN` notes, plus `nosr` on
+`HI1031 Tentafragor - Snabbsvar.md`
+
+### What was asked, and the question that had to be settled first
+
+> kopiera de och lagg nosr pa snabbsvar filen, den nya du skapade
+
+The word was *copy*, and taken literally it has a consequence worth naming: both notes are tagged
+`HI1031`, so **every agenda card would have been reviewed twice** — 73 cards becoming 146 in the queue,
+which is the within-course duplication `product.md` calls waste. Put to the author with that cost
+spelled out, he chose copy **plus `nosr` on the source**, which is the arrangement that keeps the
+reading copy and pays for the drill only once.
+
+**`nosr` was added only because he asked in those words.** It is his rotation and no agent's to set;
+this is the exception, not a precedent.
+
+### Where the cards went, and why there
+
+**At the end of each question's section**, which puts them under that question's `### Muntligt svar` —
+the heading whose content the agenda compresses.
+
+Not at the top of the section, and that was decided by something he has already settled: he copies the
+facts out by hand and organises his own notes around the key concepts as he goes, so `product.md`
+records that leading with talking points *"would break the thing that makes it work"*. Facts first,
+agenda last, matching the structure the notes already have.
+
+The alternative — one `## Flashcards` section per note — was rejected twice over: it would have to sit
+after `## Luckor och kallor` to satisfy the Flashcards-last invariant, and it would separate every card
+from the answer it summarises.
+
+### Three things that made the mechanics non-obvious
+
+1. **The ten notes use three different heading styles** — `## 1.`, `## Fraga 1 -` and `## Fraga 1 --`
+   with an em dash. Matching on heading *text* would have silently missed whole chapters, so the script
+   matches on the **question number** with a pattern that also keeps `3` from matching `3.1`, which
+   chapter 11 needs for its four sub-questions.
+2. **Insertions were applied in descending line order** (T8). Any earlier insertion shifts every later
+   index, and the shifted target is usually a blank line, so nothing would have errored.
+3. **No subagent and no inline command touched the files.** The card text lives in a UTF-8 data file
+   read with an explicit encoding, because the script itself must be pure ASCII or its Swedish literals
+   match nothing (T1). Dry run first, every file backed up, BOM and line endings preserved.
+
+### Result
+
+**73 cards across the ten notes**, matching the plan per chapter exactly: 7, 5, 9, 8, 7, 7, 8, 10, 7, 5.
+Chapter 4 question 3 correctly received **none** — its agenda card was deleted in F87 as a structural
+duplicate of an existing concept card, and the mapping reflects that rather than quietly re-adding it.
+
+The notes went from holding **no cards at all** to being card-bearing for the first time; none of them
+carries `nosr`, so these are now the copies in review.
+
+**The net effect on review load is zero.** `excludedCards` rose by exactly 73 as the Snabbsvar note left
+the deck, and the ten notes brought exactly 73 in. The drill moved rather than doubled, and the cards
+now sit beside the answers they compress.
+
+### Verified
+
+- **Structural check of all 73 inserted cards: zero problems.** Every `(N)` cue matches its row count,
+  no body is under two or over four rows, **no `==highlight==` in any list body**, each single-line card
+  has exactly one, no orphaned separators. That last check matters most: these notes are dense prose
+  already using `==...==` inline, so a card inserted into the wrong place would have been plausible
+  Markdown.
+- **Read-back of a real insertion site** rather than trusting the count (**T20**): chapter 17's two
+  cards for question 3 sit after the last prose line of that section and before `## 4.`, with blank
+  lines on both sides.
+- `Get-SRIntegrity.ps1 -Compare`: `nosr False -> True` on the Snabbsvar note, ten per-file lines each
+  `cards 0 -> N`, `nosrNotes 44 -> 45`, `excludedCards 330 -> 403`. **Zero markers anywhere in the
+  eleven files, and no marker reported as moved** — nothing could be transplanted, because none of these
+  notes has ever been reviewed.
+- `Test-DeckHygiene.ps1 -All` — **no line names any of the eleven files.** `-Course HI1031` would not
+  have seen them; the default scope is `* Begrepp - Kap *`.
+- `Vault-Audit.ps1` clean, `notesInScope=530`. `markdownlint-cli2` — `Linting: 553 files`, 0 issues.
+  The file count is unchanged from F87, which is the check that nothing new was created by accident.
+
+### One consequence for the author
+
+**The ten exam-answer notes are now in the review deck.** They were out of it by accident rather than by
+choice before — they simply had no cards. A `nosr` on any one of them now switches off that chapter's
+agenda drill, which is a finer-grained control than the single switch the Snabbsvar note gave, and is
+the practical upside of the copy he chose.

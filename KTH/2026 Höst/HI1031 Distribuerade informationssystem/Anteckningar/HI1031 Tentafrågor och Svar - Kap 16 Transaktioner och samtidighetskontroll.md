@@ -110,6 +110,12 @@ löser problemet efteråt, men bara detektering vet att det finns ett problem.
 6. Timeout är det vanligaste i praktiken, men värsta problemet är att transaktioner abort:as
    utan att det ens fanns någon deadlock.
 
+Vad gör man åt deadlocks? (3)
+||
+- **Vad det är** – var cykeln syns, och när den uppstår
+- **Tre vägar** – de tre strategierna
+- **I praktiken** – vanligaste vägen och dess baksida
+
 ## 2. Är dirty reads ett problem? Hur kommer man åt det?
 
 Bokens avsnitt: §16.2.2, plus §16.4 för hur låsning genomför det
@@ -195,6 +201,18 @@ skjuter upp, desto mer samtidighet betalar man — men desto mindre kan gå fel.
 5. Det sista kallas en strikt körning, och det är den som ger isoleringen.
 6. I praktiken görs det med strikt tvåfaslåsning och tentativa versioner. Både optimistisk
    kontroll och tidsstämpelordning slipper dirty reads redan genom sin konstruktion.
+
+Är dirty reads ett problem? (3)
+||
+- **Vad det är** – vad man läser, och i vilket läge
+- **Varför allvarligt** – vad skrivaren kan göra, och varför det inte går att laga
+- **Nyckelpoäng** – serialiserbarhet skyddar inte, problemet är avbrotten
+
+Hur kommer man åt dirty reads? (3)
+||
+- **Skjut upp commit** – vänta på vem
+- **Läs bara bekräftat** – då slipper man kaskadavbrott
+- **Skjut upp allt** – vad som skjuts upp, och vad det kallas
 
 ## 3. Vad är optimistisk approach (optimistic concurrency control) och varför kan det vara att föredra? Vad är nackdelen?
 
@@ -297,6 +315,12 @@ argumentet för att det ofta är sällan.
 6. Valideringen finns i två former, bakåt och framåt, och de skiljer sig i vilken frihet man
    har att lösa konflikten.
 
+Vad är optimistisk samtidighetskontroll, varför kan den föredras, och vad är nackdelen? (3)
+||
+- **Vad det är** – när man kör fritt, och när man kontrollerar
+- **Varför föredra** – vad lås kostar, plus en deadlock-poäng
+- **Nackdelen** – vad som händer vid avbrott, och risken för svält
+
 ## 4. Varför ska man välja tidsstämpelmetoden (time-stamp ordering) snarare än tvåfaslåsning (2PL)?
 
 Bokens avsnitt: §16.6 och §16.7
@@ -385,6 +409,12 @@ vinnare, och det är därför frågans "varför" har ett villkorat svar och inte
 6. Priset är omstarter, och boken säger att låsning historiskt är den dominerande metoden i
    distribuerade system.
 
+Varför ska man välja tidsstämpelmetoden snarare än tvåfaslåsning? (3)
+||
+- **Ingen deadlock** – vem man bara väntar på
+- **Bra för lästunga** – vilken metod vinner vid vilken last
+- **Slipper vänta** – vad den gör vid konflikt i stället
+
 ## 5. Strict two-phase locking, Timestamp ordering och optimistisk approach är tre varianter för schemaläggning av transaktioner — beskriv och jämför dem
 
 Bokens avsnitt: §16.2.1 för grunden (serialiserbarhet och konfliktreglerna) och §16.7 för jämförelsen
@@ -459,6 +489,18 @@ väntandet, tidsstämplar och optimistisk kontroll är omstarterna.
 6. Valet styrs av arbetslasten: låsning vid mycket skrivningar, tidsstämpelordning vid lästunga
    transaktioner, optimistisk kontroll när konflikter är sällsynta. Deadlock finns bara hos
    låsning.
+
+Beskriv de tre metoderna: strikt 2PL, tidsstämpelordning och optimistisk kontroll. (3)
+||
+- **Strikt 2PL** – när låsen släpps, och vad man gör vid konflikt
+- **Tidsstämpelordning** – vad som bestämmer ordningen, och vad som sker vid konflikt
+- **Optimistisk** – de tre faserna
+
+Jämför strikt 2PL, tidsstämpelordning och optimistisk kontroll. (3)
+||
+- **När ordningen bestäms** – 2PL dynamiskt, tidsstämpel vid start, optimistisk vid validering
+- **Vid konflikt** – vänta, avbryt direkt, eller avbryt och gör om
+- **Deadlock och val** – bara låsning kan deadlocka, välj efter om lasten mest läser eller skriver
 
 ## Luckor och källor
 

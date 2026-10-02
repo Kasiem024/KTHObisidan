@@ -81,6 +81,13 @@ en part som kan krascha, svara sent eller besluta annorlunda.== (egen slutsats)
 6. **Femte problemet: recovery blir svårare.** Varje server har ==sin egen recovery-fil==, och
    protokollets tillstånd måste överleva en krasch mitt i. Det är fråga 4.
 
+Vilka extra problem medför distribuerade transaktioner jämfört med lokala? (4)
+||
+- **Roten** – varje server ser bara sin egen del
+- **Atomicitet** – vad alla måste göra ihop, och vad det kräver
+- **Global ordning** – vad som måste gälla överallt
+- **Distribuerad deadlock** – var cykeln ligger, och vem som ser den
+
 ## 2. Beskriv Two-Phase Commit (2PC)
 
 Bokens avsnitt: §17.3 och §17.3.1
@@ -182,6 +189,12 @@ Det är byggt för att tåla ==en följd av fel== och är ==garanterat att bli k
 6. **Kostnad och robusthet.** Går allt bra kostar protokollet ==3N meddelanden och tre rundor==.
    ==Timeouts finns vid varje steg där någon kan blockera==, och protokollet är byggt för att klara en
    följd av kraschar och tappade meddelanden — men ==utan någon tidsgräns för när det blir klart==.
+
+Beskriv Two-Phase Commit (2PC). (3)
+||
+- **Varför** – vad en server måste kunna
+- **Fas 1, röstning** – vad koordinatorn frågar, och vad som sker före ett Yes
+- **Fas 2, genomförande** – vad som avgör doCommit kontra doAbort
 
 ## 3. Hierarkisk kontra flat Two-Phase Commit — beskriv och förklara
 
@@ -307,6 +320,16 @@ skickas med==. (egen slutsats)
    behöver abortList, men koordinatorn ==pratar direkt med alla deltagare== i stället för att skicka
    meddelanden ner och upp genom trädet i steg. ==Moss föredrog flat== av just det skälet.
 
+Beskriv hierarkiskt kontra flat 2PC. (2)
+||
+- **Hierarkiskt** – koordinatorn frågar bara närmaste barn, svaren samlas uppåt i trädet
+- **Flat** – koordinatorn frågar alla deltagare direkt
+
+Varför behöver flat 2PC en abortList, och vad är avvägningen mot hierarkiskt? (2)
+||
+- **Varför abortList** – vilka två sorters subtransaktioner en server kan ha
+- **Avvägningen** – trädet bär kunskapen om formen, eller koordinatorn via listan
+
 ## 4. Hur gör man recovery från Two-Phase Commit vid nod- eller nätverksfel?
 
 Bokens avsnitt: §17.6, §17.6.1 och §17.6.4
@@ -419,6 +442,12 @@ inte att gissa vad som hände, utan att läsa vad man redan skrivit ner och fort
    meddela alla. ==Koordinator committed==: beslutet var taget, så skicka `doCommit` igen och återupta
    vid steg 4. ==Deltagare uncertain==: fråga koordinatorn med `getDecision`. ==Deltagare prepared==: har
    inte röstat än, så den får abort:a.
+
+Hur gör man recovery från 2PC vid nod- eller nätverksfel? (3)
+||
+- **Grunden** – vad som skrivs till loggen, och när
+- **Avgörandet** – vad i loggen som avgör
+- **Åtgärden** – beror på roll och status: koordinator eller deltagare, prepared, committed eller uncertain
 
 ## Luckor och källor
 

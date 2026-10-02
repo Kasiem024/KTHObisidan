@@ -62,6 +62,13 @@ ett extra hopp och att du inte längre kan följa ett anrop från ände till än
    delat minne och tuple spaces. De tre första handlar om kommunikation, de två sista om delat
    tillstånd, och de sista skalar sämre.
 
+Beskriv poängen med indirekt kommunikation och strategierna. (4)
+||
+- **Vad det är** – vad som sitter emellan
+- **Poängen** – problemet, och de två frikopplingarna
+- **Priset** – vad det kostar
+- **Strategierna** – de tre kursen tar upp
+
 ## Fråga 2 – Gruppkommunikation och hur det kan implementeras
 
 Bokens avsnitt: §6.2, §6.2.1, §6.2.2 och §6.2.3.
@@ -137,6 +144,19 @@ ha samma stack==.
 6. Och den måste sköta gruppmedlemskap — ändringar, feldetektering, notifiering och adressexpansion.
    Just det gör att gruppkommunikation passar bäst i små och stabila system. JGroups är bokens exempel,
    med kanaler, byggblock och en protokollstack av utbytbara lager.
+
+Beskriv gruppkommunikation. (3)
+||
+- **Vad det är** – grundmodellen
+- **Abstraktion ovanpå multicast** – lägger till garantier, som TCP ovanpå IP
+- **Modellen** – gå med eller lämna, ett multicast-anrop i stället för många send
+
+Hur implementeras gruppkommunikation? (4)
+||
+- **Tillförlitlighet** – de tre garantierna
+- **Ordning** – de tre sorterna
+- **Medlemskap** – ändringar, feldetektering, notifiering, adressexpansion
+- **Följden** – medlemskapet gör att det passar små, stabila system
 
 ## Fråga 3 – Publish-subscribe och hur det kan implementeras
 
@@ -216,6 +236,12 @@ Innehållsbaserade är svårare, och problemet kallas ==content-based routing== 
    innehållsbaserat kräver content-based routing: flooding, filtering, advertisements, rendezvous med
    DHT, eller informed gossip.
 
+Beskriv publish-subscribe och visa hur det kan implementeras. (3)
+||
+- **Vad det är** – de tre rollerna och matchningen
+- **Hur man prenumererar** – de fyra sätten
+- **Hur det byggs** – var mäklaren kan sitta
+
 ## Fråga 4 – Message queuing och hur det implementeras bra
 
 Bokens avsnitt: §6.4, §6.4.1, §6.4.2 och §6.4.3.
@@ -292,6 +318,18 @@ stund lokalt, och låt mellanprogrammet ta det långa hoppet asynkront men garan
    meddelandet ligger där, medan hoppet vidare till hubben är asynkront men garanterat tillförlitligt.
    Hubben kan bli flaskhals, och mot det finns kluster av köhanterare med lastbalansering.
 
+Beskriv message queuing. (3)
+||
+- **Vad det är** – kön och vem som plockar
+- **Den avgörande egenskapen** – vad meddelandena är
+- **Vad persistensen ger** – vilken garanti, och vad den inte lovar
+
+Hur implementeras message queuing på ett bra sätt? (3)
+||
+- **Problemet** – en central köhanterare blir flaskhals och enda felpunkt
+- **Lösningen** – federera köhanterarna med enkelriktade message channels
+- **Hub-and-spoke** – hur det fungerar
+
 ## Fråga 5 – Jämför gruppkommunikation, publish-subscribe och message queuing
 
 Bokens avsnitt: §6.6, figur 6.27.
@@ -359,6 +397,13 @@ nedan är därför **min**, men varje enskild uppgift i den är bokens.
 6. Ur implementatörens perspektiv: gruppkommunikation kämpar med medlemskap och ordning, vilket
    begränsar dess skalbarhet; publish-subscribe med matchning och routing; message queuing med
    persistens och topologi. Och associativ adressering finns bara i innehållsbaserad publish-subscribe.
+
+Jämför gruppkommunikation, publish-subscribe och message queues. (4)
+||
+- **Börja med** – alla tre är indirekta och rumsligt frikopplade
+- **Skarpaste skillnaden** – mönstret: grupp och publish-subscribe är en-till-många, kön är en-till-en
+- **Gå igenom tre perspektiv** – sändare, mottagare, implementatör
+- **Avsluta med** – bara message queues är tidsmässigt frikopplad, för den har persistens
 
 ## Luckor och källor
 

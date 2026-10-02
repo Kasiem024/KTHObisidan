@@ -75,6 +75,19 @@ kommunikationsparadigm** — i request-reply är parterna i grunden kopplade, me
 6. Tre saker förstärker den: programmering mot gränssnitt, enkla generella gränssnitt som REST, och
    valet av kommunikationsparadigm — request-reply kopplar, asynkront frikopplar.
 
+Vad är en webbtjänst, när används den, och vilka protokoll finns? (3)
+||
+- **Vad och varför** – hur ett program når den, och varför inte via en webbläsare
+- **När** – vilka två parter som pratar, och vad trafiken passerar
+- **Protokoll** – XML, SOAP, REST, WSDL
+
+Vad innebär låg koppling för en webbtjänst? (4)
+||
+- **Grundbetydelsen** – vad man håller så litet som möjligt
+- **Programmering mot gränssnitt** – skilj gränssnittet från implementationen
+- **Enkla, generella gränssnitt** – minimala gränssnitt som webben och REST
+- **Valet av paradigm** – request-reply kopplar, asynkront frikopplar
+
 ## 2. Vad är REST och vilka principer ska en RESTful webbtjänst uppfylla? Hur accessas resurser i en REST-arkitektur? Vilken roll har hypermedia
 
 Bokens avsnitt: rutan i §9.2. **Kurslitteratur jämte boken:** restfulapi.net "What is REST?", som
@@ -148,6 +161,18 @@ implementationen. Säger du båda, i den ordningen, har du täckt vad examinator
 6. Notera att källorna skiljer sig: boken beskriver REST som HTTP, medan restfulapi.net säger att REST
    inte är HTTP och att Fielding aldrig band stilen till något protokoll.
 
+Vad är REST och vilka principer ska en RESTful tjänst uppfylla? (3)
+||
+- **Vad REST är** – arkitekturstil från Fielding, inte ett protokoll eller en standard
+- **De sex principerna** – likformigt gränssnitt, klient-server, tillståndslöshet, cache, lager, kod på begäran
+- **Två källor** – boken ser REST som HTTP med fyra metoder, restfulapi.net säger att det inte är bundet till HTTP
+
+Hur accessas resurser i REST och vilken roll har hypermedia? (3)
+||
+- **Hur resurser nås** – via en URI; man får en representation: data, metadata, länkar
+- **Resurs mot representation** – skilda, så samma resurs kan ges som JSON, XML eller HTML
+- **Hypermedia (HATEOAS)** – vad servern skickar med, och vad klienten då behöver
+
 ## 3. Jämför distribuerade objekt (t.ex. RMI) med webbtjänster (t.ex. REST) för kommunikation mellan (del-)system
 
 Bokens avsnitt: §9.2.2, som gör precis den jämförelsen. §9.2.4 jämför med CORBA.
@@ -208,6 +233,13 @@ vinner webbtjänster, och priset är prestanda och att du bygger transparensen s
    för XML är text och CDR binärt. Vinsten är global räckvidd: bara DNS behövs, och HTTP går genom
    brandväggar.
 
+Jämför distribuerade objekt (RMI) med webbtjänster (REST). (4)
+||
+- **Börja med** – ytligt lika: båda anropar en operation, med fjärrreferens eller URI
+- **Kärnskillnaden** – webbtjänsten är ett enda objekt: inga nya fjärrobjekt, inga servanter
+- **Två principskillnader** – paradigmoberoende, och ingen transparens på köpet
+- **Avvägningen** – priset är prestanda, vinsten är global räckvidd genom brandväggar
+
 ## 4. Vad innebär SOA (Service-Oriented Architecture)
 
 Bokens avsnitt: §9.7.1.
@@ -247,6 +279,13 @@ tredjepartsutvecklare skapar genom att kombinera två eller flera== befintliga t
    exponerar webbtjänstgränssnitt utåt.
 5. Det öppnar också för mashups — en tredje part kombinerar två eller fler tjänster till en ny.
 6. Kopplingen till fråga 1 är direkt: låg koppling är förutsättningen som gör SOA möjligt.
+
+Vad innebär SOA (Service-Oriented Architecture)? (4)
+||
+- **Definitionen** – vilken sorts princip, och tjänsternas två kännetecken
+- **Hur det byggs** – med vad, och varför just det
+- **Var det används** – främst på internet i stort, inte bara internt
+- **Resultatet** – B2B-integration och mashups
 
 ## 5. Förklara relationen mellan Ajax och webbtjänster
 
@@ -293,6 +332,13 @@ HTTP med XML==:
    vara en webbtjänst.
 6. Viktig markering: boken drar aldrig den här kopplingen själv, och Ajax står i kapitel 2, inte i
    kapitel 9. Säg det om examinatorn frågar var det står.
+
+Förklara relationen mellan Ajax och webbtjänster. (4)
+||
+- **Vad Ajax är** – vad som pratar med servern, och vad man slipper
+- **Bryggan** – båda går runt webbläsarens gräns, över HTTP med XML
+- **Hur de kompletterar** – Ajax går mellan skikt 1 och 2; backend kan själv vara en webbtjänst
+- **Markeringen** – boken kopplar dem aldrig själv, och Ajax står i kapitel 2
 
 ## Luckor och källor
 

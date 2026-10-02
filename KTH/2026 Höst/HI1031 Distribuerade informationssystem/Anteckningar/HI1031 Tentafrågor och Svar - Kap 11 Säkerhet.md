@@ -73,6 +73,12 @@ lista examinatorn troligen letar efter. (egen strukturering, båda listorna är 
 6. Utöver kanalhoten finns mobil kod, där Javas sandlåda är svaret, och informationsläckage, där själva
    existensen av trafik avslöjar något.
 
+Vilka är de viktigaste hoten och attackerna som ett distribuerat system måste skyddas mot? (3)
+||
+- **Varför** – delning av resurser skapar problemet
+- **Tre hotklasser**
+- **Fem attackmetoder** – avlyssning, maskering, manipulation, uppspelning, överbelastning
+
 ## 2. Beskriv vilken roll kryptering har för säkerhet, förutom att dölja innehållet i ett meddelande (konfidentialitet, autentisering, integritet, oförnekbarhet)
 
 Bokens avsnitt: §11.2.1 och §11.2.2, plus §11.1.1 och §11.1.2 för oförnekbarhet
@@ -138,6 +144,13 @@ du gjort det — och det är hela grunden för autentisering, signaturer och of�
    signaturen, och bokens exempel är fantomuttag i en bankomat.
 6. Sammanfattningsvis: kryptering döljer innehållet, men det är vem som *kan* dekryptera som ger allt
    det andra — kan bara du kryptera något blir det ett bevis på att du gjort det.
+
+Vilken roll har kryptering för säkerhet, utöver att dölja innehållet? (4)
+||
+- **Konfidentialitet** – villkoret för att få läsa
+- **Integritet** – vad som krävs, och att det inte är gratis
+- **Autentisering** – vad en delad nyckel röjer
+- **Oförnekbarhet** – hur den uppnås
 
 ## 3. Förklara hur symmetrisk, asymmetrisk respektive hybridkryptering fungerar. I vilka situationer används respektive typ? Prestanda?
 
@@ -243,6 +256,23 @@ på resonemang om hur väl algoritmen döljer klartexten.
 6. Prestanda i praktiken: en webbsida under 100 kB krypteras på några millisekunder, så https påverkas
    minimalt. RSA med 1024 bitar tar cirka 4,75 ms att signera och 0,18 ms att verifiera.
 
+Hur fungerar symmetrisk, asymmetrisk och hybridkryptering? (3)
+||
+- **Symmetrisk** – nyckelrelationen, och att den bygger på envägsfunktioner
+- **Asymmetrisk** – nyckelrelationen, och att den bygger på fälldörrsfunktioner
+- **Hybrid** – vad vardera krypteringen gör
+
+I vilka situationer används symmetrisk, asymmetrisk och hybridkryptering? (3)
+||
+- **Symmetrisk** – bulkkryptering av själva datan
+- **Asymmetrisk** – nyckelutbyte och signering, sällan för data
+- **Hybrid** – storskaliga system och e-handel, som TLS
+
+Prestanda: hur skiljer sig symmetrisk och asymmetrisk kryptering? (2)
+||
+- **Förhållandet** – storleksordningen dyrare
+- **I praktiken** – en webbsida krypteras på millisekunder, så https känns knappt
+
 ## 3.1 Förklara hur asymmetriska nycklar (public/private) kan användas för att ge autenticitet
 
 Bokens avsnitt: §11.3.2 och §11.2.2
@@ -289,6 +319,12 @@ själv använder du din egen privata. Den första ger sekretess, den andra auten
    tillhör den påstådda avsändaren. Därför certifikat, signerade av en välkänd myndighet.
 6. Utan det förbehållet är nyckelutbytet öppet för man-in-the-middle — Mallory svarar med sin egen
    publika nyckel och läser allt som följer.
+
+Hur kan asymmetriska nycklar (public/private) användas för att ge autenticitet? (3)
+||
+- **Grunden** – vilken relation nycklarna har
+- **Vändningen** – vilken nyckel man krypterar med, vilken alla verifierar med
+- **Förbehållet** – mottagaren måste veta att publika nyckeln är din, annars MITM
 
 ## 4. Vad är en digital signatur och vad bidrar den med gällande säkerhet? Hur genereras respektive kontrolleras en digital signatur?
 
@@ -368,6 +404,13 @@ den är billig och därför den inte ger någon sekretess — ==M skickas i klar
    mottagarens publika. Skälet är att signaturen måste skapas med en hemlighet bara en person har, men
    kunna verifieras av alla.
 
+Vad är en digital signatur, vad bidrar den med, och hur skapas och kontrolleras den? (4)
+||
+- **Vad det är** – vad en signatur binder ihop
+- **Vad den ger** – de tre egenskaperna
+- **Skapas** – vad man hashar, och med vilken nyckel
+- **Kontrolleras** – med vilken nyckel, och vad man jämför mot
+
 ## 4.1 Vad är en digest-funktion (säker hashfunktion) och vilka egenskaper har en sådan funktion?
 
 Bokens avsnitt: §11.4.3
@@ -418,6 +461,11 @@ båda ==kan betraktas som tillräckligt säkra== för överskådlig tid, men att
    hashvärden måste vara minst 128 bitar.
 6. I praktiken används MD5 med 128 bitar och SHA-1 med 160. Boken garderar att båda kan betraktas som
    tillräckligt säkra för överskådlig tid, men att publicerade attacker antyder att SHA-1 är sårbar.
+
+Vad är en digest-funktion (säker hashfunktion) och vilka egenskaper har den? (2)
+||
+- **Vad det är** – vad den gör med meddelandets längd
+- **Egenskaperna** – de tre
 
 ## 5.1 Vad är TLS/SSL respektive HTTPS? Förklara hur handskakningen i TLS går till
 
@@ -499,6 +547,11 @@ certifikatutfärdare.
    Ur den räknar båda fram sessionsnycklarna och MAC-hemligheterna. ChangeCipherSpec och Finished
    avslutar, och därefter är allt krypterat och signerat.
 
+Vad är TLS/SSL respektive HTTPS? (2)
+||
+- **TLS/SSL** – vad det skapar, och relationen mellan SSL och TLS
+- **HTTPS** – vad det egentligen är
+
 ## 5.2 Vad är ett certifikat? Vad innehåller det, vad ska det säkerställa och vad är en Certificate Authority (CA)?
 
 Bokens avsnitt: §11.2.3 och §11.4.4
@@ -578,6 +631,13 @@ fick den första nyckeln. Allt annat är signaturkontroller. (egen slutsats)
 6. Problemen är att välja var kedjan börjar eftersom tillit sällan är absolut, risken att privata nycklar
    röjs, och att en längre kedja ger större risk för en svag länk. Återkallning löser man normalt med ett
    utgångsdatum.
+
+Vad är ett certifikat, vad innehåller det, vad ska det säkerställa, och vad är en CA? (4)
+||
+- **Vad det är** – vad slags intyg
+- **Innehåll** – de tre delarna
+- **Säkerställer** – vilken koppling som ska stämma
+- **CA** – vem det är, och att verifieringen sker i två steg
 
 ## Luckor och källor
 

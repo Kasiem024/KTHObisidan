@@ -49,6 +49,12 @@ fel==.
 5. **Tillförlitlighet**, alltså giltighet och integritet, och **ordning** – sändarordning, där fel
    ordning räknas som ett fel.
 
+På vilka sätt kan man karakterisera ett IPC-anrop? (3)
+||
+- **Ramen** – IPC är send och receive, och boken har fyra sätt
+- **De fyra axlarna** – ta dem i tur och ordning
+- **Bokens poäng** – med trådar har blockerande receive inga nackdelar
+
 ## Fråga 2 – Beskriv vad XML är och vad det kan användas till
 
 Bokens avsnitt: 4.3.3, plus 4.3
@@ -88,6 +94,17 @@ komprimering==.
 4. Ge **användningarna**: webbtjänster och SOAP först, sedan arkivering, gränssnitt och
    konfigurationsfiler.
 5. Ge **priset**: text plus taggar ger stora meddelanden och längre tider – men HTTP 1.1 kan komprimera.
+
+Beskriv vad XML är. (3)
+||
+- **Vad det är** – vilket slags språk
+- **Mot HTML** – vad taggarna beskriver
+- **Självbeskrivande** – så att okända tillämpningar kan läsa det, därav namnrymder
+
+Vad kan XML användas till, och vad kostar det? (2)
+||
+- **Används till** – de fyra användningarna
+- **Priset** – vad text-med-taggar kostar
 
 ## Fråga 3 – Beskriv tre olika typer av IPC
 
@@ -190,6 +207,17 @@ meddelanden når alla medlemmar i samma ordning==. Kapitel 15 visar hur de imple
    ordning, medan tjänsteupptäckt klarar en enstaka förlust.
 6. Avsluta med **vad som behövs**: tillförlitlig multicast och totalt ordnad multicast, byggda ovanpå.
 
+Är det bra att en port kan ha flera mottagare? Lägg upp argumentet. (3)
+||
+- **Räta ut premissen** – normalt en mottagare, så frågan gäller IP multicast
+- **Ja** – och räkna upp användningarna, t.ex. feltolerans
+- **Men** – IP multicast är otillförlitlig, samma utelämnandefel som UDP
+
+En port med flera mottagare: utveckla varför svaret beror på användningen. (2)
+||
+- **Beror på bruket** – replikerade tjänster kräver alla-eller-ingen, tjänsteupptäckt klarar en förlust
+- **Vad som behövs** – tillförlitlig multicast och totalt ordnad multicast ovanpå
+
 ## Fråga 5 – Vad är skillnaderna och likheterna mellan IPC och distribuerade objekt?
 
 Bokens avsnitt: 4.1 för lagren, 4.3.4 för objektreferenser, 5.4 och 5.4.1 för objektmodellen
@@ -239,6 +267,18 @@ att en part skickar en förfrågan och väntar på ett svar, och kan ge anropsse
    metoder får platserna använda olika dataformat obemärkt.
 6. Avsluta med **parameteröverföringen**: du kan skicka en objektreferens i stället för värdet, vilket är
    vinsten när parametern är stor.
+
+Vilka är likheterna mellan IPC och distribuerade objekt? (3)
+||
+- **Relationen** – hur de förhåller sig
+- **Allt blir bytes** – båda marshallar, båda sköter byteordning
+- **Request-reply** – båda bygger på förfrågan och svar
+
+Vilka är skillnaderna mellan IPC och distribuerade objekt? (3)
+||
+- **Abstraktion och adress** – de två kontrasterna
+- **Inkapsling** – skilda processer tvingar fram den
+- **Parametrar** – referens i stället för värde
 
 ## Fråga 6 – Vad vinner man på virtualisering?
 
@@ -294,6 +334,17 @@ det ==möjliggör direkt infrastructure as a service==.
    hypervisor. Vinsten mot processer är säkerhet, ren uppdelning och exakt debitering.
 6. Avsluta med **de starkaste konkreta vinsterna**: maskiner kan migreras ganska enkelt, vilket sänker både
    hårdvaruinvestering och energiförbrukning, och det möjliggör infrastructure as a service.
+
+Vad vinner man på virtualisering - nätverksvirtualisering? (3)
+||
+- **Vad det är** – vad man bygger ovanpå vad
+- **Varför det behövs** – slipper ändra internetprotokollen för alla
+- **Overlays** – vinsten och priset
+
+Vad vinner man på virtualisering - systemvirtualisering? (2)
+||
+- **Vad det är** – flera VM med egna OS, styrda av en hypervisor
+- **Vinsten** – fördelarna mot processer, och att det möjliggör IaaS
 
 ## Luckor och källor
 

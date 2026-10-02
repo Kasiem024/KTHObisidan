@@ -62,6 +62,18 @@ skickas som referens, övriga objekt kopieras och skickas som värde**, så mott
 5. **Avsluta med Java RMI:** samma syntax som lokalt, men anroparen vet att anropet är distribuerat.
    Fjärrobjekt skickas som referens, andra objekt som kopia.
 
+Beskriv generellt hur distribuerade objekt fungerar. (3)
+||
+- **Modellen** – tillståndet är redan uppdelat per objekt, lägg objekten i olika processer
+- **De två bärande begreppen**
+- **Fabriksmetoder** – varför de behövs
+
+Beskriv speciellt hur RMI fungerar. (3)
+||
+- **Kedjan** – de fyra delarna i rätt ordning
+- **Automatiskt** – de tre genereras, kommunikationsmodulen ger anropssemantiken
+- **Java RMI** – samma syntax som lokalt, men du vet att det är distribuerat
+
 ## Fråga 2 – När kan ren socket-kommunikation vara bättre än distribuerade objekt och tvärtom
 
 Bokens avsnitt: §5.2 för vad request-reply kostar, §5.6 för sammanfattningen, §5.3.1 för latens och
@@ -110,6 +122,18 @@ prestandakritiskt utbytet är, desto mer talar för sockets.
    att skicka objektreferens i stället för ett stort värde.
 6. **Avsluta med det som alltid gäller:** känsligare för fel, man kan inte skilja nätfel från serverfel,
    och latensen är flera storleksordningar högre.
+
+När är ren socket-kommunikation bättre än distribuerade objekt? (3)
+||
+- **Ramen** – en avvägning mellan kontroll och omkostnad
+- **Vad man sparar** – bekräftelser, förbindelseuppsättning, flödeskontroll
+- **Exemplet** – NFS med fasta block och idempotenta anrop slipper historik
+
+När är distribuerade objekt bättre än rena sockets? (3)
+||
+- **Uttryckskraften** – vad objektmodellen ger
+- **Priset alltid** – varför fjärranrop är känsligare
+- **Latensen** – hur mycket, och följden
 
 ## Fråga 3 – Jämför sockets, RPC, RMI och webbtjänster
 
@@ -167,6 +191,18 @@ och CORBA inte gör det.
 6. **Avsluta med brandväggarna:** RMI:s och CORBAs transport kommer inte igenom, HTTP och SMTP gör det,
    så webbtjänster vinner mellan organisationer.
 
+Jämför sockets, RPC, RMI och webbtjänster: ram, abstraktion, namngivning. (3)
+||
+- **Rama in** – hur de fyra förhåller sig
+- **Abstraktion** – vad var och en låter dig anropa
+- **Namngivning** – hur målet pekas ut
+
+Jämför sockets, RPC, RMI och webbtjänster: gränssnitt, semantik, brandväggar. (3)
+||
+- **Gränssnitt och dataformat** – hur de beskrivs och kodas
+- **Anropssemantik** – de tre nivåerna
+- **Brandväggar** – det som avgör mellan organisationer
+
 ## Fråga 4 – Vad är skillnaderna och likheterna mellan distribuerade objekt och webbtjänster
 
 Bokens avsnitt: §9.2.2 är bokens egen jämförelse, plus §9.1 och §9.2 för webbtjänsterna och §5.4 för
@@ -216,6 +252,17 @@ XML==, och bekvämligheten läggs på i ett API ovanpå.
    servanter.
 6. **Avsluta med paradigm och transparens:** webbtjänster är paradigmoberoende, och ger ingen transparens
    av sig själva — utan ett API läser man SOAP och XML direkt.
+
+Vilka är likheterna mellan distribuerade objekt och webbtjänster? (2)
+||
+- **Ytlig likhet** – hur anropet ser ut
+- **Vad de delar** – den djupare likheten
+
+Vilka är skillnaderna mellan distribuerade objekt och webbtjänster? (3)
+||
+- **Kärnskillnaden** – vad en webbtjänst inte kan
+- **Följderna** – ingen fabriksmetod, inga servanter
+- **Paradigm och transparens** – de två principskillnaderna
 
 ## Luckor och källor
 

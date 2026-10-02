@@ -43,6 +43,13 @@ tjänster till ==processorintensiva== uppgifter; och från ==små, enkla sensore
 5. Avsluta med trenderna: **mobilt och ubiquitous**, **multimedia**, och **molnet** som en tjänst man
    köper i stället för att äga.
 
+Ge några exempel på distribuerade system. (4)
+||
+- **Börja brett** – vardagstjänster vi tar för givna, som webben och e-post
+- **Tre exempel boken går igenom** – webbsök, onlinespel, finanshandel
+- **Spannet är poängen** – från en bil till miljoner noder, sensor till kraftfull dator
+- **Trenderna** – mobilt, multimedia, molnet
+
 ## 2. Ange 5 olika hårdvaruresurser och 5 mjukvaruresurser som kan vara intressant att dela
 
 Bokens avsnitt: 1.4.
@@ -86,6 +93,18 @@ exempel nästan alltid är en tjänst och inte en pryl.
 5. Knyt till begreppet **tjänst**: en avgränsad del som sköter en samling resurser och bara går att nå
    genom **de operationer den erbjuder**. Skälet är att resurserna sitter inne i datorer och bara kan
    nås **genom kommunikation**.
+
+Ange 5 hårdvaruresurser som är värda att dela. (3)
+||
+- **Bokens två** – diskar och skrivare
+- **Bokens övriga exempel** – videoströmmen från en digitalkamera, ljudförbindelsen i ett mobilsamtal
+- **Brasklappen** – boken har ingen färdig lista på fem; säg att du delar upp bokens exempel
+
+Ange 5 mjukvaruresurser som är värda att dela. (3)
+||
+- **Innehåll** – filer, webbsidor
+- **Delad data** – databaser
+- **Färdiga tjänster** – sökmotor, valutaomvandlare
 
 ## 3. Vilka utmaningar finns enligt boken med att bygga ett distribuerat system?
 
@@ -154,6 +173,13 @@ säkerhet och prestanda==, plus ==anpassningsförmåga==. Prestanda definieras n
    åtskilda; access och location är de viktigaste. **Tjänstekvalitet** — tillförlitlighet, säkerhet,
    prestanda och anpassningsförmåga, där prestanda betyder att hålla tidsgränser.
 
+Vilka utmaningar finns enligt boken med att bygga ett distribuerat system? (4)
+||
+- **Få olika delar att funka ihop**
+- **Hålla det säkert och växande**
+- **Klara fel och krockar**
+- **Hur systemet upplevs**
+
 ## 4. Vilka arv från IP, HTTP och HTML måste man ta hänsyn till vid utveckling av distribuerade system?
 
 Bokens avsnitt: 1.6 för HTTP och HTML, 1.5.4 för IP-adresserna.
@@ -213,6 +239,19 @@ gärna var det står — det visar att du vet skillnaden.
 6. Var rättvis som boken är: det fanns **inget rätt svar**, eftersom större adresser också kostar
    plats i meddelanden och lagring.
 
+Vilka arv från IP, HTTP och HTML måste man ta hänsyn till? (3)
+||
+- **Från HTML** – vad taggarna är gjorda för
+- **Från HTTP** – de två tyngsta arven
+- **Från IP** – adressproblemet
+
+Vilka arv från HTTP måste man ta hänsyn till? (4)
+||
+- **Få metoder** – fråga och svar, mest GET och POST
+- **Innehållstyper** – MIME-typer säger hur svaret ska tolkas
+- **En resurs per fråga**
+- **Öppet som standard**
+
 ## 5. Vilken roll har IP och RFC för utvecklingen av distribuerade system?
 
 Bokens avsnitt: 1.3.1 för protokollen, 1.5.1 för att de döljer skillnaderna, 1.5.2 för RFC.
@@ -267,6 +306,12 @@ utan att någon behövde ändra i internet.
 5. Avsluta med sammanfattningen: öppna system har **publicerade gränssnitt** och ett **gemensamt
    kommunikationssätt**, och kan sättas ihop av delar från olika leverantörer — men följsamheten måste
    **testas noga**.
+
+Vilken roll har IP och RFC för distribuerade system? (3)
+||
+- **IP är tekniken** – vad den döljer
+- **RFC är spelregeln** – varför vem som helst får bygga på den
+- **Webben är beviset** – byggdes ovanpå utan att ändra i internet
 
 ## Luckor och källor
 

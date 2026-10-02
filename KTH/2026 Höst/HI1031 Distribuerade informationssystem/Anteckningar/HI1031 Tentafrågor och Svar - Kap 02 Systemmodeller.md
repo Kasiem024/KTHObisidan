@@ -58,6 +58,12 @@ andra hand över fysiska noder.
    sidor av en processgräns. Avsluta med att det generaliserar till **n-skikt** — Wikipedia, 60 000
    sidförfrågningar per sekund.
 
+Beskriv hur en trelagersarkitektur är uppbyggd. (3)
+||
+- **De tre delarna** – vilka tre lager, och en server per lager
+- **Vinsten** – var logiken samlas
+- **Priset** – vad tre lager kostar mot två
+
 ## Fråga 2 — Beskriv hur en MVC-arkitektur är uppbyggd
 
 Bokens avsnitt: **inget. MVC finns inte i boken.**
@@ -93,6 +99,13 @@ skikt 2, datan i skikt 3. Kopplingen är min, inte bokens.
 5. Ge **poängen**: flera vyer kan visa samma modell, och modellen går att testa utan gränssnitt. Får du
    följdfrågan om trelager: MVC delar upp **kod efter roll**, trelager fördelar **funktion över
    servrar**.
+
+Beskriv hur en MVC-arkitektur är uppbyggd. (4)
+||
+- **De tre delarna**
+- **Flödet** – hur ett klick går genom M, V och C
+- **Poängen** – presentationen skild från datan
+- **Säg var det står** – inte i boken, du svarar på allmän grund
 
 ## Fråga 3 — Vad är Middleware?
 
@@ -146,6 +159,8 @@ de bara i kommunikationssystemet blir de ofullständiga och arbetet dubbleras.
 5. Avsluta med **gränsen**: end-to-end-argumentet. Vissa funktioner kan bara göras rätt i
    ändpunkterna — e-post måste lägga på egen feltolerans ovanpå TCP, som inte klarar längre avbrott.
 
+Vad är Middleware?::Säg ==vad det döljer==, var det sitter, och ge exempel.
+
 ## Fråga 4 — Vad är fördelarna med en klient/server-lösning?
 
 Bokens avsnitt: 2.3.1 (Roles and responsibilities, samt Placement)
@@ -192,6 +207,13 @@ men löser inte grundproblemet — det gör **peer-to-peer**, som hör till kapi
 5. Avsluta med **svagheten**: den skalar dåligt, eftersom en tjänst på en adress inte kan växa förbi
    värddatorns kapacitet och bandbredd. Det är skälet till att peer-to-peer finns.
 
+Vad är fördelarna med en klient/server-lösning? (4)
+||
+- **Kärnfördelen** – vad den gör enkelt
+- **Enkla roller** – vem gör vad
+- **Går att bygga i lager** – en server kan själv vara klient (webbserver, DNS)
+- **Går att förbättra** – flera servrar, caching, mobil kod drar mer last
+
 ## Fråga 5 — Vad är en mobil agent?
 
 Bokens avsnitt: 2.3.1 (Placement, Mobile agents)
@@ -237,6 +259,8 @@ aktiekurser. En mobil agent ==bär med sig sin data, flyttar sig vidare och arbe
    och agenten är själv utsatt, den kan nekas information den behöver.
 5. Avsluta med **bokens tvivel**: samma uppgifter går att lösa med vanliga fjärranrop, som web
    crawlers gör, så nyttan kan vara begränsad.
+
+Vad är en mobil agent?::Säg ==vad den gör==, vinsten, och att boken tvivlar på nyttan.
 
 ## Luckor och källor
 

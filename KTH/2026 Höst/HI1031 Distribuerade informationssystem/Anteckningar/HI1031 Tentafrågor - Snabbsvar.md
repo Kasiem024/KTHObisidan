@@ -1,5 +1,5 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-10-02
 updated: 2026-10-02
 description: "Agendakort för tentafrågorna i HI1031. Varje kort ger frågan och vilka delar ett komplett svar ska innehålla, som stöd för den muntliga examinationen."
