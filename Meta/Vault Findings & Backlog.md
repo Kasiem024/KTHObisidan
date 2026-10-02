@@ -4510,3 +4510,65 @@ folders rather than this vault and `scripts.md` requires two uses first; no new 
 the review method now lives in the external `review-adversarially` and duplicating it here is the
 defect the first lessons entry is about; no template change, because no note was created; and no row in
 `.kiro/sessions.md`, because nothing is left undistilled.
+
+## F90. Four of the six gaps F89 reported closed from the course book
+
+**Date:** 2026-10-02
+**Status:** Closed
+**Scope:** 10 cards added to the two `HI1032 Tentaplugg` notes
+
+F89 reported six gaps rather than filling them from memory, and named the course book as the place they
+could be closed. The author asked for four of the six. 79 cards became **89**.
+
+### Why the book and not the past exams
+
+The gaps existed *because* the examiner's solutions do not contain the answers. A solution answers one
+question; it does not explain the subject. Where the question was *"draw the graph"*, the answer key
+records what should have been drawn, never the rules that generate it. So the four past exams could not
+close any of this, and `Filer/Litteraturlista/Data Communications and Networking 2013 Edition 5.md`
+could — it holds all four topics in plain text.
+
+The book is the **5th** edition while the solutions cite the 6th, which is why F89 worked at topic level
+only. That does not matter here: slow start, Taho versus Reno, the ISO management areas and DNS
+resolution are not edition-specific. The book is under a gitignored `Filer/` folder, so the glob and
+grep tools cannot see it and it had to be read with an explicit file API. **Read only** — it is
+third-party course literature.
+
+### What was added
+
+**Five on congestion control**, which was the gap worth closing: 16 points of 88, in 3 of 4 exams, and
+without the rules none of the three graph variants is answerable — including the cheap fault-finding one
+the analysis recommends practising first. Grounded in chapter 24: `ssthresh = cwnd/2` with `cwnd = 1` on
+detection and `cwnd >= ssthresh` as the transition, both read off the Taho FSM figure; slow start adding
+one MSS per ACK against congestion avoidance adding one MSS per RTT, which the book states as
+*"increases additively until congestion is detected"*; and the Taho/Reno split, where the book is
+explicit that Taho treats a time-out and three duplicate ACKs **the same** while Reno sends the first to
+slow start and the second to fast recovery.
+
+**One on recursive versus iterative DNS resolution**, which the analysis names as a verbatim recurrence
+in two exams. The book's iterative definition is quotable — *"each server that does not know the mapping
+sends the IP address of the next server back to the one that requested it"* — and the recursive case is
+its contrast. The reason this was missing is worth keeping: the exam asked for a **redrawn figure**, and
+the figures exist only as images under `assets/`, so a figure-dependent answer cannot be read as text.
+
+**Three FCAPS letters.** The book names the ISO five areas outright, so F, P and S now have cards
+alongside the C and A that came from the question pools. No card lists all five: that would be a
+five-row body, which `Test-DeckHygiene.ps1` rejects, and the exams ask about one letter at a time.
+
+**One on the SNMP data types**, that Counter, Gauge and INTEGER are all 32-bit unsigned. Grounded in the
+October 2025 answer key rather than the book, because the book's `Gauge32` row is truncated mid-word in
+the converted text.
+
+### Left open deliberately, at the author's instruction
+
+**Active close** — 5 points but in only 1 of 4 exams, the worst odds of the six. **`CNAME` and `TXT`
+purposes** — not a real gap: the question asks for *one* record type with its purpose, and `AAAA` and
+`MX` both have cards already.
+
+### Verified
+
+All 89 cards structurally clean: every `(N)` cue matches its row count, nothing under two or over four
+rows, no `==highlight==` in any list body, each single-line card exactly one, no orphaned separators,
+**0 markers**, no BOM, 0 CR. `Test-DeckHygiene.ps1 -All` names neither note. `Vault-Audit.ps1` clean at
+`notesInScope=520`; `markdownlint-cli2` 543 files, 0 issues — both unchanged from F89, which is the
+check that ten added cards created no new file and broke nothing.

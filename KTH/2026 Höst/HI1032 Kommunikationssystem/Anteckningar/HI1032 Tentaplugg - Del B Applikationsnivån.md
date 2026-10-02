@@ -78,6 +78,14 @@ Vad är MIB i SNMP?::==Specifikationen av allt som går att övervaka==, ordnad 
 
 Hur skiljer sig en Counter från en Gauge i SNMP?::Counter ==räknar bara uppåt och slår runt==, medan Gauge går upp och ner
 
+Vad har Counter, Gauge och INTEGER gemensamt i SNMP?::Alla tre är ==32-bitars unsigned==
+
+Vad faller under F i FCAPS?::==Fault== — upptäcka, isolera, rätta och dokumentera fel
+
+Vad faller under P i FCAPS?::==Performance== — övervaka att nätet går så effektivt som möjligt: kapacitet, trafik, genomströmning, svarstid
+
+Vad faller under S i FCAPS?::==Security== — styra åtkomsten till nätet enligt en bestämd policy, med kryptering och autentisering
+
 ## FTP
 
 Vilka två förbindelser använder FTP, och vad går de över? (2)
@@ -104,6 +112,8 @@ Hur hittar DNS-resolvern rotservrarna?::Deras adresser är ==förprogrammerade i
 Hur får klienten adressen till sin DNS-resolver?::==Oftast via DHCP==
 
 I en iterativ DNS-uppslagning, var kommer nästa servers adress ifrån?::==I svaret från servern på nivån ovanför==
+
+Vad skiljer rekursiv från iterativ DNS-uppslagning?::I rekursiv ==gör servrarna jobbet mellan sig och svaret kommer tillbaka samma väg==; i iterativ får frågaren adressen till nästa server och frågar vidare själv
 
 Vad pekar DNS-posttypen MX ut?::==Mottagarens e-postserver==, alltså dess MTA
 

@@ -90,6 +90,16 @@ Vad är det minsta värde cwnd kan ha?::==1, aldrig 0== — efter en timeout sta
 
 Vilket fel är lätt att göra när du ritar övergången till congestion avoidance?::Att rita den ==ett steg för sent==
 
+Vad händer med cwnd och ssthresh när en timeout inträffar?::==ssthresh halveras till cwnd/2 och cwnd sätts till 1==, sedan börjar en ny slow start
+
+När växlar TCP från slow start till congestion avoidance?::När ==cwnd har nått ssthresh==
+
+Hur skiljer sig tillväxten i slow start från den i congestion avoidance?::Slow start ökar cwnd ==en MSS per ACK==, alltså exponentiellt per RTT; congestion avoidance ökar en MSS per RTT, alltså additivt
+
+Vad skiljer Taho TCP från Reno TCP?::Taho behandlar timeout och tre dubbla ACK:ar ==likadant==; Reno skiljer dem åt
+
+Vad gör Reno vid tre dubbla ACK:ar, till skillnad från vid en timeout?::Halverar ssthresh men går till ==fast recovery i stället för att sätta cwnd till 1== — tre dupACK räknas som lätt congestion
+
 ## Etablering
 
 Vilka nummer bär det första SYN-segmentet i trevägshandskakningen?::seq är klientens ISN, och ==ingen ACK== — ACK-flaggan är inte satt
