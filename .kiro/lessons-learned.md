@@ -686,3 +686,61 @@ claims to be, the harder its own claims need checking.
 
 **Lesson:** a fidelity check cannot catch a wrong premise, so something has to audit the premise
 separately — and the cheapest moment is while the premise is still only a paragraph.
+
+## 2026-10-03 — the rule that made reviews sharper also made them blind, and it took three rounds to see
+
+The entry above added the rule that a reviewer must be handed the authoritative rules verbatim. It is a
+good rule and it has paid for itself. It also has a cost that took five days and three review rounds to
+surface: **a reviewer holding the rules checks conformance, and conformance is the easier question, so it
+crowds out the harder one.**
+
+What happened. HI1031's exam-question cards were designed in F87 as *agenda cards* — the front line was
+the exam question and each row named a part of the answer without stating it, so the card drilled the
+shape of an answer rather than its content. The design came out of an adversarial review and survived
+**three** rounds: a plan review by two opposed agents, an implementation review, and a third pass aimed
+at the one risk trimming creates. Every reviewer was briefed with the card-form rules and
+`product.md`'s authoring instructions. Every reviewer reported on conformance. The author discarded the
+whole design the next day in one sentence: he wanted the answer on the card.
+
+**The defect was not in the artifact and no conformance pass could have found it.** A pointer card only
+works if the fact it points at sits somewhere the author actually reviews, and five of the ten concept
+decks carried `nosr` with zero markers. For half the course the cards pointed at material that was out
+of review. That figure had already been measured and printed in the same session's own output, in a table
+I wrote. Nobody asked the question it answered, because the question is not a conformance question.
+
+**Rule added:** `documentation-standard.md` now says to give **exactly one reviewer the premise instead
+of the rules** — the author's situation and goal, and no conventions — asked only whether the artifact is
+the right thing to build. `.kiro/agents/adversarial-reviewer.json` carries both lenses in its prompt, and
+states that steering is inherited automatically so the discipline for the premise lens is the reviewer's
+to keep rather than something the configuration can enforce. Applied immediately: the plan for this very
+change was reviewed by one conformance agent and one premise agent, and the premise agent returned
+FLAWED with the sharpest finding of the pair.
+
+**Lesson:** handing a reviewer the rules buys accuracy and spends curiosity. Both passes are needed, and
+the premise pass is the one that gets skipped, because the artifact in front of you always looks like the
+thing to review.
+
+## 2026-10-03 — every reviewer checked the work against the scope, and nobody checked the scope
+
+Same session, a different shape of the same blindness, and this one has a one-line remedy.
+
+HI1032's cards were written to the headline strategy in the author's own exam analysis: the two question
+pools plus three topics per exam part. Three review rounds over that card set found **nothing** of this
+kind. Then a coverage report — asked for by the author, not planned as a check — enumerated the analysis's
+**complete sub-question inventory** and found **seven** one-point items whose answers were already
+written in his file and which had no card. SIP was worth two points, appeared in a topic ranked fifth
+across three exams, and no card mentioned it at all.
+
+**Why no reviewer could see it.** Every pass compared the cards to the brief. The brief had silently
+excluded part of the source, and an exclusion upstream of every pass is invisible to all of them. The
+reviewers were not careless; they were asking "does the work match the scope?" when the unanswered
+question was "does the scope match the source?"
+
+**Rule added:** one pass must ignore the brief, enumerate what the **source** contains, and diff that
+against what was produced. It is mechanical, it is cheap, and it is the only pass that can find a hole
+the brief put there. Recorded in the external `review-adversarially` skill as *Scope checked, source not*
+so it travels with the method.
+
+**Lesson:** a review bounded by the brief inherits the brief's blind spots. When the source has an
+enumerable structure — an inventory, a question list, a table of contents — diff against the structure,
+not against the plan.

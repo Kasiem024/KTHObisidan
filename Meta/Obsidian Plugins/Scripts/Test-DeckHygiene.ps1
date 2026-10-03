@@ -33,7 +33,7 @@
 #   Nothing outside KTH/ is ever read, so the docs under Meta/ and .kiro/ that quote card syntax in
 #   prose cannot produce a finding.
 #
-#   Eight checks. Each names the file, the line and the offending text.
+#   Nine checks. Each names the file, the line and the offending text.
 #
 #     orphanSeparator   a bare "||" or "??" with no front line above it - the line before is blank,
 #                       a heading, or a marker. The T20 signature.
@@ -48,6 +48,18 @@
 #                       is a recall target, so the bold label per row already does that job and
 #                       marking one row suppresses the others.
 #     missingCue        a list card whose front line has no "(N)" completeness cue.
+#     cueMismatch       a list card whose "(N)" does not equal its own bullet count. The cue exists
+#                       to tell the author how many rows to recall, so a wrong number trains the
+#                       wrong target - and it is the one card defect that reads as correct, because
+#                       nothing about the card looks broken. The number is taken from the LAST
+#                       "(N)" in the front line, since the cue sits at the end by convention and
+#                       taking the first would misread an incidental "(8)" in a section reference.
+#                       Fires only when the body has 2 to 4 rows: below that thinList already
+#                       reports the card and above it fatList does, and one cause must not produce
+#                       two findings. Measured when added: 0 findings in the default
+#                       gate scope and 2 in -All, both in finished courses. The denominators are
+#                       deliberately not quoted here: the script reports cardsInScope, not a
+#                       list-card count, so a number only this comment knows would go stale.
 #     strayMarker       an "<!--SR:" line that does not sit under a complete card. A marker left
 #                       behind by a deletion attaches itself to whatever follows, which is the one
 #                       edit SKILL.md rule 11 forbids and the schedule it carries was earned by a
@@ -213,6 +225,24 @@ function Get-DeckFindings {
       if ($frontLine -ne '' -and -not ($frontLine -match '\(\d+\)')) {
         $res.findings.Add([pscustomobject]@{ check = 'missingCue'; line = $num; text = $frontLine })
       }
+      # The cue must equal the row count. Take the LAST "(N)" in the front line: the cue sits at the
+      # end by convention, and taking the first makes an incidental number earlier in the prompt -
+      # "See section (8). What are the three? (3)" - read as the cue and report a false mismatch.
+      # Scoped so a card is never reported twice for one cause: fewer than 2 rows is thinList's
+      # finding and more than 4 is fatList's. The exception is a front line ending in "(8)", which
+      # fatList exempts - without this clause a broken eight-item card with 5 to 7 rows would be
+      # checked by nothing at all.
+      $inCueScope = ($bullets -ge 2 -and $bullets -le 4) -or ($eightExempt -and $bullets -ge 2)
+      if ($frontLine -ne '' -and $inCueScope) {
+        $cues = [regex]::Matches($frontLine, '\((\d+)\)')
+        if ($cues.Count -gt 0) {
+          $declared = [int]$cues[$cues.Count - 1].Groups[1].Value
+          if ($declared -ne $bullets) {
+            $res.findings.Add([pscustomobject]@{ check = 'cueMismatch'; line = $num;
+              text = ('cue says ' + $declared + ' but body has ' + $bullets + ' rows: ' + $frontLine) })
+          }
+        }
+      }
       continue
     }
 
@@ -339,6 +369,20 @@ function Invoke-SelfTest {
   [void]$t.Append('Front without any cue' + $nl + '||' + $nl + '- **A** one' + $nl + '- **B** two' + $nl + $nl)
   # strayMarker
   [void]$t.Append('<!--SR:!fsrs,2099-01-01T00:00:00.000Z,3,3.1,6.7,2,3,0,0,2099-01-01T00:00:00.000Z-->' + $nl + $nl)
+  # cueMismatch - the cue says three, the body has four rows. Nothing about this card looks wrong,
+  # which is why the check exists; the gate passed cards of this shape until it was added.
+  [void]$t.Append('Front miscounted? (3)' + $nl + '||' + $nl + '- **A** one' + $nl + '- **B** two' + $nl + '- **C** three' + $nl + '- **D** four' + $nl + $nl)
+  # NEGATIVE CONTROL: a list card whose cue is correct must stay silent in cueMismatch.
+  [void]$t.Append('Front counted right? (3)' + $nl + '||' + $nl + '- **A** one' + $nl + '- **B** two' + $nl + '- **C** three' + $nl + $nl)
+  # NEGATIVE CONTROL: the cue is the LAST "(N)", not the first. This card must stay silent, and it can
+  # only stay silent if the last match is used - reading the first would see (8) against 3 rows and
+  # fire. It has to sit INSIDE the 2-4 window, or the check never runs on it and the control cannot
+  # fail: an adversarial review on 2026-10-03 found exactly that defect in the first version of this
+  # fixture, where the equivalent card had six rows and was therefore out of scope.
+  [void]$t.Append('See section (8). What are the three? (3)' + $nl + '||' + $nl + '- **A** one' + $nl + '- **B** two' + $nl + '- **C** three' + $nl + $nl)
+  # An (8)-exempt front line is outside fatList, so cueMismatch is what must catch a wrong count on it.
+  # Eight rows is correct and silent; this one has six and must fire.
+  [void]$t.Append('Name the eight challenges. (8)' + $nl + '||' + $nl + '- **A** one' + $nl + '- **B** two' + $nl + '- **C** three' + $nl + '- **D** four' + $nl + '- **E** five' + $nl + '- **F** six' + $nl + $nl)
   # highlightCount zero
   [void]$t.Append('Question zero?::Answer with no marker.' + $nl + $nl)
   # highlightCount three
@@ -378,7 +422,7 @@ function Invoke-SelfTest {
   $rBom = Get-DeckFindings -Lines ([System.IO.File]::ReadAllLines($bomPath, [System.Text.Encoding]::UTF8))
 
   $expected = @('orphanSeparator', 'thinList', 'fatList', 'listHighlight', 'missingCue',
-    'strayMarker', 'highlightCount', 'unclosedMarker')
+    'cueMismatch', 'strayMarker', 'highlightCount', 'unclosedMarker')
   Write-Host ''
   Write-Host '=== Test-DeckHygiene self-test ==='
   Write-Host ('fixture: ' + $deckDir)
@@ -410,6 +454,46 @@ function Invoke-SelfTest {
   $v3 = 'HOLDS'
   if ($cleanWrong -gt 0) { $v3 = 'BROKEN - a correct card was reported'; $missing++ }
   Write-Host ('    {0,-28} {1,3}  {2}' -f 'clean card', $cleanWrong, $v3)
+  # cueMismatch must take the LAST (N), not the first. "See section (8). What are the three? (3)" has
+  # three rows and a correct cue, and sits inside the window the check runs on, so reporting it means
+  # the first match was used. The card MUST be in scope or this control cannot fail.
+  $cue = @($r.findings | Where-Object { $_.check -eq 'cueMismatch' })
+  $cueFirstWrong = @($cue | Where-Object { $_.text.Contains('section (8)') }).Count
+  $v3b = 'HOLDS'
+  if ($cueFirstWrong -gt 0) { $v3b = 'BROKEN - the first (N) was read as the cue'; $missing++ }
+  Write-Host ('    {0,-28} {1,3}  {2}' -f 'cue taken from last (N)', $cueFirstWrong, $v3b)
+  # and the control must be CAPABLE of failing, which is a property of the fixture rather than of the
+  # findings: the card has to sit inside the row window cueMismatch runs on. Asserted directly, because
+  # the first version of this control keyed on a six-row card that the check never reached, so it
+  # reported HOLDS whether the code was right or wrong.
+  $probe = -1
+  for ($q = 0; $q -lt $lines.Length; $q++) {
+    if ($lines[$q].Contains('What are the three? (3)')) {
+      $probe = 0
+      for ($z = $q + 2; $z -lt $lines.Length; $z++) {
+        if ($lines[$z].Trim() -eq '') { break }
+        if ($lines[$z] -match '^\s*([-*]|\d+\.)\s+\S') { $probe++ }
+      }
+      break
+    }
+  }
+  $v3d = 'HOLDS'
+  if ($probe -lt 2 -or $probe -gt 4) {
+    $v3d = ('BROKEN - probe card has ' + $probe + ' rows, outside the window; control cannot fail')
+    $missing++
+  }
+  Write-Host ('    {0,-28} {1,3}  {2}' -f 'last-(N) control can fail', $probe, $v3d)
+  # a correct cue must stay silent, and a card thinList or fatList already owns must not be
+  # double-reported by cueMismatch
+  $cueClean = @($cue | Where-Object { $_.text -match 'counted right|Front thin|Front fat' }).Count
+  $v3c = 'HOLDS'
+  if ($cueClean -gt 0) { $v3c = 'BROKEN - correct cue or double-reported card'; $missing++ }
+  Write-Host ('    {0,-28} {1,3}  {2}' -f 'no cue false positives', $cueClean, $v3c)
+  # an (8)-exempt card is outside fatList, so a wrong count on it must still be caught
+  $eightBad = @($cue | Where-Object { $_.text.Contains('eight challenges') }).Count
+  $v3e = 'FIRES'
+  if ($eightBad -eq 0) { $v3e = 'BROKEN - a broken (8) card was checked by nothing'; $missing++ }
+  Write-Host ('    {0,-28} {1,3}  {2}' -f '(8) card with wrong count', $eightBad, $v3e)
   # nothing inside a fenced code block is a card
   $fenceWrong = @($r.findings | Where-Object { $_.text -match 'std::cout|namespace foo|in an example' }).Count
   $v4 = 'HOLDS'
@@ -434,7 +518,7 @@ function Invoke-SelfTest {
   Remove-Item -LiteralPath $fixRoot -Recurse -Force
   Write-Host ''
   if ($missing -eq 0) {
-    Write-Host 'RESULT: all 8 checks fire and all 6 negative controls hold. A zero on real decks means clean.'
+    Write-Host 'RESULT: all 9 checks fire and all 10 controls hold. A zero on real decks means clean.'
     return 0
   }
   Write-Host ('RESULT: ' + $missing + ' problem(s) with the checks themselves. A zero proves nothing until fixed.')

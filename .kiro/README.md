@@ -20,6 +20,7 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `hooks/*.sh` | `preToolUse` guards — read stdin, `exit 2` blocks |
 | `agents/vault-auditor.*` | Conformance inspector; writes reports, never edits notes |
 | `agents/flashcard-author.*` | Card author; writes course notes only, grounded in the course literature |
+| `agents/adversarial-reviewer.*` | Independent reviewer; reads only, cannot write or run commands. Carries two lenses — conformance against the rules, and premise without them |
 
 **A set of skills for the Gemini web app was built from this vault's material and lives outside it**,
 under `Jag/Gemini/Skills/` on the author's Drive. **No count is given here on purpose** — the author

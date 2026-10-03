@@ -173,3 +173,10 @@ One rule decides whether such a review is worth reading: **hand the reviewer the
 verbatim.** A reviewer given the rules reports conformance; a reviewer left to infer them reports
 opinion. The worked reasoning is in `lessons-learned.md` under *the fact was wrong in the plan*; the
 full method is in the external `review-adversarially` skill.
+
+**And give exactly one reviewer the premise instead of the rules.** The instruction above makes a pass
+sharper and narrower at the same time, so a reviewer holding the rules checks conformance and never asks
+whether the thing is worth building. Three rule-briefed rounds approved a card design the author
+discarded the next day; the two entries in `lessons-learned.md` about frame blindness and about scope
+record what that cost. Where subagents are available the premise pass is a separate agent run — see
+`.kiro/agents/adversarial-reviewer.json`, whose prompt carries both lenses.

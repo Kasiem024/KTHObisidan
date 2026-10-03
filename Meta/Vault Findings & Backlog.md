@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F92): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F93): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4753,3 +4753,121 @@ facit notes through Obsidian's own UI, which rewrites frontmatter into YAML list
 `Format-FrontmatterTags.ps1 -Apply` **after confirming `nosr` was present in all five**, since that
 script preserves what is there but does not restore a tag already gone. This is the fifth recurrence of
 the same cause.
+
+## F93. The half-checked `(N)` rule closed, and the review workflow given a second lens
+
+**Date:** 2026-10-03
+**Status:** Closed
+**Scope:** `Test-DeckHygiene.ps1` (new `cueMismatch` check), a new `adversarial-reviewer` agent, two
+`lessons-learned.md` entries, two entries appended to the external `review-adversarially` skill, and
+one paragraph in `documentation-standard.md`
+
+### Why: an honest evaluation of the workflow, asked for and answered
+
+The author asked whether the adversarial-subagent workflow was working. The answer, from the evidence of
+the 2026-10-01 to 10-03 sessions, is that it has one real strength and one systematic blind spot.
+
+**It is good at checking a claim against a source, and at catching my own confident falsehoods about the
+vault's own rules.** The best single outcome of the whole method: I asserted that cards outside a
+`## Flashcards` heading publish as raw `::` syntax, and a reviewer quoted `Meta/Vault Standard.md`
+against me — the transformer converts cards anywhere. The structure decision rested on that and I was
+simply wrong. Two fabrication hunters later cleared 81 cards with zero findings, with quotes.
+
+**It is blind to the frame being wrong, and every miss was a frame error.** Not one was a defect inside
+an artifact.
+
+**And it is inefficient in two measurable ways.** Three of roughly twenty-two agent runs had to be
+repeated because the agent returned a summary instead of the deliverable — my prompt's fault, fixed by a
+falsifiable output assertion. And every form check a reviewer performed, a script did better: asking a
+language model to count bullet rows is strictly worse than counting them in PowerShell.
+
+### A: the gate was half-checking its own rule
+
+`missingCue` fired only when a front line had no `(N)` at all. **It never compared the number to the
+body**, so a card saying `(3)` over four rows passed the gate. My throwaway read-back script had caught
+that shape four times in two days, which is the real signal: when a reviewer or a one-off script keeps
+counting something, the gate is missing a check.
+
+`cueMismatch` now compares the **last** `(N)` in the front line against the bullet count.
+
+**The measurement that decided its scope was wrong twice, and both corrections matter.** A first pass
+reported 63 mismatches vault-wide, which would have made the check unshippable. Almost all had zero rows:
+my probe counted only `^[-*]` while the script counts `^\s*([-*]|\d+\.)\s+\S`, so numbered and indented
+bodies read as empty. **An adversarial reviewer caught that my evidence used a different definition than
+the thing it was measuring**, which is the second time in two days my own measurement was the artifact.
+Re-measured with the script's own definition: **11** mismatches across `-All`, of which **9 were already
+`fatList` findings**. So the check is scoped to bodies of 2 to 4 rows, leaving shorter to `thinList` and
+longer to `fatList` — one cause, one finding. Result: **0 findings in the default gate scope, 2 in the
+`-All` survey**, both in finished courses. Safe to ship as a gate.
+
+One gap closed on the way: a front line ending `(8)` is exempt from `fatList`, so an eight-item card
+with five to seven rows would have been checked by nothing. `cueMismatch` now covers that case.
+
+### The review of the implementation found the defect that mattered most
+
+**My first negative control could not fail.** It asserted that `cueMismatch` reads the last `(N)` rather
+than the first, keyed on the fixture card *"See section (8). What are the six? (6)"* — which has **six**
+rows, so the check never reached it. The reviewer ran both a correct and a deliberately broken variant
+against that card and got silence from each: the control would have reported HOLDS on a first-`(N)` bug,
+and the new gate could have shipped broken behind a green harness.
+
+That is precisely the failure this change was made to prevent, reproduced inside the change itself. The
+fixture now carries a three-row probe where the first `(N)` is `(8)` and the correct cue is `(3)`, plus
+an assertion that **the probe card is inside the window the check runs on** — a property of the fixture,
+not of the findings, because the previous control's mistake was to infer capability from an absence.
+`-SelfTest` now plants nine defects and holds ten controls.
+
+Four smaller findings from the same review, all actioned: the `(N)`-must-equal-the-row-count rule was
+missing from `write-flashcards/SKILL.md`, which is its documented home and listed only six of the nine
+checks; the agent's `resources` list was inert and has been removed rather than left looking as if it
+controlled context; the prompt overstated steering inheritance as an invariant and failed to say that
+`Meta/Vault Standard.md` is **not** a steering file and never loads; and two denominators quoted in prose
+were list-card counts the script does not print, so they were removed under `scripts.md`'s own rule to
+quote the script rather than the prose.
+
+### B: `adversarial-reviewer`
+
+Five rules were retyped verbatim in every review prompt across both sessions: write no file, quote every
+finding, your own knowledge is not evidence, say when you cannot verify, findings list with no preamble.
+An agent definition is the only place that makes them free.
+
+**Stricter than `vault-auditor`: no `write` and no `shell`.** The missing shell is the point rather than
+an oversight — a reviewer that can run commands starts counting, and counting belongs in a script. The
+prompt says so and names `Test-DeckHygiene.ps1` as the owner of card form. It carries the finding format
+and forced verdict from the external skill rather than inventing a second format, and it carries both
+lenses.
+
+### C, D, E: where the two failures were written down
+
+The external `review-adversarially` skill is the documented home for the method and
+`documentation-standard.md` forbids copying its content here, so it gained two entries in
+`how-reviews-fail.md` — *Conformance reported as review* and *Scope checked, source not*. **Reading it
+first changed the plan**: the skill states that it runs where it cannot spawn a second reviewer, which is
+why this vault needs an agent rather than a second copy of the method. The folder is outside git and
+outside Drive's version history, so the file was backed up to `%TEMP%` and only appended to.
+
+`lessons-learned.md` took the two entries with the vault-specific detail, which is the home
+`documentation-standard.md` assigns for *"a check passed and the thing it was meant to protect was broken
+anyway"*. The first is the direct correction to the entry immediately above it, which five days earlier
+added the rule to hand reviewers the authoritative rules verbatim: that rule buys accuracy and spends
+curiosity. `documentation-standard.md` now carries the counterweight — **give exactly one reviewer the
+premise instead of the rules** — and the plan for this change was itself reviewed that way, with the
+premise agent returning the sharper of the two verdicts.
+
+### Verified
+
+`Test-DeckHygiene.ps1 -SelfTest` — all 9 checks fire, all 10 controls hold. Default scope clean at 257
+cards. `Test-ScriptHygiene.ps1` clean, 18 files and 91 checks, which covers the pure-ASCII, LF, header
+and `scripts.md`-agreement rules for the edited script; verified independently as 0 non-ASCII bytes and 0
+CR. `Test-DocHygiene.ps1` clean, and it is the only thing that checks `.kiro/`, where most of this change
+lives. `Vault-Audit.ps1` clean at `notesInScope=520`. `markdownlint-cli2` 543 files, 0 issues. The agent
+JSON parses, declares neither `write` nor `shell`, and its prompt file resolves.
+
+### One doc I nearly corrected and should not have
+
+A `6>` capture of `Test-DocHygiene.ps1` came back empty while piping gave full output, which looked like
+`traps.md` **T23** misclassifying it. Checked the source before touching the trap: it uses `Write-Host`
+17 times, so T23's classification is right. The fault was my own wrapper — `6>` on a **child**
+`powershell -File` call captures nothing, and T23 already recommends the sidestep I had ignored. Recorded
+here because `documentation-standard.md` warns about exactly this: the record was right and I was
+confident.

@@ -81,7 +81,7 @@ The meanings are in `conventions.md` §1. This is the *choice*:
 |---|---|---|
 | Term → definition, where you must be able to **produce** the term, not just recognise it | `;;` | Reversed: generates a back-to-front card too. The backward direction is **not** free for semantically related pairs — testing one direction barely helps the other (Popov et al. 2019; direction-changed transfer `d = 0.41–0.55` on pairs, none on triplets, Rickard & Pan 2020). So this is genuinely two cards of work, and worth it only when production is required. |
 | A question with reasoning in the answer ("Varför…", "Vad skiljer…") | `::` | One-directional. The reverse of a *why* question is meaningless. |
-| A short list, 2–4 items, answer needs multiple lines | `\|\|` | Multi-line, one-directional. Put the item count in the prompt as a completeness cue: `... ? (3)`. |
+| A short list, 2–4 items, answer needs multiple lines | `\|\|` | Multi-line, one-directional. Put the item count in the prompt as a completeness cue: `... ? (3)`. **The number must equal the number of rows** — `Test-DeckHygiene.ps1`'s `cueMismatch` is a gate on it, and it reads the **last** `(N)` in the prompt, so an incidental number earlier is safe. |
 | Both directions **and** multi-line | `??` | Rare here. Prefer splitting into separate cards. |
 
 Default to `::`. A `;;` card is two cards of work — justify it.
@@ -300,7 +300,8 @@ Then, in order:
 
 - `Test-DeckHygiene.ps1 -Course <CODE>` → `RESULT: clean`. This is the only check that looks at a
   card's **shape**: an orphaned separator, a list with fewer than 2 or more than 4 rows, a
-  `==highlight==` inside a list body, a missing `(N)` cue, a marker not sitting under a complete card,
+  `==highlight==` inside a list body, a missing `(N)` cue, **a `(N)` that does not match the row count**,
+  a marker not sitting under a complete card,
   an answer without exactly one highlight. A card count cannot see any of them — delete one card and
   add one and the total is unchanged while the deck holds a question with no answer. Run `-SelfTest`
   once if you have not seen it fire; a zero from a blind check is not a pass.

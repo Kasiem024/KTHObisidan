@@ -150,19 +150,25 @@ stale the moment it landed.
   syntax and an orphaned `||` on its own line is valid Markdown, and `Get-DeckPairCensus.ps1` counts
   cards — which is exactly the measurement that cannot see this, because a counter looks for lines that
   *are* `||`, so an orphaned separator still counts as one card. Delete one card and add one and the
-  total is unchanged while the deck holds a question with no answer (**T20**). Eight checks, each naming
+  total is unchanged while the deck holds a question with no answer (**T20**). Nine checks, each naming
   the file, line and text: orphaned separator, a list with fewer than 2 or more than 4 rows, a
-  `==highlight==` inside a list body, a missing `(N)` cue, a marker not sitting under a complete card,
+  `==highlight==` inside a list body, a missing `(N)` cue, **a `(N)` that does not equal the row count**,
+  a marker not sitting under a complete card,
   an answer without exactly one highlight, and an unclosed `==`. `emptyHeading` and the count of `;;`
   cards are **notes** and never change the exit code, because both are sometimes deliberate.
+  `cueMismatch` is the newest and was added because the rule was **half-checked**: the gate confirmed a
+  cue existed and never compared its number to the body, so a card saying `(3)` over four rows passed.
+  It reads the **last** `(N)` in the front line and fires only on bodies of 2 to 4 rows, leaving
+  shorter ones to `thinList` and longer to `fatList` so one cause gives one finding. Measured when added: **0** in the default scope, **2** in `-All`.
   Default scope is the chapter decks; `-Course HI1031` narrows, `-All` widens to every note holding a
   card and is a **survey, not a gate** — several hundred legacy cards predate these rules. A scope that
   resolves to nothing exits **2**, not 0, because a mistyped `-Course` returning "clean" is the worst
   possible answer. Frontmatter and fenced code blocks are skipped: without that, a `cpp` block
   containing `std::cout` parsed as three cards with wrong highlight counts.
-  **Run `-SelfTest` when you start trusting it**: it plants one instance of every defect plus six
+  **Run `-SelfTest` when you start trusting it**: it plants one instance of every defect plus ten
   negative controls — a correct card, a code fence, a `(8)` cue at the end of a front line, a
-  mid-sentence `(8)` that must *not* exempt a long list, and the same fixture in CRLF and with a BOM —
+  mid-sentence `(8)` that must *not* exempt a long list, a correct cue, a front line whose first `(N)`
+  is not the cue, and the same fixture in CRLF and with a BOM —
   and requires every check to fire and every control to stay silent. That switch earned itself twice:
   the first run revealed that `missingCue` never fired, because the only card without a cue in the
   fixture was the orphaned one, whose front line is empty and therefore skipped; an adversarial review
