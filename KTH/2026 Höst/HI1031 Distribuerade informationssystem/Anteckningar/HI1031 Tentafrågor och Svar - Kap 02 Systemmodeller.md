@@ -58,11 +58,12 @@ andra hand över fysiska noder.
    sidor av en processgräns. Avsluta med att det generaliserar till **n-skikt** — Wikipedia, 60 000
    sidförfrågningar per sekund.
 
-Beskriv hur en trelagersarkitektur är uppbyggd. (3)
+Beskriv hur en trelagersarkitektur är uppbyggd. (4)
 ||
-- **De tre delarna** – vilka tre lager, och en server per lager
-- **Vinsten** – var logiken samlas
-- **Priset** – vad tre lager kostar mot två
+- **De tre delarna** – presentationslogik (samspelet med användaren och vyn), applikationslogik (själva programmets logik, även kallad affärslogik) och datalogik (den varaktiga lagringen, oftast en databas)
+- **En server per del** – en-till-en: skikt 1 är klientens vy, skikt 2 en applikationsserver, skikt 3 en databasserver
+- **Vinsten** – applikationslogiken samlas på ett ställe, så det blir lättare att underhålla; och skikt 1 kan vara ett rent gränssnitt, vilket ger tunna klienter
+- **Priset mot tvåskikt** – tre servrar att sköta i stället för två, och mer nättrafik och högre fördröjning per operation
 
 ## Fråga 2 — Beskriv hur en MVC-arkitektur är uppbyggd
 
@@ -102,10 +103,10 @@ skikt 2, datan i skikt 3. Kopplingen är min, inte bokens.
 
 Beskriv hur en MVC-arkitektur är uppbyggd. (4)
 ||
-- **De tre delarna**
-- **Flödet** – hur ett klick går genom M, V och C
-- **Poängen** – presentationen skild från datan
-- **Säg var det står** – inte i boken, du svarar på allmän grund
+- **De tre delarna** – Model (datan, reglerna och tillståndet, vet inget om gränssnittet), View (läser ur modellen och visar den) och Controller (tar inmatning och översätter den till operationer på modellen)
+- **Flödet** – användaren agerar i vyn, controllern tolkar, modellen uppdateras och säger till att den ändrats, och vyn ritar om sig
+- **Poängen** – presentationen skiljs från datan, så flera vyer kan visa samma modell och modellen kan testas helt utan gränssnitt
+- **Står inte i boken** – svaret är allmän kunskap om mönstret, inte bokens text; säg det rakt ut om du pressas på var det står
 
 ## Fråga 3 — Vad är Middleware?
 
@@ -159,7 +160,7 @@ de bara i kommunikationssystemet blir de ofullständiga och arbetet dubbleras.
 5. Avsluta med **gränsen**: end-to-end-argumentet. Vissa funktioner kan bara göras rätt i
    ändpunkterna — e-post måste lägga på egen feltolerans ovanpå TCP, som inte klarar längre avbrott.
 
-Vad är Middleware?::Säg ==vad det döljer==, var det sitter, och ge exempel.
+Vad är Middleware?::Ett lager av mjukvara som ==döljer heterogenitet== och ger programmeraren en bekväm programmeringsmodell; det sitter ovanpå operativsystemet och under tillämpningarna.
 
 ## Fråga 4 — Vad är fördelarna med en klient/server-lösning?
 
@@ -209,10 +210,10 @@ men löser inte grundproblemet — det gör **peer-to-peer**, som hör till kapi
 
 Vad är fördelarna med en klient/server-lösning? (4)
 ||
-- **Kärnfördelen** – vad den gör enkelt
-- **Enkla roller** – vem gör vad
-- **Går att bygga i lager** – en server kan själv vara klient (webbserver, DNS)
-- **Går att förbättra** – flera servrar, caching, mobil kod drar mer last
+- **Kärnfördelen** – ett direkt och enkelt sätt att dela data och resurser: klienten frågar, servern sköter resursen och svarar; det är därför boken kallar den sin mest använda arkitektur
+- **Går att bygga i lager** – en server kan själv vara klient: en webbserver är klient hos filservern och hos DNS, och en söktjänst är både server och klient
+- **Går att förbättra med placering** – flera servrar med uppdelning eller replikering, caching i proxyservrar, och mobil kod för bra svarstider
+- **Men den skalar dåligt** – en tjänst på en enda adress kan inte växa förbi värddatorns kapacitet och bandbredd; det är därför peer-to-peer finns
 
 ## Fråga 5 — Vad är en mobil agent?
 
@@ -260,7 +261,7 @@ aktiekurser. En mobil agent ==bär med sig sin data, flyttar sig vidare och arbe
 5. Avsluta med **bokens tvivel**: samma uppgifter går att lösa med vanliga fjärranrop, som web
    crawlers gör, så nyttan kan vara begränsad.
 
-Vad är en mobil agent?::Säg ==vad den gör==, vinsten, och att boken tvivlar på nyttan.
+Vad är en mobil agent?::Ett ==körande program med både kod och data== som reser mellan datorer, gör många lokala anrop i stället för fjärranrop och kommer tillbaka med resultatet; boken tvivlar på nyttan, för vanliga fjärranrop räcker ofta.
 
 ## Luckor och källor
 

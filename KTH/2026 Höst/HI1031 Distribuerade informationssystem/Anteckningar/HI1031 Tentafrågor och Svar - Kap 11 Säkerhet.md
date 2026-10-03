@@ -75,9 +75,9 @@ lista examinatorn troligen letar efter. (egen strukturering, båda listorna är 
 
 Vilka är de viktigaste hoten och attackerna som ett distribuerat system måste skyddas mot? (3)
 ||
-- **Varför** – delning av resurser skapar problemet
-- **Tre hotklasser**
-- **Fem attackmetoder** – avlyssning, maskering, manipulation, uppspelning, överbelastning
+- **Varför** – det är delningen av resurser som skapar problemet; det som inte delas kan skyddas genom att stängas av från nätet
+- **Tre hotklasser** – läckage, att obehöriga får information, manipulation, obehörig ändring, och vandalisering, att störa systemet utan egen vinst
+- **Fem attackmetoder** – avlyssning, maskering, meddelandemanipulation, uppspelning och överbelastning
 
 ## 2. Beskriv vilken roll kryptering har för säkerhet, förutom att dölja innehållet i ett meddelande (konfidentialitet, autentisering, integritet, oförnekbarhet)
 
@@ -147,10 +147,10 @@ du gjort det — och det är hela grunden för autentisering, signaturer och of�
 
 Vilken roll har kryptering för säkerhet, utöver att dölja innehållet? (4)
 ||
-- **Konfidentialitet** – villkoret för att få läsa
-- **Integritet** – vad som krävs, och att det inte är gratis
-- **Autentisering** – vad en delad nyckel röjer
-- **Oförnekbarhet** – hur den uppnås
+- **Konfidentialitet** – bara den som har motsvarande dekrypteringsnyckel kan läsa, och det håller så länge nyckeln inte är röjd
+- **Integritet** – fås inte gratis: det krävs att redundant information som en checksumma läggs in och kontrolleras, annars märks inte en ändring
+- **Autentisering** – lyckas man dekryptera med en nyckel som bara två parter känner, så vet man vem avsändaren är
+- **Oförnekbarhet** – avsändaren kan inte förneka att han deltog; det uppnås med en digital signatur som intygar meddelandet för tredje part
 
 ## 3. Förklara hur symmetrisk, asymmetrisk respektive hybridkryptering fungerar. I vilka situationer används respektive typ? Prestanda?
 
@@ -258,20 +258,20 @@ på resonemang om hur väl algoritmen döljer klartexten.
 
 Hur fungerar symmetrisk, asymmetrisk och hybridkryptering? (3)
 ||
-- **Symmetrisk** – nyckelrelationen, och att den bygger på envägsfunktioner
-- **Asymmetrisk** – nyckelrelationen, och att den bygger på fälldörrsfunktioner
-- **Hybrid** – vad vardera krypteringen gör
+- **Symmetrisk** – samma nyckel krypterar och dekrypterar; bygger på envägsfunktioner, och styrkan sitter i nyckellängden eftersom bästa attacken är att prova alla nycklar
+- **Asymmetrisk** – olika nycklar för kryptering och dekryptering; bygger på fälldörrsfunktioner, för RSA två stora primtal vars produkt inte går att faktorisera tillbaka
+- **Hybrid** – asymmetrisk kryptering autentiserar parterna och byter en hemlig nyckel, sedan sköter den symmetriska nyckeln all vidare trafik, som i TLS
 
 I vilka situationer används symmetrisk, asymmetrisk och hybridkryptering? (3)
 ||
-- **Symmetrisk** – bulkkryptering av själva datan
-- **Asymmetrisk** – nyckelutbyte och signering, sällan för data
-- **Hybrid** – storskaliga system och e-handel, som TLS
+- **Symmetrisk** – bulkkryptering av själva datan, alltså den stora mängden innehåll
+- **Asymmetrisk** – nyckelutbyte och signering i de inledande stegen; används sällan för att kryptera data alls, eftersom det kostar för mycket
+- **Hybrid** – storskaliga distribuerade system och e-handel, där TLS är exemplet
 
 Prestanda: hur skiljer sig symmetrisk och asymmetrisk kryptering? (2)
 ||
-- **Förhållandet** – storleksordningen dyrare
-- **I praktiken** – en webbsida krypteras på millisekunder, så https känns knappt
+- **Förhållandet** – asymmetrisk kryptering kräver typiskt 100 till 1000 gånger mer processorkraft än symmetrisk, och av de symmetriska är AES snabbast och Triple-DES långsammast
+- **I praktiken** – en webbsida är sällan större än 100 kB och krypteras på några millisekunder, så algoritmernas prestanda påverkar knappt hur snabb https känns
 
 ## 3.1 Förklara hur asymmetriska nycklar (public/private) kan användas för att ge autenticitet
 
@@ -322,9 +322,9 @@ själv använder du din egen privata. Den första ger sekretess, den andra auten
 
 Hur kan asymmetriska nycklar (public/private) användas för att ge autenticitet? (3)
 ||
-- **Grunden** – vilken relation nycklarna har
-- **Vändningen** – vilken nyckel man krypterar med, vilken alla verifierar med
-- **Förbehållet** – mottagaren måste veta att publika nyckeln är din, annars MITM
+- **Grunden** – nyckelparets två funktioner är varandras inverser; för RSA är det bevisat att de kan köras i vilken ordning som helst
+- **Vändningen** – krypterar man med den privata nyckeln kan alla dekryptera med den publika; det ger ingen sekretess, men bevisar att bara innehavaren av den privata nyckeln kunde ha skapat det
+- **Förbehållet** – verifieraren måste veta att den publika nyckeln verkligen är avsändarens, annars kan en man-in-the-middle svara med sin egen nyckel; därför certifikat
 
 ## 4. Vad är en digital signatur och vad bidrar den med gällande säkerhet? Hur genereras respektive kontrolleras en digital signatur?
 
@@ -406,10 +406,10 @@ den är billig och därför den inte ger någon sekretess — ==M skickas i klar
 
 Vad är en digital signatur, vad bidrar den med, och hur skapas och kontrolleras den? (4)
 ||
-- **Vad det är** – vad en signatur binder ihop
-- **Vad den ger** – de tre egenskaperna
-- **Skapas** – vad man hashar, och med vilken nyckel
-- **Kontrolleras** – med vilken nyckel, och vad man jämför mot
+- **Vad det är** – den binder oåterkalleligt signerarens identitet till hela bitföljden i dokumentet, med en hemlighet bara signeraren har
+- **Vad den ger** – tre egenskaper: autentisk, den signerades medvetet och är oändrad, oförfalskbar, ingen annan kunde ha gjort den och den kan inte flyttas till ett annat dokument, och oförnekbar
+- **Skapas** – avsändaren räknar ut en sammanfattning av meddelandet och krypterar den med sin privata nyckel; meddelandet självt skickas i klartext
+- **Kontrolleras** – mottagaren dekrypterar signaturen med avsändarens publika nyckel, räknar själv ut sammanfattningen, och jämför; stämmer de är signaturen giltig
 
 ## 4.1 Vad är en digest-funktion (säker hashfunktion) och vilka egenskaper har en sådan funktion?
 
@@ -464,8 +464,8 @@ båda ==kan betraktas som tillräckligt säkra== för överskådlig tid, men att
 
 Vad är en digest-funktion (säker hashfunktion) och vilka egenskaper har den? (2)
 ||
-- **Vad det är** – vad den gör med meddelandets längd
-- **Egenskaperna** – de tre
+- **Vad det är** – den gör ett meddelande av godtycklig längd till ett kort värde av fast längd som beskriver det, ett slags fingeravtryck
+- **Egenskaperna** – tre: lätt att räkna fram hashen ur meddelandet, svårt att gå från hashen tillbaka till meddelandet, och svårt att hitta ett annat meddelande med samma hash
 
 ## 5.1 Vad är TLS/SSL respektive HTTPS? Förklara hur handskakningen i TLS går till
 
@@ -549,8 +549,15 @@ certifikatutfärdare.
 
 Vad är TLS/SSL respektive HTTPS? (2)
 ||
-- **TLS/SSL** – vad det skapar, och relationen mellan SSL och TLS
-- **HTTPS** – vad det egentligen är
+- **TLS/SSL** – SSL kom från Netscape, och en utökad version blev internetstandard under namnet TLS; det bygger en säker kanal med sekretess, integritet och autenticitet
+- **HTTPS** – inget eget protokoll: prefixet https i en URL startar upprättandet av en TLS-kanal mellan webbläsare och webbserver
+
+Hur går TLS-handskakningen till, steg för steg? (4)
+||
+- **ClientHello och ServerHello** – parterna enas om protokollversion, sessions-id, cipher suite och komprimering och utbyter slumpvärden; servern erbjuder en lista av cipher suites och klienten väljer en
+- **Certifikat, valfritt** – parterna autentiserar varandra genom att utbyta signerade publik-nyckelcertifikat i X.509-format, och minst en publik nyckel måste finnas för nästa steg
+- **Pre-master secret** – en part skapar ett stort slumpvärde och skickar det krypterat med den publika nyckeln; ur det räknar båda fram sessionsnycklarna, en per riktning, plus MAC-hemligheterna
+- **ChangeCipherSpec och Finished** – dessa meddelanden avslutar handskakningen, och därefter är all vidare trafik krypterad och signerad enligt den valda cipher suiten
 
 ## 5.2 Vad är ett certifikat? Vad innehåller det, vad ska det säkerställa och vad är en Certificate Authority (CA)?
 
@@ -634,10 +641,10 @@ fick den första nyckeln. Allt annat är signaturkontroller. (egen slutsats)
 
 Vad är ett certifikat, vad innehåller det, vad ska det säkerställa, och vad är en CA? (4)
 ||
-- **Vad det är** – vad slags intyg
-- **Innehåll** – de tre delarna
-- **Säkerställer** – vilken koppling som ska stämma
-- **CA** – vem det är, och att verifieringen sker i två steg
+- **Vad det är** – ett dokument med ett påstående, oftast kort, signerat av en principal; det kan intyga vad som helst, inte bara nycklar
+- **Innehåll** – ett X.509-certifikat har subject med namn och publik nyckel, issuer med namn och signatur, en giltighetsperiod med två datum, och administrativ information; bindningen ligger i signaturen
+- **Säkerställer** – att man kan lita på ett påstående utan att känna motparten; men man måste ha utfärdarens äkta publika nyckel, annars kan vem som helst tillverka ett falskt certifikat
+- **CA** – en välkänd organisation som utfärdar certifikat mot bevis på identitet; verifieringen sker i två steg, hämta utfärdarens certifikat från en pålitlig källa och validera signaturen
 
 ## Luckor och källor
 

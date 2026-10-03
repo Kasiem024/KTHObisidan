@@ -1,5 +1,5 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-09-09
 updated: 2026-09-15
 description: "Svar på tentafrågorna för kapitel 10 om peer-to-peer-system: skillnaden mot klient-server med för- och nackdelar, vilka situationer och datatyper som passar, kopplingen till upphovsrätt via Napster, de sex icke-funktionella kraven, hur en resurs hittas med routing overlay, strukturerat mot ostrukturerat, samt jämförelsen mellan IP och routing på applikationsnivå."
@@ -78,16 +78,16 @@ volatiliteten kräver kan ==utnyttjas för att stå emot manipulation== från il
 
 Vad skiljer P2P från klient-server? (3)
 ||
-- **Målet** – dela i stor skala utan separat skötta servrar
-- **Klient-server** – var resurserna ligger och vad som sätter gränsen
-- **P2P** – hur resurserna och noderna förhåller sig
+- **Målet** – dela data och resurser i mycket stor skala utan servrar som måste skötas var för sig
+- **Klient-server** – resurserna ligger på en server eller ett litet kluster; få beslut behövs, men skalan begränsas av serverns kapacitet och nätanslutning
+- **P2P** – resurserna ligger spritt över nätet, alla noder har samma förmåga och ansvar, varje användare bidrar, och driften beror inte på något centralt system
 
 Vilka är P2P:s viktigaste fördelar och nackdelar? (4)
 ||
-- **Fördelarna** – de tre styckena
-- **Nackdel: data** – de två svagheterna
-- **Nackdel: volatilitet** – vad ägarna inte kan lova
-- **Vändningen** – replikeringen som volatiliteten kräver ger manipulationsmotstånd
+- **Fördelarna** – utnyttjar oanvända resurser, skalar med bra lastbalansering, och självorganiserar så supportkostnaden i stort är oberoende av antalet deltagare
+- **Nackdel: data** – föränderlig data är dyr att lagra jämfört med en betrodd central tjänst, och anonymiteten har aldrig blivit starka garantier
+- **Nackdel: volatilitet** – ägarna lovar inte att hålla sina datorer påslagna, anslutna och felfria, så tillgängligheten är oförutsägbar
+- **Vändningen** – just den replikering volatiliteten tvingar fram ger också motstånd mot manipulation från illvilliga noder
 
 ## 2. I vilka situationer och för vilken typ av data passar P2P-system? Varför har P2P-tekniken kopplats samman med piratkopiering och upphovsrätt?
 
@@ -155,15 +155,15 @@ något som är svårare att stämma.
 
 I vilka situationer och för vilken data passar P2P? (3)
 ||
-- **Datatypen** – vilken sorts fil, och kopplingen till GUID:et
-- **Varför det funkar** – hashen gör filen självcertifierande mot manipulation
-- **Situationen** – stor skala där ingen enskild fil är kritisk just nu
+- **Datatypen** – oföränderliga filer som musik och video; GUID:et är en säker hash av innehållet, så en ändring ger ett annat GUID
+- **Varför det funkar** – hashen gör filen självcertifierande: mottagaren räknar om den och ser att den stämmer, vilket skyddar mot manipulation från obetrodda noder
+- **Situationen** – stor skala där ingen enskild fil är kritisk; musikfiler uppdateras aldrig, och en onåbar fil kan hämtas senare
 
 Varför har P2P kopplats samman med piratkopiering och upphovsrätt? (3)
 ||
-- **Napster** – dess arkitektur, indexet kontra filerna
-- **Argumentet som föll** – vad de hävdade, och varför det inte höll
-- **Följden** – vad de kända adresserna ledde till
+- **Napster** – arkitekturen hade centrala index, men användarna tillhandahöll filerna, som låg på deras egna datorer
+- **Argumentet som föll** – utvecklarna hävdade att de inte deltog i kopieringen, men indexservrarna bedömdes vara en väsentlig del av processen
+- **Följden** – indexservrarna låg på välkända adresser, så operatörerna kunde inte vara anonyma och kunde stämmas; en helt distribuerad tjänst hade spritt ansvaret över alla
 
 ## 3. Vilka icke-funktionella krav ställs på ett P2P-system?
 
@@ -218,7 +218,10 @@ använder ofta ==så höga replikeringsfaktorer som 16==.
    eller kan litas på. Och konsekvensen är att kunskapen om var objekt ligger måste partitioneras och
    replikeras, med faktorer så höga som 16.
 
-Vilka icke-funktionella krav ställs på ett P2P-system?::Sex krav i två grupper: ==tre för att systemet är stort, tre för att datorerna varken ägs eller litas på==.
+Vilka icke-funktionella krav ställs på ett P2P-system? (2)
+||
+- **Tre för att systemet är stort** – global skalbarhet till miljoner objekt, lastbalansering med slumpmässig placering plus repliker av det hårt använda, och optimering för lokala interaktioner så resurser läggs nära dem som använder dem
+- **Tre för att datorerna varken ägs eller litas på** – anpassning till att noder ansluter och lämnar fritt, säkerhet med autentisering och kryptering när värdarna har olika ägare, och anonymitet, förnekbarhet och censurmotstånd
 
 ## 4. Hur hittar man en specifik resurs i ett P2P-nätverk? Vad är en "routing overlay"? Vad är skillnaden mellan strukturerade och ostrukturerade P2P-system?
 
@@ -304,16 +307,16 @@ använder ostrukturerade metoder.
 
 Vad är en routing overlay och hur hittar den en resurs? (3)
 ||
-- **Grundproblemet** – ingen kan hålla hela katalogen; kunskapen partitioneras och replikeras
-- **Vad den är** – i vilket lager den rutar, och i förhållande till IP
-- **Hur den hittar** – vad klienten skickar, och vart det rutas
+- **Grundproblemet** – ingen kan hålla hela katalogen över var allt finns, så kunskapen partitioneras och sprids över noderna, med hög replikering
+- **Vad den är** – en distribuerad algoritm, ett lager i mellanprogrammet som rutar en förfrågan från klienten till en värd som har objektet; den rutar i applikationslagret, skilt från IP-rutningen
+- **Hur den hittar** – klienten skickar objektets GUID till överlägget, som rutar förfrågan vidare till närmaste levande nod som har en kopia
 
 Vad är skillnaden mellan strukturerade och ostrukturerade P2P-system? (4)
 ||
-- **Strukturerat** – DHT: GUID bestämmer placeringen, prefixrutning hittar objektet
-- **Ostrukturerat** – ingen kontroll, byggs ad hoc, man frågar sig fram genom grannarna
-- **Avvägningen** – strukturerat garanterar men kostar underhåll; ostrukturerat är tåligt men utan garantier
-- **Det som förvånar** – ostrukturerat dominerar ändå på Internet, t.ex. BitTorrent
+- **Strukturerat** – en DHT där GUID:et bestämmer placeringen: objektet läggs på noden vars GUID är närmast, och sökningen sker med prefixrutning som matchar en siffra mer av målet per hopp
+- **Ostrukturerat** – ingen kontroll över topologi eller placering; nätet byggs ad hoc av lokala regler och man hittar objekt genom att fråga sig fram genom grannarna, sannolikhetsbaserat och utan garantier
+- **Avvägningen** – strukturerat garanterar att objektet hittas och ger tidsgränser men kräver dyrt underhåll av strukturen; ostrukturerat är tåligt mot nodfel men kan flöda nätet med förfrågningar
+- **Det som förvånar** – ostrukturerat dominerar ändå på Internet, till exempel BitTorrent
 
 ## 5. Vad är skillnaden mellan IP och P2P på applikationsnivå?
 
@@ -371,10 +374,10 @@ varje hopp i överlägget genomförs med ett underliggande transportprotokoll, =
 
 Vad är skillnaden mellan IP och P2P-routning på applikationsnivå? (4)
 ||
-- **Ramen** – överlägget ersätter inte IP; det ligger ovanpå, oftast över UDP
-- **Skarpaste skillnaden** – IP pekar ut en maskin, överlägget närmaste repliken av ett objekt
-- **Mest praktiska** – nätdynamik: IP uppdateras på timskala, överlägget på bråkdelar av en sekund
-- **Övriga axlar** – skala, lastbalansering, feltolerans, säkerhet och anonymitet
+- **Ramen** – överlägget ersätter inte IP utan ligger ovanpå: varje hopp går normalt över UDP, och ett överläggshopp kan kräva många IP-hopp
+- **Skarpaste skillnaden** – målidentifiering: en IP-adress pekar på exakt en nod, medan överlägget rutar till närmaste replik av ett objekt
+- **Mest praktiska** – nätdynamik: IP:s tabeller uppdateras på timskala, överläggets på bråkdelar av en sekund, så det klarar ett nät som ändras hela tiden
+- **Övriga axlar** – platt GUID-rymd mot hierarkisk IP, slumpad placering ger lastbalansering, n-faldig replikering av rutter ger feltolerans, och säkerhet och viss anonymitet går även med begränsad tillit
 
 ## Luckor och källor
 

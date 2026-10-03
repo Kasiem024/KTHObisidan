@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F91): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F92): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4663,3 +4663,93 @@ nobody had touched in this session.
 Nothing is lost and nothing needs reverting. What is wrong is the record, which is why it is written
 here rather than quietly left: a future reader of `fa17fde` would otherwise see doc edits inside a
 flashcard commit and have no way to learn where they came from.
+
+## F92. The HI1031 exam-question cards rewritten to carry the answer, reversing F87's agenda design
+
+**Date:** 2026-10-03
+**Status:** Closed
+**Scope:** the ten `HI1031 Tentafragor och Svar - Kap NN` notes and `HI1031 Tentafragor - Snabbsvar.md`,
+73 cards -> 81
+
+### The author reversed the design, and he was right to
+
+F87 built these as **agenda cards**: the front line was the exam question and each row named *a part of
+the answer* without saying what the answer was. That design came out of an adversarial review which
+argued, correctly on the evidence available, that a brief real answer collapses into either a duplicate
+of the concept decks or a six-row list - the latter being the author's hardest card form at FSRS
+difficulty 9.7 against 6.8 for single-fact cards. F87 then trimmed 122 rows down to pointers.
+
+On 2026-10-03 he overruled it:
+
+> jag vill inte att flashcardesen ska innehalla svaret ungefar, jag vill att den ska rakt ut ha svaret,
+> aven om det blir langt
+
+**He is the authority on what works for him, and the agenda design had a flaw the review could not
+see:** a pointer only works if the fact it points at is somewhere he actually drills. Five of the ten
+concept decks carry `nosr` and hold zero markers, so for half the course the pointers pointed at
+nothing he was reviewing. He also authorised losing the review data outright - *"ignorera markorerna,
+du kan andra och radera de hur du vill"* - so no marker-preserving arithmetic was needed.
+
+### What the rewrite actually is
+
+The rows keep their bold label as scaffolding; the text after the dash becomes **the answer**. Length
+is accepted. The source is the facit note the card already sits inside - specifically its
+`### Muntligt svar`, which is the author's own numbered disposition and was in effect already the
+concise answer. The job was compression, not composition.
+
+**The four-row cap is what shapes the result.** `Test-DeckHygiene.ps1`'s `fatList` makes a fifth bullet
+a finding, so a real answer is carried by **longer rows**, not more of them - and where four rows
+genuinely cannot hold it, the question splits across cards. Chapter 17's 2PC question, whose
+`### Muntligt svar` has six numbered points, became two cards; chapter 6's three-techniques-by-three-
+dimensions comparison became three, one per dimension, each row carrying the actual value for each
+technique. That is why the count rose from 73 to **81** rather than staying flat.
+
+### Verified, and what the adversarial reviews found
+
+Five authoring agents wrote the cards and **none wrote to a file** - concurrent writes to eleven shared
+files would corrupt them, so every agent returned text and the file surgery was done once, from a single
+data file, so the two copies could not diverge. Markers removed with the old cards: **11**, all
+authorised.
+
+Three reviewers then ran: two hunting fabrication across all 81 cards, one testing whether the cards
+actually answer.
+
+- **Zero fabrications.** Both hunters returned GODKANT after checking every number, name and causal
+  claim against the question section it came from - the 1970s IP address decision, the eight challenges
+  and their order, RSA's two primes, "100 till 1000 ganger", TLS's four handshake steps, "3N
+  meddelanden", Moss preferring the flat algorithm, and the four role-and-status recovery cases.
+- **Zero pointer rows left**, which is the check that the rewrite achieved its purpose.
+- **Zero differences between the two copies**, verified card by card including every `(N)`.
+
+**Four findings were acted on.** A coverage gap: chapter 4 question 3 had **no card at all** - F87 had
+deleted it as a structural duplicate of a concept card, and that justification expired when the concept
+deck went `nosr`, so the only exam question with no card anywhere got two. Chapter 17 question 1 carried
+three of the note's **five** problems; it became two cards covering all five. An attribution slip: the
+SOAP-versus-CORBA measurement is a study the book *references*, not the book's own. And one unsupported
+word, "billig", describing replication cost where the source says that only of IP.
+
+**The reviewer also caught stale prose, which is the finding most likely to have survived unnoticed:**
+the Snabbsvar note's `description` and opening paragraph still told the reader the cards were *"en
+agenda over vilka delar svaret ska innehalla, inte svaret sjalvt"*. Both were rewritten in the same
+change. A doc that contradicts the content it introduces is exactly what `documentation-standard.md`
+calls a bug.
+
+### Gates
+
+- Structural read-back of all 81 cards in all eleven files: **zero problems** - every `(N)` matches its
+  row count, no body under two or over four rows, no `==highlight==` in any list body, each single-line
+  card exactly one, no orphaned separators, 0 markers, 0 CR, no BOM.
+- Facit notes total **81**, Snabbsvar **81**.
+- `Test-DeckHygiene.ps1 -All` names none of the eleven. `Vault-Audit.ps1` clean at `notesInScope=520`.
+  `markdownlint-cli2` 543 files, 0 issues.
+- The patch step **refuses to write if any patch matches an unexpected number of files**, because a
+  partially applied patch is precisely how two copies drift apart. All seven applied exactly as
+  predicted.
+
+### One repair that was not this work
+
+The audit came back `listStyleTags 5` mid-run: the author had set `nosr` on chapters 4, 5, 6, 9 and 10's
+facit notes through Obsidian's own UI, which rewrites frontmatter into YAML list form. Repaired with
+`Format-FrontmatterTags.ps1 -Apply` **after confirming `nosr` was present in all five**, since that
+script preserves what is there but does not restore a tag already gone. This is the fifth recurrence of
+the same cause.

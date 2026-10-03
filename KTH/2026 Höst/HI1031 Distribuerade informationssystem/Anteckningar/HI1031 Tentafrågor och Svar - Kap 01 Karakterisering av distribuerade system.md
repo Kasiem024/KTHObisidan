@@ -45,10 +45,10 @@ tjänster till ==processorintensiva== uppgifter; och från ==små, enkla sensore
 
 Ge några exempel på distribuerade system. (4)
 ||
-- **Börja brett** – vardagstjänster vi tar för givna, som webben och e-post
-- **Tre exempel boken går igenom** – webbsök, onlinespel, finanshandel
-- **Spannet är poängen** – från en bil till miljoner noder, sensor till kraftfull dator
-- **Trenderna** – mobilt, multimedia, molnet
+- **Vardagstjänster vi tar för givna** – webben, webbsök, e-post, sociala nätverk och e-handel
+- **Bokens tre genomgångna exempel** – webbsök, onlinespel med många spelare, och finanshandel
+- **Spannet, det frågan egentligen är ute efter** – från ett system i en bil till globala system med miljoner noder, från små sensorer till kraftfulla datorer
+- **Trenderna** – mobilt och ubiquitous, distribuerad multimedia, och molnet som en tjänst man köper i stället för att äga
 
 ## 2. Ange 5 olika hårdvaruresurser och 5 mjukvaruresurser som kan vara intressant att dela
 
@@ -96,15 +96,15 @@ exempel nästan alltid är en tjänst och inte en pryl.
 
 Ange 5 hårdvaruresurser som är värda att dela. (3)
 ||
-- **Bokens två** – diskar och skrivare
-- **Bokens övriga exempel** – videoströmmen från en digitalkamera, ljudförbindelsen i ett mobilsamtal
-- **Brasklappen** – boken har ingen färdig lista på fem; säg att du delar upp bokens exempel
+- **De fem** – skrivare, diskar, processorer, videoströmmen från en digitalkamera och ljudförbindelsen i ett mobilsamtal
+- **Varför hårdvara delas** – för att spara pengar; flera användare samsas om samma dyra pryl
+- **Brasklappen** – boken har ingen färdig lista på fem plus fem, så säg att du sorterar bokens egna exempel
 
 Ange 5 mjukvaruresurser som är värda att dela. (3)
 ||
-- **Innehåll** – filer, webbsidor
-- **Delad data** – databaser
-- **Färdiga tjänster** – sökmotor, valutaomvandlare
+- **De fem** – filer, webbsidor, databaser, sökmotorer och en valutaomvandlare
+- **Varför mjukvara delas** – för att folk ska kunna jobba ihop; de vill dela datan, inte disken den ligger på
+- **Som en tjänst** – man använder en sökmotor eller valutaomvandlare utan att bry sig om vilken server som kör den
 
 ## 3. Vilka utmaningar finns enligt boken med att bygga ett distribuerat system?
 
@@ -173,12 +173,19 @@ säkerhet och prestanda==, plus ==anpassningsförmåga==. Prestanda definieras n
    åtskilda; access och location är de viktigaste. **Tjänstekvalitet** — tillförlitlighet, säkerhet,
    prestanda och anpassningsförmåga, där prestanda betyder att hålla tidsgränser.
 
-Vilka utmaningar finns enligt boken med att bygga ett distribuerat system? (4)
+Vilka utmaningar finns med att bygga ett distribuerat system? Boken har åtta; de fyra första. (4)
 ||
-- **Få olika delar att funka ihop**
-- **Hålla det säkert och växande**
-- **Klara fel och krockar**
-- **Hur systemet upplevs**
+- **Heterogenitet** – nät, hårdvara, operativsystem, språk och olika utvecklare varierar; middleware är lagret som döljer skillnaderna
+- **Öppenhet** – om systemet går att bygga ut och göra om, vilket kräver att de viktiga gränssnitten publiceras
+- **Säkerhet** – konfidentialitet, integritet och tillgänglighet; överbelastningsattacker och säkerheten hos mobil kod är ännu olösta
+- **Skalbarhet** – systemet fortsätter fungera bra när antalet resurser och användare ökar mycket, till exempel genom att decentralisera för att undvika flaskhalsar
+
+Vilka utmaningar finns med att bygga ett distribuerat system? Boken har åtta; de fyra sista. (4)
+||
+- **Felhantering** – det svåra är att felen är partiella; teknikerna är upptäcka, maskera, tolerera, återhämta och redundans
+- **Samtidighet** – flera klienter vill åt samma resurs samtidigt och kan krocka, som två auktionsbud som skriver över varandra
+- **Transparens** – dölja att delarna är åtskilda; access och location är de två viktigaste
+- **Tjänstekvalitet** – tillförlitlighet, säkerhet, prestanda och anpassningsförmåga, där prestanda betyder att hålla tidsgränser
 
 ## 4. Vilka arv från IP, HTTP och HTML måste man ta hänsyn till vid utveckling av distribuerade system?
 
@@ -241,16 +248,16 @@ gärna var det står — det visar att du vet skillnaden.
 
 Vilka arv från IP, HTTP och HTML måste man ta hänsyn till? (3)
 ||
-- **Från HTML** – vad taggarna är gjorda för
-- **Från HTTP** – de två tyngsta arven
-- **Från IP** – adressproblemet
+- **Från HTML** – byggdelarna är fasta och kopplade till hur saken ska visas, så man kan bara bläddra; därför behövs XML, som beskriver sig självt
+- **Från HTTP** – de två tyngsta: en resurs per fråga, där nio bilder ger tio frågor, och öppet för alla som standard, så åtkomstkontroll måste läggas till
+- **Från IP** – 32-bitarsadresserna valdes i slutet av 1970-talet och håller på att ta slut; bytet till 128 bitar kräver ändringar i massor av mjukvara
 
 Vilka arv från HTTP måste man ta hänsyn till? (4)
 ||
-- **Få metoder** – fråga och svar, mest GET och POST
-- **Innehållstyper** – MIME-typer säger hur svaret ska tolkas
-- **En resurs per fråga**
-- **Öppet som standard**
+- **Få metoder** – klienten frågar med en URL och servern svarar med innehållet eller ett fel; mest GET för att hämta och POST för att lämna data
+- **Innehållstyper** – servern anger typen som en MIME-typ så att webbläsaren vet hur svaret ska hanteras
+- **En resurs per fråga** – en sida med nio bilder ger tio frågor, så webbläsare frågar parallellt för att korta väntan
+- **Öppet som standard** – vem som helst når en publicerad resurs; vill man begränsa måste servern ställas in att skicka en utmaning, till exempel ett lösenord
 
 ## 5. Vilken roll har IP och RFC för utvecklingen av distribuerade system?
 
@@ -309,9 +316,9 @@ utan att någon behövde ändra i internet.
 
 Vilken roll har IP och RFC för distribuerade system? (3)
 ||
-- **IP är tekniken** – vad den döljer
-- **RFC är spelregeln** – varför vem som helst får bygga på den
-- **Webben är beviset** – byggdes ovanpå utan att ändra i internet
+- **IP är tekniken** – ett gemensamt sätt att prata som döljer skillnaderna mellan näten, eftersom alla datorer kör internetprotokollen; det är därför heterogenitet går att hantera alls
+- **RFC är spelregeln** – öppenhet kräver att gränssnitten publiceras; protokollen kom som numrerade RFC i början av 1980-talet och gick medvetet förbi de tröga standardiseringsprocesserna
+- **Webben är beviset** – den kunde byggas ovanpå utan att någon behövde ändra i internet
 
 ## Luckor och källor
 

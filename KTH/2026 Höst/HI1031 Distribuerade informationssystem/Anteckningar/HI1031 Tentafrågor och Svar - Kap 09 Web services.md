@@ -1,5 +1,5 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-09-09
 updated: 2026-09-15
 description: "Svar på tentafrågorna för kapitel 9 om web services: vad en webbtjänst är och när den används, låg koppling, REST med sina sex principer och hypermedias roll, jämförelsen mot distribuerade objekt, SOA, samt relationen mellan Ajax och webbtjänster."
@@ -77,16 +77,16 @@ kommunikationsparadigm** — i request-reply är parterna i grunden kopplade, me
 
 Vad är en webbtjänst, när används den, och vilka protokoll finns? (3)
 ||
-- **Vad och varför** – hur ett program når den, och varför inte via en webbläsare
-- **När** – vilka två parter som pratar, och vad trafiken passerar
-- **Protokoll** – XML, SOAP, REST, WSDL
+- **Vad och varför** – en samling operationer som nås över internet via en URI med meddelanden i XML; den kan inte nås direkt av en webbläsare, eftersom webbläsaren är en för allmän klient och poängen är specialiserade gränssnitt
+- **När** – mellan organisationer utan människa i loopen, och för att kombinera flera tjänster till en ny; HTTP och SMTP släpps normalt genom brandväggar medan RMI och CORBA inte gör det
+- **Protokoll** – XML som dataformat, SOAP som packar meddelanden till request-reply, REST som alternativet till SOAP, och WSDL som tjänstebeskrivning vilket gör en separat namntjänst onödig
 
 Vad innebär låg koppling för en webbtjänst? (4)
 ||
-- **Grundbetydelsen** – vad man håller så litet som möjligt
-- **Programmering mot gränssnitt** – skilj gränssnittet från implementationen
-- **Enkla, generella gränssnitt** – minimala gränssnitt som webben och REST
-- **Valet av paradigm** – request-reply kopplar, asynkront frikopplar
+- **Grundbetydelsen** – att hålla beroendena mellan tjänster så små som möjligt, så att en ändring i en tjänst inte välter de andra
+- **Programmering mot gränssnitt** – skilja gränssnittet från implementationen, vilket ger låg koppling och hanterar olika språk och plattformar
+- **Enkla, generella gränssnitt** – minimala gränssnitt som webben och REST minskar beroendet av specifika operationsnamn, så data blir viktigare än operation
+- **Valet av paradigm** – i request-reply är parterna kopplade, medan asynkrona meddelanden ger synkroniseringsfrikoppling så avsändaren inte behöver vänta
 
 ## 2. Vad är REST och vilka principer ska en RESTful webbtjänst uppfylla? Hur accessas resurser i en REST-arkitektur? Vilken roll har hypermedia
 
@@ -163,15 +163,15 @@ implementationen. Säger du båda, i den ordningen, har du täckt vad examinator
 
 Vad är REST och vilka principer ska en RESTful tjänst uppfylla? (3)
 ||
-- **Vad REST är** – arkitekturstil från Fielding, inte ett protokoll eller en standard
-- **De sex principerna** – likformigt gränssnitt, klient-server, tillståndslöshet, cache, lager, kod på begäran
-- **Två källor** – boken ser REST som HTTP med fyra metoder, restfulapi.net säger att det inte är bundet till HTTP
+- **Vad REST är** – en arkitekturstil från Fieldings avhandling, varken ett protokoll eller en standard; boken beskriver den som URL:er plus GET, PUT, DELETE och POST mot resurser, med tyngdpunkt på data i stället för gränssnitt
+- **De sex principerna** – likformigt gränssnitt, klient-server, tillståndslöshet, cachebarhet, skiktat system, och kod på begäran som är valfri
+- **Två källor** – boken beskriver REST som HTTP med fyra metoder, medan restfulapi.net säger att REST inte är bundet till HTTP och att Fielding aldrig band stilen till ett protokoll
 
 Hur accessas resurser i REST och vilken roll har hypermedia? (3)
 ||
-- **Hur resurser nås** – via en URI; man får en representation: data, metadata, länkar
-- **Resurs mot representation** – skilda, så samma resurs kan ges som JSON, XML eller HTML
-- **Hypermedia (HATEOAS)** – vad servern skickar med, och vad klienten då behöver
+- **Hur resurser nås** – via en resursidentifierare, alltså en URI; det man får är en representation av resursens tillstånd, bestående av data, metadata och hypermedialänkar
+- **Resurs mot representation** – resurs och representation är skilda saker, så samma resurs kan levereras i olika format som JSON, XML eller HTML
+- **Hypermedia och HATEOAS** – klienten får bara resursens första URI och driver sedan allt vidare via länkar som servern lämnar i svaren; följer klienten en väg den inte fick i svaren är kravet inte uppfyllt
 
 ## 3. Jämför distribuerade objekt (t.ex. RMI) med webbtjänster (t.ex. REST) för kommunikation mellan (del-)system
 
@@ -235,10 +235,10 @@ vinner webbtjänster, och priset är prestanda och att du bygger transparensen s
 
 Jämför distribuerade objekt (RMI) med webbtjänster (REST). (4)
 ||
-- **Börja med** – ytligt lika: båda anropar en operation, med fjärrreferens eller URI
-- **Kärnskillnaden** – webbtjänsten är ett enda objekt: inga nya fjärrobjekt, inga servanter
-- **Två principskillnader** – paradigmoberoende, och ingen transparens på köpet
-- **Avvägningen** – priset är prestanda, vinsten är global räckvidd genom brandväggar
+- **Börja med** – ytligt är de lika: klienten anropar en operation, med en fjärrobjektreferens i RMI och en URI i en webbtjänst
+- **Kärnskillnaden** – en webbtjänst är i praktiken ett enda fjärrobjekt: den kan inte skapa nya fjärrobjekt och har inga servanter, så skräpsamling och fjärrreferenser blir irrelevanta
+- **Två principskillnader** – webbtjänster är medvetet paradigmoberoende, och de ger ingen transparens på köpet: marshalling och känslan av ett lokalt anrop får läggas till med proxy eller dynamisk invokering
+- **Avvägningen** – priset är prestanda, för XML är text, och en studie boken refererar mätte SOAP mot CORBA som mycket större och långsammare; vinsten är global räckvidd, bara DNS behövs och HTTP går genom brandväggar
 
 ## 4. Vad innebär SOA (Service-Oriented Architecture)
 
@@ -282,10 +282,10 @@ tredjepartsutvecklare skapar genom att kombinera två eller flera== befintliga t
 
 Vad innebär SOA (Service-Oriented Architecture)? (4)
 ||
-- **Definitionen** – vilken sorts princip, och tjänsternas två kännetecken
-- **Hur det byggs** – med vad, och varför just det
-- **Var det används** – främst på internet i stort, inte bara internt
-- **Resultatet** – B2B-integration och mashups
+- **Definitionen** – en uppsättning designprinciper: bygg systemet av löst kopplade tjänster som kan upptäckas dynamiskt och antingen prata direkt med varandra eller koordineras genom koreografi
+- **Hur det byggs** – abstrakt, går att bygga med distribuerade objekt eller komponenter, men huvudsakligen med webbtjänster just för deras låga koppling
+- **Var det används** – ger flexibilitet och interoperabilitet internt, men den främsta användningen är på det bredare internet
+- **Resultatet** – B2B-integration, där en organisation kör CORBA internt och en annan .NET men båda exponerar webbtjänster, och en mashup-kultur där en tredje part kombinerar flera tjänster till en ny
 
 ## 5. Förklara relationen mellan Ajax och webbtjänster
 
@@ -335,10 +335,10 @@ HTTP med XML==:
 
 Förklara relationen mellan Ajax och webbtjänster. (4)
 ||
-- **Vad Ajax är** – vad som pratar med servern, och vad man slipper
-- **Bryggan** – båda går runt webbläsarens gräns, över HTTP med XML
-- **Hur de kompletterar** – Ajax går mellan skikt 1 och 2; backend kan själv vara en webbtjänst
-- **Markeringen** – boken kopplar dem aldrig själv, och Ajax står i kapitel 2
+- **Vad Ajax är** – en utbyggnad av webbens klient-serversamspel som skickar små databitar mellan Javascript i webbläsaren och ett serverprogram, så man slipper hämta en hel sida och blockera användaren
+- **Bryggan** – båda tar sig runt begränsningen i webbläsarens vanliga samspel, och båda gör det över HTTP med XML: Ajax för att webbläsaren är för klumpig, webbtjänster för att den är för allmän
+- **Hur de kompletterar** – Ajax är kommunikation mellan skikt 1, gränssnittet, och skikt 2, logiken, och backend som Ajax-anropet träffar kan i sin tur vara en webbtjänst
+- **Markeringen** – boken kopplar dem aldrig själv; Ajax beskrivs i kapitel 2, inte i kapitel 9
 
 ## Luckor och källor
 

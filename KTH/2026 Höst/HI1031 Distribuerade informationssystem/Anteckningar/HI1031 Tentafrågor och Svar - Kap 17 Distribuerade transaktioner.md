@@ -81,12 +81,17 @@ en part som kan krascha, svara sent eller besluta annorlunda.== (egen slutsats)
 6. **Femte problemet: recovery blir svårare.** Varje server har ==sin egen recovery-fil==, och
    protokollets tillstånd måste överleva en krasch mitt i. Det är fråga 4.
 
-Vilka extra problem medför distribuerade transaktioner jämfört med lokala? (4)
+Vilka extra problem medför distribuerade transaktioner jämfört med lokala? Roten och de två första. (3)
 ||
-- **Roten** – varje server ser bara sin egen del
-- **Atomicitet** – vad alla måste göra ihop, och vad det kräver
-- **Global ordning** – vad som måste gälla överallt
-- **Distribuerad deadlock** – var cykeln ligger, och vem som ser den
+- **Roten** – varje server ser bara sin egen del, så ingen har hela bilden av en transaktion som rör objekt på flera servrar
+- **Atomicitet** – antingen bekräftar alla servrar eller avbryter alla; ingen kan bestämma själv, så en server blir koordinator och det krävs ett atomiskt commit-protokoll för ett gemensamt beslut
+- **Global serialiserbarhet** – varje server serialiserar sina egna objekt lokalt, men ordningen måste bli densamma på alla servrar, och lokala beslut kan ge olika ordning på olika servrar
+
+Vilka extra problem medför distribuerade transaktioner jämfört med lokala? De tre sista. (3)
+||
+- **Distribuerad deadlock** – det kan finnas en cykel i den globala väntegrafen som inte finns i någon enda lokal graf, så ingen server kan upptäcka den på egen hand
+- **Globalt unika identifierare** – både transaktions-id och tidsstämplar måste fungera över servergränser, och servrarna måste vara överens om ordningen
+- **Recovery blir svårare** – varje server har sin egen recovery-fil, och protokollets tillstånd måste överleva en krasch mitt i
 
 ## 2. Beskriv Two-Phase Commit (2PC)
 
@@ -190,11 +195,17 @@ Det är byggt för att tåla ==en följd av fel== och är ==garanterat att bli k
    ==Timeouts finns vid varje steg där någon kan blockera==, och protokollet är byggt för att klara en
    följd av kraschar och tappade meddelanden — men ==utan någon tidsgräns för när det blir klart==.
 
-Beskriv Two-Phase Commit (2PC). (3)
+Beskriv 2PC, del 1: varför enfas inte duger, och fas 1. (3)
 ||
-- **Varför** – vad en server måste kunna
-- **Fas 1, röstning** – vad koordinatorn frågar, och vad som sker före ett Yes
-- **Fas 2, genomförande** – vad som avgör doCommit kontra doAbort
+- **Varför** – att koordinatorn bara skickar commit och upprepar räcker inte, för då får ingen server avbryta på eget initiativ; en server kan behöva det vid deadlock, misslyckad validering, eller om den kraschat och bytts ut
+- **Fas 1, röstning** – koordinatorn skickar canCommit till varje deltagare, som svarar Yes eller No; innan en deltagare röstar Yes sparar den sina ändrade objekt och sin status i permanent lagring
+- **Prepared** – har man röstat Yes får man inte avbryta längre, därför måste man först säkra att man kan hålla ordet även om man kraschar och ersätts under tiden
+
+Beskriv 2PC, del 2: fas 2, det svaga stället och kostnaden. (3)
+||
+- **Fas 2, genomförande** – koordinatorn samlar rösterna, sin egen medräknad; är alla Yes skickar den doCommit till alla, är minst en röst No skickar den doAbort till dem som röstade Yes, och en enda No räcker för att allt avbryts
+- **Det svaga stället** – en deltagare som röstat Yes men inte fått svar är uncertain, kan inte avgöra själv, och håller kvar sina lås; den frågar koordinatorn med getDecision, och har koordinatorn kraschat kan väntan bli lång
+- **Kostnad** – går allt bra kostar protokollet 3N meddelanden och tre rundor; timeouts finns vid varje steg där någon kan blockera, men ingen tidsgräns finns för när protokollet blir klart
 
 ## 3. Hierarkisk kontra flat Two-Phase Commit — beskriv och förklara
 
@@ -322,13 +333,13 @@ skickas med==. (egen slutsats)
 
 Beskriv hierarkiskt kontra flat 2PC. (2)
 ||
-- **Hierarkiskt** – koordinatorn frågar bara närmaste barn, svaren samlas uppåt i trädet
-- **Flat** – koordinatorn frågar alla deltagare direkt
+- **Hierarkiskt** – protokollet blir flernivåigt: koordinatorn frågar bara sina närmaste barn, som skickar canCommit vidare ner i trädet, och varje deltagare samlar in sina efterkommandes svar innan den svarar sin egen förälder
+- **Flat** – koordinatorn skickar canCommit direkt till alla deltagare i listan över provisoriskt bekräftade subtransaktioner, utan att gå via trädet
 
 Varför behöver flat 2PC en abortList, och vad är avvägningen mot hierarkiskt? (2)
 ||
-- **Varför abortList** – vilka två sorters subtransaktioner en server kan ha
-- **Avvägningen** – trädet bär kunskapen om formen, eller koordinatorn via listan
+- **Varför abortList** – en och samma server kan vara koordinator för både provisoriskt bekräftade och avbrutna subtransaktioner, och lokalt ser de likadana ut, så utan en lista över de avbrutna skulle servern bekräfta en subtransaktion vars förälder har avbrutit
+- **Avvägningen** – i hierarkiskt bär trädet kunskapen om formen och var och en frågar sina barn, men det kostar många rundor; i flat bär koordinatorn kunskapen via abortList och når alla direkt, och Moss föredrog flat av det skälet
 
 ## 4. Hur gör man recovery från Two-Phase Commit vid nod- eller nätverksfel?
 
@@ -445,9 +456,9 @@ inte att gissa vad som hände, utan att läsa vad man redan skrivit ner och fort
 
 Hur gör man recovery från 2PC vid nod- eller nätverksfel? (3)
 ||
-- **Grunden** – vad som skrivs till loggen, och när
-- **Avgörandet** – vad i loggen som avgör
-- **Åtgärden** – beror på roll och status: koordinator eller deltagare, prepared, committed eller uncertain
+- **Grunden** – objekten ligger i flyktigt minne, men varje server skriver status till en recovery-fil på disk; innan en deltagare röstar Yes måste prepared redan vara skrivet, rösten skrivs som uncertain med en tvingad skrivning, och i fas 2 skrivs committed eller aborted
+- **Avgörandet** – efter kraschen avgör den senaste statusposten i loggen vad som gällde när felet inträffade, och sedan beror åtgärden på serverns roll och den statusen
+- **Åtgärden** – koordinator med prepared har inget beslut fattat och avbryter och meddelar alla; koordinator med committed skickar doCommit igen; deltagare med uncertain frågar koordinatorn med getDecision; deltagare med prepared har inte röstat och får avbryta
 
 ## Luckor och källor
 

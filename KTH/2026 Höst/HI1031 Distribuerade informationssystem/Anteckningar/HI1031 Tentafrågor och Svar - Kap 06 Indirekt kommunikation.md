@@ -1,5 +1,5 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
 created: 2026-09-08
 updated: 2026-09-09
 description: "Svar på kursens fem tentafrågor om indirekt kommunikation: poängen med indirektion och strategierna, gruppkommunikation, publish-subscribe, message queuing, samt en jämförelse av de tre ur sändarens, mottagarens och implementatörens perspektiv."
@@ -64,10 +64,10 @@ ett extra hopp och att du inte längre kan följa ett anrop från ände till än
 
 Beskriv poängen med indirekt kommunikation och strategierna. (4)
 ||
-- **Vad det är** – vad som sitter emellan
-- **Poängen** – problemet, och de två frikopplingarna
-- **Priset** – vad det kostar
-- **Strategierna** – de tre kursen tar upp
+- **Vad det är** – kommunikation genom en mellanhand, utan direkt koppling mellan sändare och mottagare, ofta en-till-många
+- **Poängen** – direkt koppling gör systemet stelt; i stället får man rumslig frikoppling, ingen behöver veta vem den andra är, och tidsmässig frikoppling, de behöver inte finnas samtidigt
+- **Priset** – det kostar alltid lite prestanda och gör systemet svårare att förvalta, och man får inte båda frikopplingarna automatiskt
+- **Strategierna** – gruppkommunikation, publish-subscribe och message queues bygger på meddelanden, medan distribuerat delat minne och tuple spaces är en delad datayta som skalar sämre
 
 ## Fråga 2 – Gruppkommunikation och hur det kan implementeras
 
@@ -147,16 +147,16 @@ ha samma stack==.
 
 Beskriv gruppkommunikation. (3)
 ||
-- **Vad det är** – grundmodellen
-- **Abstraktion ovanpå multicast** – lägger till garantier, som TCP ovanpå IP
-- **Modellen** – gå med eller lämna, ett multicast-anrop i stället för många send
+- **Vad det är** – ett meddelande skickas till en grupp och levereras till alla medlemmar, utan att sändaren vet vilka de är
+- **Abstraktion ovanpå multicast** – byggd på IP-multicast eller overlay och lägger till medlemskapshantering, feldetektering och garantier; boken säger att den är till IP-multicast vad TCP är till IP
+- **Modellen** – processer går med eller lämnar, och sändaren gör ett enda multicast-anrop i stället för många send, vilket ger garantier för gruppen som helhet
 
 Hur implementeras gruppkommunikation? (4)
 ||
-- **Tillförlitlighet** – de tre garantierna
-- **Ordning** – de tre sorterna
-- **Medlemskap** – ändringar, feldetektering, notifiering, adressexpansion
-- **Följden** – medlemskapet gör att det passar små, stabila system
+- **Tillförlitlighet** – integritet, samma meddelande högst en gång, giltighet, det levereras så småningom, och överenskommelse, får en medlem det så får alla det
+- **Ordning** – FIFO som är källordning, kausal som bevarar händer-före, och total där alla ser samma ordning
+- **Medlemskap** – en tjänst som sköter medlemskapsändringar, feldetektering som utesluter den misstänkte, notifiering och gruppadressexpansion
+- **Följden** – medlemskapshanteringen gör att gruppkommunikation passar bäst i små, statiska system och fungerar sämre storskaligt
 
 ## Fråga 3 – Publish-subscribe och hur det kan implementeras
 
@@ -238,9 +238,9 @@ Innehållsbaserade är svårare, och problemet kallas ==content-based routing== 
 
 Beskriv publish-subscribe och visa hur det kan implementeras. (3)
 ||
-- **Vad det är** – de tre rollerna och matchningen
-- **Hur man prenumererar** – de fyra sätten
-- **Hur det byggs** – var mäklaren kan sitta
+- **Vad det är** – publishers publicerar händelser, subscribers anmäler intresse med subscriptions som är mönster, och systemet matchar och levererar notifieringar; i grunden en-till-många
+- **Hur man prenumererar** – subskriptionsmodellen bestämmer uttryckskraften: kanalbaserad, topic-baserad, innehållsbaserad och typbaserad, i stigande ordning av kraft och svårighet
+- **Hur det byggs** – mäklaren kan sitta centralt, vilket är enkelt men ger flaskhals och enda felpunkt, som ett nätverk av samarbetande mäklare, eller helt peer-to-peer där alla noder är mäklare
 
 ## Fråga 4 – Message queuing och hur det implementeras bra
 
@@ -320,15 +320,15 @@ stund lokalt, och låt mellanprogrammet ta det långa hoppet asynkront men garan
 
 Beskriv message queuing. (3)
 ||
-- **Vad det är** – kön och vem som plockar
-- **Den avgörande egenskapen** – vad meddelandena är
-- **Vad persistensen ger** – vilken garanti, och vad den inte lovar
+- **Vad det är** – en punkt-till-punkt-tjänst där sändaren lägger meddelandet i en kö och en enda process plockar bort det
+- **Den avgörande egenskapen** – meddelandena är persistenta: kön lagrar dem tills de konsumeras och skriver dem till disk
+- **Vad persistensen ger** – giltighet, meddelandet tas emot så småningom, och integritet, det är identiskt och kommer aldrig två gånger, men inget om när leveransen sker
 
 Hur implementeras message queuing på ett bra sätt? (3)
 ||
-- **Problemet** – en central köhanterare blir flaskhals och enda felpunkt
-- **Lösningen** – federera köhanterarna med enkelriktade message channels
-- **Hub-and-spoke** – hur det fungerar
+- **Problemet** – en central köhanterare blir en tungviktig komponent, en flaskhals och en enda felpunkt
+- **Lösningen** – federera köhanterarna med enkelriktade message channels och routingtabeller, så man kan bygga godtyckliga topologier
+- **Hub-and-spoke** – klienten pratar RPC med en spoke nära sig och blockeras bara tills meddelandet ligger där, medan hoppet vidare till hubben är asynkront men garanterat tillförlitligt
 
 ## Fråga 5 – Jämför gruppkommunikation, publish-subscribe och message queuing
 
@@ -398,12 +398,23 @@ nedan är därför **min**, men varje enskild uppgift i den är bokens.
    begränsar dess skalbarhet; publish-subscribe med matchning och routing; message queuing med
    persistens och topologi. Och associativ adressering finns bara i innehållsbaserad publish-subscribe.
 
-Jämför gruppkommunikation, publish-subscribe och message queues. (4)
+Jämför gruppkommunikation, publish-subscribe och message queues ur sändarens perspektiv. (3)
 ||
-- **Börja med** – alla tre är indirekta och rumsligt frikopplade
-- **Skarpaste skillnaden** – mönstret: grupp och publish-subscribe är en-till-många, kön är en-till-en
-- **Gå igenom tre perspektiv** – sändare, mottagare, implementatör
-- **Avsluta med** – bara message queues är tidsmässigt frikopplad, för den har persistens
+- **Gruppkommunikation** – ett multicast till gruppen; sändaren vet inget om medlemmarna och måste själv vara medlem om gruppen är sluten
+- **Publish-subscribe** – en strukturerad händelse; sändaren kan inte veta om någon lyssnar
+- **Message queuing** – meddelandet läggs i en namngiven kö; sändaren vet att exakt en konsument tar det, och sändningen kan ligga i en transaktion
+
+Jämför gruppkommunikation, publish-subscribe och message queues ur mottagarens perspektiv. (3)
+||
+- **Gruppkommunikation** – medlemmen får allt som skickas till gruppen utan filtrering och måste normalt finnas när meddelandet skickas
+- **Publish-subscribe** – subscribern väljer själv med ett filter: kanal, topic, innehåll eller typ
+- **Message queuing** – konsumenten konkurrerar med andra om samma kö, kan välja på metadata och hämta långt efteråt; bara här finns valet att blockera, polla eller bli notifierad
+
+Jämför gruppkommunikation, publish-subscribe och message queues ur implementatörens perspektiv. (3)
+||
+- **Gruppkommunikation** – svårast är gruppmedlemskapet, alltså vilka som är med, feldetektering, notifiering och adressexpansion, plus ordning, och det begränsar skalbarheten
+- **Publish-subscribe** – svårast är matchning och routing: central mäklare, nätverk av mäklare eller peer-to-peer
+- **Message queuing** – svårast är persistensen och topologin: meddelandena måste till disk, och köhanterarna bör federeras i stället för att sitta centralt
 
 ## Luckor och källor
 
