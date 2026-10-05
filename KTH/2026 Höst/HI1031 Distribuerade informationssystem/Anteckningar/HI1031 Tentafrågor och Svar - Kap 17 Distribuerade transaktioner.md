@@ -86,12 +86,14 @@ Vilka extra problem medför distribuerade transaktioner jämfört med lokala? Ro
 - **Roten** – varje server ser bara sin egen del, så ingen har hela bilden av en transaktion som rör objekt på flera servrar
 - **Atomicitet** – antingen bekräftar alla servrar eller avbryter alla; ingen kan bestämma själv, så en server blir koordinator och det krävs ett atomiskt commit-protokoll för ett gemensamt beslut
 - **Global serialiserbarhet** – varje server serialiserar sina egna objekt lokalt, men ordningen måste bli densamma på alla servrar, och lokala beslut kan ge olika ordning på olika servrar
+<!--SR:!fsrs,2026-10-04T02:50:03.172Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:49:03.172Z-->
 
 Vilka extra problem medför distribuerade transaktioner jämfört med lokala? De tre sista. (3)
 ||
 - **Distribuerad deadlock** – det kan finnas en cykel i den globala väntegrafen som inte finns i någon enda lokal graf, så ingen server kan upptäcka den på egen hand
 - **Globalt unika identifierare** – både transaktions-id och tidsstämplar måste fungera över servergränser, och servrarna måste vara överens om ordningen
 - **Recovery blir svårare** – varje server har sin egen recovery-fil, och protokollets tillstånd måste överleva en krasch mitt i
+<!--SR:!fsrs,2026-10-04T02:46:31.864Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:45:31.864Z-->
 
 ## 2. Beskriv Two-Phase Commit (2PC)
 

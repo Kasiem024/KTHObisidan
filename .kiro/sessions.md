@@ -21,6 +21,7 @@ This file is **not** loaded automatically — only `.kiro/steering/**` is. It is
 
 | Date | Session id | Topic | Why reopen | Distilled into |
 |---|---|---|---|---|
+| 2026-10-05 | unknown, see *Getting the session id* below | A handoff prompt for an outside agent to review F93 and report on the agent workflow here | The prompt was written, adversarially reviewed twice and revised, then handed over in chat and never saved to a file. Nothing else holds it | nothing yet |
 | 2026-09-07 | `7278c413-91b1-4259-9c5c-2c317ec11703` | Whether to keep a session ledger at all; measured how `kiro-cli` resume really behaves | Holds the raw measurements behind T15 — the engine matrix, the 44-session resumability census, the portability test — and none of that is in a script | T15, this file |
 
 ## Reopening one

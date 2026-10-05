@@ -16,7 +16,7 @@ Vilka tre saker följer av att datorerna bara pratar via nätet? (3)
 - **Samtidighet** – allt händer parallellt, utan turordning
 - **Ingen gemensam klocka** – datorerna kan inte enas om exakt tid
 - **Fel drabbar en del i taget** – resten fortsätter utan att veta om det
-<!--SR:!fsrs,2026-10-03T10:12:46.808Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:12:46.808Z-->
+<!--SR:!fsrs,2026-10-05T02:36:23.398Z,1,0.72194057,8.91930389,2,5,1,0,2026-10-04T02:36:23.398Z-->
 
 ## Exempel på distribuerade system
 
@@ -25,7 +25,7 @@ Ge exempel på distribuerade system. (3)
 - **Internet** och webben
 - **Ett intranät** i en organisation
 - **Mobila och trådlösa** system
-<!--SR:!fsrs,2026-10-02T21:13:42.900Z,1,0.26051467,9.94413327,2,13,3,0,2026-10-01T21:13:42.900Z-->
+<!--SR:!fsrs,2026-10-06T02:11:08.572Z,2,1.11985405,9.93342166,2,15,3,0,2026-10-04T02:11:08.572Z-->
 
 Varför är webbsök ett svårt distribuerat problem?::Hela webbens innehåll ska indexeras – boken säger ==över 63 miljarder sidor== – och sedan sökas igenom.
 <!--SR:!fsrs,2026-10-10T16:18:36.735Z,19,18.86782,7.09510771,2,4,0,0,2026-09-21T16:18:36.735Z-->
@@ -36,10 +36,10 @@ Varför är webbsök ett svårt distribuerat problem?::Hela webbens innehåll sk
 ## Resurser som är värda att dela
 
 Vilka hårdvaruresurser kan man dela?::==Fysiska enheter== – t.ex. skrivare, diskar, processorer, skärmar och lagring.
-<!--SR:!fsrs,2026-10-03T10:13:48.373Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:13:48.373Z-->
+<!--SR:!fsrs,2026-10-04T02:39:41.101Z,0,0.66916692,8.93300853,3,4,1,0,2026-10-04T02:29:41.101Z-->
 
 Vilka mjukvaruresurser kan man dela?::==Data och tjänster== – t.ex. filer, databaser, webbsidor, e-post och sökmotorer.
-<!--SR:!fsrs,2026-10-03T10:14:30.155Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:14:30.155Z-->
+<!--SR:!fsrs,2026-10-04T02:45:51.580Z,0,0.22581824,9.63451553,3,5,1,0,2026-10-04T02:35:51.580Z-->
 
 ## De åtta utmaningarna
 
@@ -61,7 +61,7 @@ Vilka åtta utmaningar räknar boken upp? (8)
 <!--SR:!fsrs,2026-10-31T20:59:35.231Z,30,38.75639122,6.0091915,2,4,0,0,2026-10-01T20:59:35.231Z!fsrs,2026-10-31T20:45:52.640Z,30,39.7586713,6.0091915,2,4,0,0,2026-10-01T20:45:52.640Z-->
 
 Hur kan internet koppla ihop många olika sorters nät?::Varje dator kör ==internetprotokollet== ovanpå sitt eget nät, så programmen märker inte skillnaden.
-<!--SR:!fsrs,2026-10-02T21:14:18.172Z,1,0.26570245,9.94289071,2,14,4,0,2026-10-01T21:14:18.172Z-->
+<!--SR:!fsrs,2026-10-05T02:13:43.485Z,1,0.92174436,9.95025465,2,16,4,0,2026-10-04T02:13:43.485Z-->
 
 ## Öppenhet
 
@@ -74,7 +74,7 @@ Vilka två säkerhetsutmaningar är ännu inte lösta? (2)
 ||
 - **Överbelastningsattacker** – möts mest genom att straffa den skyldige efteråt, vilket inte är en riktig lösning
 - **Säkerhet för mobil kod** – man vet inte vad ett nedladdat program gör
-<!--SR:!fsrs,2026-10-02T10:14:56.267Z,2,1.52412928,9.60500389,2,8,1,0,2026-09-30T10:14:56.267Z-->
+<!--SR:!fsrs,2026-10-05T20:40:01.373Z,3,2.81282746,9.59062726,2,9,1,0,2026-10-02T20:40:01.373Z-->
 
 ## Skalbarhet
 
@@ -85,7 +85,7 @@ Vilket krav ställer boken på resursbehovet i ett skalbart system?::Hårdvaran 
 <!--SR:!fsrs,2026-10-10T16:20:33.398Z,19,18.86782,7.09510771,2,4,0,0,2026-09-21T16:20:33.398Z-->
 
 Hur får man ett system att skala i praktiken?::Man ==lägger till fler servrar och kopior== och cachar det som efterfrågas ofta, så lasten sprids.
-<!--SR:!fsrs,2026-10-03T20:49:16.008Z,2,0.56381019,9.42846228,2,6,1,0,2026-10-01T20:49:16.008Z-->
+<!--SR:!fsrs,2026-10-06T02:10:31.735Z,2,1.9320787,9.41426219,2,7,1,0,2026-10-04T02:10:31.735Z-->
 
 ## Felhantering
 
@@ -95,22 +95,22 @@ Varför är felhantering svårt i distribuerade system?::Felen är ==partiella==
 ## Samtidighet
 
 Varför är samtidighet en utmaning?::Flera klienter kan nå samma resurs samtidigt, så deras operationer kan ==krocka och ge fel resultat==.
-<!--SR:!fsrs,2026-10-03T10:12:06.659Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:12:06.659Z-->
+<!--SR:!fsrs,2026-10-04T02:52:46.475Z,0,0.22581824,9.63451553,3,5,1,0,2026-10-04T02:42:46.475Z-->
 
 ## Transparens
 
 **Nätverkstransparens**;;Det gemensamma namnet på ==åtkomst- och lokaliseringstransparens==, som boken kallar de två viktigaste.
-<!--SR:!fsrs,2026-10-02T15:22:11.751Z,3,1.98419122,9.48068067,2,8,1,0,2026-09-29T15:22:11.751Z!fsrs,2026-10-27T12:08:30.021Z,29,29.29428851,4.01060897,2,3,0,0,2026-09-28T12:08:30.021Z-->
+<!--SR:!fsrs,2026-10-06T20:43:08.882Z,4,3.90329534,9.46642836,2,9,1,0,2026-10-02T20:43:08.882Z!fsrs,2026-10-27T12:08:30.021Z,29,29.29428851,4.01060897,2,3,0,0,2026-09-28T12:08:30.021Z-->
 
 ## Tjänstekvalitet
 
 Vad menas med utmaningen tjänstekvalitet (QoS)?::Att tjänsten ska ==hålla det den lovar== – till exempel att en video kommer fram i tid, inte bara att den funkar alls.
-<!--SR:!fsrs,2026-10-03T10:00:46.074Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:00:46.074Z-->
+<!--SR:!fsrs,2026-10-11T02:15:14.691Z,7,6.76476998,7.86010817,2,4,0,0,2026-10-04T02:15:14.691Z-->
 
 ## Arvet från HTML
 
 Vilket arv från HTML måste man tänka på?::HTML har ==fasta taggar gjorda för att visas för människor==, inte för program att läsa.
-<!--SR:!fsrs,2026-10-03T20:55:18.751Z,2,1.79442346,9.89873734,2,12,1,0,2026-10-01T20:55:18.751Z-->
+<!--SR:!fsrs,2026-10-07T02:29:57.851Z,3,2.61451761,9.9180055,2,13,1,0,2026-10-04T02:29:57.851Z-->
 
 ## Arvet från HTTP
 
@@ -118,12 +118,12 @@ Vilket arv från HTTP gör att en sida med nio bilder kostar tio anrop?::==En re
 <!--SR:!fsrs,2026-10-05T11:57:01.945Z,7,7.19976434,9.4719613,2,7,0,0,2026-09-28T11:57:01.945Z-->
 
 Vad är HTTP:s förvalda åtkomstkontroll?::Ingen – ==vem som helst med nätåtkomst kan nå alla publicerade resurser==.
-<!--SR:!fsrs,2026-10-03T16:09:26.757Z,12,11.67848133,8.54346755,2,6,0,0,2026-09-21T16:09:26.757Z-->
+<!--SR:!fsrs,2026-10-21T22:20:45.379Z,18,17.97134043,9.01831425,2,7,0,0,2026-10-03T22:20:45.379Z-->
 
 ## Arvet från IP
 
 Vilket arv från IP måste man ta hänsyn till?::Adressen är bara ==32 bitar== och tar slut. Att byta till 128 bitar tvingar fram ändringar i massor av mjukvara.
-<!--SR:!fsrs,2026-10-02T16:06:26.407Z,11,11.24989886,9.02098861,2,7,0,0,2026-09-21T16:06:26.407Z-->
+<!--SR:!fsrs,2026-10-06T02:36:38.330Z,2,2.2042744,9.7522175,2,10,1,0,2026-10-04T02:36:38.330Z-->
 
 ## IP:s och RFC:s roll
 
@@ -131,7 +131,7 @@ Vilken roll har internetprotokollen haft för distribuerade system?::De blev den
 <!--SR:!fsrs,2026-10-12T11:50:34.770Z,14,14.49190058,8.54346755,2,6,0,0,2026-09-28T11:50:34.770Z-->
 
 Vad är RFC och vad är dess roll?::Internets ==fritt tillgängliga== protokolldokument – vem som helst kan bygga efter dem.
-<!--SR:!fsrs,2026-10-03T10:11:24.147Z,3,2.69463548,6.79877821,2,3,0,0,2026-09-30T10:11:24.147Z-->
+<!--SR:!fsrs,2026-10-11T01:51:56.277Z,7,6.76476998,7.86010817,2,4,0,0,2026-10-04T01:51:56.277Z-->
 
 Varför går publicering via RFC förbi den officiella standardiseringen?::Den officiella vägen är ==tungrodd och långsam==.
 <!--SR:!fsrs,2026-10-17T11:56:49.281Z,19,18.50758643,6.79215857,2,4,0,0,2026-09-28T11:56:49.281Z-->

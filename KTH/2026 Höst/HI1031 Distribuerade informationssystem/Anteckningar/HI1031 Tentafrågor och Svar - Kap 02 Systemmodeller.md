@@ -64,6 +64,7 @@ Beskriv hur en trelagersarkitektur är uppbyggd. (4)
 - **En server per del** – en-till-en: skikt 1 är klientens vy, skikt 2 en applikationsserver, skikt 3 en databasserver
 - **Vinsten** – applikationslogiken samlas på ett ställe, så det blir lättare att underhålla; och skikt 1 kan vara ett rent gränssnitt, vilket ger tunna klienter
 - **Priset mot tvåskikt** – tre servrar att sköta i stället för två, och mer nättrafik och högre fördröjning per operation
+<!--SR:!fsrs,2026-10-04T02:49:33.964Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:48:33.964Z-->
 
 ## Fråga 2 — Beskriv hur en MVC-arkitektur är uppbyggd
 
@@ -214,6 +215,7 @@ Vad är fördelarna med en klient/server-lösning? (4)
 - **Går att bygga i lager** – en server kan själv vara klient: en webbserver är klient hos filservern och hos DNS, och en söktjänst är både server och klient
 - **Går att förbättra med placering** – flera servrar med uppdelning eller replikering, caching i proxyservrar, och mobil kod för bra svarstider
 - **Men den skalar dåligt** – en tjänst på en enda adress kan inte växa förbi värddatorns kapacitet och bandbredd; det är därför peer-to-peer finns
+<!--SR:!fsrs,2026-10-04T02:45:42.813Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:44:42.813Z-->
 
 ## Fråga 5 — Vad är en mobil agent?
 

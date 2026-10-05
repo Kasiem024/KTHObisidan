@@ -744,3 +744,36 @@ so it travels with the method.
 **Lesson:** a review bounded by the brief inherits the brief's blind spots. When the source has an
 enumerable structure — an inventory, a question list, a table of contents — diff against the structure,
 not against the plan.
+
+## 2026-10-05 — a stale state file did not just misinform a reader, it corrupted the review commissioned to catch that
+
+`.kiro/steering/current-state.md` is auto-loaded into every session and is supposed to say what is
+unfinished. On 2026-10-04 it still carried a paragraph saying HI1031 chapter 9's hypermedia flashcards
+"should come back" — a sentence that had been true when written and stopped being true in **F86**, which
+closed that gap and added the card `Vilken roll har hypermedia (HATEOAS) i REST?` to the chapter 9 deck.
+Verified afterwards: the card is in the deck, and the chapter 9 exam-answer note mentions hypermedia
+sixteen times including its own agenda card.
+
+**What that cost.** A premise-lens reviewer was commissioned specifically to ask whether a plan was
+worth building rather than whether it followed the rules. It returned FLAWED, and the **headline finding
+of its verdict** was that the plan "optimises the finder and ignores the find" — pointing at the
+hypermedia gap as a concrete, examinable, still-open item that should outrank the tool work. The
+objection was well argued, correctly cited, and **wrong**, because the file it cited was stale.
+
+**Why this is worse than ordinary doc rot.** The whole value of a premise reviewer is that it does not
+inherit the primary agent's frame; it reads the situation fresh. That makes it **maximally dependent on
+the files that describe the situation**, and it has no way to tell a current fact from a fossil. A stale
+line in steering therefore does not merely mislead a human who can shrug it off — it is laundered into
+an independent-looking finding and handed back with a verdict attached. The review that exists to catch
+frame errors acquired one.
+
+**Rule added:** none, because the rule already existed and was not followed.
+`documentation-standard.md` says a stale doc is a bug and that finished work belongs in the backlog
+rather than in the state file; `current-state.md`'s own closing paragraph says to reset it "as soon as
+the work is done". F86 closed the gap and did not reset the paragraph. What has been added is the
+instruction's cost, recorded in `current-state.md` itself under *Two closed items that older text still
+calls open*, so the next agent reads why the file must be pruned rather than only that it should be.
+
+**Lesson:** the files that describe the situation are load-bearing for exactly the reviews that are
+hardest to replace. Prune the state file in the same change that closes the item — not because tidiness
+matters, but because an independent reviewer cannot audit its own inputs.

@@ -551,6 +551,7 @@ Vad är TLS/SSL respektive HTTPS? (2)
 ||
 - **TLS/SSL** – SSL kom från Netscape, och en utökad version blev internetstandard under namnet TLS; det bygger en säker kanal med sekretess, integritet och autenticitet
 - **HTTPS** – inget eget protokoll: prefixet https i en URL startar upprättandet av en TLS-kanal mellan webbläsare och webbserver
+<!--SR:!fsrs,2026-10-04T02:46:08.104Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:45:08.104Z-->
 
 Hur går TLS-handskakningen till, steg för steg? (4)
 ||

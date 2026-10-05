@@ -49,6 +49,7 @@ Ge några exempel på distribuerade system. (4)
 - **Bokens tre genomgångna exempel** – webbsök, onlinespel med många spelare, och finanshandel
 - **Spannet, det frågan egentligen är ute efter** – från ett system i en bil till globala system med miljoner noder, från små sensorer till kraftfulla datorer
 - **Trenderna** – mobilt och ubiquitous, distribuerad multimedia, och molnet som en tjänst man köper i stället för att äga
+<!--SR:!fsrs,2026-10-04T02:51:57.358Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:50:57.358Z-->
 
 ## 2. Ange 5 olika hårdvaruresurser och 5 mjukvaruresurser som kan vara intressant att dela
 
@@ -105,6 +106,7 @@ Ange 5 mjukvaruresurser som är värda att dela. (3)
 - **De fem** – filer, webbsidor, databaser, sökmotorer och en valutaomvandlare
 - **Varför mjukvara delas** – för att folk ska kunna jobba ihop; de vill dela datan, inte disken den ligger på
 - **Som en tjänst** – man använder en sökmotor eller valutaomvandlare utan att bry sig om vilken server som kör den
+<!--SR:!fsrs,2026-10-04T02:44:58.591Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:43:58.591Z-->
 
 ## 3. Vilka utmaningar finns enligt boken med att bygga ett distribuerat system?
 
@@ -186,6 +188,7 @@ Vilka utmaningar finns med att bygga ett distribuerat system? Boken har åtta; d
 - **Samtidighet** – flera klienter vill åt samma resurs samtidigt och kan krocka, som två auktionsbud som skriver över varandra
 - **Transparens** – dölja att delarna är åtskilda; access och location är de två viktigaste
 - **Tjänstekvalitet** – tillförlitlighet, säkerhet, prestanda och anpassningsförmåga, där prestanda betyder att hålla tidsgränser
+<!--SR:!fsrs,2026-10-04T02:48:01.057Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:47:01.057Z-->
 
 ## 4. Vilka arv från IP, HTTP och HTML måste man ta hänsyn till vid utveckling av distribuerade system?
 

@@ -28,7 +28,7 @@ Vilka tre saker kan man göra åt deadlocks? (3)
 - **Förebygga** – lås allt vid start, eller lås i förbestämd ordning
 - **Upptäcka** – leta cykler i väntegrafen och abort:a en transaktion i cykeln
 - **Timeout** – varje lås blir sårbart efter en tid och kan brytas
-<!--SR:!fsrs,2026-10-03T10:19:42.700Z,3,2.88206713,8.91056867,2,6,1,0,2026-09-30T10:19:42.700Z-->
+<!--SR:!fsrs,2026-10-04T02:48:42.012Z,0,0.68180927,9.6271397,3,7,2,0,2026-10-04T02:38:42.012Z-->
 
 Vad är problemet med att låsa alla objekt när transaktionen startar? (2)
 ||
@@ -54,7 +54,7 @@ Vad är återhämtningsbarhet (recoverability) mot dirty reads?::Att ==skjuta up
 <!--SR:!fsrs,2026-10-09T10:14:46.650Z,9,8.83497632,6.79215857,2,4,0,0,2026-09-30T10:14:46.650Z-->
 
 **Strikt körning** (strict execution);;När läsning och skrivning på ett objekt ==skjuts upp tills alla som tidigare skrivit det har commit:at eller abort:at==. Det är detta som ger isolering och stoppar dirty reads.
-<!--SR:!fsrs,2026-10-03T20:48:52.768Z,2,1.05576655,9.76302545,2,8,1,0,2026-10-01T20:48:52.768Z!fsrs,2026-10-03T14:08:38.871Z,3,2.88206713,8.91056867,2,6,1,0,2026-09-30T14:08:38.871Z-->
+<!--SR:!fsrs,2026-10-06T22:20:30.035Z,3,2.11895694,9.74849079,2,9,1,0,2026-10-03T22:20:30.035Z!fsrs,2026-10-09T02:37:07.977Z,5,4.93097245,9.26201309,2,7,1,0,2026-10-04T02:37:07.977Z-->
 
 Vad är en kaskadabort?::Avbryter man en transaktion måste ==alla som läst dess osparade värden också avbrytas==.
 <!--SR:!fsrs,2026-10-04T10:01:22.154Z,4,4.19933095,5.19004872,2,3,0,0,2026-09-30T10:01:22.154Z-->
@@ -69,7 +69,7 @@ Vilka tre nackdelar med låsning ville optimistisk metod undvika? (3)
 - **Kostar** – även rena läsningar måste låsa, fast krock är ovanligt
 - **Kan ge deadlock** – och varken timeout eller detektering är helt bra
 - **Låsen hålls till slutet** – vilket sänker samtidigheten
-<!--SR:!fsrs,2026-10-02T15:21:08.264Z,3,2.77691079,8.90945907,2,5,0,0,2026-09-29T15:21:08.264Z-->
+<!--SR:!fsrs,2026-10-04T02:53:18.828Z,0,0.26210537,9.85781919,3,8,2,0,2026-10-04T02:43:18.828Z-->
 
 Vilka tre faser har en optimistisk transaktion? (3)
 ||
@@ -107,10 +107,10 @@ När bestäms ordningen mellan transaktioner? (2)
 ## 5. Jämförelse av de tre metoderna
 
 **Serialiserbarhet** (serial equivalence);;Att en flätad körning av transaktioner ger ==samma resultat som om de körts en och en i någon ordning==.
-<!--SR:!fsrs,2026-10-03T21:04:21.486Z,2,1.11749905,9.71530447,2,8,1,0,2026-10-01T21:04:21.486Z!fsrs,2026-10-04T15:20:00.664Z,5,5.22024091,7.86010817,2,4,0,0,2026-09-29T15:20:00.664Z-->
+<!--SR:!fsrs,2026-10-06T02:13:27.356Z,2,1.9683062,9.79623421,2,9,1,0,2026-10-04T02:13:27.356Z!fsrs,2026-10-04T15:20:00.664Z,5,5.22024091,7.86010817,2,4,0,0,2026-09-29T15:20:00.664Z-->
 
 **Tvåfaslåsning** (two-phase locking);;Att en transaktion ==först bara skaffar lås (växande fas) och sedan bara släpper dem (krympande fas)== – inga nya lås efter det första släppta.
-<!--SR:!fsrs,2026-10-03T21:00:07.471Z,2,1.59890246,8.91713519,2,6,1,0,2026-10-01T21:00:07.471Z!fsrs,2026-10-16T21:00:14.287Z,15,14.65864851,5.72420896,2,4,0,0,2026-10-01T21:00:14.287Z-->
+<!--SR:!fsrs,2026-10-07T02:37:47.230Z,3,3.11168537,9.26637225,2,7,1,0,2026-10-04T02:37:47.230Z!fsrs,2026-10-16T21:00:14.287Z,15,14.65864851,5.72420896,2,4,0,0,2026-10-01T21:00:14.287Z-->
 
 Vad gör strikt tvåfaslåsning "strikt"?::Att ==alla lås hålls kvar tills transaktionen commit:ar eller abort:ar==, i stället för att släppas direkt. Det skyddar mot dirty reads.
 <!--SR:!fsrs,2026-10-06T10:11:05.502Z,8,8.17307705,5.64640287,2,3,0,0,2026-09-28T10:11:05.502Z-->
@@ -119,11 +119,11 @@ Vilka två låstyper använder låsning?::Läslås och skrivlås – alltså ==m
 <!--SR:!fsrs,2026-10-09T10:16:27.999Z,9,8.83497632,6.79215857,2,4,0,0,2026-09-30T10:16:27.999Z-->
 
 Vad är den gemensamma tanken bakom de tre metoderna?::Alla gör en av två saker vid en krock: ==låter transaktioner vänta, eller startar om dem==. Låsning väntar; tidsstämpel och optimistisk startar om.
-<!--SR:!fsrs,2026-10-02T10:04:26.388Z,2,0.09372051,9.94226793,2,10,1,0,2026-09-30T10:04:26.388Z-->
+<!--SR:!fsrs,2026-10-04T20:41:01.988Z,2,0.43024292,9.92755403,2,11,1,0,2026-10-02T20:41:01.988Z-->
 
 Hur gör de tre metoderna vid en konflikt, och vilken kan ge deadlock? (3)
 ||
 - **Strikt 2PL** – transaktionen väntar; enda metoden som kan ge deadlock
 - **Tidsstämpelordning** – abort direkt, men väntar bara på tidigare, så ingen deadlock
 - **Optimistisk** – abort vid commit och arbetet görs om; inga lås, så ingen deadlock
-<!--SR:!fsrs,2026-10-03T14:07:40.704Z,3,2.65940815,9.49868051,2,6,0,0,2026-09-30T14:07:40.704Z-->
+<!--SR:!fsrs,2026-10-08T02:15:46.730Z,4,4.11030637,9.65242913,2,7,0,0,2026-10-04T02:15:46.730Z-->
