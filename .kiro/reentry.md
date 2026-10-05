@@ -14,7 +14,7 @@ Last updated **2026-10-05, 11:20**. Live courses: HI1031 and HI1032.
 
 ## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him
 
-The work of 2026-09-26 to 10-05 is finished, verified and pushed, recorded as **F80 to F95**.
+The work of 2026-09-26 to 10-05 is finished, verified and pushed, recorded as **F80 to F96**.
 
 **No commit id is quoted here on purpose.** This file is rewritten *before* the commit that contains
 it. Run `git log -1` and `git ls-remote origin refs/heads/main` and compare them yourself.
@@ -44,7 +44,7 @@ but a real answer, length accepted. `current-state.md` has the quote.
 **Why it failed is the useful part:** a pointer card only works if the fact it points at sits in a deck
 he actually drills, and five of HI1031's ten concept decks carry `nosr`. **Three adversarial rounds
 approved the design**, every reviewer briefed with the rules, and none of them asked that question.
-That is what the new `adversarial-reviewer` agent's second lens exists for.
+That is what `premise-reviewer` exists for.
 
 ---
 
@@ -124,9 +124,12 @@ with `--no-verify`.**
 
 ## WHEN YOU REVIEW, OR ARE ASKED TO BUILD SOMETHING
 
-Use `.kiro/agents/adversarial-reviewer.*`, and use **both** lenses: one reviewer handed the
-authoritative rules, one handed his situation and goal and **not** the rules.
-`documentation-standard.md` now requires one of each, and the reason is in `lessons-learned.md`.
+Use **both** reviewers in `.kiro/agents/`: `conformance-reviewer` is handed the authoritative rules,
+`premise-reviewer` is handed his situation and goal and **not** the rules. They share one prompt and
+differ only in tools — the conformance one has `shell` whitelisted to this repo’s own scripts so it can
+reproduce a figure; the premise one has none, because an agent that can run a gate stops asking the
+premise question. `documentation-standard.md` requires one of each, and the reason is in
+`lessons-learned.md`.
 
 Two failure modes are recorded there and are worth knowing before you trust any review:
 

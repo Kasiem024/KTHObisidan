@@ -20,7 +20,9 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `hooks/*.sh` | `preToolUse` guards — read stdin, `exit 2` blocks |
 | `agents/vault-auditor.*` | Conformance inspector; writes reports, never edits notes |
 | `agents/flashcard-author.*` | Card author; writes course notes only, grounded in the course literature |
-| `agents/adversarial-reviewer.*` | Independent reviewer; reads only, cannot write or run commands. Carries two lenses — conformance against the rules, and premise without them |
+| `agents/conformance-reviewer.json` | Adversarial reviewer, conformance lens. Handed the rules; may re-run the repo’s own `Test-*` and `Get-*` scripts to reproduce a figure, but has no `write`, so it cannot build a measurement of its own |
+| `agents/premise-reviewer.json` | Adversarial reviewer, premise lens. Handed the goal and **not** the rules, asks only whether the thing is worth building. No shell, deliberately — a reviewer that can run a gate drifts into conformance |
+| `agents/reviewer-prompt.md` | The prompt both reviewers share. The tool grant, not the prompt, decides which lens an agent is |
 
 **A set of skills for the Gemini web app was built from this vault's material and lives outside it**,
 under `Jag/Gemini/Skills/` on the author's Drive. **No count is given here on purpose** — the author

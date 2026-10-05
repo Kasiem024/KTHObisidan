@@ -710,7 +710,8 @@ I wrote. Nobody asked the question it answered, because the question is not a co
 
 **Rule added:** `documentation-standard.md` now says to give **exactly one reviewer the premise instead
 of the rules** — the author's situation and goal, and no conventions — asked only whether the artifact is
-the right thing to build. `.kiro/agents/adversarial-reviewer.json` carries both lenses in its prompt, and
+the right thing to build. `.kiro/agents/premise-reviewer.json` and `conformance-reviewer.json` share one
+prompt and differ only in tools, and
 states that steering is inherited automatically so the discipline for the premise lens is the reviewer's
 to keep rather than something the configuration can enforce. Applied immediately: the plan for this very
 change was reviewed by one conformance agent and one premise agent, and the premise agent returned

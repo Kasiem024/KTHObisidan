@@ -5,7 +5,7 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: nothing in flight.** The exam-prep programme is finished through **F95** and every gate is
+**Status: nothing in flight.** The exam-prep programme is finished through **F96** and every gate is
 green. The phone-sync item at the bottom has been parked since 2026-09-08 and waits on the author.
 
 **The re-entry prompt is `.kiro/reentry.md`.** It is course-neutral and is the file to be pointed at
@@ -48,7 +48,7 @@ under `Filer/Canvas/AI-optimerad Markdown/Gamla Tentor/`, distilled by the autho
 `HI1032 Tentaanalys - Ranking och poangstrategi.md` and a self-contained `AI-kontext.md`. Those two are
 the specification for that course — `product.md`'s table understates this by naming only HI1031.
 
-## Done: F86 to F95
+## Done: F86 to F96
 
 - **F86** — HI1031's ten decks audited against all 49 exam questions, per *ask* rather than per
   question. 114 of 117 covered; three gaps closed, including the chapter 9 hypermedia card.
@@ -64,24 +64,28 @@ the specification for that course — `product.md`'s table understates this by n
   `-A` inside it.
 - **F92** — HI1031's exam-question cards rewritten to carry the answer. 73 to 81 cards.
 - **F93** — `cueMismatch` added to `Test-DeckHygiene.ps1`, closing a rule that was only half-checked, and
-  a new `adversarial-reviewer` agent.
+  a new adversarial-reviewer agent, since split in two by F96.
 
-- **F94** â€” the renumbered half of a duplicate F90. Not new work; see F95.
-- **F95** â€” an outside agent reviewed F93 and found a duplicate F-number, a self-test heading that
+- **F94** — the renumbered half of a duplicate F90. Not new work; see F95.
+- **F95** — an outside agent reviewed F93 and found a duplicate F-number, a self-test heading that
   contradicted three of its own controls, and a false claim in the handoff that commissioned it. Two
   audit checks added, `duplicateFNumber` and an assertion for `tagIndexBadFilter`: **46 assertions**.
-## Use the new agent, and use both of its lenses
 
-`.kiro/agents/adversarial-reviewer.*` has `read`/`grep`/`glob` and **no `write` or `shell`**. The absent
-shell is deliberate: a reviewer that can run commands starts counting, and counting belongs in a script.
-It carries two lenses, and the second is the point:
+## Use both reviewers, and never give the premise one a shell
 
-- **conformance** — handed the authoritative rules, reports rule-breaking and factual error.
-- **premise** — handed the author's situation and goal and **not** the rules, asks only whether the
-  thing is worth building.
+There are two, they share `reviewer-prompt.md`, and **the tool grant is what makes them different**:
 
-`documentation-standard.md` now requires one of each. The premise lens exists because three
-conformance rounds approved the design the author discarded the next day.
+- **`conformance-reviewer`** — handed the authoritative rules, reports rule-breaking and factual
+  error. It has `shell`, whitelisted to the repo’s own `Test-*` and `Get-*` scripts, read-only `git`
+  and the linter. It has no `write`, so it cannot author a probe — it can only re-run a measurement
+  this repo already owns. Reproducing a figure is what distinguishes a real number from a plausible one.
+- **`premise-reviewer`** — handed the author’s situation and goal and **not** the rules, asks only
+  whether the thing is worth building. **No shell, and that is the point:** an agent that can run a gate
+  drifts into checking conformance, which is the one job this lens exists not to do.
+
+`documentation-standard.md` requires one of each. The premise lens exists because three conformance
+rounds approved the design the author discarded the next day. The split came out of F96, after an
+outside agent showed that four findings in four days had all needed execution and none had been counting.
 
 ## Two closed items that older text still calls open
 

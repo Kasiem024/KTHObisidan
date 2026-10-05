@@ -189,4 +189,7 @@ sharper and narrower at the same time, so a reviewer holding the rules checks co
 whether the thing is worth building. Three rule-briefed rounds approved a card design the author
 discarded the next day; the two entries in `lessons-learned.md` about frame blindness and about scope
 record what that cost. Where subagents are available the premise pass is a separate agent run — see
-`.kiro/agents/adversarial-reviewer.json`, whose prompt carries both lenses.
+`.kiro/agents/premise-reviewer.json`, which is handed the goal and not the rules. Its counterpart
+`conformance-reviewer.json` is the rule-briefed pass, and it is the only one of the two with `shell`:
+reproducing a figure is how you tell a real number from a plausible one, while a premise reviewer that
+can run a gate drifts back to the easy question. Neither can write.

@@ -1,0 +1,57 @@
+{
+  "name": "conformance-reviewer",
+  "description": "Adversarial reviewer, conformance lens. Handed the authoritative rules, reports rule-breaking and factual error, and may re-run the vault's own measurement scripts to reproduce a figure. Cannot write anything, so it cannot build a probe of its own - counting stays in the scripts.",
+  "prompt": "file://./reviewer-prompt.md",
+  "model": null,
+  "welcomeMessage": "I review against the rules. Give me the artifact, the standard it must meet, and what was decided on purpose. I can re-run the repo's own Test-* and Get-* scripts to check a figure you quoted, but I cannot write a file or invent a measurement. I end with a forced verdict.",
+  "tools": ["read", "grep", "glob", "shell"],
+  "allowedTools": ["read", "grep", "glob"],
+  "toolsSettings": {
+    "shell": {
+      "allowedCommands": [
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Vault-Audit\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Test-VaultAudit\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Test-DeckHygiene\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Test-DocHygiene\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Test-ScriptHygiene\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Test-SRIntegrity\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Get-DeckPairCensus\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Get-NoteStructureCensus\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Get-TagInventory\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Get-ObsidianExcludes\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Get-ObsidianConfigAudit\\.ps1.*",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File .*Get-SRIntegrity\\.ps1 -Compare.*",
+        "cmd /c .*markdownlint-cli2.*",
+        "git status.*",
+        "git log.*",
+        "git diff.*",
+        "git show.*",
+        "git ls-files.*",
+        "git ls-remote.*",
+        "git cat-file.*",
+        "git rev-parse.*"
+      ],
+      "autoAllowReadonly": true,
+      "denyByDefault": true
+    }
+  },
+  "hooks": {
+    "preToolUse": [
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-destructive.sh",
+        "timeout_ms": 3000
+      },
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/protect-sr-data.sh",
+        "timeout_ms": 3000
+      },
+      {
+        "matcher": "shell",
+        "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" .kiro/hooks/block-secrets.sh",
+        "timeout_ms": 3000
+      }
+    ]
+  }
+}

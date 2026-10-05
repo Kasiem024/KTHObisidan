@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F95): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F96): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4922,8 +4922,8 @@ So the number was wrong in a way the only F-number check was blind to.
 three intentional `-old.` stubs stay uncounted. `Test-VaultAudit.ps1` plants a second `F6.` heading plus
 an `F5-old.` stub that must **not** be counted: **45 assertions, 0 failed**, up from 44.
 
-Adding F94 then made three documents stale at `F1-F95` — `README.md`, `product.md` and the backlog's own
-frontmatter — which `staleFRange` reported immediately. Both checks now read `F1-F95`.
+Adding F94 then made three documents stale at `F1-F96` — `README.md`, `product.md` and the backlog's own
+frontmatter — which `staleFRange` reported immediately. Both checks now read `F1-F96`.
 
 ### Finding 2 - the self-test's heading contradicted three of its own controls
 
@@ -5022,3 +5022,116 @@ thing measured is the same defect F93 recorded against a row-counting regex thre
 | `markdownlint-cli2` | 543 files, 0 issues |
 
 **No flashcard was touched**, so no `Get-SRIntegrity.ps1` baseline was needed.
+
+## F96. The reviewer agent split in two, because one tool grant cannot serve two lenses
+
+**Date:** 2026-10-05
+**Status:** Closed
+
+**What prompted it.** F95 recorded two findings from an outside review that were taken as argument
+rather than repaired: that the reviewer agent's missing `shell` was a mistake, and that two
+identically briefed fabrication hunters agreeing proves little. The author put both back to the
+reviewing agent, which rejected the framing of the first and strengthened the second. Both of its
+positions survived checking, and this entry is the result.
+
+### The shell question was a false choice, and the fix is a split
+
+F93's reasoning was *"a reviewer that can run commands starts counting"*, and counting is owned by the
+scripts. The counter-evidence is that **reproduction is not counting**, and that four findings in four
+days each required execution:
+
+| Finding | What it needed |
+|---|---|
+| F93's dead negative control | running a correct and a deliberately broken variant of the same card |
+| F95's self-test heading | running `-SelfTest` and reading three rows against the heading above them |
+| A false finding **avoided** | `git status` against `git show HEAD:`, which revealed the file changed mid-review |
+| F95's wrong README figure | cross-checking a count against the audit's own bucket names |
+
+The fourth is this agent's own: a check-name count written with `'([a-zA-Z]+)'` silently skipped `noH1`
+and `multipleH1`, returned 30 against a true 32, and reached `README.md` before a cross-check caught it.
+None of the four was counting in the sense F93's rule forbids.
+
+**So the grant was wrong because one agent was serving two lenses.** Split:
+
+- **`conformance-reviewer.json`** — `read`/`grep`/`glob`/`shell`, with `allowedCommands` whitelisted to
+  this repo's own `Test-*` and `Get-*` scripts, read-only `git`, and the linter. `denyByDefault` is set.
+  It has **no `write`**, which is what makes the whitelist hold: it cannot author a probe script, so it
+  can only re-run a measurement this repository already owns and defines. **The prohibition became
+  mechanical instead of instructed** — the old rule 5 asked the agent to police itself.
+- **`premise-reviewer.json`** — `read`/`grep`/`glob` and nothing else. Here F93's concern is correct and
+  binding: an agent that can run a gate drifts into checking conformance, which is the one job this lens
+  exists not to do.
+
+`Get-SRIntegrity.ps1` is whitelisted **only with `-Compare`**. Bare or `-Save` would let a reviewer
+redate the shared baseline another session is measuring against, which is T22 and has already happened.
+`Format-*.ps1` is absent entirely, because both of those write.
+
+The pattern is not new here: `vault-auditor.json` and `flashcard-author.json` already use
+`allowedCommands` the same way, the latter with `denyByDefault` as well. The three `shell` hooks both
+existing agents carry — `block-destructive.sh`, `protect-sr-data.sh`, `block-secrets.sh` — are carried
+by the conformance reviewer too.
+
+**One prompt, two agents.** `adversarial-reviewer-prompt.md` was renamed `reviewer-prompt.md`, since it
+is no longer any one agent's, and it now states that **the tool grant tells a reviewer which lens it
+is**: shell means conformance, no shell means premise. That avoids duplicating the output format and the
+severity scale into two files, which `documentation-standard.md` would call a drift risk. The welcome
+message of the old agent asked the operator which lens was wanted; an agent that has to ask can be
+given the wrong answer, or none.
+
+`adversarial-reviewer.json` was deleted. It existed for one day.
+
+### Two hunters: the conclusion is not unproven, it is refuted
+
+F95 called the redundancy conclusion unproven. **The record is stronger than that, and the evidence is
+from this week.** The hypermedia claim in F95's finding 3 survived **two** adversarial reviews of the
+handoff, and the diagnosis written in F95 says why: *"both were briefed to check the prompt and neither
+to re-verify a claim it attributed to someone else."* Identically briefed reviewers, a shared blind
+spot, and a real defect delivered to the author. That is evidence against the conclusion rather than an
+absence of evidence for it.
+
+**Checked, and F93 does not make the claim.** F93's only sentence on this is *"Two fabrication hunters
+later cleared 81 cards with zero findings, with quotes"*, which is true and draws no inference. The
+redundancy conclusion lived in the handoff prompt and in this agent's reasoning, never in the committed
+record, so no backlog entry needed correcting. This is recorded because the opposite was assumed for a
+day: the correction belonged in a transcript, not in the standard.
+
+**The decisive test, if the question is ever worth settling:** run two hunters with **different**
+briefs — one that enumerates what the source contains and diffs it against what was produced, one that
+tests each claim in the artifact against the source it cites. Zero from *those* two means something.
+Zero from two copies of the same brief means the brief was looked at twice.
+
+### One new entry in the external skill, and deliberately only one
+
+`review-adversarially/references/how-reviews-fail.md` gained **Attributed claim inherited as fact**:
+an artifact reports a claim as someone else's, and every later reader treats the attribution as proof
+that somebody already checked it. The mechanism is distinct from *Scope checked, source not*, which is
+about a brief that excluded part of the source; here the brief was fine and the **attribution** was
+doing the work a citation should do. Thirteen entries now, backed up to `%TEMP%` first and appended
+only.
+
+**The `[a-zA-Z]+` miscount was deliberately not written up**, on the outside agent's argument: it is a
+further instance of a class the record already owns, it was caught by a cross-check that is already
+standing practice, and the same review had just argued that this repository is described faster than it
+is pruned. It is recorded above as evidence and nowhere else. A fourth instance of a known class is not
+a new lesson.
+
+### Verification
+
+| Gate | Result |
+|---|---|
+| Agent JSON | all four under `.kiro/agents/` parse; both reviewers report `write=False`; conformance `shell=True`, premise `shell=False`; every `prompt` path resolves |
+| Dead references | 0 files name `adversarial-reviewer.json`, `-prompt.md` or `.*` outside the historical F93 and F95 entries |
+| `Vault-Audit.ps1` | `RESULT: clean`, `notesInScope=520` |
+| `Test-VaultAudit.ps1` | 46 assertions, 0 failed |
+| `Test-DocHygiene.ps1` | clean on the second run; the first reported `corruption` at two lines — see below |
+| `markdownlint-cli2` | 543 files, 0 issues |
+| External skill | 13 entries, the twelve prior ones byte-intact, backup at `%TEMP%` |
+
+**`Test-DocHygiene.ps1` earned itself here.** Its first run reported `corruption ... adjacent dashes or
+mojibake at L69, L70` in `current-state.md`. The cause was this session's own script: a `.ps1` written
+with a literal em dash, which PowerShell 5.1 reads as ANSI, so the character reached the file as
+`\u00E2\u20AC\u201D`. That is **T1**, which `traps.md` has documented since the beginning and which this
+agent had read. No new trap entry is warranted - the trap was right, the gate caught it in seconds, and
+the repair was two character substitutions built from code points. It is recorded only because a
+verification table claiming "clean" should say when it was not clean first. The same scan found the
+signature nowhere else under `.kiro/`.
