@@ -14,7 +14,7 @@ Last updated **2026-10-05, 11:20**. Live courses: HI1031 and HI1032.
 
 ## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him
 
-The work of 2026-09-26 to 10-05 is finished, verified and pushed, recorded as **F80 to F93**.
+The work of 2026-09-26 to 10-05 is finished, verified and pushed, recorded as **F80 to F95**.
 
 **No commit id is quoted here on purpose.** This file is rewritten *before* the commit that contains
 it. Run `git log -1` and `git ls-remote origin refs/heads/main` and compare them yourself.

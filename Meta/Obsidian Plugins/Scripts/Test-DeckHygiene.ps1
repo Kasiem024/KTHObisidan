@@ -437,23 +437,23 @@ function Invoke-SelfTest {
   }
 
   Write-Host ''
-  Write-Host '  negative controls - each must report nothing:'
+  Write-Host '  controls - each must match the expectation shown:'
   # the (8) exemption applies only at the end of the front line
   $fat = @($r.findings | Where-Object { $_.check -eq 'fatList' })
   $eightWrong = @($fat | Where-Object { $_.text -match '\(8\)[\s.:]*$' }).Count
   $v1 = 'HOLDS'
   if ($eightWrong -gt 0) { $v1 = 'BROKEN - a card ending in (8) was reported'; $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f '(8) exemption at line end', $eightWrong, $v1)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f '(8) exemption at line end', $eightWrong, 'expect 0', $v1)
   # ... but a mid-sentence (8) must NOT exempt a long list
   $midEight = @($fat | Where-Object { $_.text.Contains('section (8)') }).Count
   $v2 = 'HOLDS'
   if ($midEight -eq 0) { $v2 = 'BROKEN - a 6-row list slipped past the gate'; $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'mid-sentence (8) not exempt', $midEight, $v2)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'mid-sentence (8) not exempt', $midEight, 'expect >0', $v2)
   # the clean card
   $cleanWrong = @($r.findings | Where-Object { $_.text -like '*Question clean*' }).Count
   $v3 = 'HOLDS'
   if ($cleanWrong -gt 0) { $v3 = 'BROKEN - a correct card was reported'; $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'clean card', $cleanWrong, $v3)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'clean card', $cleanWrong, 'expect 0', $v3)
   # cueMismatch must take the LAST (N), not the first. "See section (8). What are the three? (3)" has
   # three rows and a correct cue, and sits inside the window the check runs on, so reporting it means
   # the first match was used. The card MUST be in scope or this control cannot fail.
@@ -461,7 +461,7 @@ function Invoke-SelfTest {
   $cueFirstWrong = @($cue | Where-Object { $_.text.Contains('section (8)') }).Count
   $v3b = 'HOLDS'
   if ($cueFirstWrong -gt 0) { $v3b = 'BROKEN - the first (N) was read as the cue'; $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'cue taken from last (N)', $cueFirstWrong, $v3b)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'cue taken from last (N)', $cueFirstWrong, 'expect 0', $v3b)
   # and the control must be CAPABLE of failing, which is a property of the fixture rather than of the
   # findings: the card has to sit inside the row window cueMismatch runs on. Asserted directly, because
   # the first version of this control keyed on a six-row card that the check never reached, so it
@@ -482,32 +482,32 @@ function Invoke-SelfTest {
     $v3d = ('BROKEN - probe card has ' + $probe + ' rows, outside the window; control cannot fail')
     $missing++
   }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'last-(N) control can fail', $probe, $v3d)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'last-(N) control can fail', $probe, 'expect 2-4', $v3d)
   # a correct cue must stay silent, and a card thinList or fatList already owns must not be
   # double-reported by cueMismatch
   $cueClean = @($cue | Where-Object { $_.text -match 'counted right|Front thin|Front fat' }).Count
   $v3c = 'HOLDS'
   if ($cueClean -gt 0) { $v3c = 'BROKEN - correct cue or double-reported card'; $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'no cue false positives', $cueClean, $v3c)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'no cue false positives', $cueClean, 'expect 0', $v3c)
   # an (8)-exempt card is outside fatList, so a wrong count on it must still be caught
   $eightBad = @($cue | Where-Object { $_.text.Contains('eight challenges') }).Count
-  $v3e = 'FIRES'
+  $v3e = 'HOLDS'
   if ($eightBad -eq 0) { $v3e = 'BROKEN - a broken (8) card was checked by nothing'; $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f '(8) card with wrong count', $eightBad, $v3e)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f '(8) card with wrong count', $eightBad, 'expect >0', $v3e)
   # nothing inside a fenced code block is a card
   $fenceWrong = @($r.findings | Where-Object { $_.text -match 'std::cout|namespace foo|in an example' }).Count
   $v4 = 'HOLDS'
   if ($fenceWrong -gt 0) { $v4 = 'BROKEN - code fence content read as cards'; $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'fenced code block ignored', $fenceWrong, $v4)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'fenced code block ignored', $fenceWrong, 'expect 0', $v4)
   # line endings and BOM must not change the answer
   $crlfDiff = [math]::Abs($r.findings.Count - $rCrlf.findings.Count)
   $v5 = 'HOLDS'
   if ($crlfDiff -ne 0) { $v5 = ('BROKEN - CRLF gave ' + $rCrlf.findings.Count + ' findings'); $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'CRLF same as LF', $crlfDiff, $v5)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'CRLF same as LF', $crlfDiff, 'expect 0', $v5)
   $bomDiff = [math]::Abs($r.findings.Count - $rBom.findings.Count)
   $v6 = 'HOLDS'
   if ($bomDiff -ne 0) { $v6 = ('BROKEN - BOM gave ' + $rBom.findings.Count + ' findings'); $missing++ }
-  Write-Host ('    {0,-28} {1,3}  {2}' -f 'BOM same as no BOM', $bomDiff, $v6)
+  Write-Host ('    {0,-28} {1,3}  {2,-10} {3}' -f 'BOM same as no BOM', $bomDiff, 'expect 0', $v6)
 
   $emptyNote = @($r.notes | Where-Object { $_.check -eq 'emptyHeading' }).Count
   $verdictE = 'FIRES'

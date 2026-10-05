@@ -1,6 +1,6 @@
 ---
 tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F93): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F95): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -4005,7 +4005,7 @@ with the truth. T2 now records that the safe form stops being safe the moment it
 as not this session's pipelines and not attributable, reported to the author, and deliberately not
 committed.
 
-**Corrected 2026-10-02 (see F90):** that attribution was wrong. The files were written by this same
+**Corrected 2026-10-02 (see F94):** that attribution was wrong. The files were written by this same
 evening's session, which had been asked to synthesise the two skills into standalone files for use
 outside the vault; the author confirmed they are his and asked for them to be committed. The error was
 treating creation timestamps and byte sizes as evidence of authorship — they establish when a file
@@ -4437,7 +4437,9 @@ course book, but not from memory.
 **FCAPS has cards for C and A only**, because those are the two letters the past exams asked about and
 the analysis records no answer for F, P or S.
 
-## F90. This session's learnings folded into the agent docs, and a wrong attribution corrected in three files
+## F94. This session's learnings folded into the agent docs, and a wrong attribution corrected in three files
+
+**Numbered F94, out of sequence, and that is the point of this paragraph.** This entry was written as F90 on 2026-10-02 by a session running in parallel with another that claimed the same number four minutes later. Two entries called F90 sat in the file until 2026-10-05, when an outside review found them. The other F90 kept its number because three documents cite it and only one cited this; the audit now has a `duplicateFNumber` check so a parallel session cannot do it again.
 
 **2026-10-02.** A session spent building eight skills for the Gemini web app — from this vault's
 material plus two other repositories — produced learnings that lived only in its transcript. This
@@ -4871,3 +4873,152 @@ A `6>` capture of `Test-DocHygiene.ps1` came back empty while piping gave full o
 `powershell -File` call captures nothing, and T23 already recommends the sidestep I had ignored. Recorded
 here because `documentation-standard.md` warns about exactly this: the record was right and I was
 confident.
+
+## F95. An outside review found a duplicate F-number, a self-test whose heading contradicted three of its own controls, and a false claim in the handoff that commissioned it
+
+**Date:** 2026-10-05
+**Status:** Closed
+
+**What prompted it.** F93 added an `adversarial-reviewer` agent and a `cueMismatch` gate. The author
+then asked for a handoff prompt so an agent outside this repo could review that work and report on the
+agent workflow generally. The prompt was written here, reviewed by two adversarial subagents, revised
+once, and handed over. The outside agent returned six findings. Three were checkable against source and
+all three were real; one was already fixed by the time it was read; two were argument rather than fact.
+This entry records what was repaired.
+
+### Finding 1 - F90 was used by two entries
+
+**Measured:** 95 `F<n>.` headings in the backlog, **91 distinct numbers**. Four numbers appeared twice.
+Three of those are deliberate — `F11-old.`, `F25-old.` and `F29-old.` are superseded-cross-reference
+stubs, and they do not match the pattern the audit uses, which requires a literal `.` after the digits.
+The fourth was real:
+
+| Line | Heading | Commit | Time | Cited by |
+|---|---|---|---|---|
+| 4440 | F90. This session's learnings folded into the agent docs... | `6dce572` | 15:07 | 1 document |
+| 4523 | F90. Four of the six gaps F89 reported closed from the course book | `018e61f` | 15:11 | 3 documents |
+
+Two sessions ran in parallel on 2026-10-02 and both claimed F90, four minutes apart. The pair sat in
+the file for three days. The consequence is not cosmetic: `F91` contains the sentence *"F89's and F90's
+gaps were gaps in the source"*, and only one of the two F90s is about gaps, so the reference could not
+be resolved without reading both.
+
+**Repaired** by renumbering the entry with **one** inbound citation to **F94** and repointing that
+citation, leaving the three-citation entry untouched. F94 therefore sits out of sequence in the file,
+and carries a paragraph saying why.
+
+**Also measured, and deliberately not repaired:** `F33` and `F34` do not exist, and nothing in the
+repository references them. A gap is harmless — no cross-reference can be ambiguous — so making it a
+finding would add permanent noise to a check, which is how a check earns a false positive and then gets
+switched off.
+
+### The gate that was missing
+
+`staleFRange` has existed since 2026-09-27 and **cannot see this defect by construction**: it compares
+the *highest* F-number against the ranges other docs quote, and a duplicate does not move the highest.
+So the number was wrong in a way the only F-number check was blind to.
+
+`duplicateFNumber` added to `Vault-Audit.ps1`, using the same heading pattern as `staleFRange` so the
+three intentional `-old.` stubs stay uncounted. `Test-VaultAudit.ps1` plants a second `F6.` heading plus
+an `F5-old.` stub that must **not** be counted: **45 assertions, 0 failed**, up from 44.
+
+Adding F94 then made three documents stale at `F1-F95` — `README.md`, `product.md` and the backlog's own
+frontmatter — which `staleFRange` reported immediately. Both checks now read `F1-F95`.
+
+### Finding 2 - the self-test's heading contradicted three of its own controls
+
+`Test-DeckHygiene.ps1 -SelfTest` printed `negative controls - each must report nothing:` above ten rows,
+of which **three must be non-zero by design**: a mid-sentence `(8)` that must not exempt a long list, the
+probe asserting the last-`(N)` control sits inside the row window, and a wrong count on an `(8)`-exempt
+card. One of those printed the word `FIRES` under a heading saying nothing may be reported, while
+`RESULT` said *"all 10 controls hold"*.
+
+The logic was correct — each control carries its own expectation and increments `$missing` — so this was
+a reporting defect, not a measurement defect. It is recorded because the risk is concrete and specific:
+a future reader "corrects" a must-fire control into a must-be-silent one and reinstates exactly the
+defect F93 closed. That is not hypothetical here; F93's own negative control was wrong in the opposite
+direction, keyed on a card the check never reached, and reported `HOLDS` whether the code worked or not.
+
+Each row now carries its expectation and every control reports `HOLDS` when it meets it:
+
+```text
+  controls - each must match the expectation shown:
+    mid-sentence (8) not exempt    1  expect >0  HOLDS
+    last-(N) control can fail      3  expect 2-4 HOLDS
+    (8) card with wrong count      1  expect >0  HOLDS
+```
+
+Still **9 checks, 10 controls, exit 0**. `scripts.md`'s description of the switch was wrong in the same
+way and was corrected with it.
+
+### Finding 3 - the handoff repeated a claim this agent had flagged for verification and shipped anyway
+
+The handoff's open-disagreement section states that *"HI1031 chapter 9 has no flashcard for the
+hypermedia part of exam question 2"*. **It has one.** `HI1031 Begrepp - Kap 09 Web services.md` carries
+`Vilken roll har hypermedia (HATEOAS) i REST?`, added in **F86**, and the chapter 9 exam-answer note
+mentions hypermedia sixteen times.
+
+The claim was inherited from a premise-lens reviewer whose objection rested on a stale paragraph in
+`current-state.md`. That part is recorded in `.kiro/lessons-learned.md` under the 2026-10-05 entry, and
+`current-state.md` was corrected the same day. **What belongs here is the second failure:** this agent's
+own pre-handoff task list contained the item *"verify the ch. 9 hypermedia claim before shipping it —
+F86 added a hypermedia card, so the objection may be stale"*. The handoff shipped with the claim intact.
+Two adversarial reviews of the handoff did not catch it either, because both were briefed to check the
+prompt and neither was briefed to re-verify a claim the prompt attributed to someone else.
+
+So a known-doubtful claim survived its author's own doubt, two reviews, and delivery. The outside agent
+caught it on first contact with the file.
+
+### Finding 4 - true when written, already fixed when read
+
+The outside agent reported that `HEAD` carried a stale `current-state.md` naming `236bf1f` and saying
+`NOT COMMITTED`. True at `3823dec`; fixed in `80346a9`, committed at 11:11 while the review was running.
+The agent detected the file changing under it — disk mtime 11:09:03 against its own 11:08 read — and
+said so rather than reporting the stale text as current. Verified after: `HEAD` now holds *"nothing in
+flight"*, no `236bf1f`, and the hypermedia correction.
+
+### Two findings taken as argument, not repaired
+
+**The reviewer has `read`/`grep`/`glob` and no `shell`, and the agent argued this is a mistake** on the
+grounds that F93's best finding — a negative control proven dead by running a correct and a broken
+variant — required execution, and that its own two sharpest findings here came from running
+`-SelfTest` and from `git status`. It also noted that a reader-only reviewer cannot detect that it is
+reviewing a moving target, which this vault documents as normal. The counter-argument in F93 stands as
+stated — a reviewer that can run commands starts counting — and the author's call is recorded as open.
+
+**The two-hunters evidence**, already qualified in the handoff itself, the agent rejected outright:
+agreement between identically briefed reviewers carries little information, because the brief decides
+what is looked at. `review-adversarially`'s `how-reviews-fail.md` says the same under *One lens assumed
+thorough*. Treat the redundancy conclusion as unproven.
+
+### A gap found while verifying the figure, not reported by anyone
+
+Correcting `README.md`'s claim that the harness plants *"one deliberate violation per check"* required
+counting the checks. The count disagreed with the file, and the disagreement was real:
+**`tagIndexBadFilter` was a bucket `Vault-Audit.ps1` can fill with no assertion anywhere proving it
+fires.** It reports a `userIgnoreFilters` entry that will not compile as a regex - the failure mode that
+hid a dead `Obsidian Plugins/` filter for months - so it is not a check worth leaving unproven.
+
+Covered by planting one unparseable filter in the fixture, which does double duty: the regex fails to
+compile so `tagIndexBadFilter` fires, and `Filer/` ends up unexcluded either way so
+`tagIndexNotExcluded` keeps firing. **46 assertions, 0 failed**, and every bucket the audit can emit now
+has one.
+
+**The first count was also wrong, and in the way this vault keeps recording.** The pattern used to
+enumerate the check names was `'([a-zA-Z]+)'`, which silently skips `noH1` and `multipleH1` because
+they contain digits. It returned 30, that figure went into `README.md`, and it was caught only by
+cross-checking against the audit's own bucket names. A measurement whose definition differs from the
+thing measured is the same defect F93 recorded against a row-counting regex three days earlier.
+
+### Verification
+
+| Gate | Result |
+|---|---|
+| `Test-VaultAudit.ps1` | **45 assertions, 0 failed** — `duplicateFNumber` fires on a planted duplicate, ignores the `-old.` stub |
+| `Vault-Audit.ps1` | `RESULT: clean`, `notesInScope=520`, `duplicateFNumber` and `staleFRange` both silent |
+| `Test-DeckHygiene.ps1 -SelfTest` | 9 checks fire, 10 controls hold, exit 0 |
+| `Test-ScriptHygiene.ps1` | clean, 18 files, 91 checks |
+| `Test-DocHygiene.ps1` | clean |
+| `markdownlint-cli2` | 543 files, 0 issues |
+
+**No flashcard was touched**, so no `Get-SRIntegrity.ps1` baseline was needed.

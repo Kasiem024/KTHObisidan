@@ -18,7 +18,7 @@ vault-commit själv, så ingen extra åtgärd behövs.
 | --- | --- |
 | `llms.txt` | Ingång för AI-verktyg: struktur, taggar, kurskatalog och hur Obsidian-syntaxen ska tolkas |
 | `Meta/Vault Standard.md` | Reglerna: taggar, frontmatter, mappstruktur, namngivning, notstruktur |
-| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F93) |
+| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F95) |
 | `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1` | Kontrollerar hela vaultet mot standarden |
 | `.markdownlint.json` | Vilka markdown-regler som gäller (`.markdownlint-cli2.jsonc` styr vilka filer) |
 | `Meta/Obsidian Plugins/Templates/` | Mallar som följer standarden automatiskt |
@@ -58,8 +58,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scrip
 ```
 
 Bygger ett litet kastvault under `%TEMP%`, bevisar att auditen rapporterar det rent, och
-planterar sedan ett avsiktligt regelbrott per check — alla 31 stycken — och kräver att
-varje check slår. 44 assertions, tar ~9 sekunder. Kör efter varje ändring av `Vault-Audit.ps1`.
+planterar sedan ett avsiktligt regelbrott per check — alla 33 stycken — och kräver att
+varje check slår. 46 assertions, tar ~9 sekunder. Kör efter varje ändring av `Vault-Audit.ps1`.
 CI kör det automatiskt vid varje push.
 
 ## Övriga kontrollskript

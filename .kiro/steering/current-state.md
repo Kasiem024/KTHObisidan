@@ -5,7 +5,7 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: nothing in flight.** The exam-prep programme is finished through **F93** and every gate is
+**Status: nothing in flight.** The exam-prep programme is finished through **F95** and every gate is
 green. The phone-sync item at the bottom has been parked since 2026-09-08 and waits on the author.
 
 **The re-entry prompt is `.kiro/reentry.md`.** It is course-neutral and is the file to be pointed at
@@ -48,7 +48,7 @@ under `Filer/Canvas/AI-optimerad Markdown/Gamla Tentor/`, distilled by the autho
 `HI1032 Tentaanalys - Ranking och poangstrategi.md` and a self-contained `AI-kontext.md`. Those two are
 the specification for that course — `product.md`'s table understates this by naming only HI1031.
 
-## Done: F86 to F93
+## Done: F86 to F95
 
 - **F86** — HI1031's ten decks audited against all 49 exam questions, per *ask* rather than per
   question. 114 of 117 covered; three gaps closed, including the chapter 9 hypermedia card.
@@ -66,6 +66,10 @@ the specification for that course — `product.md`'s table understates this by n
 - **F93** — `cueMismatch` added to `Test-DeckHygiene.ps1`, closing a rule that was only half-checked, and
   a new `adversarial-reviewer` agent.
 
+- **F94** â€” the renumbered half of a duplicate F90. Not new work; see F95.
+- **F95** â€” an outside agent reviewed F93 and found a duplicate F-number, a self-test heading that
+  contradicted three of its own controls, and a false claim in the handoff that commissioned it. Two
+  audit checks added, `duplicateFNumber` and an assertion for `tagIndexBadFilter`: **46 assertions**.
 ## Use the new agent, and use both of its lenses
 
 `.kiro/agents/adversarial-reviewer.*` has `read`/`grep`/`glob` and **no `write` or `shell`**. The absent

@@ -157,6 +157,19 @@ if ($base.Code -ne 0) {
 $b = @{}
 function Bad($file, $text) { Write-Utf8 (Join-Path $begrepp $file) $text; }
 
+# duplicateFNumber: give the fixture backlog a second F6 heading. The highest F stays 7, which is the
+# point - a duplicate is invisible to staleFRange. The "-old." stub is planted too and must NOT be
+# counted, because three of those exist in the real backlog on purpose.
+Write-Utf8 (Join-Path $fx 'Meta\Vault Findings & Backlog.md') ("---`n" +
+  'tags: [meta]' + "`n" +
+  'description: "Backlog for the fixture (F1-F7)."' + "`n" +
+  $dates + "`n---`n" +
+  "# Backlog`n`n" +
+  "### F7. DONE - the newest entry`n`n" +
+  "### F6. DONE - an older one`n`n" +
+  "### F6. DONE - a second entry claiming the same number`n`n" +
+  "### F5-old. (superseded - see F5 above)`n`n" +
+  "An earlier repair set three docs to F1-F3, which this line records on purpose.`n")
 # staleFRange: rewrite README to claim a range the backlog contradicts. Not under Begrepp/, because
 # the check deliberately reads the whole vault - a stale range in the root README is the real case.
 Write-Utf8 (Join-Path $fx 'README.md') "---`ntags: [meta]`ndescription: `"Fixture readme.`"`n$dates`n---`n# README`n`nSee the backlog (F1-F4).`n"
@@ -220,7 +233,9 @@ New-Item -ItemType Directory -Path (Join-Path $courseDir 'Bilagor') -Force | Out
 # tag index, so tagIndexNotExcluded must fire. This is the only violation that lives in
 # .obsidian/ rather than in a note, and it is invisible from inside the vault - which is
 # exactly why it needs a check and a test.
-Write-Utf8 (Join-Path $fx '.obsidian\app.json') ('{' + "`n" + '  "userIgnoreFilters": []' + "`n" + '}' + "`n")
+# One unparseable filter does double duty: tagIndexBadFilter fires because the regex will not
+# compile, and tagIndexNotExcluded still fires because Filer/ ends up unexcluded either way.
+Write-Utf8 (Join-Path $fx '.obsidian\app.json') ('{' + "`n" + '  "userIgnoreFilters": [' + "`n" + '    "/(unclosed/"' + "`n" + '  ]' + "`n" + '}' + "`n")
 
 # a second course missing a required folder (no Filer)
 $c2 = Join-Path $termDir 'CM1005 Testkurs'
@@ -254,7 +269,7 @@ $expect = @(
   'imageEmbedWithoutAlt', 'inlineDataviewExpression', 'oldDataviewDates',
   'brokenWikilinks', 'courseMissingFolder', 'courseMissingIndex', 'nonConformingFolder',
   'litWrongEditionFormat', 'litBadSpacing', 'litHasCourseCode',
-  'tagIndexNotExcluded', 'staleFRange'
+  'tagIndexNotExcluded', 'tagIndexBadFilter', 'staleFRange', 'duplicateFNumber'
 )
 foreach ($e in $expect) {
   $fired = Reports $full.Text $e

@@ -364,6 +364,30 @@ if(Test-Path -LiteralPath $backlogFile){
 Write-Output "=== VAULT AUDIT  $(Get-Date -Format 'yyyy-MM-dd HH:mm') ==="
 Write-Output ("root={0}" -f $Root)
 Write-Output ("notesInScope={0}  (of {1} markdown files)" -f $md.Count, @($all | Where-Object { $_.Extension -eq '.md' }).Count)
+# ---------------- duplicateFNumber ----------------
+# The backlog is the change log and every other doc cross-references it by number, so a number used
+# twice makes every reference to it ambiguous. It happened: two sessions running in parallel on
+# 2026-10-02 both wrote an entry called F90, four minutes apart, and the pair sat in the file until an
+# outside review found them on 2026-10-05. One of the two was cited by three documents and the other
+# by one, which is the only reason the repair was obvious.
+#
+# staleFRange cannot see this: it compares the HIGHEST number against the ranges docs quote, and a
+# duplicate does not move the highest. The pattern here is deliberately the same one staleFRange
+# uses, because it requires a literal "." after the digits - so the three intentional
+# "## F11-old. (superseded - see F11 above)" cross-reference stubs are not counted as duplicates.
+if(Test-Path -LiteralPath $backlogFile){
+  $fSeen = @{}
+  foreach($m in [regex]::Matches((RT $backlogFile), '(?m)^#{1,4}\s*F(\d+)\.')){
+    $n = [int]$m.Groups[1].Value
+    if(-not $fSeen.ContainsKey($n)){ $fSeen[$n] = 0 }
+    $fSeen[$n] = $fSeen[$n] + 1
+  }
+  foreach($n in ($fSeen.Keys | Sort-Object)){
+    if($fSeen[$n] -gt 1){
+      (Bucket 'duplicateFNumber').Add(("F{0} is used by {1} headings - every cross-reference to it is ambiguous" -f $n, $fSeen[$n]))
+    }
+  }
+}
 if($ContentOnly){
   Write-Output "mode=ContentOnly - skipping courseMissingFolder and brokenWikilinks."
   Write-Output "  These need state git does not store (empty folders, gitignored Litteraturlista)."

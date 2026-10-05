@@ -169,7 +169,7 @@ stale the moment it landed.
   negative controls — a correct card, a code fence, a `(8)` cue at the end of a front line, a
   mid-sentence `(8)` that must *not* exempt a long list, a correct cue, a front line whose first `(N)`
   is not the cue, and the same fixture in CRLF and with a BOM —
-  and requires every check to fire and every control to stay silent. That switch earned itself twice:
+  and requires every check to fire and every control to meet its stated expectation - three of the ten must be non-zero by design, so the switch prints an expectation per row rather than claiming all ten must be silent. That switch earned itself twice:
   the first run revealed that `missingCue` never fired, because the only card without a cue in the
   fixture was the orphaned one, whose front line is empty and therefore skipped; an adversarial review
   then found that code fences were parsed as cards and that `(8)` anywhere in a prompt exempted a list

@@ -32,6 +32,16 @@ Nothing in it is a substitute for the rows above.
 
 ## The backlog is a record, not a wish list
 
+**An F-number identifies exactly one entry, and that is now checked.** Two sessions running in
+parallel on 2026-10-02 both wrote an entry called F90, four minutes apart, and the pair sat in the file
+until an outside review found them three days later. A duplicate makes every cross-reference to that
+number unresolvable - F91 refers to "F89's and F90's gaps" and only one of the two F90s was about gaps.
+`staleFRange` could not see it, because it compares the *highest* number against the ranges docs quote
+and a duplicate does not move the highest; `duplicateFNumber` now does. Before writing an entry, read
+the highest number in the file rather than the range a doc quotes, and expect a parallel session to be
+about to take it. A **gap** in the sequence is harmless by comparison - F33 and F34 do not exist and
+nothing references them - so only duplicates are reported.
+
 Each entry says what was wrong, what was done, and **how it was verified**, with real
 numbers. Record mistakes too, including wrong estimates and false positives — the entries
 that document a failed assumption have saved the most time later. When a later change makes
