@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-09-08
 updated: 2026-09-15
 description: "Svar på kursens fyra tentafrågor om fjärranrop: hur distribuerade objekt och RMI fungerar, när rena sockets slår distribuerade objekt och omvänt, en jämförelse av sockets, RPC, RMI och webbtjänster, samt skillnaderna mellan distribuerade objekt och webbtjänster."
@@ -67,12 +74,14 @@ Beskriv generellt hur distribuerade objekt fungerar. (3)
 - **Modellen** – tillståndet är redan uppdelat per objekt, så det är ett litet steg att lägga objekten i olika processer; vanligast är klient-server där servern håller objekten och klienten anropar metoderna, och anrop kan bilda kedjor
 - **De två bärande begreppen** – fjärrobjektreferens, ett id som funkar i hela systemet och kan skickas som argument och resultat, och fjärrgränssnitt, som anger vilka metoder som får anropas på distans
 - **Fabriksmetoder** – fjärrgränssnittet har ingen konstruktor så man kan inte skapa objekt med ett fjärranrop, därför finns fabriksmetoder vars jobb är just att skapa objekt
+<!--SR:!fsrs,2026-10-18T08:32:00.568Z,0,0.212,6.4133,1,1,0,0,2026-10-18T08:31:00.568Z-->
 
 Beskriv speciellt hur RMI fungerar. (3)
 ||
 - **Kedjan** – proxyn hos klienten låtsas vara objektet och packar referens, operationId och argument i en förfrågan, dispatchern hos servern väljer metod med operationId, skelettet packar upp och anropar servanten som har koden och tillståndet, och svaret går tillbaka samma väg
 - **Automatiskt** – proxy, dispatcher och skelett genereras av en gränssnittskompilator, medan kommunikationsmodulerna på båda sidor kör request-reply och ger anropssemantiken som at-most-once
 - **Java RMI** – samma syntax som ett lokalt anrop men anroparen vet att det är distribuerat, och fjärrobjekt skickas som referens medan andra objekt kopieras och skickas som värde
+<!--SR:!fsrs,2026-10-19T09:22:13.346Z,1,0.1774331,8.39265542,2,3,0,0,2026-10-18T09:22:13.346Z-->
 
 ## Fråga 2 – När kan ren socket-kommunikation vara bättre än distribuerade objekt och tvärtom
 
@@ -128,12 +137,14 @@ När är ren socket-kommunikation bättre än distribuerade objekt? (3)
 - **Ramen** – en avvägning mellan kontroll och omkostnad: request-reply är lättviktigt och minimalt och används där omkostnaderna måste hållas nere, boken nämner inbyggda system
 - **Vad man sparar** – tre TCP-omkostnader man slipper över UDP: bekräftelser, eftersom svaret bekräftar förfrågan, förbindelseuppsättning, som kostar två extra par meddelanden, och flödeskontroll, onödig för små argument
 - **Exemplet** – Sun NFS skickar filblock av fast storlek och har idempotenta operationer, så det klarar sig utan historik och kör ett eget effektivare protokoll över UDP
+<!--SR:!fsrs,2026-10-19T09:17:35.164Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:17:35.164Z-->
 
 När är distribuerade objekt bättre än rena sockets? (3)
 ||
 - **Uttryckskraften** – de gör det lättare att skriva stora, krångliga program, för man får hela objektmodellen med klasser och arv och kan skicka en objektreferens i stället för ett stort värde så mottagaren anropar objektet i stället för att allt går över nätet
 - **Priset alltid** – fjärranrop är känsligare för fel än lokala, och man kan inte skilja ett nätfel från att serverprocessen dött
 - **Latensen** – den är flera storleksordningar högre, vilket antyder att man bör minimera antalet fjärranrop
+<!--SR:!fsrs,2026-10-18T08:45:08.351Z,0,0.212,6.4133,1,1,0,0,2026-10-18T08:44:08.351Z-->
 
 ## Fråga 3 – Jämför sockets, RPC, RMI och webbtjänster
 
@@ -196,12 +207,14 @@ Jämför sockets, RPC, RMI och webbtjänster: ram, abstraktion, namngivning. (3)
 - **Rama in** – de är lager, inte alternativ: sockets underst, RPC och RMI byggs med sockets över request-reply, och webbtjänster ligger ovanpå HTTP som självt är request-reply
 - **Abstraktion** – sockets ger byte-sekvenser, RPC en procedur som om den vore lokal, RMI en metod på ett objekt, och en webbtjänst operationer på en resurs som pekas ut av en URI
 - **Namngivning** – sockets använder internetadress och port, RMI en fjärrobjektreferens som kan skickas som parameter, och en webbtjänst en URI, oftast en URL som kallas endpoint
+<!--SR:!fsrs,2026-10-20T13:49:19.250Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-20T13:39:19.250Z-->
 
 Jämför sockets, RPC, RMI och webbtjänster: gränssnitt, semantik, brandväggar. (3)
 ||
 - **Gränssnitt och dataformat** – sockets beskrivs inte alls och du marshallar själv, RPC och RMI använder ett IDL och binärt format, och en webbtjänst använder WSDL och XML paketerat med SOAP, som är skrymmande men läsbart
 - **Anropssemantik** – lokalt gäller exactly once, på distans väljer man maybe, en gång eller inte alls, at-least-once, som kan köra om proceduren och därför bara passar idempotenta operationer, eller at-most-once, som ger exakt en gång
 - **Brandväggar** – Java RMI:s och CORBAs transport kommer normalt inte igenom en brandvägg men HTTP och SMTP gör det, så SOAP transporteras över dem och webbtjänster fungerar mellan organisationer där RMI och CORBA inte gör det
+<!--SR:!fsrs,2026-10-19T09:10:10.391Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:10:10.391Z-->
 
 ## Fråga 4 – Vad är skillnaderna och likheterna mellan distribuerade objekt och webbtjänster
 
@@ -257,12 +270,14 @@ Vilka är likheterna mellan distribuerade objekt och webbtjänster? (2)
 ||
 - **Ytlig likhet** – på ytan är de lika: där RMI använder en fjärrobjektreferens använder webbtjänsten en URI för att anropa en operation i den resurs URI:n pekar ut
 - **Vad de delar** – båda bygger på programmering mot gränssnitt, vilket ger lös koppling och döljer språk och plattform, och båda kan gömma marshallingen bakom en proxy
+<!--SR:!fsrs,2026-10-19T09:18:45.891Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:18:45.891Z-->
 
 Vilka är skillnaderna mellan distribuerade objekt och webbtjänster? (3)
 ||
 - **Kärnskillnaden** – en webbtjänst kan inte skapa fjärrobjekt och returnera referenser till dem som objektmodellen kan, så en webbtjänst är i praktiken ett enda fjärrobjekt och både skräpsamling och fjärrobjektreferenser blir irrelevanta
 - **Följderna** – newShape är inte längre en fabriksmetod, det finns inga servanter, och fjärrreferenser får inte skickas som argument eller returneras
 - **Paradigm och transparens** – webbtjänster är oberoende av programmeringsparadigm medan distribuerade objekt vill att du gör på ett bestämt sätt, och webbtjänster ger ingen transparens, i enklaste fallet läser och skriver man direkt i SOAP och XML
+<!--SR:!fsrs,2026-10-19T17:36:28.104Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T17:36:28.104Z-->
 
 ## Luckor och källor
 

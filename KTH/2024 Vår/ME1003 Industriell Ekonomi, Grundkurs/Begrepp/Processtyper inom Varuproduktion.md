@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - year2024
 created: 2024-02-02
 updated: 2026-08-31
 description: "Översikt av centrala begrepp inom Processtyper inom Varuproduktion: Projekt, Enstycksproduktion, Serieproduktion, Massproduktion."

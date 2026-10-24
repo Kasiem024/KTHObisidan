@@ -1,5 +1,12 @@
 ---
-tags: [begrepp, CM1005/CM1005KS4, ekonomi, KTH, ME1003, ME1003/ME1003KS3, year2024]
+tags:
+  - begrepp
+  - CM1005/CM1005KS4
+  - ekonomi
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS3
+  - year2024
 description: "Nyckeltal (KPI, Key Performance Indicator) används för att värdera ett företag och dess verksamhet."
 created: 2024-03-02
 updated: 2026-08-17

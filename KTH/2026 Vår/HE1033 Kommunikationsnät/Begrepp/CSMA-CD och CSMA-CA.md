@@ -1,6 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
-description: "Metoder för att bestämma när en enhet får sända data."
+tags:
+  - begrepp
+  - HE1033
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
+description: Metoder för att bestämma när en enhet får sända data.
 created: 2026-05-28
 updated: 2026-05-28
 ---
@@ -30,5 +37,6 @@ Metoder för att bestämma när en enhet får sända data.
 ## Flashcards
 
 Vad gör en enhet vid en kollision i CSMA/CD?:: Den avbryter sändningen direkt och väntar en slumpmässig tid (Binary Exponential Backoff) innan nytt försök.
+<!--SR:!fsrs,2026-10-15T16:18:22.721Z,0,1.2931,5.11217071,1,1,0,0,2026-10-15T16:12:22.721Z-->
 
 Vad står CA för i CSMA/CA?:: Collision Avoidance.

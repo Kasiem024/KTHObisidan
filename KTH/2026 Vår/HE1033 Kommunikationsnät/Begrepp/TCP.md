@@ -1,5 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1031, HI1032, KTH, nätverk, year2026, nosr]
+tags:
+  - begrepp
+  - HE1033
+  - HI1031
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
 description: TCP (Transmission Control Protocol) säkerställer att data kommer fram felfritt och i rätt ordning.
 created: 2026-05-28
 updated: 2026-05-28

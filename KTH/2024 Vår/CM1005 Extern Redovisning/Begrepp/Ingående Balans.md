@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+tags:
+  - begrepp
+  - year2024
+  - CM1005
+  - KTH
+  - ekonomi
 description: "Ingående balans är de belopp som bokförs i början av ett nytt Räkenskapsår som ingående saldon på balanskontona."
 created: 2024-01-23
 updated: 2026-08-17

@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
+tags:
+  - begrepp
+  - föreläsning
+  - HE1033
+  - KTH
+  - nätverk
+  - year2026
 created: 2026-03-01
 updated: 2026-08-17
 description: "Flashcards om routrar och routingtabeller: longest prefix match, default route, autonoma system samt IGP och EGP."

@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-09-08
 updated: 2026-09-09
 description: "Svar på kursens fem tentafrågor om indirekt kommunikation: poängen med indirektion och strategierna, gruppkommunikation, publish-subscribe, message queuing, samt en jämförelse av de tre ur sändarens, mottagarens och implementatörens perspektiv."
@@ -68,6 +75,7 @@ Beskriv poängen med indirekt kommunikation och strategierna. (4)
 - **Poängen** – direkt koppling gör systemet stelt; i stället får man rumslig frikoppling, ingen behöver veta vem den andra är, och tidsmässig frikoppling, de behöver inte finnas samtidigt
 - **Priset** – det kostar alltid lite prestanda och gör systemet svårare att förvalta, och man får inte båda frikopplingarna automatiskt
 - **Strategierna** – gruppkommunikation, publish-subscribe och message queues bygger på meddelanden, medan distribuerat delat minne och tuple spaces är en delad datayta som skalar sämre
+<!--SR:!fsrs,2026-10-18T11:05:01.315Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-17T11:05:01.315Z-->
 
 ## Fråga 2 – Gruppkommunikation och hur det kan implementeras
 
@@ -150,6 +158,7 @@ Beskriv gruppkommunikation. (3)
 - **Vad det är** – ett meddelande skickas till en grupp och levereras till alla medlemmar, utan att sändaren vet vilka de är
 - **Abstraktion ovanpå multicast** – byggd på IP-multicast eller overlay och lägger till medlemskapshantering, feldetektering och garantier; boken säger att den är till IP-multicast vad TCP är till IP
 - **Modellen** – processer går med eller lämnar, och sändaren gör ett enda multicast-anrop i stället för många send, vilket ger garantier för gruppen som helhet
+<!--SR:!fsrs,2026-10-19T09:07:16.579Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:07:16.579Z-->
 
 Hur implementeras gruppkommunikation? (4)
 ||
@@ -157,6 +166,7 @@ Hur implementeras gruppkommunikation? (4)
 - **Ordning** – FIFO som är källordning, kausal som bevarar händer-före, och total där alla ser samma ordning
 - **Medlemskap** – en tjänst som sköter medlemskapsändringar, feldetektering som utesluter den misstänkte, notifiering och gruppadressexpansion
 - **Följden** – medlemskapshanteringen gör att gruppkommunikation passar bäst i små, statiska system och fungerar sämre storskaligt
+<!--SR:!fsrs,2026-10-19T09:13:38.562Z,1,0.21206544,8.39265542,2,3,0,0,2026-10-18T09:13:38.562Z-->
 
 ## Fråga 3 – Publish-subscribe och hur det kan implementeras
 
@@ -241,6 +251,7 @@ Beskriv publish-subscribe och visa hur det kan implementeras. (3)
 - **Vad det är** – publishers publicerar händelser, subscribers anmäler intresse med subscriptions som är mönster, och systemet matchar och levererar notifieringar; i grunden en-till-många
 - **Hur man prenumererar** – subskriptionsmodellen bestämmer uttryckskraften: kanalbaserad, topic-baserad, innehållsbaserad och typbaserad, i stigande ordning av kraft och svårighet
 - **Hur det byggs** – mäklaren kan sitta centralt, vilket är enkelt men ger flaskhals och enda felpunkt, som ett nätverk av samarbetande mäklare, eller helt peer-to-peer där alla noder är mäklare
+<!--SR:!fsrs,2026-10-18T11:10:19.336Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-17T11:10:19.336Z-->
 
 ## Fråga 4 – Message queuing och hur det implementeras bra
 
@@ -323,12 +334,14 @@ Beskriv message queuing. (3)
 - **Vad det är** – en punkt-till-punkt-tjänst där sändaren lägger meddelandet i en kö och en enda process plockar bort det
 - **Den avgörande egenskapen** – meddelandena är persistenta: kön lagrar dem tills de konsumeras och skriver dem till disk
 - **Vad persistensen ger** – giltighet, meddelandet tas emot så småningom, och integritet, det är identiskt och kommer aldrig två gånger, men inget om när leveransen sker
+<!--SR:!fsrs,2026-10-21T09:12:12.987Z,3,3.34870974,5.20002037,2,2,0,0,2026-10-18T09:12:12.987Z-->
 
 Hur implementeras message queuing på ett bra sätt? (3)
 ||
 - **Problemet** – en central köhanterare blir en tungviktig komponent, en flaskhals och en enda felpunkt
 - **Lösningen** – federera köhanterarna med enkelriktade message channels och routingtabeller, så man kan bygga godtyckliga topologier
 - **Hub-and-spoke** – klienten pratar RPC med en spoke nära sig och blockeras bara tills meddelandet ligger där, medan hoppet vidare till hubben är asynkront men garanterat tillförlitligt
+<!--SR:!fsrs,2026-10-18T11:11:18.567Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-17T11:11:18.567Z-->
 
 ## Fråga 5 – Jämför gruppkommunikation, publish-subscribe och message queuing
 
@@ -403,18 +416,21 @@ Jämför gruppkommunikation, publish-subscribe och message queues ur sändarens 
 - **Gruppkommunikation** – ett multicast till gruppen; sändaren vet inget om medlemmarna och måste själv vara medlem om gruppen är sluten
 - **Publish-subscribe** – en strukturerad händelse; sändaren kan inte veta om någon lyssnar
 - **Message queuing** – meddelandet läggs i en namngiven kö; sändaren vet att exakt en konsument tar det, och sändningen kan ligga i en transaktion
+<!--SR:!fsrs,2026-10-18T11:05:43.786Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-17T11:05:43.786Z-->
 
 Jämför gruppkommunikation, publish-subscribe och message queues ur mottagarens perspektiv. (3)
 ||
 - **Gruppkommunikation** – medlemmen får allt som skickas till gruppen utan filtrering och måste normalt finnas när meddelandet skickas
 - **Publish-subscribe** – subscribern väljer själv med ett filter: kanal, topic, innehåll eller typ
 - **Message queuing** – konsumenten konkurrerar med andra om samma kö, kan välja på metadata och hämta långt efteråt; bara här finns valet att blockera, polla eller bli notifierad
+<!--SR:!fsrs,2026-10-18T11:11:31.791Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-17T11:11:31.791Z-->
 
 Jämför gruppkommunikation, publish-subscribe och message queues ur implementatörens perspektiv. (3)
 ||
 - **Gruppkommunikation** – svårast är gruppmedlemskapet, alltså vilka som är med, feldetektering, notifiering och adressexpansion, plus ordning, och det begränsar skalbarheten
 - **Publish-subscribe** – svårast är matchning och routing: central mäklare, nätverk av mäklare eller peer-to-peer
 - **Message queuing** – svårast är persistensen och topologin: meddelandena måste till disk, och köhanterarna bör federeras i stället för att sitta centralt
+<!--SR:!fsrs,2026-10-18T11:11:05.847Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-17T11:11:05.847Z-->
 
 ## Luckor och källor
 

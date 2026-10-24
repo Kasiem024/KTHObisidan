@@ -1,5 +1,6 @@
 ---
-tags: [meta]
+tags:
+  - meta
 description: "A repo to store Obsidian vault for studying (KTH, Högskoleingenjör – Teknik och Ekonomi)."
 ---
 # README
@@ -18,7 +19,7 @@ vault-commit själv, så ingen extra åtgärd behövs.
 | --- | --- |
 | `llms.txt` | Ingång för AI-verktyg: struktur, taggar, kurskatalog och hur Obsidian-syntaxen ska tolkas |
 | `Meta/Vault Standard.md` | Reglerna: taggar, frontmatter, mappstruktur, namngivning, notstruktur |
-| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F96) |
+| `Meta/Vault Findings & Backlog.md` | Ändringslogg och spårning av avvikelser (F1–F105) |
 | `Meta/Obsidian Plugins/Scripts/Vault-Audit.ps1` | Kontrollerar hela vaultet mot standarden |
 | `.markdownlint.json` | Vilka markdown-regler som gäller (`.markdownlint-cli2.jsonc` styr vilka filer) |
 | `Meta/Obsidian Plugins/Templates/` | Mallar som följer standarden automatiskt |
@@ -58,13 +59,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "Meta\Obsidian Plugins\Scrip
 ```
 
 Bygger ett litet kastvault under `%TEMP%`, bevisar att auditen rapporterar det rent, och
-planterar sedan ett avsiktligt regelbrott per check — alla 33 stycken — och kräver att
-varje check slår. 46 assertions, tar ~9 sekunder. Kör efter varje ändring av `Vault-Audit.ps1`.
+planterar sedan ett avsiktligt regelbrott per check — alla 34 stycken — och kräver att
+varje check slår. 49 assertions, tar ~12 sekunder. Kör efter varje ändring av `Vault-Audit.ps1`.
 CI kör det automatiskt vid varje push.
 
 ## Övriga kontrollskript
 
-Utöver auditen finns ett dussin läsande skript i `Meta/Obsidian Plugins/Scripts/`, plus två som
+Utöver auditen finns ett dussin läsande skript i `Meta/Obsidian Plugins/Scripts/`, plus tre som
 skriver bakom en explicit flagga. `.kiro/steering/scripts.md` har hela listan och beskriver när man
 ska nå efter vilket — den filen är källan, så den här tabellen nämner bara de vanligaste:
 

@@ -1,5 +1,11 @@
 ---
-tags: [ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024, övning]
+tags:
+  - ekonomi
+  - HH1802
+  - HH1802/HH1802KS1
+  - KTH
+  - year2024
+  - övning
 created: 2024-03-18
 updated: 2026-05-26
 description: "Instuderingsfrågor med svar inför KS1 i kursen HH1802."

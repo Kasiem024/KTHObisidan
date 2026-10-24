@@ -1,6 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
-description: "En teoretisk modell i sju lager som beskriver hur data skickas från en applikation på en dator till en applikation på en annan."
+tags:
+  - begrepp
+  - HE1033
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
+description: En teoretisk modell i sju lager som beskriver hur data skickas från en applikation på en dator till en applikation på en annan.
 created: 2026-05-28
 updated: 2026-08-27
 ---

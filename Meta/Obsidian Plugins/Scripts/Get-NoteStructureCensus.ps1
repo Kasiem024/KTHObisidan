@@ -110,6 +110,28 @@ function Note($bucket, $rel) {
   $script:members[$bucket].Add($rel) | Out-Null
 }
 
+# List-form tags, read exactly as Vault-Audit.ps1's ListTags reads them: the bare `tags:` line and
+# the `- value` lines directly below it, stopping at the first line that is not one. List form is
+# the vault's convention from F105 on, so a census that read inline tags only would count almost no
+# concept notes once the vault is converted.
+function Get-ListTags([string]$blk) {
+  $ls = $blk -split "`n"
+  for ($i = 0; $i -lt $ls.Count; $i++) {
+    if ($ls[$i].TrimEnd("`r") -cmatch '^tags:[ \t]*$') {
+      $out = @()
+      for ($j = $i + 1; $j -lt $ls.Count; $j++) {
+        $im = [regex]::Match($ls[$j].TrimEnd("`r"), '^[ \t]*-[ \t]+(.*?)[ \t]*$')
+        if (-not $im.Success) { break }
+        $v = $im.Groups[1].Value.Trim('"').Trim("'")
+        if ($v) { $out += $v }
+      }
+      if ($out.Count -gt 0) { return ,$out }
+      return $null
+    }
+  }
+  return $null
+}
+
 foreach ($f in $all) {
   if (-not (Test-InScope $f.FullName $f.Name)) { continue }
   $text = Read-VaultText $f.FullName
@@ -129,6 +151,7 @@ foreach ($f in $all) {
     $body = $text.Substring($fm.Length)
     $am = [regex]::Match($fm.Groups[1].Value, '(?m)^tags:[ \t]*\[(.*?)\]')
     if ($am.Success) { foreach ($x in ($am.Groups[1].Value -split ',')) { $v = $x.Trim().Trim('"').Trim("'"); if ($v) { $tags += $v } } }
+    else { $lt = Get-ListTags $fm.Groups[1].Value; if ($null -ne $lt) { $tags += $lt } }
   }
 
   $h2 = @([regex]::Matches($body, '(?m)^##[ \t]+(.+?)[ \t]*\r?$') | ForEach-Object { $_.Groups[1].Value.Trim() })

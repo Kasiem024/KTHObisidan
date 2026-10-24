@@ -32,8 +32,9 @@ do — and `Test-DeckHygiene.ps1` carries its own harness behind `-SelfTest` rat
 | `Test-DeckHygiene.ps1` | Does every flashcard still have a front line, a body, and exactly one recall target? | 0 clean / 1 findings / 2 empty scope |
 | `Test-DocHygiene.ps1` | Is the Markdown that nothing else checks still intact? | 0 clean / 1 findings |
 | `Test-ScriptHygiene.ps1` | Does this folder still follow the rules below? | 0 clean / 1 findings |
-| `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **One of the two scripts here that write.** | 0 clean / 1 refused |
-| `Format-FrontmatterTags.ps1` | Does any note declare its tags in YAML list form instead of this vault's inline form? Rewrites them. **The other writing script.** | 0 clean / 1 found or changed |
+| `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **One of the three scripts here that write.** | 0 clean / 1 refused |
+| `Convert-TagsToList.ps1` | Does any note still declare its tags in the old inline form? Rewrites them to YAML list form, the form Obsidian writes. **The second writing script.** | 0 clean / 1 found, changed or skipped |
+| `Format-FrontmatterTags.ps1` | **Superseded by F105 - do not run it.** Converts list-form tags back to the old inline form, so running it now undoes the convention. Kept untouched on the author's instruction. **The third writing script.** | 0 clean / 1 found or changed |
 
 `kursinfo.js`, `nastaNummer.js` and `nyKurs.js` in the same folder are **Templater user
 scripts**, called from the note templates. They are not run from a shell.
@@ -89,29 +90,33 @@ stale the moment it landed.
   so a single newline renders as a *visible* break, unlike the Markdown spec. A note hard-wrapped
   at 100 columns therefore reads as if every line ended a sentence. Turning the setting on would
   fix every such note at once and change the rendering of **354 of 541** others, which is why this
-  joins the lines instead. It is the **first of two writing scripts in this folder**: dry run by default,
+  joins the lines instead. It is the **first of three writing scripts in this folder**: dry run by default,
   `-Apply` to write, `-Filter` or `-All` required so a whole-vault reflow cannot happen by
   accident, and every file backed up first. Two guards, and only one of them is worth much — a
   structural count of headings, list rows, table rows, fences, quotes and blanks that must be
   unchanged, plus a token check that is weak by construction. Files with mixed line endings or
   flashcard-like syntax are skipped rather than guessed at. Read the header before trusting it.
-- **The audit reports `listStyleTags`** → `Format-FrontmatterTags.ps1`. It rewrites YAML list-form
-  tags back to this vault's inline form and touches nothing else. It exists because the audit
-  reported that deviation while nothing repaired it, which `conventions.md` §4 calls the worst of
-  both worlds, and because it **recurs**: twelve notes across HI1031 and HI1032 were rewritten to
-  list form on 2026-09-10 by something other than the audit, and the pre-push hook then refused the
-  push until they were fixed. **The cause was identified on 2026-09-27: editing a note's tags in
-  Obsidian's own UI rewrites the frontmatter into YAML list form.** That is why the affected set is
-  always "the notes whose tags were touched recently", and why HI1032's chapter decks carry review
-  data yet never drift. Expect this after any session where the author changes a deck's `nosr` state.
-  Note also that this script's scope is **wider than the audit's `listStyleTags`**: on 2026-10-01 it
-  normalised a third note the audit had not flagged, so `CHANGED n` can exceed the audit's count.
-  It preserves tag order and every value — above all `nosr`, whose loss would silently re-enter a
-  deck's whole card set (F64). **It does not restore a `nosr` that is already gone**, so decide
-  deliberately before running it whether a missing `nosr` was intended.
-  Dry run by default, `-Apply` writes and backs each file up first.
-  Afterwards require `Get-SRIntegrity.ps1 -Compare` to show **every** figure unchanged: this edit
-  must not move a card, a marker or a deck's review scope.
+- **The audit reports `inlineStyleTags`** → `Convert-TagsToList.ps1`. Since F105 the vault writes
+  frontmatter tags in **YAML list form**, because that is what Obsidian's Properties panel writes
+  whenever a tag is edited in the app: with the old inline standard every such edit became an audit
+  deviation and blocked the push, six times. This script converts inline tags to list form and changes
+  nothing but that one line. Its scope is the audit's plus every `_index.md`. It preserves tag order and
+  every value, above all `nosr` (F64), and **proves** it rather than assuming it: before writing, the new
+  text is re-read by a separate list reader and must give the same values element for element, and the
+  bytes outside the tags line must be identical; after writing, the file is read back. BOM and line
+  endings are kept. Anything it cannot convert safely — a value YAML would need quoted, mixed line
+  endings, two tags keys — is **skipped and listed**, never guessed at. Dry run by default; `-Apply`
+  refuses to run while Obsidian has this vault registered and running, and backs every file up to
+  `%USERPROFILE%\KTHObsidian-backups\` — outside `%TEMP%` and outside Drive — with a manifest, and
+  prints a ready `-RestoreFrom` line that puts the originals back. `-ExcludePath <substrings>` drops any
+  path containing one of them, to leave a folder a second agent is editing completely alone (2026-10-24:
+  `-ExcludePath CM1000,SF1686`). Take `Get-SRIntegrity.ps1 -Save
+  -BaselinePath <yours>` immediately before and require `-Compare` to show **every** figure unchanged
+  afterwards. The full run order for the author is in `.kiro/reports/tags-to-list-plan-2026-10-22.md`.
+- **`Format-FrontmatterTags.ps1` is superseded — never run it.** It is the pre-F105 repair, list form
+  back to inline, and the author chose to keep it untouched rather than delete it. Run with `-Apply` today
+  it would rewrite every note into the form the audit now reports as `inlineStyleTags`; the audit makes
+  that visible at once, and `Convert-TagsToList.ps1` undoes it. Its history is in F64-F105.
 - **Junk in the tag pane**, or after editing `userIgnoreFilters` →
   `Get-ObsidianExcludes.ps1`. It reports what each filter matches and flags any filter
   matching **nothing**, which is the failure mode that hid a dead `Obsidian Plugins/` entry

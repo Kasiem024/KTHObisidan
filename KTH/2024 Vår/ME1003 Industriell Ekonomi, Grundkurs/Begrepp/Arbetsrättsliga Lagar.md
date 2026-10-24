@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - year2024
 description: "De lagar som reglerar arbetslivet: lagen om anställningsskydd (LAS), arbetsmiljölagen (AML), medbestämmandelagen (MBL) och diskrimineringslagen."
 created: 2024-02-08
 updated: 2026-05-26

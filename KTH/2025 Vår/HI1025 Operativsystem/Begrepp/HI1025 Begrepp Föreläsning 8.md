@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-05-19
 updated: 2026-08-17
 description: "Inter-Process Communication (IPC) (Interprocesskommunikation): Mekanismer som tillåter olika processer att utbyta data och synkronisera sina aktiviteter."

@@ -1,5 +1,10 @@
 ---
-tags: [HI1029, KTH, labb, programmering, year2026]
+tags:
+  - HI1029
+  - KTH
+  - labb
+  - programmering
+  - year2026
 created: 2026-01-18
 updated: 2026-05-26
 description: "I denna rapport genomför vi en numerisk analys av en specifik algoritm för att bestämma dess exakta komplexitetsfunktion T(n) och dess tillväxttakt i form av O(n)."

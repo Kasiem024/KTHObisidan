@@ -1,6 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
-description: "Tekniken som låter en sändare skicka flera paket innan ACK kommit på det första, för att utnyttja bandbredden och styra flödet."
+tags:
+  - begrepp
+  - HE1033
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
+description: Tekniken som låter en sändare skicka flera paket innan ACK kommit på det första, för att utnyttja bandbredden och styra flödet.
 created: 2026-08-18
 updated: 2026-08-18
 ---

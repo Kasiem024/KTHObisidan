@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-09-08
 updated: 2026-09-15
 description: "Svar på kursens sex tentafrågor om interprocesskommunikation: hur ett IPC-anrop karakteriseras, vad XML är och används till, tre typer av IPC, portar med flera mottagare, IPC jämfört med distribuerade objekt, och vad virtualisering ger."
@@ -55,6 +62,7 @@ På vilka sätt kan man karakterisera ett IPC-anrop? (4)
 - **Destinationen** – meddelandet går till ett par av internetadress och port, där en port har exakt en mottagare men kan ha många sändare
 - **Tillförlitligheten** – giltighet, att meddelanden kommer fram trots en del tappade paket, och integritet, att de kommer fram hela och utan dubbletter
 - **Ordningen** – vissa tillämpningar kräver sändarordning, och för dem räknas fel ordning som ett fel
+<!--SR:!fsrs,2026-10-20T14:40:51.747Z,0,0.05246409,9.59286876,1,3,0,0,2026-10-20T14:39:51.747Z-->
 
 ## Fråga 2 – Beskriv vad XML är och vad det kan användas till
 
@@ -101,11 +109,13 @@ Beskriv vad XML är. (3)
 - **Vad det är** – ett märkspråk från W3C, alltså en textbaserad kodning som beskriver både en text och dess struktur
 - **Mot HTML** – XML:s taggar beskriver den logiska strukturen medan HTML:s säger hur webbläsaren ska visa texten, och XML är extensible så du får hitta på egna taggar
 - **Självbeskrivande** – så att tillämpningar som inte känner varandra i förväg kan läsa det, och namnrymder gör att flera uppsättningar taggar kan samsas utan krockar
+<!--SR:!fsrs,2026-10-20T14:54:08.972Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-20T14:44:08.972Z-->
 
 Vad kan XML användas till, och vad kostar det? (2)
 ||
 - **Används till** – webbtjänster och SOAP i första hand, sedan arkivering och återsökning, specifikation av användargränssnitt och kodning av konfigurationsfiler
 - **Priset** – text med taggar ger stora meddelanden som tar längre tid att bearbeta och skicka och kräver mer lagring, men HTTP 1.1 kan komprimera
+<!--SR:!fsrs,2026-10-19T09:21:16.757Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:21:16.757Z-->
 
 ## Fråga 3 – Beskriv tre olika typer av IPC
 
@@ -157,11 +167,13 @@ Beskriv tre olika typer av IPC. UDP och TCP. (3)
 - **De tre** – UDP-datagram, TCP-strömmar och multicast
 - **UDP-datagram** – enskilda meddelanden utan bekräftelse och utan omsändning, så felmodellen är utelämnandefel och leverans i fel ordning; DNS och Voice over IP använder det just för att slippa omkostnaderna för garanterad leverans
 - **TCP-strömmar** – en tvåvägsström av bytes utan meddelandegränser, som döljer storlekar, tappade meddelanden, flödeskontroll och ordning; man kopplar upp först med connect och accept och sedan bara läser och skriver i strömmen
+<!--SR:!fsrs,2026-10-19T09:23:02.191Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:23:02.191Z-->
 
 Beskriv tre olika typer av IPC. TCP:s begränsning och multicast. (2)
 ||
 - **TCP är inte tillförlitlig kommunikation** – passerar paketförlusten en gräns förklarar TCP förbindelsen bruten, och då kan processen varken skilja ett nätfel från att den andra processen dött eller veta om det den nyss skickade kom fram
 - **Multicast** – ett enda meddelande från en process till varje medlem i en grupp, normalt med medlemskapet transparent för sändaren; IP multicast byggs ovanpå IP och nås på programmeringsnivå bara via UDP
+<!--SR:!fsrs,2026-10-20T14:54:19.467Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-20T14:44:19.467Z-->
 
 ## Fråga 4 – Är det speciellt bra att en port kan ha flera mottagare? Utveckla
 
@@ -224,11 +236,13 @@ meddelanden når alla medlemmar i samma ordning==. Kapitel 15 visar hur de imple
 - **Räta ut premissen** – normalt har en port en mottagare men många sändare och processer kan inte dela en port; undantaget är IP multicast, där en kopia går till alla lokala sockets som gått med, så frågan gäller multicast
 - **Ja** – det ger feltolerans med replikerade tjänster, tjänsteupptäckt i spontana nät, bättre prestanda med replikerad data, och spridning av händelsenotifieringar
 - **Men** – IP multicast är otillförlitlig med samma utelämnandefel som UDP, så några men inte alla får meddelandet, och tappas ett datagram mellan två routrar får ingen bortom den det
+<!--SR:!fsrs,2026-10-20T14:53:42.459Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-20T14:43:42.459Z-->
 
 En port med flera mottagare: utveckla varför svaret beror på användningen. (2)
 ||
 - **Beror på bruket** – replikerade tjänster är hårda fallet, för alla eller ingen måste få varje förfrågan och oftast i samma ordning, annars blir en server inkonsistent; tjänsteupptäckt är lätta fallet, för förfrågningar skickas med jämna mellanrum så en enstaka förlust gör inget
 - **Vad som behövs** – starkare garantier ovanpå: tillförlitlig multicast, där alla eller ingen tar emot, och totalt ordnad multicast, där alla får meddelandena i samma ordning
+<!--SR:!fsrs,2026-10-19T09:10:31.006Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:10:31.006Z-->
 
 ## Fråga 5 – Vad är skillnaderna och likheterna mellan IPC och distribuerade objekt?
 
@@ -285,12 +299,14 @@ Vilka är likheterna mellan IPC och distribuerade objekt? (3)
 - **Relationen** – de är inte alternativ utan lager: IPC är det undre middleware-lagret och distribuerade objekt byggs ovanpå det
 - **Allt blir bytes** – båda måste marshalla, alltså platta data till en byte-sekvens och bygga upp den igen, och båda sköter byteordning och teckenkodning
 - **Request-reply** – båda bygger på att skicka en förfrågan och vänta på svar, och kan ge at-least-once och at-most-once
+<!--SR:!fsrs,2026-10-19T09:03:31.439Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:03:31.439Z-->
 
 Vilka är skillnaderna mellan IPC och distribuerade objekt? (3)
 ||
 - **Abstraktion och adress** – IPC är meddelandeöverföring med send och receive på bytes och adresseras med internetadress och port, distribuerade objekt ger metodanrop där detaljerna döljs och adresseras med en fjärrobjektreferens som är unik i tid och rum
 - **Inkapsling** – att klient och server ligger i olika processer gör att tillståndet bara nås via objektets metoder, och eftersom allt går via metoder kan olika platser dessutom använda olika dataformat obemärkt
 - **Parametrar** – du kan skicka en objektreferens i stället för värdet, vilket vinner när parametern är stor, för då når mottagaren objektet med ett nytt anrop i stället för att hela värdet går över nätet
+<!--SR:!fsrs,2026-10-19T09:04:49.069Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:04:49.069Z-->
 
 ## Fråga 6 – Vad vinner man på virtualisering?
 
@@ -352,11 +368,13 @@ Vad vinner man på virtualisering - nätverksvirtualisering? (3)
 - **Vad det är** – många virtuella nät ovanpå ett befintligt nät som internet, vart och ett med egen adressering, egna protokoll och egen routing och utformat för en bestämd tillämpning
 - **Varför det behövs** – man kan inte ändra internetprotokollen för allas skull eftersom det som hjälper en tillämpning skadar en annan, och ett tillämpningsspecifikt nät antyder en väg runt problemet i Saltzers end-to-end-argument
 - **Overlays** – ett overlay ger nya tjänster utan att ändra nätet under, uppmuntrar experiment och låter flera samexistera, men kostar ett extra lager indirektion och mer komplexitet
+<!--SR:!fsrs,2026-10-19T09:15:13.576Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:15:13.576Z-->
 
 Vad vinner man på virtualisering - systemvirtualisering? (2)
 ||
 - **Vad det är** – flera virtuella maskiner på en fysisk maskin, där varje maskin kör sitt eget operativsystem, styrda av en hypervisor
 - **Vinsten** – mot processer ger det säkerhet, ren uppdelning och exakt debitering, och maskiner kan migreras enkelt vilket sänker hårdvara och energi och möjliggör infrastructure as a service
+<!--SR:!fsrs,2026-10-20T14:53:59.309Z,0,0.19206666,8.40750771,3,3,1,0,2026-10-20T14:43:59.309Z-->
 
 ## Luckor och källor
 

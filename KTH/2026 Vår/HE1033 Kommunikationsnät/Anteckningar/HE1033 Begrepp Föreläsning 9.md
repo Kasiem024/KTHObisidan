@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, föreläsning, HE1033, KTH, nätverk, year2026]
+tags:
+  - begrepp
+  - föreläsning
+  - HE1033
+  - KTH
+  - nätverk
+  - year2026
 created: 2026-03-01
 updated: 2026-08-17
 description: "Flashcards om routing: statiska och dynamiska rutter, administrative distance, distance vector och link-state samt RIP med split horizon."

@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HF1201, KTH, samhälle, year2025]
+tags:
+  - begrepp
+  - HF1201
+  - KTH
+  - samhälle
+  - year2025
 created: 2025-02-19
 updated: 2026-05-26
 description: "Audiell information: Information som presenteras via ljud, avsedd att uppmärksamma, varna eller bekräfta händelser"

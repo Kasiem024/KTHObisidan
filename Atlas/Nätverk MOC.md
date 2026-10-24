@@ -1,5 +1,7 @@
 ---
-tags: [MOC, nätverk]
+tags:
+  - MOC
+  - nätverk
 description: "Centraliserad översikt över kommunikationsnät, protokoll och nätverksteknik."
 ---
 # Nätverk MOC

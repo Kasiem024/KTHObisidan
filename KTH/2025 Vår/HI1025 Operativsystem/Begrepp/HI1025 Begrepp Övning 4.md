@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-05-19
 updated: 2026-08-17
 description: "Direct Memory Access (DMA): En hårdvarufunktion som tillåter kringutrustning (peripherals) att överföra data direkt till eller från huvudminnet utan CPU:ns direkta..."

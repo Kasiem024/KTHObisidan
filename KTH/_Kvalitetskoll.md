@@ -1,6 +1,8 @@
 ---
 title: "Kvalitetskoll"
-tags: [meta, KTH]
+tags:
+  - meta
+  - KTH
 description: "Automatisk översikt över anteckningar som saknar enhetlig metadata."
 created: 2026-08-24
 updated: 2026-08-24

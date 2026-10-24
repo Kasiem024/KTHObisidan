@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+tags:
+  - begrepp
+  - year2024
+  - CM1005
+  - KTH
+  - ekonomi
 description: "Lönen en arbetstagare får under sin semester: enligt semesterlagen minst 25 dagar per år och minst 12 procent av bruttolönen."
 created: 2024-02-26
 updated: 2026-08-17

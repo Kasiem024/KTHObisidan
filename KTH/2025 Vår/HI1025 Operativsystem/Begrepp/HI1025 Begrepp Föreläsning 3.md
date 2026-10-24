@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-03-29
 updated: 2026-08-17
 description: "Memory virtualization: Ger illusionen att applikationer har tillgång till ett större, sammanhängande minnesutrymme än vad som faktiskt finns fysiskt, skapas för varje..."

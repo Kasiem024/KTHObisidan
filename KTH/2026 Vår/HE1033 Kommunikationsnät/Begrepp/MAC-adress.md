@@ -1,6 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
-description: "Den fysiska adressen som är hårdkodad i nätverkskortet."
+tags:
+  - begrepp
+  - HE1033
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
+description: Den fysiska adressen som är hårdkodad i nätverkskortet.
 created: 2026-05-28
 updated: 2026-05-28
 ---

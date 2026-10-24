@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, CM1005, ekonomi, HH1802, year2024, KTH]
+tags:
+  - begrepp
+  - CM1005
+  - ekonomi
+  - HH1802
+  - year2024
+  - KTH
 description: "Räntabilitet visar ett företags förmåga att ge avkastning på kapitalet."
 created: 2024-02-28
 updated: 2026-08-17

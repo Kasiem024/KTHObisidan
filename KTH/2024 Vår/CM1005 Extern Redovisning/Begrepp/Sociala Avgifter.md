@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+tags:
+  - begrepp
+  - year2024
+  - CM1005
+  - KTH
+  - ekonomi
 description: "Sociala avgifter är olika former av lagstadgade och avtalade avgifter som används för att finansiera socialförsäkringssystemet."
 created: 2024-02-17
 updated: 2026-08-17

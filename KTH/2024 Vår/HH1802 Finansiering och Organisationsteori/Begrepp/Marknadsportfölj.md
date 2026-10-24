@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - HH1802
+  - HH1802/HH1802KS2
+  - KTH
+  - year2024
 description: "Marknadsportfölj är när man tittar på hela aktiemarknaden som en enda stor aktieportfölj."
 created: 2024-03-30
 updated: 2026-05-26

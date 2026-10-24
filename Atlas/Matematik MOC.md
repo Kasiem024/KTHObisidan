@@ -1,5 +1,7 @@
 ---
-tags: [MOC, matematik]
+tags:
+  - MOC
+  - matematik
 description: "Samling av matematiska begrepp, statistik och logik studerat under utbildningen."
 ---
 # Matematik MOC

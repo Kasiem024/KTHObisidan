@@ -1,5 +1,7 @@
 ---
-tags: [MOC, meta]
+tags:
+  - MOC
+  - meta
 description: "Vilka begrepp som återkommer oftast i vaultets frågeuppsättningar, som underlag för vad Tenta-fokus bör skrivas för först."
 created: 2026-08-19
 updated: 2026-08-19

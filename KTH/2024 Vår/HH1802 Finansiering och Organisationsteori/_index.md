@@ -1,6 +1,10 @@
 ---
 title: "HH1802 Finansiering och Organisationsteori"
-tags: [index, HH1802, KTH, year2024]
+tags:
+  - index
+  - HH1802
+  - KTH
+  - year2024
 description: "Kursindex för HH1802 Finansiering och Organisationsteori med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HH1802 Finansiering och Organisationsteori

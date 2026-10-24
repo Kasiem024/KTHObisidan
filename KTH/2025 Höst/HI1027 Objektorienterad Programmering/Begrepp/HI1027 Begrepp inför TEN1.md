@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, HI1027, KTH, programmering, tenta, year2025]
+tags:
+  - begrepp
+  - HI1027
+  - KTH
+  - programmering
+  - tenta
+  - year2025
 created: 2025-10-11
 updated: 2026-05-26
 description: "Hög kohesion: Innebär att en klass eller modul har ett enda, väldefinierat ansvar."

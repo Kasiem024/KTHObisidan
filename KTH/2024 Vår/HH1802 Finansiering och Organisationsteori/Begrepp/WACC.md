@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, ekonomi, HH1802, KTH, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - HH1802
+  - KTH
+  - year2024
 description: "WACC (Weighted Average Cost of Capital) är en formel som visar hur stor avkastningen företaget minst måste ge för att möta både ägarnas och långivarnas räntabilitetskrav."
 created: 2024-03-30
 updated: 2026-05-26

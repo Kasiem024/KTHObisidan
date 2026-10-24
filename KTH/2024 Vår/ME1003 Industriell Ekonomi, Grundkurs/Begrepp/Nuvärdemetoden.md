@@ -1,5 +1,12 @@
 ---
-tags: [begrepp, ekonomi, HH1802/HH1802KS1, KTH, ME1003, ME1003/ME1003KS2, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - HH1802/HH1802KS1
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS2
+  - year2024
 description: "Nuvärdemetoden är en ränteräkningsmetod som med hjälp av Kalkylränta räknar om de olika investeringsalternativens betalningar till en och samma tidpunkt, till början av det år då grundinvesteringen…"
 created: 2024-02-07
 updated: 2026-05-26

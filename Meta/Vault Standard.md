@@ -1,5 +1,6 @@
 ---
-tags: [meta]
+tags:
+  - meta
 description: "Vaultets enda källa till sanning för taggar, frontmatter, mappstruktur, namngivning och notstruktur."
 ---
 # 📐 Vault Standard & Conventions
@@ -104,17 +105,31 @@ Use existing tags rather than inventing synonyms. Current vocabulary:
 
 ## 3. Frontmatter shape
 
-Every content note starts with YAML frontmatter. Use the **inline array** style for
-`tags` (the enforced vault standard), plus ISO `created` / `updated` dates:
+Every content note starts with YAML frontmatter. Write `tags` in **YAML list form** — a bare
+`tags:` line, then one line per tag, indented two spaces, in the form `- value` — plus ISO
+`created` / `updated` dates:
 
 ```yaml
 ---
-tags: [begrepp, CM1005, ekonomi, KTH, year2024]
+tags:
+  - begrepp
+  - CM1005
+  - ekonomi
+  - KTH
+  - year2024
 description: "Kort mening som sammanfattar begreppet."
 created: 2024-03-30
 updated: 2024-04-20
 ---
 ```
+
+- **Why list form (F105).** It is the form Obsidian's Properties panel writes whenever a tag is
+  edited in the app. The vault used the inline array `tags: [a, b]` until 2026-10, and every tag
+  edit in the app then became an audit deviation. `Vault-Audit.ps1` reports a note still in the
+  inline form as `inlineStyleTags`, and `Meta/Obsidian Plugins/Scripts/Convert-TagsToList.ps1`
+  converts it. A tag value is never quoted: every tag in the vocabulary below is a plain word.
+- **The form is checked by the audit only.** Dataview reads both forms into the same `file.tags`
+  list and cannot tell them apart, so `Atlas/Vault Health Report.md` has no query for this rule.
 
 - `description` is a one-sentence summary, used by the published site for search
   results and social previews. **Required on every note in scope** — notes tagged
@@ -160,8 +175,8 @@ KTH/<Year Season>/<CODE Course Name>/
 - `Föreläsningar/` holds **both** lectures and lessons; the `föreläsning` /
   `lektion` / `övning` tag carries that distinction, not the folder.
 - `Filer/` holds every non-note file. Course literature goes in
-  `Filer/Litteraturlista/` together with any generated `.opt.md` / `.ai.md`
-  conversions and conversion tooling docs. Nothing under `Filer/` is an authored note:
+  `Filer/Litteraturlista/` together with its Markdown conversions (named like the book, with a plain
+  `.md` suffix, as HI1031's and HI1032's are) and conversion tooling docs. Nothing under `Filer/` is an authored note:
   the whole folder is out of scope for the audit **and excluded from Obsidian's tag
   index**, per §6.
 - `Filer/Canvas/` is for **third-party course material downloaded from Canvas** — KTH
@@ -171,8 +186,9 @@ KTH/<Year Season>/<CODE Course Name>/
   do not apply because the official document titles legitimately contain course codes
   (`Detaljplan Examensarbete HE111X, HI111X, HT100X, HT101X.pdf`). Use it only for files
   that came from someone else; anything you wrote belongs in the four category folders.
-  `HT100X Examensarbete`, `HI1031 Distribuerade informationssystem` and
-  `HI1032 Kommunikationssystem` have one today; each Canvas folder also contains an
+  `HT100X Examensarbete`, `HI1031 Distribuerade informationssystem`,
+  `HI1032 Kommunikationssystem` and `CM1000 Diskret Matematik` have one today; each of the first
+  three also contains an
   `AI-optimerad Markdown/` subfolder with AI-optimized Markdown conversions of the material.
 - New courses: copy the skeleton from `KTH/Kurs Mapp Mall/`.
 - `Atlas/` holds subject MOCs, the `Dashboard` and the `Vault Health Report`.
@@ -289,6 +305,44 @@ Every image embed carries **alt text** after a pipe:
 - Image filenames are themselves descriptive (`Kraljics Inköpsmatris ME1003.png`), which
   is what makes the alt text easy to write — keep naming new ones that way.
 
+### Math and formulas
+
+Genuine math is written as **LaTeX**, never as plain text. Obsidian renders it natively and
+the published Quartz site typesets it with KaTeX (on by default), so the two read identically.
+Inline with single `$…$`, a display formula with `$$…$$` on their **own lines**:
+
+```markdown
+Den utjämnade tiden uppdateras som $\text{RTT}_\text{S} = (1 - \alpha) \cdot \text{RTT}_\text{S} + \alpha \cdot \text{RTT}_\text{M}$, med $\alpha = 1/8$.
+
+$$
+\text{RTO} = \text{RTT}_\text{S} + 4 \cdot \text{RTT}_\text{D}
+$$
+```
+
+Two plain-text forms are **forbidden**, because both render as a mess and were the cause of F101:
+
+- A caret power such as `2^32` shows the literal caret. Write `$2^{32}$`.
+- An underscore identifier such as `RTT_M` pairs its underscore with the next one on the line,
+  so Markdown italicises everything between them and a formula turns to soup. Write
+  `$\text{RTT}_\text{M}$`.
+
+Rules that keep the result clean:
+
+- **Wrap every multi-letter name in `\text{}`** (`\text{RTT}`, `\text{cwnd}`, `\mathrm{round}`).
+  A bare multi-letter identifier renders as an italic *product* of single letters — the same
+  ugliness in a new form.
+- **In a flashcard, math is always inline `$…$`, never `$$`.** A `$$` block puts its delimiters
+  on their own lines, which inside a card line splits the card and orphans its `<!--SR:-->`
+  marker (see `conventions.md` §1).
+- Keep the Swedish **decimal comma** as `{,}` inside math (`$1{,}5$`), so KaTeX does not add a
+  thin space.
+- This governs *math*, not every symbol. A variable named in prose that is not part of a formula
+  (`cwnd`, `rwnd`, `MSS`, "32 bitar") stays plain text — wrapping every noun in `$…$` hurts the
+  copy-by-hand workflow and is not what the vault does.
+
+The audit reports `rawMathNotLatex`. It is scoped to authored study material; raw `Föreläsningar/`
+class notes are skipped, because their informal in-class shorthand is the author's own.
+
 ### Dataview blocks
 
 Quartz cannot run Dataview, so query blocks are hidden on the published site. Always put
@@ -322,8 +376,8 @@ Every course folder contains an `_index.md` at its root that gives a uniform,
 Dataview-driven overview of that course.
 
 - Location: `KTH/<Year Season>/<CODE Course Name>/_index.md`
-- Frontmatter: `title: "<CODE Course Name>"` (exactly the folder name) plus
-  `tags: [index, <CODE>, KTH, year<YYYY>]`. The `title` is required: the published
+- Frontmatter: `title: "<CODE Course Name>"` (exactly the folder name) plus the tags
+  `index`, `<CODE>`, `KTH` and `year<YYYY>`, in the list form of section 3. The `title` is required: the published
   site falls back to the filename otherwise, which would render as "_index".
 - Body: course metadata + Dataview lists grouped by note type, scoped to the
   course folder. The **Begrepp** list is additive — `FROM "<folder>" OR #<CODE>` —

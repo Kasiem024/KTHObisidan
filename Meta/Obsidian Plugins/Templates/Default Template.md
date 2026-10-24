@@ -7,7 +7,8 @@ const bas = [k.kurskod, k.kursnamn].filter(Boolean).join(" ");
 const beskrivning = bas ? `${bas} – ${tp.file.title}` : tp.file.title;
 -%>
 ---
-tags: [<% taggar.join(", ") %>]
+tags:
+<% taggar.flatMap((t) => String(t).split(",")).map((t) => t.trim()).filter(Boolean).map((t) => "  - " + t).join("\n") %>
 description: "<% beskrivning %>"
 created: <% datum %>
 updated: <% datum %>

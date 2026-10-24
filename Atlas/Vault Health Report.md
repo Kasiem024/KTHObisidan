@@ -1,5 +1,6 @@
 ---
-tags: [meta]
+tags:
+  - meta
 description: "Live Dataview checks against the Vault Standard; an empty section means the vault is healthy."
 ---
 # 🚩 Vault Health Report

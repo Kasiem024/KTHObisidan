@@ -5,12 +5,93 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: nothing in flight.** The exam-prep programme is finished through **F96** and every gate is
-green. The phone-sync item at the bottom has been parked since 2026-09-08 and waits on the author.
+**Status: DONE — the tag convention is YAML list form and the vault is converted (F105, run 2026-10-24
+13:49).** 536 notes converted, 0 skipped, 0 failed. **Verified after the run:** `Get-SRIntegrity -Compare`
+against an own baseline `RESULT: clean` (`nosr` 59 and 445 excluded cards unchanged), `Vault-Audit`
+`RESULT: clean`, lint 550/0, deck hygiene clean, and a SHA-256 diff showing exactly the 536 manifest
+files changed and nothing else. The backup is in
+`%USERPROFILE%\KTHObsidian-backups\tags-to-list-2026-10-24-135010\`.
+**CM1000 and SF1686 were excluded** because a second agent is converting the CM1000 PDFs, so CM1000's
+`_index.md` is still inline — that is invisible to the audit, which excludes `_index.md` from its scope,
+so the audit is clean anyway. A plain `Convert-TagsToList.ps1 -Apply` converts that last file once the
+other agent's work is committed. Since F102: F103 is the HI1032
+`Tentasvar - Svaga ämnen` reading file, F104 the HI1031 `Tentafrågor - Nyckelord` keyword deck for the
+oral exam. Unapplied findings from two audits (HI1032 lecture coverage, HI1031 manuscript depth) are in
+`.kiro/reports/parked-findings-2026-10-22.md`. HI1031's Snabbsvar is a spoken-answer manuscript for the
+oral exam (F98). **F102's three HI1032 Extra decks (147 cards) must not be pruned under the few-cards
+rule; he set it aside for them without changing it.** The phone-sync item at the bottom has been parked
+since 2026-09-08.
+
+## In flight: converting CM1000's 95 PDFs to AI-optimised Markdown (planned 2026-10-24)
+
+**Nothing is converted yet. The author must approve the plan first**:
+`.kiro/reports/cm1000-pdf-till-md-plan-2026-10-24.md`. Tools: `C:\dev\pdf2md\prep\cm1000\`; pilot
+evidence: `C:\dev\pdf2md\out\CM1000\_pilot\`. The pdf2md repo moved from `C:\pdf2md` to
+`C:\dev\pdf2md`; its own docs and the knowledge base still name the old path, and its marker launcher
+is broken after the move. CM1000 moved from `2025 Höst` to `2026 Höst`; `llms.txt` and the 2026 MOC
+were updated to match. The old `2025 Höst/CM1000 .../_index.md` shows as deleted in git — the author
+deleted that folder himself.
+
+## Done: the tag conversion was run (F105, 2026-10-24 13:49)
+
+**Why.** Obsidian's Properties panel writes `tags:` in YAML list form whenever a note's tags are edited in
+the app. With the old inline standard every such edit was an audit deviation, six times over. The author
+chose to make the app's form the standard (alternative 3) and to convert the vault with a script. He then
+asked the agent to run it and commit.
+
+**What was run:** `Convert-TagsToList.ps1 -ExcludePath CM1000,SF1686 -Apply`, with Obsidian closed and
+nothing staged. 536 converted, 13 already in list form, 0 skipped, 0 failed, 46 of them carrying `nosr`.
+
+**Verified afterwards**
+
+- `Get-SRIntegrity -Compare` against an own baseline (T22): `RESULT: clean`; `nosr` 59, 445 cards excluded
+  by `nosr`, `raw_srComments` 1974/2061 — all unchanged.
+- `Vault-Audit`: `RESULT: clean`, `notesInScope=528`.
+- Lint 550 files / 0 issues. `Test-DeckHygiene` clean, 256 cards and 256 markers.
+- SHA-256 of every `.md` before and after: exactly 536 changed, 0 added, and the changed set equals the
+  backup manifest file for file. 0 changed under CM1000 or SF1686.
+- Backup: `%USERPROFILE%\KTHObsidian-backups\tags-to-list-2026-10-24-135010\`, 536 files plus a manifest
+  whose root line is this vault, so its `-RestoreFrom` line still works.
+
+**The audit is fully clean even though CM1000's `_index.md` is still inline.** The plan predicted
+`inlineStyleTags 1`; that was wrong, because the audit's `InScope` excludes every `_index.md`. Converting
+that last file is therefore cosmetic and can wait for the CM1000 agent.
+
+**What is left of this item**
+
+- Once the CM1000 agent's work is committed, a plain `Convert-TagsToList.ps1 -Apply` converts CM1000's
+  `_index.md`. Nothing else remains.
+- **Never "repair" `inlineStyleTags` with `Format-FrontmatterTags.ps1`.** It is superseded and converts
+  the wrong way. `Convert-TagsToList.ps1` is the repair. The old script stays untouched, on his
+  instruction.
+
+**The incident worth remembering.** The first `-Apply` wrote its 536 backups into
+`C:\Users\ekasalm\OneDrive - Ericsson\Documents\SF1686` — the author's **employer-synced** OneDrive. The
+cause was a shell invocation that splatted `-ExcludePath @('CM1000','SF1686')` into two arguments, so
+`SF1686` bound positionally to `-BackupDir` as a *relative* path, which .NET resolved against the process
+working directory (T7). The vault itself was converted correctly; only the backup location was wrong. The
+folder was moved out of OneDrive immediately, and `Convert-TagsToList.ps1` now **refuses a relative
+`-BackupDir`**. See `.kiro/lessons-learned.md`, 2026-10-24.
+
+**Committing it:** stage by name and exclude every CM1000/SF1686 path and the other agent's
+`.kiro/reports/cm1000-*` plan (never `git add -A`). The flipped audit and the converted notes must go in
+the **same** commit, or CI goes red.
+
+Everything else, including what was verified and how, is in F105.
 
 **The re-entry prompt is `.kiro/reentry.md`.** It is course-neutral and is the file to be pointed at
 after a compact. `.kiro/hi1031-tenta-reentry.md` is an archive of the earlier HI1031 writing project,
 not a live state file.
+
+## HI1031's Snabbsvar is a manuscript now (F98)
+
+`HI1031 Tentafrågor - Snabbsvar.md` holds **91 `||` cards**, one or more per exam question. Every front is
+the official question verbatim plus ` — Del X av Y: <ämne> (N)`; the rows are what he says, in order. Its
+`nosr` state is his and has changed more than once — measure it (see *His rotation* below). **It is no longer a copy of the cards in the ten
+`Tentafrågor och Svar - Kap NN` notes** — the sync contract ended on 2026-10-17 — so never sync edits
+between them, but the manuscript must not contradict them. The form and the size rule are in
+`.kiro/reports/hi1031-snabbsvar-manus-plan-2026-10-17.md`. He said to **ignore** the book errors found in
+the answer notes: do not fix or re-report them.
 
 ## The one thing that will mislead you if you read the backlog forwards
 
@@ -28,27 +109,50 @@ why none of them could see it.
 ## What exists now, per course
 
 **HI1031** — ten concept decks (`Begrepp - Kap NN`, 257 cards), ten exam-answer notes
-(`Tentafragor och Svar - Kap NN`), and `Tentafragor - Snabbsvar.md`. The last two hold **the same 81
+(`Tentafragor och Svar - Kap NN`), and `Tentafragor - Snabbsvar.md`. The last two held **the same 81
 answer-bearing cards**: once distributed across the ten notes, once collected in Snabbsvar, which
-carries `nosr` so the drill is paid for only once. **If you edit one copy you must edit the other**, or
-they diverge; F92's patch step refuses to write unless each change matches both.
+carries `nosr` so the drill is paid for only once. **On 2026-10-17 the author ended that contract:**
+Snabbsvar was rewritten as a manuscript (F98), and the chapter-note cards stay as they are, with their
+review history. Do not sync edits between the two any more — but the manuscript must never contradict
+the chapter-note cards.
 
-**His rotation, as of 2026-10-05:** he drills chapters **01, 02, 11, 16, 17**. Chapters 04, 05, 06, 09
-and 10 carry `nosr` on both the concept deck and the exam-answer note. `nosr` is his and not an agent's
-to change.
+**His rotation.** As of 2026-10-05 he drilled chapters **01, 02, 11, 16, 17**. **Measured 2026-10-22,
+parsing each whole frontmatter, and it has moved again:** all ten HI1031 concept decks are in review
+(no `nosr`, 19-33 markers each), while all ten `Tentafrågor och Svar - Kap NN` answer notes, Snabbsvar
+(20 markers) and the new Nyckelord file carry `nosr`. HI1032: the two lab decks and Extra Möjlig carry
+`nosr`; Del A, Del B, Extra Säker and Extra Trolig are in review. Every change was his, made in Obsidian's
+UI. `nosr` is his and not an agent's to change — measure it, never quote this paragraph as current.
 
 **HI1032** — the twelve `Begrepp - Kap NN` decks were **deleted** in F89 (101 cards, zero markers, never
-drilled). What exists is `Tentaplugg - Del A Transportnivan.md` and `... Del B Applikationsnivan.md`,
-**96 cards**, built from the author's own `Tentaanalys` notes. Both lab decks are untouched and carry
-`nosr`: Labb 1 at 66 markers, Labb 5 at 62. **HI1032's entire active deck is those 96 cards** — every
-other card-bearing note in the course is `nosr`.
+drilled). What exists now is two pairs, built like HI1031's: a **theory note he reads and copies by
+hand** and a **deck he drills**, one pair per exam part.
+
+| Part | Theory note | Deck |
+| --- | --- | --- |
+| Del A Transportnivån | `HI1032 Tentasvar - Del A ...` | `HI1032 Tentaplugg - Del A ...`, 67 cards |
+| Del B Applikationsnivån | `HI1032 Tentasvar - Del B ...` | `HI1032 Tentaplugg - Del B ...`, 100 cards |
+
+**Rebuilt from the lectures on 2026-10-19 (F99).** All four files were rewritten from the examiner's seven
+lectures, concept-first and organised by topic, with no exam-point strategy in the text (he called the old
+Del A theory "helt kass" for copying by hand). Each `## ` topic header carries a tentasannolikhet —
+**Säker**, **Trolig** or **Möjlig** — and `HI1032 Föreläsningskarta - Ämnen och tentasannolikhet` maps
+every topic to its level with the evidence. The old 49/71 cards and their markers were deleted on his
+explicit permission; the 67 + 100 new cards start without history. The two lab decks still carry `nosr`
+and are untouched.
+
+**The fact that decided the rebuild (F97):** with each past exam treated as the unknown one, Del A had 0-2
+new points of 22 and Del B 6-12, and most of Del B's new sub-questions were on the examiner's slides. The
+exam is drawn from the lectures, not from earlier exams. **Never quote an in-sample coverage figure for
+this course** — any material built from the four past exams scores ~100 % on them by construction
+(`lessons-learned.md`, 2026-10-15); the Föreläsningskarta's calibration deliberately reports topic
+coverage, not point counts, for that reason.
 
 HI1032 is the course with real exam evidence: **four past papers with the examiner's own solutions**,
 under `Filer/Canvas/AI-optimerad Markdown/Gamla Tentor/`, distilled by the author into
 `HI1032 Tentaanalys - Ranking och poangstrategi.md` and a self-contained `AI-kontext.md`. Those two are
 the specification for that course — `product.md`'s table understates this by naming only HI1031.
 
-## Done: F86 to F96
+## Done: F86 to F99
 
 - **F86** — HI1031's ten decks audited against all 49 exam questions, per *ask* rather than per
   question. 114 of 117 covered; three gaps closed, including the chapter 9 hypermedia card.
@@ -70,8 +174,20 @@ the specification for that course — `product.md`'s table understates this by n
 - **F95** — an outside agent reviewed F93 and found a duplicate F-number, a self-test heading that
   contradicted three of its own controls, and a false claim in the handoff that commissioned it. Two
   audit checks added, `duplicateFNumber` and an assertion for `tagIndexBadFilter`: **46 assertions**.
+- **F97** — HI1032's in-sample "Korten räcker" claims corrected with a held-out measure; Del B widened
+  from the examiner's lectures F4-F7 (theory 651 -> 800 lines, deck 61 -> 71). Del A deck 48 -> 49.
+- **F98** — HI1031's Snabbsvar rewritten as a spoken-answer manuscript: 81 -> 91 cards, fronts verbatim
+  from the official list, only that file changed, every chapter fact-reviewed against the book.
+- **F99** — HI1032's two theory notes and two decks rebuilt from the examiner's lectures, concept-first,
+  by topic with a tentasannolikhet per topic. 49/71 -> 67/100 cards (old markers deleted on his
+  permission); new Föreläsningskarta note. Seven lecture agents in parallel, each fact-reviewed.
 
 ## Use both reviewers, and never give the premise one a shell
+
+**Known problem, F97: `conformance-reviewer` has been cancelled by the idle deadline three times out of
+three**, each after an hour with no visible progress. The same brief to `kiro_default` without shell
+completed every time. Until it is diagnosed, run the gates yourself and give the review to a
+`kiro_default` stage told to use read and grep only.
 
 There are two, they share `reviewer-prompt.md`, and **the tool grant is what makes them different**:
 
@@ -99,7 +215,7 @@ corrupts a review that was commissioned to catch exactly that kind of error.
 What remains of that old survey item is **`HI1032 Labb 1 - Flashcards.md`**: run
 `Test-DeckHygiene.ps1 -All` and read its lines. `-All` is a survey, not a gate.
 
-## Nothing else partially finished
+## Working tree
 
 **Run `git status` rather than trusting a commit id written here** — this file has carried a stale one
 four times, and a reviewer caught it again on 2026-10-01.
@@ -109,10 +225,10 @@ only.** He also edits cards by hand — on 2026-10-05 he reworded a chapter 17 p
 classify a diff before assuming it is all review data, and take the whole diff in one call rather than
 passing a Swedish path to git as a pathspec (**T2**).
 
-**Editing a note's tags in Obsidian's own UI rewrites the frontmatter into YAML list form**, which the
-audit reports as `listStyleTags`. `Format-FrontmatterTags.ps1` is the repair, and it has now recurred
-five times. **Check that `nosr` is still present before running it**: it preserves what is there and
-does not restore a tag already gone.
+**Editing a note's tags in Obsidian's own UI writes YAML list form**, which has been the vault's standard
+since F105, so it is no longer a deviation. A note still in the old inline form is reported as
+`inlineStyleTags`, and `Convert-TagsToList.ps1` is the repair. Like every tag edit, it preserves `nosr`
+and never adds or restores one.
 
 One file is left untracked deliberately:
 `.obsidian/plugins/obsidian-spaced-repetition/data (conflict 2026-09-07-10-27-11).json`, a Drive sync

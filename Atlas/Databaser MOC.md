@@ -1,5 +1,7 @@
 ---
-tags: [MOC, databaser]
+tags:
+  - MOC
+  - databaser
 description: "Struktur och hantering av data i databassystem."
 ---
 # Databaser MOC

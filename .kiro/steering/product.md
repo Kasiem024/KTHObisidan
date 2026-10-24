@@ -65,6 +65,7 @@ Where the exam questions live, per course, when they exist at all:
 | Course | Exam questions |
 |---|---|
 | HI1031 | `KTH/2026 Höst/HI1031 .../Filer/Canvas/Tentor/Tentafrågor HI1031 Distribuerade informationssystem.md` (per chapter). That file is the complete one, and it is the specification. |
+| HI1032 | No published question list. Four past exams with the examiner's solutions under `Filer/Canvas/AI-optimerad Markdown/Gamla Tentor/`, classified per sub-question in `Anteckningar/HI1032 Tentaanalys - AI-kontext.md` section 3. **The exam is drawn from the examiner's seven lectures, not from earlier exams** (F97), so the specification is the lectures, with `HI1032 Föreläsningskarta - Ämnen och tentasannolikhet` giving each topic's likelihood. |
 
 **Two files in that folder look like more exam material and are not.** Checked on 2026-09-26 because
 this table used to claim an old exam existed:
@@ -208,6 +209,32 @@ out of the structure.
 The authoring consequences are in `.kiro/skills/write-flashcards/SKILL.md` — rule 15 and the
 anti-pattern table.
 
+### Theory notes are concept-first, with no exam strategy in them
+
+Stated on 2026-10-19, rejecting HI1032's exam-organised theory note as "helt kass" for copying by hand:
+
+> jag vill lära mig det jag behöver kunna inför tenta. jag lär mig genom att basera allting på begrepp och
+> sen gå vidare från det. jag vill att språket ska hållas simpelt och vardagligt, men ändå innehålla
+> facktermer. jag kommer ju skriva ner det som står i teorifilen du skapar, den måste vara redo för det.
+
+So a theory note **teaches the subject**: one `## ` section per concept, starting with what it is and
+building outward to how it works and what it costs. **No points, no question pools, no "this was on the
+October exam", no "skip this"** — that belongs in the course's analysis notes, never in the file he copies.
+Where a course has exam evidence, show the likelihood as one word in the section header (HI1032 uses
+Säker / Trolig / Möjlig, explained in its Föreläsningskarta), not as strategy in the prose.
+
+**Short, but not the worked examples.** Asked the same day to shorten both HI1032 theory notes, he set the
+rule: "skär så mycket som möjligt utan att tappa det viktiga", the lowest-likelihood topics get **one line**
+each, and **worked examples are exempt** — "de kan vara långa och förklara saker simpelt och på flera olika
+sätt då de delarna handlar om förståelse mer än att memorisera". Cut framing, restated points and
+analogies; never the step-by-step calculations or diagram readings.
+
+**How he wants it built: fast, parallel, adversarially checked.** Also 2026-10-19: speed matters more
+than anything once he has decided ("om det är snabbare att använda flera agenter samtidigt så gör det"),
+and every piece of work gets an adversarial subagent review. The pattern that met both: one drafting
+agent per independent unit (lecture, chapter, file) in parallel, each with its own reviewer that loops
+back on findings. See `reentry.md` under *When you review*.
+
 ## What is in it
 
 | Path | Contents |
@@ -233,7 +260,7 @@ The rules live in `Meta/Vault Standard.md` and are enforced by
 ## Status
 
 Conventions are settled and the vault is clean against them. The change log in
-`Meta/Vault Findings & Backlog.md` runs F1–F96: all closed except F10 (parked). Both the audit and
+`Meta/Vault Findings & Backlog.md` runs F1–F105: all closed except F10 (parked). Both the audit and
 the linter run automatically on every push via `.github/workflows/vault-checks.yml`.
 
 Remaining work is content the author must write — chiefly `## Tenta-fokus` sections, present on

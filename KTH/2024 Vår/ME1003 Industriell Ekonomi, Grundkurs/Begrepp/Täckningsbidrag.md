@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS2
+  - year2024
 description: "Täckningsbidrag (TB) är ett Nyckeltal som visar med hur mycket en viss produkt bidrar till att betala kostnader som är gemensamma för alla produkter."
 created: 2024-02-10
 updated: 2026-05-26

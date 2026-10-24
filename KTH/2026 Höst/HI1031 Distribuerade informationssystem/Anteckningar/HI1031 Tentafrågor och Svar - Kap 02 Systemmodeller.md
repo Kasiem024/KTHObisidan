@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-08-24
 updated: 2026-09-09
 description: "Svar på tentafrågorna för HI1031 kapitel 2: trelagersarkitektur, MVC, middleware, fördelarna med klient/server och mobila agenter, med muntliga svar och en lucka där boken inte täcker MVC."
@@ -64,7 +71,7 @@ Beskriv hur en trelagersarkitektur är uppbyggd. (4)
 - **En server per del** – en-till-en: skikt 1 är klientens vy, skikt 2 en applikationsserver, skikt 3 en databasserver
 - **Vinsten** – applikationslogiken samlas på ett ställe, så det blir lättare att underhålla; och skikt 1 kan vara ett rent gränssnitt, vilket ger tunna klienter
 - **Priset mot tvåskikt** – tre servrar att sköta i stället för två, och mer nättrafik och högre fördröjning per operation
-<!--SR:!fsrs,2026-10-04T02:49:33.964Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:48:33.964Z-->
+<!--SR:!fsrs,2026-10-20T13:06:18.708Z,4,4.19208746,9.71373125,2,8,0,0,2026-10-16T13:06:18.708Z-->
 
 ## Fråga 2 — Beskriv hur en MVC-arkitektur är uppbyggd
 
@@ -108,6 +115,7 @@ Beskriv hur en MVC-arkitektur är uppbyggd. (4)
 - **Flödet** – användaren agerar i vyn, controllern tolkar, modellen uppdateras och säger till att den ändrats, och vyn ritar om sig
 - **Poängen** – presentationen skiljs från datan, så flera vyer kan visa samma modell och modellen kan testas helt utan gränssnitt
 - **Står inte i boken** – svaret är allmän kunskap om mönstret, inte bokens text; säg det rakt ut om du pressas på var det står
+<!--SR:!fsrs,2026-10-20T10:02:47.838Z,7,6.76476998,7.86010817,2,4,0,0,2026-10-13T10:02:47.838Z-->
 
 ## Fråga 3 — Vad är Middleware?
 
@@ -162,6 +170,7 @@ de bara i kommunikationssystemet blir de ofullständiga och arbetet dubbleras.
    ändpunkterna — e-post måste lägga på egen feltolerans ovanpå TCP, som inte klarar längre avbrott.
 
 Vad är Middleware?::Ett lager av mjukvara som ==döljer heterogenitet== och ger programmeraren en bekväm programmeringsmodell; det sitter ovanpå operativsystemet och under tillämpningarna.
+<!--SR:!fsrs,2026-10-22T10:44:31.401Z,9,8.83497632,6.79215857,2,4,0,0,2026-10-13T10:44:31.401Z-->
 
 ## Fråga 4 — Vad är fördelarna med en klient/server-lösning?
 
@@ -215,7 +224,7 @@ Vad är fördelarna med en klient/server-lösning? (4)
 - **Går att bygga i lager** – en server kan själv vara klient: en webbserver är klient hos filservern och hos DNS, och en söktjänst är både server och klient
 - **Går att förbättra med placering** – flera servrar med uppdelning eller replikering, caching i proxyservrar, och mobil kod för bra svarstider
 - **Men den skalar dåligt** – en tjänst på en enda adress kan inte växa förbi värddatorns kapacitet och bandbredd; det är därför peer-to-peer finns
-<!--SR:!fsrs,2026-10-04T02:45:42.813Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:44:42.813Z-->
+<!--SR:!fsrs,2026-10-18T13:20:43.908Z,2,0.98200384,9.89976055,2,11,2,0,2026-10-16T13:20:43.908Z-->
 
 ## Fråga 5 — Vad är en mobil agent?
 
@@ -264,6 +273,7 @@ aktiekurser. En mobil agent ==bär med sig sin data, flyttar sig vidare och arbe
    crawlers gör, så nyttan kan vara begränsad.
 
 Vad är en mobil agent?::Ett ==körande program med både kod och data== som reser mellan datorer, gör många lokala anrop i stället för fjärranrop och kommer tillbaka med resultatet; boken tvivlar på nyttan, för vanliga fjärranrop räcker ofta.
+<!--SR:!fsrs,2026-10-24T22:35:10.747Z,10,9.73548153,6.79215857,2,4,0,0,2026-10-14T22:35:10.747Z-->
 
 ## Luckor och källor
 

@@ -1,6 +1,7 @@
 ---
-tags: [meta]
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F96): vad som var fel, vad som gjordes och hur det verifierades."
+tags:
+  - meta
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F105): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -178,7 +179,7 @@ Confirmed clean on 2026-08-17 — keep it that way:
 | --- | --- |
 | Tag casing violations | 0 |
 | Tags outside the controlled vocabulary | 0 |
-| Frontmatter tag style | 100 % inline array (0 list-style) |
+| Frontmatter tag style | 100 % inline array on 2026-08-17. **Superseded by F105:** the standard is now YAML list form, reported by `inlineStyleTags` |
 | Duplicate tags inside a note | 0 |
 | Leftover `=dateformat(this.file.…)` expressions | 0 |
 | Courses with `_index.md` | 24 / 24 |
@@ -5135,3 +5136,616 @@ agent had read. No new trap entry is warranted - the trap was right, the gate ca
 the repair was two character substitutions built from code points. It is recorded only because a
 verification table claiming "clean" should say when it was not clean first. The same scan found the
 signature nowhere else under `.kiro/`.
+
+## F97. HI1032: in-sample readiness claims corrected, Del B widened from the examiner's own lectures
+
+**Date:** 2026-10-15
+**Status:** Closed
+
+**What prompted it.** While drilling, the author asked whether practising only questions from the four
+past exams would hold on a new one. Both HI1032 theory notes told him, in a table cell, that for the
+1-point pools "Korten räcker", and the Del B note quoted a deck mapping of 14, 16, 17 and 21 points per
+exam. Both figures were measured against the same four exams the material was built from, so they were
+100 % by construction. The reasoning is in `.kiro/lessons-learned.md` under *material built from four
+exams was graded against the same four exams*.
+
+### The honest measure, and what it changed
+
+Each exam treated as the unknown one, prepared from the other three, counted per topic and question
+type: **Del A 0-2 new points of 22, Del B 6-12**, which leaves at worst **10** prepared Del B points
+against the 9 needed. Of Del B's 21 new sub-questions, at least 14 appear on the examiner's own lecture
+slides F4-F7, and about 10 of the 36 new points were predictable from the course's recommended
+exercises (Huffman, Base64, SNMP PDU directions). The exams are drawn from the lectures, not from
+earlier exams.
+
+### What was done
+
+- **Both theory notes** (`HI1032 Tentasvar - Del A/Del B`): "Korten räcker" removed, the in-sample
+  tables labelled as such, the held-out table added to Del B, Del A given the held-out figure and the
+  caveat that it counts topics rather than individual facts. NETCONF moved off the skip list - F4 covers
+  it on two slides as SNMP's successor.
+- **Del B note, 651 -> 800 lines**: a new section built on the examiner's own summary slide (F6 p.41)
+  and a `📍 Från föreläsningen - aldrig tentat` block in every topic section, each fact cited to lecture
+  and PDF page. Two own conclusions are marked as such (FTP's firewall problem and passive mode).
+- **Del B deck, 61 -> 71 cards** (10 new: 4 `::`, 1 `;;`, 5 `||`), chosen from 25 candidates after a
+  premise review cut the target from ~15 to ~10. **Del A deck, 48 -> 49** (persistence timer, F2).
+- **Two marker-bearing cards reworded, meaning kept**: Del A `Taho` -> `Tahoe`; Del B's Trap card gained
+  "utan att ha blivit tillfrågad", because the new Response card made the old cue ambiguous - both go
+  from agent to manager.
+- Deck intros and descriptions rewritten to drop the in-sample claim. The Del B note's frontmatter, which
+  had been rewritten to list form at 17:47, was repaired with `Format-FrontmatterTags.ps1 -Filter`.
+- The four lecture PDFs F4-F7 were copied from the KTH Drive tree into `Filer/Canvas/` (SHA-256
+  identical) and converted to Markdown by a separate agent working in `AI-optimerad Markdown/` only.
+
+### How it was verified
+
+`Get-SRIntegrity.ps1` against own baselines (`-BaselinePath`, T22): Del B `cards 61 -> 71`, Del A
+`cards 48 -> 49`, one named file each, `markers placed on cards` 1819 before and after, and exactly two
+moved markers, both the deliberate rewordings. `Test-DeckHygiene.ps1 -All`: no findings for either deck.
+Lint 545 files, 0 issues. All 25 candidate cards fact-checked against the converted lectures and exercise
+solutions by a reviewer agent, no errors; a second review after implementation found the Trap ambiguity
+and one fact it could not locate (below). "Korten räcker" absent, confirmed by two differently shaped
+searches.
+
+### Found along the way
+
+- **The PNG line was dropped by the conversion.** F5 slide 12 says *"PNG images compressed by a
+  combination of 2) and 3)"* in the PDF text layer; `Forelasning05-Multimedia.md` does not contain it.
+  The post-implementation reviewer therefore reported the note's claim as unsourced. The claim is right;
+  the converted file is incomplete. Read the text layer before calling a lecture fact absent.
+- **`conformance-reviewer` was cancelled by the idle deadline three times out of three** (twice on
+  2026-10-13, once tonight), each after an hour without visible progress. The same brief given to
+  `kiro_default` without shell completed each time. Not diagnosed; until it is, give post-implementation
+  reviews to `kiro_default` and run the gates yourself.
+- **`marker_single.exe` in the pdf2md repo is broken** since the repo moved from `C:\pdf2md` to
+  `C:\dev\pdf2md`: its launcher embeds the old interpreter path and exits silently. The venv's Python
+  works; the conversion agent was given the entry-point workaround.
+- **Not this work, recorded so the next session does not take it for drift:** after 20:48 `nosr` was
+  removed from HI1031's chapter 6 and 9 concept decks, and between 19:36 and 20:50 sixteen more HE1033
+  `Begrepp/` notes joined `listStyleTags` (17 in all) - the signature of tags edited in Obsidian's UI.
+  `nosr` is the author's; neither was touched.
+
+## F98. HI1031: Snabbsvar rewritten as a spoken-answer manuscript for the oral exam
+
+**Date:** 2026-10-17
+**Status:** Closed
+
+**What prompted it.** The author will cram `HI1031 Tentafrågor - Snabbsvar.md` the day before the oral
+exam and asked for it to become "i princip ett manus för hur jag ska svara på varenda tentafråga": as
+short as possible, simple language, every fact correct, splitting a question preferred, and "frågeformuleringen
+ska stanna som den är exakt skriven så att jag känner igen det". The old fronts were paraphrased (ch1 Q3
+had lost "enligt boken", the XML question had become two re-worded cards).
+
+### Decisions, all his
+
+- **Front = the official question verbatim** from `Filer/Canvas/Tentor/Tentafrågor HI1031 ...md`, plus
+  `— Del X av Y: <ämne> (N)` when split. Three mechanical exceptions: sub-numbers (3.1, 5.2) dropped,
+  ch11's heading-only question 5 gets no card, ch6 Q5's bullet list joined on one line.
+- **Only Snabbsvar changes.** This ends the two-copy contract from F88/F92: the ten
+  `Tentafrågor och Svar - Kap NN` notes keep their cards and schedules, and the two are no longer synced.
+  The manuscript must not contradict them.
+- **Chapter 11 first as a sample, approved.** The size of the other nine was left to the agent and its
+  reviewers ("det är okej att de är korta, men tänk på vad jag behöver egentligen veta inför tentan").
+- **Errors found in the answer notes are ignored**, at his instruction (three in ch11: a dropped
+  "generally", "fungerar" for "may be effective", and SHA-1's "predecessors" dropped).
+
+### What was done
+
+- **Snabbsvar: 81 cards / 247 rows -> 91 cards / 273 rows, 520 -> 592 lines**, all `||`, 2-4 rows,
+  bold label per row, first row of Del 1 answers the question. Ch2's two `::` cards became `||`.
+  Per chapter: 1: 7, 2: 5, 4: 9, 5: 8, 6: 11, 9: 9, 10: 8, 11: 18, 16: 9, 17: 7. Intro, `description`
+  and `updated` rewritten; tags and `nosr` untouched.
+- **Size rule** (plan, *Storleksregeln*, premise-reviewed): Muntligt svar is a ceiling; a tradeoff only
+  when the question word asks for one; a single-ask question gets one card of 2-3 rows.
+- Plan: `.kiro/reports/hi1031-snabbsvar-manus-plan-2026-10-17.md`, reviewed by `premise-reviewer` and a
+  `kiro_default` fact reviewer, both GO WITH CHANGES, both applied.
+
+### How it was verified
+
+- **Facts:** each chapter drafted by its own `kiro_default` agent from the answer note's Muntligt svar
+  and re-checked against the book, with a source map per row; then one independent fact reviewer per
+  chapter (read and grep only). Ch11's review found the cipher-suite gap (figure 11.18 is empty in the
+  markdown and was read from the PDF, page index 529). The final round over the other nine found eight
+  hedge or causality errors in chapters 1, 2, 9 and 10 (e.g. "generally consists of" 7603, "largely due
+  to" 8306, "a degree of resistance" 8463, "often bypasses" 684); each quote was confirmed in the book
+  before the fix.
+- **Form:** a one-off `%TEMP%\front-check.ps1` compares every front with the official list character
+  for character, `(N)` with rows, and Del sequences. Negative control: four planted defects, six
+  findings. On the written file: all ten chapters, 0 issues.
+- **Gates:** `Get-SRIntegrity.ps1 -Compare` against own baselines: only Snabbsvar changed, 81 -> 88 ->
+  91 cards, `markers placed on cards` 1838 throughout. `Test-DeckHygiene.ps1 -All`: no Snabbsvar line
+  (`-SelfTest` passes). Lint 545 files, 0 issues. Damage scan: LF, no BOM, no blank-line runs, no
+  orphaned separator, no merged lines.
+
+### Found along the way
+
+- **An agent's premise was wrong twice in one plan.** The plan said the note's "kopierar bitmönstret"
+  was unsourced; it is line 9424. And a review agent's line numbers were off by two in three places of
+  the first source map. Search before cutting, and re-derive every line number handed over.
+- **Eight phone-sync conflict copies** (`* (conflict 2026-10-17-14-04-13).md`) of HI1031 notes removed;
+  only `<!--SR:` lines differed and the base files held the newer reviews. Backup
+  `%TEMP%\conflict-removed-20261017-161141\`.
+- **Contradiction check at his request: none.** Ch11's deck card *Hur ger kryptering sekretess?* says
+  "rätt nyckel" without "mottagarens publika"; he chose to leave it. The manuscript states the pair.
+- **Not this work:** between 18:40 and 20:16 `nosr` was removed in Obsidian's UI from the chapter 4 and
+  5 concept decks and the chapter 4, 5 and 9 answer notes (`cards excluded by nosr` 380 -> 300), which
+  put those five notes in `listStyleTags` (27 in all). Every HI1031 deck and answer note is now active;
+  only Snabbsvar carries `nosr`. Neither was touched.
+
+## F99. HI1032: theory and decks rebuilt from the teacher's lectures, organised by topic with exam likelihood
+
+**Date:** 2026-10-19
+**Status:** Closed
+
+**What prompted it.** The author said the HI1032 material was too focused on the four past exams and on
+point strategy — he called `HI1032 Tentasvar - Del A` "helt kass" for copying by hand. He wanted the
+material rebuilt from the examiner's own lectures, concept-first, organised by topic, with a judged
+likelihood that each topic appears on the exam he will sit. The exam date is unknown; he said to ignore
+it and that there are no Summering slides.
+
+### His instructions, binding
+
+- Concept-first like HI1031's answer notes, **no points, pools or exam strategy** in the text.
+- Everyday Swedish, technical terms kept.
+- Both theory files rebuilt from scratch; existing cards may be reworded or deleted freely, markers or
+  not; Möjlig-level topics get cards but very few.
+- Speed first — use subagents in parallel.
+
+### What was done
+
+- **Sources:** the seven lecture PDFs F1-F7 read both as slide images and as PDF text layers (pypdf to
+  `%TEMP%`), plus the recommended exercise solutions (four `CHAPTER_09..12.docx`). A per-topic exam
+  frequency table was built by script from the sub-question inventory in `HI1032 Tentaanalys - AI-kontext`
+  section 3, so the likelihood input is measured, not guessed.
+- **Drafting:** seven lecture agents in parallel, each with its own fact-reviewer looping on findings;
+  all seven reached GODKÄND. Each wrote concept-first theory sections, cards, and a source map.
+- **Likelihood levels**, one per topic header: **Säker** (tested in >=3 of 4 exams), **Trolig**
+  (1-2 of 4, or untested with >=2 lecture signals), **Möjlig** (untested, <=1 signal), **Osannolik**
+  (course admin, demos, product names, anything the exam hands out — no theory or cards). Frequency
+  beats category, so tested command/product topics (FTP commands, "name a congestion algorithm") stay
+  high.
+- **Assembly:** theory `HI1032 Tentasvar - Del A` (33 topics, 550 lines) from F1-F3 and `Del B`
+  (52 topics, 486 lines) from F4-F7; decks `HI1032 Tentaplugg - Del A` (67 cards) and `Del B`
+  (100 cards), each topic carrying its level. New note
+  `HI1032 Föreläsningskarta - Ämnen och tentasannolikhet` maps every topic to its level with the
+  evidence beside it.
+
+### How it was verified
+
+- **SR:** `Get-SRIntegrity.ps1` against own baseline (`%TEMP%\sr-baseline-hi1032-1019.json`). Only the two
+  decks changed — Del A `cards 49 -> 67, markers 49 -> 0`, Del B `71 -> 100, 71 -> 0`. The 120 removed
+  markers are fully accounted for by the two authorised rewrites, and no other file lost a card or marker.
+  The new cards carry no markers by design; the author rebuilds history as he drills.
+- **Shape:** `Test-DeckHygiene.ps1 -All` found no card-form issue in either deck — the only HI1032 line is
+  a benign `reversedCards` note on the one `;;` card.
+- **Facts:** every lecture drafted and independently reviewed against the slide images and the PDF text
+  layer. F5's dropped PNG line (F97) was restored from the text layer.
+- Lint 546 files, 0 issues. Audit clean of agent-caused findings: the four files first tripped
+  `malformedDescription` (a `[[wikilink]]` in the description) and `staleFRange` (the token `F1-F7` in
+  prose read as a backlog-range claim); both fixed by dropping the wikilink and rewording the lecture
+  ranges. Only the pre-existing `listStyleTags` 27 remains (17 HE1033, 10 HI1031 — none from this work).
+
+### Found along the way
+
+- **The held-out calibration was nearly reported as a fabricated figure.** A first draft of the map note
+  claimed "22 of 22 points in Säker+Trolig" per exam, computed by hand, not by script — the same
+  in-sample trap F97 and `lessons-learned.md` warn about. It was replaced with the checkable claim: every
+  tested sub-question in all four exams belongs to a topic the lectures cover, and all but one fell in
+  Säker or Trolig. No point counts the material's own four exams could inflate.
+- **A `.ps1` with Swedish intro strings failed to parse** (T1) until the strings were moved to a
+  UTF-8 data file read with explicit UTF-8 encoding.
+- The one `;;` card ("Kumulativ ACK") is a deliberate two-way card, not a defect.
+
+## F100. HI1032: the two theory notes shortened
+
+**Date:** 2026-10-19
+**Status:** Closed
+
+**What prompted it.** Right after the F99 rebuild the author said the two theory notes were too long and
+wanted them shorter and more focused. He copies the theory by hand, so density helps. His rules: cut as
+much as possible without losing what matters; Möjlig-level sections to one line each; **do not shorten the
+worked examples** (ACK-rule walk-throughs, RTO steps, cwnd-graph reading, Huffman, JPEG quantisation,
+Quoted-Printable, Base64, HTTP/SMTP/DNS walk-throughs) because those are about understanding and may stay
+long; both files.
+
+**What was done.** Two shortener agents in parallel, one per file, each with its own adversarial reviewer
+that diffed the shortened draft against the original for lost facts, invented content and damaged
+examples. Del A `550 -> 321` lines (words `7097 -> 5837`, -18 %); Del B `486 -> 460` lines (words
+`8700 -> 6353`, -27 %; Del B's lines were already long-wrapped, so the word count is the real cut). Cut:
+opening framing, "Så kan du tänka" analogies, restated points, example lists trimmed to one or two; the
+nine (Del B) and three (Del A) Möjlig sections to one sentence each.
+
+**How it was verified.** Both reviewers GODKÄND — Del B after one loop that restored five facts the first
+pass cut too hard (SNMP's GetBulkRequest header, Paketering's audio-vs-video highlight, isokron ström's
+"undvika trafikstockning", SMI's compound-types rule, and the worked example's "sex datagram" result). The
+write script held tags unchanged, H2 count unchanged (33 and 52), and refused if a card separator appeared
+in the theory. Worked examples confirmed intact by grep: ACK 701-800 → 901; RTO 6 s → 4,5 s → 4,74 s with
+α = 1/8, β = 1/4; Path MTU/MSS steps; Huffman A=0000…E=1; JPEG round(M/Qk); Base64 → z I E 5; the HTTP,
+SMTP-phase and DNS walk-throughs. Lint 546 files, 0 issues; damage scan clean (LF, no BOM, no blank-line
+runs, no duplicate lines); audit clean of agent findings (only the pre-existing `listStyleTags` 27).
+Backups in `%TEMP%\shorten-backup-20261019-182347`.
+
+## F101. Math written as LaTeX across HI1031/HI1032, with an audit check so it cannot drift back
+
+**Date:** 2026-10-20
+**Status:** Closed
+
+**What prompted it.** The author said the recent HI1031/HI1032 math "looked ugly" and asked whether it
+should all be LaTeX. Two plain-text forms were the cause: caret powers (`2^32`) render as a literal
+caret, and underscore identifiers (`RTT_M`, `RTT_S`, `RTT_D`) pair their underscores into Markdown
+*italics*, turning the RTO/EWMA formulas into soup. The vault already uses `$…$`/`$$…$$` in ~80 notes
+(ME1003, HH1802, HI1029, HF1012) published through the same KaTeX-on-by-default Quartz site, so LaTeX
+was both the fix and the established house style; Unicode could not even express a subscript `d`.
+
+**What was done.** Converted the genuine math to LaTeX, matching the vault convention: inline `$…$` for
+symbols and short formulas, a `$$…$$` display block only for `RTO = RTT_S + 4·RTT_D` in theory prose,
+`\text{}` around every multi-letter name (so KaTeX does not render `RTT` as an italic product), and the
+Swedish decimal comma as `{,}`. HI1031: six exponents `2³²`/`2¹²⁸` → `$2^{32}$`/`$2^{128}$` (Kap 10,
+Begrepp Kap 10, Kap 11, Snabbsvar). HI1032: the RTO/RTT block in theory Del A and the copied Svaga-ämnen
+file, cwnd equations, JPEG `round()`, BER, DCT `T⁻¹=Tᵀ`, three deck cards (inline only) and the
+Föreläsningskarta line. Also fixed one pre-existing case the new check surfaced: HI1032 Labb 1's
+window-scale card (`2^16 × 2^14 = 2^30 < 2^32`).
+
+**The guard, so another agent cannot repeat it.** Added `rawMathNotLatex` to `Vault-Audit.ps1`: on the
+code-and-math-blanked prose it flags a caret power (`\d\^\d`) or an underscore identifier
+(`[A-Za-z]{2,}_[A-Z0-9]` word boundary) left outside `$…$`. Patterns are narrow to avoid false
+positives (no snake_case, no URLs — those live in code spans), and the check is scoped to authored study
+material, skipping raw `Föreläsningar/` class notes where the author's in-class shorthand is his own.
+`Test-VaultAudit.ps1` plants one violating note and asserts it fires: **47 assertions, 0 failed**. The
+convention is documented in `Meta/Vault Standard.md` §4 ("Math and formulas").
+
+**How it was verified.** The plan was reviewed by both lenses (premise GO — LaTeX is the right tool for a
+copy-by-hand author and Unicode cannot do subscript `d`; conformance found three must-fixes, all folded
+in: exponents were still Unicode, flashcards must use inline `$` only, `-Save` own baseline before
+`-Compare`). A custom check confirmed 0 bare `RTT_`, 0 odd unescaped `$` (ignoring code spans), 0
+misplaced `$$` blocks, 0 leftover Unicode exponents across the nine files. Lint 547/0, audit clean,
+self-test 47/47, `Test-DeckHygiene -All` only pre-existing legacy notes, and `Get-SRIntegrity -Compare`
+against an own baseline: counts, per-file counts, deck scope and marker placement all match — no card or
+marker was moved or lost by the deck-card edits. Nothing committed. Plan:
+`.kiro/reports/hi103x-latex-math-plan-2026-10-20.md`.
+
+## F102. HI1032: three Extra decks with 147 new cards from the theory notes
+
+**Date:** 2026-10-20
+**Status:** Closed
+
+**What prompted it.** The author said he learns best from flashcards and wants more of them. He asked
+for an audit of the two HI1032 theory notes for material that suits a card but has none. He set the
+"as few cards as possible" rule (`product.md`, write-flashcards rule 15) aside for this task without
+changing it: "glöm reglen för tillfället, men ändra inte på den heller". He then asked for one file per
+likelihood group, with everything double-checked adversarially.
+
+**Audit.** Nine `kiro_default` auditors ran in parallel, one per contiguous theory range (three in
+Del A, six in Del B). Each split every paragraph into atomic facts and checked each fact against both
+Tentaplugg decks. Nine verifiers then tried to prove that each candidate already had a card, and looked
+for facts the auditors had missed. None of the candidates had a card.
+
+That left 146 suitable facts, after removing six duplicates across groups. The duplicates arose because
+the theory covers some topics twice: the TCP flags, TIME-WAIT, TCP's three kinds of control, SACK options
+and MX priority. About a hundred facts were judged unsuitable. These were framing or repetition, worked
+examples (they belong in Räkna själv), example numbers and RFC numbers, and material printed on the
+exam.
+
+**Cards.** Nine drafters wrote the cards from the verified lists. The theory was the source, and the
+proposed question was only a lead. Each drafter was paired with a reviewer that looped on
+`VERDICT: ÄNDRINGAR KRÄVS`. A1 looped twice: once for an own conclusion ("0–65535") that was not marked,
+and once for a term ("black hole") that is not in the theory.
+
+A guarded script routed each level-2 section by the level in its heading into three new decks:
+
+- `HI1032 Tentaplugg - Extra Säker`, 57 cards
+- `HI1032 Tentaplugg - Extra Trolig`, 81 cards
+- `HI1032 Tentaplugg - Extra Möjlig`, 9 cards
+
+Cards built on an own conclusion end with *(egen slutsats)*.
+
+Three final reviewers, one per assembled file, then found two problems, both fixed:
+
+- **A factual error.** An ACK card said a *third* segment forces an immediate ACK. The theory says the
+  second.
+- **A duplicate across groups.** Two groups had each written a "why four segments" termination card.
+
+They also noted one overlap that does not block: ASN.1 has its own card, and is also a row in the
+SNMP four-parts card.
+
+**How it was verified.**
+
+- **Card shape:** `Test-DeckHygiene -All` was run against an isolated root that held only the three
+  files. It reported `decksInScope=3`, `cardsInScope=147`, 0 markers, clean.
+- **Lint:** 550 files, 0 issues. One bare-URL MD034 was fixed by backticking `www.kth.se`.
+- **Audit:** clean.
+- **Review data:** `Get-SRIntegrity -Compare` against an own baseline showed per-file changes only in
+  the three new files (0 → 9, 57 and 81 cards) and `activeCards` +147. No marker was added, lost or
+  moved anywhere, and the `nosr` scope is unchanged.
+
+The new decks are not counted in the Svaga ämnen ranking, because `%TEMP%\hi1032-weak.ps1` reads only
+the two main decks. Nothing has been committed.
+
+## F103. HI1032: a reading file for the topics whose cards are still unlearned
+
+**Date:** 2026-10-20
+**Status:** Closed
+
+**What prompted it.** The author had drilled every new HI1032 card at least once but had not read the
+theory notes. He asked for the topics he does not know, ranked from what the review markers show, and
+for one file collecting those topics' theory sections. His definition, given after a first proposal: a
+card is unlearned only if it has **no** `<!--SR:-->` marker at all, because every card he has passed is
+scheduled for the next day or later. Topics are ranked by the share of unlearned cards, worst first.
+
+**What was done.**
+
+- **Measurement.** A script counted cards per topic (the topic is the deck's level-2 heading) in the two
+  Tentaplugg decks, and how many of them had no marker. The script was
+  `%TEMP%\hi1032-weak.ps1`, which is not durable. Its card model is a `::` or `;;` line, or a line
+  that is exactly `||` or `??`. A card counts as marked if an `<!--SR:` line follows it before the next
+  card or heading.
+- **The file.** `HI1032 Tentasvar - Svaga ämnen.md` (with `nosr`) was built from that ranking. The
+  ranked topics' sections were copied verbatim from the two theory notes by `%TEMP%\svaga-build.ps1`,
+  which is also not durable.
+- **First run, 2026-10-20 00:47.** 49 of 167 cards were unmarked, across 38 weak topics and 45 strong
+  ones.
+- **Rebuild, 2026-10-20 14:03.** The author asked for a rebuild in the same file. After more review only
+  4 cards were unmarked: Paketering, Ljudkompression, µ-law/A-law and MPEG, all in Del B.
+- **Räkna själv.** On his request, a fixed **Räkna själv** section was added. It lists the ten worked
+  examples to practise by hand. Re-running the build script overwrites it, so put it back by hand.
+
+**How it was verified.**
+
+- An adversarial reviewer recounted both runs independently. The first run checked out as markers
+  51 + 67 = 118 and 167 − 118 = 49. The rebuild checked out as 67 + 96 = 163 and 167 − 163 = 4. Each
+  run returned VERDICT OK.
+- Lint was clean, and so was the audit.
+- `Get-SRIntegrity -Compare` against an own baseline showed no marker moved. The only per-file changes
+  were his own phone reviews arriving through Drive.
+
+**The trap it hit.** Joining the copied sections with a blank line gave 38 MD012 double blanks,
+because each section already ended in a newline. The fix was to trim each section's trailing whitespace
+before joining.
+
+## F104. HI1031: a keyword deck for the oral exam
+
+**Date:** 2026-10-22
+**Status:** Closed
+
+**What prompted it.** The author wanted a second oral-exam file alongside Snabbsvar. It is focused on
+the questions and holds only flashcards, but each answer is just the **keywords** that trigger the full
+answer. It has **one card per question**, not per sub-part. He lifted the four-rows-per-card rule for
+this file and allowed list cards.
+
+**What was done.** `HI1031 Tentafrågor - Nyckelord.md` (with `nosr`) has 52 cards in chapter order:
+
+- 51 are `||` cards, with one keyword row per part.
+- Each question line is the exam question verbatim.
+- Snabbsvar's "Del X av Y" cards were merged into one card per question.
+- The keywords were distilled from Snabbsvar, which is already reviewed against the book, and
+  `(egen slutsats)` was kept wherever the source has it.
+
+The parallel distill-and-review pipeline failed three times on `MODEL_TEMPORARILY_UNAVAILABLE`. A failed
+stage aborts the whole batch, and nothing it wrote survives. The agent then did the distillation and
+the review itself.
+
+He then asked that the depth gaps the oral-exam audit had found in Snabbsvar not be carried over (that
+audit is in `.kiro/reports/parked-findings-2026-10-22.md`). The audit had found **no factual errors**,
+only seven medium gaps where a concept was named but not explained. Each of the seven got a trigger
+keyword, grounded in the book passage the audit confirmed:
+
+- Middleware and Virtualisering: the end-to-end argument
+- Mobil agent: the security threat in both directions
+- RMI: the binder and RMIregistry
+- Optimistic: the read set and write set compared at validation
+- Dirty reads: what a cascading abort is
+- Hierarchical vs flat 2PC: what a provisional commit is, and how it differs from prepared
+
+The low gaps were not applied. Snabbsvar itself was left unchanged, because he had declined deepening
+it.
+
+**How it was verified.**
+
+- A question comparison that collapses Snabbsvar's Del cards found 52 base questions in both files:
+  none missing, none extra and no duplicates. The only difference was one trailing full stop.
+- `Test-DeckHygiene -All` was run against an isolated root holding only this file. It reported 52 cards
+  and clean, after two fixes: a `::` card with no highlight became a list card, and a `(3)` cue over two
+  rows became `(2)`.
+- Lint gave 551 files and 0 issues.
+
+**What this exposed.**
+
+- **Trap T21's shape.** A coverage script first reported "39 of 49" questions covered, because a
+  normalisation regex failed to strip an em-dash " — Del" suffix. Each Del part then counted as a
+  separate missing question. A measurement that disagrees with the obvious picture is a broken
+  measurement until proven otherwise.
+- **Frontmatter form.** The file ended up in list form (`form=list` on 2026-10-22), not the inline form
+  the agent wrote, presumably after an edit in Obsidian's UI. This is the problem the in-flight
+  tag-convention task removes.
+
+## F105. Tags in YAML list form: the convention flipped, and a script that converts the vault
+
+**Date:** 2026-10-24
+**Status:** Closed. The convention is flipped and the vault is converted; the author asked the agent to
+run it, and it ran at 13:49 the same day. One cosmetic remainder: CM1000's `_index.md`, deliberately
+excluded, is still inline and invisible to the audit.
+
+### Why
+
+Obsidian's Properties panel rewrites `tags:` into YAML list form whenever a note's tags are edited in the
+app. With an inline standard (`tags: [a, b]`), every such edit became a `listStyleTags` deviation, and
+the pre-push hook refused the push. That happened six times, and each time an agent ran
+`Format-FrontmatterTags.ps1` to force the files back. On 2026-10-22 the author chose alternative 3:
+make the app's form the standard, convert the vault with a new script, and leave the old script
+untouched. He runs `-Apply` against the real vault himself. The agent may only dry-run there, and must
+prove the script on a copy.
+
+### What changed
+
+- **`Meta/Vault Standard.md` §3.** The rule, the example and the `_index` line now use list form. §3
+  also states that the form is checked **by the audit only**. Dataview reads both forms into the same
+  `file.tags`, so `Atlas/Vault Health Report.md` cannot have a query for this rule (add-a-convention
+  step 4).
+- **`Vault-Audit.ps1`.**
+  - `listStyleTags` is replaced by `inlineStyleTags`. Inline tags are still *read*, so a note that has
+    not been converted keeps its vocabulary checks.
+  - The list reader is rewritten. The old `(?ms)^tags:...\S.*` let `.*` run across line ends, so any
+    later list-valued key in the frontmatter had its items read as tags. `aliases`, which Obsidian also
+    writes as a list, is one such key. The new `ListTags` reads line by line, stops at the first line
+    that is not a list item, trims CR and strips quotes.
+- **`Test-VaultAudit.ps1`.**
+  - Every fixture is in list form except the planted `c-inlinetags.md`.
+  - A negative control was added: `Aliasbegrepp.md` has an `aliases:` list after its tags, and must
+    stay clean.
+  - Two assertions were added. `missingKTHtag` must be exactly 3, which proves tags are read in LF
+    list, CRLF list and inline form. `inlineStyleTags` must be exactly 1.
+  - It now has 49 assertions, all passing.
+- **`Get-NoteStructureCensus.ps1`** reads list form, using the same reader.
+- **Templates.**
+  - **The five dynamic templates** now write a bare `tags:` line followed by one list line per tag,
+    indented two spaces. A comma in the subject prompt still yields two tags, as the inline form did.
+  - CM1008 Meeting and Annotator are rewritten as literal lists.
+- **The new script, `Convert-TagsToList.ps1`.**
+  - **Scope.** It runs over the audit's scope plus every `_index.md`. Its scope check is a verbatim copy
+    of the audit's.
+  - **What it changes.** Only the tags line.
+  - **Before each write.** It proves three things:
+    - the slices rebuild the original;
+    - the decoding re-encodes to the same bytes;
+    - an independent list reader returns the same values in the same order, and the frontmatter closes
+      N lines lower.
+  - **After each write.** It reads the file back. On a failure it puts the original bytes back.
+  - **Skips.** It skips and lists, rather than guessing:
+    - values YAML would need quoted
+    - `tags: []`
+    - text after `]`
+    - two tags keys
+    - mixed line endings or a lone CR
+    - a fence that is not exactly `---`
+    - invalid UTF-8
+    - a symbolic link or junction in the path
+  - **`-Apply`.**
+    - It refuses to run while Obsidian is running with this folder registered as a vault.
+    - It backs up every file to `%USERPROFILE%\KTHObsidian-backups\`, outside `%TEMP%` and outside Drive,
+      with a manifest.
+    - It prints a ready `-RestoreFrom` line.
+  - **`-ExcludePath <substrings>`** (added 2026-10-24) drops any path containing one of the substrings,
+    case-insensitive, so a folder another agent is editing is left completely alone. Empty by default.
+    It was added because a second agent was converting the CM1000 PDFs; see *The concurrent agent* below.
+- **`Format-FrontmatterTags.ps1` is untouched**, on his instruction. `scripts.md` now marks it superseded
+  and says not to run it. If it is run, the flipped audit shows the result at once.
+- **Docs updated:**
+  - `scripts.md`: a new table row, the "three writing scripts" count, and the "which one to reach for"
+    entry
+  - `README.md`: the stale figure "33 checks / 46 assertions" is now 34 / 49, and "två som skriver" is
+    now "tre"
+  - `llms.txt`
+  - this file's *Already verified uniform* row
+
+### How it was verified
+
+None of this touched the real vault, apart from the dry run.
+
+- **Plan review, two lenses.**
+  - Premise (`premise-reviewer`): GO WITH CHANGES. Its findings were about concurrent writers (two
+    devices, Drive, FolderSync), a backup that was not durable, and a handover he could not follow alone.
+  - Conformance (`kiro_default`, read and grep only): CHANGES REQUIRED. Its findings were the F-number,
+    the Health Report, the "two writing scripts" count, Standard line ~364, harness fixtures left in the
+    inline form, T1 and T2, and the parser bleed.
+  - All of them were folded into the plan, `.kiro/reports/tags-to-list-plan-2026-10-22.md`, which has a
+    table of findings and actions.
+- **Synthetic fixture.** 33 cases (12 convert, 11 skipped, 2 already list, 2 without tags,
+  1 excalidraw, 5 out of scope), plus a junction pointing out of the vault. 87 of 87 checks pass:
+  - exact expected bytes for LF, CRLF, BOM and Swedish values;
+  - every other file byte-identical;
+  - backup and manifest correct;
+  - a second `-Apply` converts 0;
+  - a read-only file fails safely as "file unchanged";
+  - the guards refuse a used backup folder, a backup inside the vault, and a restore into another root;
+  - a restore is byte-exact.
+
+  `Test-Reparse` was unit-tested: a file reached through a junction gives True, and a plain file gives
+  False. A file symlink could not be created, because that needs admin rights here, so that branch is
+  untested.
+- **Mutation test of the audit and its harness.** Five broken readers were tried: the old bleeding
+  regex, no CR trim, inline values not read, list reported as inline, and inline not flagged. Every
+  one made `Test-VaultAudit.ps1` fail.
+- **Templates.** Each template's expression was evaluated in node exactly as written, and the
+  frontmatter was parsed with js-yaml 5.4.3: 47 of 47 checks pass.
+- **A full copy of the vault in `%TEMP%`.**
+  - **The copy.** `robocopy /CREATE` built the tree with zero-length files, so links and folders
+    resolve. Then 1088 text files were copied with their real bytes. All 731 `.md` files were checked
+    byte-identical to the vault.
+  - **Before.** The flipped audit gave `notesInScope=528` with only `inlineStyleTags 515`, the same as
+    the real vault.
+  - **`-Apply`.** 537 converted (515 notes and 22 `_index.md`), 13 already in list form, 0 skipped,
+    0 failed; 46 of the converted files carry `nosr`.
+  - **After.**
+    - `Get-SRIntegrity -Compare` against its own baseline (T22): `RESULT: clean`, with `nosr` notes
+      59 → 59.
+    - The audit: `RESULT: clean`.
+    - The census: identical, with `notesInScope 528` equal to the audit's.
+    - `Get-TagInventory`: 3225 lines identical.
+    - The SHA-256 of every `.md`: exactly the 537 manifest files changed, and nothing was added.
+    - js-yaml: all 537 have deep-equal frontmatter and a byte-identical body, with the exact
+      two-space list block, and 28 CRLF files kept CRLF.
+    - Lint: 550 files, 0 issues.
+    - A second `-Apply` converted 0.
+    - `-RestoreFrom` restored 537 files, after which every `.md` hash equalled the pre-apply copy.
+- **Dry run against the real vault.** 537 / 13 / 0 skipped, identical to the copy. Afterwards, all 731
+  real `.md` files were byte-identical to the pre-run snapshot.
+- **Script review (`kiro_default`, read only).** VERDICT OK with four LOW findings:
+  - The mutation harness mislabelled one killed mutant. Fixed.
+  - A backup path over 260 characters would fail safely. The longest is 232, measured.
+  - The untouched-proof differed on a file edited by hand. It was re-run, and 0 now differ.
+  - Symbolic links. A guard was added.
+
+**What went wrong on the way.** The first full-copy rebuild silently ran on a half-deleted copy. The
+`%TEMP%` root is 29 characters longer than the vault's, so a Filer PDF passed 260 characters there, and
+PowerShell 5.1's `Remove-Item` failed half-way through. The job's error was discarded. The result file
+from the previous run was still on disk and showed perfect numbers. The next measurement, 83 of 731
+notes, exposed it. See `lessons-learned.md`, 2026-10-24.
+
+**The run against the real vault, 2026-10-24 13:49.** The author asked the agent to run it and commit,
+lifting the earlier "dont run the script yourself". Pre-flight: Obsidian closed (0 processes), nothing
+staged, a SHA-256 snapshot of all 732 `.md` files taken first.
+
+`Convert-TagsToList.ps1 -ExcludePath CM1000,SF1686 -Apply` reported
+`convert=536 alreadyList=13 noTags=0 excalidraw=0 skipped=0 failed=0`, with 46 of the converted files
+carrying `nosr`.
+
+Verified immediately after:
+
+- `Get-SRIntegrity -Compare` against an own baseline: `RESULT: clean`. `nosr` 59, cards excluded by
+  `nosr` 445, `raw_srComments` 1974/2061 — unchanged.
+- `Vault-Audit`: `RESULT: clean`, `notesInScope=528`.
+- Lint 550 / 0. `Test-DeckHygiene`: clean, 256 cards and 256 markers.
+- The hash diff: exactly **536** changed, 0 added, and the changed set equals the backup manifest file
+  for file. **0** changed under CM1000 or SF1686, and CM1000's `_index.md` is still inline, so the other
+  agent's file was not touched.
+
+**The plan's prediction of `inlineStyleTags 1` was wrong, and the audit is fully clean.** The audit's
+`InScope` excludes every `_index.md`, so the one unconverted `_index.md` is invisible to it. Converting
+that file later is cosmetic.
+
+**The incident: 536 backups were written into the author's employer-synced OneDrive.** The invocation
+splatted `-ExcludePath @('CM1000','SF1686')` into two arguments, so `SF1686` bound positionally to
+`-BackupDir` as a relative path, which .NET resolved against the process working directory (T7):
+`C:\Users\ekasalm\OneDrive - Ericsson\Documents\SF1686`. The vault was converted correctly — only the
+backup location was wrong, and the exclusion silently received `CM1000` alone, which was harmless only
+because SF1686 has no `.md` files in scope. The folder was moved to
+`%USERPROFILE%\KTHObsidian-backups\tags-to-list-2026-10-24-135010` with all 537 files intact and its
+manifest root line unchanged, and the script now **refuses a relative `-BackupDir`** (tested both ways).
+Full forensics in `lessons-learned.md`, 2026-10-24.
+
+**What remains.** Once the CM1000 agent's work is committed, a plain `Convert-TagsToList.ps1 -Apply`
+converts CM1000's `_index.md`. Nothing else.
+
+### The concurrent agent (2026-10-24)
+
+A second agent was converting the CM1000 PDFs and moved the course from `2025 Höst` to `2026 Höst`. Its
+work is entirely under `CM1000` and `SF1686` paths: one untracked new `_index.md`, the deleted old
+`_index` files, and ~95 PDFs (PDFs are out of the script's scope anyway). It also added its own plan at
+`.kiro/reports/cm1000-pdf-till-md-plan-2026-10-24.md` and its own section to `current-state.md` while
+this work was in progress. The only file that would otherwise overlap is CM1000's new `_index.md`, which
+the script would rewrite to list form.
+
+`-ExcludePath CM1000,SF1686` removes that overlap, so this run and its commit are independent of the
+other agent's timing. Verified the same day: the fixture test grew an exclusion case and passes;
+`Test-Reparse` was unit-tested (a junction gives True, a plain file False); and the real run converted
+536, touched no CM1000/SF1686 path, and left CM1000's `_index.md` inline and unmodified.

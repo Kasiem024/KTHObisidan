@@ -1,5 +1,7 @@
 ---
-tags: [meta, övrigt]
+tags:
+  - meta
+  - övrigt
 description: "Idéer och utkast för AI-verktyg som NotebookLM och Kiro, med ämnen att täcka."
 ---
 # NotebookLM Ideas

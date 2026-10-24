@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
+tags:
+  - begrepp
+  - HF1012
+  - KTH
+  - labb
+  - matematik
+  - year2026
 created: 2026-05-14
 updated: 2026-05-26
 description: "Grundbegrepp i sannolikhetslära inför laborationen: stokastisk variabel, väntevärde, varians, de vanliga fördelningarna och parametrarna i köteori."

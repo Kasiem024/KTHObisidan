@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-03-22
 updated: 2026-08-17
 description: "Throughput: Mäter hur mycket arbete ett system utför under en viss tid. Antalet processer som slutförs per tidsenhet"

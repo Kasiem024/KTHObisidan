@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS2
+  - year2024
 description: "Efterkalkylering är när ett företag beräknar sina kostnader för en produkt i efter hand, vanligtvis för att se hur det gick med Förkalkylering."
 created: 2024-02-10
 updated: 2026-05-26

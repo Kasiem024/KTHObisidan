@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, HI1031, databaser, programmering, KTH, year2026, nosr]
+tags:
+  - begrepp
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
 created: 2026-08-24
 updated: 2026-09-27
 description: "Flashcards HI1031 kap 9 – web services: vad en webbtjänst är och när den används, låg koppling, REST och hur resurser accessas, jämförelsen mot distribuerade objekt, SOA, samt Ajax."
@@ -10,21 +16,27 @@ description: "Flashcards HI1031 kap 9 – web services: vad en webbtjänst är o
 ## 1. Vad är en webbtjänst, situationer, låg koppling, protokoll
 
 Vad är en webbtjänst?::En tjänst som ett program når ==över internet via en URI==, med ett eget specialiserat gränssnitt. En vanlig webbläsare kan inte använda den direkt.
+<!--SR:!fsrs,2026-10-22T16:41:41.561Z,1,0.20867113,9.92182533,2,8,1,0,2026-10-21T16:41:41.561Z-->
 
 I vilka situationer används webbtjänster?::När ett ==program i en organisation ska prata med en server i en annan== över internet – program-till-program, inte via en webbläsare.
+<!--SR:!fsrs,2026-10-22T19:46:05.927Z,1,0.29367267,9.86572251,2,8,1,0,2026-10-21T19:46:05.927Z-->
 
 Vad betyder låg koppling (loose coupling)?::Att hålla ==beroendena mellan tjänster så små som möjligt==, så att en ändring i en tjänst inte välter de andra.
+<!--SR:!fsrs,2026-10-29T16:53:29.037Z,8,7.98654845,7.82322095,2,5,0,0,2026-10-21T16:53:29.037Z-->
 
 Ge exempel på protokoll eller arkitekturer för webbtjänster. (2)
 ||
 - **SOAP** – XML-meddelanden, oftast skickade över HTTP
 - **REST** – enkla anrop mot resurser med vanliga HTTP-operationer
+<!--SR:!fsrs,2026-11-13T14:23:27.110Z,23,22.91755081,3.56801552,2,4,0,0,2026-10-21T14:23:27.110Z-->
 
 Hur får man låg koppling i praktiken?::Man programmerar mot ==ett enkelt och allmänt gränssnitt== i stället för mot den andra sidans kod.
+<!--SR:!fsrs,2026-11-13T16:17:10.985Z,23,22.91755081,3.56801552,2,4,0,0,2026-10-21T16:17:10.985Z-->
 
 ## 2. REST, principerna, resurser och hypermedia
 
 Vad är REST?::Ett ==mycket begränsat arbetssätt== där klienten använder URL:er och de vanliga HTTP-operationerna GET, PUT, POST och DELETE för att hantera resurser.
+<!--SR:!fsrs,2026-10-24T20:08:18.387Z,3,2.38518524,9.4713619,2,6,0,0,2026-10-21T20:08:18.387Z-->
 
 Vilka principer bygger REST på? (4)
 ||
@@ -32,33 +44,46 @@ Vilka principer bygger REST på? (4)
 - **Varje resurs har en egen URL**
 - **Fokus på data**, inte på gränssnitt
 - **Klienten får hela resursens tillstånd** på en gång
+<!--SR:!fsrs,2026-10-20T14:46:20.493Z,0,0.0054771,9.97350032,1,7,0,0,2026-10-20T14:45:20.493Z-->
 
 Vad skiljer PUT från POST?::==PUT ger samma resultat hur många gånger den körs==; POST gör en ny sak varje gång.
+<!--SR:!fsrs,2026-11-13T17:00:55.586Z,23,22.91755081,3.56801552,2,4,0,0,2026-10-21T17:00:55.586Z-->
 
 Vilken roll har hypermedia (HATEOAS) i REST?::Svaret innehåller ==länkar till vad klienten kan göra härnäst==, så klienten behöver bara start-URL:en och hittar resten genom att följa länkarna.
+<!--SR:!fsrs,2026-10-24T16:42:44.401Z,3,0.25016339,9.90201011,2,8,0,0,2026-10-21T16:42:44.401Z-->
 
 ## 3. Distribuerade objekt mot webbtjänster
 
 Hur liknar RMI och webbtjänster varandra?::Bara ==ytligt==: i båda anropar klienten en operation – i RMI med en fjärrobjektreferens, i en webbtjänst med en URI.
+<!--SR:!fsrs,2026-11-04T19:48:00.038Z,14,13.7630714,5.71430744,2,4,0,0,2026-10-21T19:48:00.038Z-->
 
 Vad är den stora skillnaden i hur RMI och webbtjänster hanterar objekt?::En webbtjänst kan inte skapa nya fjärrobjekt – den är i praktiken ==ett enda fjärrobjekt==. Distribuerade objekt kan skapa och peka ut många objekt.
+<!--SR:!fsrs,2026-10-22T13:41:50.046Z,2,1.86033656,9.41363969,2,6,0,0,2026-10-20T13:41:50.046Z-->
 
 Hur ser webbtjänster på programmeringsspråk, jämfört med distribuerade objekt?::Webbtjänster är medvetet ==oberoende av språk och sätt att programmera==. Distribuerade objekt utgår i stället från ett bestämt, objektorienterat sätt.
+<!--SR:!fsrs,2026-11-13T16:44:36.136Z,23,22.91755081,3.56801552,2,4,0,0,2026-10-21T16:44:36.136Z-->
 
 Vad ger vanliga mellanprogram som webbtjänster inte ger?::==Transparens== – de döljer detaljerna i ett fjärranrop och får det att se ut som ett lokalt anrop. Det gör inte webbtjänster.
+<!--SR:!fsrs,2026-11-05T16:16:50.449Z,15,15.3699845,5.71430744,2,4,0,0,2026-10-21T16:16:50.449Z-->
 
 Varför är webbtjänster långsammare än CORBA?::Webbtjänster skickar ==XML som är text==, medan CORBA använder ett binärt format. Text tar mer plats och är långsammare att tolka.
+<!--SR:!fsrs,2026-11-13T14:19:39.214Z,23,22.91755081,3.56801552,2,4,0,0,2026-10-21T14:19:39.214Z-->
 
 Hur långt når en webbtjänst jämfört med en CORBA-referens?::En webbtjänst nås med en ==URL var som helst på internet== (via DNS), medan en CORBA-referens i praktiken bara fungerar inom en organisation.
+<!--SR:!fsrs,2026-10-24T16:17:01.409Z,3,3.33510051,9.22187804,2,6,0,0,2026-10-21T16:17:01.409Z-->
 
 ## 4. SOA
 
 Vad innebär SOA (Service-Oriented Architecture)?::==Designprinciper== där systemet byggs av löst kopplade tjänster som kan hittas dynamiskt och sedan prata med varandra.
+<!--SR:!fsrs,2026-10-22T19:45:51.408Z,1,0.36664779,9.79661634,2,7,1,0,2026-10-21T19:45:51.408Z-->
 
 Hur byggs SOA oftast, och varför?::Med ==webbtjänster==, mest tack vare deras låga koppling.
+<!--SR:!fsrs,2026-11-13T16:17:19.097Z,23,22.91755081,3.56801552,2,4,0,0,2026-10-21T16:17:19.097Z-->
 
 ## 5. Ajax och webbtjänster
 
 Vad är Ajax?::Ett sätt att låta ett JavaScript-program i webbläsaren ==prata i småbitar med servern==, utan att ladda om sidan.
+<!--SR:!fsrs,2026-10-24T19:47:47.527Z,3,0.74482627,9.90201011,2,8,0,0,2026-10-21T19:47:47.527Z-->
 
 Vad är relationen mellan Ajax och webbtjänster?::Båda ==skickar data som XML över HTTP==, inte bara färdiga webbsidor. Skillnaden: Ajax kopplar webbläsaren till sin egen server, medan webbtjänster kopplar ihop skilda program över internet.
+<!--SR:!fsrs,2026-10-22T16:46:47.743Z,1,0.25329848,9.92182533,2,8,1,0,2026-10-21T16:46:47.743Z-->

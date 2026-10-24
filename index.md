@@ -1,6 +1,8 @@
 ---
 title: "KTH Anteckningar"
-tags: [nograph, meta]
+tags:
+  - nograph
+  - meta
 description: "Studieanteckningar från KTH, Högskoleingenjör – Teknik och Ekonomi."
 ---
 # KTH Anteckningar

@@ -1,5 +1,11 @@
 ---
-tags: [tenta, nograph, ME1003, KTH, year2024, ekonomi]
+tags:
+  - tenta
+  - nograph
+  - ME1003
+  - KTH
+  - year2024
+  - ekonomi
 created: 2024-03-03
 updated: 2026-08-17
 description: "Instuderingsfrågor med svar i kursen ME1003."

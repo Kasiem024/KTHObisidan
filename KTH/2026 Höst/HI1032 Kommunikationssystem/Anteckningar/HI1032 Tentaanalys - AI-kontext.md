@@ -1,5 +1,10 @@
 ---
-tags: [tenta, HI1032, nätverk, KTH, year2026]
+tags:
+  - tenta
+  - HI1032
+  - nätverk
+  - KTH
+  - year2026
 created: 2026-09-23
 updated: 2026-09-23
 description: "Självständig kontextfil om HI1032:s tenta för AI-verktyg: examinationsregler, komplett inventering av alla delfrågor med poäng och ämne från de fyra tentorna 2024 och 2025, aggregerad ranking per del, facit i korthet, poängstrategi för godkänt och vad som är verifierat respektive osäkert."

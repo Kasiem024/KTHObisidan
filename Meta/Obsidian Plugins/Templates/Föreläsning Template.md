@@ -9,7 +9,8 @@ const beskrivning = [k.kurskod, k.kursnamn, "Föreläsning " + n].filter(Boolean
 await tp.file.rename(titel);
 -%>
 ---
-tags: [<% taggar.join(", ") %>]
+tags:
+<% taggar.flatMap((t) => String(t).split(",")).map((t) => t.trim()).filter(Boolean).map((t) => "  - " + t).join("\n") %>
 description: "<% beskrivning %>"
 created: <% datum %>
 updated: <% datum %>

@@ -1,5 +1,10 @@
 ---
-tags: [övrigt, CM1008, KTH, year2025, programmering]
+tags:
+  - övrigt
+  - CM1008
+  - KTH
+  - year2025
+  - programmering
 created: 2025-03-19
 updated: 2026-08-17
 description: "Mötet öppnas och inleds av Van Matti kl 12:13."

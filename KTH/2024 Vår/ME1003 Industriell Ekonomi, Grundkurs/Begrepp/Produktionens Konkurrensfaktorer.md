@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - year2024
 description: "Faktorer som har med produktionen att göra och som gör att företaget kan konkurrera med andra: pris, leveransförmåga, kvalitet och flexibilitet."
 created: 2024-01-27
 updated: 2026-05-26

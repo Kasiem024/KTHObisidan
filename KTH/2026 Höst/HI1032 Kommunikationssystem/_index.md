@@ -1,6 +1,11 @@
 ---
 title: "HI1032 Kommunikationssystem"
-tags: [index, HI1032, KTH, nätverk, year2026]
+tags:
+  - index
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
 description: "Kursindex för HI1032 Kommunikationssystem med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HI1032 Kommunikationssystem

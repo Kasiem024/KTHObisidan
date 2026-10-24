@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS2
+  - year2024
 description: "Inbetalningsöverskott (a) kan användas för att beskriva en Investering."
 created: 2024-02-11
 updated: 2026-05-26

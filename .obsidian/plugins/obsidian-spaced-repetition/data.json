@@ -1,8 +1,7 @@
 {
   "settings": {
     "flashcardTags": [
-      "#HI1031",
-      "#HI1032"
+      "#HI1031"
     ],
     "flashcardTagsToIgnore": [
       "#nosr"
@@ -50,8 +49,8 @@
     "initiallyExpandAllSubdecksInTree": false,
     "showContextInCards": true,
     "showIntervalInReviewButtons": true,
-    "flashcardHeightPercentage": 74.90310077519379,
-    "flashcardWidthPercentage": 85.3125,
+    "flashcardHeightPercentage": 73.15891472868216,
+    "flashcardWidthPercentage": 87.60416666666667,
     "flashcardHeightPercentageMobile": 100,
     "flashcardWidthPercentageMobile": 100,
     "flashcardAgainText": "Again",
@@ -82,7 +81,7 @@
     "preferredDateFormatForNoteReviewQueue": "MMM DD YYYY",
     "preferredLocale": "-"
   },
-  "buryDate": "2026-10-02",
+  "buryDate": "2026-10-21",
   "buryList": [],
   "historyDeck": null,
   "scheduleData": {

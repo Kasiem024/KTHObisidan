@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-05-19
 updated: 2026-08-17
 description: "Condition Variables (Villkorsvariabler): Synkroniseringsprimitiver som tillåter trådar att vänta (blockera) tills ett visst villkor blir uppfyllt."

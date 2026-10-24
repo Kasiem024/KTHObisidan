@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, HF1012, KTH, labb, matematik, year2026]
+tags:
+  - begrepp
+  - HF1012
+  - KTH
+  - labb
+  - matematik
+  - year2026
 created: 2026-05-14
 updated: 2026-05-26
 description: "Matlab-kommandon för sannolikhetsfördelningar inför labprovet: pdf- och cdf-funktioner samt kommandon för att rita diskreta och kontinuerliga fördelningar."

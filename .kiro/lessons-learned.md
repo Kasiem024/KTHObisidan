@@ -778,3 +778,282 @@ calls open*, so the next agent reads why the file must be pruned rather than onl
 **Lesson:** the files that describe the situation are load-bearing for exactly the reviews that are
 hardest to replace. Prune the state file in the same change that closes the item — not because tidiness
 matters, but because an independent reviewer cannot audit its own inputs.
+
+## 2026-10-13 - I declared a source unreadable without trying, and the gate could not see the hole it left
+
+Writing the first section of HI1032's new exam-answer note, I checked the four past papers for how ACK
+rules had been examined. Two of the four questions are **figure** questions, and in the markdown
+conversion of the exams the figures are image links - the question text says nothing about what the
+diagram shows. I wrote in the note's own `## Luckor och källor` that those two "går inte att öva i det
+här materialet", gave the facit without the scenario, and moved on.
+
+**The images were there the whole time.** `Filer/Canvas/AI-optimerad Markdown/assets/` holds every
+extracted figure, including the facit's own answer diagram. Reading three of them took one tool call and
+yielded the entire teaching content of both questions: the ladder-diagram notation, the bidirectional
+case where rule 1 is possible at all, the pending-delayed-ACK state that is the only difference between
+rule 2 and rule 3, and the fact that rule 6 can only be forced by losing the **acknowledgement** rather
+than a data segment.
+
+**What the gates said.** `markdownlint-cli2` reported 0 issues in 544 files and `Vault-Audit.ps1`
+reported the same two pre-existing `listStyleTags` deviations as before. Both were true. Neither can
+see that a note covering a 17-point topic taught only the 7 points that were in text form - the author
+found it by solving the worked example, turning to the real exam questions, and not knowing where to
+start. **A green gate plus a satisfied author is the only test this material has**, and the second half
+is the one that caught it.
+
+**The compounding part.** The false claim was written **into the note's honesty section**, which exists
+precisely so a gap is declared rather than hidden. A wrong entry there is worse than no entry: it tells
+the next reader, and the next agent, that the gap was investigated and found to be unclosable. Same
+shape as the stale-state-file entry above - a document that is trusted *because* of what it is for.
+
+**Rule added:** none; `write-flashcards/SKILL.md` already says a gap is reported and never filled from
+memory, and it also says every card must be traceable to a passage you actually read. What was missing
+is the inverse: **before writing "this cannot be sourced", name the artifact you tried and the result.**
+"The markdown has no table" is not the same finding as "the figure does not exist", and in a vault whose
+PDFs are all pre-extracted to `assets/`, the second claim is almost always false.
+
+**Lesson:** declaring a source unavailable is a factual claim about the vault and needs the same evidence
+as any other. Cheap to verify, expensive to get wrong - because unlike a wrong number, nothing downstream
+contradicts it.
+
+## 2026-10-15 - material built from four exams was graded against the same four exams, and passed
+
+HI1032's flashcard decks were built from the course's four past exams, and both theory notes then told
+the author, in a table cell, that for the 1-point question pools **"Korten räcker"**. The evidence was
+that every pool question in all four exams had a card. A later mapping of every Del B sub-question
+against the deck reported **14, 16, 17 and 21 points** per exam against a pass mark of 9, and the
+course's own analysis note says each fråga 1 and fråga 5 sub-question "låg inom poolen i alla fyra
+tentorna".
+
+**All three are true and none of them measures anything.** The pool *is* the set of questions those
+exams asked, so it cannot miss one of them. The figures said how well the material covered its own
+source, and were read as how it would do on the next exam.
+
+**What caught it was the author, not a check.** While drilling he asked whether practising only old
+questions would hold, since nothing guarantees they recur. The honest measure answers that: treat each
+exam as the unknown one and count what the other three had prepared. Del A loses at most **2 of 22**
+points that way. Del B loses **6 to 12**, which leaves at worst **10** prepared points against the 9
+needed, and only if every answer is right.
+
+**The part worth remembering: that held-out figure had already been computed, two days earlier**, by a
+subagent asked how often exams repeat. It was reported, quoted in a chat reply, and even written into
+the Del B note's addendum. "Korten räcker" stayed in the tables above it. Two measurements of
+different things sat in the same file, and the reader met the confident one first.
+
+**No gate could see it.** Lint, audit and `Test-DeckHygiene.ps1` check form. Nothing checks what a
+coverage claim was measured *against*. The checker that exists for this, the author asking the
+question, worked only because he distrusted the result.
+
+**Rule added:** none in a script. The reasoning goes into how such claims are written: a coverage or
+readiness figure for material derived from a set of exams must be measured **held-out** -
+leave-one-out when there are only four - and a note that quotes an in-sample figure must say so next
+to it. Where the two disagree, the note leads with the held-out one.
+
+**Lesson:** a pool built from past exams is a record of what was asked, not a model of what will be.
+Its in-sample score is 100 % by construction, so quoting it as readiness is a category error, not an
+optimistic estimate. The held-out number is the only one that answers the student's actual question.
+
+
+## 2026-10-17 - a plan called a sentence unsourced, and the book had it
+
+Planning HI1031's Snabbsvar manuscript, the plan listed the answer note's explanation that replay works
+because the attacker "bara kopierar bitmönstret" as an unmarked own conclusion, to be **cut**. It is the
+book's own sentence, chapter 11 line 9424. The same day, the source map handed to the fact reviewer had
+**three line numbers off by two** (9600 for 9602, 9825 for 9823, 10276 for 10278), and figure 11.18 —
+the cipher-suite table a review found missing — turned out to be **empty in the markdown** and readable
+only in the PDF.
+
+**Same shape as 2026-10-13, three times in one plan:** an absence was asserted from a single negative
+look. "I don't recall this in the book", "the markdown shows nothing here", and "the line is about here"
+are three different claims, and all three were written as facts.
+
+**What caught them:** reading the book's section in full before drafting found 9424; a script that
+looked up each cited phrase found the line drift; the fact reviewer found the figure gap. No gate could,
+because all three were in planning documents and source maps, which no gate reads.
+
+**Rule added:** none in a script. Before cutting a sentence as "not in the source", grep the source for
+its distinctive words. Before handing over a line number, re-derive it by script. Before calling a figure
+empty, read the PDF text layer (`pypdf`, as `%TEMP%\fig1118.py` did).
+
+**Lesson:** "absent" is the claim most worth checking, because when it is wrong nothing downstream
+contradicts it — the material simply never contains the fact.
+
+## 2026-10-19 - the in-sample trap came back four days later, and this time I wrote the figure myself
+
+After rebuilding HI1032 from the lectures, the first draft of
+`HI1032 Föreläsningskarta - Ämnen och tentasannolikhet` held a "held-out calibration" table: for each
+past exam, **22 of 22** Del A points and 20-22 Del B points fell in Säker or Trolig. The figures were
+computed **by reasoning in the reply, not by a script**, and the likelihood levels were themselves set
+partly from those same four exams. It is the 2026-10-15 lesson exactly, written by the agent that had
+recorded it, into the one section of the note whose job was to report calibration honestly.
+
+**What caught it:** a reread before delivery, prompted only by the numbers looking too clean. No gate
+reads prose figures; lint and audit both passed with the table in place.
+
+**What replaced it:** the claim that can actually be checked against `HI1032 Tentaanalys - AI-kontext`
+section 3 — every tested sub-question belongs to a topic the lectures cover, all but one in Säker or
+Trolig — with an explicit note that this is coverage, not points, and partly in-sample.
+
+**Rule added:** none in a script. **A number written into a study deliverable must come from a script
+whose output you read**, and a calibration of levels derived from a set of exams must not be scored on
+that set. Where no script exists, write the qualitative claim that can be checked, and say what it does
+not show.
+
+**Lesson:** knowing a trap does not protect you from it once you are the one producing the number. The
+recorded lesson only works if the check it implies is actually run.
+
+## 2026-10-19 - `staleFRange` fired on lecture numbers, because HI1032 names its lectures with an F
+
+The rebuilt HI1032 notes wrote lecture ranges in the same shape as the backlog's F-number ranges ("F one
+to F three", "F one to F seven", with a dash). `Vault-Audit.ps1` reported them as `staleFRange` (a range
+ending at F7 against a backlog holding F98): the check looks for the token F, 1, dash, F, digits anywhere in
+a note, to catch docs quoting a stale backlog range, and HI1032's lecture numbering has the same shape.
+The same run reported `malformedDescription` on all four files because the generated `description`
+contained a `[[wikilink]]`; that check worked as intended.
+
+**This is a rule with a case it did not cover** - a false positive, loud rather than silent, so it cost
+minutes, not a wrong conclusion. It was fixed in the notes, not in the audit: lecture ranges are now
+written "föreläsning 1 till 3" or "F1, F2", and descriptions carry plain prose.
+
+**Rule added:** none yet. If it recurs, scope `staleFRange` to files that discuss the backlog (`Meta/`,
+`.kiro/`, `README.md`) rather than every note; that change needs `Test-VaultAudit.ps1` updated in the
+same edit. Until then: **in HI1032 notes, never write a lecture range as F-one-dash-F-n**, and never put a
+wikilink in a `description`.
+
+**Lesson:** a pattern check written for one kind of file meets the vocabulary of every other kind. The
+backlog's F-numbers and a course's lecture numbers are the same string.
+
+## 2026-10-20 - math written as plain text passed every check and shipped ugly, for weeks
+
+HI1031 and HI1032 study material carried math as plain text: caret powers (`2^32`) and underscore
+identifiers (`RTT_M`, `RTT_S`, `RTT_D`). In Obsidian and on the Quartz site the caret shows literally
+and the underscores pair into *italics*, so the RTO/EWMA formulas rendered as soup. It sat there until
+the author said it "looked ugly".
+
+**No gate could see it.** Lint checks Markdown syntax and `2^32` is valid Markdown; the audit checked
+conventions but had no math rule; `Test-DeckHygiene` checks card shape. All three were green while the
+formulas were unreadable. The only detector was the author's eye, and only because he reads the rendered
+page.
+
+**The deeper miss: the vault's own convention was already LaTeX, and the agent that wrote the ugly form
+did not check.** ~80 notes across five other courses use `$…$`/`$$…$$`, published through the same
+KaTeX-on-by-default Quartz site. Writing math as plain text was not a judgement call against an unclear
+standard — it was inconsistency with an established one that a single grep would have surfaced. The same
+shape as the list-form-tags recurrence: a convention exists, nothing enforced it, so it drifted.
+
+**Rule added:** `rawMathNotLatex` in `Vault-Audit.ps1` (with a `Test-VaultAudit.ps1` assertion), plus
+`Meta/Vault Standard.md` §4 "Math and formulas". The check flags a caret power or an underscore
+identifier left outside `$…$`, scoped to authored study material (raw `Föreläsningar/` class notes are
+the author's shorthand and skipped). Two design notes worth keeping: a bare multi-letter name inside
+math (`RTT`) still renders as an italic *product* unless wrapped in `\text{}`, so the convention
+requires it — fixing the delimiter is not enough; and math in a flashcard must be inline `$…$`, because
+a `$$` block's own-line delimiters split the card and orphan its marker (T20).
+
+**Lesson:** "it renders fine" is not checkable by a syntax linter or a convention audit that has no rule
+for the thing. When a formatting convention exists for one artifact type and is silently not applied to
+another, add the check the first time you notice — a rule without a check drifts, and a rendering rule
+drifts invisibly because the source still parses.
+
+
+## 2026-10-22 - a parallel pipeline lost all its work four times, because one failed stage aborts the batch
+
+The subagent tool runs a pipeline as one unit. When a single stage hit `MODEL_TEMPORARILY_UNAVAILABLE`, the
+whole run returned only that error. **Every other stage's output was lost, including files they had already
+written:** the 20-stage keyword pipeline left nothing but its brief in `%TEMP%`. It happened three times in
+a row on 2026-10-22, and a fourth time on a two-stage review. Re-running the identical batch failed again,
+on a different stage.
+
+**What no check could see:** nothing reports the risk in advance. The error names the service, not the
+batch size, so retrying the same 20-stage pipeline looks like the reasonable next move, and it is the
+worst one. Twenty parallel stages are twenty chances to hit an intermittent outage, and any one of them
+erases the other nineteen.
+
+**What worked:** doing a mechanical transform directly, without subagents, when its source had already been
+reviewed against the book. Snabbsvar's answers were distilled into keywords that way. After that, verify
+with scripts and gates.
+
+**Rule added:** none in a script. When the service is flaky, **run one stage per pipeline**, so that a
+failure costs one unit of work and not the whole batch. Say in the handover which reviews were done by
+subagents and which by the agent itself. After two identical failures, stop retrying and change the
+approach.
+
+**Lesson:** parallel subagents are a throughput tool, not a reliability tool. Their failure mode is total,
+so size a batch by how much you can afford to lose, not by how much you want done at once.
+
+
+## 2026-10-24 - a rebuilt test copy was half a copy, and the previous run's result file said it was whole
+
+The tag conversion was tested on a full copy of the vault in `%TEMP%`. To rerun the test with the final
+script, the copy was deleted and rebuilt. **The delete failed half-way, and nothing reported it.**
+
+- **Why the delete failed.** The copy's root is 29 characters longer than the vault's. That pushed one
+  `Filer/` PDF with a very long name past 260 characters. PowerShell 5.1's `Remove-Item -Recurse` threw
+  `DirectoryNotFoundException` on it and left 83 of 731 notes behind.
+- **Why nothing reported it.** The rebuild script stopped at that line, but it ran inside a job whose
+  output was discarded (`$null = Receive-Job`).
+- **Why it looked fine.** The result file `copy.txt` on disk was **the previous run's**, and it reported
+  `md in source=731 differing or missing in copy=0`. Read together, the job and the file said "a perfect
+  copy".
+
+**What caught it:** the next measurement, a dry run reporting `files in scope: 71` where the real vault
+has 550. A figure that far off could not be missed. A copy missing three notes would have passed.
+
+**What no check could see:** a result file proves only that *some* run produced it. Nothing tied
+`copy.txt` to the run that had just "finished".
+
+**Rule added:** a script whose output is read from a file now deletes that file first and writes a start
+timestamp into it. The caller prints the job's last lines rather than discarding them. The copy is
+deleted with `cmd /c rmdir /s /q`, which handles long paths, and the script throws if the folder still
+exists. Both changes are in `%TEMP%\tagsconv\copy-vault.ps1`.
+
+**Lesson:** a stale result file is the most misleading kind of evidence, because it is real output, just
+not from the run being asked about. Make every result file prove which run wrote it.
+
+
+## 2026-10-24 - a splatted array bound a stray argument to -BackupDir, and 536 backups landed in the employer's OneDrive
+
+The tag conversion was run as
+`powershell -File Convert-TagsToList.ps1 -Root $r -ExcludePath @('CM1000','SF1686') -Apply`, inside a
+`Start-Job`. The vault was converted correctly. **The backups were written to
+`C:\Users\ekasalm\OneDrive - Ericsson\Documents\SF1686`** - the author's employer-synced OneDrive - and
+536 personal study files began syncing to a work account before the `backup:` line was read.
+
+**The mechanism, three things compounding.**
+
+1. `powershell -File` passes arguments as **strings**. The job's PowerShell evaluated
+   `@('CM1000','SF1686')` into an array first, and the array was then **splatted into two separate
+   arguments**: `-ExcludePath CM1000 SF1686`.
+2. `-ExcludePath` therefore took only `CM1000`, and `SF1686` was left over as a **positional**
+   argument. The next free positional slot was `-BackupDir`, so `$BackupDir = 'SF1686'`.
+3. `'SF1686'` is **relative**, and `[System.IO.Path]::GetFullPath` resolves a relative path against the
+   **process** working directory, which `Set-Location` does not change (**T7**). That directory was the
+   OneDrive Documents folder.
+
+**Why no check caught it.** Every guard was about the *vault*: the script refused a `-BackupDir` inside
+the vault, refused to run while Obsidian was open, verified each backup byte for byte, and read every
+file back. None of them asked whether the backup directory was *where the caller meant*. A backup that
+verifies perfectly in the wrong place passes every test. The run reported
+`SUMMARY convert=536 ... skipped=0 failed=0` and `RESULT: converted 536` - a complete success by its own
+measures.
+
+**It also silently weakened the thing it was invoked for.** The exclusion was supposed to protect a
+second agent's CM1000 work *and* SF1686; it only ever received `CM1000`. That was harmless solely
+because SF1686 has no `.md` files in scope - verified, not assumed. The intended and actual results
+coincided by luck.
+
+**Fixed.** `Convert-TagsToList.ps1` now **refuses a relative `-BackupDir`** and says why; tested both
+directions (relative rejected with the file untouched and no folder created, absolute still converts).
+The backup folder was moved out of OneDrive to
+`%USERPROFILE%\KTHObsidian-backups\tags-to-list-2026-10-24-135010`, all 537 files intact, manifest root
+line still naming this vault so `-RestoreFrom` works.
+
+**Lessons.**
+
+- **Never pass an array to `powershell -File`.** It arrives as N arguments, and any surplus binds
+  positionally to whatever parameter is next. Pass one value, repeat the flag, or use `-Command` with a
+  scriptblock. Prefer a comma list the script parses itself.
+- **A writing script must validate *where* it writes, not only what.** Reject a relative path for any
+  output directory; resolve it explicitly or refuse.
+- **`documentation-standard.md` warns that work and personal material must not mix.** That rule was
+  written about *content* carried into this repo. This was the reverse direction - personal content
+  pushed into a work-synced folder by a path bug - and nothing guarded it.

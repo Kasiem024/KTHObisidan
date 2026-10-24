@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-09-09
 updated: 2026-09-15
 description: "Svar på tentafrågorna för kapitel 9 om web services: vad en webbtjänst är och när den används, låg koppling, REST med sina sex principer och hypermedias roll, jämförelsen mot distribuerade objekt, SOA, samt relationen mellan Ajax och webbtjänster."
@@ -80,6 +87,7 @@ Vad är en webbtjänst, när används den, och vilka protokoll finns? (3)
 - **Vad och varför** – en samling operationer som nås över internet via en URI med meddelanden i XML; den kan inte nås direkt av en webbläsare, eftersom webbläsaren är en för allmän klient och poängen är specialiserade gränssnitt
 - **När** – mellan organisationer utan människa i loopen, och för att kombinera flera tjänster till en ny; HTTP och SMTP släpps normalt genom brandväggar medan RMI och CORBA inte gör det
 - **Protokoll** – XML som dataformat, SOAP som packar meddelanden till request-reply, REST som alternativet till SOAP, och WSDL som tjänstebeskrivning vilket gör en separat namntjänst onödig
+<!--SR:!fsrs,2026-10-19T09:17:19.629Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:17:19.629Z-->
 
 Vad innebär låg koppling för en webbtjänst? (4)
 ||
@@ -87,6 +95,7 @@ Vad innebär låg koppling för en webbtjänst? (4)
 - **Programmering mot gränssnitt** – skilja gränssnittet från implementationen, vilket ger låg koppling och hanterar olika språk och plattformar
 - **Enkla, generella gränssnitt** – minimala gränssnitt som webben och REST minskar beroendet av specifika operationsnamn, så data blir viktigare än operation
 - **Valet av paradigm** – i request-reply är parterna kopplade, medan asynkrona meddelanden ger synkroniseringsfrikoppling så avsändaren inte behöver vänta
+<!--SR:!fsrs,2026-10-18T08:31:22.872Z,0,0.212,6.4133,1,1,0,0,2026-10-18T08:30:22.872Z-->
 
 ## 2. Vad är REST och vilka principer ska en RESTful webbtjänst uppfylla? Hur accessas resurser i en REST-arkitektur? Vilken roll har hypermedia
 
@@ -166,12 +175,14 @@ Vad är REST och vilka principer ska en RESTful tjänst uppfylla? (3)
 - **Vad REST är** – en arkitekturstil från Fieldings avhandling, varken ett protokoll eller en standard; boken beskriver den som URL:er plus GET, PUT, DELETE och POST mot resurser, med tyngdpunkt på data i stället för gränssnitt
 - **De sex principerna** – likformigt gränssnitt, klient-server, tillståndslöshet, cachebarhet, skiktat system, och kod på begäran som är valfri
 - **Två källor** – boken beskriver REST som HTTP med fyra metoder, medan restfulapi.net säger att REST inte är bundet till HTTP och att Fielding aldrig band stilen till ett protokoll
+<!--SR:!fsrs,2026-10-18T08:44:39.514Z,0,0.212,6.4133,1,1,0,0,2026-10-18T08:43:39.514Z-->
 
 Hur accessas resurser i REST och vilken roll har hypermedia? (3)
 ||
 - **Hur resurser nås** – via en resursidentifierare, alltså en URI; det man får är en representation av resursens tillstånd, bestående av data, metadata och hypermedialänkar
 - **Resurs mot representation** – resurs och representation är skilda saker, så samma resurs kan levereras i olika format som JSON, XML eller HTML
 - **Hypermedia och HATEOAS** – klienten får bara resursens första URI och driver sedan allt vidare via länkar som servern lämnar i svaren; följer klienten en väg den inte fick i svaren är kravet inte uppfyllt
+<!--SR:!fsrs,2026-10-19T09:08:18.393Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:08:18.393Z-->
 
 ## 3. Jämför distribuerade objekt (t.ex. RMI) med webbtjänster (t.ex. REST) för kommunikation mellan (del-)system
 
@@ -239,6 +250,7 @@ Jämför distribuerade objekt (RMI) med webbtjänster (REST). (4)
 - **Kärnskillnaden** – en webbtjänst är i praktiken ett enda fjärrobjekt: den kan inte skapa nya fjärrobjekt och har inga servanter, så skräpsamling och fjärrreferenser blir irrelevanta
 - **Två principskillnader** – webbtjänster är medvetet paradigmoberoende, och de ger ingen transparens på köpet: marshalling och känslan av ett lokalt anrop får läggas till med proxy eller dynamisk invokering
 - **Avvägningen** – priset är prestanda, för XML är text, och en studie boken refererar mätte SOAP mot CORBA som mycket större och långsammare; vinsten är global räckvidd, bara DNS behövs och HTTP går genom brandväggar
+<!--SR:!fsrs,2026-10-19T09:15:56.006Z,1,0.42437996,5.20002037,2,2,0,0,2026-10-18T09:15:56.006Z-->
 
 ## 4. Vad innebär SOA (Service-Oriented Architecture)
 
@@ -286,6 +298,7 @@ Vad innebär SOA (Service-Oriented Architecture)? (4)
 - **Hur det byggs** – abstrakt, går att bygga med distribuerade objekt eller komponenter, men huvudsakligen med webbtjänster just för deras låga koppling
 - **Var det används** – ger flexibilitet och interoperabilitet internt, men den främsta användningen är på det bredare internet
 - **Resultatet** – B2B-integration, där en organisation kör CORBA internt och en annan .NET men båda exponerar webbtjänster, och en mashup-kultur där en tredje part kombinerar flera tjänster till en ny
+<!--SR:!fsrs,2026-10-18T08:38:03.178Z,0,0.212,6.4133,1,1,0,0,2026-10-18T08:37:03.178Z-->
 
 ## 5. Förklara relationen mellan Ajax och webbtjänster
 
@@ -339,6 +352,7 @@ Förklara relationen mellan Ajax och webbtjänster. (4)
 - **Bryggan** – båda tar sig runt begränsningen i webbläsarens vanliga samspel, och båda gör det över HTTP med XML: Ajax för att webbläsaren är för klumpig, webbtjänster för att den är för allmän
 - **Hur de kompletterar** – Ajax är kommunikation mellan skikt 1, gränssnittet, och skikt 2, logiken, och backend som Ajax-anropet träffar kan i sin tur vara en webbtjänst
 - **Markeringen** – boken kopplar dem aldrig själv; Ajax beskrivs i kapitel 2, inte i kapitel 9
+<!--SR:!fsrs,2026-10-18T08:36:10.454Z,0,0.212,6.4133,1,1,0,0,2026-10-18T08:35:10.454Z-->
 
 ## Luckor och källor
 

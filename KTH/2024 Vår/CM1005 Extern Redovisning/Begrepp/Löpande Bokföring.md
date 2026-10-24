@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, year2024, CM1005, KTH, ekonomi]
+tags:
+  - begrepp
+  - year2024
+  - CM1005
+  - KTH
+  - ekonomi
 description: "Affärshändelser i företaget ska bokföras löpande."
 created: 2024-01-23
 updated: 2026-08-17

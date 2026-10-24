@@ -105,7 +105,10 @@ Two consequences, both of which have already been got wrong:
 
 ## Tag taxonomy (in YAML frontmatter)
 
-Most notes begin with a frontmatter block like `tags: [begrepp, HI1027, programmering, KTH, year2025]`,
+Most notes begin with a frontmatter block whose `tags:` key lists one tag per line in YAML list
+form (`tags:` alone on its line, then `- begrepp`, `- HI1027`, `- programmering`, `- KTH`,
+`- year2025`, each indented two spaces; older copies of the vault used the inline `tags: [a, b]`
+form, which means the same),
 a one-sentence `description:`, plus ISO `created:` / `updated:` dates. The
 `description` is the most reliable one-line summary of a note — prefer it over
 guessing from the body. Tags fall into four groups:
@@ -180,12 +183,12 @@ metadata, not prose:
   `HU1801` Industriell Marknadsföring · `HH1802` Finansiering och Organisationsteori
 - 2025 Vår: `HF1201` Hållbar Utveckling och Ergonomi · `CM1008` Projektkurs i
   Applikationsutveckling · `HI1025` Operativsystem · `HE1028` Mikrodatorteknik
-- 2025 Höst: `SF1686` Flervariabelanalys · `CM1000` Diskret Matematik ·
-  `HI1030` Databasteknik · `HI1027` Objektorienterad Programmering
+- 2025 Höst: `SF1686` Flervariabelanalys · `HI1030` Databasteknik ·
+  `HI1027` Objektorienterad Programmering
 - 2026 Vår: `HF1012` Matematisk Statistik · `HI1039` Projektkurs ·
   `HE1033` Kommunikationsnät · `HI1029` Algoritmer och Datastrukturer
 - 2026 Höst: `HI1031` Distribuerade informationssystem ·
-  `HI1032` Kommunikationssystem · `HT100X` Examensarbete
+  `HI1032` Kommunikationssystem · `HT100X` Examensarbete · `CM1000` Diskret Matematik
 
 ## How concept notes are structured
 

@@ -1,5 +1,11 @@
 ---
-tags: [studieguide, HI1032, nätverk, KTH, year2026, nosr]
+tags:
+  - studieguide
+  - HI1032
+  - nätverk
+  - KTH
+  - year2026
+  - nosr
 description: "Samlade flashcards för HI1032 Labb 1 (TCP och Wireshark) – teori inför redovisningen: skiktning och portar, TCP-headern och flaggorna, handskakning och nedkoppling, sekvens- och ACK-nummer, flödes- och trängselkontroll, ICMP, ARP, HTTP, FTP samt tcpdump, tcptrace och xplot."
 created: 2026-09-01
 updated: 2026-09-01
@@ -228,7 +234,7 @@ Varför är genomströmningen nära noll ibland, och varför uppstår "platåer"
 Hur fungerar Path MTU Discovery?::Sändaren sätter ==Don't Fragment (DF)==; klarar en länk inte storleken kastas paketet och en ==ICMP "Fragmentation Needed" (typ 3, kod 4)== skickas tillbaka med länkens MTU – då sänks MSS.
 <!--SR:!fsrs,2026-09-13T18:21:59.387Z,3,2.20508353,9.6930068,2,8,1,0,2026-09-10T18:21:59.387Z-->
 
-Vad gör window scale-option och varför behövs den?::Headerns fönsterfält är bara 16 bitar (max 65535 byte). Window scale ==skiftar fönstret vänster (upp till 14 steg)== så att större fönster ryms: ==2^16 × 2^14 = 2^30 < 2^32== (håller sig under sekvensrymden).
+Vad gör window scale-option och varför behövs den?::Headerns fönsterfält är bara 16 bitar (max 65535 byte). Window scale ==skiftar fönstret vänster (upp till 14 steg)== så att större fönster ryms: $2^{16} \times 2^{14} = 2^{30} < 2^{32}$ (håller sig under sekvensrymden).
 <!--SR:!fsrs,2026-09-06T18:04:02.493Z,0,0.001,9.9779957,1,19,0,0,2026-09-06T18:03:02.493Z-->
 
 Kan sekvensnumren ta slut, och vad skyddar mot det?::Ja – de är 32 bitar och =="wrappar" runt== vid stora överföringar. **Timestamp**-option (PAWS) skiljer gamla, wrappade sekvensnummer från nya.

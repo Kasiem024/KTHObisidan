@@ -1,5 +1,10 @@
 ---
-tags: [KTH, year2026, HI1029, begrepp, programmering]
+tags:
+  - KTH
+  - year2026
+  - HI1029
+  - begrepp
+  - programmering
 created: 2026-05-28
 updated: 2026-08-17
 description: "Ett teoretiskt mått på hur en algoritms tidsåtgång växer när storleken på indatan (n) ökar."

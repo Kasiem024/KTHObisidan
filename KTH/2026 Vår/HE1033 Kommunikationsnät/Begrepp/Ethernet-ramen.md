@@ -1,6 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
-description: "Den standardiserade PDU (Protocol Data Unit) som används i trådbundna lokalnät."
+tags:
+  - begrepp
+  - HE1033
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
+description: Den standardiserade PDU (Protocol Data Unit) som används i trådbundna lokalnät.
 created: 2026-05-28
 updated: 2026-05-28
 ---

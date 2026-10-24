@@ -1,5 +1,7 @@
 ---
-tags: [MOC, meta]
+tags:
+  - MOC
+  - meta
 description: "Welcome to your structured KTH Vault. This dashboard uses the Dataview plugin to provide live updates of your notes."
 ---
 # 🏛️ Vault Dashboard

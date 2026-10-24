@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 description: "Svar på tentafrågorna för HI1031 kapitel 16: deadlocks, dirty reads, optimistisk samtidighetskontroll, tidsstämpelordning och jämförelsen mellan de tre metoderna."
 created: 2026-09-10
 updated: 2026-09-10
@@ -115,6 +122,7 @@ Vad gör man åt deadlocks? (3)
 - **Vad det är** – en deadlock är när varje transaktion i en grupp väntar på att någon annan i gruppen ska släppa ett lås, och den uppstår bara med låsning; den syns som en cykel i väntegrafen, där noder är transaktioner och bågar betyder väntar på
 - **Tre vägar** – förebygga, upptäcka eller timeout; förebygga är att låsa allt redan vid start eller i bestämd ordning, enkelt men dåligt för det stryper samtidigheten, och upptäcka är att leta cykler i väntegrafen och avbryta en transaktion i cykeln
 - **I praktiken** – timeout är vanligast: varje lås blir sårbart efter en tid och bryts om någon väntar på objektet, och baksidan är att transaktioner då avbryts ibland fast det inte fanns någon deadlock alls
+<!--SR:!fsrs,2026-10-20T22:38:43.106Z,6,6.12466616,8.90072873,2,6,0,0,2026-10-14T22:38:43.106Z-->
 
 ## 2. Är dirty reads ett problem? Hur kommer man åt det?
 
@@ -207,12 +215,14 @@ skjuter upp, desto mer samtidighet betalar man — men desto mindre kan gå fel.
 - **Vad det är** – ja; en dirty read är när en transaktion läser ett värde som en annan har skrivit men inte bekräftat än
 - **Varför allvarligt** – avbryter skrivaren sen har läsaren sett ett värde som aldrig funnits, och har läsaren redan bekräftat går det inte att ångra
 - **Nyckelpoäng** – serialiserbarhet skyddar inte, för en dirty read uppstår även i en serialiserbar körning; problemet är avbrotten, inte flätningen
+<!--SR:!fsrs,2026-10-21T18:43:09.430Z,8,8.38584341,6.7872078,2,4,0,0,2026-10-13T18:43:09.430Z-->
 
 Hur kommer man åt dirty reads? (3)
 ||
 - **Skjut upp commit** – vänta med din egen commit tills varje transaktion vars obekräftade värde du läst själv har bekräftat; avbryter den måste du avbryta med
 - **Läs bara bekräftat** – läs bara objekt som skrivits av redan bekräftade transaktioner, så slipper man kaskadavbrott; det är ett starkare villkor än det förra
 - **Skjut upp allt** – skjut upp både läsning och skrivning på ett objekt tills alla som skrivit det har bekräftat eller avbrutit; det kallas en strikt körning och är det som ger isoleringen
+<!--SR:!fsrs,2026-10-26T08:18:25.421Z,8,8.41175651,7.83534754,2,6,1,0,2026-10-18T08:18:25.421Z-->
 
 ## 3. Vad är optimistisk approach (optimistic concurrency control) och varför kan det vara att föredra? Vad är nackdelen?
 
@@ -320,6 +330,7 @@ Vad är optimistisk samtidighetskontroll, varför kan den föredras, och vad är
 - **Vad det är** – idén är att chansen att två transaktioner rör samma objekt är låg, så låt dem köra fritt utan lås och kontrollera först vid commit; den har tre faser, arbetsfas, valideringsfas och uppdateringsfas
 - **Varför föredra** – låsning kostar även när den inte behövs: lås ger overhead, kan ge deadlock, och hålls kvar tills transaktionen är slut; dessutom slipper man både deadlocks och dirty reads, eftersom all läsning sker på bekräftade versioner
 - **Nackdelen** – går valideringen inte igenom avbryts transaktionen och arbetet måste göras om; den kan också svälta, alltså krocka varje gång och aldrig komma igenom valideringen
+<!--SR:!fsrs,2026-10-18T23:44:19.139Z,4,4.2042843,9.26127648,2,6,0,0,2026-10-14T23:44:19.139Z-->
 
 ## 4. Varför ska man välja tidsstämpelmetoden (time-stamp ordering) snarare än tvåfaslåsning (2PL)?
 
@@ -414,6 +425,7 @@ Varför ska man välja tidsstämpelmetoden snarare än tvåfaslåsning? (3)
 - **Ingen deadlock** – det starkaste skälet: transaktioner väntar bara på tidigare transaktioner, så ingen cykel kan bildas i väntegrafen, och då behövs varken deadlockdetektering, timeout eller förebyggande
 - **Bra för lästunga** – bokens raka svar är att tidsstämpelordning är bättre när transaktionerna mest läser, medan låsning är bättre när de mest uppdaterar
 - **Slipper vänta** – vid konflikt avbryter tidsstämpelordning transaktionen direkt, medan låsning låter den vänta och kan behöva avbryta den senare ändå för att bryta en deadlock
+<!--SR:!fsrs,2026-10-22T10:52:32.209Z,5,5.46860274,8.38116261,2,5,1,0,2026-10-17T10:52:32.209Z-->
 
 ## 5. Strict two-phase locking, Timestamp ordering och optimistisk approach är tre varianter för schemaläggning av transaktioner — beskriv och jämför dem
 
@@ -495,12 +507,14 @@ Beskriv de tre metoderna: strikt 2PL, tidsstämpelordning och optimistisk kontro
 - **Strikt 2PL** – skaffar lås i en växande fas och släpper i en krympande, och håller alla lås till commit eller avbrott; vid konflikt får transaktionen vänta, en begäran avslås aldrig
 - **Tidsstämpelordning** – varje transaktion får en tidsstämpel vid start som bestämmer ordningen i förväg, och varje operation valideras när den utförs; vid konflikt avbryts transaktionen direkt, eller får vänta på en tidigare
 - **Optimistisk** – kör fritt utan lås i en arbetsfas med tentativa versioner, valideras vid commit mot överlappande transaktioner, och uppdaterar om den går igenom; vid konflikt avbryts den och arbetet görs om
+<!--SR:!fsrs,2026-10-22T10:55:24.057Z,9,8.83497632,6.79215857,2,4,0,0,2026-10-13T10:55:24.057Z-->
 
 Jämför strikt 2PL, tidsstämpelordning och optimistisk kontroll. (3)
 ||
 - **När ordningen bestäms** – 2PL bestämmer den dynamiskt av åtkomstordningen, tidsstämpelordning statiskt vid start, och optimistisk vid valideringen
 - **Vid konflikt** – 2PL låter transaktionen vänta, tidsstämpelordning avbryter direkt, och optimistisk avbryter och gör om arbetet
 - **Deadlock och val** – bara låsning kan hamna i deadlock; välj låsning vid mest skrivningar, tidsstämpelordning vid mest läsningar, och optimistisk när konflikter är sällsynta
+<!--SR:!fsrs,2026-10-27T15:51:46.942Z,12,11.66892883,6.79877821,2,3,0,0,2026-10-15T15:51:46.942Z-->
 
 ## Luckor och källor
 

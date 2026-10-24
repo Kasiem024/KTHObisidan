@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-04-13
 updated: 2026-08-17
 description: "Inter Process Communication (IPC): Metoder för hur separata processer kan utbyta data och synkronisera med varandra."

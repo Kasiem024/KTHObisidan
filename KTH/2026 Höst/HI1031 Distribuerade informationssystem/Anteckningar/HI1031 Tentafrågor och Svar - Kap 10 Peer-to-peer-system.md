@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026, nosr]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-09-09
 updated: 2026-09-15
 description: "Svar på tentafrågorna för kapitel 10 om peer-to-peer-system: skillnaden mot klient-server med för- och nackdelar, vilka situationer och datatyper som passar, kopplingen till upphovsrätt via Napster, de sex icke-funktionella kraven, hur en resurs hittas med routing overlay, strukturerat mot ostrukturerat, samt jämförelsen mellan IP och routing på applikationsnivå."
@@ -81,6 +88,7 @@ Vad skiljer P2P från klient-server? (3)
 - **Målet** – dela data och resurser i mycket stor skala utan servrar som måste skötas var för sig
 - **Klient-server** – resurserna ligger på en server eller ett litet kluster; få beslut behövs, men skalan begränsas av serverns kapacitet och nätanslutning
 - **P2P** – resurserna ligger spritt över nätet, alla noder har samma förmåga och ansvar, varje användare bidrar, och driften beror inte på något centralt system
+<!--SR:!fsrs,2026-10-21T13:04:35.029Z,5,5.47587678,8.55184025,2,5,0,0,2026-10-16T13:04:35.029Z-->
 
 Vilka är P2P:s viktigaste fördelar och nackdelar? (4)
 ||
@@ -88,6 +96,7 @@ Vilka är P2P:s viktigaste fördelar och nackdelar? (4)
 - **Nackdel: data** – föränderlig data är dyr att lagra jämfört med en betrodd central tjänst, och anonymiteten har aldrig blivit starka garantier
 - **Nackdel: volatilitet** – ägarna lovar inte att hålla sina datorer påslagna, anslutna och felfria, så tillgängligheten är oförutsägbar
 - **Vändningen** – just den replikering volatiliteten tvingar fram ger också motstånd mot manipulation från illvilliga noder
+<!--SR:!fsrs,2026-10-21T13:05:32.756Z,5,5.47587678,8.55184025,2,5,0,0,2026-10-16T13:05:32.756Z-->
 
 ## 2. I vilka situationer och för vilken typ av data passar P2P-system? Varför har P2P-tekniken kopplats samman med piratkopiering och upphovsrätt?
 
@@ -158,12 +167,14 @@ I vilka situationer och för vilken data passar P2P? (3)
 - **Datatypen** – oföränderliga filer som musik och video; GUID:et är en säker hash av innehållet, så en ändring ger ett annat GUID
 - **Varför det funkar** – hashen gör filen självcertifierande: mottagaren räknar om den och ser att den stämmer, vilket skyddar mot manipulation från obetrodda noder
 - **Situationen** – stor skala där ingen enskild fil är kritisk; musikfiler uppdateras aldrig, och en onåbar fil kan hämtas senare
+<!--SR:!fsrs,2026-10-21T13:07:58.195Z,5,4.85318532,8.36634001,2,5,0,0,2026-10-16T13:07:58.195Z-->
 
 Varför har P2P kopplats samman med piratkopiering och upphovsrätt? (3)
 ||
 - **Napster** – arkitekturen hade centrala index, men användarna tillhandahöll filerna, som låg på deras egna datorer
 - **Argumentet som föll** – utvecklarna hävdade att de inte deltog i kopieringen, men indexservrarna bedömdes vara en väsentlig del av processen
 - **Följden** – indexservrarna låg på välkända adresser, så operatörerna kunde inte vara anonyma och kunde stämmas; en helt distribuerad tjänst hade spritt ansvaret över alla
+<!--SR:!fsrs,2026-10-21T19:06:06.542Z,8,7.67555888,6.37977875,2,4,0,0,2026-10-13T19:06:06.542Z-->
 
 ## 3. Vilka icke-funktionella krav ställs på ett P2P-system?
 
@@ -222,6 +233,7 @@ Vilka icke-funktionella krav ställs på ett P2P-system? (2)
 ||
 - **Tre för att systemet är stort** – global skalbarhet till miljoner objekt, lastbalansering med slumpmässig placering plus repliker av det hårt använda, och optimering för lokala interaktioner så resurser läggs nära dem som använder dem
 - **Tre för att datorerna varken ägs eller litas på** – anpassning till att noder ansluter och lämnar fritt, säkerhet med autentisering och kryptering när värdarna har olika ägare, och anonymitet, förnekbarhet och censurmotstånd
+<!--SR:!fsrs,2026-10-24T08:21:07.924Z,6,6.3396053,8.89577798,2,6,0,0,2026-10-18T08:21:07.924Z-->
 
 ## 4. Hur hittar man en specifik resurs i ett P2P-nätverk? Vad är en "routing overlay"? Vad är skillnaden mellan strukturerade och ostrukturerade P2P-system?
 
@@ -310,6 +322,7 @@ Vad är en routing overlay och hur hittar den en resurs? (3)
 - **Grundproblemet** – ingen kan hålla hela katalogen över var allt finns, så kunskapen partitioneras och sprids över noderna, med hög replikering
 - **Vad den är** – en distribuerad algoritm, ett lager i mellanprogrammet som rutar en förfrågan från klienten till en värd som har objektet; den rutar i applikationslagret, skilt från IP-rutningen
 - **Hur den hittar** – klienten skickar objektets GUID till överlägget, som rutar förfrågan vidare till närmaste levande nod som har en kopia
+<!--SR:!fsrs,2026-10-21T15:47:56.613Z,8,7.67555888,6.37977875,2,4,0,0,2026-10-13T15:47:56.613Z-->
 
 Vad är skillnaden mellan strukturerade och ostrukturerade P2P-system? (4)
 ||
@@ -317,6 +330,7 @@ Vad är skillnaden mellan strukturerade och ostrukturerade P2P-system? (4)
 - **Ostrukturerat** – ingen kontroll över topologi eller placering; nätet byggs ad hoc av lokala regler och man hittar objekt genom att fråga sig fram genom grannarna, sannolikhetsbaserat och utan garantier
 - **Avvägningen** – strukturerat garanterar att objektet hittas och ger tidsgränser men kräver dyrt underhåll av strukturen; ostrukturerat är tåligt mot nodfel men kan flöda nätet med förfrågningar
 - **Det som förvånar** – ostrukturerat dominerar ändå på Internet, till exempel BitTorrent
+<!--SR:!fsrs,2026-10-23T22:34:53.778Z,9,8.66820105,6.77731618,2,4,0,0,2026-10-14T22:34:53.778Z-->
 
 ## 5. Vad är skillnaden mellan IP och P2P på applikationsnivå?
 
@@ -330,7 +344,7 @@ ytterligare mekanism på applikationsnivå behövs. Svaret ligger i skillnaderna
 
 | | IP | Rutningsöverlägg på applikationsnivå |
 |---|---|---|
-| **Skala** | IPv4 är begränsat till 2³² adresserbara noder. IPv6:s namnrymd är mycket generösare (2¹²⁸), men adresserna i båda versionerna är hierarkiskt strukturerade och mycket av rymden är förallokerad enligt administrativa krav | P2P-system kan adressera fler objekt. GUID-namnrymden är mycket stor och platt (>2¹²⁸), vilket gör att den kan fyllas mycket mer fullständigt |
+| **Skala** | IPv4 är begränsat till $2^{32}$ adresserbara noder. IPv6:s namnrymd är mycket generösare ($2^{128}$), men adresserna i båda versionerna är hierarkiskt strukturerade och mycket av rymden är förallokerad enligt administrativa krav | P2P-system kan adressera fler objekt. GUID-namnrymden är mycket stor och platt ($>2^{128}$), vilket gör att den kan fyllas mycket mer fullständigt |
 | **Lastbalansering** | Lasten på routrar bestäms av nätets topologi och de trafikmönster som hör till | Objektens placering kan slumpas, och därmed skiljs trafikmönstren från nätets topologi |
 | **Nätdynamik** (objekt och noder läggs till eller tas bort) | IP:s rutningstabeller uppdateras asynkront på best-effort-basis, med tidskonstanter i storleksordningen en timme | Rutningstabellerna kan uppdateras synkront eller asynkront med fördröjningar på bråkdelar av en sekund |
 | **Feltolerans** | Redundans byggs in i IP-nätet av dess förvaltare, vilket säkrar tolerans mot fel i en router eller en nätkoppling. *n*-faldig replikering är kostsam | Rutter och objektreferenser kan replikeras *n*-faldigt, vilket säkrar tolerans mot *n* fel i noder eller kopplingar |
@@ -357,7 +371,7 @@ varje hopp i överlägget genomförs med ett underliggande transportprotokoll, =
 
 1. Frågan är legitim, och boken säger det själv: överlägget liknar IP-rutning, så varför behövs ett
    lager till? Svaret ligger i sex skillnader.
-2. Skala: IPv4 har 2³² adresser och IPv6 2¹²⁸, men adresserna är hierarkiska och mycket av rymden är
+2. Skala: IPv4 har $2^{32}$ adresser och IPv6 $2^{128}$, men adresserna är hierarkiska och mycket av rymden är
    förallokerad. GUID-rymden är platt och kan fyllas mycket mer.
 3. Lastbalansering och nätdynamik: IP:s last följer topologin och tabellerna uppdateras på
    timskalan. I överlägget kan placeringen slumpas, så trafiken skiljs från topologin, och tabellerna
@@ -378,6 +392,7 @@ Vad är skillnaden mellan IP och P2P-routning på applikationsnivå? (4)
 - **Skarpaste skillnaden** – målidentifiering: en IP-adress pekar på exakt en nod, medan överlägget rutar till närmaste replik av ett objekt
 - **Mest praktiska** – nätdynamik: IP:s tabeller uppdateras på timskala, överläggets på bråkdelar av en sekund, så det klarar ett nät som ändras hela tiden
 - **Övriga axlar** – platt GUID-rymd mot hierarkisk IP, slumpad placering ger lastbalansering, n-faldig replikering av rutter ger feltolerans, och säkerhet och viss anonymitet går även med begränsad tillit
+<!--SR:!fsrs,2026-10-20T14:50:59.977Z,0,0.50029212,9.88220207,3,8,1,0,2026-10-20T14:40:59.977Z-->
 
 ## Luckor och källor
 

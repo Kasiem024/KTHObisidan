@@ -64,7 +64,13 @@ function Write-Utf8($path, $text) {
   [System.IO.File]::WriteAllText($path, $text, $enc)
 }
 
-$goodTags = "tags: [begrepp, HE1033, KTH, $natverk, year2026]"
+# Tags in YAML list form, the vault's convention from F105 on: a bare `tags:` line, then one
+# `  - value` line per tag, exactly as Obsidian's Properties panel writes them. Every fixture uses
+# this form except c-inlinetags.md, which plants the old inline form on purpose.
+function Format-TagList([string[]]$vals, [string]$nl = "`n") {
+  return ('tags:' + (($vals | ForEach-Object { $nl + '  - ' + $_ }) -join ''))
+}
+$goodTags = Format-TagList @('begrepp', 'HE1033', 'KTH', $natverk, 'year2026')
 $goodDesc = 'description: "En kort mening som sammanfattar begreppet."'
 $dates    = "created: 2026-01-01`nupdated: 2026-01-01"
 
@@ -78,8 +84,12 @@ function New-Fixture {
   foreach ($n in @('Anteckningar', 'Begrepp', 'Filer', $forelas)) {
     New-Item -ItemType Directory -Path (Join-Path $courseDir $n) -Force | Out-Null
   }
-  Write-Utf8 (Join-Path $courseDir '_index.md') "---`ntags: [index, HE1033, KTH, $natverk, year2026]`ndescription: `"Kursindex.`"`n$dates`n---`n# $course`n"
+  Write-Utf8 (Join-Path $courseDir '_index.md') ("---`n" + (Format-TagList @('index', 'HE1033', 'KTH', $natverk, 'year2026')) + "`ndescription: `"Kursindex.`"`n$dates`n---`n# $course`n")
   Write-Utf8 (Join-Path $begrepp 'Testbegrepp.md') (Clean-Note 'Testbegrepp')
+  # NEGATIVE CONTROL for the list-form tag reader: a list-valued key directly after the tags. The
+  # reader F105 replaced let .* run across line ends and took every later "- x" line as a tag, so
+  # `hittepa` and `Annat Namn` below became unknown tags and this clean fixture stopped being clean.
+  Write-Utf8 (Join-Path $begrepp 'Aliasbegrepp.md') ((Clean-Note 'Aliasbegrepp').Replace($goodDesc, ("aliases:`n  - hittepa`n  - Annat Namn`n" + $goodDesc)))
   # Standard section 6: a Markdown file under Filer/ is not an authored note, and must also
   # be kept out of Obsidian's tag index. Both halves need a fixture:
   #   - the file itself, so InScope is proven to skip it (it breaks every content rule);
@@ -98,7 +108,7 @@ function New-Fixture {
   # range here on purpose - a real backlog records what earlier docs used to say, and a check that
   # flags its own history is a check that gets switched off. Only its frontmatter is a live claim.
   $backlogText = "---`n" +
-    'tags: [meta]' + "`n" +
+    'tags:' + "`n" + '  - meta' + "`n" +
     'description: "Backlog for the fixture (F1-F7)."' + "`n" +
     $dates + "`n---`n" +
     "# Backlog`n`n" +
@@ -108,7 +118,7 @@ function New-Fixture {
   Write-Utf8 (Join-Path $fx 'Meta\Vault Findings & Backlog.md') $backlogText
   # README agrees with the backlog here, so the CLEAN fixture stays clean. The disagreement is
   # planted later, with the other violations.
-  Write-Utf8 (Join-Path $fx 'README.md') "---`ntags: [meta]`ndescription: `"Fixture readme.`"`n$dates`n---`n# README`n`nSee the backlog (F1-F7).`n"
+  Write-Utf8 (Join-Path $fx 'README.md') "---`ntags:`n  - meta`ndescription: `"Fixture readme.`"`n$dates`n---`n# README`n`nSee the backlog (F1-F7).`n"
 }
 
 function Invoke-Audit([switch]$ContentOnly) {
@@ -161,7 +171,7 @@ function Bad($file, $text) { Write-Utf8 (Join-Path $begrepp $file) $text; }
 # point - a duplicate is invisible to staleFRange. The "-old." stub is planted too and must NOT be
 # counted, because three of those exist in the real backlog on purpose.
 Write-Utf8 (Join-Path $fx 'Meta\Vault Findings & Backlog.md') ("---`n" +
-  'tags: [meta]' + "`n" +
+  'tags:' + "`n" + '  - meta' + "`n" +
   'description: "Backlog for the fixture (F1-F7)."' + "`n" +
   $dates + "`n---`n" +
   "# Backlog`n`n" +
@@ -172,11 +182,13 @@ Write-Utf8 (Join-Path $fx 'Meta\Vault Findings & Backlog.md') ("---`n" +
   "An earlier repair set three docs to F1-F3, which this line records on purpose.`n")
 # staleFRange: rewrite README to claim a range the backlog contradicts. Not under Begrepp/, because
 # the check deliberately reads the whole vault - a stale range in the root README is the real case.
-Write-Utf8 (Join-Path $fx 'README.md') "---`ntags: [meta]`ndescription: `"Fixture readme.`"`n$dates`n---`n# README`n`nSee the backlog (F1-F4).`n"
+Write-Utf8 (Join-Path $fx 'README.md') "---`ntags:`n  - meta`ndescription: `"Fixture readme.`"`n$dates`n---`n# README`n`nSee the backlog (F1-F4).`n"
 
 Bad 'a-nofm.md'        "# Trasig`n`nIngen frontmatter alls.`n"
 Bad 'b-notags.md'      "---`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 'c-listtags.md'    "---`ntags:`n  - begrepp`n  - HE1033`n  - KTH`n  - $natverk`n  - year2026`n$goodDesc`n$dates`n---`n# Trasig`n"
+# inlineStyleTags: the old inline form, with valid tags. Those tags must still be READ, so this note
+# must not also count as missing its KTH tag - the missingKTHtag guard below depends on it.
+Bad 'c-inlinetags.md'  "---`ntags: [begrepp, HE1033, KTH, $natverk, year2026]`n$goodDesc`n$dates`n---`n# Trasig`n"
 Bad 'd-nocreated.md'   "---`n$goodTags`n$goodDesc`nupdated: 2026-01-01`n---`n# Trasig`n"
 Bad 'e-noupdated.md'   "---`n$goodTags`n$goodDesc`ncreated: 2026-01-01`n---`n# Trasig`n"
 Bad 'f-nodesc.md'      "---`n$goodTags`n$dates`n---`n# Trasig`n"
@@ -189,14 +201,14 @@ Bad 'l-desc-card.md'   "---`n$goodTags`ndescription: `"Fraga::Svar`"`n$dates`n--
 Bad 'm-desc-quiz.md'   "---`n$goodTags`ndescription: `"Vad ar en natmask? En 32-bitars siffra.`"`n$dates`n---`n# Trasig`n"
 Bad 'n-desc-link.md'   "---`n$goodTags`ndescription: `"Se [[Testbegrepp]] for mer.`"`n$dates`n---`n# Trasig`n"
 Bad 'o-desc-dv.md'     "---`n$goodTags`ndescription: `"FROM KTH SORT file.name`"`n$dates`n---`n# Trasig`n"
-Bad 'p-duptags.md'     "---`ntags: [begrepp, begrepp, HE1033, KTH, $natverk, year2026]`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 'q-nokth.md'       "---`ntags: [begrepp, HE1033, $natverk, year2026]`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 'r-noyear.md'      "---`ntags: [begrepp, HE1033, KTH, $natverk]`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 's-nocode.md'      "---`ntags: [begrepp, KTH, $natverk, year2026]`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 't-notype.md'      "---`ntags: [HE1033, KTH, $natverk, year2026]`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 'u-nosubject.md'   "---`ntags: [begrepp, HE1033, KTH, year2026]`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 'v-casing.md'      "---`ntags: [Begrepp, HE1033, KTH, $natverk, year2026]`n$goodDesc`n$dates`n---`n# Trasig`n"
-Bad 'w-vocab.md'       "---`ntags: [begrepp, HE1033, KTH, $natverk, year2026, hittepa]`n$goodDesc`n$dates`n---`n# Trasig`n"
+Bad 'p-duptags.md'     ("---`n" + (Format-TagList @('begrepp', 'begrepp', 'HE1033', 'KTH', $natverk, 'year2026')) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
+Bad 'q-nokth.md'       ("---`n" + (Format-TagList @('begrepp', 'HE1033', $natverk, 'year2026')) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
+Bad 'r-noyear.md'      ("---`n" + (Format-TagList @('begrepp', 'HE1033', 'KTH', $natverk)) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
+Bad 's-nocode.md'      ("---`n" + (Format-TagList @('begrepp', 'KTH', $natverk, 'year2026')) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
+Bad 't-notype.md'      ("---`n" + (Format-TagList @('HE1033', 'KTH', $natverk, 'year2026')) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
+Bad 'u-nosubject.md'   ("---`n" + (Format-TagList @('begrepp', 'HE1033', 'KTH', 'year2026')) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
+Bad 'v-casing.md'      ("---`n" + (Format-TagList @('Begrepp', 'HE1033', 'KTH', $natverk, 'year2026')) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
+Bad 'w-vocab.md'       ("---`n" + (Format-TagList @('begrepp', 'HE1033', 'KTH', $natverk, 'year2026', 'hittepa')) + "`n$goodDesc`n$dates`n---`n# Trasig`n")
 Bad 'x-noh1.md'        "---`n$goodTags`n$goodDesc`n$dates`n---`n## Definition`n`nIngen H1.`n"
 Bad 'y-twoh1.md'       "---`n$goodTags`n$goodDesc`n$dates`n---`n# Ett`n`n# Tva`n"
 Bad 'z-fcnotlast.md'   "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`n## Flashcards`n`nFraga::Svar`n`n## Efterat`n`nText.`n"
@@ -205,19 +217,24 @@ Bad 'ab-widthonly.md'  "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`n![[b
 Bad 'ac-inlinedv.md'   "---`n$goodTags`n$goodDesc`n$dates`n---`n# ``= this.file.name```n"
 Bad 'ad-olddates.md'   "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`nSkapad: ``= dateformat(this.file.ctime, 'yyyy-MM-dd')```n"
 Bad 'ae-brokenlink.md' "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`nSe [[Finns Inte Alls]].`n"
+# rawMathNotLatex: math written as plain text instead of LaTeX. Two signatures on one line - a caret
+# power (2^32) and a subscript identifier (RTT_M) - both outside any $...$ and outside code. A clean
+# note writes these as $2^{32}$ and $\text{RTT}_\text{M}$, which this file deliberately does not.
+Bad 'ah-rawmath.md'    "---`n$goodTags`n$goodDesc`n$dates`n---`n# Trasig`n`nMed 64 bitar racker 2^32 varianter, och RTT_M ar den matta tiden.`n"
 # A note that only MENTIONS excalidraw in its prose, and has a --- rule later on. It is a
 # normal note and every content check must still see it. The excalidraw test used to be
 # '(?s)\A---\n.*?excalidraw.*?\n---', which with (?s) matched from the frontmatter's opening
 # --- to that later rule, so the whole note was skipped. Two Meta docs were silently exempt
 # from every check for as long as that regex existed. This file has no description, so if it
 # is being skipped, missingDescription simply will not count it.
-Bad 'af-mentions-excalidraw.md' "---`ntags: [begrepp, HE1033, KTH, $natverk, year2026]`n$dates`n---`n# Trasig`n`nVi anvander excalidraw for ritningar.`n`n---`n`n## Definition`n`nText.`n"
+Bad 'af-mentions-excalidraw.md' "---`n$goodTags`n$dates`n---`n# Trasig`n`nVi anvander excalidraw for ritningar.`n`n---`n`n## Definition`n`nText.`n"
 # A CRLF file whose fenced code block contains an H1. The code-stripper must blank it, so this
 # note has exactly ONE H1 and must NOT be reported. In .NET multiline mode $ matches before the
 # \n without absorbing a preceding \r, so a closing-fence pattern of '[ \t]*$' silently matches
 # nothing in a CRLF file - it found 0 of Vault Findings & Backlog.md's 6 blocks. This vault
-# genuinely mixes the two conventions, so the LF fixtures above cannot catch it.
-$crlf = "---`r`ntags: [begrepp, HE1033, KTH, $natverk, year2026]`r`n$goodDesc`r`ncreated: 2026-01-01`r`nupdated: 2026-01-01`r`n---`r`n# Ett CRLF-dokument`r`n`r`n## Definition`r`n`r`n" + '```text' + "`r`n# Inte en riktig rubrik`r`n" + '```' + "`r`n"
+# genuinely mixes the two conventions, so the LF fixtures above cannot catch it. Its tags are in list
+# form with CRLF line ends, so the list reader is exercised on CRLF too (the missingKTHtag guard).
+$crlf = "---`r`n" + (Format-TagList @('begrepp', 'HE1033', 'KTH', $natverk, 'year2026') "`r`n") + "`r`n$goodDesc`r`ncreated: 2026-01-01`r`nupdated: 2026-01-01`r`n---`r`n# Ett CRLF-dokument`r`n`r`n## Definition`r`n`r`n" + '```text' + "`r`n# Inte en riktig rubrik`r`n" + '```' + "`r`n"
 Write-Utf8 (Join-Path $begrepp 'ag-crlf-fence.md') $crlf
 
 # literature filenames
@@ -240,7 +257,7 @@ Write-Utf8 (Join-Path $fx '.obsidian\app.json') ('{' + "`n" + '  "userIgnoreFilt
 # a second course missing a required folder (no Filer)
 $c2 = Join-Path $termDir 'CM1005 Testkurs'
 foreach ($n in @('Anteckningar', 'Begrepp', $forelas)) { New-Item -ItemType Directory -Path (Join-Path $c2 $n) -Force | Out-Null }
-Write-Utf8 (Join-Path $c2 '_index.md') "---`ntags: [index, CM1005, KTH, ekonomi, year2026]`ndescription: `"Kursindex.`"`n$dates`n---`n# CM1005 Testkurs`n"
+Write-Utf8 (Join-Path $c2 '_index.md') ("---`n" + (Format-TagList @('index', 'CM1005', 'KTH', 'ekonomi', 'year2026')) + "`ndescription: `"Kursindex.`"`n$dates`n---`n# CM1005 Testkurs`n")
 
 # a third course with all four folders but no _index.md
 $c3 = Join-Path $termDir 'ME1003 Testkurs'
@@ -252,7 +269,7 @@ foreach ($n in @('Anteckningar', 'Begrepp', 'Filer', $forelas)) { New-Item -Item
 # This one is deliberately missing its _index.md too, so courseMissingIndex must catch it.
 $c4 = Join-Path $termDir 'HT100X Testexamensarbete'
 foreach ($n in @('Anteckningar', 'Begrepp', 'Filer', $forelas)) { New-Item -ItemType Directory -Path (Join-Path $c4 $n) -Force | Out-Null }
-Write-Utf8 (Join-Path $c4 'Begrepp\Trasig X-kod.md') "---`ntags: [begrepp, HT100X, KTH, $natverk, year2026, hittepa]`n$goodDesc`n$dates`n---`n# Trasig X-kod`n"
+Write-Utf8 (Join-Path $c4 'Begrepp\Trasig X-kod.md') ("---`n" + (Format-TagList @('begrepp', 'HT100X', 'KTH', $natverk, 'year2026', 'hittepa')) + "`n$goodDesc`n$dates`n---`n# Trasig X-kod`n")
 
 $full = Invoke-Audit
 Add-Result 'violations produce exit 1' 'exit 1' ($full.Code -eq 1) ("exit " + $full.Code)
@@ -260,12 +277,12 @@ Add-Result 'violations produce exit 1' 'exit 1' ($full.Code -eq 1) ("exit " + $f
 # Every bucket the audit is supposed to have. If a name here never appears, that check
 # has stopped working - or was renamed, in which case fix this list in the same commit.
 $expect = @(
-  'noFrontmatter', 'frontmatterWithoutTags', 'listStyleTags',
+  'noFrontmatter', 'frontmatterWithoutTags', 'inlineStyleTags',
   'missingCreated', 'missingUpdated',
   'missingDescription', 'emptyDescription', 'malformedDescription',
   'duplicateTags', 'missingKTHtag', 'missingYearTag', 'missingCourseCode',
   'missingTypeTag', 'missingSubjectTag', 'tagCasingViolations', 'tagsOutsideVocabulary',
-  'noH1', 'multipleH1', 'flashcardsNotLastSection',
+  'noH1', 'multipleH1', 'flashcardsNotLastSection', 'rawMathNotLatex',
   'imageEmbedWithoutAlt', 'inlineDataviewExpression', 'oldDataviewDates',
   'brokenWikilinks', 'courseMissingFolder', 'courseMissingIndex', 'nonConformingFolder',
   'litWrongEditionFormat', 'litBadSpacing', 'litHasCourseCode',
@@ -304,6 +321,21 @@ $m3 = [regex]::Match($full.Text, '(?m)^multipleH1\s+(\d+)\s*$')
 $h1Count = 0
 if ($m3.Success) { $h1Count = [int]$m3.Groups[1].Value }
 Add-Result 'a heading inside a CRLF code fence is not an H1' '1 file' ($h1Count -eq 1) "multipleH1 reported $h1Count"
+
+# REGRESSION GUARD: tags are READ in both forms. Only a-nofm.md, b-notags.md and q-nokth.md lack
+# the KTH tag. If the list reader broke, every planted note would join them; if it broke only on
+# CRLF, ag-crlf-fence.md would; and if inline values stopped being read, c-inlinetags.md would.
+$m4 = [regex]::Match($full.Text, '(?m)^missingKTHtag\s+(\d+)\s*$')
+$kthCount = 0
+if ($m4.Success) { $kthCount = [int]$m4.Groups[1].Value }
+Add-Result 'tags read in list (LF and CRLF) and inline form' '3 files' ($kthCount -eq 3) "missingKTHtag reported $kthCount"
+
+# Only c-inlinetags.md is in the old form. A second one means a fixture was written inline by
+# mistake, or that the audit has started reporting list form as inline.
+$m5 = [regex]::Match($full.Text, '(?m)^inlineStyleTags\s+(\d+)\s*$')
+$inlCount = 0
+if ($m5.Success) { $inlCount = [int]$m5.Groups[1].Value }
+Add-Result 'inlineStyleTags flags only the inline note' '1 file' ($inlCount -eq 1) "inlineStyleTags reported $inlCount"
 
 # A degree-project code (HT100X) must be accepted as a course code, and its folder must be
 # checked like any other course. Two assertions: the code itself is NOT reported as an

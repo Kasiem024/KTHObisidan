@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, CM1005, ekonomi, KTH, ME1003, year2024]
+tags:
+  - begrepp
+  - CM1005
+  - ekonomi
+  - KTH
+  - ME1003
+  - year2024
 description: "Varje affärshändelse bokförs alltid på två konton: debet på det ena och kredit på det andra."
 created: 2024-01-23
 updated: 2026-08-17

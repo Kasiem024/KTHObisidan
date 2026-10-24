@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - year2024
 description: "AIDA är en modell som beskriver stegen en konsument tar innan den köper en produkt."
 created: 2024-01-30
 updated: 2026-05-26

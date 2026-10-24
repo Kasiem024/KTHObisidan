@@ -1,6 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
-description: "Används av routingprotokoll (som OSPF) för att räkna ut den billigaste vägen från en router till alla andra punkter i nätverket."
+tags:
+  - begrepp
+  - HE1033
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
+description: Används av routingprotokoll (som OSPF) för att räkna ut den billigaste vägen från en router till alla andra punkter i nätverket.
 created: 2026-05-28
 updated: 2026-05-28
 ---

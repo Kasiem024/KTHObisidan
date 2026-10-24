@@ -7,7 +7,8 @@ const taggar = ["index", k.kurskod, "KTH", ...amnen, "year" + k.year].filter(Boo
 -%>
 ---
 title: "<% k.courseSegment %>"
-tags: [<% taggar.join(", ") %>]
+tags:
+<% taggar.flatMap((t) => String(t).split(",")).map((t) => t.trim()).filter(Boolean).map((t) => "  - " + t).join("\n") %>
 description: "Kursindex för <% k.courseSegment %> med föreläsningar, begrepp, anteckningar och kursmaterial."
 created: <% datum %>
 updated: <% datum %>

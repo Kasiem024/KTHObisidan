@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - HH1802
+  - HH1802/HH1802KS1
+  - KTH
+  - year2024
 description: "Tillväxttakt (g) är takten som ett företag använder sin avkastning för nyinvesteringar."
 created: 2024-03-27
 updated: 2026-05-26

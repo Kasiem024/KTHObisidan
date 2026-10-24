@@ -1,5 +1,10 @@
 ---
-tags: [CM1005, ekonomi, KTH, övrigt, year2024]
+tags:
+  - CM1005
+  - ekonomi
+  - KTH
+  - övrigt
+  - year2024
 created: 2024-02-19
 updated: 2026-08-17
 description: "Instuderingsfrågor med svar inför KS3 i kursen CM1005."

@@ -1,5 +1,10 @@
 ---
-tags: [KTH, year2026, HE1033, begrepp, nätverk]
+tags:
+  - KTH
+  - year2026
+  - HE1033
+  - begrepp
+  - nätverk
 created: 2026-05-28
 updated: 2026-08-17
 description: "Flashcards om subnätning: nätmask, antal adresser i ett nät och default gateway."

@@ -1,5 +1,10 @@
 ---
-tags: [övrigt, CM1005, year2024, KTH, ekonomi]
+tags:
+  - övrigt
+  - CM1005
+  - year2024
+  - KTH
+  - ekonomi
 created: 2024-01-20
 updated: 2026-08-17
 description: "02-21 Civilrättsliga värderingar av omsättningstillgångar Kap 6-7"

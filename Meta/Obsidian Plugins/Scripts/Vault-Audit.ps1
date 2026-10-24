@@ -49,6 +49,30 @@ function RT($p){
   if($b.Length -ge 3 -and $b[0] -eq 0xEF -and $b[1] -eq 0xBB -and $b[2] -eq 0xBF){ return $enc.GetString($b,3,$b.Length-3) }
   return $enc.GetString($b)
 }
+# List-form tags (Standard section 3, F105): the bare `tags:` line and the `- value` lines directly
+# below it, read line by line and stopping at the first line that is not a list item. The pattern
+# this replaced, '(?ms)^tags:...\S.*', let .* run across line ends, so any LATER list-valued key in
+# the frontmatter - `aliases:`, which Obsidian's Properties panel also writes as a list - had its
+# items read as tags. Quotes are stripped as for inline values. CRLF is handled by trimming the \r
+# that splitting on \n leaves behind (T12). Returns $null when there is no bare `tags:` line with
+# at least one item.
+function ListTags([string]$blk){
+  $ls=$blk -split "`n"
+  for($i=0;$i -lt $ls.Count;$i++){
+    if($ls[$i].TrimEnd("`r") -cmatch '^tags:[ \t]*$'){
+      $out=@()
+      for($j=$i+1;$j -lt $ls.Count;$j++){
+        $im=[regex]::Match($ls[$j].TrimEnd("`r"),'^[ \t]*-[ \t]+(.*?)[ \t]*$')
+        if(-not $im.Success){ break }
+        $v=$im.Groups[1].Value.Trim('"').Trim("'")
+        if($v){ $out+=$v }
+      }
+      if($out.Count -gt 0){ return ,$out }
+      return $null
+    }
+  }
+  return $null
+}
 # ---------------- vocabulary (Swedish matched by pattern to stay ASCII) ----------------
 $typePat  = '^(begrepp|f.rel.sning|lektion|.vning|labb|seminarium|studieguide|tenta|.vrigt|index)$'
 $subjPat  = '^(programmering|n.tverk|matematik|ekonomi|h.rdvara|databaser|samh.lle|s.kerhet)$'
@@ -119,9 +143,13 @@ foreach($f in $md){
   else{
     $blk=$fm.Groups[1].Value; $body=$t.Substring($fm.Length)
     $am=[regex]::Match($blk,'(?m)^tags:[ \t]*\[(.*?)\]')
-    $lm=[regex]::Match($blk,'(?ms)^tags:[ \t]*\r?\n((?:[ \t]*-[ \t]*\S.*\r?\n?)+)')
-    if($am.Success){ foreach($x in ($am.Groups[1].Value -split ',')){ $v=$x.Trim().Trim('"').Trim("'"); if($v){$tags+=$v} } }
-    elseif($lm.Success){ (Bucket 'listStyleTags').Add($rel); foreach($l in ($lm.Groups[1].Value -split '\r?\n')){ $im=[regex]::Match($l,'^\s*-\s*(.+?)\s*$'); if($im.Success){ $v=$im.Groups[1].Value.Trim(); if($v){$tags+=$v} } } }
+    $lt=ListTags $blk
+    # Standard section 3: tags are written in YAML list form, which is what Obsidian's Properties
+    # panel writes whenever a tag is edited in the app (F105). The old inline form is still READ, so
+    # a note not yet converted keeps its vocabulary checks, but it is reported as inlineStyleTags.
+    # Convert-TagsToList.ps1 is the repair.
+    if($am.Success){ (Bucket 'inlineStyleTags').Add($rel); foreach($x in ($am.Groups[1].Value -split ',')){ $v=$x.Trim().Trim('"').Trim("'"); if($v){$tags+=$v} } }
+    elseif($null -ne $lt){ $tags+=$lt }
     else{ (Bucket 'frontmatterWithoutTags').Add($rel) }
     if(-not (IsNav $f.FullName $f.Name)){
       if($blk -notmatch '(?m)^created:'){ (Bucket 'missingCreated').Add($rel) }
@@ -177,6 +205,30 @@ foreach($f in $md){
   # CRLF (6 blocks), and without the \r? the pattern matched 0 of the latter's.
   $prose=[regex]::Replace($body,'(?ms)^[ \t]*(```|~~~).*?^[ \t]*\1[ \t]*\r?$',{ param($m) ($m.Value -replace '[^\r\n]','') })
   $prose=[regex]::Replace($prose,'`[^`\r\n]*`',{ param($m) ' ' * $m.Value.Length })
+  # ---------------- rawMathNotLatex ----------------
+  # Standard section 4: genuine math is written as LaTeX ($...$ or $$...$$), which Quartz
+  # typesets with KaTeX and Obsidian renders natively. The two forms the author called "ugly"
+  # both come from writing math as PLAIN text instead:
+  #   - a caret power like 2^32 renders as a literal "2^32";
+  #   - a subscript identifier like RTT_M pairs its underscore with the next one on the line
+  #     and renders the span between them as *italics*, so a formula line becomes a mess.
+  # Both were written into HI1031/HI1032 by an earlier agent (F101); this check keeps the next
+  # one from repeating it. It fires only on math OUTSIDE $...$ math and outside code (both are
+  # already blanked in $prose above, then $$...$$ and $...$ are blanked here too). The patterns
+  # are deliberately narrow to avoid false positives: a caret is only flagged between two digits
+  # (2^32, 10^9), and an underscore only between a letter and a single capital/digit that is a
+  # word boundary (RTT_M, X_0) - not snake_case words, which have lowercase after the underscore
+  # or more letters. Prose that never meant to be math (a URL, a path) lives in code spans.
+  #
+  # SCOPE: authored study material only. Forelasningar/ (raw lecture and exercise notes) is skipped -
+  # those are hand-typed-in-class shorthand ("2^20 * 4 bytes", informal), not the published-quality
+  # theory and decks this convention governs, and rewriting the author's own class notes is not this
+  # check's job. The real HI1031/HI1032 cases that prompted F101 were all in Anteckningar/ and Begrepp/.
+  $noMath=[regex]::Replace($prose,'\$\$[\s\S]*?\$\$',{ param($m) ' ' * $m.Value.Length })
+  $noMath=[regex]::Replace($noMath,'\$[^\$\r\n]+\$',{ param($m) ' ' * $m.Value.Length })
+  if(($rel -notmatch '\\F.rel.sningar\\') -and ($noMath -match '\d\^\{?\d' -or $noMath -cmatch '\b[A-Za-z]{2,}_[A-Z0-9]\b')){
+    (Bucket 'rawMathNotLatex').Add($rel)
+  }
   $h1=[regex]::Matches($prose,'(?m)^#[ \t]+\S').Count
   if($h1 -eq 0){ (Bucket 'noH1').Add($rel) } elseif($h1 -gt 1){ (Bucket 'multipleH1').Add("$rel ($h1)") }
   # Standard section 4: "## Flashcards" is always the last section. This is a hard

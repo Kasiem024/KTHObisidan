@@ -1,6 +1,11 @@
 ---
 title: "HT100X Examensarbete"
-tags: [index, HT100X, programmering, KTH, year2026]
+tags:
+  - index
+  - HT100X
+  - programmering
+  - KTH
+  - year2026
 description: "Kursindex för HT100X Examensarbete med tidsplan, obligatoriska moment, seminarier och kursmaterial."
 ---
 # 📚 HT100X Examensarbete

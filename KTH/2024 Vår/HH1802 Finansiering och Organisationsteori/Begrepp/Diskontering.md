@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS1, KTH, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - HH1802
+  - HH1802/HH1802KS1
+  - KTH
+  - year2024
 description: "Diskontering är när värdet av exempelvis en aktie bedöms utifrån en förväntad utveckling i framtiden."
 created: 2024-03-20
 updated: 2026-05-26

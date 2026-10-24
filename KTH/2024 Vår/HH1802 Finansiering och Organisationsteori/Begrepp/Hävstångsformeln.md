@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, HH1802, HH1802/HH1802KS2, KTH, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - HH1802
+  - HH1802/HH1802KS2
+  - KTH
+  - year2024
 description: "Hävstångsformeln används för att räkna ut Räntabilitet på eget kapital."
 created: 2024-03-30
 updated: 2026-05-26

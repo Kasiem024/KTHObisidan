@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-09-09
 updated: 2026-09-09
 description: "Svar på tentafrågorna för HI1031 kapitel 11 – säkerhet: hot och attacker, kryptografins roller, symmetrisk, asymmetrisk och hybridkryptering, samt hur nyckelpar ger autenticitet."
@@ -78,6 +85,7 @@ Vilka är de viktigaste hoten och attackerna som ett distribuerat system måste 
 - **Varför** – det är delningen av resurser som skapar problemet; det som inte delas kan skyddas genom att stängas av från nätet
 - **Tre hotklasser** – läckage, att obehöriga får information, manipulation, obehörig ändring, och vandalisering, att störa systemet utan egen vinst
 - **Fem attackmetoder** – avlyssning, maskering, meddelandemanipulation, uppspelning och överbelastning
+<!--SR:!fsrs,2026-10-19T11:34:44.087Z,8,8.10051142,6.79877821,2,3,0,0,2026-10-11T11:34:44.087Z-->
 
 ## 2. Beskriv vilken roll kryptering har för säkerhet, förutom att dölja innehållet i ett meddelande (konfidentialitet, autentisering, integritet, oförnekbarhet)
 
@@ -151,6 +159,7 @@ Vilken roll har kryptering för säkerhet, utöver att dölja innehållet? (4)
 - **Integritet** – fås inte gratis: det krävs att redundant information som en checksumma läggs in och kontrolleras, annars märks inte en ändring
 - **Autentisering** – lyckas man dekryptera med en nyckel som bara två parter känner, så vet man vem avsändaren är
 - **Oförnekbarhet** – avsändaren kan inte förneka att han deltog; det uppnås med en digital signatur som intygar meddelandet för tredje part
+<!--SR:!fsrs,2026-10-18T08:30:25.076Z,0,0.86609708,9.44825544,3,6,1,0,2026-10-18T08:20:25.076Z-->
 
 ## 3. Förklara hur symmetrisk, asymmetrisk respektive hybridkryptering fungerar. I vilka situationer används respektive typ? Prestanda?
 
@@ -261,17 +270,20 @@ Hur fungerar symmetrisk, asymmetrisk och hybridkryptering? (3)
 - **Symmetrisk** – samma nyckel krypterar och dekrypterar; bygger på envägsfunktioner, och styrkan sitter i nyckellängden eftersom bästa attacken är att prova alla nycklar
 - **Asymmetrisk** – olika nycklar för kryptering och dekryptering; bygger på fälldörrsfunktioner, för RSA två stora primtal vars produkt inte går att faktorisera tillbaka
 - **Hybrid** – asymmetrisk kryptering autentiserar parterna och byter en hemlig nyckel, sedan sköter den symmetriska nyckeln all vidare trafik, som i TLS
+<!--SR:!fsrs,2026-10-19T10:05:23.587Z,2,1.63052777,9.43403555,2,7,1,0,2026-10-17T10:05:23.587Z-->
 
 I vilka situationer används symmetrisk, asymmetrisk och hybridkryptering? (3)
 ||
 - **Symmetrisk** – bulkkryptering av själva datan, alltså den stora mängden innehåll
 - **Asymmetrisk** – nyckelutbyte och signering i de inledande stegen; används sällan för att kryptera data alls, eftersom det kostar för mycket
 - **Hybrid** – storskaliga distribuerade system och e-handel, där TLS är exemplet
+<!--SR:!fsrs,2026-10-19T09:55:02.308Z,6,5.84782136,7.86010817,2,4,0,0,2026-10-13T09:55:02.308Z-->
 
 Prestanda: hur skiljer sig symmetrisk och asymmetrisk kryptering? (2)
 ||
 - **Förhållandet** – asymmetrisk kryptering kräver typiskt 100 till 1000 gånger mer processorkraft än symmetrisk, och av de symmetriska är AES snabbast och Triple-DES långsammast
 - **I praktiken** – en webbsida är sällan större än 100 kB och krypteras på några millisekunder, så algoritmernas prestanda påverkar knappt hur snabb https känns
+<!--SR:!fsrs,2026-10-21T10:01:17.757Z,4,3.89867167,9.40493865,2,8,1,0,2026-10-17T10:01:17.757Z-->
 
 ## 3.1 Förklara hur asymmetriska nycklar (public/private) kan användas för att ge autenticitet
 
@@ -325,6 +337,7 @@ Hur kan asymmetriska nycklar (public/private) användas för att ge autenticitet
 - **Grunden** – nyckelparets två funktioner är varandras inverser; för RSA är det bevisat att de kan köras i vilken ordning som helst
 - **Vändningen** – krypterar man med den privata nyckeln kan alla dekryptera med den publika; det ger ingen sekretess, men bevisar att bara innehavaren av den privata nyckeln kunde ha skapat det
 - **Förbehållet** – verifieraren måste veta att den publika nyckeln verkligen är avsändarens, annars kan en man-in-the-middle svara med sin egen nyckel; därför certifikat
+<!--SR:!fsrs,2026-10-20T08:23:58.882Z,2,1.32899558,9.62910928,2,9,2,0,2026-10-18T08:23:58.882Z-->
 
 ## 4. Vad är en digital signatur och vad bidrar den med gällande säkerhet? Hur genereras respektive kontrolleras en digital signatur?
 
@@ -410,6 +423,7 @@ Vad är en digital signatur, vad bidrar den med, och hur skapas och kontrolleras
 - **Vad den ger** – tre egenskaper: autentisk, den signerades medvetet och är oändrad, oförfalskbar, ingen annan kunde ha gjort den och den kan inte flyttas till ett annat dokument, och oförnekbar
 - **Skapas** – avsändaren räknar ut en sammanfattning av meddelandet och krypterar den med sin privata nyckel; meddelandet självt skickas i klartext
 - **Kontrolleras** – mottagaren dekrypterar signaturen med avsändarens publika nyckel, räknar själv ut sammanfattningen, och jämför; stämmer de är signaturen giltig
+<!--SR:!fsrs,2026-10-19T22:38:10.962Z,5,4.52696323,8.36800982,2,6,1,0,2026-10-14T22:38:10.962Z-->
 
 ## 4.1 Vad är en digest-funktion (säker hashfunktion) och vilka egenskaper har en sådan funktion?
 
@@ -438,7 +452,7 @@ tålamod går det==, så det måste skyddas mot.
 
 **Vad det betyder för hashlängden.** Eftersom en angripare kan leta kollisioner genom att jämföra många
 små varianter av två dokument mot varandra — en ==födelsedagsattack== — måste hashvärden vara ==minst 128
-bitar==. Med 64 bitar räcker det i snitt med ==2^32 versioner== av vardera dokumentet, vilket boken
+bitar==. Med 64 bitar räcker det i snitt med ==$2^{32}$ versioner== av vardera dokumentet, vilket boken
 kallar ==för litet för att vara bekvämt==.
 
 **De två som används i praktiken.** ==MD5== ger ==128 bitar==, ==SHA-1== ger ==160==. Boken garderar att
@@ -457,7 +471,7 @@ båda ==kan betraktas som tillräckligt säkra== för överskådlig tid, men att
 4. Varför det spelar roll: hittar angriparen ett annat meddelande med samma hash kan han flytta
    signaturen dit och förfalska utan att känna nyckeln.
 5. Födelsedagsattacken gör det lättare än man tror — man jämför många varianter av två dokument mot
-   varandra i stället för att jaga en given hash. Vid 64 bitar räcker ungefär 2^32 varianter, så
+   varandra i stället för att jaga en given hash. Vid 64 bitar räcker ungefär $2^{32}$ varianter, så
    hashvärden måste vara minst 128 bitar.
 6. I praktiken används MD5 med 128 bitar och SHA-1 med 160. Boken garderar att båda kan betraktas som
    tillräckligt säkra för överskådlig tid, men att publicerade attacker antyder att SHA-1 är sårbar.
@@ -466,6 +480,7 @@ Vad är en digest-funktion (säker hashfunktion) och vilka egenskaper har den? (
 ||
 - **Vad det är** – den gör ett meddelande av godtycklig längd till ett kort värde av fast längd som beskriver det, ett slags fingeravtryck
 - **Egenskaperna** – tre: lätt att räkna fram hashen ur meddelandet, svårt att gå från hashen tillbaka till meddelandet, och svårt att hitta ett annat meddelande med samma hash
+<!--SR:!fsrs,2026-10-22T09:58:20.457Z,9,8.83497632,6.79215857,2,4,0,0,2026-10-13T09:58:20.457Z-->
 
 ## 5.1 Vad är TLS/SSL respektive HTTPS? Förklara hur handskakningen i TLS går till
 
@@ -551,7 +566,7 @@ Vad är TLS/SSL respektive HTTPS? (2)
 ||
 - **TLS/SSL** – SSL kom från Netscape, och en utökad version blev internetstandard under namnet TLS; det bygger en säker kanal med sekretess, integritet och autenticitet
 - **HTTPS** – inget eget protokoll: prefixet https i en URL startar upprättandet av en TLS-kanal mellan webbläsare och webbserver
-<!--SR:!fsrs,2026-10-04T02:46:08.104Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:45:08.104Z-->
+<!--SR:!fsrs,2026-10-22T10:43:48.553Z,9,8.61031137,8.36634001,2,5,0,0,2026-10-13T10:43:48.553Z-->
 
 Hur går TLS-handskakningen till, steg för steg? (4)
 ||
@@ -559,6 +574,7 @@ Hur går TLS-handskakningen till, steg för steg? (4)
 - **Certifikat, valfritt** – parterna autentiserar varandra genom att utbyta signerade publik-nyckelcertifikat i X.509-format, och minst en publik nyckel måste finnas för nästa steg
 - **Pre-master secret** – en part skapar ett stort slumpvärde och skickar det krypterat med den publika nyckeln; ur det räknar båda fram sessionsnycklarna, en per riktning, plus MAC-hemligheterna
 - **ChangeCipherSpec och Finished** – dessa meddelanden avslutar handskakningen, och därefter är all vidare trafik krypterad och signerad enligt den valda cipher suiten
+<!--SR:!fsrs,2026-10-20T14:50:44.554Z,0,1.05779929,9.28186047,3,5,1,0,2026-10-20T14:40:44.554Z-->
 
 ## 5.2 Vad är ett certifikat? Vad innehåller det, vad ska det säkerställa och vad är en Certificate Authority (CA)?
 
@@ -646,6 +662,7 @@ Vad är ett certifikat, vad innehåller det, vad ska det säkerställa, och vad 
 - **Innehåll** – ett X.509-certifikat har subject med namn och publik nyckel, issuer med namn och signatur, en giltighetsperiod med två datum, och administrativ information; bindningen ligger i signaturen
 - **Säkerställer** – att man kan lita på ett påstående utan att känna motparten; men man måste ha utfärdarens äkta publika nyckel, annars kan vem som helst tillverka ett falskt certifikat
 - **CA** – en välkänd organisation som utfärdar certifikat mot bevis på identitet; verifieringen sker i två steg, hämta utfärdarens certifikat från en pålitlig källa och validera signaturen
+<!--SR:!fsrs,2026-10-19T10:02:58.820Z,2,1.61051219,9.43403555,2,7,1,0,2026-10-17T10:02:58.820Z-->
 
 ## Luckor och källor
 

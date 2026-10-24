@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-04-06
 updated: 2026-08-17
 description: "Paging Model: En minneshanteringsteknik där både den virtuella adressrymden och det fysiska minnet delas upp i lika stora block: sidor (virtuellt minne) och ramar..."

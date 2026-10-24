@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS2
+  - year2024
 description: "Annuitetsmetoden är när man räknar om investeringens betalningar, både Grundinvestering och framtida betalningar, till belopp som är lika stora varje år."
 created: 2024-02-07
 updated: 2026-05-26

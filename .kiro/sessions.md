@@ -22,6 +22,7 @@ This file is **not** loaded automatically — only `.kiro/steering/**` is. It is
 | Date | Session id | Topic | Why reopen | Distilled into |
 |---|---|---|---|---|
 | 2026-10-05 | unknown, see *Getting the session id* below | A handoff prompt for an outside agent to review F93 and report on the agent workflow here | The prompt was written, adversarially reviewed twice and revised, then handed over in chat and never saved to a file. Nothing else holds it | nothing yet |
+| 2026-10-17 to 10-22 | `18d30ab4-0e95-4280-9201-0a8aec0cef2a` | HI1031 Snabbsvar manuscript; HI1032 rebuild, shortening, coverage audit, Svaga ämnen, Extra decks; LaTeX math; HI1031 depth audit and Nyckelord deck; the tag-convention plan | Holds the verbatim subagent reports. The temp copies (`%TEMP%\hi1032fc`, `hi1032cov`, `hi1031depth`, `hi1031kw`) are not durable. The outcomes are distilled; the raw reports are not | F98-F104, `lessons-learned.md`, `product.md`, `.kiro/reports/parked-findings-2026-10-22.md`, `tags-to-list-plan-2026-10-22.md` |
 | 2026-09-07 | `7278c413-91b1-4259-9c5c-2c317ec11703` | Whether to keep a session ledger at all; measured how `kiro-cli` resume really behaves | Holds the raw measurements behind T15 — the engine matrix, the 44-session resumability census, the portability test — and none of that is in a script | T15, this file |
 
 ## Reopening one

@@ -1,6 +1,13 @@
 ---
-tags: [begrepp, HE1033, HI1032, KTH, nätverk, year2026]
-description: "ICMP (Internet Control Message Protocol) används för att skicka kontrollmeddelanden mellan nätverksenheter."
+tags:
+  - begrepp
+  - HE1033
+  - HI1032
+  - KTH
+  - nätverk
+  - year2026
+  - nosr
+description: ICMP (Internet Control Message Protocol) används för att skicka kontrollmeddelanden mellan nätverksenheter.
 created: 2026-05-28
 updated: 2026-05-28
 ---

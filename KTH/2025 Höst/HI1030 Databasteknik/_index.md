@@ -1,6 +1,10 @@
 ---
 title: "HI1030 Databasteknik"
-tags: [index, HI1030, KTH, year2025]
+tags:
+  - index
+  - HI1030
+  - KTH
+  - year2025
 description: "Kursindex för HI1030 Databasteknik med föreläsningar, begrepp, anteckningar och kursmaterial."
 ---
 # 📚 HI1030 Databasteknik

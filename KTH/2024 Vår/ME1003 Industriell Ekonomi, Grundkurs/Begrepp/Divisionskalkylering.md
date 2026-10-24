@@ -1,5 +1,11 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, ME1003/ME1003KS2, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS2
+  - year2024
 description: "Divisionskalkylering är en metod inom Självkostnadskalkylering som används när man vill veta självkostnaden av en produkt."
 created: 2024-02-12
 updated: 2026-05-26

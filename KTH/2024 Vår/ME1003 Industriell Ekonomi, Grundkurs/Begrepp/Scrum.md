@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - year2024
 description: "Scrum kan sägas vara en modell inom Produktutveckling som blev populär inom mjukvaruutveckling."
 created: 2024-02-08
 updated: 2026-05-26

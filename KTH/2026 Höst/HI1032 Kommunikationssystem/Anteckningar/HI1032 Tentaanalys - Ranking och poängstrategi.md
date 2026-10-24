@@ -1,5 +1,10 @@
 ---
-tags: [tenta, HI1032, nätverk, KTH, year2026]
+tags:
+  - tenta
+  - HI1032
+  - nätverk
+  - KTH
+  - year2026
 created: 2026-09-23
 updated: 2026-09-23
 description: "Ranking av HI1032:s tentaämnen efter hur många poäng de varit värda i de fyra gamla tentorna från 2024 och 2025, med en poängstrategi för att nå de 9 poäng per del som krävs för godkänt, en lista över ordagrant återkommande frågor och en lista över vad som är säkrast att hoppa över."

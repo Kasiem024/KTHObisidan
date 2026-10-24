@@ -1,5 +1,12 @@
 ---
-tags: [begrepp, ekonomi, HH1802/HH1802KS2, KTH, ME1003, ME1003/ME1003KS3, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - HH1802/HH1802KS2
+  - KTH
+  - ME1003
+  - ME1003/ME1003KS3
+  - year2024
 description: "Soliditet är ett Nyckeltal där det egna kapitalet sätts i relation till de totala skulderna."
 created: 2024-03-02
 updated: 2026-05-26

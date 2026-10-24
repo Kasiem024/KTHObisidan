@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, ekonomi, KTH, ME1003, year2024]
+tags:
+  - begrepp
+  - ekonomi
+  - KTH
+  - ME1003
+  - year2024
 description: "Kan också kallas Technological Trajectory."
 created: 2024-01-23
 updated: 2026-05-26

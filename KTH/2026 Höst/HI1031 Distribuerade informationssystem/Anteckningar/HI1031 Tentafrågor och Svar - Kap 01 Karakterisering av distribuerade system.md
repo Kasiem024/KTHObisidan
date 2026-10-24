@@ -1,5 +1,12 @@
 ---
-tags: [tenta, HI1031, databaser, programmering, KTH, year2026]
+tags:
+  - tenta
+  - HI1031
+  - databaser
+  - programmering
+  - KTH
+  - year2026
+  - nosr
 created: 2026-08-24
 updated: 2026-09-09
 description: "Svar på tentafrågorna för kapitel 1: exempel på distribuerade system, hårdvaru- och mjukvaruresurser som är värda att dela, bokens åtta utmaningar, arven från IP, HTTP och HTML, samt vilken roll IP och RFC har spelat."
@@ -49,7 +56,7 @@ Ge några exempel på distribuerade system. (4)
 - **Bokens tre genomgångna exempel** – webbsök, onlinespel med många spelare, och finanshandel
 - **Spannet, det frågan egentligen är ute efter** – från ett system i en bil till globala system med miljoner noder, från små sensorer till kraftfulla datorer
 - **Trenderna** – mobilt och ubiquitous, distribuerad multimedia, och molnet som en tjänst man köper i stället för att äga
-<!--SR:!fsrs,2026-10-04T02:51:57.358Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:50:57.358Z-->
+<!--SR:!fsrs,2026-10-22T10:46:46.127Z,9,9.32227103,8.53027948,2,6,0,0,2026-10-13T10:46:46.127Z-->
 
 ## 2. Ange 5 olika hårdvaruresurser och 5 mjukvaruresurser som kan vara intressant att dela
 
@@ -100,13 +107,14 @@ Ange 5 hårdvaruresurser som är värda att dela. (3)
 - **De fem** – skrivare, diskar, processorer, videoströmmen från en digitalkamera och ljudförbindelsen i ett mobilsamtal
 - **Varför hårdvara delas** – för att spara pengar; flera användare samsas om samma dyra pryl
 - **Brasklappen** – boken har ingen färdig lista på fem plus fem, så säg att du sorterar bokens egna exempel
+<!--SR:!fsrs,2026-10-21T22:39:00.736Z,8,8.38584341,6.7872078,2,4,0,0,2026-10-13T22:39:00.736Z-->
 
 Ange 5 mjukvaruresurser som är värda att dela. (3)
 ||
 - **De fem** – filer, webbsidor, databaser, sökmotorer och en valutaomvandlare
 - **Varför mjukvara delas** – för att folk ska kunna jobba ihop; de vill dela datan, inte disken den ligger på
 - **Som en tjänst** – man använder en sökmotor eller valutaomvandlare utan att bry sig om vilken server som kör den
-<!--SR:!fsrs,2026-10-04T02:44:58.591Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:43:58.591Z-->
+<!--SR:!fsrs,2026-10-24T10:22:30.362Z,7,6.6291833,9.57909353,2,9,1,0,2026-10-17T10:22:30.362Z-->
 
 ## 3. Vilka utmaningar finns enligt boken med att bygga ett distribuerat system?
 
@@ -181,6 +189,7 @@ Vilka utmaningar finns med att bygga ett distribuerat system? Boken har åtta; d
 - **Öppenhet** – om systemet går att bygga ut och göra om, vilket kräver att de viktiga gränssnitten publiceras
 - **Säkerhet** – konfidentialitet, integritet och tillgänglighet; överbelastningsattacker och säkerheten hos mobil kod är ännu olösta
 - **Skalbarhet** – systemet fortsätter fungera bra när antalet resurser och användare ökar mycket, till exempel genom att decentralisera för att undvika flaskhalsar
+<!--SR:!fsrs,2026-10-19T11:17:57.626Z,8,8.10051142,6.79877821,2,3,0,0,2026-10-11T11:17:57.626Z-->
 
 Vilka utmaningar finns med att bygga ett distribuerat system? Boken har åtta; de fyra sista. (4)
 ||
@@ -188,7 +197,7 @@ Vilka utmaningar finns med att bygga ett distribuerat system? Boken har åtta; d
 - **Samtidighet** – flera klienter vill åt samma resurs samtidigt och kan krocka, som två auktionsbud som skriver över varandra
 - **Transparens** – dölja att delarna är åtskilda; access och location är de två viktigaste
 - **Tjänstekvalitet** – tillförlitlighet, säkerhet, prestanda och anpassningsförmåga, där prestanda betyder att hålla tidsgränser
-<!--SR:!fsrs,2026-10-04T02:48:01.057Z,0,0.212,6.4133,1,1,0,0,2026-10-04T02:47:01.057Z-->
+<!--SR:!fsrs,2026-10-25T08:21:55.483Z,7,6.92100966,9.38528333,2,8,0,0,2026-10-18T08:21:55.483Z-->
 
 ## 4. Vilka arv från IP, HTTP och HTML måste man ta hänsyn till vid utveckling av distribuerade system?
 
@@ -254,6 +263,7 @@ Vilka arv från IP, HTTP och HTML måste man ta hänsyn till? (3)
 - **Från HTML** – byggdelarna är fasta och kopplade till hur saken ska visas, så man kan bara bläddra; därför behövs XML, som beskriver sig självt
 - **Från HTTP** – de två tyngsta: en resurs per fråga, där nio bilder ger tio frågor, och öppet för alla som standard, så åtkomstkontroll måste läggas till
 - **Från IP** – 32-bitarsadresserna valdes i slutet av 1970-talet och håller på att ta slut; bytet till 128 bitar kräver ändringar i massor av mjukvara
+<!--SR:!fsrs,2026-10-22T10:34:15.424Z,9,8.83497632,6.79215857,2,4,0,0,2026-10-13T10:34:15.424Z-->
 
 Vilka arv från HTTP måste man ta hänsyn till? (4)
 ||
@@ -261,6 +271,7 @@ Vilka arv från HTTP måste man ta hänsyn till? (4)
 - **Innehållstyper** – servern anger typen som en MIME-typ så att webbläsaren vet hur svaret ska hanteras
 - **En resurs per fråga** – en sida med nio bilder ger tio frågor, så webbläsare frågar parallellt för att korta väntan
 - **Öppet som standard** – vem som helst når en publicerad resurs; vill man begränsa måste servern ställas in att skicka en utmaning, till exempel ett lösenord
+<!--SR:!fsrs,2026-10-23T08:16:32.110Z,5,5.35233344,9.23910608,2,7,1,0,2026-10-18T08:16:32.110Z-->
 
 ## 5. Vilken roll har IP och RFC för utvecklingen av distribuerade system?
 
@@ -322,6 +333,7 @@ Vilken roll har IP och RFC för distribuerade system? (3)
 - **IP är tekniken** – ett gemensamt sätt att prata som döljer skillnaderna mellan näten, eftersom alla datorer kör internetprotokollen; det är därför heterogenitet går att hantera alls
 - **RFC är spelregeln** – öppenhet kräver att gränssnitten publiceras; protokollen kom som numrerade RFC i början av 1980-talet och gick medvetet förbi de tröga standardiseringsprocesserna
 - **Webben är beviset** – den kunde byggas ovanpå utan att någon behövde ändra i internet
+<!--SR:!fsrs,2026-10-25T09:13:47.178Z,7,6.68518262,9.2390145,2,7,0,0,2026-10-18T09:13:47.178Z-->
 
 ## Luckor och källor
 

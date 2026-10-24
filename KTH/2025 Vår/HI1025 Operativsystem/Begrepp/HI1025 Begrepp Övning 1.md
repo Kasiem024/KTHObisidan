@@ -1,5 +1,10 @@
 ---
-tags: [begrepp, HI1025, KTH, year2025, programmering]
+tags:
+  - begrepp
+  - HI1025
+  - KTH
+  - year2025
+  - programmering
 created: 2025-03-18
 updated: 2026-08-17
 description: ".h (Header file): En fil som innehåller deklarationer av funktioner, variabler, makron och datatyper."
