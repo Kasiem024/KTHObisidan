@@ -1,7 +1,7 @@
 ---
 tags:
   - meta
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F105): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F106): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -5562,8 +5562,8 @@ it.
 
 **Date:** 2026-10-24
 **Status:** Closed. The convention is flipped and the vault is converted; the author asked the agent to
-run it, and it ran at 13:49 the same day. One cosmetic remainder: CM1000's `_index.md`, deliberately
-excluded, is still inline and invisible to the audit.
+run it, and it ran at 13:49 the same day. The one file it excluded on purpose, CM1000's `_index.md`,
+was converted to list form by hand before its first commit, the same day (F106).
 
 ### Why
 
@@ -5733,8 +5733,8 @@ because SF1686 has no `.md` files in scope. The folder was moved to
 manifest root line unchanged, and the script now **refuses a relative `-BackupDir`** (tested both ways).
 Full forensics in `lessons-learned.md`, 2026-10-24.
 
-**What remains.** Once the CM1000 agent's work is committed, a plain `Convert-TagsToList.ps1 -Apply`
-converts CM1000's `_index.md`. Nothing else.
+**What remained.** CM1000's `_index.md`, converted to list form by hand before its first commit
+(F106). Nothing else.
 
 ### The concurrent agent (2026-10-24)
 
@@ -5749,3 +5749,70 @@ the script would rewrite to list form.
 other agent's timing. Verified the same day: the fixture test grew an exclusion case and passes;
 `Test-Reparse` was unit-tested (a junction gives True, a plain file False); and the real run converted
 536, touched no CM1000/SF1686 path, and left CM1000's `_index.md` inline and unmodified.
+
+## F106. CM1000 moved to 2026 Höst, its course files kept out of git, and its 95 PDFs planned for conversion
+
+**Date:** 2026-10-24
+**Status:** Open. The plan is approved (14:09). The conversion runs outside the vault and is recorded
+here when it lands.
+
+### What was wrong
+
+- The author had moved the course from `2025 Höst` to `2026 Höst` and deleted the old folder, but
+  nothing in the vault followed: the new folder had no `_index.md`, `llms.txt` listed CM1000 under
+  2025 Höst, and the 2026 MOC did not list it.
+- His copy put 86 of the 95 PDFs directly in `Filer/` and `Filer/Gamla Tentor/`. Only
+  `Filer/Litteraturlista/`, `Filer/Canvas/` and `Filer/Webbsidor/` are gitignored, so the next
+  `git add .` would have published 86 third-party PDFs. Measured with
+  `git status --porcelain --ignored -uall`: 87 untracked, 9 ignored.
+
+### What was done
+
+- The 86 PDFs moved into `Filer/Canvas/Kursinformation/` (3) and `Filer/Canvas/Gamla Tentor/HT2019–
+  HT2025/` (83), the layout HI1032 uses. 95 PDFs and 10 102 319 bytes before and after the move;
+  afterwards 1 file untracked (the index) and 95 ignored.
+- `_index.md` written from the course-index template with the KursPM's facts (8,0 hp, TEN1 5,0 +
+  RED1 3,0, period 2), tags in list form. F105's run had excluded CM1000 on purpose, so that file was
+  converted by hand, value for value.
+- `llms.txt` and `Atlas/2026 MOC.md` list CM1000 under 2026 Höst. `Meta/Vault Standard.md` §4 names
+  CM1000 among the courses with a `Filer/Canvas/` folder, and its stale description of book
+  conversions as `.opt.md` / `.ai.md` now says plain `.md`, which is what HI1031 and HI1032 have.
+- The conversion plan: `.kiro/reports/cm1000-pdf-till-md-plan-2026-10-24.md`, reviewed by a premise, a
+  conformance and a technical lens and revised (its §10). The author approved it with one change: a
+  copy of every converted file also goes to the raw tree outside the vault.
+
+### What the measurement found
+
+- **The text layer of all 94 TeX-produced PDFs is silently wrong**, in nine ways an AI reading it
+  cannot see: `L¨osningar` with not one precomposed å/ä/ö, `x2` for x², `X` for ∑, `R` for ℝ. A
+  repair per font fixes 45 374 accents, 9 183 super- and subscripts and 911 blackboard-bold letters,
+  among others, and leaves 3 characters unexplained (plan §1). pdftext, the engine marker uses, gave
+  169 split accents and 0 å/ä/ö on the pilot's three pages, so marker is not used.
+- **A pilot converted one file end to end** (HT2021 `ks3_sol.pdf`, 3 pages). The verifier found 8
+  fractions the transcribing subagent had silently restyled and had then listed under its own
+  deviations as harmless; the page image showed they were not. Hence the rule: the transcriber never
+  classifies its own differences.
+- **The technical review found a blocker in the verifier**: it compares multisets, so it cannot see
+  order, and `1 - 2\sqrt{d} + d` written as `1 + 2\sqrt{d} - d` passes. The plan answers it with a
+  second reading of every formula, symbol by symbol, from a generated checklist.
+
+### Mistakes made on the way
+
+- **A filtered audit output was reported to the author as fact.** It was filtered with
+  `-match 'RESULT'`, which is case-insensitive (T3), so three filenames beginning `Resultat…` were
+  reported as the vault's only deviations. The real deviation was `inlineStyleTags 515`, F105's
+  pending conversion. Corrected to the author in the same session.
+- **A copy silently copied nothing.** `Copy-Item -LiteralPath '<dir>\*'` does not expand the wildcard;
+  it copied none of the pilot's 13 files and raised no error. Only a file count, 7 where 20 were
+  expected, showed it. Not added to `traps.md`, because it has not yet been reproduced in isolation.
+- **The pdf2md docs and the knowledge base still name `C:\pdf2md`**, but the repository is now
+  `C:\dev\pdf2md`, and its marker launcher fails after the move: `marker_single.exe --help` exits 1
+  with no output. Reported, not repaired here.
+
+### Verified
+
+Before the handover to the committing agent, 2026-10-24 14:23: `Vault-Audit` `RESULT: clean`
+(`notesInScope=528`); `Test-VaultAudit` 49 assertions, 0 failed; lint 550 files, 0 issues;
+`Test-DocHygiene` clean. `git status` lists 1 new file in the course folder, its `_index.md`, and 95
+ignored files under CM1000. The backlog's 63 new lines arrived LF in a CRLF file and were converted
+back, text unchanged (5 814 CRLF, 0 lone LF).

@@ -11,10 +11,8 @@ against an own baseline `RESULT: clean` (`nosr` 59 and 445 excluded cards unchan
 `RESULT: clean`, lint 550/0, deck hygiene clean, and a SHA-256 diff showing exactly the 536 manifest
 files changed and nothing else. The backup is in
 `%USERPROFILE%\KTHObsidian-backups\tags-to-list-2026-10-24-135010\`.
-**CM1000 and SF1686 were excluded** because a second agent is converting the CM1000 PDFs, so CM1000's
-`_index.md` is still inline — that is invisible to the audit, which excludes `_index.md` from its scope,
-so the audit is clean anyway. A plain `Convert-TagsToList.ps1 -Apply` converts that last file once the
-other agent's work is committed. Since F102: F103 is the HI1032
+**CM1000 and SF1686 were excluded** because a second agent was converting the CM1000 PDFs. CM1000's
+`_index.md`, the one file that left inline, was converted by hand before its first commit (F106). Since F102: F103 is the HI1032
 `Tentasvar - Svaga ämnen` reading file, F104 the HI1031 `Tentafrågor - Nyckelord` keyword deck for the
 oral exam. Unapplied findings from two audits (HI1032 lecture coverage, HI1031 manuscript depth) are in
 `.kiro/reports/parked-findings-2026-10-22.md`. HI1031's Snabbsvar is a spoken-answer manuscript for the
@@ -22,15 +20,25 @@ oral exam (F98). **F102's three HI1032 Extra decks (147 cards) must not be prune
 rule; he set it aside for them without changing it.** The phone-sync item at the bottom has been parked
 since 2026-09-08.
 
-## In flight: converting CM1000's 95 PDFs to AI-optimised Markdown (planned 2026-10-24)
+## In flight: converting CM1000's 95 PDFs to AI-optimised Markdown (approved 2026-10-24 14:09)
 
-**Nothing is converted yet. The author must approve the plan first**:
-`.kiro/reports/cm1000-pdf-till-md-plan-2026-10-24.md`. Tools: `C:\dev\pdf2md\prep\cm1000\`; pilot
+**Approved as proposed, with one change: every converted file is also copied to the raw tree**
+`G:\My Drive\KTH\2026 Höst\CM1000 Diskret Matematik\AI-optimerad Markdown\`. Plan:
+`.kiro/reports/cm1000-pdf-till-md-plan-2026-10-24.md`; record: F106. Tools: `C:\dev\pdf2md\prep\cm1000\`; pilot
 evidence: `C:\dev\pdf2md\out\CM1000\_pilot\`. The pdf2md repo moved from `C:\pdf2md` to
 `C:\dev\pdf2md`; its own docs and the knowledge base still name the old path, and its marker launcher
 is broken after the move. CM1000 moved from `2025 Höst` to `2026 Höst`; `llms.txt` and the 2026 MOC
 were updated to match. The old `2025 Höst/CM1000 .../_index.md` shows as deleted in git — the author
 deleted that folder himself.
+
+**The vault was handed to a second agent to commit and push, at the author's request (14:09).** This
+work's last tracked edits were made before that: CM1000's `_index.md` in list form, the plan's
+decisions, F106, and this section. From here the conversion writes only under
+`C:\dev\pdf2md\out\CM1000\`, the raw tree, and the gitignored `Filer/` paths, so it cannot dirty the
+tree. The one tracked edit left is closing F106 and this section when the work lands.
+
+**Next:** the four instrument fixes and the step-6 checklist generator (plan §5), each proven by a
+planted defect in the self-test, then batch 1, which measures the time per page.
 
 ## Done: the tag conversion was run (F105, 2026-10-24 13:49)
 
@@ -53,14 +61,12 @@ nothing staged. 536 converted, 13 already in list form, 0 skipped, 0 failed, 46 
 - Backup: `%USERPROFILE%\KTHObsidian-backups\tags-to-list-2026-10-24-135010\`, 536 files plus a manifest
   whose root line is this vault, so its `-RestoreFrom` line still works.
 
-**The audit is fully clean even though CM1000's `_index.md` is still inline.** The plan predicted
-`inlineStyleTags 1`; that was wrong, because the audit's `InScope` excludes every `_index.md`. Converting
-that last file is therefore cosmetic and can wait for the CM1000 agent.
+**The audit was fully clean even while CM1000's `_index.md` was still inline.** The plan predicted
+`inlineStyleTags 1`; that was wrong, because the audit's `InScope` excludes every `_index.md`.
 
 **What is left of this item**
 
-- Once the CM1000 agent's work is committed, a plain `Convert-TagsToList.ps1 -Apply` converts CM1000's
-  `_index.md`. Nothing else remains.
+- Nothing. CM1000's `_index.md` was converted to list form by hand before its first commit (F106).
 - **Never "repair" `inlineStyleTags` with `Format-FrontmatterTags.ps1`.** It is superseded and converts
   the wrong way. `Convert-TagsToList.ps1` is the repair. The old script stays untouched, on his
   instruction.
