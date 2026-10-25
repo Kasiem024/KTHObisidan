@@ -208,10 +208,26 @@ damage case, and on a fresh clone **every** file would report non-zero. This is 
 `traps.md` **T5**: a check that cannot pass on a fresh clone because the disk holds state the
 repository does not.
 
+**Where the site repo is:** `C:\dev\KTHObsidianQuartz`, branch **`v5`**. Its `content` submodule is a
+pin of this vault. A push of this vault is normally all that is needed, because the site fetches the
+latest vault commit itself (`README.md`), so that repo usually has nothing to commit or push — on
+2026-10-25 its working tree was clean while this vault was two commits ahead. Its own build facts live
+in its `PROJECT-NOTES.md`, not here.
+
 ## Deletions go to Drive's cloud trash
 
 Not the Windows Recycle Bin. Recovery is via drive.google.com. Prefer moving files over
 deleting them, and ask before deleting anything.
+
+**A deletion can also be undone by the sync, and the only thing that notices is the audit.** On
+2026-10-25 an empty course folder was deleted, the switch-less audit confirmed `RESULT: clean`, and
+**eighteen minutes later the folder was back** — empty, carrying its original creation timestamp, so
+Drive had re-created it from its server-side copy rather than anything local re-making it. A second
+deletion held. Git cannot warn you here, because git stores no empty directory, so `git status` says
+nothing either way; `courseMissingFolder` and `courseMissingIndex` are what surface it, and those are
+exactly the two checks `-ContentOnly` skips (**T5**), so the hook and CI stay green too. After deleting
+a folder in this vault, **re-run `Vault-Audit.ps1` with no switches a few minutes later**, and if it
+keeps returning, remove it from drive.google.com instead.
 
 ## Dataview is frozen, and `.obsidian/` is in git
 

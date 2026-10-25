@@ -10,7 +10,7 @@ wrong result here, and **every one is silent** — none throws, none fails a bui
 plausible wrong answer, which is worse. That is the entry criterion: if it throws, it belongs in
 `environment.md`.
 
-There are **twenty-four**. Do not add a twenty-fifth without reproducing it and recording the wrong result
+There are **twenty-six**. Do not add a twenty-seventh without reproducing it and recording the wrong result
 it produced. Each entry is the mechanism, the wrong answer it caused, and what to do instead; the
 forensics live in `Meta/Vault Findings & Backlog.md` and `.kiro/lessons-learned.md`.
 
@@ -76,6 +76,21 @@ matches nothing and prints nothing while exiting 0. It was used to prove that fi
 review data, returned zero changed lines, and would have read as *"nothing changed"* on files that
 had in fact changed. Take the whole diff in one call and split it per file **in PowerShell**, never by
 asking git for a subset.
+
+**Reading a path list back out, and feeding one back in — 2026-10-24.** `git status --porcelain -z`
+is the right way to *ask* for paths, because NUL separation survives a filename containing anything.
+It does not survive the decoding: captured in PowerShell it returned `Hårdvara` as `H├Ñrdvara`, the
+staging list was built from that, and `git add --pathspec-from-file` exited **128** with
+`did not match any files`. Nothing staged, so this one failed loudly — but only because git refused;
+the list itself looked fine. Two halves to the fix:
+
+- Wrap **every** git call whose output is a path in the `[Console]::OutputEncoding` block above.
+- Hand paths back with `--pathspec-from-file=<file> --pathspec-file-nul`, writing that file yourself as
+  UTF-8 with NUL separators. Never put a path on the command line.
+
+And assert the round trip rather than hoping: a correctly decoded path in this vault never contains a
+box-drawing or replacement character, so refuse the whole batch if any path matches
+`[\u2500-\u257F\uFFFD]`.
 
 ## T3 — `-match` is case-insensitive
 
@@ -428,6 +443,52 @@ applies to the other automatics that are easy to reach for — `$input`, `$error
 And when a wrapper runs the same script under several scopes, assert that the scope line in the
 output differs between runs; identical figures from different arguments mean the arguments never
 arrived.
+
+## T25 — `Copy-Item -LiteralPath '<dir>\*'` copies nothing, and says nothing
+
+`-LiteralPath` takes `*` as a character, so the "wildcard" matches no item, and PowerShell 5.1 neither
+copies nor raises — even under `$ErrorActionPreference = 'Stop'`.
+
+**Produced:** a backup of the CM1000 pilot evidence held 7 of 20 files on 2026-10-24, and only a file
+count afterwards showed it. Reproduced in isolation on 2026-10-25: 0 of 2 files copied, no error.
+
+**What to do:** enumerate the folder and copy each child —
+`Get-ChildItem -LiteralPath $src | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $dst -Recurse }`
+— and count the destination afterwards.
+
+## T26 — an array passed to `powershell -File` arrives as N arguments, and the surplus binds positionally
+
+`powershell -File s.ps1 -ExcludePath @('CM1000','SF1686')` does not pass an array. The calling shell
+evaluates it, then **splats it into two arguments**. `-ExcludePath` takes `CM1000`; `SF1686` is left
+over and binds to the **first parameter that still has a free position** — which is whichever one the
+param block happens to declare next, not the one you were naming.
+
+**Produced:** on 2026-10-24 `SF1686` bound to `-BackupDir`, so a bulk edit wrote its 536 backups into
+`C:\Users\ekasalm\OneDrive - Ericsson\Documents\SF1686` — an employer-synced folder — because the value
+was relative and .NET resolved it against the process working directory (**T7**). It also silently
+narrowed the exclusion to one of the two folders. The run printed
+`SUMMARY convert=536 ... skipped=0 failed=0` and exited **0**.
+
+**What to do:** pass one value per flag, or a single comma-separated string the script splits itself.
+Never interpolate an array into a `-File` invocation. **And make the surplus impossible to absorb** —
+measured in PowerShell 5.1: giving *one* parameter an explicit `Position` makes every unpositioned
+parameter name-only, so a sink then catches what is left:
+
+```powershell
+param(
+  [Parameter(Position = 0)] [string]$Root,
+  [string]$BackupDir,                      # name-only now
+  [Parameter(ValueFromRemainingArguments = $true)] $Surplus
+)
+if ($Surplus) { Write-Output ('ERROR: unexpected argument: ' + ($Surplus -join ' ')); exit 2 }
+```
+
+A sink **without** the explicit `Position` is inert: the stray value still binds to `-BackupDir` first.
+Both halves are required. Forensics in `Meta/Vault Findings & Backlog.md`.
+
+---
+
+**Not here, because each one throws rather than misleads — they are in `environment.md`:** the
 `geometric repack` error from git on Google Drive, `npm` needing `cmd /c`, stdout truncating on Swedish
 characters, long inline commands refused with `Access is denied. (os error 5)`, and three PowerShell
 5.1 parsing details (case-insensitive variable names, a built-in alias beating a function you define,

@@ -1,7 +1,7 @@
 {
   "settings": {
     "flashcardTags": [
-      "#HI1031"
+      ""
     ],
     "flashcardTagsToIgnore": [
       "#nosr"
@@ -81,7 +81,7 @@
     "preferredDateFormatForNoteReviewQueue": "MMM DD YYYY",
     "preferredLocale": "-"
   },
-  "buryDate": "2026-10-21",
+  "buryDate": "2026-10-25",
   "buryList": [],
   "historyDeck": null,
   "scheduleData": {

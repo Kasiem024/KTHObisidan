@@ -32,8 +32,8 @@ do — and `Test-DeckHygiene.ps1` carries its own harness behind `-SelfTest` rat
 | `Test-DeckHygiene.ps1` | Does every flashcard still have a front line, a body, and exactly one recall target? | 0 clean / 1 findings / 2 empty scope |
 | `Test-DocHygiene.ps1` | Is the Markdown that nothing else checks still intact? | 0 clean / 1 findings |
 | `Test-ScriptHygiene.ps1` | Does this folder still follow the rules below? | 0 clean / 1 findings |
-| `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **One of the three scripts here that write.** | 0 clean / 1 refused |
-| `Convert-TagsToList.ps1` | Does any note still declare its tags in the old inline form? Rewrites them to YAML list form, the form Obsidian writes. **The second writing script.** | 0 clean / 1 found, changed or skipped |
+| `Format-NoteWrapping.ps1` | Are hard line breaks inside paragraphs making notes read as broken prose? Joins them. **One of the three scripts here that write.** | 0 clean / 1 refused / 2 bad arguments |
+| `Convert-TagsToList.ps1` | Does any note still declare its tags in the old inline form? Rewrites them to YAML list form, the form Obsidian writes. **The second writing script.** | 0 clean / 1 found, changed or skipped / 2 bad arguments |
 | `Format-FrontmatterTags.ps1` | **Superseded by F105 - do not run it.** Converts list-form tags back to the old inline form, so running it now undoes the convention. Kept untouched on the author's instruction. **The third writing script.** | 0 clean / 1 found or changed |
 
 `kursinfo.js`, `nastaNummer.js` and `nyKurs.js` in the same folder are **Templater user
@@ -221,7 +221,10 @@ to prevent.
    spreads.
 3. **Read-only by default.** Anything that writes takes an explicit switch, defaults to a
    dry run that prints what it would change, backs up each file first, and preserves the
-   BOM and line endings. See `conventions.md` §3.
+   BOM and line endings. See `conventions.md` §3. **A writing script also refuses a stray
+   positional argument**: give `-Root` an explicit `Position` and add a
+   `ValueFromRemainingArguments` sink that exits 2, which together make every other parameter
+   name-only. Without the explicit `Position` the sink is inert (`traps.md` **T26**).
 4. **Exit 0 for clean, 1 for a finding**, so it can be wired into CI. Pure reporting
    scripts always exit 0 and say so in the table above.
 5. **Add it to the table above in the same change.** A script nobody knows about gets

@@ -145,3 +145,31 @@ Swedish, matching the surrounding notes. Keep the author's voice; do not rewrite
 into something more formal. When generating text mechanically — descriptions, alt text,
 link lists — derive it from what the note already says rather than inventing content, and
 never invent study material such as exam guidance.
+
+## 6. When a second agent is working in this vault
+
+It happens, and on 2026-10-24 it happened for a whole day: one agent converted the tag convention
+across 536 notes while another converted a course's PDFs. Nothing was lost, but every near-miss that
+day came from the same place — two writers, one working tree, and tools that assume a single editor.
+`environment.md` says to expect the vault to change under you; this is what to do about it.
+
+1. **Take your own spaced-repetition baseline.** `Get-SRIntegrity.ps1 -Save` writes one global file,
+   so the other agent calling `-Save` silently redates what you are measuring against (**T22**).
+   Always pass `-BaselinePath` with your own path, and read back the `baseline taken at` line to
+   confirm the snapshot is yours.
+2. **Confine yourself to named paths, and leave theirs alone.** Find out which folder the other agent
+   owns before writing anything. `Convert-TagsToList.ps1` takes `-ExcludePath` for exactly this; a
+   script without such a switch needs one before it runs in company.
+3. **Stage by explicit list, never `git add -A` or `git add .`** — not even scoped to a directory,
+   which has the same blast radius inside it (F91). Build the list from `git status`, filter it, and
+   write it out as a NUL-separated pathspec file (**T2**).
+4. **Prove the separation before committing.** Read back `git diff --cached --name-only` and assert
+   that nothing matching the other agent's paths is staged. A commit is the one step that cannot be
+   undone quietly.
+5. **Re-read `git status` immediately before staging.** The other agent may have added files since you
+   last looked; on 2026-10-24 a new plan file appeared mid-task.
+6. **Shared files are the awkward case.** Where you and the other agent have both edited one file —
+   `llms.txt` and `current-state.md`, that day — you cannot stage half of it. Commit it, and say in
+   the commit message that it carries the other agent's edits too.
+7. **Do not assume they are finished.** Wait for them to say so, or exclude their paths entirely. An
+   excluded folder costs nothing; a half-committed folder move costs a rewrite.

@@ -75,12 +75,24 @@
 
 [CmdletBinding()]
 param(
-  [string]$Root,
+  # The explicit Position on -Root is load-bearing, and so is the $Surplus sink: together they make
+  # every other parameter NAME-ONLY, so a stray positional argument is refused instead of silently
+  # binding to whichever parameter happens to be declared next. Measured in PowerShell 5.1 - a sink
+  # on its own is inert, because the stray value still reaches -BackupDir first. This is T26, and it
+  # is how 536 backups went to an employer-synced OneDrive folder on 2026-10-24.
+  [Parameter(Position = 0)] [string]$Root,
   [string]$BackupDir,
   [string]$RestoreFrom,
   [string[]]$ExcludePath = @(),
-  [switch]$Apply
+  [switch]$Apply,
+  [Parameter(ValueFromRemainingArguments = $true)] $Surplus
 )
+if ($Surplus) {
+  Write-Output ('ERROR: unexpected argument(s): ' + ($Surplus -join ' '))
+  Write-Output '       Every parameter except -Root must be named. An array splatted into -File'
+  Write-Output '       arrives as separate arguments (traps.md T26); pass one comma-separated value.'
+  exit 2
+}
 $ErrorActionPreference = 'Stop'
 
 if (-not $Root) {

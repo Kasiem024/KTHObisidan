@@ -24,6 +24,12 @@ Context for AI agents working on this vault. Modelled on the `.kiro` layout used
 | `agents/premise-reviewer.json` | Adversarial reviewer, premise lens. Handed the goal and **not** the rules, asks only whether the thing is worth building. No shell, deliberately — a reviewer that can run a gate drifts into conformance |
 | `agents/reviewer-prompt.md` | The prompt both reviewers share. The tool grant, not the prompt, decides which lens an agent is |
 
+**PDF-to-Markdown conversion is done in a separate repository, `C:\dev\pdf2md`**, and its method lives
+there, not here: `docs/RUNBOOK_TEX_MATH_BATCH.md` for TeX-produced PDFs whose mathematics is the content
+(CM1000, 2026-10-24/25), the other `docs/RUNBOOK_*.md` for books, Canvas batches and image-only PDFs.
+The conversions land in this vault under the gitignored `Filer/Litteraturlista/` and
+`Filer/Canvas/AI-optimerad Markdown/`. Machine-specific path; absent on a fresh clone or CI.
+
 **A set of skills for the Gemini web app was built from this vault's material and lives outside it**,
 under `Jag/Gemini/Skills/` on the author's Drive. **No count is given here on purpose** — the author
 adds and deletes them, and two were deleted on 2026-10-02 within hours of this paragraph first

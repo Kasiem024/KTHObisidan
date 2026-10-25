@@ -4,35 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "85410bc8ea371a49",
+        "id": "7bd407da0a9fd07b",
         "type": "tabs",
         "children": [
           {
-            "id": "f97823208ec017f4",
+            "id": "8da9a58b15f95402",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor - Nyckelord.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "HI1031 Tentafrågor - Nyckelord"
-            }
-          },
-          {
-            "id": "cc9e0fc8ba5f40ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Föreläsningskarta - Ämnen och tentasannolikhet.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "HI1032 Föreläsningskarta - Ämnen och tentasannolikhet"
+              "title": "New tab"
             }
           }
         ]
@@ -115,7 +97,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor - Nyckelord.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -203,11 +184,13 @@
               "title": "Notes Review Queue"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 385.5
+    "width": 385.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,10 +204,10 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "f97823208ec017f4",
+  "active": "85154ac5110aa970",
   "lastOpenFiles": [
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor - Snabbsvar.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor - Nyckelord.md",
+    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor - Snabbsvar.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 17 Distribuerade transaktioner.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 16 Transaktioner och samtidighetskontroll.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 11 Säkerhet.md",

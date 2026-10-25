@@ -5,7 +5,10 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: DONE — the tag convention is YAML list form and the vault is converted (F105, run 2026-10-24
+**Status: IN PROGRESS — converting CM1000's 95 PDFs (F106), paused 2026-10-25 13:24 in batch 4 of 4;
+resume from `C:\dev\pdf2md\out\CM1000\RESUME.md`.** The section *In flight* below has the details.
+
+**Done before it: the tag convention is YAML list form and the vault is converted (F105, run 2026-10-24
 13:49).** 536 notes converted, 0 skipped, 0 failed. **Verified after the run:** `Get-SRIntegrity -Compare`
 against an own baseline `RESULT: clean` (`nosr` 59 and 445 excluded cards unchanged), `Vault-Audit`
 `RESULT: clean`, lint 550/0, deck hygiene clean, and a SHA-256 diff showing exactly the 536 manifest
@@ -37,8 +40,22 @@ decisions, F106, and this section. From here the conversion writes only under
 `C:\dev\pdf2md\out\CM1000\`, the raw tree, and the gitignored `Filer/` paths, so it cannot dirty the
 tree. The one tracked edit left is closing F106 and this section when the work lands.
 
-**Next:** the four instrument fixes and the step-6 checklist generator (plan §5), each proven by a
-planted defect in the self-test, then batch 1, which measures the time per page.
+**Paused 2026-10-25 13:24 at the author's request, in batch 4 of 4.** 71 of the 95 PDFs are converted,
+verified and deployed to both trees. The other 24 (kap5, kap6, kap9, the tentor and omtentor, the
+KursPM) are transcribed and second-read, and wait for the figure reading, the gates and the deploy;
+`_INDEX.md`, the `related` links and the final checks are not built yet. **Resume from
+`C:\dev\pdf2md\out\CM1000\RESUME.md`**, which lists every remaining step with its command;
+`C:\dev\pdf2md\prep\cm1000\cm1000-progress.py` derives the state from the files on disk. Every
+decision taken without the author is in `C:\dev\pdf2md\out\CM1000\RUNLOG.md`.
+
+**The author left the remaining choices to the agent (2026-10-25 13:49: "continue as you want, I trust
+you").** Decided and recorded in RESUME.md: the figure reader still reads every remaining figure; the
+six exam/solution twin drawings are read once. The method and every lesson are written down where the
+next conversion will look: `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`.
+
+**An empty folder `KTH/2025 Höst/SF1686 Flervariabelanalys/`** (created 2026-10-24 19:37, not by this
+work) makes the local audit report `courseMissingFolder 4` and `courseMissingIndex 1`. Git stores no
+empty folder, so CI is unaffected; deleting it is his call.
 
 ## Done: the tag conversion was run (F105, 2026-10-24 13:49)
 
@@ -262,12 +279,22 @@ FolderSync exclude filter, `Folder name starts with` = `.`, which covers `.git`,
 3. **The round trip is unverified.** Nothing has yet confirmed the phone can write back. After the next
    review there, markers arriving with no change to card or separator counts is the proof.
 
-**The trap, before setting up a fresh SR install anywhere.** Four settings are not default:
-`flashcardTags` is `#HI1031, #HI1032` against a default of `#flashcards`, so a fresh install finds
-**zero cards** and looks like a sync failure; `algorithm` is `FSRS` while the markers are `!fsrs` format;
-`flashcardTagsToIgnore` is `#nosr`, without which every `nosr` note re-enters review; and
-`maximumInterval` is 30 against a default of 36525. Copy
-`.obsidian/plugins/obsidian-spaced-repetition/data.json` after installing, then restart the plugin.
+**The trap, before setting up a fresh SR install anywhere.** Four settings are not default, and the
+live values are a **dated reading** — read them from
+`.obsidian/plugins/obsidian-spaced-repetition/data.json`, never from this paragraph.
+`flashcardTags` against a default of `#flashcards` decides which decks exist at all, so a fresh install
+finds **zero cards** and looks like a sync failure; `algorithm` is `FSRS` while the markers are `!fsrs`
+format; `flashcardTagsToIgnore` is `#nosr`, without which every `nosr` note re-enters review; and
+`maximumInterval` is 30 against a default of 36525. Copy that file after installing, then restart the
+plugin.
+
+**`flashcardTags` was `#HI1031, #HI1032` and is now `#HI1031` alone, measured 2026-10-24.** So HI1032's
+four decks — Del A, Del B, Extra Säker and Extra Trolig — are outside the review scope entirely, and no
+card in them comes up however many markers it has. It was found by diffing the plugin's Drive sync
+conflict artefact, whose September settings held both tags, against the live file. **The review scope is
+his, and an agent does not change it** — it was reported to him on 2026-10-25 and is his to decide.
+This is also why the paragraph above now points at the file: the old copy of this value sat here
+asserting something that had quietly stopped being true.
 
 **The risk to respect.** The exclusions are the dangerous step. `Filer/Litteraturlista/` and
 `Filer/Canvas/` are **gitignored**, so 1 113 MB of PDFs exist only on disk and in Drive, not in git. Test

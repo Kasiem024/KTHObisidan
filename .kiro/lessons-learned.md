@@ -1057,3 +1057,86 @@ line still naming this vault so `-RestoreFrom` works.
 - **`documentation-standard.md` warns that work and personal material must not mix.** That rule was
   written about *content* carried into this repo. This was the reverse direction - personal content
   pushed into a work-synced folder by a path bug - and nothing guarded it.
+
+
+## 2026-10-24 - a token check passed 119 wrong formulas, because it cannot see order
+
+**What happened:** the CM1000 conversion verified every page by comparing the multiset of tokens in the
+PDF's repaired text layer with the Markdown. The second reader, answering a checklist of every formula
+against the page image, then made 119 FIX verdicts — almost all swapped signs: `x+3=5` written `x-3=5`,
+`(a+b)^n` written `(a-b)^n`, `2x+1` written `2x-1`. Every one of those pages had passed the verifier.
+**Why the checks missed it:** `1 - 2x + d` and `1 + 2x - d` hold the same tokens. The check was built to
+find lost and changed symbols, and it does; it was silent on order by construction.
+**Rule added:** behind every multiset check, an order-sensitive reading by someone who did not write
+the text, measured with planted errors (66 of 66 caught). `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`
+§3, §5, §6; pdf2md's `conversion-method.md`.
+**Lesson:** know what your check is blind to before you read its zero as a pass.
+
+## 2026-10-24 - the transcriber explained away its own difference, and the explanation sounded right
+
+**What happened:** in the CM1000 pilot the verifier reported 8 differences. The transcribing subagent
+had already listed them under its own deviations as "the text layer writes the fractions with a slash,
+same value". The page image showed the slash; the transcriber had restyled printed `1/4` as `\frac`.
+**Why the checks missed it:** nothing missed it, but only because the main agent looked at the image
+instead of accepting a plausible note from the author of the change.
+**Rule added:** whoever wrote a text never gives the verdict on its differences; a second reader does,
+from the image (`RUNBOOK_TEX_MATH_BATCH.md` §5).
+**Lesson:** a confident explanation from the author of a change is a claim to check, not a result.
+
+## 2026-10-25 - two readers disagreed about a graph, and both were wrong
+
+**What happened:** on CM1000 kap7 p4 the transcriber and the independent figure reader listed different
+edges for one graph. Picking the more plausible reader would have shipped an error either way: the main
+agent read the crop and found the transcriber had an edge `A-D` where the line bends at `E`, and the
+figure reader had added a `B-D` that is not drawn.
+**Why the checks missed it:** the comparison worked — it flagged the disagreement. The rule for settling
+it ("decide which reader is right") assumed one of them was.
+**Rule added:** a disputed figure is read again from the image by the one deciding, never settled by
+choosing a side (`RUNBOOK_TEX_MATH_BATCH.md` §5).
+**Lesson:** two independent readings tell you where to look, not what is there.
+
+## 2026-10-25 - three figures I gave the author or wrote down were not measured
+
+**What happened:** in one session, (1) an audit output filtered with `-match 'RESULT'` made three
+`Resultat…` filenames look like the vault's only deviations (T3 again); (2) the run log said a batch
+ended at 22:30, written as a time when it was an estimate — it ended near 03:15; (3) a status report
+said 89 planted errors had been caught when the files hold 66. Each was caught later by reading the
+source again.
+**Why the checks missed it:** none of these passed through a check: they were typed from memory or from
+a filtered view, which is exactly what `steering/scripts.md` and `environment.md` say not to do.
+**Rule added:** none new — the rules exist. What changed is practice: every figure in the CM1000 docs is
+now quoted from a script's output file (`out\CM1000\logs\doc-figures.txt`, `progress.txt`).
+**Lesson:** a number you remember is a number you have not measured.
+
+## 2026-10-25 - a predicted figure was derived from one scope and checked against another
+
+The tag-conversion plan stated that after the run the audit would report `inlineStyleTags 1`, because
+CM1000's `_index.md` had been deliberately excluded. The audit reported **clean**. The prediction was
+written into the plan, `current-state.md`, `reentry.md` and the backlog before the run disproved it.
+
+**The mechanism.** The converter's scope is *the audit's scope plus every `_index.md`*. The audit's own
+`InScope` **excludes** every `_index.md` (`Vault-Audit.ps1`: `if($name -eq '_index.md'){ return $false }`).
+So the one file left unconverted sits in the converter's population and outside the auditor's. The
+arithmetic was right - 537 targets minus 1 excluded - and it was then asserted about a different
+population.
+
+**Why nothing caught it.** Every gate was run and every gate passed, because the claim was about a
+*future* reading rather than a present one. A prediction is the one kind of figure no script checks:
+the full run on the `%TEMP%` copy could have produced the real number in advance, and was not asked
+to. Four documents then repeated it, so the error propagated at the speed of copy-paste.
+
+**It was harmless only by luck.** The direction happened to be pessimistic: the audit came out cleaner
+than promised. Had it been the other way, a run that genuinely left one deviation would have looked
+exactly like the prediction and nobody would have checked.
+
+**What to do.**
+
+- **Name the population next to any figure**, predicted or measured, in the same sentence. "515 notes in
+  the audit's scope" and "537 files in the converter's scope" are both true and are not the same number.
+- **Prefer measuring a prediction to deriving it.** When a dress rehearsal on a copy exists, read the
+  figure off the rehearsal. Deriving it from a scope definition is a second, unchecked calculation.
+- Treat a figure that appears in more than one document as one claim with several copies. Correcting it
+  means correcting all of them, which is the cost of having asserted it early.
+
+**Same family as** the in-sample coverage entry (2026-10-15) and the `notesInScope` drift between the
+audit and the census (F68): in all three the measurement was competent and the population was wrong.

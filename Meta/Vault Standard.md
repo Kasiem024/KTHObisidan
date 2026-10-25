@@ -450,3 +450,28 @@ every query. Links, embeds and backlinks are unaffected — drawings still rende
 3. Create notes from the templates in `Meta/Obsidian Plugins/Templates`; they
    already emit standard-compliant tags.
 4. Tag each note with its type, course code, subject, `KTH`, and `year<YYYY>`.
+
+### Dropping a finished course
+
+A finished course's material is dropped rather than kept — `.kiro/steering/product.md` records the
+author's reason — and that is **two** steps, not one:
+
+1. Remove the course's notes, `_index.md` included.
+2. Remove the **course folder itself**, and the four category folders inside it.
+
+Stopping after step 1 leaves a folder that still looks like a course, so the audit reports
+`courseMissingIndex` for it and `courseMissingFolder` once per missing category folder. That happened
+with `SF1686 Flervariabelanalys` on 2026-10-25: an emptied folder produced 1 + 4 findings.
+
+**Only the switch-less audit will tell you.** Those two checks are exactly the ones `-ContentOnly`
+skips, because git stores no empty directory (`traps.md` T5), so the pre-push hook and CI both stay
+green while the local audit is red. Run
+`Vault-Audit.ps1` with no flags after dropping a course.
+
+**And check again a few minutes later.** Drive restored this very folder once, empty and with its
+original creation timestamp, eighteen minutes after a deletion the audit had already confirmed clean.
+A second deletion held. If one keeps coming back, delete it from drive.google.com
+(`.kiro/steering/environment.md`).
+
+Git keeps the removed notes in history, so the deletion is recoverable; name the commit in the backlog
+entry so the recovery point is findable.

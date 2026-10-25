@@ -1,7 +1,7 @@
 ---
 tags:
   - meta
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F106): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F107): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -5753,8 +5753,9 @@ other agent's timing. Verified the same day: the fixture test grew an exclusion 
 ## F106. CM1000 moved to 2026 Höst, its course files kept out of git, and its 95 PDFs planned for conversion
 
 **Date:** 2026-10-24
-**Status:** Open. The plan is approved (14:09). The conversion runs outside the vault and is recorded
-here when it lands.
+**Status:** Open — converting. The plan was approved 2026-10-24 14:09. Paused 2026-10-25 13:24 in batch
+4 of 4: 71 of 95 PDFs converted, verified and deployed to both trees; the rest is on the way (see *The
+conversion so far* below).
 
 ### What was wrong
 
@@ -5804,7 +5805,7 @@ here when it lands.
   pending conversion. Corrected to the author in the same session.
 - **A copy silently copied nothing.** `Copy-Item -LiteralPath '<dir>\*'` does not expand the wildcard;
   it copied none of the pilot's 13 files and raised no error. Only a file count, 7 where 20 were
-  expected, showed it. Not added to `traps.md`, because it has not yet been reproduced in isolation.
+  expected, showed it. Reproduced in isolation on 2026-10-25 and added to `traps.md` as T25.
 - **The pdf2md docs and the knowledge base still name `C:\pdf2md`**, but the repository is now
   `C:\dev\pdf2md`, and its marker launcher fails after the move: `marker_single.exe --help` exits 1
   with no output. Reported, not repaired here.
@@ -5816,3 +5817,145 @@ Before the handover to the committing agent, 2026-10-24 14:23: `Vault-Audit` `RE
 `Test-DocHygiene` clean. `git status` lists 1 new file in the course folder, its `_index.md`, and 95
 ignored files under CM1000. The backlog's 63 new lines arrived LF in a CRLF file and were converted
 back, text unchanged (5 814 CRLF, 0 lone LF).
+
+### The conversion so far (2026-10-25 13:24, figures from `C:\dev\pdf2md\out\CM1000\logs\`)
+
+- **71 of 95 PDFs** are in `Filer/Litteraturlista/` and `Filer/Canvas/AI-optimerad Markdown/` and in
+  the raw tree `G:\My Drive\KTH\2026 Höst\CM1000 Diskret Matematik\AI-optimerad Markdown\`, md5
+  read back. 386 image links in both trees, 0 broken. `git status` lists none of them: all ignored.
+- **The method, the tools and every lesson are in pdf2md**, where the next conversion will look:
+  `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`, tools in `prep\cm1000\`, run record
+  `out\CM1000\RUNLOG.md`, resume steps `out\CM1000\RESUME.md`, log entry `CONVERSION_LOG.md` §55.
+- **What the checks found:** the second reader gave 119 FIX verdicts — almost all swapped signs the
+  token verifier cannot see — 167 SOURCE (errors printed in the source, kept and listed in each file's
+  `## Avvikelser`) and 156 ORACLE. Planted errors to test that reader: 66, all caught. The figure
+  reader corrected 3 graphs; on one, both readers were wrong and the main agent read the crop.
+- **Left:** batch 4's figure reading (15 units), gates and deploy (kap5, kap6, kap9, every tentamen
+  and omtentamen, KursPM); the `_INDEX.md` with the area matrix; the `related` links; the final checks.
+- **Lessons recorded for the vault:** `lessons-learned.md` 2026-10-24 and 2026-10-25 (four entries),
+  and `traps.md` T25 (`Copy-Item -LiteralPath` with a wildcard copies nothing, reproduced).
+
+## F107. The session's failures turned into rules, and two scripts that refuse a misbound argument
+
+**Date:** 2026-10-25
+**Status:** Closed.
+
+### Why
+
+F105's conversion worked, but the session around it produced four failures that no document predicted,
+and one of them wrote 536 personal study files into the author's employer-synced OneDrive. The author
+asked for the lessons to be recorded and, where possible, enforced rather than merely written down:
+"my goal is to always continue optimizing the workflow so we never stagnate and always learn and get
+better."
+
+The plan was reviewed by two lenses before implementation, and both rejected the first draft. The
+premise lens (`premise-reviewer`) returned GO WITH CHANGES; the conformance lens (`kiro_default`,
+read and grep only) returned CHANGES REQUIRED. What they changed is recorded under *The review* below,
+because the corrections are the useful part.
+
+### What changed
+
+**`traps.md`**
+
+- **T2 extended** with the case that failed a staging attempt on 2026-10-24: `git status --porcelain -z`
+  returned `Hårdvara` as `H├Ñrdvara`, and `git add --pathspec-from-file` exited 128 with
+  `did not match any files`. The fix recorded is both halves - wrap every path-returning git call in
+  `[Console]::OutputEncoding`, and hand paths back with `--pathspec-from-file` plus
+  `--pathspec-file-nul` - plus a round-trip assertion: refuse the batch if any path matches
+  `[\u2500-\u257F\uFFFD]`, because a correctly decoded path here never contains one.
+- **New T26**: an array passed to `powershell -File` arrives as N arguments, and the surplus binds to
+  the first parameter that still has a free position. `-ExcludePath @('CM1000','SF1686')` gave
+  `-ExcludePath` only `CM1000`, and `SF1686` bound to `-BackupDir` as a relative path, which .NET
+  resolved against the process working directory (T7). It printed
+  `SUMMARY convert=536 ... skipped=0 failed=0` and exited 0, so it met the file's silent-failure
+  criterion. The header count went from twenty-five to twenty-six in the same edit.
+
+**`lessons-learned.md`** - a figure derived from one scope was asserted about another. The plan
+predicted the audit would report `inlineStyleTags 1` after the run; it reported clean, because the
+converter's scope is the audit's plus every `_index.md` while the audit's `InScope` excludes every
+`_index.md`. The prediction had already been copied into four documents. Same family as the in-sample
+coverage entry and the F68 `notesInScope` drift: the arithmetic was right and the population was wrong.
+
+**`conventions.md` §6, new** - what to do when a second agent is working in this vault, which the
+premise lens identified as the root cause of half the session's near-misses and the biggest gap in the
+documentation. Seven rules: an own `-BaselinePath` per agent (T22), confine yourself to named paths and
+`-ExcludePath` theirs, stage by explicit list and never `git add -A` (F91), assert nothing of theirs is
+staged before committing, re-read `git status` immediately before staging, commit a shared file whole
+and say so in the message, and do not assume they are finished.
+
+**`Meta/Vault Standard.md` §7, new subsection** - dropping a finished course is two steps, the notes
+and then the folder itself. Stopping after the first leaves something that still looks like a course:
+an emptied `SF1686 Flervariabelanalys` produced `courseMissingIndex 1` and `courseMissingFolder 4`.
+Only the switch-less audit sees it, because `-ContentOnly` skips exactly those two checks (T5), so the
+pre-push hook and CI stay green.
+
+**`environment.md`** - the Quartz repo's local path (`C:\dev\KTHObsidianQuartz`, branch `v5`), and a
+new fact: **a deletion can be undone by Drive's sync.** That SF1686 folder was deleted, the audit
+confirmed clean, and eighteen minutes later it was back - empty, with its original creation timestamp,
+so Drive had re-created it from its server copy. A second deletion held for the rest of the session.
+Git cannot warn about this, because git stores no empty directory.
+
+**`current-state.md`** - the SR-settings paragraph asserted `flashcardTags` was `#HI1031, #HI1032`.
+Measured from `data.json`, the live value is `#HI1031` alone, so HI1032's four decks are outside the
+review scope entirely. The paragraph now points at the file as the source instead of carrying a copy of
+the value. **The setting was not changed**: the review scope is the author's, and it was reported to
+him.
+
+**The two writing scripts now refuse a stray positional argument.** `Convert-TagsToList.ps1` and
+`Format-NoteWrapping.ps1` give `-Root` an explicit `Position` and add a `ValueFromRemainingArguments`
+sink that exits 2. `Format-FrontmatterTags.ps1` is excluded, being superseded and kept untouched on the
+author's instruction. `scripts.md` rule 3 now requires both halves of this of any new writing script,
+and both table rows document the new exit code.
+
+### How it was verified
+
+**The parameter-binding fix was designed on measurement, not belief.** Three param-block shapes were
+built under `%TEMP%` and invoked exactly as the incident was:
+
+| Shape | Result |
+|---|---|
+| every parameter implicitly positional, as before | `BackupDir=[SF1686]`, `ExcludePath=[CM1000]`, exit 0 - reproduces the incident |
+| a `ValueFromRemainingArguments` sink added, parameters otherwise unchanged | identical - **the sink alone is inert** |
+| `Position = 0` on one parameter plus the sink | `REFUSED surplus=[SF1686]`, exit 9 |
+
+So an explicit `Position` on one parameter makes the rest name-only, and only then can a sink catch the
+surplus. Both halves are required, which is what T26 now says.
+
+**On the real scripts:** the exact incident invocation now exits **2** with
+`unexpected argument(s): SF1686` and leaves the note untouched; a bare stray positional is refused on
+both scripts; the correct named invocation still converts; and `Format-NoteWrapping`'s own
+refusal-without-scope (exit 1) and `-All` dry run (exit 0) are unaffected. No positional caller
+existed to break - every documented invocation uses named parameters, and neither the pre-push hook nor
+CI invokes either script.
+
+**Gates:** `Convert-TagsToList`'s fixture **90 of 90 pass**; `Test-ScriptHygiene` clean over 19 files
+and 97 checks; `Test-DocHygiene` clean, with 17 lines captured, which is itself the proof the
+information stream was read rather than silently dropped (T23); lint **550 files, 0 issues**, run with
+the glob **unquoted** through `cmd /c` and the `Linting: N` line asserted non-zero, because a quoted
+glob there lints zero files and reads clean (T11); and `Vault-Audit.ps1` with **no switches**, so the
+two checks `-ContentOnly` skips were actually exercised.
+
+### The review, and what it caught
+
+Both lenses were given the draft; neither was given the other's findings.
+
+- **The trap count was wrong.** The draft said the file held twenty-four entries and numbered the new
+  trap T25. It holds twenty-five, and T25 already exists (`Copy-Item -LiteralPath`). Verified
+  independently before accepting: 25 headings, T1-T25, no gaps. The new entry is T26.
+- **The proposed guard did nothing.** The draft added a remaining-arguments sink and claimed it would
+  have prevented the incident. The conformance lens worked out from the param block that the stray
+  value reaches `-BackupDir` before any sink sees it. The measurement above confirmed it, and produced
+  the shape that does work.
+- **The evidence for a new script was false.** The draft proposed `New-CommitPlan.ps1` on the grounds
+  it had been "useful twice". It had never existed; the *need* arose twice, in one session. It also
+  would not have caught any of this session's failures. **Deferred**, with the need recorded here so a
+  second genuine recurrence promotes it, per `scripts.md` rule 6. The working version stays in `%TEMP%`.
+- **Two items were duplicates.** A proposed entry on empty course folders restated T5, and one on
+  result-file hygiene was already in `lessons-learned.md`. The first was trimmed to the procedure only;
+  the second was dropped rather than dilute the six rules for adding a script.
+- **The draft was purely additive**, and both lenses objected: every one of these files is loaded into
+  every session, so growth is paid for in speed. The result adds **one** trap entry, folds one finding
+  into an existing entry, and drops two planned items.
+- **The premise lens reordered the priorities.** It verified `flashcardTags` itself and pointed out that
+  of everything proposed, exactly one item affects the author's studying rather than the next agent
+  session. That item leads the handover.

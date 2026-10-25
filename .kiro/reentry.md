@@ -8,40 +8,44 @@ your context — the hard rules, the environment traps, the script library, the 
 re-read them looking for basics.** This file carries only what is task-specific plus the handful of
 things that have actually bitten.
 
-Last updated **2026-10-24, 12:00**. Live courses: HI1031 and HI1032.
+Last updated **2026-10-25, 13:55**, before a compact. Live courses: HI1031, HI1032 and CM1000 (period 2,
+starts 2026-10-26; KS1 10 Nov on chapters 1–3, KS2 30 Nov on chapters 4, 7, 8, exam 5 Jan).
 
 ---
 
-## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him
+## FIRST TASK AFTER RE-ENTRY: resume the CM1000 PDF conversion
 
-**The tag conversion is done (F105, run 2026-10-24 13:49).** 536 notes converted; SR compare clean,
-audit clean, lint 550/0, deck hygiene clean. Backup in
-`%USERPROFILE%\KTHObsidian-backups\tags-to-list-2026-10-24-135010\`.
+**He said "continue as you want, I trust you" (2026-10-25 13:49), then compacted.** He is away for
+hours at a time and wants the work finished autonomously; decide what a choice needs, record the
+decision and its reason in `C:\dev\pdf2md\out\CM1000\RUNLOG.md`, and do not stop to ask.
 
-- **CM1000 and SF1686 were excluded**, because a second agent is converting the CM1000 PDFs. CM1000's
-  `_index.md` is therefore still inline. The audit does not see it (`_index.md` is outside the audit's
-  scope), so a plain `Convert-TagsToList.ps1 -Apply` can convert it whenever that agent is finished.
-- **Never "repair" tags with `Format-FrontmatterTags.ps1`.** It is superseded and converts the wrong way.
-- **Never pass an array to `powershell -File`.** It arrives as N arguments and the surplus binds
-  positionally — that is how 536 backups went into an employer-synced OneDrive folder on 2026-10-24
-  (`lessons-learned.md`).
+1. Read **`C:\dev\pdf2md\out\CM1000\RESUME.md`** — every remaining step with its command.
+2. Run `& "C:\dev\pdf2md\.venv\Scripts\python.exe" "C:\dev\pdf2md\prep\cm1000\cm1000-progress.py"` —
+   the state from the files. If it disagrees with RESUME.md or this file, the script is right.
+3. The method, the tools and why each check exists: `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`.
 
-**On subagents:** on 2026-10-24 three single-stage pipelines in a row completed without error. One stage
-per pipeline remains the rule, because a failed stage loses everything in its batch
-(`lessons-learned.md`, 2026-10-22).
+**At the pause:** 71 of 95 PDFs done and deployed to both trees. Batch 4 (24 units: kap5, kap6, kap9,
+the tentor/omtentor, KursPM) is transcribed and second-read; 15 units need the figure reader C, 2 need
+join + compare, 7 need only the gate. Then `_INDEX.md`, `related` links, final checks, close F106.
 
-### Finished since the last compact (F101-F105, nothing committed)
+**The limits that cost hours when broken** (RUNBOOK §8): one image per read call; **at most 4
+image-reading stages per subagent call** (calls of 9-10 timed out and kept nothing); split figure work
+small (`cm1000-csplit.py`); never ask a subagent to count; read every disputed figure yourself — on one
+graph both readers were wrong.
 
-- **F101** — LaTeX for genuine math in HI1031/HI1032, plus a new audit check, `rawMathNotLatex`.
-- **F102** — three HI1032 Extra decks with 147 cards. **Do not prune them** under the few-cards rule: he
-  set the rule aside for them without changing it.
-- **F103** — the `HI1032 Tentasvar - Svaga ämnen.md` reading file. It holds the topics whose cards are
-  still unmarked, ranked worst first, and a fixed Räkna själv list. The build script lives in `%TEMP%`
-  and is not durable; the method is in F103.
-- **F104** — the HI1031 `Tentafrågor - Nyckelord` keyword deck for the oral exam: 52 cards, one per
-  question. The seven medium depth gaps from the manuscript audit have trigger keywords in it.
-- **F105** — the tag convention flipped to YAML list form. The new `Convert-TagsToList.ps1` waits for him
-  to run it; see FIRST TASK.
+**Vault writes:** the conversion writes only under gitignored `Filer/` paths, the raw tree outside the
+vault, and `C:\dev\pdf2md\`. The tracked edits left: close F106 in the backlog (a CRLF file — check line
+endings after editing), reset the CM1000 section of `current-state.md`, run the audit, lint and
+Test-DocHygiene.
+
+### Done since the last compact (F106, open)
+
+- **F106** — CM1000 moved to 2026 Höst; its 86 Canvas PDFs moved into `Filer/Canvas/` so none can be
+  published; `_index.md` written (list-form tags); `llms.txt`, the 2026 MOC and Vault Standard §4
+  updated; the conversion plan reviewed by three lenses and approved with one change (a copy in the raw
+  tree). Lessons: `lessons-learned.md` 2026-10-24/25, `traps.md` T25.
+- **F105** — the tag conversion ran on 2026-10-24 13:49 and is pushed. **Never "repair" tags with
+  `Format-FrontmatterTags.ps1`.** Never pass an array to `powershell -File` (`lessons-learned.md`).
 
 **Unapplied findings from two audits** are in `.kiro/reports/parked-findings-2026-10-22.md`: HI1032
 lecture coverage gaps and the HI1031 manuscript's low depth gaps. **They are his to decide. Do not start
@@ -53,8 +57,9 @@ them.**
    Run `Test-DeckHygiene.ps1 -All` and read its lines. `-All` is a **survey, not a gate**.
 2. **A handoff prompt for an outside agent exists only in an older transcript.** `.kiro/sessions.md`
    has the row. If he wants it again it has to be rebuilt.
-3. **The tag conversion (F105) is his to run**, with the commands in the plan. Do not run it for him and
-   do not touch the old `Format-FrontmatterTags.ps1`.
+3. **An empty folder `KTH/2025 Höst/SF1686 Flervariabelanalys/`** (created 2026-10-24 19:37, not by an
+   agent of this work) makes the local audit report `courseMissingFolder 4` and `courseMissingIndex 1`.
+   Git does not store empty folders, so CI is unaffected. Whether to delete it is his call; ask once.
 
 ---
 
@@ -124,14 +129,11 @@ All are in `product.md` in full. Repeated here because each was discovered by ge
 
 ## STATE OF THE REPOSITORY
 
-**Not committed since 2026-10-05.** `HEAD` and `origin/main` are both at the F96 commit. Everything
-since — F97-F105's HI1032 and HI1031 work, the new decks and files, the tag-convention change, and these
-docs — sits uncommitted in the working tree. Several new files are untracked: the HI1032 theory notes,
-Föreläsningskarta, Svaga ämnen and the three Extra decks, HI1031's Nyckelord, `Convert-TagsToList.ps1`,
-and the new `.kiro/reports/` plans. **A commit must include the flipped audit and the converted notes
-together**, so it only makes sense after he has run the conversion.
+**At 2026-10-25 13:55: `HEAD` = `origin/main` = `b7bbe4f`**, pushed by a second agent on 2026-10-24, and
+the working tree holds only this session's doc edits (`current-state.md`, `reentry.md`, `traps.md`,
+`lessons-learned.md`, the backlog's F106). Run `git status` rather than trusting this line.
 
-**He has not asked for a commit.** Do not commit unless he does. If he asks, check with
+**He has not asked for a commit of these.** Do not commit unless he does. If he asks, check with
 `git rev-parse HEAD` against `git ls-remote origin refs/heads/main` first.
 
 **Stage by name, never a directory.** `git add -u` on `.kiro` or `Meta` swept a concurrent session's

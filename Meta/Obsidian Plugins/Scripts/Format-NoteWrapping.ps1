@@ -62,14 +62,24 @@
 # (traps T1, T2).
 #
 param(
-  [string]$Root,
+  # The explicit Position on -Root plus the $Surplus sink make every other parameter NAME-ONLY, so a
+  # stray positional argument is refused rather than binding to whichever parameter comes next -
+  # -BackupDir here, which is how a sibling script wrote 536 backups into an employer-synced folder
+  # on 2026-10-24. A sink without the explicit Position is inert (traps.md T26, measured in PS 5.1).
+  [Parameter(Position = 0)] [string]$Root,
   [string]$Filter,
   [switch]$All,
   [switch]$Apply,
   [switch]$Detail,
   [switch]$Force,
-  [string]$BackupDir
+  [string]$BackupDir,
+  [Parameter(ValueFromRemainingArguments = $true)] $Surplus
 )
+if ($Surplus) {
+  Write-Output ('ERROR: unexpected argument(s): ' + ($Surplus -join ' '))
+  Write-Output '       Every parameter except -Root must be named (traps.md T26).'
+  exit 2
+}
 $ErrorActionPreference = 'Stop'
 
 if (-not $Filter -and -not $All) {
