@@ -77,8 +77,9 @@ foreach ($x in ($text | ConvertFrom-Json)) {
 
 ## Capture output to a file, not to stdout
 
-Shell stdout capture truncates on Swedish characters. Write results to a file under `%TEMP%`
-and read that file instead.
+Shell stdout capture stops at the first non-ASCII character, silently (**`traps.md` T27**, reproduced
+2026-10-25). Write results to a UTF-8 file under `%TEMP%` and read that file with the read tool, or
+print only ASCII.
 
 **But not with `>`.** PowerShell 5.1's redirection operator writes **UTF-16LE with a BOM** — the
 first two bytes are `FF FE` — so the resulting file is not UTF-8 and a reader that expects UTF-8

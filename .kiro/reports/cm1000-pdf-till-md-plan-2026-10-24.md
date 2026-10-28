@@ -98,7 +98,6 @@ would carry the defects above, reflowed and without the per-font information the
 launcher is also broken after the repo moved: `marker_single.exe --help` exits 1 with no output.
 Whether marker could turn this layer into LaTeX at all was not tested.
 
-
 ## 3. Where the files go
 
 The layout HI1032 already uses, so the vault keeps one way of doing this (Vault Standard §4):
@@ -212,7 +211,6 @@ processed_by: "CM1000 pipeline: repaired text layer + visual transcription, veri
   sitting. That matrix is the most useful thing in the batch for an AI asked to find all past
   problems on, say, relations.
 
-
 ## 5. The pipeline
 
 Per PDF, run in `C:\dev\pdf2md\out\CM1000\<stem>\`. **Two routes, chosen by what a mistake costs.**
@@ -308,7 +306,6 @@ writers to one file is how a parallel run silently loses work (T22).
 - Every image link resolves from the file's own folder; no orphan in `assets/`.
 - Problems counted per exam against the printed numbering, so a dropped problem cannot pass.
 - A spot read: 5 random pages that passed everything, read once more against the image.
-
 
 ## 6. Deploy to the vault
 

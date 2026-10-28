@@ -5,11 +5,27 @@ description: In-flight state for work that is currently unfinished. Read at the 
 
 # Current state
 
-**Status: IN PROGRESS — converting CM1000's 95 PDFs (F106), paused 2026-10-25 13:24 in batch 4 of 4;
-resume from `C:\dev\pdf2md\out\CM1000\RESUME.md`.** The section *In flight* below has the details.
+**Status: nothing in flight (2026-10-26 09:30).** The CM1000 study material is done (**F110**):
+`Anteckningar/CM1000 Tentaanalys - AI-kontext.md` (all 83 old exam files, 388 problem rows, one
+section per area) and six decks `CM1000 Begrepp - Kap 01 Logik`, `02 Mängdlära`, `03 Funktioner`,
+`04 Talteori`, `07 Grafteori`, `08 Kombinatorik` (164 cards, all `nosr`). Not committed.
 
-**Done before it: the tag convention is YAML list form and the vault is converted (F105, run 2026-10-24
-13:49).** 536 notes converted, 0 skipped, 0 failed. **Verified after the run:** `Get-SRIntegrity -Compare`
+**His CM1000 card decisions (2026-10-25, binding for any further CM1000 cards):** card building blocks
+and method skeletons, never whole proofs; one deck per chapter; `nosr` on by default — he flips it;
+prefer reversed `;;`/`??`; nothing the formelsamling already prints; focus on the most-asked types.
+**Open for him:** whether the formelsamling ("för KS2") is handed out at KS1 — the HT2026 KursPM is
+silent. CM1000 is a written exam (TEN1) plus muntor (RED1).
+
+---
+
+## Background (done): the finishing and restructure passes
+
+The session-lessons pass is done (F108, 2026-10-25 18:20; plan
+`.kiro/reports/session-lessons-plan-2026-10-25.md`). Before it, CM1000's 95 PDFs were converted (F106, done 2026-10-25 15:04) — all 95
+deployed to both trees, md5-identical bar each tree's own `_INDEX.md`, 0 broken links, self-test 21/21,
+and `related:` links on 29 problem↔solution pairs. The tag convention is YAML list form and the vault
+is converted (F105, run 2026-10-24 13:49). 536 notes converted, 0 skipped, 0 failed. **Verified after
+the run:** `Get-SRIntegrity -Compare`
 against an own baseline `RESULT: clean` (`nosr` 59 and 445 excluded cards unchanged), `Vault-Audit`
 `RESULT: clean`, lint 550/0, deck hygiene clean, and a SHA-256 diff showing exactly the 536 manifest
 files changed and nothing else. The backup is in
@@ -23,39 +39,30 @@ oral exam (F98). **F102's three HI1032 Extra decks (147 cards) must not be prune
 rule; he set it aside for them without changing it.** The phone-sync item at the bottom has been parked
 since 2026-09-08.
 
-## In flight: converting CM1000's 95 PDFs to AI-optimised Markdown (approved 2026-10-24 14:09)
+## Done: CM1000's 95 PDFs are converted (F106, 2026-10-25 15:04)
 
-**Approved as proposed, with one change: every converted file is also copied to the raw tree**
-`G:\My Drive\KTH\2026 Höst\CM1000 Diskret Matematik\AI-optimerad Markdown\`. Plan:
-`.kiro/reports/cm1000-pdf-till-md-plan-2026-10-24.md`; record: F106. Tools: `C:\dev\pdf2md\prep\cm1000\`; pilot
-evidence: `C:\dev\pdf2md\out\CM1000\_pilot\`. The pdf2md repo moved from `C:\pdf2md` to
-`C:\dev\pdf2md`; its own docs and the knowledge base still name the old path, and its marker launcher
-is broken after the move. CM1000 moved from `2025 Höst` to `2026 Höst`; `llms.txt` and the 2026 MOC
-were updated to match. The old `2025 Höst/CM1000 .../_index.md` shows as deleted in git — the author
-deleted that folder himself.
+All 95 converted to AI-optimised Markdown, faithful to the printed page, and deployed to the gitignored
+`Filer/Litteraturlista/` + `Filer/Canvas/AI-optimerad Markdown/` and to the raw tree
+`G:\My Drive\KTH\2026 Höst\CM1000 Diskret Matematik\AI-optimerad Markdown\`. The 95 deliverables are
+md5-identical across the two trees (only each tree's own `_INDEX.md` differs, by design); 524 image
+links, 0 broken; `related:` on 29 problem↔solution pairs; self-test 21/21. Everything is in **F106** and
+the method in `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`. The four tool bugs fixed while finishing
+(verdicts BOM, crop-name `(1)` regex ×2, gate token) are in `out\CM1000\RUNLOG.md` and F106.
 
-**The vault was handed to a second agent to commit and push, at the author's request (14:09).** This
-work's last tracked edits were made before that: CM1000's `_index.md` in list form, the plan's
-decisions, F106, and this section. From here the conversion writes only under
-`C:\dev\pdf2md\out\CM1000\`, the raw tree, and the gitignored `Filer/` paths, so it cannot dirty the
-tree. The one tracked edit left is closing F106 and this section when the work lands.
+**Not committed by this work.** The conversion wrote only gitignored and out-of-vault paths, so the
+vault tree carries only this session's doc edits (F106, `current-state`, `reentry`, `lessons-learned`,
+`traps` T25). The author has not asked for a commit; the committing agent is separate.
 
-**Paused 2026-10-25 13:24 at the author's request, in batch 4 of 4.** 71 of the 95 PDFs are converted,
-verified and deployed to both trees. The other 24 (kap5, kap6, kap9, the tentor and omtentor, the
-KursPM) are transcribed and second-read, and wait for the figure reading, the gates and the deploy;
-`_INDEX.md`, the `related` links and the final checks are not built yet. **Resume from
-`C:\dev\pdf2md\out\CM1000\RESUME.md`**, which lists every remaining step with its command;
-`C:\dev\pdf2md\prep\cm1000\cm1000-progress.py` derives the state from the files on disk. Every
-decision taken without the author is in `C:\dev\pdf2md\out\CM1000\RUNLOG.md`.
-
-**The author left the remaining choices to the agent (2026-10-25 13:49: "continue as you want, I trust
-you").** Decided and recorded in RESUME.md: the figure reader still reads every remaining figure; the
-six exam/solution twin drawings are read once. The method and every lesson are written down where the
-next conversion will look: `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`.
+**The vault's exam tree was restructured by exam type (F109, 2026-10-25).** The 83 exam `.md` + 83
+`.pdf` now live in `KS1`…`KS4`, `Fx1`, `Fx2`, `Tentor`, `Komplettering` under `Filer/Canvas/…` instead
+of `HT20xx/` folders, renamed `<term> <exam>[ - Lösningar]`, names fixed from each file's `answer_key`
+and title. **The raw tree outside the vault keeps the `HT20xx/` layout**, so the two diverge on
+purpose; `cm1000-deploy.py` refuses the vault (exit 2) to keep it that way. All still gitignored.
 
 **An empty folder `KTH/2025 Höst/SF1686 Flervariabelanalys/`** (created 2026-10-24 19:37, not by this
 work) makes the local audit report `courseMissingFolder 4` and `courseMissingIndex 1`. Git stores no
-empty folder, so CI is unaffected; deleting it is his call.
+empty folder, so CI is unaffected. It was gone at 15:50 on 2026-10-25 and Drive re-created it at 17:32
+(still there 18:09), so only removing it on drive.google.com holds; that is his call.
 
 ## Done: the tag conversion was run (F105, 2026-10-24 13:49)
 

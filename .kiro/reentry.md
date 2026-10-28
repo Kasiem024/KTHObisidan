@@ -8,42 +8,34 @@ your context — the hard rules, the environment traps, the script library, the 
 re-read them looking for basics.** This file carries only what is task-specific plus the handful of
 things that have actually bitten.
 
-Last updated **2026-10-25, 13:55**, before a compact. Live courses: HI1031, HI1032 and CM1000 (period 2,
+Last updated **2026-10-26, 09:35**, after F110. Live courses: HI1031, HI1032 and CM1000 (period 2,
 starts 2026-10-26; KS1 10 Nov on chapters 1–3, KS2 30 Nov on chapters 4, 7, 8, exam 5 Jan).
 
 ---
 
-## FIRST TASK AFTER RE-ENTRY: resume the CM1000 PDF conversion
+## FIRST TASK AFTER RE-ENTRY: nothing is assigned — ask him what is next
 
-**He said "continue as you want, I trust you" (2026-10-25 13:49), then compacted.** He is away for
-hours at a time and wants the work finished autonomously; decide what a choice needs, record the
-decision and its reason in `C:\dev\pdf2md\out\CM1000\RUNLOG.md`, and do not stop to ask.
+**F110 is done:** `Anteckningar/CM1000 Tentaanalys - AI-kontext.md` (all 83 old exam files, 388
+problem rows, per-area types with counts, the examiner's methods, model solutions, HT2026 rules from
+the KursPM) and six decks `CM1000 Begrepp - Kap 01/02/03/04/07/08` (164 cards, `nosr` on, his
+decision). Two things are his: (1) ask the examiner whether the formelsamling ("för KS2") is handed
+out at KS1 — the cards assume it is; (2) remove `nosr` when he wants the decks in review. His card
+decisions for CM1000 are in `current-state.md`. Work files (briefs, checker, extraction) are in
+`%TEMP%\cm1000-tentaanalys\`; the plan is `.kiro/reports/cm1000-tentaanalys-plan-2026-10-25.md`.
 
-1. Read **`C:\dev\pdf2md\out\CM1000\RESUME.md`** — every remaining step with its command.
-2. Run `& "C:\dev\pdf2md\.venv\Scripts\python.exe" "C:\dev\pdf2md\prep\cm1000\cm1000-progress.py"` —
-   the state from the files. If it disagrees with RESUME.md or this file, the script is right.
-3. The method, the tools and why each check exists: `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`.
+### Done recently (F106, F108, F109, F110 closed)
 
-**At the pause:** 71 of 95 PDFs done and deployed to both trees. Batch 4 (24 units: kap5, kap6, kap9,
-the tentor/omtentor, KursPM) is transcribed and second-read; 15 units need the figure reader C, 2 need
-join + compare, 7 need only the gate. Then `_INDEX.md`, `related` links, final checks, close F106.
-
-**The limits that cost hours when broken** (RUNBOOK §8): one image per read call; **at most 4
-image-reading stages per subagent call** (calls of 9-10 timed out and kept nothing); split figure work
-small (`cm1000-csplit.py`); never ask a subagent to count; read every disputed figure yourself — on one
-graph both readers were wrong.
-
-**Vault writes:** the conversion writes only under gitignored `Filer/` paths, the raw tree outside the
-vault, and `C:\dev\pdf2md\`. The tracked edits left: close F106 in the backlog (a CRLF file — check line
-endings after editing), reset the CM1000 section of `current-state.md`, run the audit, lint and
-Test-DocHygiene.
-
-### Done since the last compact (F106, open)
-
-- **F106** — CM1000 moved to 2026 Höst; its 86 Canvas PDFs moved into `Filer/Canvas/` so none can be
-  published; `_index.md` written (list-form tags); `llms.txt`, the 2026 MOC and Vault Standard §4
-  updated; the conversion plan reviewed by three lenses and approved with one change (a copy in the raw
-  tree). Lessons: `lessons-learned.md` 2026-10-24/25, `traps.md` T25.
+- **F109** — the vault's CM1000 exam tree restructured by exam type: 83 `.md` + 83 `.pdf` moved into
+  `KS1`…`KS4`, `Fx1`, `Fx2`, `Tentor`, `Komplettering` under `Filer/Canvas/…`, renamed `<term>
+  <exam>[ - Lösningar]`, names fixed from each file's `answer_key`/title. Raw tree kept the `HT20xx/`
+  layout on purpose; `cm1000-deploy.py` now refuses the vault. Backup + reverse map for rollback.
+  Lessons: `lessons-learned.md` 2026-10-25 (ambiguous-key bug has siblings; existence ≠ correctness).
+- **F108** — the finishing session's lessons recorded and its tools fixed in both repositories:
+  `traps.md` T27 (console output stops at the first non-ASCII character, silently), a `mixedEol`
+  check in `Test-DocHygiene.ps1`, several `lessons-learned.md` entries; in pdf2md one copy of the
+  fragile rules, a quieter figure comparer and a stricter gate, each with a self-test.
+- **F106** — all 95 CM1000 PDFs converted; `_INDEX.md` per tree; `related:` on 29 pairs. Lessons in
+  `lessons-learned.md` 2026-10-24/25, `traps.md` T25 and T27.
 - **F105** — the tag conversion ran on 2026-10-24 13:49 and is pushed. **Never "repair" tags with
   `Format-FrontmatterTags.ps1`.** Never pass an array to `powershell -File` (`lessons-learned.md`).
 
@@ -59,7 +51,10 @@ them.**
    has the row. If he wants it again it has to be rebuilt.
 3. **An empty folder `KTH/2025 Höst/SF1686 Flervariabelanalys/`** (created 2026-10-24 19:37, not by an
    agent of this work) makes the local audit report `courseMissingFolder 4` and `courseMissingIndex 1`.
-   Git does not store empty folders, so CI is unaffected. Whether to delete it is his call; ask once.
+   Git does not store empty folders, so CI is unaffected. **It was deleted and came back:** gone at
+   15:50 on 2026-10-25, re-created by Drive at 17:32, still there at 18:09. Deleting it locally does not
+   hold; it has to be removed on drive.google.com (`environment.md`, *Deletions go to Drive's cloud
+   trash*). Whether to do that is his call; ask once.
 
 ---
 
@@ -129,9 +124,13 @@ All are in `product.md` in full. Repeated here because each was discovered by ge
 
 ## STATE OF THE REPOSITORY
 
-**At 2026-10-25 13:55: `HEAD` = `origin/main` = `b7bbe4f`**, pushed by a second agent on 2026-10-24, and
-the working tree holds only this session's doc edits (`current-state.md`, `reentry.md`, `traps.md`,
-`lessons-learned.md`, the backlog's F106). Run `git status` rather than trusting this line.
+**Read the state from git, not from here** — `git status` and `git log -1 --oneline`, then
+`git ls-remote origin refs/heads/main`. A commit id written in this file goes stale at the next commit
+(the second agent committed twice on 2026-10-25 while this file named the old one). Expect the working
+tree to hold this session's **doc and script edits (F106, F108, F109)** and **nothing under a CM1000
+`Filer/` path** — the 83+83 exam files the restructure moved are all gitignored. The two new
+`.kiro/reports/cm1000-*-plan-2026-10-25.md` show as untracked. The exam-file move itself is invisible
+to git by design.
 
 **He has not asked for a commit of these.** Do not commit unless he does. If he asks, check with
 `git rev-parse HEAD` against `git ls-remote origin refs/heads/main` first.

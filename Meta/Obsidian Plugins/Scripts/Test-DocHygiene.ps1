@@ -24,10 +24,13 @@
 #                 byte-exact as SOURCES (see that folder's README). Odd spacing and CRLF are
 #                 expected and are NOT findings. Checked only for BOM and for corruption.
 #
-#   Five checks. Each names the file and, where meaningful, the line.
+#   Six checks. Each names the file and, where meaningful, the line.
 #
 #     encoding    a UTF-8 BOM is present. Both scopes; a BOM has never been wanted under .kiro/
 #     whitespace  trailing spaces, or 3+ consecutive newlines. authored only
+#     mixedEol    one file holds BOTH CRLF and lone LF line endings. authored only. A uniform CRLF
+#                 file is not a finding (see the notes below); a mixed one is what an append in a
+#                 second convention leaves behind
 #     corruption  the damage signature of a botched bulk replacement - two adjacent en/em dashes,
 #                 or a mojibake byte sequence. Both scopes. This is the defect that went
 #                 undetected on 2026-09-07. Content inside `inline code spans` is exempt, because
@@ -39,9 +42,9 @@
 #                 minute before the file existed
 #
 #   Reported as NOTES rather than findings, because neither is damage:
-#     - CR characters in an authored doc. The vault mixes LF and CRLF on purpose
-#       (Meta/Vault Standard.md is LF, Meta/Vault Findings & Backlog.md is CRLF), so this is a
-#       portability warning for anyone writing a line-anchored regex - traps T12 - not a defect.
+#     - CR characters in an authored doc whose line endings are ALL CRLF. The vault mixes LF and CRLF
+#       on purpose (Meta/Vault Standard.md is LF, Meta/Vault Findings & Backlog.md is CRLF), so this
+#       is a portability warning for anyone writing a line-anchored regex - traps T12 - not a defect.
 #     - The skill navigation invariant: each .kiro/skills/<name>/SKILL.md should be smaller than
 #       the sum of its references/*.md.
 #
@@ -142,15 +145,29 @@ function Test-OneFile($file, [bool]$isAuthored) {
 
     if (-not $isAuthored) { return }
 
-    # 2. line endings - information, not a finding: the vault mixes conventions on purpose (traps T12)
+    # 2. line endings. A uniform CRLF file is information, not a finding: the vault mixes conventions
+    #    on purpose (traps T12) and a fresh clone under core.autocrlf=true is CRLF throughout (T5).
+    #    A file holding BOTH is a finding (mixedEol): it is what an append in a second convention leaves,
+    #    and a line-anchored edit then fails on part of the file only. Added 2026-10-25, when
+    #    lessons-learned.md was mixed (1109 CRLF, 33 LF) an hour after it had been normalised.
     $crCount = 0
     foreach ($ch in $text.ToCharArray()) { if ($ch -eq $CR) { $crCount++ } }
-    if ($crCount -gt 0) { Add-Note $rel "$crCount CR characters - CRLF, while most authored .kiro docs are LF" }
+    $lfTotal = ([regex]::Matches($text, [string]$LF)).Count
+    $crlfCount = ([regex]::Matches($text, ([string]$CR + [string]$LF))).Count
+    $loneLf = $lfTotal - $crlfCount
+    if ($crlfCount -gt 0 -and $loneLf -gt 0) {
+        Add-Finding 'mixedEol' $rel "$crlfCount CRLF and $loneLf lone LF line endings in one file"
+    } elseif ($crCount -gt 0) {
+        Add-Note $rel "$crCount CR characters - CRLF, while most authored .kiro docs are LF"
+    }
 
     # 3. whitespace
     $trail = ([regex]::Matches($text, '(?m)[ \t]+\r?$')).Count
     if ($trail -gt 0) { Add-Finding 'whitespace' $rel "$trail line(s) with trailing whitespace" }
-    $runs = ([regex]::Matches($text, ([string]$LF + '{3,}'))).Count
+    # (\r?\n){3,}, not \n{3,}: in a CRLF file three newlines are '\r\n\r\n\r\n', which never holds
+    # three adjacent \n, so the old pattern was blind in every CRLF file. Found 2026-10-25, when
+    # normalising lessons-learned.md to LF surfaced five runs the check had never seen.
+    $runs = ([regex]::Matches($text, '(\r?\n){3,}')).Count
     if ($runs -gt 0) { Add-Finding 'whitespace' $rel "$runs run(s) of 3+ consecutive newlines" }
 
     # 5. dead references. Dated reports name their own throwaway scripts, so they are exempt.
@@ -203,7 +220,7 @@ if ($notes.Count -gt 0) {
 }
 
 if ($findings.Count -eq 0) {
-    Write-Host 'RESULT: clean - no encoding, whitespace, corruption or dead-reference findings.'
+    Write-Host 'RESULT: clean - no encoding, whitespace, line-ending, corruption or dead-reference findings.'
     exit 0
 }
 

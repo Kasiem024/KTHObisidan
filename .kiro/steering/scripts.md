@@ -73,7 +73,10 @@ stale the moment it landed.
 - **Added or edited anything under `.kiro/`** → `Test-DocHygiene.ps1`. Nothing else looks there:
   `.kiro/**` is in the linter's ignore list and outside the audit's scope, so
   `npx markdownlint-cli2 ".kiro/**/*.md"` prints `Linting: 0 files` and then `Summary: 0 issues in
-  0 files`, which reads as a pass. This script checks BOM, trailing whitespace, blank-line runs, the
+  0 files`, which reads as a pass. This script checks BOM, trailing whitespace, blank-line runs (in LF
+  and CRLF files alike — the pattern was blind to CRLF until 2026-10-25), **a file mixing CRLF and lone
+  LF line endings** (`mixedEol`, added 2026-10-25; a uniform CRLF file is only a note, because a fresh
+  clone is CRLF throughout), the
   **corruption signature of a botched bulk replacement** (adjacent en/em dashes, mojibake), and any
   doc that names a `Scripts/*.ps1` file which does not exist. It separates *authored* docs from the
   verbatim research artifacts under `.kiro/research/`, which are kept byte-exact and are only checked

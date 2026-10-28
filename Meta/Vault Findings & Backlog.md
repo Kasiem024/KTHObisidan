@@ -1,7 +1,7 @@
 ---
 tags:
   - meta
-description: "Ändringslogg och avvikelsespårning för vaultet (F1–F107): vad som var fel, vad som gjordes och hur det verifierades."
+description: "Ändringslogg och avvikelsespårning för vaultet (F1–F110): vad som var fel, vad som gjordes och hur det verifierades."
 ---
 # 🧾 Vault Findings & Backlog
 
@@ -5753,9 +5753,10 @@ other agent's timing. Verified the same day: the fixture test grew an exclusion 
 ## F106. CM1000 moved to 2026 Höst, its course files kept out of git, and its 95 PDFs planned for conversion
 
 **Date:** 2026-10-24
-**Status:** Open — converting. The plan was approved 2026-10-24 14:09. Paused 2026-10-25 13:24 in batch
-4 of 4: 71 of 95 PDFs converted, verified and deployed to both trees; the rest is on the way (see *The
-conversion so far* below).
+**Status:** Closed (conversion done 2026-10-25). The plan was approved 2026-10-24 14:09; the conversion
+ran in four batches and finished 2026-10-25 15:04. All 95 PDFs are converted, verified and deployed to
+both trees, with an `_INDEX.md` per tree and `related:` links between every problem sheet and its
+solution (see *The conversion so far* below).
 
 ### What was wrong
 
@@ -5820,20 +5821,38 @@ back, text unchanged (5 814 CRLF, 0 lone LF).
 
 ### The conversion so far (2026-10-25 13:24, figures from `C:\dev\pdf2md\out\CM1000\logs\`)
 
-- **71 of 95 PDFs** are in `Filer/Litteraturlista/` and `Filer/Canvas/AI-optimerad Markdown/` and in
-  the raw tree `G:\My Drive\KTH\2026 Höst\CM1000 Diskret Matematik\AI-optimerad Markdown\`, md5
-  read back. 386 image links in both trees, 0 broken. `git status` lists none of them: all ignored.
+- **All 95 PDFs** are converted and deployed to `Filer/Litteraturlista/` + `Filer/Canvas/AI-optimerad
+  Markdown/` and to the raw tree `G:\My Drive\KTH\2026 Höst\CM1000 Diskret Matematik\AI-optimerad
+  Markdown\`. The 95 deliverables are md5-identical across the two trees (only each tree's own
+  `_INDEX.md` differs, by design — the chapter links take a different relative path per layout). 524
+  image links, **0 broken**; every file has frontmatter, a `## Avvikelser` section and one
+  `<!-- sida N -->` per page in order (checked across all 95 in both trees); problem numbering is
+  sequential in every exam spot-checked. `git status` lists none of them: all gitignored.
+- **`_INDEX.md` per tree** with the nine-area matrix against every sitting and the true identity of the
+  misleadingly-named files (e.g. HT2021 `tentamen_sol` = omtentamen april 2022, `Tentamen_sol(1)` =
+  tentamen januari 2022, HT2025 `omtentamen_sol` = the april-2026 omtentamen *solutions* despite the
+  misleading stem, `answer_key: true`).
+  **`related:` frontmatter** links each of 29 problem↔solution pairs both ways in both trees, paired by
+  `exam_period` and the measured drawing overlap, never by name alone.
 - **The method, the tools and every lesson are in pdf2md**, where the next conversion will look:
   `C:\dev\pdf2md\docs\RUNBOOK_TEX_MATH_BATCH.md`, tools in `prep\cm1000\`, run record
-  `out\CM1000\RUNLOG.md`, resume steps `out\CM1000\RESUME.md`, log entry `CONVERSION_LOG.md` §55.
-- **What the checks found:** the second reader gave 119 FIX verdicts — almost all swapped signs the
-  token verifier cannot see — 167 SOURCE (errors printed in the source, kept and listed in each file's
-  `## Avvikelser`) and 156 ORACLE. Planted errors to test that reader: 66, all caught. The figure
-  reader corrected 3 graphs; on one, both readers were wrong and the main agent read the crop.
-- **Left:** batch 4's figure reading (15 units), gates and deploy (kap5, kap6, kap9, every tentamen
-  and omtentamen, KursPM); the `_INDEX.md` with the area matrix; the `related` links; the final checks.
-- **Lessons recorded for the vault:** `lessons-learned.md` 2026-10-24 and 2026-10-25 (four entries),
-  and `traps.md` T25 (`Copy-Item -LiteralPath` with a wildcard copies nothing, reproduced).
+  `out\CM1000\RUNLOG.md` (the 2026-10-25 15:04 entry covers batch 4), log `CONVERSION_LOG.md` §55.
+- **What the checks found across the corpus:** the second reader gave FIX verdicts almost all for
+  swapped signs the order-blind token verifier cannot see; SOURCE verdicts kept printed source errors
+  and listed them in each file's `## Avvikelser`; ORACLE verdicts recorded text-layer artifacts.
+  Batch 4 alone: 43 FIX / 44 SOURCE / 52 ORACLE / 359 accepted residuals (each read individually — all
+  text-layer/tokenisation artifacts, none a Markdown error) / 25 figure-reader corrections / 0 UNSURE.
+  Planted canary errors across the run: all caught. Disputed figures (graph structure, label, count)
+  were read from the crop by the main agent, not settled by choosing a reader — on kap7 p4 and 4-69
+  that caught a reader who was wrong.
+- **Four silent tool bugs found and fixed while finishing** (logged in RUNLOG 2026-10-25 15:04): a
+  UTF-8 BOM dropped checklist item 1 in the verdicts gate (T9; fixed to `utf-8-sig`); a crop-name regex
+  truncated a filename containing `(1)` in both the merge and the link checker (fixed to match to the
+  extension); and the gate's no-crop-difference match needed the verbatim `only in A` token the brief
+  did not emit.
+- **Lessons recorded for the vault:** `lessons-learned.md` 2026-10-24 and 2026-10-25 (four entries on
+  order-blind checks, a reader explaining away its own diff, two readers both wrong, and unmeasured
+  figures), and `traps.md` T25 (`Copy-Item -LiteralPath` with a wildcard copies nothing, reproduced).
 
 ## F107. The session's failures turned into rules, and two scripts that refuse a misbound argument
 
@@ -5959,3 +5978,198 @@ Both lenses were given the draft; neither was given the other's findings.
 - **The premise lens reordered the priorities.** It verified `flashcardTags` itself and pointed out that
   of everything proposed, exactly one item affects the author's studying rather than the next agent
   session. That item leads the handover.
+
+## F108. The CM1000 finishing session's lessons recorded, and the tools that let them happen fixed
+
+**Date:** 2026-10-25
+**Status:** Closed.
+
+### Why
+
+The author asked that everything learned while finishing CM1000 (F106) be recorded in this vault and
+in `C:\dev\pdf2md`, and that the scripts in both be improved, "so that we continually optimize our
+workflow and learn from our mistakes". Plan: `.kiro/reports/session-lessons-plan-2026-10-25.md`.
+
+### The review
+
+Three lenses in parallel, all GO WITH CHANGES. **Premise:** the noise filter must be proven not to
+hide a real missing label; md5, not `collisions=0`, is the proof that no delivered file changed.
+**Conformance:** the plan's claim that the empty `SF1686` folder was gone (15:50) was false by the
+time it was read — Drive had re-created it at 17:32, `environment.md`'s trap a second time — so the
+planned edits to `current-state.md` and `reentry.md` were dropped; pdf2md lessons belong in pdf2md, not
+in this vault's `lessons-learned.md`; no commit id in `reentry.md`. **Technical:** after changing the
+comparer, every unit's comparison must be re-run and every batch re-gated, since a stricter gate can
+fail finished units.
+
+### What changed in pdf2md (`prep\cm1000\`, `docs\`, `.kiro\steering\`)
+
+- **One copy of each fragile rule** in `cm1000_paths.py`: `read_text` (BOM-tolerant) and `IMG_LINK_RE`
+  (an image link read to its extension). The link regex had been copied into four scripts and cut
+  `Tentamen_sol(1)__p5_fig1.png` in each; verify and checklist still carried the bug.
+- **`cm1000-figcompare.py` stops reporting its own noise**: about 30 of about 40 figure differences
+  decided by hand were five spellings of "no label", a comma inside `{1, 2}`, and unfenced blocks.
+  New `cm1000-figtest.py` (7 cases, three of them plants that must still fire). **The fix exposed a
+  real difference the noise had hidden** (kap7 p18, Dijkstra labels); read from the crop, A was right.
+- **`cm1000-unitgate.py` closes three holes**: BOM-tolerant reads, crop names matched on boundaries,
+  one decision line per no-crop difference. New `cm1000-gatetest.py` (8 cases). The first version
+  failed 2-47's valid lines and only a re-gate of all four batches showed it.
+- **`related:` moved into the work tree.** It had been written straight into both deployed trees, so
+  `deploy dry` reported 116 collisions and the next merge would have stripped the links. Now
+  `cm1000-related.py` writes them from `cm1000-pairs.json`, and `cm1000-merge.py` calls it.
+- **Pipeline scripts instead of `%TEMP%` ones:** `cm1000-index.py` (identity keyed by relative path, fails on an unused key), `cm1000-finalcheck.py`, `cm1000-treecmp.py`, `cm1000-snapshot.py`. Also: `cm1000-acceptscan.py` now names the file holding its full list (it showed 1 of 102 unmatched lines and never said where the rest were); `cm1000-progress.py` re-run, after a `>` redirect had replaced its own report with a traceback; the three Kiro knowledge bases for pdf2md re-indexed from `C:\dev\pdf2md\`.
+- **Docs:** runbook §7 (the finishing order), §8, §9, §10 items 10-15, §11 (padded crops and a crop
+  for every drawing, to build before the next course); `prep\cm1000\README.md`; `CONVERSION_LOG.md`
+  §56; `comms\STATUS.md`; the briefs (one spelling for "no label", `etiketter:` only for printed text,
+  decision lines begin with the verbatim difference); pdf2md `environment.md` and `conversion-method.md`.
+
+### What changed in this vault
+
+- **`traps.md` T27**: captured shell output stops at the first non-ASCII character, silently.
+  Reproduced in isolation; six false "found nothing" reads in one session. The footer listed it among
+  failures that throw, which is how it kept being misread. 27 traps.
+- **`Test-DocHygiene.ps1`**: a sixth check, `mixedEol` (CRLF and lone LF in one file — a uniform CRLF
+  file stays a note, since every fresh clone is CRLF); and the blank-line count, which was blind in
+  CRLF files, now sees them. Normalising `lessons-learned.md` to LF surfaced five old runs.
+- **`lessons-learned.md`** four entries (T27 filed in the wrong category; normalising to a majority
+  that drifted back; a plan acting on a state that had changed; the subagent summary is not the
+  evidence). `environment.md` points at T27; `scripts.md`'s row for `Test-DocHygiene.ps1`.
+
+### Verified
+
+- pdf2md: `cm1000-selftest.py` 21/21, `cm1000-figtest.py` 7/7, `cm1000-gatetest.py` 8/8; gates for
+  all four batches `failing_lines=0` (79 units); merge 95 OK, 0 CHECK; `deploy dry` `to_write=0
+  collisions=0` (was 116); `cm1000-index.py dry` unchanged for both trees; links 524, 0 broken;
+  finalcheck 95 per tree; treecmp 95 identical pairs; **md5 snapshot of the 686 delivered files
+  before and after: `changed=0 missing=0 added=0`.**
+- Vault: `Test-DocHygiene.ps1` clean, `Test-ScriptHygiene.ps1` clean; line endings rewritten in three
+  `.kiro` files only after a backup to `%USERPROFILE%\KTHObsidian-backups\eol-normalise-2026-10-25\`,
+  with a text-identical check.
+
+## F109. CM1000's exam files restructured by exam type, vault only, names fixed from content
+
+**Date:** 2026-10-25
+**Status:** Closed.
+
+### Why
+
+The author will upload the CM1000 exam `.md` files to NotebookLM and wanted them grouped by exam, not
+year, with the term in each filename and every wrong name corrected against the file's own content.
+Plan `.kiro/reports/cm1000-restructure-plan-2026-10-25.md`, reviewed by three lenses. Vault only; the
+raw tree outside the vault was left alone on his instruction.
+
+### What was done
+
+- **83 `.md` + 83 `.pdf`** moved from `Filer/Canvas/.../Gamla Tentor/HT20xx/` and
+  `Filer/Canvas/Gamla Tentor/HT20xx/` into exam-type folders: `KS1` 11, `KS2` 11, `KS3` 10, `KS4` 8,
+  `Fx1` 11, `Fx2` 10, `Tentor` 21 (all tentor/omtentor + the one hemtentamen), `Komplettering` 1.
+- **Renamed** `<term> <exam>[ <month>][ - Lösningar]`, e.g. `HT2021 KS1.md` / `HT2021 KS1 - Lösningar.md`;
+  the `.pdf` takes the same stem as its `.md`. Month only in `Tentor`, on both members of a pair.
+- **Identity read from each file's content**, never its old name. `answer_key: true` decides the
+  Lösningar flag (`doc_type` is wrongly `exam` on three files); the printed title/period decides the
+  exam label, and a solution's Tentor label/month is synced to its paired problem file via `related:`.
+  Names corrected: HT2021 `tentamen_sol` = April 2022 omtentamen **solutions** (not a tentamen); HT2021
+  `fx1_sol` = an Fx1 **solution** (title said "UPPGIFTER"); HT2025 `omtentamen_sol` = April 2026
+  omtentamen **solutions** (`answer_key: true`; the stem reads like a problem file but is not).
+- **Frontmatter rewritten** in each `.md`: `source_pdf` (new stem), `source_subfolder` (trailing
+  `HT20xx` → the type folder, keeping each file's `Canvas/` prefix where present), and every `related:`
+  wikilink re-pointed to its pair's new stem. MD bodies untouched.
+- `cm1000-index.py` re-pointed to the new vault layout (year read from the filename; the "Egentligen"
+  column is now just the period, since the names are self-describing) and re-run — vault `_INDEX.md`
+  regenerated, 95 documents. `cm1000-deploy.py` now **refuses to deploy CM1000 to the vault** (exit 2,
+  `--allow-vault` to force), because a deploy would recreate the old `HT20xx` names beside the new ones.
+
+### A bug the dry run caught
+
+The first map keyed the `.md`→`.pdf` pairing on the PDF basename alone, and `ks1_sol.pdf` exists in
+many years, so several MDs were paired with a **different year's** PDF (HT2019 `ks1_sol.md` ↔ HT2025
+`ks1_sol.pdf`). Caught in the dry-run output before any file moved; fixed by keying on `(year,
+basename)`. 0 cross-year pairings after.
+
+### Two findings the independent audit caught after the move — both fixed
+
+- **The same ambiguous-basename bug survived in the `related:` rewrite.** `apply` keyed old→new stem on
+  basename alone, so 33 of 58 `related:` links pointed at the **wrong year** (HT2021 KS1 →
+  `[[HT2025 KS1 - Lösningar]]`). My verifier missed it because it checked only that the target
+  *exists*, not that it is the correct pair — the lesson being that an existence check is not a
+  correctness check. Fixed by `cm1000-restructure-fixrelated.py`, which rebuilds each link from the
+  map's original `related` resolved within the file's own year; re-checked, **0 cross-year links**.
+- **The first backup was partial** (83 md but only 43 pdf): it ran while the basename-keyed map was
+  briefly on disk. The moved PDFs are byte-identical to the originals, so a **full backup of the new
+  layout** (`cm1000-restructure-2026-10-25-full\`, 166 files) plus a reverse map
+  (`restructure-reverse-map.json`) is the complete, verified rollback point.
+
+### Verified
+
+- `cm1000-restructure-verify.py`: 83 `.md` + 83 `.pdf` in the new layout, **0 `HT20xx` folders left**;
+  every `.pdf` **byte-identical** to its pre-move md5; every `.md` **body unchanged** (only the
+  frontmatter fields differ); **111 image links, 0 broken** (the `../../assets/` depth is unchanged);
+  **58 `related:` links, 0 broken**; 0 failures.
+- `markdownlint` 550 files / 0 issues. `git status`: **0 untracked files under `Filer/`** — the whole
+  move stayed gitignored, nothing leaked into the tree. The audit's only finding is the unrelated
+  SF1686 empty folder.
+- Backup of all 166 files at `%USERPROFILE%\KTHObsidian-backups\cm1000-restructure-2026-10-25\`; the
+  move is replayable from `out\CM1000\logs\cm1000-restructure-map.json`.
+
+### The accepted tradeoff
+
+The vault's exam tree and the raw tree now use different layouts (raw keeps `HT20xx/`, per "leave the
+raw tree alone"). The deploy guard makes the divergence safe: the pipeline can no longer silently
+re-create the old vault names. A single re-deploy to the vault replays the map, not `cm1000-deploy.py`.
+
+## F110. CM1000 Tentaanalys - AI-kontext and six KS1/KS2 decks, from all 83 old exam files
+
+**Asked (2026-10-25):** one self-contained file like HI1032's `Tentaanalys - AI-kontext`, analysing
+literally all old CM1000 exams per chapter, framed by this term's KursPM/Detaljplanering/formelsamling;
+then flashcards for KS1 and KS2, one deck per chapter, focused on the most-asked problem types.
+
+**Done.**
+
+- `Anteckningar/CM1000 Tentaanalys - AI-kontext.md` (≈313 k chars, 2101 lines): HT2026 rules quoted
+  from KursPM (6 basic + 3 advanced areas, "helt och hållet", grade table, KS1 10/11 = 1,2,3, KS2 30/11
+  = 4,7,8, results valid HT2026–VT2027), an overview and a KS1/KS2 cross-view, the sitting × area matrix,
+  how the 53 sittings were designed and which rules they state, then one section per area (basic areas
+  first) with generated type counts, what the problems ask, the examiner's method per type, what the
+  formelsamling has and lacks, recurrences, model solutions and **one row per problem: 388 rows**.
+- Six decks `Anteckningar/CM1000 Begrepp - Kap 01 Logik`, `02 Mängdlära`, `03 Funktioner`,
+  `04 Talteori`, `07 Grafteori`, `08 Kombinatorik`: **164 cards** (27/23/31/21/33/29), tagged `nosr`
+  (his decision 3), building blocks and method skeletons only, nothing the formelsamling prints.
+
+**Method.** `%TEMP%\cm1000-tentaanalys\extract.py` split every file into problems (asserted: every
+line in exactly one section, every problem in exactly one area dossier, 0 number/area conflicts,
+17 problems without a solution detected — including HT2024 Fx2 U1 and U7, whose solutions file only
+repeats the problem). Plan reviewed by a premise and a technical lens (STOP ×3, all fixed). Ten area
+analysts + a framing analyst, each with its own reviewer looping on findings; `check_chapter.py`
+(self-tested on planted defects) enforced every ID once, math verbatim from the row's own sitting,
+`Lösning saknas` on the 17, and the section shape; the assembler re-ran it on each section cut back out
+of the final file. Final review: fidelity **PASS** on 40 rows against the original files; premise GOOD
+WITH CHANGES → added KursPM quotes, the open aid question at the top, a list of seven rows where the
+source itself is wrong. Each deck reviewed card by card (all PASS; Grafteori after two fixes).
+
+**Verified:** checker 0 errors on all ten areas; lint 7 files / 0 issues; `Test-DeckHygiene -Course
+CM1000` clean (164 cards) and `-SelfTest` exit 0; `Get-SRIntegrity -Compare` against an own baseline:
+the only per-file changes are the six new decks (cards 0 → N, `nosr` on), `raw_srComments` 1974
+unchanged, excluded-by-nosr 445 → 609 (+164); `Vault-Audit` only the pre-existing SF1686 folder (4/1).
+
+**What went wrong.** Eleven parallel subagents were throttled and wrote nothing; any single response
+over five minutes timed out. What worked: ≤ 3 pipelines at once, and a rule to write files in pieces
+of ≤ 8 rows per call (`.kiro/lessons-learned.md`).
+
+**Open, his to decide.** (1) Whether the formelsamling ("för KS2") is handed out at KS1 — the KursPM
+is silent; decision 5 assumed it. (2) The decks carry `nosr`, so they stay out of review until he removes it. The SR plugin's
+`flashcardTags` read `[""]` on 2026-10-26 (it was `#HI1031` on 2026-10-24, changed by him); whether an
+empty tag lets the CM1000 decks in once `nosr` is off is not verified.
+
+**Audited from several angles, 2026-10-26 (his request: "100 % correct, based on real facts").**
+Twenty-one adversarial passes, each writing findings to a file: every row of all ten areas against the
+verbatim dossiers, pattern claims in three scopes, course rules and quotes, a back-test of the
+prioritisation against HT2024–HT2025, and all six decks. 19 findings; each re-checked against the
+source before acting (log: `%TEMP%\cm1000-tentaanalys\audit\decisions.md`). **Accepted and fixed (11):**
+the "uppgift N alltid på varje KS/Fx/tenta" sentences of seven areas (false; fixed first, then
+regenerated as "n av n" per kind of sitting when the audit flagged "alltid: Hemtentamen"); the overview's all-years top type misleading for recent years
+(new generated columns "Vanligaste typ HT2024–HT2025" and "Varav HT2024–HT2025"); two recent-years
+paragraphs (talteori: delbarhetsbevis, not kongruensekvation, was most common; grafteori: missing Fx2
+problems); "Omtentamen 5" (6 sittings); one misprinted degree sequence now stated from the figure;
+one card made precise; the Talteori deck's Delbarhetsbevis section moved first. **Rejected as wrong
+after checking:** 8, among them three claimed misquotes the file did not contain. Rows, course
+rules and formelsamling claims: no errors; decks 01, 02, 07 clean, 08 only rejected findings. The default subagent model was unavailable
+for part of the run; the audit used claude-sonnet-4.5.

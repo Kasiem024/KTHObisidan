@@ -853,7 +853,6 @@ to it. Where the two disagree, the note leads with the held-out one.
 Its in-sample score is 100 % by construction, so quoting it as readiness is a category error, not an
 optimistic estimate. The held-out number is the only one that answers the student's actual question.
 
-
 ## 2026-10-17 - a plan called a sentence unsourced, and the book had it
 
 Planning HI1031's Snabbsvar manuscript, the plan listed the answer note's explanation that replay works
@@ -954,7 +953,6 @@ for the thing. When a formatting convention exists for one artifact type and is 
 another, add the check the first time you notice — a rule without a check drifts, and a rendering rule
 drifts invisibly because the source still parses.
 
-
 ## 2026-10-22 - a parallel pipeline lost all its work four times, because one failed stage aborts the batch
 
 The subagent tool runs a pipeline as one unit. When a single stage hit `MODEL_TEMPORARILY_UNAVAILABLE`, the
@@ -979,7 +977,6 @@ approach.
 
 **Lesson:** parallel subagents are a throughput tool, not a reliability tool. Their failure mode is total,
 so size a batch by how much you can afford to lose, not by how much you want done at once.
-
 
 ## 2026-10-24 - a rebuilt test copy was half a copy, and the previous run's result file said it was whole
 
@@ -1008,7 +1005,6 @@ exists. Both changes are in `%TEMP%\tagsconv\copy-vault.ps1`.
 
 **Lesson:** a stale result file is the most misleading kind of evidence, because it is real output, just
 not from the run being asked about. Make every result file prove which run wrote it.
-
 
 ## 2026-10-24 - a splatted array bound a stray argument to -BackupDir, and 536 backups landed in the employer's OneDrive
 
@@ -1057,7 +1053,6 @@ line still naming this vault so `-RestoreFrom` works.
 - **`documentation-standard.md` warns that work and personal material must not mix.** That rule was
   written about *content* carried into this repo. This was the reverse direction - personal content
   pushed into a work-synced folder by a path bug - and nothing guarded it.
-
 
 ## 2026-10-24 - a token check passed 119 wrong formulas, because it cannot see order
 
@@ -1140,3 +1135,98 @@ exactly like the prediction and nobody would have checked.
 
 **Same family as** the in-sample coverage entry (2026-10-15) and the `notesInScope` drift between the
 audit and the census (F68): in all three the measurement was competent and the population was wrong.
+
+## 2026-10-25 - a documented trap was misread six times, because the doc filed it as something that throws
+
+**What happened:** finishing CM1000, six checks read as "found nothing": the F106 heading, the HT2025
+row of an index, a pair confirmation with 1 of 14 files, a cut final-check report. Each time the
+console output had simply stopped at the first `ö` or `–`, with exit 0 and no error.
+**Why the checks missed it:** `environment.md` said "stdout capture truncates on Swedish characters",
+and `traps.md` listed it among the failures that *throw*, so nothing marked it as the silent kind that
+needs a second test before a negative is believed. It does not throw.
+**Rule added:** `traps.md` **T27**, reproduced in isolation; the footer corrected; `environment.md`
+points at it.
+**Lesson:** where a fact is filed decides how it is used. A silent failure filed as a loud one is
+read as if it would announce itself.
+
+## 2026-10-25 - a file normalised to its majority line ending was mixed again an hour later
+
+**What happened:** `lessons-learned.md` was normalised to CRLF, its majority. An hour later it was
+mixed again (1109 CRLF, 33 LF): git stores it LF and the write tool appends LF, so every new entry
+re-mixed it. `Test-DocHygiene.ps1` reported nothing, because it treated any CR as a note.
+**Why the checks missed it:** the only check of `.kiro/` line endings could not tell a uniform CRLF
+file (harmless, and what every fresh clone is) from a mixed one. Its blank-line count was blind to CRLF
+too: normalising to LF surfaced five runs of blank lines that had always been there.
+**Rule added:** `Test-DocHygiene.ps1` `mixedEol` (a finding only when CRLF and lone LF share a file)
+and a CRLF-aware blank-line count. The file was normalised to LF, the form that both git and the
+writing tool produce.
+**Lesson:** normalise to the form the writers produce, not the form the file happens to have most of.
+
+## 2026-10-25 - a plan acted on a measurement that had become false while it was reviewed
+
+**What happened:** the lessons plan said the empty `SF1686` folder "is gone" (`Test-Path` False at
+15:50) and planned to strip it from `current-state.md` and `reentry.md`. A reviewer read the folder an
+hour later and it was back, re-created by Drive at 17:32 — the re-creation `environment.md` already
+describes, a second time.
+**Why the checks missed it:** the plan treated a single reading of state that another process owns
+as a fact. Only an independent reviewer who looked again caught it.
+**Rule added:** none new: `environment.md` says to re-run the switch-less audit minutes after a
+deletion. What changed is practice: state owned by Drive, git or another agent is re-read immediately
+before the edit that depends on it.
+**Lesson:** a measurement of something you do not control has a shelf life; read it again before
+acting on it.
+
+## 2026-10-25 - the file is the evidence, never the subagent's summary
+
+**What happened:** a figure-reading subagent replied "figcompare rerun = 0 differences" while the file
+still held one difference; another called a 10-against-8-edge disagreement "a comparer artifact",
+which was true but was only established by reading both blocks and the crop. Both summaries were
+confident and specific.
+**Why the checks missed it:** nothing would have: the gate reads the files, but a summary read instead
+of the files bypasses the gate entirely.
+**Rule added:** the figure brief now tells the reader to re-open the comparison file before replying;
+pdf2md's runbook §8 records it. The main agent reads every file a stage wrote that a decision rests on.
+**Lesson:** a subagent's reply tells you where to look, not what is there.
+
+## 2026-10-25 - I fixed an ambiguous-key bug in one code path and left it in its sibling
+
+**What happened:** the exam restructure (F109) paired each `.md` with its `.pdf` by basename, and
+`ks1_sol.pdf` exists in seven years, so a file paired with the wrong year's PDF. The dry run caught it
+and I keyed the pairing on `(year, basename)`. The **same basename-keying** was also in the `related:`
+rewrite, which I did not touch; 33 of 58 `related:` links then pointed at the wrong year's pair, and
+only the independent audit found it.
+**Why the checks missed it:** my own verifier passed (see the next entry). The bug and its fix were in
+my head as "the PDF pairing", not as "every place that resolves an ambiguous basename".
+**Rule added:** none mechanical. The practice: when a fix is "this key was not unique enough", grep for
+every other use of the same key before calling it done - a repeated basename, a stem, an id. A fix to
+one copy of a pattern is a lead to its siblings, not a closure.
+**Lesson:** the bug you just fixed has relatives; go and look for them.
+
+## 2026-10-25 - my verifier checked that a link resolved, not that it was the right link
+
+**What happened:** after the restructure I verified `related:` links by testing that each `[[target]]`
+named a file that **exists** in the new layout. All 58 "resolved", so I reported 0 broken. 33 of them
+resolved to the **wrong year's** pair (`HT2021 KS1` linked to `[[HT2025 KS1 - Lösningar]]`, which does
+exist). The independent audit caught it by comparing the link's year to the file's own year.
+**Why the check missed it:** existence is necessary, not sufficient. A wrong-but-existing target passes
+an existence check every time - the check cannot see intent, only presence. This is the same shape as
+the figure gate that accepted any line containing `only in A` (F108): presence of a token, not
+correctness of the decision.
+**Rule added:** a link or reference check must assert the *relationship*, not just that the target
+exists - same year, same pair, same chapter, whatever the link is supposed to mean. For the restructure,
+the correct target was derivable (the pair is always same-year), so the check could compute the expected
+link and compare, rather than ask the weaker question.
+**Lesson:** "it resolves" is not "it is right"; verify the property the reference is supposed to carry.
+
+## 2026-10-25 - eleven subagents in parallel produced nothing, and the run said only "throttled"
+
+**What happened:** for the CM1000 tentaanalys, eleven analyst pipelines were started at once. The
+service throttled one stage and the whole blocking call returned; not one section had been written.
+A rerun with six stages timed out on a single response after 300 s, again with nothing on disk.
+**Why the checks missed it:** there was nothing to check — the failure was that no file appeared, and
+the only signal was one error line naming one stage.
+**Rule added:** at most three pipelines at once; every brief that writes a long file says "one tool
+call per response, append at most 8 rows per call", so a cut-off response loses one chunk, not the
+file. After any failed or dropped run, list which output files exist and check them before re-running
+— a "Group wait channel dropped" result twice hid stages that had in fact finished.
+**Lesson:** a subagent's deliverable is the file on disk; measure that, not the pipeline's return.

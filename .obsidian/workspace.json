@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7bd407da0a9fd07b",
+        "id": "13611b23c5d16ae3",
         "type": "tabs",
         "children": [
           {
-            "id": "8da9a58b15f95402",
+            "id": "389fc0311d505dad",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "KTH/2026 Höst/CM1000 Diskret Matematik/Anteckningar/CM1000 Begrepp - Kap 02 Mängdlära.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "CM1000 Begrepp - Kap 02 Mängdlära"
             }
           }
         ]
@@ -81,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 475.5
+    "width": 341.5
   },
   "right": {
     "id": "886e6b9c3a0717a0",
@@ -180,8 +184,8 @@
             "state": {
               "type": "review-queue-list-view",
               "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Notes Review Queue"
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
             }
           }
         ],
@@ -204,8 +208,19 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "85154ac5110aa970",
+  "active": "389fc0311d505dad",
   "lastOpenFiles": [
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Anteckningar/CM1000 Tentaanalys - Sammanfattning.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Anteckningar/CM1000 Begrepp - Kap 03 Funktioner.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Anteckningar/CM1000 Begrepp - Kap 02 Mängdlära.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Anteckningar/CM1000 Tentaanalys - AI-kontext.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Filer/Canvas/AI-optimerad Markdown/CM1000 MD.zip",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Filer/Canvas/AI-optimerad Markdown/Gamla Tentor/HT2019/hemtenta.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Filer/Canvas/AI-optimerad Markdown/Gamla Tentor/HT2019/Fx1-solutions.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Filer/Canvas/AI-optimerad Markdown/Kursinformation/Detaljplanering_HT26.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Filer/Canvas/AI-optimerad Markdown/Kursinformation/KursPM_HT26-1.md",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Filer/Canvas/AI-optimerad Markdown/assets/fx1__p1_fig2.png",
+    "KTH/2026 Höst/CM1000 Diskret Matematik/Filer/Canvas/AI-optimerad Markdown/assets/fx1__p1_fig1.png",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor - Nyckelord.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor - Snabbsvar.md",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Anteckningar/HI1031 Tentafrågor och Svar - Kap 17 Distribuerade transaktioner.md",
@@ -224,14 +239,6 @@
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentaplugg - Extra Säker.md",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentaplugg - Extra Möjlig.md",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentasvar - Svaga ämnen.md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Föreläsningskarta - Ämnen och tentasannolikhet.md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentaplugg - Del B Applikationsnivån.md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentasvar - Del B Applikationsnivån.md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentasvar - Del A Transportnivån.md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentaplugg - Del A Transportnivån.md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentaplugg - Del A Transportnivån (conflict 2026-10-19-21-06-09).md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentaplugg - Del B Applikationsnivån (conflict 2026-10-19-21-06-09).md",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Anteckningar/HI1032 Tentaanalys - Ranking och poängstrategi.md",
     "temp",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Canvas/Laborationer/Labb 2/Labb 2 Instruktioner.txt",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Canvas/Laborationer/Labb 2/Ny(tt) Textdokument.txt",
@@ -241,7 +248,6 @@
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Canvas/Laborationer/Labb 2/Obekräftade 927767.crdownload",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Canvas/Laborationer/Labb 2/Entity Framework- datalagret.pdf",
     "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Canvas/Laborationer/Labb 2/Obekräftade 744213.crdownload",
-    "KTH/2026 Höst/HI1031 Distribuerade informationssystem/Filer/Canvas/Laborationer/Labb 2/ASP.NET, flerlagerarkitektur.pdf",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_91_Diagram_0.jpeg",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_96_Diagram_0.jpeg",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_51_Diagram_0.jpeg",
@@ -250,8 +256,6 @@
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_87_Diagram_2.jpeg",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_60_Picture_1.jpeg",
     "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_49_Diagram_0.jpeg",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_53_Diagram_1.jpeg",
-    "KTH/2026 Höst/HI1032 Kommunikationssystem/Filer/Canvas/AI-optimerad Markdown/assets/Forelasning07-DNS___page_63_Diagram_3.jpeg",
     "Untitled.canvas",
     "KTH/Årskurs 1/Kurser/Industriell ekonomi, grundkurs ME1003/Bilagor/Affärsmodellen Industriell ekonomi Canvas.canvas"
   ]

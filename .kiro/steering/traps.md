@@ -10,7 +10,7 @@ wrong result here, and **every one is silent** — none throws, none fails a bui
 plausible wrong answer, which is worse. That is the entry criterion: if it throws, it belongs in
 `environment.md`.
 
-There are **twenty-six**. Do not add a twenty-seventh without reproducing it and recording the wrong result
+There are **twenty-seven**. Do not add a twenty-eighth without reproducing it and recording the wrong result
 it produced. Each entry is the mechanism, the wrong answer it caused, and what to do instead; the
 forensics live in `Meta/Vault Findings & Backlog.md` and `.kiro/lessons-learned.md`.
 
@@ -486,13 +486,32 @@ if ($Surplus) { Write-Output ('ERROR: unexpected argument: ' + ($Surplus -join '
 A sink **without** the explicit `Position` is inert: the stray value still binds to `-BackupDir` first.
 Both halves are required. Forensics in `Meta/Vault Findings & Backlog.md`.
 
+## T27 — captured shell output stops at the first non-ASCII character, and the rest reads as "nothing"
+
+Through the agent's shell tool, output printed by PowerShell, or by a Python process that has not
+reconfigured stdout to UTF-8, **ends at the first character outside ASCII** — no error, stderr empty,
+exit 0. Everything after that character is gone, so a search that prints a Swedish path or an `ö` looks
+like a search that found nothing. Reproduced 2026-10-25: `Write-Output 'L1'; Write-Output ('L2 ' +
+[char]0xF6); Write-Output 'L3'` returned only `L1`; `python -c "print('P1'); print(chr(246))"` only `P1`.
+
+**Produced, in one session:** the F106 heading reported as absent from the backlog; the HT2025 identity
+row reported as absent from an index that held it; a pair check showing 1 of 14 files; a final-check
+report cut after its first file. Each was a plain read-back of real content, and each looked like a
+negative result.
+
+**What to do:** write results to a UTF-8 file and open it with the read tool; or print only ASCII
+(`-replace '[^\x20-\x7E]', '?'`); or use the grep tool rather than `Select-String` for Swedish paths.
+A Python script that calls `sys.stdout.reconfigure(encoding="utf-8")` prints safely. Never treat an
+empty or short console result as a negative until the same question has been answered from a file
+(**T17**: never report "absent" from a single negative).
+
 ---
 
 **Not here, because each one throws rather than misleads — they are in `environment.md`:** the
-`geometric repack` error from git on Google Drive, `npm` needing `cmd /c`, stdout truncating on Swedish
-characters, long inline commands refused with `Access is denied. (os error 5)`, and three PowerShell
-5.1 parsing details (case-insensitive variable names, a built-in alias beating a function you define,
-and `if` not being an expression).
+`geometric repack` error from git on Google Drive, `npm` needing `cmd /c`, long inline commands refused
+with `Access is denied. (os error 5)`, and three PowerShell 5.1 parsing details (case-insensitive
+variable names, a built-in alias beating a function you define, and `if` not being an expression).
+Stdout truncating on Swedish characters used to be listed here; it does not throw, and it is **T27**.
 
 ## Keeping this file honest
 
